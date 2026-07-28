@@ -1,0 +1,559 @@
+{
+  "model": "davidich_yeast",
+  "citation": "Davidich & Bornholdt, PLoS ONE 3.2 (2008): e1672",
+  "description": "Fission yeast cell cycle (10 nodes)",
+  "n_nodes": 10,
+  "node_names": [
+    "Start",
+    "SK",
+    "Cdc2_Cdc13",
+    "Ste9",
+    "Rum1",
+    "PP",
+    "Cdc25",
+    "Slp1",
+    "Wee1_Mik1",
+    "Cdc2_Cdc13_A"
+  ],
+  "output_nodes": [
+    "Cdc2_Cdc13"
+  ],
+  "interaction_graph": {
+    "Start": [],
+    "SK": [
+      {
+        "regulator": "Start",
+        "sign": 1
+      }
+    ],
+    "Cdc2_Cdc13": [
+      {
+        "regulator": "Ste9",
+        "sign": -1
+      },
+      {
+        "regulator": "Rum1",
+        "sign": -1
+      },
+      {
+        "regulator": "Slp1",
+        "sign": -1
+      },
+      {
+        "regulator": "Cdc2_Cdc13_A",
+        "sign": 1
+      }
+    ],
+    "Ste9": [
+      {
+        "regulator": "SK",
+        "sign": -1
+      },
+      {
+        "regulator": "Cdc2_Cdc13",
+        "sign": -1
+      },
+      {
+        "regulator": "PP",
+        "sign": 1
+      },
+      {
+        "regulator": "Cdc2_Cdc13_A",
+        "sign": -1
+      }
+    ],
+    "Rum1": [
+      {
+        "regulator": "SK",
+        "sign": -1
+      },
+      {
+        "regulator": "Cdc2_Cdc13",
+        "sign": -1
+      },
+      {
+        "regulator": "PP",
+        "sign": 1
+      },
+      {
+        "regulator": "Cdc2_Cdc13_A",
+        "sign": -1
+      }
+    ],
+    "PP": [
+      {
+        "regulator": "Slp1",
+        "sign": 1
+      }
+    ],
+    "Cdc25": [
+      {
+        "regulator": "Cdc2_Cdc13",
+        "sign": 1
+      },
+      {
+        "regulator": "Cdc2_Cdc13_A",
+        "sign": 1
+      }
+    ],
+    "Slp1": [
+      {
+        "regulator": "Cdc2_Cdc13_A",
+        "sign": 1
+      }
+    ],
+    "Wee1_Mik1": [
+      {
+        "regulator": "Cdc2_Cdc13",
+        "sign": -1
+      },
+      {
+        "regulator": "Cdc2_Cdc13_A",
+        "sign": -1
+      }
+    ],
+    "Cdc2_Cdc13_A": [
+      {
+        "regulator": "Cdc2_Cdc13",
+        "sign": 1
+      },
+      {
+        "regulator": "Cdc25",
+        "sign": 1
+      },
+      {
+        "regulator": "Wee1_Mik1",
+        "sign": -1
+      }
+    ]
+  },
+  "n_edges": 22,
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Cdc2_Cdc13",
+        "PP"
+      ],
+      [
+        "Cdc2_Cdc13",
+        "SK"
+      ],
+      [
+        "Cdc2_Cdc13_A",
+        "Rum1"
+      ],
+      [
+        "Cdc2_Cdc13_A",
+        "Slp1"
+      ],
+      [
+        "Cdc2_Cdc13",
+        "Cdc2_Cdc13_A"
+      ],
+      [
+        "Rum1",
+        "Ste9"
+      ],
+      [
+        "Cdc25",
+        "Wee1_Mik1"
+      ],
+      [
+        "Cdc25",
+        "Cdc2_Cdc13"
+      ],
+      [
+        "Slp1",
+        "Ste9"
+      ],
+      [
+        "Rum1",
+        "Slp1"
+      ],
+      [
+        "Cdc2_Cdc13_A",
+        "Ste9"
+      ],
+      [
+        "Cdc2_Cdc13",
+        "Wee1_Mik1"
+      ]
+    ],
+    "triples": [
+      [
+        "Cdc2_Cdc13_A",
+        "Slp1",
+        "Ste9"
+      ],
+      [
+        "Rum1",
+        "Slp1",
+        "Ste9"
+      ],
+      [
+        "Cdc2_Cdc13_A",
+        "PP",
+        "SK"
+      ],
+      [
+        "Cdc2_Cdc13_A",
+        "Rum1",
+        "Ste9"
+      ],
+      [
+        "Cdc25",
+        "Cdc2_Cdc13",
+        "Wee1_Mik1"
+      ],
+      [
+        "Cdc2_Cdc13_A",
+        "Rum1",
+        "Slp1"
+      ]
+    ],
+    "per_gene": {
+      "Start": {
+        "regulators": [
+          "Start"
+        ],
+        "interactions": []
+      },
+      "SK": {
+        "regulators": [
+          "Start"
+        ],
+        "interactions": []
+      },
+      "Cdc2_Cdc13": {
+        "regulators": [
+          "Ste9",
+          "Rum1",
+          "Slp1",
+          "Cdc2_Cdc13_A"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Rum1",
+              "Ste9"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "Slp1",
+              "Ste9"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Rum1",
+              "Slp1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Rum1",
+              "Slp1",
+              "Ste9"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "Ste9"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "Rum1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "Rum1",
+              "Ste9"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "Slp1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "Slp1",
+              "Ste9"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "Rum1",
+              "Slp1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "Rum1",
+              "Slp1",
+              "Ste9"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "Ste9": {
+        "regulators": [
+          "SK",
+          "Cdc2_Cdc13",
+          "PP",
+          "Cdc2_Cdc13_A"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "SK"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "PP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "Cdc2_Cdc13_A"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "PP",
+              "SK"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "Cdc2_Cdc13_A",
+              "PP",
+              "SK"
+            ],
+            "order": 4,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "Rum1": {
+        "regulators": [
+          "SK",
+          "Cdc2_Cdc13",
+          "PP",
+          "Cdc2_Cdc13_A"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "SK"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "PP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "Cdc2_Cdc13_A"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13_A",
+              "PP",
+              "SK"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "Cdc2_Cdc13_A",
+              "PP",
+              "SK"
+            ],
+            "order": 4,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "PP": {
+        "regulators": [
+          "Slp1"
+        ],
+        "interactions": []
+      },
+      "Cdc25": {
+        "regulators": [
+          "Cdc2_Cdc13",
+          "Cdc2_Cdc13_A"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "Cdc2_Cdc13_A"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Slp1": {
+        "regulators": [
+          "Cdc2_Cdc13_A"
+        ],
+        "interactions": []
+      },
+      "Wee1_Mik1": {
+        "regulators": [
+          "Cdc2_Cdc13",
+          "Cdc2_Cdc13_A"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "Cdc2_Cdc13_A"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Cdc2_Cdc13_A": {
+        "regulators": [
+          "Cdc2_Cdc13",
+          "Cdc25",
+          "Wee1_Mik1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc25",
+              "Cdc2_Cdc13"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc2_Cdc13",
+              "Wee1_Mik1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc25",
+              "Wee1_Mik1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc25",
+              "Cdc2_Cdc13",
+              "Wee1_Mik1"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 12,
+    "n_triples": 6,
+    "pairwise_strengths": {
+      "['Rum1', 'Ste9']": 0.1875,
+      "['Slp1', 'Ste9']": 0.0625,
+      "['Rum1', 'Slp1']": 0.0625,
+      "['Cdc2_Cdc13_A', 'Ste9']": 0.0625,
+      "['Cdc2_Cdc13_A', 'Rum1']": 0.0625,
+      "['Cdc2_Cdc13_A', 'Slp1']": 0.0625,
+      "['Cdc2_Cdc13', 'SK']": 0.25,
+      "['Cdc2_Cdc13', 'PP']": 0.25,
+      "['Cdc2_Cdc13', 'Cdc2_Cdc13_A']": 0.75,
+      "['Cdc25', 'Cdc2_Cdc13']": 0.125,
+      "['Cdc2_Cdc13', 'Wee1_Mik1']": 0.125,
+      "['Cdc25', 'Wee1_Mik1']": 0.125
+    },
+    "local_energy_spectrum": [
+      0.4723360655737705,
+      0.4180327868852459,
+      0.08401639344262295,
+      0.01639344262295082,
+      0.009221311475409836
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 524288,
+    "total_fixed_point": 431498,
+    "total_cycling": 92790,
+    "cycling_fraction": 0.17698287963867188
+  },
+  "n_unique_values": 122,
+  "total_variance": 0.12893393708145595,
+  "timestamp": "2026-07-28T06:05:55.465589+00:00"
+}

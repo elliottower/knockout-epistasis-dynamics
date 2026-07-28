@@ -1,0 +1,229 @@
+{
+  "description": "Extended iRF seeds on random15 at 5% budget (seeds 62-91, with nested CV)",
+  "circuit": "random15",
+  "budget_fraction": 0.05,
+  "method": "irf",
+  "config": "min_leaf=1, depth=None (CV-selected), 500 trees, 5 iterations",
+  "seeds": [
+    {
+      "seed": 62,
+      "r2": 0.9583,
+      "train_r2": 0.974,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 63,
+      "r2": 0.9603,
+      "train_r2": 0.9684,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 64,
+      "r2": 0.9293,
+      "train_r2": 0.9436,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 65,
+      "r2": 0.9642,
+      "train_r2": 0.9693,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 66,
+      "r2": 0.8733,
+      "train_r2": 0.8737,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 67,
+      "r2": 0.9637,
+      "train_r2": 0.9678,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 68,
+      "r2": 0.9666,
+      "train_r2": 0.975,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 69,
+      "r2": 0.9645,
+      "train_r2": 0.9743,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 70,
+      "r2": 0.9614,
+      "train_r2": 0.9663,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 71,
+      "r2": 0.9613,
+      "train_r2": 0.9697,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 72,
+      "r2": 0.9623,
+      "train_r2": 0.9692,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 73,
+      "r2": 0.9653,
+      "train_r2": 0.9739,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 74,
+      "r2": 0.9106,
+      "train_r2": 0.9222,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 75,
+      "r2": 0.9665,
+      "train_r2": 0.9754,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 76,
+      "r2": 0.9102,
+      "train_r2": 0.9182,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 77,
+      "r2": 0.9635,
+      "train_r2": 0.9677,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 78,
+      "r2": 0.9613,
+      "train_r2": 0.9696,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 79,
+      "r2": 0.9697,
+      "train_r2": 0.9766,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 80,
+      "r2": 0.9602,
+      "train_r2": 0.9748,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 81,
+      "r2": 0.9251,
+      "train_r2": 0.9332,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 82,
+      "r2": 0.9623,
+      "train_r2": 0.9669,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 83,
+      "r2": 0.9627,
+      "train_r2": 0.9676,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 84,
+      "r2": 0.9665,
+      "train_r2": 0.9768,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 85,
+      "r2": 0.9658,
+      "train_r2": 0.9747,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 86,
+      "r2": 0.936,
+      "train_r2": 0.9432,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 87,
+      "r2": 0.9611,
+      "train_r2": 0.9678,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 88,
+      "r2": 0.9616,
+      "train_r2": 0.9688,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 89,
+      "r2": 0.9602,
+      "train_r2": 0.968,
+      "leaf": 1,
+      "depth": 10
+    },
+    {
+      "seed": 90,
+      "r2": 0.9344,
+      "train_r2": 0.9432,
+      "leaf": 1,
+      "depth": null
+    },
+    {
+      "seed": 91,
+      "r2": 0.9611,
+      "train_r2": 0.9671,
+      "leaf": 1,
+      "depth": 10
+    }
+  ],
+  "summary": {
+    "n_seeds_new": 30,
+    "n_crashes_new": 0,
+    "combined_with_original": {
+      "total_seeds": 50,
+      "total_crashes": 1,
+      "crash_rate": 0.02,
+      "crash_seed": 43
+    }
+  }
+}
