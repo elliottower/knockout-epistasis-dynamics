@@ -229,9 +229,19 @@ def compute_recovery_metrics(w_recovered, w_true, n, v_pred=None, v_true=None,
         idx = (1 << i) | (1 << j)
         pred_pairs.append(abs(w_recovered[idx]))
         true_pairs.append(abs(w_true[idx]))
+    pred_pairs = np.array(pred_pairs)
+    true_pairs = np.array(true_pairs)
     rho, pval = spearmanr(pred_pairs, true_pairs)
     results["pairwise_spearman_rho"] = float(rho)
     results["pairwise_spearman_pval"] = float(pval)
+
+    # --- Pairwise detection AUROC ---
+    from sklearn.metrics import roc_auc_score
+    labels = (true_pairs >= np.median(true_pairs)).astype(int)
+    if labels.sum() > 0 and labels.sum() < len(labels):
+        results["pairwise_auroc"] = float(roc_auc_score(labels, pred_pairs))
+    else:
+        results["pairwise_auroc"] = None
 
     # --- Marginal ranking ---
     pred_order1 = [abs(w_recovered[1 << i]) for i in range(n)]

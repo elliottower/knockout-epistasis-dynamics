@@ -1,0 +1,471 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{subcaption}
+
+\newcommand{\citeneeded}[1]{\textcolor{red}{[CITE: #1]}}
+\newcommand{\todo}[1]{\textcolor{orange}{[TODO: #1]}}
+\newcommand{\numplaceholder}[1]{\textcolor{blue}{\textbf{#1}}}
+
+\title{Exact Ground Truth for Epistasis Detection:\\A Benchmark from Combinatorially Complete Circuit Data}
+
+\author{
+  Elliot Tower \\
+  \texttt{elliot@elliottower.ai}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Higher-order interactions (epistasis) drive phenotype in genetics and
+function in neural circuits, yet every method for detecting them is
+validated against other approximations---never against exact ground truth,
+because exhaustive combinatorial measurement is infeasible at biological
+scale. We construct an exact benchmark by computing all $2^{15} = 32{,}768$
+coalition values over attention-head subsets in GPT-2-small, yielding
+the complete Walsh--Hadamard interaction spectrum for three circuits
+spanning near-additive, interactive, and null regimes. Against this
+ground truth, we evaluate five interaction-detection methods from the
+genetics and explainable-ML literatures---LASSO-Walsh, iterative random
+forests, and three Shapley interaction approximators---across seven
+sample budgets with pre-registered hypotheses.
+%
+The dominant factor separating methods is \emph{basis alignment}: whether
+the method's representational assumptions match the underlying
+interaction structure. LASSO-Walsh, which estimates Walsh coefficients
+directly, achieves near-perfect pairwise interaction detection
+(\numplaceholder{AUROC $> 0.99$}) at 5\% sample cost, while methods
+operating through an intermediate basis (k-Shapley Interaction Indices)
+reach \numplaceholder{$\sim$0.85} despite comparable reconstruction
+accuracy. Three metric-design bugs caught during development---each a
+named failure mode recurring across the interaction-detection
+literature---are reported as methodological contributions. The benchmark,
+pre-registration artifacts, and all coalition tables are released for
+extension.
+\end{abstract}
+
+
+%% ====================================================================
+\section{Introduction}
+\label{sec:intro}
+%% ====================================================================
+
+% GPS: Goal -> Problem -> Solution
+
+% GOAL: Detecting higher-order interactions (epistasis) is central to
+% genetics and mechanistic interpretability.
+
+Epistasis---the dependence of a phenotype on combinations of genetic
+variants rather than individual effects---is among the oldest unsolved
+measurement problems in quantitative genetics \citeneeded{Fisher 1918,
+Bateson 1909}. Analogous higher-order interactions appear in neural
+circuit analysis, where ablating individual components understates the
+joint effect of removing a functionally coupled group
+\citeneeded{Wang et al 2022 IOI, Conmy et al 2023 ACDC}.
+
+% PROBLEM: No ground truth exists for method validation.
+
+Every method for detecting epistasis---BOOST \citeneeded{Wan et al 2010},
+MDR \citeneeded{Ritchie et al 2001}, Walsh-analysis approaches
+\citeneeded{Neidhart et al 2013}, and Shapley interaction indices
+\citeneeded{Grabisch Roubens 1999, Sundararajan et al 2020}---is validated
+against other methods or against partial ground truth (pairwise only,
+simulated, or measured on a few loci). The combinatorial explosion of
+$2^n$ subset evaluations makes exhaustive measurement infeasible at
+biological scale, so the field validates approximations against
+approximations.
+
+% SOLUTION: We construct exact ground truth at n=15.
+
+Transformer circuits offer a setting where exhaustive evaluation is
+tractable: $n = 15$ attention heads yield $2^{15} = 32{,}768$ coalitions,
+each evaluable in a single forward pass over a prompt batch. We compute
+all coalition values for three circuits in GPT-2-small, producing the
+complete Walsh--Hadamard interaction spectrum---exact to floating-point
+precision---for a near-additive circuit, an interactive circuit, and a
+null control. Against this ground truth, we evaluate five
+interaction-detection methods spanning the genetics and explainable-ML
+lineages, with pre-registered hypotheses and falsification criteria.
+
+% Close: state the thesis
+
+The central finding is that \emph{basis alignment}---whether a method's
+native representation matches the interaction structure being
+scored---explains more of the performance gap between methods than
+algorithmic sophistication or sample budget. This result has direct
+implications for genetics practitioners choosing among interaction
+methods: the choice of representational basis constrains recovery
+fidelity before any algorithm runs.
+
+
+%% ====================================================================
+\section{Exact Ground Truth}
+\label{sec:ground-truth}
+%% ====================================================================
+
+% GPS: describe what "exact" means and characterize the three regimes.
+
+\subsection{Coalition value functions over circuit subsets}
+
+\todo{Define the value function v(S) = logit\_diff under zero-ablation
+of head subset S. Describe the IOI task. Cite Wang et al.}
+
+For a set of $n = 15$ attention heads, we evaluate the value function
+$v(S)$ for every $S \subseteq \{1, \ldots, n\}$ by ablating the
+complement $\bar{S}$ and measuring the logit difference between the
+correct and incorrect indirect-object tokens, averaged over 512 prompts.
+This produces a vector $v \in \mathbb{R}^{2^{15}}$ from which the
+complete Walsh--Hadamard spectrum is computed via the butterfly algorithm
+in $O(n \cdot 2^n)$ time.
+
+\subsection{Three interaction regimes}
+
+\begin{table}[t]
+\centering
+\caption{Ground-truth characterization of the three benchmark circuits.
+$k_{99}$ is the number of Walsh coefficients capturing 99\% of
+non-intercept energy. The energy spectrum shows the fraction of total
+Walsh energy at each interaction order. The three circuits span distinct
+interaction regimes: near-additive (canonical IOI), interactive
+(weight-identified), and null (random heads).}
+\label{tab:circuits}
+\begin{tabular}{lrrrrrr}
+\toprule
+Circuit & $n$ & $k_{99}$ & Order 0 & Order 1 & Order 2 & Order 3+ \\
+\midrule
+\texttt{weight\_ioi} & 15 & \numplaceholder{XX} & 97.5\% & 1.1\% & 0.7\% & 0.7\% \\
+\texttt{canonical\_ioi} & 15 & \numplaceholder{XX} & 94.5\% & 3.5\% & 1.5\% & 0.5\% \\
+\texttt{random15} & 15 & \numplaceholder{XX} & 99.3\% & 0.4\% & 0.2\% & 0.1\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Weight-identified circuit (\texttt{weight\_ioi}).}
+\todo{Describe provenance: identified via factorized weight decomposition,
+not activation patching. Cite the factorization paper.}
+This circuit has the richest higher-order structure among the three,
+with \numplaceholder{XX\%} of non-intercept energy above order 2.
+The $k$-SII reconstruction ceiling at order $\leq 2$ is $R^2 = 0.757$,
+rising to $0.868$ at order $\leq 3$ (Table~\ref{tab:ceilings}).
+
+\textbf{Canonical IOI circuit (\texttt{canonical\_ioi}).}
+The 15 heads identified by \citeneeded{Wang et al 2022} via activation
+patching. Near-additive: most non-intercept energy is at orders 1--2,
+with a $k$-SII ceiling of $R^2 = 0.955$ at order $\leq 2$.
+
+\textbf{Random control (\texttt{random15}).}
+Fifteen heads drawn uniformly at random from all 144 GPT-2-small heads.
+Serves as a negative control---any structure detected here is noise.
+Near-perfect $k$-SII ceiling ($R^2 = 0.995$ at order $\leq 2$) reflects
+the absence of genuine interaction structure.
+
+\subsection{Truncation ceilings}
+\label{sec:ceilings}
+
+\begin{table}[t]
+\centering
+\caption{Exact $k$-SII reconstruction ceilings computed via
+\texttt{shapiq.ExactComputer} v1.6.0. These are upper bounds on $R^2$
+achievable by any method operating at the stated truncation order in the
+$k$-SII basis. The gap between order-2 and order-3 ceilings quantifies
+how much recoverable structure lies above pairwise interactions.}
+\label{tab:ceilings}
+\begin{tabular}{lcc}
+\toprule
+Circuit & $k$-SII $\leq 2$ & $k$-SII $\leq 3$ \\
+\midrule
+\texttt{weight\_ioi} & 0.757 & 0.868 \\
+\texttt{canonical\_ioi} & 0.955 & 0.988 \\
+\texttt{random15} & 0.995 & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ceiling table is a first-class result: it quantifies the truncation
+bottleneck that limits all order-bounded methods regardless of estimation
+quality. On the interactive circuit, 24\% of reconstructable variance
+is inaccessible to any order-2 method---a structural limitation no
+algorithm can overcome.
+
+
+%% ====================================================================
+\section{Methods Under Test}
+\label{sec:methods}
+%% ====================================================================
+
+% One paragraph per method: what basis/inductive bias it assumes.
+
+\textbf{LASSO-Walsh.}
+$L_1$-regularized regression on the Walsh basis functions up to order 4.
+The design matrix $\Phi$ has columns $\phi_T(S) = (-1)^{|S \cap T|}$
+for each Walsh index $T$ with $|T| \leq 4$. The LASSO coefficients are
+direct estimates of the normalized Walsh coefficients
+$\hat{w}_T = \frac{1}{2^n} \sum_S v(S)(-1)^{|S \cap T|}$. Regularization
+path selected by 5-fold cross-validation on the training sample.
+
+\textbf{Iterative Random Forest (iRF).}
+\citeneeded{Basu et al 2018} adapted for coalition-game regression.
+Binary coalition membership serves as features; the forest approximates
+$v(S)$ through axis-aligned splits. Walsh coefficients are recovered
+indirectly by applying the Walsh--Hadamard transform to the forest's
+predictions over all $2^n$ coalitions. Hyperparameters (min leaf size,
+max depth) selected by nested 3-fold CV on the training sample.
+
+\textbf{KernelSHAP-IQ.}
+\citeneeded{Fumagalli et al 2024} estimates $k$-Shapley Interaction
+Indices ($k$-SII) \citeneeded{Grabisch 1997} up to a specified maximum
+order via kernel-weighted regression. Smart sampling: the algorithm
+chooses which coalitions to query. $k$-SII is a non-orthogonal basis;
+reconstruction uses the plug-in predictor
+$\hat{v}(S) = v(\emptyset) + \sum_{T \subseteq S, T \neq \emptyset} \phi_T$.
+
+\textbf{SHAPIQ (Monte Carlo).}
+\citeneeded{Muschalik et al 2024} estimates $k$-SII via Monte Carlo
+sampling with stratified permutation-based estimators.
+
+\textbf{SVARM-IQ.}
+\citeneeded{Kolpaczki et al 2024} estimates $k$-SII via stratified
+sampling with variance-aware allocation.
+
+
+%% ====================================================================
+\section{Evaluation Protocol}
+\label{sec:protocol}
+%% ====================================================================
+
+\subsection{Paired-seed budget sweep}
+
+All five methods are evaluated on identical pre-designated held-out sets
+at each of seven budget levels (1\%, 2\%, 3\%, 5\%, 10\%, 20\%, 40\%
+of $2^{15}$ coalitions). For each (circuit, budget, seed) triple:
+%
+\begin{enumerate}
+\item A 10\% held-out set is drawn before any method runs.
+\item LASSO-Walsh and iRF receive a random sample from the remaining
+      pool. Shapiq methods choose their own coalitions via smart sampling
+      (query overlap with the held-out set is tracked and logged).
+\item All methods are scored on the \emph{same} held-out coalitions.
+\end{enumerate}
+%
+Twenty seeds per budget level ($\leq 10\%$); ten seeds at higher budgets.
+
+\subsection{Metrics}
+
+\textbf{Reconstruction: held-out $R^2$.}
+The primary reconstruction metric. Method-neutral because no method
+optimizes held-out prediction directly.
+
+\textbf{Reconstruction: per-order NMSE.}
+Normalized mean squared error within each interaction order separately,
+excluding order 0 (intercept) to avoid denominator domination.
+
+\textbf{Detection: pairwise interaction AUROC.}
+For each of the $\binom{15}{2} = 105$ head pairs, the true pairwise
+Walsh coefficient magnitude $|w_{\{i,j\}}|$ defines a binary label
+(above median = truly interacting). AUROC of the estimated
+$|\hat{w}_{\{i,j\}}|$ predicting this label measures detection accuracy
+independent of reconstruction quality.
+%
+\todo{Note: AUROC was added post-hoc as an exploratory metric. It was
+not part of the pre-registered hypotheses. Predictions for AUROC were
+generated by a blinded sub-agent before results were examined.}
+
+\subsection{Pre-registration}
+
+Hypotheses H1--H4 were frozen with SHA-256 hash
+\texttt{2caafff\ldots} before the shapiq sweep ran. Version pins:
+\texttt{shapiq==1.6.0}, \texttt{numpy==2.2.6},
+\texttt{scipy==1.15.3}, \texttt{scikit-learn==1.6.1}.
+
+\textbf{H1 (Estimation efficiency).}
+All three shapiq approximators achieve $\geq 95\%$ of the exact $k$-SII
+ceiling at 5\% budget.
+\emph{Verdict:} \numplaceholder{Confirmed/Falsified.}
+
+\textbf{H2 (Per-circuit ceiling behavior).}
+Order-3 shapiq on \texttt{weight\_ioi} exceeds the order-2 ceiling
+by $\geq 5$ $R^2$ points; canonical IOI shows $< 3$ points gain.
+\emph{Verdict:} \numplaceholder{Confirmed/Falsified.}
+
+\textbf{H3 (Method ordering).}
+At $\geq 5\%$ budget, LASSO-Walsh $>$ iRF $>$ best shapiq (order 2)
+on held-out $R^2$, with each gap $> 0.05$.
+\emph{Verdict:} \numplaceholder{Confirmed/Falsified.}
+
+\textbf{H4 (Cross-circuit consistency).}
+Method ordering is consistent across all three circuits at $\geq 5\%$
+budget.
+\emph{Verdict:} \numplaceholder{Confirmed/Falsified.}
+
+\todo{Add AUROC predictions from blind sub-agent here, with
+contamination statement.}
+
+
+%% ====================================================================
+\section{Results}
+\label{sec:results}
+%% ====================================================================
+
+\subsection{Reconstruction accuracy}
+
+\begin{figure}[t]
+\centering
+\todo{Three-panel figure: R² vs budget for each circuit, 5 methods per panel.}
+\caption{Held-out $R^2$ as a function of sample budget for five
+interaction-detection methods across three ground-truth regimes. Error
+bands show 95\% intervals over 20 seeds. LASSO-Walsh dominates at all
+budgets on the near-additive and interactive circuits; the gap narrows
+on the null circuit where all methods achieve high reconstruction by
+default.}
+\label{fig:r2-budget}
+\end{figure}
+
+\todo{Report the R² results. Key findings: LASSO dominates, shapiq
+reaches ceiling efficiently, iRF has a floor from axis-aligned splits.}
+
+\subsection{The ratio-metric trap}
+
+\todo{The ``instructively wrong prediction'' story. Gap widens on easier
+functions because LASSO's absolute error approaches zero while iRF hits
+an invariant floor. Framed as why ratio metrics mislead---a
+methodological contribution.}
+
+\subsection{Estimation efficiency against ceilings}
+
+\begin{figure}[t]
+\centering
+\todo{Efficiency plot: achieved R² / ceiling R² for shapiq methods vs budget.}
+\caption{Estimation efficiency (achieved $R^2$ / exact $k$-SII ceiling)
+for the three shapiq approximators. KernelSHAP-IQ reaches
+\numplaceholder{98\%} of the ceiling at 5\% budget across all circuits,
+confirming that the bottleneck is truncation order, not estimation
+quality.}
+\label{fig:efficiency}
+\end{figure}
+
+\todo{Report efficiency numbers. Key finding: near-perfect efficiency
+at modest budgets across all approximators.}
+
+\subsection{Pairwise interaction detection}
+
+\begin{figure}[t]
+\centering
+\todo{AUROC vs budget, or AUROC bar chart at one representative budget.}
+\caption{Pairwise interaction AUROC at \numplaceholder{5\%} budget.
+LASSO-Walsh achieves near-perfect detection
+(\numplaceholder{AUROC $\sim 1.0$}) because it directly estimates the
+Walsh coefficients being scored. Shapiq methods, operating through
+the $k$-SII basis, show a detection gap wider than their reconstruction
+gap---basis misalignment degrades ranking more than aggregate prediction.}
+\label{fig:auroc}
+\end{figure}
+
+\todo{Report AUROC results. Key finding: basis alignment matters more
+for detection than reconstruction.}
+
+\subsection{Per-order NMSE}
+
+\begin{figure}[t]
+\centering
+\todo{Bar chart of per-order NMSE at one representative budget.}
+\caption{Per-order NMSE at \numplaceholder{5\%} budget. \todo{Describe
+which orders each method recovers well and poorly.}}
+\label{fig:per-order-nmse}
+\end{figure}
+
+
+%% ====================================================================
+\section{Metric Design: Three Failure Modes}
+\label{sec:audit}
+%% ====================================================================
+
+% Promoted to a real section per outline. Each is a named failure mode.
+
+Three metric-design bugs were identified and corrected during benchmark
+development. Each represents a failure mode that recurs across the
+interaction-detection and explainability literatures.
+
+\subsection{Intercept domination}
+
+\todo{NMSE including order-0 coefficient is dominated by the intercept
+(97\%+ of energy). A method that returns only the mean achieves apparent
+NMSE $< 0.03$. Fix: exclude order 0 from spectrum metrics.}
+
+\subsection{Hyperparameter handicapping}
+
+\todo{iRF with default min\_samples\_leaf=5 showed a puzzling inverted
+curve. Nested CV on the training fold (not the held-out set) resolved
+this: min\_leaf=1 was selected on 100\% of trials. The error floor that
+remains after tuning is structural (axis-aligned splits vs.~global Walsh
+rotation), not a hyperparameter artifact.}
+
+\subsection{Ratio-metric explosion}
+
+\todo{The ratio (LASSO NMSE / iRF NMSE) manufactured an apparent 89x
+gap that disappeared under matched absolute scales. Diagnosis: LASSO's
+numerator approached zero on near-additive circuits while iRF's floor
+held constant. The ratio amplifies a denominator artifact into a
+headline claim.}
+
+
+%% ====================================================================
+\section{Discussion}
+\label{sec:discussion}
+%% ====================================================================
+
+\todo{Answer the genetics-facing question: which method should
+practitioners trust? Under what regime?
+
+Key points:
+- LASSO-Walsh when interaction structure is sparse and basis is known
+- shapiq methods when interpretable Shapley-style attribution is needed
+  (trade detection for interpretability)
+- iRF as a model-free baseline, but aware of the axis-alignment floor
+- Basis choice dominates algorithm choice---this is the transferable insight}
+
+
+%% ====================================================================
+\section{Limitations}
+\label{sec:limitations}
+%% ====================================================================
+
+\begin{itemize}
+\item Three ground-truth regimes, not a systematic sweep of interaction
+      density or sparsity.
+\item Zero-ablation only; mean-ablation ground truth deferred.
+\item Order $\leq 3$ truncation ceiling bounds all shapiq results;
+      order $\geq 4$ interactions are not recovered.
+\item Using an approximator (e.g., KernelSHAP-IQ) as ground truth at
+      larger $n$ is explicitly \emph{not} validated by this work.
+      Extrapolation would require independent verification that the
+      approximator's error profile at $n = 15$ transfers to larger
+      systems.
+\item $n = 15$ is small relative to biological systems ($n \sim 10^3$
+      to $10^6$ SNPs). The benchmark tests method \emph{accuracy},
+      not scalability.
+\end{itemize}
+
+
+%% ====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+%% ====================================================================
+
+\todo{Basis alignment, not method sophistication, explains recovery
+fidelity. Benchmark and pre-registration artifacts released.}
+
+
+%% ====================================================================
+%% References
+%% ====================================================================
+
+\bibliographystyle{plainnat}
+% \bibliography{references}
+
+\end{document}

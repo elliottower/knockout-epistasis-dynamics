@@ -301,6 +301,7 @@ def summarize_trials(trials, method_name):
         "heldout_r2": stats("heldout_r2"),
         "spectrum_nmse_no_intercept": stats("spectrum_nmse_no_intercept"),
         "pairwise_spearman_rho": stats("pairwise_spearman_rho"),
+        "pairwise_auroc": stats("pairwise_auroc"),
         "marginal_spearman_rho": stats("marginal_spearman_rho"),
         "energy_spectrum_corr": stats("energy_spectrum_corr"),
         "wall_seconds": stats("wall_seconds"),
