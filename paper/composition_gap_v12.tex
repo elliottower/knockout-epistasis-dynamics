@@ -164,8 +164,7 @@ To guard against overfitting structural hypotheses to results, the
 models were analyzed in two batches. Batch~1 (6~networks) was used to
 develop the analysis pipeline and formulate structural predictions.
 Batch~2 (21~networks) was analyzed blind: structural predictions were
-SHA-frozen before any coalition sweep ran
-(Section~\ref{sec:blind}). One additional network (Grieco bladder,
+SHA-frozen before any coalition sweep ran. One additional network (Grieco bladder,
 $n = 18$) was added after the blind protocol and is excluded from
 blind prediction scoring.
 
@@ -258,19 +257,6 @@ The global spectrum is analyzed only if (i)~the value function has
 $\geq 10$ unique values, (ii)~absolute order-3+ energy exceeds
 $10^{-4}$, and (iii)~no single value accounts for $> 90\%$ of
 coalitions. All 28~networks pass.
-
-
-\subsection{Blind prediction protocol}
-\label{sec:blind}
-
-Structural predictions were registered in two batches before coalition
-sweeps ran. For Batch~1 (6~networks), predictions were based on
-Boolean rule analysis, feedback loop topology, and output-node
-structure. A cross-network hypothesis was registered: positive
-feedback loop ratio $> 0.5$ implies creation. For Batch~2
-(21~networks), predictions used the same structural analysis applied
-independently. All predictions were SHA-frozen before any sweep
-executed.
 
 
 \subsection{Null model ensembles}
@@ -373,51 +359,26 @@ $\Delta_{3+}^{\mathrm{ODE}} = E_{3+}^{\mathrm{ODE,global}} - E_{3+}^{\mathrm{loc
 \subsection{Empirical fitness landscape analysis}
 \label{sec:empirical-method}
 
-To test whether the composition gap generalizes beyond simulation,
-we apply the Walsh decomposition to three published combinatorial
-fitness datasets where the full $2^n$ landscape is measured
-experimentally.
+To test whether the composition gap generalizes beyond simulation, we
+apply the Walsh decomposition to three published combinatorially
+complete fitness datasets: cefotaxime resistance across 32 genotypes
+from 5 mutations in TEM-1 beta-lactamase
+\citep{weinreich2006darwinian}; four fitness components across 64
+genotypes from 6 biosynthetic knockouts in \emph{S.~cerevisiae}
+\citep{hall2010fitness}; and sporulation efficiency across 186 of 256
+genotypes from 8 loci in \emph{Aspergillus niger}
+\citep{franke2011evolutionary}. Dataset-specific preprocessing is given
+in Supplement~\ref{supp:empirical}.
 
-\paragraph{Weinreich TEM-1 beta-lactamase.}
-\citet{weinreich2006darwinian} measured cefotaxime minimum
-inhibitory concentration (MIC) for all 32 genotypes formed by 5
-binary mutations in TEM-1 beta-lactamase. MIC values span a
-$\sim$47{,}000-fold range (0.071--4100~$\mu$g/mL), so we analyze
-log-transformed values. The local interaction structure is defined
-by structural contacts from the crystal structure (PDB 1BTL): two
-mutation sites interact locally if their C$\alpha$--C$\alpha$
-distance is $\leq 8$~\AA. No pairs meet this threshold (closest:
-E104K--G238S at 12.67~\AA), so the local model is purely additive
-and $E_{3+}^{\mathrm{local}} = 0$.
-
-\paragraph{Hall yeast biosynthetic knockouts.}
-\citet{hall2010fitness} measured four fitness components (haploid
-growth rate, diploid growth rate, mating efficiency, sporulation
-efficiency) for all 64 genotypes formed by 6 biosynthetic gene
-knockouts in \emph{S.~cerevisiae}. Each gene catalyzes a step in a
-distinct biosynthetic pathway (amino acids, nucleotides, or
-vitamins). The pathways share upstream precursors from central
-carbon metabolism (PRPP, TCA cycle intermediates), but the exact
-locus-to-gene mapping is unavailable from the public data, so the
-local model is conservatively set to additive
-($E_{3+}^{\mathrm{local}} = 0$). All four fitness components are
-analyzed; haploid growth rate is the primary measure.
-
-\paragraph{Franke \emph{Aspergillus niger} sporulation.}
-\citet{franke2011evolutionary} measured sporulation efficiency for
-186 of 256 genotypes formed by 8 binary loci in
-\emph{Aspergillus niger}. Seventy genotypes showed no measurable
-sporulation (lethal or near-lethal). We analyze the full 186-genotype
-dataset both with and without these zero-fitness genotypes, since
-lethality may inflate apparent higher-order interactions through
-floor effects. The local model is additive
-($E_{3+}^{\mathrm{local}} = 0$), as the loci span distinct
-biosynthetic and developmental pathways.
-
-For all three datasets, the composition gap equals the global order-3+
-energy fraction, measuring how much higher-order epistasis exists
-in the fitness landscape beyond what a purely additive local model
-predicts.
+For all three, no local interaction model is available---the Weinreich
+sites make no structural contact at 8~\AA, and the Hall and Franke
+locus-to-pathway mappings are not recoverable from the public
+data---so the local model is set to additive and the composition gap
+equals the global order-3+ energy fraction. This is a weaker comparison
+than the Boolean analysis, which contrasts the measured local rule
+spectrum against the phenotype spectrum. The empirical arm therefore
+tests whether higher-order structure exists beyond additivity, not
+whether composition created it.
 
 
 %% ====================================================================
@@ -567,10 +528,12 @@ adds beyond the rules---so rules that already carry higher-order
 structure leave less to add. Network size alone is uninformative
 ($\rho = -0.018$).
 
-Structural predictions registered before these analyses achieved 10/21
-(48\%) direction accuracy, indistinguishable from chance, and a
-pre-registered feedback-loop-ratio hypothesis was falsified; both are
-consistent with the absence of a usable joint predictor. Predicting the
+Structural predictions, SHA-frozen in two batches before any coalition
+sweep executed, achieved 10/21 (48\%) direction accuracy on the 21
+held-out networks, indistinguishable from chance; a registered
+positive-feedback-ratio hypothesis was falsified. Both are consistent
+with the absence of a usable joint predictor. The registration
+documents and their freeze records are in the repository. Predicting the
 gap requires simulating the full
 composed dynamics. We tested whether more expressive structural
 features improve prediction. Across all 28 networks, Spearman
@@ -915,6 +878,46 @@ Counterexamples: EMT switch has 0.1\% cycling but shows destruction
 
 \section{Empirical landscape details}
 \label{supp:empirical}
+
+\subsection*{Datasets and preprocessing}
+
+\paragraph{Weinreich TEM-1 beta-lactamase.}
+\citet{weinreich2006darwinian} measured cefotaxime minimum
+inhibitory concentration (MIC) for all 32 genotypes formed by 5
+binary mutations in TEM-1 beta-lactamase. MIC values span a
+$\sim$47{,}000-fold range (0.071--4100~$\mu$g/mL), so we analyze
+log-transformed values. The local interaction structure is defined
+by structural contacts from the crystal structure (PDB 1BTL): two
+mutation sites interact locally if their C$\alpha$--C$\alpha$
+distance is $\leq 8$~\AA. No pairs meet this threshold (closest:
+E104K--G238S at 12.67~\AA), so the local model is purely additive
+and $E_{3+}^{\mathrm{local}} = 0$.
+
+\paragraph{Hall yeast biosynthetic knockouts.}
+\citet{hall2010fitness} measured four fitness components (haploid
+growth rate, diploid growth rate, mating efficiency, sporulation
+efficiency) for all 64 genotypes formed by 6 biosynthetic gene
+knockouts in \emph{S.~cerevisiae}. Each gene catalyzes a step in a
+distinct biosynthetic pathway (amino acids, nucleotides, or
+vitamins). The pathways share upstream precursors from central
+carbon metabolism (PRPP, TCA cycle intermediates), but the exact
+locus-to-gene mapping is unavailable from the public data, so the
+local model is conservatively set to additive
+($E_{3+}^{\mathrm{local}} = 0$). All four fitness components are
+analyzed; haploid growth rate is the primary measure.
+
+\paragraph{Franke \emph{Aspergillus niger} sporulation.}
+\citet{franke2011evolutionary} measured sporulation efficiency for
+186 of 256 genotypes formed by 8 binary loci in
+\emph{Aspergillus niger}. Seventy genotypes showed no measurable
+sporulation (lethal or near-lethal). We analyze the full 186-genotype
+dataset both with and without these zero-fitness genotypes, since
+lethality may inflate apparent higher-order interactions through
+floor effects. The local model is additive
+($E_{3+}^{\mathrm{local}} = 0$), as the loci span distinct
+biosynthetic and developmental pathways.
+
+\subsection*{Per-landscape results}
 
 The Weinreich TEM-1 landscape has 2.9\% order-3+ energy, dominated
 by main effects (73.1\%) as expected for mutations spread across a
