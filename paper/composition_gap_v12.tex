@@ -49,10 +49,11 @@ in 19 of 25 non-null networks ($|\Delta_{3+}| \geq 0.5$~pp), with
 gaps from $< 1$ to $+83$ percentage points of higher-order spectral
 energy. In five networks, molecular wiring fails to predict knockout
 epistasis---gene pairs with the strongest local interactions show the
-weakest global effects. Pre-registered structural predictions
-(feedback loop counts, rule complexity, in-degree distribution) on 21
-held-out networks achieve 48\% direction accuracy, indistinguishable
-from chance. Hill-function ODE conversion preserves the gap sign in
+weakest global effects. No joint model of standard
+topological features (feedback loop counts, rule complexity,
+in-degree distribution) predicts the gap, with leave-one-out
+cross-validated $R^2 = -0.27$; individual features correlate
+negatively, most strongly rule nonlinearity ($\rho = -0.655$). Hill-function ODE conversion preserves the gap sign in
 all 27 of 28 networks tested. Composition gaps are absent in size- and
 degree-matched random networks, ruling out network size and
 connectivity as sufficient explanations. Separately, three experimental
@@ -545,15 +546,32 @@ so the association is suggestive rather than definitive
 (Supplement~\ref{supp:cycling}).
 
 
-\subsection{Structural predictions perform at chance}
+\subsection{Topological features do not jointly predict the gap}
 \label{sec:blind-results}
 
-SHA-frozen structural predictions on 21 held-out networks achieved
-10/21 (48\%) direction accuracy, indistinguishable from chance
-(Supplement~\ref{supp:blind}). A pre-registered feedback-loop-ratio
-hypothesis was falsified. The composition gap is not reducible to
-feedback loop counts, rule complexity, in-degree distribution, or
-output-node arity; predicting it requires simulating the full
+Fitting the composition gap directly on the three feature families
+named above---feedback loop counts, rule complexity, and in-degree
+distribution---gives a leave-one-out cross-validated $R^2$ of $-0.27$
+across the 27 networks, worse than predicting the mean. No joint model
+of these features generalizes.
+
+Individual features do correlate, and in a consistent direction. The
+fraction of genes with nonlinear update rules is the strongest single
+correlate ($\rho = -0.655$, Holm-adjusted $p = 0.003$), followed by
+positive feedback cycles ($\rho = -0.571$, $p = 0.024$), mean
+in-degree ($\rho = -0.554$, $p = 0.033$), and mean regulator count
+($\rho = -0.536$, $p = 0.043$). Every sign is negative: networks whose
+local rules are already nonlinear or densely regulated show
+\emph{smaller} gaps. This is what the gap measures---what composition
+adds beyond the rules---so rules that already carry higher-order
+structure leave less to add. Network size alone is uninformative
+($\rho = -0.018$).
+
+Structural predictions registered before these analyses achieved 10/21
+(48\%) direction accuracy, indistinguishable from chance, and a
+pre-registered feedback-loop-ratio hypothesis was falsified; both are
+consistent with the absence of a usable joint predictor. Predicting the
+gap requires simulating the full
 composed dynamics. We tested whether more expressive structural
 features improve prediction. Across all 28 networks, Spearman
 correlations of $\Delta_{3+}$ with mean canalizing depth
@@ -681,9 +699,11 @@ statistical epistasis is generic in gene regulatory networks. Our
 results extend this in three directions. First, the gap is quantified
 order-by-order rather than detected as present/absent. Second, the
 gap is signed, with creation as the dominant mode. Third, across 28
-networks, the gap is not predictable from standard topological
-features of the regulatory graph---a result established by the
-failure of pre-registered predictions.
+networks, no joint model of standard topological features predicts the
+gap: leave-one-out cross-validated $R^2$ is $-0.27$, worse than
+predicting the mean. Individual features do correlate, most strongly
+rule nonlinearity ($\rho = -0.655$), but the relationship does not
+support prediction.
 
 The global epistasis literature \citep{otwinowski2018inferring, reddy2021global} establishes that nonlinear genotype-phenotype maps
 reshape interaction spectra. Our local-vs-global comparison
@@ -771,8 +791,10 @@ pre-registration artifacts are available at
 All data and code are available at \textcolor{red}{[URL: Zenodo DOI]}.
 The repository includes: (i)~coalition value functions for all 28
 networks as compressed NumPy archives; (ii)~wiring diagrams and local
-Walsh spectra as JSON; (iii)~pre-registration prediction files with
-SHA-256 checksums; (iv)~Walsh spectra for the Weinreich, Hall, and Franke
+Walsh spectra as JSON; (iii)~pre-registration documents and the blinding protocol, with their
+commit history; \texttt{PROVENANCE.md} in that repository records which
+were frozen in version control before the corresponding analysis and
+which were committed retrospectively; (iv)~Walsh spectra for the Weinreich, Hall, and Franke
 empirical fitness landscapes; (v)~ODE coalition value functions for
 all networks with Hill-function conversion; (vi)~all analysis and
 plotting scripts.
@@ -887,30 +909,6 @@ Counterexamples: EMT switch has 0.1\% cycling but shows destruction
 ($\rho = 0.09$, $p = 0.87$).
 
 
-\section{Blind prediction details}
-\label{supp:blind}
-
-\begin{table}[h]
-\centering
-\caption{Blind prediction accuracy. Batch~2 (21 held-out networks) is
-the confirmatory test; batch~1 predictions were developed on the same
-networks and are circular.}
-\begin{tabular}{lccc}
-\toprule
-Category & Batch 2 (confirmatory) & Batch 1 (circular) \\
-\midrule
-Gap direction & 10/21 (48\%) & 4/6 \\
-$\rho$ in predicted range & 6/21 (29\%) & 4/6 \\
-fb\_ratio hypothesis & Falsified & Falsified \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Predicted $\rho$ ranges contained the observed value in 6/21 cases
-(29\%). Batch~1 predictions (4/6) were developed on the same networks
-and are therefore circular.
-
-
 \section{Empirical landscape details}
 \label{supp:empirical}
 
@@ -949,25 +947,5 @@ floor effects at the viability boundary.
   networks (median $\Delta\rho = -0.003$).
 \end{itemize}
 
-
-\section{Pre-registered predictions for extensions}
-\label{supp:prereg}
-
-Three predictions were registered before extension analyses ran
-(SHA: \texttt{c66ea6...e6aef}; included in data release).
-
-\begin{enumerate}
-\item \textbf{ODE sign preservation}: predicted sign preserved under
-  Hill-function conversion. Observed 27/27 preservation. ODE
-  magnitudes increased more often than decreased (16/23 non-null).
-  \emph{Confirmed} (sign); \emph{refuted} (magnitude direction).
-
-\item \textbf{Weinreich TEM-1}: predicted positive gap (high
-  confidence). Observed $E_{3+} = 2.9\%$. \emph{Confirmed.}
-
-\item \textbf{Hall yeast}: predicted positive gap, small magnitude
-  (medium-low confidence). Observed $E_{3+} = 0.1\%$ (haploid
-  growth), $4.7\%$ (mating). \emph{Partially confirmed.}
-\end{enumerate}
 
 \end{document}
