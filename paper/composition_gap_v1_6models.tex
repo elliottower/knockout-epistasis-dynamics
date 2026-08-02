@@ -1,0 +1,583 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{subcaption}
+\usepackage{multirow}
+
+\newcommand{\citeneeded}[1]{\textcolor{red}{[CITE: #1]}}
+\newcommand{\todo}[1]{\textcolor{orange}{[TODO: #1]}}
+
+\title{Dynamical composition creates and destroys epistasis:\\
+order-by-order quantification in six Boolean gene regulatory networks}
+
+\author{
+  Elliot Tower \\
+  \texttt{elliot@elliottower.ai}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Nonlinear dynamics generate phenotypic epistasis from molecular
+architectures that may contain no epistatic interactions themselves.
+Prior work has established this gap qualitatively; we quantify it
+order-by-order. For six published Boolean gene regulatory networks
+(10--15 genes), we compute the complete Walsh--Hadamard interaction
+spectrum at two levels: (i)~the local update rules, where each gene's
+truth table yields exact Fourier coefficients, and (ii)~the
+attractor-level knockout landscape, obtained from exhaustive $2^n$
+coalition sweeps under synchronous dynamics. Comparing the two spectra
+reveals a signed \emph{composition gap} whose magnitude spans two
+orders: from effectively zero in the fission yeast cell cycle to
+$+34.3$ percentage points of order-3+ energy created in
+\emph{Arabidopsis}. Pairwise Spearman correlation between local and
+global interaction magnitudes is universally positive
+($\rho = 0.12$--$0.41$) but statistically significant in only three of
+six networks, indicating that molecular wiring is a noisy predictor of
+knockout epistasis. A pre-registered cross-network hypothesis---that
+positive feedback loop ratio predicts the gap direction---fails
+decisively. An exploratory association between limit-cycle prevalence
+and gap direction is noted ($p \approx 0.10$, post-hoc) as a
+hypothesis for future testing. The complete Walsh spectra, coalition
+tables, and pre-registration artifacts are released for reuse.
+\end{abstract}
+
+
+%% ====================================================================
+\section{Introduction}
+\label{sec:intro}
+%% ====================================================================
+
+Epistasis---the dependence of phenotype on gene combinations rather
+than individual effects---is among the oldest measurement problems in
+quantitative genetics \citeneeded{Fisher 1918, Bateson 1909}. A
+persistent difficulty is the gap between molecular and statistical
+epistasis: the interactions encoded in regulatory logic need not
+predict the interactions observed in knockout experiments
+\citeneeded{Phillips 2008 Nat Rev Genet}. Gjuvsland et al.\ showed
+that nonlinear dynamics generically produce statistical epistasis from
+gene regulatory architectures, regardless of whether the underlying
+molecular rules contain epistatic terms \citeneeded{Gjuvsland 2007
+Genetics}. Subsequent work confirmed this in synthetic three-gene
+circuits, where pairwise and triplet epistasis depended on environment
+and switched sign across conditions \citeneeded{Baier 2023 Sci Adv}.
+
+These results establish that a gap exists. They do not quantify it.
+The gap has no known magnitude, no known sign structure, and no
+established dependence on network architecture. One reason is
+computational: exhaustive knockout measurement requires $2^n$ subset
+evaluations, which is infeasible at genomic scale. In Boolean gene
+regulatory networks of modest size ($n \leq 15$), however, exhaustive
+evaluation is tractable.
+
+We exploit this tractability. For each network, we compute two
+complete interaction spectra using the Walsh--Hadamard transform: one
+from the local update rules (each gene's truth table, at most $2^6 =
+64$ entries) and one from the attractor-level value function (all
+$2^n$ knockout coalitions, up to $2^{15} = 32{,}768$ evaluations).
+The two spectra are compared order-by-order, yielding a signed
+composition gap that measures how much higher-order structure dynamics
+create or destroy.
+
+The central finding is that the composition gap is large, signed, and
+architecture-dependent. Dynamics create higher-order epistasis in some
+networks (adding interactions absent from any local rule) and destroy
+it in others (compressing higher-order structure into lower orders),
+with one network producing a near-zero gap. The magnitudes span two
+orders, from sub-percentage-point to 34 percentage points.
+A pre-registered hypothesis based on positive feedback loop
+counting fails, and the molecular wiring diagram is a statistically
+significant predictor of knockout epistasis in only half the networks
+studied.
+
+
+%% ====================================================================
+\section{Methods}
+\label{sec:methods}
+%% ====================================================================
+
+\subsection{Boolean network models}
+\label{sec:models}
+
+Six published Boolean gene regulatory networks were selected from the
+Cell Collective repository \citeneeded{Helikar 2012} and primary
+literature (Table~\ref{tab:models}). Selection criteria: (i)~$n \leq
+15$ nodes to permit exhaustive coalition sweeps, (ii)~synchronous
+update semantics used in the original publication, and
+(iii)~biologically defined output node (cell-cycle commitment marker,
+apoptosis effector, or DNA repair checkpoint). Three networks model
+cell-cycle control across species (mammalian, \emph{Drosophila},
+\emph{Arabidopsis}), one models apoptosis signaling, one models
+fission yeast cell-cycle, and one models the Fanconi anemia DNA
+repair pathway.
+
+\begin{table}[t]
+\centering
+\caption{Boolean gene regulatory networks used in this study. $n$:
+number of genes (players in the coalition game). Output: the gene
+whose attractor state defines the value function. Feedback loops
+counted up to length~4.}
+\label{tab:models}
+\begin{tabular}{llrccrr}
+\toprule
+ID & Network & $n$ & Output & Pos.\ loops & Neg.\ loops & $2^n$ \\
+\midrule
+G1 & Faure mammalian cell cycle & 10 & CycB & 13 & 12 & 1{,}024 \\
+G2 & Tournier apoptosis & 12 & C3a & 3 & 3 & 4{,}096 \\
+G4 & Davidich fission yeast & 10 & Cdc2\_Cdc13 & 13 & 3 & 1{,}024 \\
+G5 & Albert \emph{Drosophila} cell cycle & 14 & CycB & 22 & 14 & 16{,}384 \\
+G9 & Rodriguez Fanconi anemia & 15 & CHKREC & 36 & 45 & 32{,}768 \\
+G10 & Ortiz-Guti\'errez \emph{Arabidopsis} cell cycle & 14 & CYCB1\_1 & 39 & 42 & 16{,}384 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{Local rule Fourier extraction}
+\label{sec:local-fourier}
+
+Each gene $k$ has a Boolean update rule $f_k\colon \{0,1\}^{r_k}
+\to \{0,1\}$, where $r_k \leq 6$ is the number of regulators. We
+compute the Walsh--Hadamard transform of the truth table:
+%
+\begin{equation}
+\label{eq:local-wht}
+w_T^{(k)} = \frac{1}{2^{r_k}} \sum_{x \in \{0,1\}^{r_k}} f_k(x)\,(-1)^{|x \cap T|},
+\quad T \subseteq \{1, \ldots, r_k\}.
+\end{equation}
+%
+A nonzero coefficient $w_T^{(k)}$ at $|T| = m$ indicates a genuine
+$m$-way interaction among the regulators of gene $k$,
+representation-independent: the transform is invariant to how the
+rule is written (disjunctive normal form, algebraic normal form, etc.).
+For each unordered pair $\{i,j\}$ of network genes, the
+\emph{local pairwise magnitude} is:
+%
+\begin{equation}
+\label{eq:local-pair}
+\ell_{ij} = \sum_{k:\, i,j \in \mathrm{reg}(k)} |w_{\{i,j\}}^{(k)}|,
+\end{equation}
+%
+summing over all genes $k$ whose update rule depends on both $i$ and
+$j$.
+
+The \emph{local energy spectrum} reports the fraction of total
+squared-coefficient energy at each interaction order $m$:
+%
+\begin{equation}
+\label{eq:local-spectrum}
+E_m^{\mathrm{local}} = \frac{\sum_k \sum_{|T|=m} \bigl(w_T^{(k)}\bigr)^2}
+{\sum_k \sum_T \bigl(w_T^{(k)}\bigr)^2}.
+\end{equation}
+
+
+\subsection{Coalition sweep and attractor-level value function}
+\label{sec:coalition-sweep}
+
+For each of $2^n$ coalitions $S \subseteq \{1,\ldots,n\}$, genes not
+in $S$ are clamped to~0 (knockout). The remaining genes evolve under
+synchronous Boolean dynamics from $N = 512$ uniformly random initial
+states until convergence to a fixed point or limit cycle (detected by
+Floyd's algorithm, maximum 200 steps). The value function is:
+%
+\begin{equation}
+\label{eq:value}
+v(S) = \frac{1}{N} \sum_{i=1}^{N}
+\overline{x_{\mathrm{out}}^{(i)}(S)},
+\end{equation}
+%
+where $\overline{x_{\mathrm{out}}^{(i)}(S)}$ is the time-averaged
+output-node state for initial condition $i$ under coalition $S$ (for
+fixed points, the attractor value; for limit cycles, the mean over
+one period).
+
+The global Walsh--Hadamard transform of $v$ gives the
+\emph{global interaction spectrum}:
+%
+\begin{equation}
+\label{eq:global-wht}
+w_T^{\mathrm{global}} = \frac{1}{2^n} \sum_{S \subseteq \{1,\ldots,n\}}
+v(S)\,(-1)^{|S \cap T|}.
+\end{equation}
+%
+The global pairwise magnitude for pair $\{i,j\}$ is
+$g_{ij} = |w_{\{i,j\}}^{\mathrm{global}}|$, and the
+\emph{global energy spectrum} is defined analogously to
+Eq.~\ref{eq:local-spectrum}.
+
+
+\subsection{Composition gap metrics}
+\label{sec:metrics}
+
+\textbf{Pairwise Spearman correlation.}
+For each network, we compute
+$\rho = \mathrm{Spearman}(\ell_{ij}, g_{ij})$ over all
+$\binom{n}{2}$ pairs, with bootstrap 95\% confidence intervals
+(10{,}000 resamples of initial states). A positive $\rho$ means local
+rule structure is informative about global knockout epistasis; $\rho
+\approx 0$ means the molecular wiring diagram provides no useful
+prior.
+
+\textbf{Order-3+ energy gap.}
+The \emph{composition gap} at higher orders is:
+%
+\begin{equation}
+\Delta_{3+} = \sum_{m \geq 3} E_m^{\mathrm{global}}
+- \sum_{m \geq 3} E_m^{\mathrm{local}}.
+\end{equation}
+%
+Positive $\Delta_{3+}$ indicates \emph{creation}: dynamics generate
+higher-order interactions absent from any single local rule. Negative
+$\Delta_{3+}$ indicates \emph{destruction}: dynamics compress
+higher-order structure into lower orders.
+
+\textbf{Quality gate.}
+The global spectrum is analyzed only if (i)~the value function has
+$\geq 10$ unique values (rounded to $10^{-6}$), (ii)~absolute
+order-3+ energy exceeds $10^{-4}$, and (iii)~no single value accounts
+for $> 90\%$ of coalitions. All six networks pass this gate.
+
+
+\subsection{Blind prediction protocol}
+\label{sec:blind}
+
+To test whether structural features predict the composition gap
+\emph{a priori}, a structurally-blinded analysis was conducted before
+any coalition sweep ran. For each network, a separate analysis
+examined the Boolean rules, feedback loop topology (up to length~4),
+AND-gate arity, pathway depth, functional redundancy, and output-node
+rule structure. From this analysis alone, the following predictions
+were registered (SHA-frozen in \texttt{blind\_predictions.json}):
+%
+\begin{enumerate}
+\item Spearman $\rho$ range (e.g., $[0.2, 0.5]$) and direction
+\item Creation vs.\ destruction of higher-order interactions
+\item Global energy spectrum ranges
+\end{enumerate}
+%
+A cross-network hypothesis was also registered: the positive feedback
+loop ratio
+$\mathrm{fb\_ratio} = n_{\mathrm{pos}} / (n_{\mathrm{pos}} +
+n_{\mathrm{neg}})$ predicts the gap direction ($> 0.5$ implies
+creation).
+
+
+%% ====================================================================
+\section{Results}
+\label{sec:results}
+%% ====================================================================
+
+\subsection{The composition gap is large, signed, and universal}
+
+Table~\ref{tab:results} summarizes all six networks. Two findings
+hold across the full panel.
+
+\begin{table}[t]
+\centering
+\caption{Composition gap results for six Boolean GRNs. $\rho$:
+Spearman correlation between local and global pairwise magnitudes
+(bootstrap 95\% CI). $E_{3+}$: fractional energy at interaction
+order $\geq 3$. $\Delta_{3+}$: global minus local $E_{3+}$.
+Cycling: fraction of (coalition $\times$ initial state) pairs
+reaching limit cycles.}
+\label{tab:results}
+\begin{tabular}{lrcccccc}
+\toprule
+Network & $n$ & $\rho$ [95\% CI] & $p$ & Global $E_{3+}$ & Local $E_{3+}$ & $\Delta_{3+}$ & Cycling \\
+\midrule
+G10 \emph{Arabidopsis} & 14 & 0.205 [$-$0.01, 0.41] & 0.052 & 38.3\% & 4.0\% & $+$34.3 pp & 16.4\% \\
+G2 Tournier apoptosis & 12 & 0.247 [0.03, 0.45] & 0.046 & 12.6\% & 4.2\% & $+$8.5 pp & 7.4\% \\
+G5 \emph{Drosophila} & 14 & 0.120 [$-$0.09, 0.32] & 0.257 & 10.4\% & 4.3\% & $+$6.2 pp & 14.0\% \\
+G9 Fanconi anemia & 15 & 0.305 [0.12, 0.48] & 0.002 & 1.0\% & 6.5\% & $-$5.5 pp & 47.5\% \\
+G1 Faure cell cycle & 10 & 0.409 [0.13, 0.64] & 0.005 & 0.8\% & 3.8\% & $-$3.0 pp & 19.6\% \\
+G4 Davidich yeast$^\dagger$ & 10 & 0.154 [$-$0.15, 0.42] & 0.312 & 2.2\% & 2.6\% & $-$0.4 pp & 17.7\% \\
+\bottomrule
+\multicolumn{8}{l}{\footnotesize $^\dagger$G4 $\Delta_{3+}$ is 8$\times$ smaller than the next-smallest; effectively neutral.}
+\end{tabular}
+\end{table}
+
+\textbf{Universally positive correlation.}
+All six networks show positive Spearman $\rho$ between local and
+global pairwise magnitudes ($\rho = 0.12$--$0.41$). Local rule
+structure is informative about global knockout epistasis in every
+network studied. The correlation is statistically significant in three
+networks (G1, G2, G9; $p < 0.05$) and not significant in three (G4,
+G5, G10). The confidence intervals overlap substantially across all
+six, consistent with a shared underlying $\rho$ near $0.2$--$0.3$.
+
+\textbf{Signed composition gap.}
+Three networks show clear creation of higher-order interactions
+($\Delta_{3+} = +6$ to $+34$~pp), two show clear destruction
+($\Delta_{3+} = -3$ and $-5.5$~pp), and one (G4) is effectively
+neutral ($\Delta_{3+} = -0.4$~pp, $8\times$ smaller than the
+next-smallest effect). The magnitudes span two orders of magnitude,
+establishing the composition gap as a large effect, comparable to
+the local higher-order energy itself. G10 (\emph{Arabidopsis})
+dominates the creation side: its $+34.3$~pp gap is $4\times$ the
+runner-up (G2, $+8.5$~pp) and larger than the remaining five networks'
+effects combined.
+
+
+\subsection{The \emph{Arabidopsis} outlier}
+\label{sec:arabidopsis}
+
+G10 (\emph{Arabidopsis} cell cycle) produces the largest composition
+gap by an order of magnitude. Only 9.6\% of global value function
+energy remains at order~0, compared to 55.4\% in the local rules.
+Dynamics redistribute constant and linear energy almost entirely into
+higher-order interactions: 38.3\% of global energy is at order~$3+$,
+a $9.6\times$ amplification from the local 4.0\%.
+
+Several structural features distinguish G10. The network has the
+highest edge density in the panel (63 edges for 14 nodes, 4.5
+edges/node). The output gene CYCB1\_1 depends on 8 regulators through
+deeply nested AND/OR logic, and E2Fe---which feeds into the output
+pathway---has 6 regulators with maximal Boolean nesting. These
+features create combinatorial pathway compounding: perturbations
+propagate through dense interconnections with many opportunities for
+interaction at each step.
+
+Despite the massive higher-order creation, pairwise Spearman
+correlation is only marginally non-significant ($\rho = 0.205$,
+$p = 0.052$). Triple-level correlation is highly significant
+($\rho = 0.163$, $p = 0.002$), suggesting that the local--global
+relationship operates more strongly at higher interaction orders in
+dense networks.
+
+Because G10 is $4\times$ the next-largest creation effect, any
+aggregate statistic for ``creation networks'' is effectively a
+statement about \emph{Arabidopsis}. This network should be treated
+as a case study in extreme composition gap amplification, driven by
+exceptional edge density and output-rule complexity, rather than as
+a representative data point.
+
+
+\subsection{Creation and destruction mechanisms}
+\label{sec:mechanisms}
+
+The three creation networks share a structural motif: complex output
+gating through multiple independent regulatory paths.
+%
+\begin{itemize}
+\item G10: CYCB1\_1 gated by 8 regulators with nested AND/OR.
+\item G2: Output C3a requires TNF signaling, insufficient survival
+  signaling, and C8a activation---a three-way conjunction.
+\item G5: Output CycB gated by Fzy, Fzr, and Wee1/Stg, fed by
+  three independent input nodes (Ago, CycD, Notch).
+\end{itemize}
+%
+The two clear destruction networks share simple output rules.
+%
+\begin{itemize}
+\item G1: Output CycB $= \neg$cdh1 $\wedge$ $\neg$Cdc20---only
+  two effective regulators.
+\item G9: Output CHKREC has 8 regulators, but a null-state clause
+  (CHKREC $= 1$ when all damage genes are off) creates a large
+  degenerate region in the value function.
+\end{itemize}
+%
+G4 (Davidich fission yeast) is nominally negative
+($\Delta_{3+} = -0.4$~pp) but its effect is $8\times$ smaller than
+any other network's. The output is gated by Ste9, Rum1, and Slp1,
+but Ste9 and Rum1 have identical update rules, reducing effective
+gating to two variables. This functional redundancy may explain both
+the weak local higher-order structure and the near-zero composition
+gap.
+
+
+\subsection{Exploratory: limit-cycle prevalence and gap direction}
+\label{sec:cycling}
+
+Rank-ordering the six networks by cycling fraction places all three
+creation networks ($\Delta_{3+} > 0$) below all networks with
+$\Delta_{3+} \leq 0$ (Table~\ref{tab:results}, Cycling column).
+The Spearman correlation between $\Delta_{3+}$ and cycling fraction
+is $\rho = -0.83$ ($p = 0.04$). Under a permutation test on the sign
+pattern alone, the probability that three positives precede three
+non-positives among six ordered items is $1/\binom{6}{3} = 0.05$
+one-tailed, but because this predictor was identified after the data
+were collected (the pre-registered predictor, fb\_ratio, failed;
+Section~\ref{sec:blind-results}), the relevant $p$-value is
+two-tailed: $p \approx 0.10$.
+
+Two further caveats weaken the pattern. First, the boundary case is
+G4 ($\Delta_{3+} = -0.4$~pp, cycling $= 17.7\%$), whose effect
+is effectively zero (Section~\ref{sec:results}). If G4 is treated as
+a null rather than a destruction event, the sign separation becomes
+3/2/1 and the threshold has no clean cut point. Second, magnitude is
+not monotone in cycling: G10 (cycling $= 16.4\%$) shows $4\times$ the
+creation of G2 (cycling $= 7.4\%$), so there is no dose-response
+relationship.
+
+A plausible mechanism exists: time-averaging over limit-cycle periods
+smooths coalition-dependent variation in attractor structure,
+compressing higher-order Walsh coefficients. Fixed-point attractors
+preserve discrete switching behavior, allowing combinatorial
+interactions to compound. Cycling fraction is weakly correlated with
+network size ($\rho = 0.09$, $p = 0.87$) and moderately with mean
+in-degree ($\rho = 0.54$, $p = 0.27$), so cycling is not a simple
+proxy for either.
+
+This association is a hypothesis for future testing on additional
+networks, not a confirmed result.
+
+
+\subsection{Pre-registered structural predictions}
+\label{sec:blind-results}
+
+Table~\ref{tab:blind} summarizes the blind prediction scorecard.
+
+\begin{table}[t]
+\centering
+\caption{Blind prediction accuracy. Predictions were registered
+before any coalition sweep ran, based solely on structural analysis
+of Boolean rules and feedback topology.}
+\label{tab:blind}
+\begin{tabular}{lcc}
+\toprule
+Category & Score & Notes \\
+\midrule
+$\rho$ direction (positive) & 6/6 & All predicted positive, all observed positive \\
+$\rho$ in predicted range & 4/6 & G4 below range; G9 slightly above \\
+Gap direction & 4/6 & Missed G1, G4 (overweighted positive feedback) \\
+Spectrum in range & 3/6 & G1, G9 below; G10 far above \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{What structural analysis gets right.}
+The universal positivity of $\rho$ was correctly predicted from first
+principles: local interactions must contribute \emph{something} to
+global interactions because each gene's update rule is one component
+of the composed dynamical system. The gap direction was correctly
+predicted in 4 of 6 networks, including the only destruction
+prediction (G9, based on negative feedback dominance and the CHKREC
+global reset mechanism).
+
+\textbf{What structural analysis gets wrong.}
+The two misses (G1, G4) both involved overweighting positive feedback
+loop counts. The agent predicted that strong positive feedback creates
+bistability and higher-order interactions. In G4, the strongest
+positive feedback ratio in the panel (13:3) instead creates a
+binary-switch attractor that compresses the value function. Positive
+feedback can linearize as easily as it can complexify.
+
+\textbf{Cross-network hypothesis: falsified.}
+The pre-registered hypothesis---fb\_ratio $> 0.5$ implies
+creation---fails decisively. G4 (fb\_ratio $= 0.81$) shows
+destruction; G10 (fb\_ratio $= 0.48$) shows the strongest creation.
+Feedback loop counting does not predict the composition gap.
+
+
+%% ====================================================================
+\section{Discussion}
+\label{sec:discussion}
+%% ====================================================================
+
+\subsection{Implications for knockout screen design}
+
+The molecular wiring diagram is a statistically significant predictor
+of pairwise knockout epistasis in three of six networks ($\rho =
+0.25$--$0.41$, $p < 0.05$). In the other three, local rule structure
+provides no useful prior for selecting which gene pairs to test. This
+heterogeneity means that the common practice of using pathway
+databases to prioritize combinatorial experiments is justified in some
+regulatory contexts but misleading in others.
+
+The composition gap provides a more nuanced guide. In creation
+networks (G2, G5, G10), dynamics generate interactions absent from
+any local rule. A knockout screen guided by molecular interactions
+alone would miss the strongest epistatic pairs. In destruction
+networks (G1, G9), the molecular wiring diagram over-predicts
+higher-order interactions that dynamics compress. A screen guided by
+local rules would over-allocate resources to combinations whose
+epistasis is damped by dynamical convergence.
+
+\subsection{Relationship to prior work}
+
+Gjuvsland et al.\ \citeneeded{Gjuvsland 2007} demonstrated that
+statistical epistasis is generic in gene regulatory networks. Our
+results extend this in two directions. First, the gap is quantified
+order-by-order rather than detected as present/absent. Second, the
+gap is signed: creation and destruction are distinct phenomena with
+different structural correlates. A pre-registered attempt to predict
+the gap direction from feedback loop topology failed, which is itself
+informative: it demonstrates that the composition gap is not
+reducible to simple topological features of the regulatory graph.
+
+Baier et al.\ \citeneeded{Baier 2023} measured epistasis in a
+synthetic three-gene network, finding environment-dependent sign
+switching. Our Walsh decomposition provides a natural framework for
+their observation: the composition gap at each order can change sign
+across conditions (clamp-to-0 vs.\ clamp-to-1), and we anticipate
+that extending our analysis to both ablation baselines will reveal
+signed sensitivity at the order level.
+
+The global epistasis literature \citeneeded{Otwinowski 2018, Reddy
+Desai 2021} establishes that nonlinear genotype-phenotype maps
+reshape interaction spectra. Our local-vs-global comparison
+operationalizes this reshaping as a quantitative spectral
+transformation, decomposed by interaction order.
+
+
+\subsection{Limitations}
+
+\begin{itemize}
+\item $N = 6$ networks. All cross-network associations (cycling
+  fraction, output complexity) are descriptive case studies.
+  Confirmatory regression requires $N \geq 15$--$20$, and
+  \emph{Arabidopsis} alone drives most of the variance in creation
+  magnitude.
+\item Clamp-to-0 baseline only. Clamp-to-1 may yield different gap
+  directions, as the asymmetry of Boolean logic (AND vs.\ OR) makes
+  the value function baseline-dependent.
+\item All genes are players. Excluding constitutive input nodes
+  (which have no regulators) from the player set would change the
+  pairwise space and potentially sharpen correlations.
+\item Synchronous update only. Asynchronous dynamics would change
+  attractor structure and cycling fractions.
+\item Sum-aggregation for local pairwise magnitudes
+  (Eq.~\ref{eq:local-pair}). Max-aggregation is an untested
+  alternative.
+\item $n \leq 15$. The exhaustive approach does not scale to
+  genome-wide networks. These results characterize the composition
+  gap in well-studied regulatory modules, not whole-genome epistasis.
+\end{itemize}
+
+
+%% ====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+%% ====================================================================
+
+The gap between molecular interaction structure and phenotypic
+epistasis is quantifiable, signed, and large. In six Boolean gene
+regulatory networks, we measured the complete Walsh interaction
+spectrum at both the local rule and attractor levels. The composition
+gap spans two orders of magnitude, from effectively zero to 34
+percentage points, and its sign varies across network architectures.
+The molecular wiring diagram provides a universally positive but
+often non-significant prior for predicting knockout epistasis. A
+pre-registered hypothesis based on feedback loop counting was
+falsified; an exploratory association with limit-cycle prevalence
+awaits validation on additional networks.
+
+The complete Walsh spectra, coalition value functions, and
+pre-registration artifacts are available at
+\textcolor{red}{[URL: repository]}.
+
+
+%% ====================================================================
+%% References
+%% ====================================================================
+
+\bibliographystyle{plainnat}
+% \bibliography{references}
+
+\end{document}

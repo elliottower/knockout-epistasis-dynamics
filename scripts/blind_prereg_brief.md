@@ -53,7 +53,12 @@ are excluded (myeloid_progenitors, blood_stem_cell, emt_switch).
 Surviving models are defined in `grn_coalition_sweep.py` in the
 `BUILTIN_MODELS` dict:
 
-[GATE_SURVIVORS_LIST will be inserted here before launch]
+1. faure_cellcycle (G1) — 10 nodes, Mammalian cell cycle
+2. tournier_apoptosis (G2) — 12 nodes, Apoptosis signaling
+3. davidich_yeast (G4) — 10 nodes, Fission yeast cell cycle
+4. drosophila_cellcycle (G5) — 14 nodes (11 dynamic + 3 inputs), Drosophila cell cycle
+5. fanconi_anemia (G9) — 15 nodes, Fanconi anemia and checkpoint recovery
+6. arabidopsis_cellcycle (G10) — 14 nodes, Arabidopsis thaliana cell cycle
 
 ## What you must do
 
