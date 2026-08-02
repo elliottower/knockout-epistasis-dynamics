@@ -1,0 +1,315 @@
+{
+  "thresholds_pp": [
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "models": {
+    "albert_segment_polarity": {
+      "delta_pp": 19.83857506498279,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "arabidopsis_cellcycle": {
+      "delta_pp": 34.30296509426823,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "arellano_rootstem": {
+      "delta_pp": 50.59116851281775,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "asymmetric_cell_division": {
+      "delta_pp": 44.08504937589458,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "blood_stem_cell": {
+      "delta_pp": 4.777276082326893,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "calzone_cell_fate": {
+      "delta_pp": 58.20870405922097,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "calzone_cellfate_reduced": {
+      "delta_pp": 37.036819086497715,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "cell_cycle_transcription": {
+      "delta_pp": 83.25216693666142,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "davidich_yeast": {
+      "delta_pp": -0.37552472225337585,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "null",
+        "1.0": "null",
+        "2.0": "null"
+      }
+    },
+    "drosophila_cellcycle": {
+      "delta_pp": 6.157693517902086,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "emt_switch": {
+      "delta_pp": -3.8200475341025824,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "destruction",
+        "1.0": "destruction",
+        "2.0": "destruction"
+      }
+    },
+    "fanconi_anemia": {
+      "delta_pp": -5.482384994035306,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "destruction",
+        "1.0": "destruction",
+        "2.0": "destruction"
+      }
+    },
+    "faure_cellcycle": {
+      "delta_pp": -3.0230677349838753,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "destruction",
+        "1.0": "destruction",
+        "2.0": "destruction"
+      }
+    },
+    "fumia_cellcycle": {
+      "delta_pp": 52.2398207170679,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "hematopoiesis_aging": {
+      "delta_pp": 0.9329278146421923,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "null",
+        "2.0": "null"
+      }
+    },
+    "irons_cardiac": {
+      "delta_pp": 10.919979168083366,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "lac_operon": {
+      "delta_pp": 47.43447106950593,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "lambda_phage": {
+      "delta_pp": -2.497583344826681,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "destruction",
+        "1.0": "destruction",
+        "2.0": "destruction"
+      }
+    },
+    "li_budding_yeast": {
+      "delta_pp": 6.3498164155097365,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "mendoza_thelper": {
+      "delta_pp": -0.34453377248473555,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "null",
+        "1.0": "null",
+        "2.0": "null"
+      }
+    },
+    "morphogenetic_checkpoint": {
+      "delta_pp": 11.906050035967041,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "myeloid_progenitors": {
+      "delta_pp": -2.2783013946164625,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "destruction",
+        "1.0": "destruction",
+        "2.0": "destruction"
+      }
+    },
+    "pair_rule_module": {
+      "delta_pp": -2.7395081500417944,
+      "classifications": {
+        "0.1": "destruction",
+        "0.25": "destruction",
+        "0.5": "destruction",
+        "1.0": "destruction",
+        "2.0": "destruction"
+      }
+    },
+    "remy_p53_mdm2": {
+      "delta_pp": 0.08165157871410159,
+      "classifications": {
+        "0.1": "null",
+        "0.25": "null",
+        "0.5": "null",
+        "1.0": "null",
+        "2.0": "null"
+      }
+    },
+    "saadatpour_guardcell": {
+      "delta_pp": 51.39675417791154,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "tournier_apoptosis": {
+      "delta_pp": 8.46101594824866,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    },
+    "zanudo_tlgl": {
+      "delta_pp": 33.2344798993695,
+      "classifications": {
+        "0.1": "creation",
+        "0.25": "creation",
+        "0.5": "creation",
+        "1.0": "creation",
+        "2.0": "creation"
+      }
+    }
+  },
+  "counts": {
+    "0.1": {
+      "creation": 18,
+      "destruction": 8,
+      "null": 1
+    },
+    "0.25": {
+      "creation": 18,
+      "destruction": 8,
+      "null": 1
+    },
+    "0.5": {
+      "creation": 18,
+      "destruction": 6,
+      "null": 3
+    },
+    "1.0": {
+      "creation": 17,
+      "destruction": 6,
+      "null": 4
+    },
+    "2.0": {
+      "creation": 17,
+      "destruction": 6,
+      "null": 4
+    }
+  },
+  "sensitive_models": [
+    "davidich_yeast",
+    "hematopoiesis_aging",
+    "mendoza_thelper"
+  ],
+  "n_total": 27,
+  "n_stable": 24
+}

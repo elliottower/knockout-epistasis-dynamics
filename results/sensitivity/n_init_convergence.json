@@ -1,0 +1,182 @@
+{
+  "batch1_networks": [
+    "faure_cellcycle",
+    "davidich_yeast",
+    "tournier_apoptosis",
+    "drosophila_cellcycle",
+    "arabidopsis_cellcycle",
+    "fanconi_anemia"
+  ],
+  "n_values": [
+    64,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "results": {
+    "faure_cellcycle": {
+      "64": {
+        "global_o3plus": 0.007533919152112505,
+        "delta_o3plus": -0.030938303070109717,
+        "n_unique": 30
+      },
+      "128": {
+        "global_o3plus": 0.008118145606421424,
+        "delta_o3plus": -0.030354076615800796,
+        "n_unique": 40
+      },
+      "256": {
+        "global_o3plus": 0.008466500716780775,
+        "delta_o3plus": -0.030005721505441445,
+        "n_unique": 47
+      },
+      "512": {
+        "global_o3plus": 0.00824154487238347,
+        "delta_o3plus": -0.030230677349838753,
+        "n_unique": 51
+      },
+      "1024": {
+        "global_o3plus": 0.00834742574667129,
+        "delta_o3plus": -0.03012479647555093,
+        "n_unique": 51
+      }
+    },
+    "davidich_yeast": {
+      "64": {
+        "global_o3plus": 0.02702898984599921,
+        "delta_o3plus": 0.001414235747638555,
+        "n_unique": 78
+      },
+      "128": {
+        "global_o3plus": 0.023447255319870724,
+        "delta_o3plus": -0.0021674987784899326,
+        "n_unique": 92
+      },
+      "256": {
+        "global_o3plus": 0.022269915141929414,
+        "delta_o3plus": -0.0033448389564312425,
+        "n_unique": 115
+      },
+      "512": {
+        "global_o3plus": 0.021859506875826898,
+        "delta_o3plus": -0.0037552472225337585,
+        "n_unique": 122
+      },
+      "1024": {
+        "global_o3plus": 0.02011546650197524,
+        "delta_o3plus": -0.005499287596385415,
+        "n_unique": 118
+      }
+    },
+    "tournier_apoptosis": {
+      "64": {
+        "global_o3plus": 0.13144234743248995,
+        "delta_o3plus": 0.08977568076582329,
+        "n_unique": 34
+      },
+      "128": {
+        "global_o3plus": 0.13649633769474676,
+        "delta_o3plus": 0.0948296710280801,
+        "n_unique": 44
+      },
+      "256": {
+        "global_o3plus": 0.1267573355621501,
+        "delta_o3plus": 0.08509066889548345,
+        "n_unique": 56
+      },
+      "512": {
+        "global_o3plus": 0.12627682614915325,
+        "delta_o3plus": 0.0846101594824866,
+        "n_unique": 63
+      },
+      "1024": {
+        "global_o3plus": 0.12722468331362255,
+        "delta_o3plus": 0.08555801664695589,
+        "n_unique": 66
+      }
+    },
+    "drosophila_cellcycle": {
+      "64": {
+        "global_o3plus": 0.09954959490857908,
+        "delta_o3plus": 0.05688492424989645,
+        "n_unique": 116
+      },
+      "128": {
+        "global_o3plus": 0.10422561360054146,
+        "delta_o3plus": 0.06156094294185883,
+        "n_unique": 165
+      },
+      "256": {
+        "global_o3plus": 0.1036839479128432,
+        "delta_o3plus": 0.06101927725416057,
+        "n_unique": 207
+      },
+      "512": {
+        "global_o3plus": 0.10424160583770349,
+        "delta_o3plus": 0.06157693517902086,
+        "n_unique": 222
+      },
+      "1024": {
+        "global_o3plus": 0.10424914028837091,
+        "delta_o3plus": 0.061584469629688283,
+        "n_unique": 234
+      }
+    },
+    "arabidopsis_cellcycle": {
+      "64": {
+        "global_o3plus": 0.3875236496739296,
+        "delta_o3plus": 0.347741979976112,
+        "n_unique": 57
+      },
+      "128": {
+        "global_o3plus": 0.38643207306798294,
+        "delta_o3plus": 0.3466504033701654,
+        "n_unique": 65
+      },
+      "256": {
+        "global_o3plus": 0.38648619368774545,
+        "delta_o3plus": 0.3467045239899279,
+        "n_unique": 71
+      },
+      "512": {
+        "global_o3plus": 0.3828113206404999,
+        "delta_o3plus": 0.34302965094268234,
+        "n_unique": 78
+      },
+      "1024": {
+        "global_o3plus": 0.3837280402343486,
+        "delta_o3plus": 0.343946370536531,
+        "n_unique": 78
+      }
+    },
+    "fanconi_anemia": {
+      "64": {
+        "global_o3plus": 0.012145871039851779,
+        "delta_o3plus": -0.05301307583177714,
+        "n_unique": 29
+      },
+      "128": {
+        "global_o3plus": 0.012376368921484185,
+        "delta_o3plus": -0.05278257795014473,
+        "n_unique": 44
+      },
+      "256": {
+        "global_o3plus": 0.011007047467256913,
+        "delta_o3plus": -0.054151899404372004,
+        "n_unique": 65
+      },
+      "512": {
+        "global_o3plus": 0.010335096931275859,
+        "delta_o3plus": -0.05482384994035306,
+        "n_unique": 91
+      },
+      "1024": {
+        "global_o3plus": 0.00955865449873431,
+        "delta_o3plus": -0.05560029237289461,
+        "n_unique": 112
+      }
+    }
+  },
+  "timestamp": "2026-07-29T17:51:20.572624+00:00"
+}

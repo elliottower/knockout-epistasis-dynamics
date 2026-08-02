@@ -1,0 +1,125 @@
+{
+  "n_models": 27,
+  "n_tests": 11,
+  "correction": "bonferroni",
+  "alpha": 0.05,
+  "correlations": [
+    {
+      "feature": "mean_canalizing_depth",
+      "feature_name": "Mean canalizing depth",
+      "rho": -0.18362366405791405,
+      "p_value": 0.35923831656237815,
+      "p_bonferroni": 1.0,
+      "significant": false
+    },
+    {
+      "feature": "max_canalizing_depth",
+      "feature_name": "Max canalizing depth",
+      "rho": -0.1719785580313227,
+      "p_value": 0.39102572455318185,
+      "p_bonferroni": 1.0,
+      "significant": false
+    },
+    {
+      "feature": "frac_any_canalizing",
+      "feature_name": "Fraction with any canalizing input",
+      "rho": 0.20515702619885556,
+      "p_value": 0.3046297443712577,
+      "p_bonferroni": 1.0,
+      "significant": false
+    },
+    {
+      "feature": "mean_nested_depth",
+      "feature_name": "Mean nested canalizing depth",
+      "rho": -0.41770994313664483,
+      "p_value": 0.030158612966979123,
+      "p_bonferroni": 0.33174474263677034,
+      "significant": false
+    },
+    {
+      "feature": "max_nested_depth",
+      "feature_name": "Max nested canalizing depth",
+      "rho": -0.40420618969116967,
+      "p_value": 0.03651799149007119,
+      "p_bonferroni": 0.4016979063907831,
+      "significant": false
+    },
+    {
+      "feature": "frac_fully_canalizing",
+      "feature_name": "Fraction fully canalizing",
+      "rho": 0.48162627905171645,
+      "p_value": 0.010969539171275768,
+      "p_bonferroni": 0.12066493088403345,
+      "significant": false
+    },
+    {
+      "feature": "mean_bias",
+      "feature_name": "Mean rule bias",
+      "rho": 0.09706959706959707,
+      "p_value": 0.6300463698164972,
+      "p_bonferroni": 1.0,
+      "significant": false
+    },
+    {
+      "feature": "bias_variance",
+      "feature_name": "Bias variance",
+      "rho": -0.2539682539682539,
+      "p_value": 0.2011454618694075,
+      "p_bonferroni": 1.0,
+      "significant": false
+    },
+    {
+      "feature": "mean_bias_deviation",
+      "feature_name": "Mean |bias - 0.5|",
+      "rho": -0.49343513750644596,
+      "p_value": 0.008910157210947364,
+      "p_bonferroni": 0.098011729320421,
+      "significant": false
+    },
+    {
+      "feature": "derrida_parameter",
+      "feature_name": "Derrida parameter",
+      "rho": 0.463980463980464,
+      "p_value": 0.014774948225323825,
+      "p_bonferroni": 0.16252443047856208,
+      "significant": false
+    },
+    {
+      "feature": "n",
+      "feature_name": "Network size",
+      "rho": 0.10513862176484852,
+      "p_value": 0.6017290377401154,
+      "p_bonferroni": 1.0,
+      "significant": false
+    }
+  ],
+  "models": [
+    "albert_segment_polarity",
+    "arabidopsis_cellcycle",
+    "arellano_rootstem",
+    "asymmetric_cell_division",
+    "blood_stem_cell",
+    "calzone_cell_fate",
+    "calzone_cellfate_reduced",
+    "cell_cycle_transcription",
+    "davidich_yeast",
+    "drosophila_cellcycle",
+    "emt_switch",
+    "fanconi_anemia",
+    "faure_cellcycle",
+    "fumia_cellcycle",
+    "hematopoiesis_aging",
+    "irons_cardiac",
+    "lac_operon",
+    "lambda_phage",
+    "li_budding_yeast",
+    "mendoza_thelper",
+    "morphogenetic_checkpoint",
+    "myeloid_progenitors",
+    "pair_rule_module",
+    "remy_p53_mdm2",
+    "saadatpour_guardcell",
+    "tournier_apoptosis",
+    "zanudo_tlgl"
+  ]
+}
