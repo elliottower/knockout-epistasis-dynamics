@@ -2,8 +2,13 @@
 
 ## Pitch
 
-Genetics has dozens of methods for detecting higher-order epistasis, but
-head-to-head benchmarking against exact ground truth is rare. Combinatorially
+Existing comparisons benchmark epistasis detectors on simulated or
+semi-simulated genotypes with planted interactions (Shang 2011; Chatelain
+2018; Slim 2020; Russ 2022, twelve detectors; Listopad 2025). Multi-method
+benchmarks also exist in materials science (Herder 2015), sensitivity
+analysis (Puy 2022) and explainable ML (Muschalik 2024). None scores
+recovery of order-3+ coefficients against an exhaustively enumerated
+interaction spectrum under a controlled sample budget. Combinatorially
 complete fitness landscapes exist (Poelwijk et al. 2019 measured all 2^13
 mutants of a fluorescent protein; Johnston et al. 2024 covered 4 residues),
 but these studies validated their own sparse-recovery methods, not the
