@@ -1,0 +1,2446 @@
+{
+  "model": "morphogenetic_checkpoint",
+  "n_nodes": 12,
+  "node_names": [
+    "MASS_b1",
+    "BUD",
+    "Clb2_b1",
+    "Clb2_b2",
+    "Hsl1",
+    "MASS_b2",
+    "Mih1_b1",
+    "Mih1_b2",
+    "Mpk1",
+    "SBF",
+    "Swe1_b1",
+    "Swe1_b2"
+  ],
+  "output_nodes": [
+    "Clb2_b2"
+  ],
+  "interaction_graph": {
+    "MASS_b1": [],
+    "BUD": [
+      {
+        "regulator": "MASS_b1",
+        "sign": 1
+      }
+    ],
+    "Clb2_b1": [
+      {
+        "regulator": "MASS_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Clb2_b2",
+        "sign": 1
+      }
+    ],
+    "Clb2_b2": [
+      {
+        "regulator": "MASS_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Clb2_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "MASS_b2",
+        "sign": 1
+      },
+      {
+        "regulator": "Mih1_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Mih1_b2",
+        "sign": 1
+      },
+      {
+        "regulator": "Swe1_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Swe1_b2",
+        "sign": -1
+      }
+    ],
+    "Hsl1": [
+      {
+        "regulator": "BUD",
+        "sign": 1
+      }
+    ],
+    "MASS_b2": [
+      {
+        "regulator": "MASS_b1",
+        "sign": 1
+      }
+    ],
+    "Mih1_b1": [
+      {
+        "regulator": "Clb2_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Mih1_b2",
+        "sign": 1
+      },
+      {
+        "regulator": "Mpk1",
+        "sign": -1
+      }
+    ],
+    "Mih1_b2": [
+      {
+        "regulator": "Clb2_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Mih1_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Mpk1",
+        "sign": -1
+      }
+    ],
+    "Mpk1": [
+      {
+        "regulator": "BUD",
+        "sign": -1
+      }
+    ],
+    "SBF": [
+      {
+        "regulator": "MASS_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Clb2_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Clb2_b2",
+        "sign": -1
+      }
+    ],
+    "Swe1_b1": [
+      {
+        "regulator": "Clb2_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Clb2_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Hsl1",
+        "sign": -1
+      },
+      {
+        "regulator": "SBF",
+        "sign": 1
+      },
+      {
+        "regulator": "Swe1_b2",
+        "sign": 1
+      }
+    ],
+    "Swe1_b2": [
+      {
+        "regulator": "Clb2_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Clb2_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Hsl1",
+        "sign": -1
+      },
+      {
+        "regulator": "SBF",
+        "sign": 1
+      },
+      {
+        "regulator": "Swe1_b1",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Mih1_b1",
+        "Mih1_b2"
+      ],
+      [
+        "Hsl1",
+        "SBF"
+      ],
+      [
+        "SBF",
+        "Swe1_b1"
+      ],
+      [
+        "MASS_b1",
+        "MASS_b2"
+      ],
+      [
+        "Mih1_b1",
+        "Mpk1"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Clb2_b2"
+      ],
+      [
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "MASS_b1",
+        "Mih1_b1"
+      ],
+      [
+        "Mih1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Hsl1",
+        "Swe1_b1"
+      ],
+      [
+        "MASS_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b2"
+      ],
+      [
+        "Clb2_b2",
+        "Hsl1"
+      ],
+      [
+        "Clb2_b2",
+        "MASS_b1"
+      ],
+      [
+        "MASS_b2",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b2",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Swe1_b1"
+      ],
+      [
+        "MASS_b1",
+        "Swe1_b1"
+      ],
+      [
+        "SBF",
+        "Swe1_b2"
+      ],
+      [
+        "Mih1_b1",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b1"
+      ],
+      [
+        "Clb2_b2",
+        "SBF"
+      ],
+      [
+        "MASS_b1",
+        "Mih1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b1"
+      ],
+      [
+        "Clb2_b1",
+        "Hsl1"
+      ],
+      [
+        "MASS_b2",
+        "Mih1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Mpk1"
+      ],
+      [
+        "Mih1_b2",
+        "Mpk1"
+      ],
+      [
+        "Mih1_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b2",
+        "Swe1_b1"
+      ],
+      [
+        "MASS_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "SBF"
+      ],
+      [
+        "Clb2_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Hsl1",
+        "Swe1_b2"
+      ]
+    ],
+    "triples": [
+      [
+        "MASS_b1",
+        "MASS_b2",
+        "Mih1_b2"
+      ],
+      [
+        "Mih1_b1",
+        "Mih1_b2",
+        "Mpk1"
+      ],
+      [
+        "MASS_b1",
+        "MASS_b2",
+        "Swe1_b2"
+      ],
+      [
+        "MASS_b2",
+        "Mih1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "MASS_b1",
+        "MASS_b2",
+        "Swe1_b1"
+      ],
+      [
+        "MASS_b1",
+        "Mih1_b1",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "Hsl1",
+        "Swe1_b2"
+      ],
+      [
+        "MASS_b2",
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Clb2_b2",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b1",
+        "Mih1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Hsl1",
+        "SBF"
+      ],
+      [
+        "Clb2_b1",
+        "Clb2_b2",
+        "SBF"
+      ],
+      [
+        "Clb2_b2",
+        "Hsl1",
+        "SBF"
+      ],
+      [
+        "MASS_b1",
+        "Mih1_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "Clb2_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b2",
+        "Hsl1",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "SBF",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Hsl1",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b2",
+        "Hsl1",
+        "Swe1_b2"
+      ],
+      [
+        "Mih1_b1",
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "SBF",
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Clb2_b2",
+        "MASS_b1"
+      ],
+      [
+        "MASS_b1",
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Hsl1",
+        "SBF",
+        "Swe1_b2"
+      ],
+      [
+        "MASS_b2",
+        "Mih1_b1",
+        "Mih1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b2",
+        "SBF",
+        "Swe1_b2"
+      ],
+      [
+        "MASS_b1",
+        "Mih1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "MASS_b1",
+        "Mih1_b1",
+        "Mih1_b2"
+      ],
+      [
+        "Clb2_b2",
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b2",
+        "Swe1_b2"
+      ],
+      [
+        "Hsl1",
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Clb2_b2",
+        "Hsl1"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b1",
+        "Mih1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b1",
+        "MASS_b2"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b1",
+        "Mpk1"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b1",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b2",
+        "SBF",
+        "Swe1_b1"
+      ],
+      [
+        "Mih1_b1",
+        "Mih1_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "SBF",
+        "Swe1_b1"
+      ],
+      [
+        "Hsl1",
+        "SBF",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b1",
+        "Swe1_b1"
+      ],
+      [
+        "MASS_b2",
+        "Mih1_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b2",
+        "Swe1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b1",
+        "Mih1_b1"
+      ],
+      [
+        "Clb2_b1",
+        "Mih1_b2",
+        "Mpk1"
+      ],
+      [
+        "Clb2_b1",
+        "MASS_b2",
+        "Mih1_b2"
+      ]
+    ],
+    "per_gene": {
+      "MASS_b1": {
+        "regulators": [
+          "MASS_b1"
+        ],
+        "interactions": []
+      },
+      "BUD": {
+        "regulators": [
+          "MASS_b1"
+        ],
+        "interactions": []
+      },
+      "Clb2_b1": {
+        "regulators": [
+          "MASS_b1",
+          "Clb2_b1",
+          "Clb2_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "MASS_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "MASS_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "Clb2_b2": {
+        "regulators": [
+          "MASS_b1",
+          "Clb2_b1",
+          "MASS_b2",
+          "Mih1_b1",
+          "Mih1_b2",
+          "Swe1_b1",
+          "Swe1_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Mih1_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Mih1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b1",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b1",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Swe1_b1"
+            ],
+            "order": 6,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1",
+              "MASS_b2",
+              "Mih1_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          }
+        ]
+      },
+      "Hsl1": {
+        "regulators": [
+          "BUD"
+        ],
+        "interactions": []
+      },
+      "MASS_b2": {
+        "regulators": [
+          "MASS_b1",
+          "MASS_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "MASS_b1",
+              "MASS_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Mih1_b1": {
+        "regulators": [
+          "Clb2_b1",
+          "Mih1_b1",
+          "Mih1_b2",
+          "Mpk1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Mih1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mpk1"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Mpk1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Mpk1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Mih1_b2",
+              "Mpk1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b2",
+              "Mpk1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Mih1_b2",
+              "Mpk1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Mih1_b2",
+              "Mpk1"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "Mih1_b2": {
+        "regulators": [
+          "Clb2_b1",
+          "Mih1_b1",
+          "Mpk1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mpk1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Mih1_b1",
+              "Mpk1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Mih1_b1",
+              "Mpk1"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "Mpk1": {
+        "regulators": [
+          "BUD"
+        ],
+        "interactions": []
+      },
+      "SBF": {
+        "regulators": [
+          "MASS_b1",
+          "Clb2_b1",
+          "Clb2_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb2_b1",
+              "MASS_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "MASS_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "MASS_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "Swe1_b1": {
+        "regulators": [
+          "Clb2_b1",
+          "Clb2_b2",
+          "Hsl1",
+          "SBF",
+          "Swe1_b1",
+          "Swe1_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 4,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.140625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.109375
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1",
+              "Swe1_b2"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          }
+        ]
+      },
+      "Swe1_b2": {
+        "regulators": [
+          "Clb2_b1",
+          "Clb2_b2",
+          "Hsl1",
+          "SBF",
+          "Swe1_b1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "SBF"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb2_b1",
+              "Clb2_b2",
+              "Hsl1",
+              "SBF",
+              "Swe1_b1"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 35,
+    "n_triples": 50,
+    "pairwise_strengths": {
+      "['Clb2_b1', 'MASS_b1']": 0.4375,
+      "['Clb2_b2', 'MASS_b1']": 0.25,
+      "['Clb2_b1', 'Clb2_b2']": 0.328125,
+      "['MASS_b1', 'MASS_b2']": 0.28125,
+      "['Clb2_b1', 'MASS_b2']": 0.03125,
+      "['MASS_b1', 'Mih1_b1']": 0.03125,
+      "['Clb2_b1', 'Mih1_b1']": 0.21875,
+      "['MASS_b1', 'Mih1_b2']": 0.015625,
+      "['Clb2_b1', 'Mih1_b2']": 0.078125,
+      "['MASS_b2', 'Mih1_b2']": 0.015625,
+      "['Mih1_b1', 'Mih1_b2']": 0.078125,
+      "['MASS_b1', 'Swe1_b1']": 0.0625,
+      "['Clb2_b1', 'Swe1_b1']": 0.109375,
+      "['MASS_b2', 'Swe1_b1']": 0.03125,
+      "['Mih1_b1', 'Swe1_b1']": 0.03125,
+      "['Mih1_b2', 'Swe1_b1']": 0.015625,
+      "['MASS_b1', 'Swe1_b2']": 0.015625,
+      "['Clb2_b1', 'Swe1_b2']": 0.03125,
+      "['MASS_b2', 'Swe1_b2']": 0.015625,
+      "['Mih1_b1', 'Swe1_b2']": 0.015625,
+      "['Swe1_b1', 'Swe1_b2']": 0.15625,
+      "['Clb2_b1', 'Mpk1']": 0.3125,
+      "['Mih1_b1', 'Mpk1']": 0.1875,
+      "['Mih1_b2', 'Mpk1']": 0.0625,
+      "['Clb2_b1', 'Hsl1']": 0.078125,
+      "['Clb2_b2', 'Hsl1']": 0.078125,
+      "['Clb2_b1', 'SBF']": 0.078125,
+      "['Clb2_b2', 'SBF']": 0.078125,
+      "['Hsl1', 'SBF']": 0.140625,
+      "['Clb2_b2', 'Swe1_b1']": 0.046875,
+      "['Hsl1', 'Swe1_b1']": 0.109375,
+      "['SBF', 'Swe1_b1']": 0.203125,
+      "['Clb2_b2', 'Swe1_b2']": 0.015625,
+      "['Hsl1', 'Swe1_b2']": 0.015625,
+      "['SBF', 'Swe1_b2']": 0.109375
+    },
+    "local_energy_spectrum": [
+      0.5246226780185759,
+      0.3670665634674923,
+      0.0793827399380805,
+      0.023606811145510834,
+      0.00420859133126935,
+      0.0009674922600619195,
+      0.00014512383900928792,
+      0.0
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 2097152,
+    "total_fixed_point": 2088670,
+    "total_cycling": 8482,
+    "cycling_fraction": 0.004044532775878906
+  },
+  "n_unique_values": 24,
+  "total_variance": 0.02312050840168922,
+  "timestamp": "2026-07-28T16:58:57.691000+00:00"
+}

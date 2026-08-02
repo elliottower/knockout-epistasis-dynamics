@@ -1,0 +1,350 @@
+{
+  "model": "zanudo_tlgl",
+  "n_nodes": 12,
+  "node_names": [
+    "Stimuli",
+    "PDGFR",
+    "S1P",
+    "Ceramide",
+    "Fas",
+    "sFas",
+    "DISC",
+    "FLIP",
+    "Caspase",
+    "IAP",
+    "NFkB",
+    "Apoptosis"
+  ],
+  "output_nodes": [
+    "Apoptosis"
+  ],
+  "interaction_graph": {
+    "Stimuli": [],
+    "PDGFR": [
+      {
+        "regulator": "Stimuli",
+        "sign": 1
+      },
+      {
+        "regulator": "S1P",
+        "sign": 1
+      }
+    ],
+    "S1P": [
+      {
+        "regulator": "PDGFR",
+        "sign": 1
+      },
+      {
+        "regulator": "Ceramide",
+        "sign": -1
+      }
+    ],
+    "Ceramide": [
+      {
+        "regulator": "S1P",
+        "sign": -1
+      },
+      {
+        "regulator": "Fas",
+        "sign": 1
+      }
+    ],
+    "Fas": [
+      {
+        "regulator": "S1P",
+        "sign": -1
+      },
+      {
+        "regulator": "Ceramide",
+        "sign": 1
+      },
+      {
+        "regulator": "sFas",
+        "sign": -1
+      }
+    ],
+    "sFas": [
+      {
+        "regulator": "NFkB",
+        "sign": 1
+      }
+    ],
+    "DISC": [
+      {
+        "regulator": "Fas",
+        "sign": 1
+      },
+      {
+        "regulator": "FLIP",
+        "sign": -1
+      }
+    ],
+    "FLIP": [
+      {
+        "regulator": "NFkB",
+        "sign": 1
+      }
+    ],
+    "Caspase": [
+      {
+        "regulator": "DISC",
+        "sign": 1
+      },
+      {
+        "regulator": "IAP",
+        "sign": -1
+      }
+    ],
+    "IAP": [
+      {
+        "regulator": "NFkB",
+        "sign": 1
+      }
+    ],
+    "NFkB": [
+      {
+        "regulator": "Stimuli",
+        "sign": 1
+      }
+    ],
+    "Apoptosis": [
+      {
+        "regulator": "Caspase",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "FLIP",
+        "Fas"
+      ],
+      [
+        "Fas",
+        "S1P"
+      ],
+      [
+        "S1P",
+        "Stimuli"
+      ],
+      [
+        "Ceramide",
+        "sFas"
+      ],
+      [
+        "DISC",
+        "IAP"
+      ],
+      [
+        "S1P",
+        "sFas"
+      ],
+      [
+        "Ceramide",
+        "S1P"
+      ],
+      [
+        "Ceramide",
+        "PDGFR"
+      ]
+    ],
+    "triples": [
+      [
+        "Ceramide",
+        "S1P",
+        "sFas"
+      ]
+    ],
+    "per_gene": {
+      "Stimuli": {
+        "regulators": [
+          "Stimuli"
+        ],
+        "interactions": []
+      },
+      "PDGFR": {
+        "regulators": [
+          "Stimuli",
+          "S1P"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "S1P",
+              "Stimuli"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "S1P": {
+        "regulators": [
+          "PDGFR",
+          "Ceramide"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Ceramide",
+              "PDGFR"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Ceramide": {
+        "regulators": [
+          "S1P",
+          "Fas"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Fas",
+              "S1P"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Fas": {
+        "regulators": [
+          "S1P",
+          "Ceramide",
+          "sFas"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Ceramide",
+              "S1P"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "S1P",
+              "sFas"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Ceramide",
+              "sFas"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Ceramide",
+              "S1P",
+              "sFas"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "sFas": {
+        "regulators": [
+          "NFkB"
+        ],
+        "interactions": []
+      },
+      "DISC": {
+        "regulators": [
+          "Fas",
+          "FLIP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FLIP",
+              "Fas"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "FLIP": {
+        "regulators": [
+          "NFkB"
+        ],
+        "interactions": []
+      },
+      "Caspase": {
+        "regulators": [
+          "DISC",
+          "IAP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DISC",
+              "IAP"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "IAP": {
+        "regulators": [
+          "NFkB"
+        ],
+        "interactions": []
+      },
+      "NFkB": {
+        "regulators": [
+          "Stimuli"
+        ],
+        "interactions": []
+      },
+      "Apoptosis": {
+        "regulators": [
+          "Caspase"
+        ],
+        "interactions": []
+      }
+    },
+    "n_pairwise": 8,
+    "n_triples": 1,
+    "pairwise_strengths": {
+      "['S1P', 'Stimuli']": 0.25,
+      "['Ceramide', 'PDGFR']": 0.25,
+      "['Fas', 'S1P']": 0.25,
+      "['Ceramide', 'S1P']": 0.125,
+      "['S1P', 'sFas']": 0.125,
+      "['Ceramide', 'sFas']": 0.125,
+      "['FLIP', 'Fas']": 0.25,
+      "['DISC', 'IAP']": 0.25
+    },
+    "local_energy_spectrum": [
+      0.502906976744186,
+      0.4273255813953488,
+      0.06686046511627906,
+      0.0029069767441860465
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 2097152,
+    "total_fixed_point": 1881056,
+    "total_cycling": 216096,
+    "cycling_fraction": 0.1030426025390625
+  },
+  "n_unique_values": 6,
+  "total_variance": 0.04960238132110817,
+  "timestamp": "2026-07-28T16:46:13.670925+00:00"
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "model": "davidich_yeast",
+    "n_original": 10,
+    "n_players": 9,
+    "excluded": [
+      "Start"
+    ],
+    "input_config": 0,
+    "rho": 0.291272416962165,
+    "p": 0.08478870772540997,
+    "global_o3plus": 0.020475036404481887,
+    "local_o3plus": 0.025614754098360656,
+    "delta_o3plus": -0.005139717693878769,
+    "label": "destruction",
+    "cycling_fraction": 0.1985931396484375
+  },
+  {
+    "model": "davidich_yeast",
+    "n_original": 10,
+    "n_players": 9,
+    "excluded": [
+      "Start"
+    ],
+    "input_config": 1,
+    "rho": 0.10395263689042478,
+    "p": 0.5462811597818007,
+    "global_o3plus": 0.020804510100095635,
+    "local_o3plus": 0.025614754098360656,
+    "delta_o3plus": -0.0048102439982650215,
+    "label": "null",
+    "cycling_fraction": 0.10353851318359375
+  },
+  {
+    "model": "drosophila_cellcycle",
+    "n_original": 14,
+    "n_players": 11,
+    "excluded": [
+      "Ago",
+      "CycD",
+      "Notch"
+    ],
+    "input_config": 0,
+    "rho": 0.02541948026622772,
+    "p": 0.8538443071762001,
+    "global_o3plus": 0.12287848917154393,
+    "local_o3plus": 0.04266467065868263,
+    "delta_o3plus": 0.0802138185128613,
+    "label": "creation",
+    "cycling_fraction": 0.122344970703125
+  },
+  {
+    "model": "drosophila_cellcycle",
+    "n_original": 14,
+    "n_players": 11,
+    "excluded": [
+      "Ago",
+      "CycD",
+      "Notch"
+    ],
+    "input_config": 1,
+    "rho": 0.030770216618275555,
+    "p": 0.8235282370305028,
+    "global_o3plus": 0.0922015514126021,
+    "local_o3plus": 0.04266467065868263,
+    "delta_o3plus": 0.04953688075391947,
+    "label": "creation",
+    "cycling_fraction": 0.2335033416748047
+  },
+  {
+    "model": "faure_cellcycle",
+    "n_original": 10,
+    "n_players": 9,
+    "excluded": [
+      "CycD"
+    ],
+    "input_config": 0,
+    "rho": 0.47050175800685184,
+    "p": 0.0037812889430816747,
+    "global_o3plus": 0.008218827493579108,
+    "local_o3plus": 0.03847222222222222,
+    "delta_o3plus": -0.030253394728643114,
+    "label": "destruction",
+    "cycling_fraction": 0.19239044189453125
+  },
+  {
+    "model": "faure_cellcycle",
+    "n_original": 10,
+    "n_players": 9,
+    "excluded": [
+      "CycD"
+    ],
+    "input_config": 1,
+    "rho": 0.3707928754175389,
+    "p": 0.02599583823209822,
+    "global_o3plus": 0.010902253691859737,
+    "local_o3plus": 0.03847222222222222,
+    "delta_o3plus": -0.027569968530362483,
+    "label": "destruction",
+    "cycling_fraction": 0.2085418701171875
+  },
+  {
+    "model": "tournier_apoptosis",
+    "n_original": 12,
+    "n_players": 11,
+    "excluded": [
+      "TNF"
+    ],
+    "input_config": 0,
+    "rho": 0.36321680865558287,
+    "p": 0.006418780612039793,
+    "global_o3plus": 0.1593984477808967,
+    "local_o3plus": 0.041666666666666664,
+    "delta_o3plus": 0.11773178111423005,
+    "label": "creation",
+    "cycling_fraction": 0.05042266845703125
+  },
+  {
+    "model": "tournier_apoptosis",
+    "n_original": 12,
+    "n_players": 11,
+    "excluded": [
+      "TNF"
+    ],
+    "input_config": 1,
+    "rho": 0.35600668467653884,
+    "p": 0.007639747419300595,
+    "global_o3plus": 0.07499181744711685,
+    "local_o3plus": 0.041666666666666664,
+    "delta_o3plus": 0.03332515078045018,
+    "label": "creation",
+    "cycling_fraction": 0.1446380615234375
+  }
+]

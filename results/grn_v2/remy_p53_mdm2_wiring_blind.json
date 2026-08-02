@@ -1,0 +1,485 @@
+{
+  "model": "remy_p53_mdm2",
+  "n_nodes": 10,
+  "node_names": [
+    "DNAdam",
+    "ATM",
+    "p53",
+    "Mdm2cyt",
+    "Mdm2nuc",
+    "p21",
+    "CycE",
+    "Rb",
+    "E2F1",
+    "Caspase3"
+  ],
+  "output_nodes": [
+    "p53"
+  ],
+  "interaction_graph": {
+    "DNAdam": [],
+    "ATM": [
+      {
+        "regulator": "DNAdam",
+        "sign": 1
+      },
+      {
+        "regulator": "p53",
+        "sign": -1
+      }
+    ],
+    "p53": [
+      {
+        "regulator": "ATM",
+        "sign": 1
+      },
+      {
+        "regulator": "Mdm2cyt",
+        "sign": -1
+      },
+      {
+        "regulator": "p21",
+        "sign": 1
+      }
+    ],
+    "Mdm2cyt": [
+      {
+        "regulator": "ATM",
+        "sign": -1
+      },
+      {
+        "regulator": "p53",
+        "sign": 1
+      }
+    ],
+    "Mdm2nuc": [
+      {
+        "regulator": "ATM",
+        "sign": -1
+      },
+      {
+        "regulator": "Mdm2cyt",
+        "sign": 1
+      }
+    ],
+    "p21": [
+      {
+        "regulator": "p53",
+        "sign": 1
+      },
+      {
+        "regulator": "Mdm2nuc",
+        "sign": -1
+      }
+    ],
+    "CycE": [
+      {
+        "regulator": "p21",
+        "sign": -1
+      },
+      {
+        "regulator": "Rb",
+        "sign": -1
+      }
+    ],
+    "Rb": [
+      {
+        "regulator": "CycE",
+        "sign": -1
+      }
+    ],
+    "E2F1": [
+      {
+        "regulator": "CycE",
+        "sign": -1
+      },
+      {
+        "regulator": "Rb",
+        "sign": -1
+      }
+    ],
+    "Caspase3": [
+      {
+        "regulator": "p53",
+        "sign": 1
+      },
+      {
+        "regulator": "Mdm2nuc",
+        "sign": -1
+      },
+      {
+        "regulator": "CycE",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "ATM",
+        "p53"
+      ],
+      [
+        "DNAdam",
+        "p53"
+      ],
+      [
+        "Rb",
+        "p21"
+      ],
+      [
+        "Mdm2nuc",
+        "p53"
+      ],
+      [
+        "CycE",
+        "p53"
+      ],
+      [
+        "ATM",
+        "p21"
+      ],
+      [
+        "ATM",
+        "Mdm2cyt"
+      ],
+      [
+        "Mdm2cyt",
+        "p21"
+      ],
+      [
+        "CycE",
+        "Mdm2nuc"
+      ],
+      [
+        "CycE",
+        "Rb"
+      ],
+      [
+        "p21",
+        "p53"
+      ],
+      [
+        "Mdm2cyt",
+        "p53"
+      ]
+    ],
+    "triples": [
+      [
+        "Mdm2cyt",
+        "p21",
+        "p53"
+      ],
+      [
+        "CycE",
+        "Mdm2nuc",
+        "p53"
+      ],
+      [
+        "ATM",
+        "p21",
+        "p53"
+      ],
+      [
+        "ATM",
+        "Mdm2cyt",
+        "p21"
+      ],
+      [
+        "ATM",
+        "Mdm2cyt",
+        "p53"
+      ]
+    ],
+    "per_gene": {
+      "DNAdam": {
+        "regulators": [
+          "DNAdam"
+        ],
+        "interactions": []
+      },
+      "ATM": {
+        "regulators": [
+          "DNAdam",
+          "p53"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DNAdam",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "p53": {
+        "regulators": [
+          "ATM",
+          "p53",
+          "Mdm2cyt",
+          "p21"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "Mdm2cyt"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Mdm2cyt",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "Mdm2cyt",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "p21",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "p21",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Mdm2cyt",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "Mdm2cyt",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Mdm2cyt",
+              "p21",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "Mdm2cyt",
+              "p21",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "Mdm2cyt": {
+        "regulators": [
+          "ATM",
+          "p53"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Mdm2nuc": {
+        "regulators": [
+          "ATM",
+          "Mdm2cyt"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "Mdm2cyt"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "p21": {
+        "regulators": [
+          "p53",
+          "Mdm2nuc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Mdm2nuc",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "CycE": {
+        "regulators": [
+          "p21",
+          "Rb"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Rb",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Rb": {
+        "regulators": [
+          "CycE"
+        ],
+        "interactions": []
+      },
+      "E2F1": {
+        "regulators": [
+          "CycE",
+          "Rb"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycE",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Caspase3": {
+        "regulators": [
+          "p53",
+          "Mdm2nuc",
+          "CycE"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Mdm2nuc",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "CycE",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "CycE",
+              "Mdm2nuc"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "CycE",
+              "Mdm2nuc",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 12,
+    "n_triples": 5,
+    "pairwise_strengths": {
+      "['DNAdam', 'p53']": 0.25,
+      "['ATM', 'p53']": 0.3125,
+      "['ATM', 'Mdm2cyt']": 0.3125,
+      "['Mdm2cyt', 'p53']": 0.0625,
+      "['ATM', 'p21']": 0.0625,
+      "['p21', 'p53']": 0.0625,
+      "['Mdm2cyt', 'p21']": 0.0625,
+      "['Mdm2nuc', 'p53']": 0.375,
+      "['Rb', 'p21']": 0.25,
+      "['CycE', 'Rb']": 0.25,
+      "['CycE', 'p53']": 0.125,
+      "['CycE', 'Mdm2nuc']": 0.125
+    },
+    "local_energy_spectrum": [
+      0.35331632653061223,
+      0.4897959183673469,
+      0.14540816326530612,
+      0.01020408163265306,
+      0.0012755102040816326
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 524288,
+    "total_fixed_point": 454084,
+    "total_cycling": 70204,
+    "cycling_fraction": 0.13390350341796875
+  },
+  "n_unique_values": 8,
+  "total_variance": 0.10268577039241789,
+  "timestamp": "2026-07-28T16:41:16.349716+00:00"
+}

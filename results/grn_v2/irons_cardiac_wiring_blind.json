@@ -1,0 +1,855 @@
+{
+  "model": "irons_cardiac",
+  "n_nodes": 15,
+  "node_names": [
+    "BMP2",
+    "Dkk1",
+    "FGF8",
+    "Gata4",
+    "HAS2",
+    "Hex",
+    "Mesp1",
+    "Nkx2_5",
+    "Noggin",
+    "Smad",
+    "Snail",
+    "Tbx5",
+    "Wnt",
+    "bCatenin",
+    "eHand"
+  ],
+  "output_nodes": [
+    "Nkx2_5"
+  ],
+  "interaction_graph": {
+    "BMP2": [
+      {
+        "regulator": "Noggin",
+        "sign": -1
+      },
+      {
+        "regulator": "Smad",
+        "sign": 1
+      }
+    ],
+    "Dkk1": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "Wnt",
+        "sign": -1
+      }
+    ],
+    "FGF8": [
+      {
+        "regulator": "BMP2",
+        "sign": -1
+      },
+      {
+        "regulator": "Nkx2_5",
+        "sign": 1
+      },
+      {
+        "regulator": "Wnt",
+        "sign": 1
+      }
+    ],
+    "Gata4": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "Nkx2_5",
+        "sign": 1
+      }
+    ],
+    "HAS2": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "FGF8",
+        "sign": -1
+      }
+    ],
+    "Hex": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "Wnt",
+        "sign": 1
+      }
+    ],
+    "Mesp1": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "Hex",
+        "sign": -1
+      },
+      {
+        "regulator": "Wnt",
+        "sign": 1
+      }
+    ],
+    "Nkx2_5": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "Gata4",
+        "sign": 1
+      },
+      {
+        "regulator": "Mesp1",
+        "sign": 1
+      },
+      {
+        "regulator": "Smad",
+        "sign": 1
+      }
+    ],
+    "Noggin": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "Smad",
+        "sign": 1
+      }
+    ],
+    "Smad": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "Noggin",
+        "sign": -1
+      }
+    ],
+    "Snail": [
+      {
+        "regulator": "BMP2",
+        "sign": 1
+      },
+      {
+        "regulator": "FGF8",
+        "sign": -1
+      },
+      {
+        "regulator": "Wnt",
+        "sign": 1
+      }
+    ],
+    "Tbx5": [
+      {
+        "regulator": "Gata4",
+        "sign": 1
+      },
+      {
+        "regulator": "Nkx2_5",
+        "sign": 1
+      }
+    ],
+    "Wnt": [
+      {
+        "regulator": "Dkk1",
+        "sign": -1
+      },
+      {
+        "regulator": "Mesp1",
+        "sign": 1
+      }
+    ],
+    "bCatenin": [
+      {
+        "regulator": "Wnt",
+        "sign": 1
+      }
+    ],
+    "eHand": [
+      {
+        "regulator": "Gata4",
+        "sign": 1
+      },
+      {
+        "regulator": "Hex",
+        "sign": -1
+      },
+      {
+        "regulator": "Nkx2_5",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "BMP2",
+        "Noggin"
+      ],
+      [
+        "FGF8",
+        "Wnt"
+      ],
+      [
+        "Gata4",
+        "Nkx2_5"
+      ],
+      [
+        "Dkk1",
+        "Mesp1"
+      ],
+      [
+        "Hex",
+        "Nkx2_5"
+      ],
+      [
+        "Mesp1",
+        "Smad"
+      ],
+      [
+        "BMP2",
+        "Smad"
+      ],
+      [
+        "Gata4",
+        "Hex"
+      ],
+      [
+        "BMP2",
+        "Gata4"
+      ],
+      [
+        "BMP2",
+        "Mesp1"
+      ],
+      [
+        "BMP2",
+        "Nkx2_5"
+      ],
+      [
+        "Hex",
+        "Wnt"
+      ],
+      [
+        "Noggin",
+        "Smad"
+      ],
+      [
+        "Mesp1",
+        "Wnt"
+      ],
+      [
+        "Dkk1",
+        "Wnt"
+      ],
+      [
+        "BMP2",
+        "FGF8"
+      ],
+      [
+        "Gata4",
+        "Smad"
+      ],
+      [
+        "Nkx2_5",
+        "Wnt"
+      ],
+      [
+        "BMP2",
+        "Hex"
+      ],
+      [
+        "Gata4",
+        "Mesp1"
+      ],
+      [
+        "BMP2",
+        "Wnt"
+      ]
+    ],
+    "triples": [
+      [
+        "BMP2",
+        "Hex",
+        "Wnt"
+      ],
+      [
+        "BMP2",
+        "Gata4",
+        "Smad"
+      ],
+      [
+        "BMP2",
+        "FGF8",
+        "Wnt"
+      ],
+      [
+        "Dkk1",
+        "Mesp1",
+        "Wnt"
+      ],
+      [
+        "BMP2",
+        "Gata4",
+        "Nkx2_5"
+      ],
+      [
+        "BMP2",
+        "Mesp1",
+        "Smad"
+      ],
+      [
+        "BMP2",
+        "Nkx2_5",
+        "Wnt"
+      ],
+      [
+        "Gata4",
+        "Mesp1",
+        "Smad"
+      ],
+      [
+        "Gata4",
+        "Hex",
+        "Nkx2_5"
+      ],
+      [
+        "BMP2",
+        "Gata4",
+        "Mesp1"
+      ]
+    ],
+    "per_gene": {
+      "BMP2": {
+        "regulators": [
+          "Noggin",
+          "Smad"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Noggin",
+              "Smad"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Dkk1": {
+        "regulators": [
+          "BMP2",
+          "Wnt"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "FGF8": {
+        "regulators": [
+          "BMP2",
+          "Nkx2_5",
+          "Wnt"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Nkx2_5"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Nkx2_5",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Nkx2_5",
+              "Wnt"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Gata4": {
+        "regulators": [
+          "BMP2",
+          "Gata4",
+          "Nkx2_5"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Gata4"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Nkx2_5"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Gata4",
+              "Nkx2_5"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Gata4",
+              "Nkx2_5"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "HAS2": {
+        "regulators": [
+          "BMP2",
+          "FGF8"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "FGF8"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Hex": {
+        "regulators": [
+          "BMP2",
+          "Wnt"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Mesp1": {
+        "regulators": [
+          "BMP2",
+          "Hex",
+          "Wnt"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Hex"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Hex",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Hex",
+              "Wnt"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Nkx2_5": {
+        "regulators": [
+          "BMP2",
+          "Gata4",
+          "Mesp1",
+          "Smad"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Gata4"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Mesp1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Gata4",
+              "Mesp1"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Gata4",
+              "Mesp1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Smad"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Gata4",
+              "Smad"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Gata4",
+              "Smad"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Mesp1",
+              "Smad"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Mesp1",
+              "Smad"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Gata4",
+              "Mesp1",
+              "Smad"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Gata4",
+              "Mesp1",
+              "Smad"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "Noggin": {
+        "regulators": [
+          "BMP2",
+          "Smad"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Smad"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Smad": {
+        "regulators": [
+          "BMP2",
+          "Noggin"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "Noggin"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Snail": {
+        "regulators": [
+          "BMP2",
+          "FGF8",
+          "Wnt"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BMP2",
+              "FGF8"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "FGF8",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BMP2",
+              "FGF8",
+              "Wnt"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Tbx5": {
+        "regulators": [
+          "Gata4",
+          "Nkx2_5"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Gata4",
+              "Nkx2_5"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Wnt": {
+        "regulators": [
+          "Dkk1",
+          "Mesp1",
+          "Wnt"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Dkk1",
+              "Mesp1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Dkk1",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Mesp1",
+              "Wnt"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Dkk1",
+              "Mesp1",
+              "Wnt"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "bCatenin": {
+        "regulators": [
+          "Wnt"
+        ],
+        "interactions": []
+      },
+      "eHand": {
+        "regulators": [
+          "Gata4",
+          "Hex",
+          "Nkx2_5"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Gata4",
+              "Hex"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Gata4",
+              "Nkx2_5"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Hex",
+              "Nkx2_5"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Gata4",
+              "Hex",
+              "Nkx2_5"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 21,
+    "n_triples": 10,
+    "pairwise_strengths": {
+      "['Noggin', 'Smad']": 0.25,
+      "['BMP2', 'Wnt']": 0.875,
+      "['BMP2', 'Nkx2_5']": 0.25,
+      "['Nkx2_5', 'Wnt']": 0.125,
+      "['BMP2', 'Gata4']": 0.1875,
+      "['Gata4', 'Nkx2_5']": 0.5,
+      "['BMP2', 'FGF8']": 0.375,
+      "['BMP2', 'Hex']": 0.125,
+      "['Hex', 'Wnt']": 0.125,
+      "['BMP2', 'Mesp1']": 0.0625,
+      "['Gata4', 'Mesp1']": 0.1875,
+      "['BMP2', 'Smad']": 0.3125,
+      "['Gata4', 'Smad']": 0.0625,
+      "['Mesp1', 'Smad']": 0.0625,
+      "['BMP2', 'Noggin']": 0.25,
+      "['FGF8', 'Wnt']": 0.125,
+      "['Dkk1', 'Mesp1']": 0.125,
+      "['Dkk1', 'Wnt']": 0.125,
+      "['Mesp1', 'Wnt']": 0.125,
+      "['Gata4', 'Hex']": 0.125,
+      "['Hex', 'Nkx2_5']": 0.125
+    },
+    "local_energy_spectrum": [
+      0.461376404494382,
+      0.3792134831460674,
+      0.13904494382022473,
+      0.019662921348314606,
+      0.0007022471910112359
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 16777216,
+    "total_fixed_point": 15210240,
+    "total_cycling": 1566976,
+    "cycling_fraction": 0.0933990478515625
+  },
+  "n_unique_values": 31,
+  "total_variance": 0.052644688981672516,
+  "timestamp": "2026-07-28T17:07:49.986813+00:00"
+}

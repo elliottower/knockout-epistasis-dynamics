@@ -1,0 +1,641 @@
+{
+  "experiment": "batch2_blind_predictions",
+  "models": {
+    "albert_segment_polarity": {
+      "citation": "Albert & Othmer, J Theor Biol 223.1 (2003): 1-18",
+      "model": "albert_segment_polarity",
+      "n": 11,
+      "prediction": {
+        "creation_or_destruction": "destruction",
+        "global_o3plus_estimate": 0.0026,
+        "predicts_creation": false,
+        "reasoning": {
+          "creation_score": 0.343,
+          "density": 1.45,
+          "depth": 9,
+          "local_o3plus": 0.0044,
+          "n_loops": 2,
+          "pos_ratio": 1.0
+        },
+        "spearman_rho_range": [
+          0.07,
+          0.47
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 1.4545454545454546,
+        "input_nodes": [
+          "SLP",
+          "WG"
+        ],
+        "local_energy_spectrum": [
+          0.4727112676056338,
+          0.44014084507042256,
+          0.08274647887323944,
+          0.0035211267605633804,
+          0.0008802816901408451
+        ],
+        "local_o3plus": 0.0044014084507042256,
+        "max_and_arity": 3,
+        "n_edges": 16,
+        "n_input_nodes": 2,
+        "n_local_pairwise": 10,
+        "n_local_triples": 4,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 0,
+        "n_output_regulators": 4,
+        "n_positive_loops": 2,
+        "output_regulators": [
+          "SLP",
+          "wg",
+          "CIA",
+          "CIR"
+        ],
+        "pathway_depth": 9
+      }
+    },
+    "blood_stem_cell": {
+      "citation": "Thalheim et al., Cells 10.12 (2021): 3533",
+      "model": "blood_stem_cell",
+      "n": 11,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0691,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.781,
+          "density": 3.82,
+          "depth": 9,
+          "local_o3plus": 0.0327,
+          "n_loops": 55,
+          "pos_ratio": 0.451
+        },
+        "spearman_rho_range": [
+          0.0,
+          0.4
+        ]
+      },
+      "source": "builtin",
+      "structural": {
+        "edge_density": 3.8181818181818183,
+        "input_nodes": [],
+        "local_energy_spectrum": [
+          0.6561382477243173,
+          0.194316888816645,
+          0.11684208387516255,
+          0.02506298764629389,
+          0.006451154096228868,
+          0.0010260890767230168,
+          0.00015238946684005203,
+          1.0159297789336801e-05
+        ],
+        "local_o3plus": 0.032702779583875165,
+        "max_and_arity": 6,
+        "n_edges": 42,
+        "n_input_nodes": 0,
+        "n_local_pairwise": 37,
+        "n_local_triples": 62,
+        "n_mixed_loops": 4,
+        "n_negative_loops": 28,
+        "n_output_regulators": 3,
+        "n_positive_loops": 23,
+        "output_regulators": [
+          "GATA1",
+          "PU1",
+          "SCL"
+        ],
+        "pathway_depth": 9
+      }
+    },
+    "calzone_cell_fate": {
+      "citation": "Calzone et al., PLoS Comput Biol 6.9 (2010): e1000912",
+      "model": "calzone_cell_fate",
+      "n": 17,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0432,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.547,
+          "density": 1.94,
+          "depth": 14,
+          "local_o3plus": 0.0155,
+          "n_loops": 8,
+          "pos_ratio": 0.625
+        },
+        "spearman_rho_range": [
+          0.02,
+          0.42
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 1.9411764705882353,
+        "input_nodes": [
+          "TNF",
+          "FADD",
+          "BAR"
+        ],
+        "local_energy_spectrum": [
+          0.463490099009901,
+          0.4158415841584158,
+          0.1051980198019802,
+          0.01485148514851485,
+          0.0006188118811881188
+        ],
+        "local_o3plus": 0.01547029702970297,
+        "max_and_arity": 3,
+        "n_edges": 33,
+        "n_input_nodes": 3,
+        "n_local_pairwise": 22,
+        "n_local_triples": 8,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 3,
+        "n_output_regulators": 1,
+        "n_positive_loops": 5,
+        "output_regulators": [
+          "Caspase3"
+        ],
+        "pathway_depth": 14
+      }
+    },
+    "emt_switch": {
+      "citation": "Steinway et al., PLoS Comput Biol 10.8 (2014): e1003762",
+      "model": "emt_switch",
+      "n": 12,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0788,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.458,
+          "density": 3.17,
+          "depth": 10,
+          "local_o3plus": 0.0392,
+          "n_loops": 40,
+          "pos_ratio": 1.0
+        },
+        "spearman_rho_range": [
+          0.0,
+          0.4
+        ]
+      },
+      "source": "builtin",
+      "structural": {
+        "edge_density": 3.1666666666666665,
+        "input_nodes": [],
+        "local_energy_spectrum": [
+          0.5870931952662722,
+          0.26904585798816566,
+          0.10465976331360946,
+          0.035133136094674555,
+          0.0035133136094674558,
+          0.0005547337278106509
+        ],
+        "local_o3plus": 0.03920118343195266,
+        "max_and_arity": 5,
+        "n_edges": 38,
+        "n_input_nodes": 0,
+        "n_local_pairwise": 29,
+        "n_local_triples": 32,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 0,
+        "n_output_regulators": 5,
+        "n_positive_loops": 40,
+        "output_regulators": [
+          "SNAI1",
+          "SNAI2",
+          "Twist",
+          "ZEB1",
+          "ZEB1_H"
+        ],
+        "pathway_depth": 10
+      }
+    },
+    "fumia_cellcycle": {
+      "citation": "Fumia & Martins, PLoS ONE 8.7 (2013): e69008",
+      "model": "fumia_cellcycle",
+      "n": 14,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0872,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.58,
+          "density": 3.14,
+          "depth": 12,
+          "local_o3plus": 0.0448,
+          "n_loops": 52,
+          "pos_ratio": 0.692
+        },
+        "spearman_rho_range": [
+          0.03,
+          0.43
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 3.142857142857143,
+        "input_nodes": [
+          "GF"
+        ],
+        "local_energy_spectrum": [
+          0.5265858208955224,
+          0.32882462686567165,
+          0.09981343283582089,
+          0.036380597014925374,
+          0.00792910447761194,
+          0.0004664179104477612
+        ],
+        "local_o3plus": 0.04477611940298508,
+        "max_and_arity": 5,
+        "n_edges": 44,
+        "n_input_nodes": 1,
+        "n_local_pairwise": 39,
+        "n_local_triples": 37,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 16,
+        "n_output_regulators": 4,
+        "n_positive_loops": 36,
+        "output_regulators": [
+          "CycA",
+          "p21",
+          "Cdc20",
+          "cdh1"
+        ],
+        "pathway_depth": 12
+      }
+    },
+    "grieco_bladder": {
+      "citation": "Grieco et al., Mol BioSyst 9.7 (2013): 1646-1659",
+      "model": "grieco_bladder",
+      "n": 18,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0228,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.545,
+          "density": 1.5,
+          "depth": 9,
+          "local_o3plus": 0.0019,
+          "n_loops": 5,
+          "pos_ratio": 0.5
+        },
+        "spearman_rho_range": [
+          -0.02,
+          0.38
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 1.5,
+        "input_nodes": [
+          "GF",
+          "EGFR_stimulus",
+          "FGFR3_stimulus"
+        ],
+        "local_energy_spectrum": [
+          0.5466417910447762,
+          0.34888059701492535,
+          0.10261194029850747,
+          0.0018656716417910447
+        ],
+        "local_o3plus": 0.0018656716417910447,
+        "max_and_arity": 3,
+        "n_edges": 27,
+        "n_input_nodes": 3,
+        "n_local_pairwise": 11,
+        "n_local_triples": 1,
+        "n_mixed_loops": 1,
+        "n_negative_loops": 2,
+        "n_output_regulators": 2,
+        "n_positive_loops": 2,
+        "output_regulators": [
+          "AKT",
+          "TP53"
+        ],
+        "pathway_depth": 9
+      }
+    },
+    "irons_cardiac": {
+      "citation": "Irons & Monk, J Theor Biol 259.4 (2009): 760-769",
+      "model": "irons_cardiac",
+      "n": 15,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0505,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.527,
+          "density": 2.33,
+          "depth": 7,
+          "local_o3plus": 0.0204,
+          "n_loops": 8,
+          "pos_ratio": 0.5
+        },
+        "spearman_rho_range": [
+          -0.05,
+          0.35
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 2.3333333333333335,
+        "input_nodes": [],
+        "local_energy_spectrum": [
+          0.461376404494382,
+          0.3792134831460674,
+          0.13904494382022473,
+          0.019662921348314606,
+          0.0007022471910112359
+        ],
+        "local_o3plus": 0.020365168539325844,
+        "max_and_arity": 3,
+        "n_edges": 35,
+        "n_input_nodes": 0,
+        "n_local_pairwise": 21,
+        "n_local_triples": 10,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 4,
+        "n_output_regulators": 4,
+        "n_positive_loops": 4,
+        "output_regulators": [
+          "BMP2",
+          "Gata4",
+          "Mesp1",
+          "Smad"
+        ],
+        "pathway_depth": 7
+      }
+    },
+    "li_budding_yeast": {
+      "citation": "Li et al., PNAS 101.14 (2004): 4781-4786",
+      "model": "li_budding_yeast",
+      "n": 11,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0661,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.725,
+          "density": 2.64,
+          "depth": 7,
+          "local_o3plus": 0.0308,
+          "n_loops": 24,
+          "pos_ratio": 0.292
+        },
+        "spearman_rho_range": [
+          0.03,
+          0.43
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 2.6363636363636362,
+        "input_nodes": [
+          "Cln3"
+        ],
+        "local_energy_spectrum": [
+          0.4876580739299611,
+          0.38776750972762647,
+          0.09381079766536965,
+          0.026021400778210118,
+          0.004073443579766537,
+          0.0006079766536964981,
+          6.0797665369649806e-05
+        ],
+        "local_o3plus": 0.030763618677042803,
+        "max_and_arity": 4,
+        "n_edges": 29,
+        "n_input_nodes": 1,
+        "n_local_pairwise": 30,
+        "n_local_triples": 34,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 17,
+        "n_output_regulators": 6,
+        "n_positive_loops": 7,
+        "output_regulators": [
+          "Cdh1",
+          "Cdc20",
+          "Clb5_6",
+          "Sic1",
+          "Clb1_2",
+          "Mcm1"
+        ],
+        "pathway_depth": 7
+      }
+    },
+    "mendoza_thelper": {
+      "citation": "Mendoza & Xenarios, Bioinformatics 22.11 (2006): 1375-1382",
+      "model": "mendoza_thelper",
+      "n": 13,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0379,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.454,
+          "density": 1.62,
+          "depth": 8,
+          "local_o3plus": 0.0119,
+          "n_loops": 6,
+          "pos_ratio": 0.667
+        },
+        "spearman_rho_range": [
+          -0.0,
+          0.4
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 1.6153846153846154,
+        "input_nodes": [
+          "APC",
+          "IFNg_e",
+          "IL12_e"
+        ],
+        "local_energy_spectrum": [
+          0.46980337078651685,
+          0.4438202247191011,
+          0.07443820224719101,
+          0.011235955056179775,
+          0.0007022471910112359
+        ],
+        "local_o3plus": 0.011938202247191011,
+        "max_and_arity": 2,
+        "n_edges": 21,
+        "n_input_nodes": 3,
+        "n_local_pairwise": 12,
+        "n_local_triples": 6,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 2,
+        "n_output_regulators": 3,
+        "n_positive_loops": 4,
+        "output_regulators": [
+          "STAT6",
+          "T_bet",
+          "GATA3"
+        ],
+        "pathway_depth": 8
+      }
+    },
+    "myeloid_progenitors": {
+      "citation": "Krumsiek et al., PLoS ONE 6.7 (2011): e22649",
+      "model": "myeloid_progenitors",
+      "n": 11,
+      "prediction": {
+        "creation_or_destruction": "destruction",
+        "global_o3plus_estimate": 0.0145,
+        "predicts_creation": false,
+        "reasoning": {
+          "creation_score": 0.338,
+          "density": 2.36,
+          "depth": 4,
+          "local_o3plus": 0.0242,
+          "n_loops": 16,
+          "pos_ratio": 0.75
+        },
+        "spearman_rho_range": [
+          -0.03,
+          0.37
+        ]
+      },
+      "source": "builtin",
+      "structural": {
+        "edge_density": 2.3636363636363638,
+        "input_nodes": [],
+        "local_energy_spectrum": [
+          0.4596774193548387,
+          0.38306451612903225,
+          0.13306451612903225,
+          0.020161290322580645,
+          0.004032258064516129
+        ],
+        "local_o3plus": 0.024193548387096774,
+        "max_and_arity": 4,
+        "n_edges": 26,
+        "n_input_nodes": 0,
+        "n_local_pairwise": 21,
+        "n_local_triples": 15,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 4,
+        "n_output_regulators": 4,
+        "n_positive_loops": 12,
+        "output_regulators": [
+          "FLI1",
+          "GATA1",
+          "GATA2",
+          "PU1"
+        ],
+        "pathway_depth": 4
+      }
+    },
+    "remy_p53_mdm2": {
+      "citation": "Abou-Jaoude et al., BMC Syst Biol 3 (2009): 100",
+      "model": "remy_p53_mdm2",
+      "n": 10,
+      "prediction": {
+        "creation_or_destruction": "creation",
+        "global_o3plus_estimate": 0.0372,
+        "predicts_creation": true,
+        "reasoning": {
+          "creation_score": 0.631,
+          "density": 1.9,
+          "depth": 5,
+          "local_o3plus": 0.0115,
+          "n_loops": 7,
+          "pos_ratio": 0.286
+        },
+        "spearman_rho_range": [
+          -0.06,
+          0.34
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 1.9,
+        "input_nodes": [
+          "DNAdam"
+        ],
+        "local_energy_spectrum": [
+          0.35331632653061223,
+          0.4897959183673469,
+          0.14540816326530612,
+          0.01020408163265306,
+          0.0012755102040816326
+        ],
+        "local_o3plus": 0.011479591836734693,
+        "max_and_arity": 3,
+        "n_edges": 19,
+        "n_input_nodes": 1,
+        "n_local_pairwise": 12,
+        "n_local_triples": 5,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 5,
+        "n_output_regulators": 4,
+        "n_positive_loops": 2,
+        "output_regulators": [
+          "ATM",
+          "p53",
+          "Mdm2cyt",
+          "p21"
+        ],
+        "pathway_depth": 5
+      }
+    },
+    "zanudo_tlgl": {
+      "citation": "Zanudo & Albert, PLoS Comput Biol 11.4 (2015): e1004193",
+      "model": "zanudo_tlgl",
+      "n": 12,
+      "prediction": {
+        "creation_or_destruction": "destruction",
+        "global_o3plus_estimate": 0.0017,
+        "predicts_creation": false,
+        "reasoning": {
+          "creation_score": 0.285,
+          "density": 1.5,
+          "depth": 7,
+          "local_o3plus": 0.0029,
+          "n_loops": 4,
+          "pos_ratio": 1.0
+        },
+        "spearman_rho_range": [
+          -0.04,
+          0.36
+        ]
+      },
+      "source": "web",
+      "structural": {
+        "edge_density": 1.5,
+        "input_nodes": [
+          "Stimuli"
+        ],
+        "local_energy_spectrum": [
+          0.502906976744186,
+          0.4273255813953488,
+          0.06686046511627906,
+          0.0029069767441860465
+        ],
+        "local_o3plus": 0.0029069767441860465,
+        "max_and_arity": 2,
+        "n_edges": 18,
+        "n_input_nodes": 1,
+        "n_local_pairwise": 8,
+        "n_local_triples": 1,
+        "n_mixed_loops": 0,
+        "n_negative_loops": 0,
+        "n_output_regulators": 1,
+        "n_positive_loops": 4,
+        "output_regulators": [
+          "Caspase"
+        ],
+        "pathway_depth": 7
+      }
+    }
+  },
+  "n_models": 12,
+  "sha256": "2248fdeff1cda59ec90e17e02d364a330b7f66587ab3e8b310cb22372c1eb3a1",
+  "timestamp": "2026-07-28T16:40:45.288452+00:00"
+}

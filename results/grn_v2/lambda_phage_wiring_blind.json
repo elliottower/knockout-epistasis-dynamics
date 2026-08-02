@@ -1,0 +1,1689 @@
+{
+  "model": "lambda_phage",
+  "n_nodes": 7,
+  "node_names": [
+    "CII",
+    "CI_b1",
+    "CI_b2",
+    "Cro_b1",
+    "Cro_b2",
+    "Cro_b3",
+    "N"
+  ],
+  "output_nodes": [
+    "CI_b1"
+  ],
+  "interaction_graph": {
+    "CII": [
+      {
+        "regulator": "CI_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "CI_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b3",
+        "sign": -1
+      },
+      {
+        "regulator": "N",
+        "sign": 1
+      }
+    ],
+    "CI_b1": [
+      {
+        "regulator": "CII",
+        "sign": 1
+      },
+      {
+        "regulator": "CI_b2",
+        "sign": 1
+      },
+      {
+        "regulator": "Cro_b1",
+        "sign": -1
+      }
+    ],
+    "CI_b2": [
+      {
+        "regulator": "CII",
+        "sign": 1
+      },
+      {
+        "regulator": "CI_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Cro_b1",
+        "sign": -1
+      }
+    ],
+    "Cro_b1": [
+      {
+        "regulator": "CI_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "CI_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b2",
+        "sign": 1
+      }
+    ],
+    "Cro_b2": [
+      {
+        "regulator": "CI_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "CI_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Cro_b3",
+        "sign": 1
+      }
+    ],
+    "Cro_b3": [
+      {
+        "regulator": "CI_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "CI_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Cro_b2",
+        "sign": 1
+      }
+    ],
+    "N": [
+      {
+        "regulator": "CI_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Cro_b2",
+        "sign": -1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Cro_b1",
+        "N"
+      ],
+      [
+        "Cro_b1",
+        "Cro_b3"
+      ],
+      [
+        "CI_b2",
+        "Cro_b1"
+      ],
+      [
+        "Cro_b2",
+        "N"
+      ],
+      [
+        "CI_b1",
+        "Cro_b1"
+      ],
+      [
+        "Cro_b3",
+        "N"
+      ],
+      [
+        "CII",
+        "CI_b2"
+      ],
+      [
+        "Cro_b2",
+        "Cro_b3"
+      ],
+      [
+        "CI_b1",
+        "CI_b2"
+      ],
+      [
+        "CI_b1",
+        "Cro_b3"
+      ],
+      [
+        "CI_b2",
+        "Cro_b2"
+      ],
+      [
+        "CI_b1",
+        "N"
+      ],
+      [
+        "CI_b2",
+        "N"
+      ],
+      [
+        "CII",
+        "Cro_b1"
+      ],
+      [
+        "CI_b1",
+        "Cro_b2"
+      ],
+      [
+        "CI_b2",
+        "Cro_b3"
+      ],
+      [
+        "Cro_b1",
+        "Cro_b2"
+      ],
+      [
+        "CII",
+        "CI_b1"
+      ]
+    ],
+    "triples": [
+      [
+        "CI_b2",
+        "Cro_b2",
+        "N"
+      ],
+      [
+        "Cro_b1",
+        "Cro_b2",
+        "N"
+      ],
+      [
+        "CI_b1",
+        "Cro_b1",
+        "N"
+      ],
+      [
+        "CI_b2",
+        "Cro_b1",
+        "N"
+      ],
+      [
+        "CI_b2",
+        "Cro_b1",
+        "Cro_b3"
+      ],
+      [
+        "CI_b2",
+        "Cro_b3",
+        "N"
+      ],
+      [
+        "CI_b1",
+        "Cro_b3",
+        "N"
+      ],
+      [
+        "Cro_b1",
+        "Cro_b3",
+        "N"
+      ],
+      [
+        "CI_b1",
+        "CI_b2",
+        "Cro_b1"
+      ],
+      [
+        "CI_b1",
+        "Cro_b1",
+        "Cro_b3"
+      ],
+      [
+        "CI_b1",
+        "CI_b2",
+        "Cro_b3"
+      ],
+      [
+        "CII",
+        "CI_b1",
+        "Cro_b1"
+      ],
+      [
+        "CI_b1",
+        "CI_b2",
+        "N"
+      ],
+      [
+        "CI_b2",
+        "Cro_b2",
+        "Cro_b3"
+      ],
+      [
+        "CI_b1",
+        "Cro_b2",
+        "N"
+      ],
+      [
+        "CI_b1",
+        "Cro_b1",
+        "Cro_b2"
+      ],
+      [
+        "CI_b1",
+        "CI_b2",
+        "Cro_b2"
+      ],
+      [
+        "CI_b1",
+        "Cro_b2",
+        "Cro_b3"
+      ],
+      [
+        "Cro_b2",
+        "Cro_b3",
+        "N"
+      ],
+      [
+        "CII",
+        "CI_b1",
+        "CI_b2"
+      ],
+      [
+        "CII",
+        "CI_b2",
+        "Cro_b1"
+      ],
+      [
+        "Cro_b1",
+        "Cro_b2",
+        "Cro_b3"
+      ],
+      [
+        "CI_b2",
+        "Cro_b1",
+        "Cro_b2"
+      ]
+    ],
+    "per_gene": {
+      "CII": {
+        "regulators": [
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1",
+          "Cro_b2",
+          "Cro_b3",
+          "N"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "N"
+            ],
+            "order": 2,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "N"
+            ],
+            "order": 2,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": 0.109375
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "N"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b2",
+              "N"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "N"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b3",
+              "N"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 4,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3",
+              "N"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          }
+        ]
+      },
+      "CI_b1": {
+        "regulators": [
+          "CII",
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CII",
+              "CI_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CII",
+              "CI_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CII",
+              "CI_b1",
+              "CI_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CII",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CII",
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CII",
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CII",
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "CI_b2": {
+        "regulators": [
+          "CII",
+          "CI_b1",
+          "Cro_b1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CII",
+              "CI_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "CII",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "CII",
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Cro_b1": {
+        "regulators": [
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1",
+          "Cro_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "Cro_b2": {
+        "regulators": [
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1",
+          "Cro_b2",
+          "Cro_b3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "Cro_b3": {
+        "regulators": [
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1",
+          "Cro_b2",
+          "Cro_b3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 3,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "CI_b2",
+              "Cro_b1",
+              "Cro_b2",
+              "Cro_b3"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "N": {
+        "regulators": [
+          "CI_b1",
+          "Cro_b1",
+          "Cro_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "CI_b1",
+              "Cro_b1",
+              "Cro_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 18,
+    "n_triples": 23,
+    "pairwise_strengths": {
+      "['CI_b1', 'CI_b2']": 0.484375,
+      "['CI_b1', 'Cro_b1']": 0.515625,
+      "['CI_b2', 'Cro_b1']": 0.265625,
+      "['CI_b1', 'Cro_b2']": 0.265625,
+      "['CI_b2', 'Cro_b2']": 0.140625,
+      "['Cro_b1', 'Cro_b2']": 0.359375,
+      "['CI_b1', 'Cro_b3']": 0.078125,
+      "['CI_b2', 'Cro_b3']": 0.078125,
+      "['Cro_b1', 'Cro_b3']": 0.171875,
+      "['Cro_b2', 'Cro_b3']": 0.171875,
+      "['CI_b1', 'N']": 0.109375,
+      "['CI_b2', 'N']": 0.109375,
+      "['Cro_b1', 'N']": 0.046875,
+      "['Cro_b2', 'N']": 0.046875,
+      "['Cro_b3', 'N']": 0.046875,
+      "['CII', 'CI_b1']": 0.1875,
+      "['CII', 'CI_b2']": 0.0625,
+      "['CII', 'Cro_b1']": 0.3125
+    },
+    "local_energy_spectrum": [
+      0.5878810975609756,
+      0.2657012195121951,
+      0.09992378048780488,
+      0.038109756097560975,
+      0.007240853658536586,
+      0.0010670731707317074,
+      7.621951219512195e-05
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 65536,
+    "total_fixed_point": 55046,
+    "total_cycling": 10490,
+    "cycling_fraction": 0.160064697265625
+  },
+  "n_unique_values": 11,
+  "total_variance": 0.18474189564585686,
+  "timestamp": "2026-07-28T16:55:05.482836+00:00"
+}

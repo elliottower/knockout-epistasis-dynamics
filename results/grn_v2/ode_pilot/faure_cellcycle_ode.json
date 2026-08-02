@@ -1,0 +1,40 @@
+{
+  "model": "faure_cellcycle",
+  "method": "ode_hill",
+  "description": "Mammalian cell cycle control (10 nodes)",
+  "n_players": 10,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.03847222222222222,
+  "ode_global_o3plus": 0.014795725210393603,
+  "ode_delta_o3plus": -0.02367649701182862,
+  "boolean_delta_o3plus": -0.030230677349838753,
+  "boolean_global_o3plus": null,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.3541296848912481,
+    0.48871393628843185,
+    0.14236065360992656,
+    0.010446319981500477,
+    0.00327450049176597,
+    0.0007919463042309215,
+    0.00022629266488779863,
+    4.6688681106199704e-05,
+    8.865227183351876e-06,
+    1.1087447305765414e-06,
+    3.1149883074620613e-09
+  ],
+  "n_unique_values": 48,
+  "v_mean_range": [
+    0.0,
+    0.9990243901375397
+  ],
+  "v_mean_std": 0.3748735920794976,
+  "timestamp": "2026-07-29T00:59:39.168705+00:00"
+}

@@ -1,0 +1,1060 @@
+{
+  "model": "hematopoiesis_aging",
+  "n_players": 15,
+  "n_init": 512,
+  "node_names": [
+    "Bclaf1",
+    "CDK46CycD",
+    "CIPKIP",
+    "Cebpa",
+    "Egr1",
+    "Fli1",
+    "Gata1",
+    "Gata2",
+    "Ikzf1",
+    "Junb",
+    "Klf1",
+    "Myc",
+    "Spi1",
+    "Tal1",
+    "Zfpm1"
+  ],
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T21:14:42.076862+00:00",
+  "pairwise": {
+    "n_pairs": 105,
+    "n_local_nonzero": 27,
+    "n_global_nonzero": 66,
+    "local_positive_rate": 0.2571428571428571,
+    "spearman_rho": 0.3977731631544662,
+    "spearman_pvalue": 2.6466227210736537e-05,
+    "spearman_ci_95": [
+      0.2411917713464557,
+      0.5475312271791816
+    ],
+    "creation_rate": 0.5925925925925926,
+    "destruction_rate": 0.0,
+    "created_count": 16,
+    "destroyed_count": 0,
+    "top_k": 27
+  },
+  "triples": {
+    "n_triples": 455,
+    "n_local_nonzero": 23,
+    "n_global_nonzero": 220,
+    "spearman_rho": 0.20187005288783777,
+    "spearman_pvalue": 1.4317116573942e-05,
+    "spearman_ci_95": [
+      0.1404051835441015,
+      0.26154579096047637
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.002432600907923188,
+    "frac_energy_3plus": 0.7886612510942063
+  },
+  "energy_spectrum": {
+    "global": [
+      0.996891813497695,
+      0.0001784320338241954,
+      0.0004784482129388327,
+      0.0007433479690567743,
+      0.00075259635835514,
+      0.00053292819631686,
+      0.0002769841861051812,
+      0.00010792532305300247,
+      3.089898529050207e-05,
+      5.98272070322114e-06,
+      6.249860748781367e-07,
+      1.740938091582142e-08,
+      1.2120556577747035e-10,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "local_rules": [
+      0.5221108490566038,
+      0.36939858490566035,
+      0.09375,
+      0.012382075471698114,
+      0.002063679245283019,
+      0.00029481132075471697,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12",
+      "order-13",
+      "order-14",
+      "order-15"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "Egr1",
+        "Fli1"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Gata1"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Junb"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Myc"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Gata1"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.28125,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Junb"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Myc"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Junb"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Myc"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Junb",
+        "Myc"
+      ],
+      "global_magnitude": 0.005372047424316406,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005372047424316406
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Klf1"
+      ],
+      "global_magnitude": 0.00289154052734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00289154052734375
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Klf1"
+      ],
+      "global_magnitude": 0.00289154052734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00289154052734375
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Klf1"
+      ],
+      "global_magnitude": 0.00289154052734375,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.00289154052734375
+    },
+    {
+      "pair": [
+        "Junb",
+        "Klf1"
+      ],
+      "global_magnitude": 0.00289154052734375,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.00289154052734375
+    },
+    {
+      "pair": [
+        "Klf1",
+        "Myc"
+      ],
+      "global_magnitude": 0.00289154052734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00289154052734375
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Gata2"
+      ],
+      "global_magnitude": 0.0027303695678710938,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.0027303695678710938
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Gata2"
+      ],
+      "global_magnitude": 0.0027303695678710938,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.0027303695678710938
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Gata2"
+      ],
+      "global_magnitude": 0.0027303695678710938,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.0027303695678710938
+    },
+    {
+      "pair": [
+        "Gata2",
+        "Junb"
+      ],
+      "global_magnitude": 0.0027303695678710938,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.0027303695678710938
+    },
+    {
+      "pair": [
+        "Gata2",
+        "Myc"
+      ],
+      "global_magnitude": 0.0027303695678710938,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0027303695678710938
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Egr1"
+      ],
+      "global_magnitude": 0.0023818016052246094,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0023818016052246094
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Fli1"
+      ],
+      "global_magnitude": 0.0023818016052246094,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0023818016052246094
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Gata1"
+      ],
+      "global_magnitude": 0.0023818016052246094,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0023818016052246094
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Junb"
+      ],
+      "global_magnitude": 0.0023818016052246094,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0023818016052246094
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Myc"
+      ],
+      "global_magnitude": 0.0023818016052246094,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.0023818016052246094
+    },
+    {
+      "pair": [
+        "Gata2",
+        "Klf1"
+      ],
+      "global_magnitude": 0.002262115478515625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.002262115478515625
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Egr1"
+      ],
+      "global_magnitude": 0.00223541259765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00223541259765625
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Fli1"
+      ],
+      "global_magnitude": 0.00223541259765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00223541259765625
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Gata1"
+      ],
+      "global_magnitude": 0.00223541259765625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.00223541259765625
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Junb"
+      ],
+      "global_magnitude": 0.00223541259765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00223541259765625
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Myc"
+      ],
+      "global_magnitude": 0.00223541259765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00223541259765625
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0018548965454101562,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018548965454101562
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0018548965454101562,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0018548965454101562
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0018548965454101562,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0018548965454101562
+    },
+    {
+      "pair": [
+        "Ikzf1",
+        "Junb"
+      ],
+      "global_magnitude": 0.0018548965454101562,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018548965454101562
+    },
+    {
+      "pair": [
+        "Ikzf1",
+        "Myc"
+      ],
+      "global_magnitude": 0.0018548965454101562,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018548965454101562
+    },
+    {
+      "pair": [
+        "Gata2",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0017118453979492188,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.0017118453979492188
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0016880035400390625,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0016880035400390625
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0016880035400390625,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.0016880035400390625
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0016880035400390625,
+      "local_magnitude": 0.5,
+      "global_coefficient": 0.0016880035400390625
+    },
+    {
+      "pair": [
+        "Junb",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0016880035400390625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0016880035400390625
+    },
+    {
+      "pair": [
+        "Myc",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0016880035400390625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0016880035400390625
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0015583038330078125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0015583038330078125
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Klf1"
+      ],
+      "global_magnitude": 0.0015268325805664062,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0015268325805664062
+    },
+    {
+      "pair": [
+        "Ikzf1",
+        "Klf1"
+      ],
+      "global_magnitude": 0.00141143798828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00141143798828125
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Gata2"
+      ],
+      "global_magnitude": 0.0013141632080078125,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0013141632080078125
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Gata2"
+      ],
+      "global_magnitude": 0.0011706352233886719,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0011706352233886719
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0010771751403808594,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0010771751403808594
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Klf1"
+      ],
+      "global_magnitude": 0.0010294914245605469,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0010294914245605469
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Cebpa"
+      ],
+      "global_magnitude": 0.0007548332214355469,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0007548332214355469
+    },
+    {
+      "pair": [
+        "Klf1",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0006761550903320312,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006761550903320312
+    },
+    {
+      "pair": [
+        "Gata2",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0006256103515625,
+      "local_magnitude": 0.3125,
+      "global_coefficient": -0.0006256103515625
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0006017684936523438,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0006017684936523438
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0004830360412597656,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004830360412597656
+    },
+    {
+      "pair": [
+        "Ikzf1",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0004444122314453125,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.0004444122314453125
+    },
+    {
+      "pair": [
+        "Klf1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 1.049041748046875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 1.049041748046875e-05
+    },
+    {
+      "pair": [
+        "Ikzf1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 7.62939453125e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.62939453125e-06
+    },
+    {
+      "pair": [
+        "Spi1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 7.62939453125e-06,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 7.62939453125e-06
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 4.76837158203125e-06,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -4.76837158203125e-06
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 4.76837158203125e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.76837158203125e-06
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 4.76837158203125e-06,
+      "local_magnitude": 0.15625,
+      "global_coefficient": -4.76837158203125e-06
+    },
+    {
+      "pair": [
+        "Gata2",
+        "Zfpm1"
+      ],
+      "global_magnitude": 4.76837158203125e-06,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -4.76837158203125e-06
+    },
+    {
+      "pair": [
+        "Junb",
+        "Zfpm1"
+      ],
+      "global_magnitude": 4.76837158203125e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.76837158203125e-06
+    },
+    {
+      "pair": [
+        "Myc",
+        "Zfpm1"
+      ],
+      "global_magnitude": 4.76837158203125e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.76837158203125e-06
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Zfpm1"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 4.76837158203125e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.76837158203125e-07
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "CDK46CycD"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "CIPKIP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Bclaf1",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "CIPKIP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Cebpa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Egr1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Fli1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Gata1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Gata2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Junb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Klf1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Myc"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CDK46CycD",
+        "Zfpm1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Cebpa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Egr1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Fli1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Gata1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Gata2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Ikzf1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Junb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Klf1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Myc"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Spi1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIPKIP",
+        "Zfpm1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Cebpa",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Egr1",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Fli1",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Gata1",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Gata2",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ikzf1",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Junb",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Klf1",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Myc",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Spi1",
+        "Tal1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Tal1",
+        "Zfpm1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

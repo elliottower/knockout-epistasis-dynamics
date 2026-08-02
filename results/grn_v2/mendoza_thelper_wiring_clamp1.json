@@ -1,0 +1,467 @@
+{
+  "model": "mendoza_thelper",
+  "n_nodes": 13,
+  "node_names": [
+    "APC",
+    "IFNg_e",
+    "IL12_e",
+    "IFNg",
+    "IFNgR",
+    "IL12R",
+    "IL4",
+    "IL4R",
+    "STAT1",
+    "STAT6",
+    "SOCS1",
+    "T_bet",
+    "GATA3"
+  ],
+  "output_nodes": [
+    "GATA3"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "STAT1",
+        "T_bet"
+      ],
+      [
+        "IFNg_e",
+        "T_bet"
+      ],
+      [
+        "STAT6",
+        "T_bet"
+      ],
+      [
+        "GATA3",
+        "IFNg_e"
+      ],
+      [
+        "GATA3",
+        "IL12_e"
+      ],
+      [
+        "IL12_e",
+        "T_bet"
+      ],
+      [
+        "GATA3",
+        "STAT1"
+      ],
+      [
+        "GATA3",
+        "STAT6"
+      ],
+      [
+        "IFNg",
+        "SOCS1"
+      ],
+      [
+        "IFNg_e",
+        "STAT1"
+      ],
+      [
+        "IL4",
+        "SOCS1"
+      ],
+      [
+        "GATA3",
+        "T_bet"
+      ]
+    ],
+    "triples": [
+      [
+        "GATA3",
+        "IFNg_e",
+        "STAT1"
+      ],
+      [
+        "GATA3",
+        "STAT6",
+        "T_bet"
+      ],
+      [
+        "IFNg_e",
+        "STAT1",
+        "T_bet"
+      ],
+      [
+        "GATA3",
+        "IL12_e",
+        "T_bet"
+      ],
+      [
+        "GATA3",
+        "IFNg_e",
+        "T_bet"
+      ],
+      [
+        "GATA3",
+        "STAT1",
+        "T_bet"
+      ]
+    ],
+    "per_gene": {
+      "APC": {
+        "regulators": [
+          "APC"
+        ],
+        "interactions": []
+      },
+      "IFNg_e": {
+        "regulators": [
+          "IFNg_e"
+        ],
+        "interactions": []
+      },
+      "IL12_e": {
+        "regulators": [
+          "IL12_e"
+        ],
+        "interactions": []
+      },
+      "IFNg": {
+        "regulators": [
+          "IFNg_e",
+          "STAT1",
+          "T_bet",
+          "GATA3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "IFNg_e",
+              "STAT1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "IFNg_e",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "STAT1",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "IFNg_e",
+              "STAT1",
+              "T_bet"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "IFNg_e"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "STAT1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "IFNg_e",
+              "STAT1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "IFNg_e",
+              "T_bet"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "STAT1",
+              "T_bet"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "IFNg_e",
+              "STAT1",
+              "T_bet"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "IFNgR": {
+        "regulators": [
+          "IFNg",
+          "SOCS1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "IFNg",
+              "SOCS1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "IL12R": {
+        "regulators": [
+          "IL12_e",
+          "T_bet",
+          "GATA3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "IL12_e",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "IL12_e"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "IL12_e",
+              "T_bet"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "IL4": {
+        "regulators": [
+          "T_bet",
+          "GATA3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GATA3",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "IL4R": {
+        "regulators": [
+          "IL4",
+          "SOCS1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "IL4",
+              "SOCS1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "STAT1": {
+        "regulators": [
+          "IFNgR"
+        ],
+        "interactions": []
+      },
+      "STAT6": {
+        "regulators": [
+          "IL4R"
+        ],
+        "interactions": []
+      },
+      "SOCS1": {
+        "regulators": [
+          "STAT1",
+          "T_bet"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "STAT1",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "T_bet": {
+        "regulators": [
+          "STAT1",
+          "T_bet",
+          "GATA3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "STAT1",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "STAT1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "STAT1",
+              "T_bet"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "GATA3": {
+        "regulators": [
+          "STAT6",
+          "T_bet",
+          "GATA3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "STAT6",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "STAT6"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "T_bet"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA3",
+              "STAT6",
+              "T_bet"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 12,
+    "n_triples": 6,
+    "pairwise_strengths": {
+      "['IFNg_e', 'STAT1']": 0.0625,
+      "['IFNg_e', 'T_bet']": 0.0625,
+      "['STAT1', 'T_bet']": 0.4375,
+      "['GATA3', 'IFNg_e']": 0.0625,
+      "['GATA3', 'STAT1']": 0.1875,
+      "['GATA3', 'T_bet']": 0.6875,
+      "['IFNg', 'SOCS1']": 0.25,
+      "['IL12_e', 'T_bet']": 0.125,
+      "['GATA3', 'IL12_e']": 0.125,
+      "['IL4', 'SOCS1']": 0.25,
+      "['STAT6', 'T_bet']": 0.125,
+      "['GATA3', 'STAT6']": 0.125
+    },
+    "local_energy_spectrum": [
+      0.46980337078651685,
+      0.4438202247191011,
+      0.07443820224719101,
+      0.011235955056179775,
+      0.0007022471910112359
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 4194304,
+    "total_fixed_point": 3824040,
+    "total_cycling": 370264,
+    "cycling_fraction": 0.08827781677246094
+  },
+  "n_unique_values": 15,
+  "total_variance": 0.17836471270270615,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:45:56.934655+00:00"
+}

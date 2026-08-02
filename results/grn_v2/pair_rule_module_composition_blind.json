@@ -1,0 +1,593 @@
+{
+  "model": "pair_rule_module",
+  "n_players": 11,
+  "n_init": 512,
+  "node_names": [
+    "Eve_b1",
+    "Eve_b2",
+    "Eve_b3",
+    "Ftz_b1",
+    "Ftz_b2",
+    "Odd",
+    "Ppa",
+    "Prd_b1",
+    "Prd_b2",
+    "Run",
+    "Slp"
+  ],
+  "timestamp": "2026-07-28T16:57:58.052877+00:00",
+  "pairwise": {
+    "n_pairs": 55,
+    "n_local_nonzero": 34,
+    "n_global_nonzero": 44,
+    "local_positive_rate": 0.6181818181818182,
+    "spearman_rho": 0.6600535262550735,
+    "spearman_pvalue": 4.20807929501448e-08,
+    "spearman_ci_95": [
+      0.4554068946227406,
+      0.8212678166233125
+    ],
+    "creation_rate": 0.14705882352941177,
+    "destruction_rate": 0.08823529411764706,
+    "created_count": 5,
+    "destroyed_count": 3,
+    "top_k": 34
+  },
+  "triples": {
+    "n_triples": 165,
+    "n_local_nonzero": 53,
+    "n_global_nonzero": 112,
+    "spearman_rho": 0.56570685778204,
+    "spearman_pvalue": 2.428721316067989e-15,
+    "spearman_ci_95": [
+      0.4372544410887912,
+      0.6718846430270333
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.004623513203114271,
+    "frac_energy_3plus": 0.051651299650803895
+  },
+  "energy_spectrum": {
+    "global": [
+      0.3103137249944963,
+      0.4713420096687134,
+      0.18272107288143424,
+      0.028152289645646623,
+      0.0069249372328507855,
+      0.0005039109231379492,
+      4.024594303457397e-05,
+      1.7896503825479162e-06,
+      1.894818410290677e-08,
+      1.121194325615785e-10,
+      0.0,
+      0.0
+    ],
+    "local_rules": [
+      0.4561002764127764,
+      0.30649186117936117,
+      0.17438958845208846,
+      0.048890509828009826,
+      0.011728347665847665,
+      0.0020922911547911547,
+      0.0002879299754299754,
+      1.9195331695331695e-05,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "Eve_b1",
+        "Slp"
+      ],
+      "global_magnitude": 0.11373519897460938,
+      "local_magnitude": 0.1484375,
+      "global_coefficient": -0.11373519897460938
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Prd_b1"
+      ],
+      "global_magnitude": 0.07353591918945312,
+      "local_magnitude": 0.4140625,
+      "global_coefficient": 0.07353591918945312
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Odd"
+      ],
+      "global_magnitude": 0.039821624755859375,
+      "local_magnitude": 0.2734375,
+      "global_coefficient": -0.039821624755859375
+    },
+    {
+      "pair": [
+        "Odd",
+        "Prd_b1"
+      ],
+      "global_magnitude": 0.031230926513671875,
+      "local_magnitude": 0.5390625,
+      "global_coefficient": -0.031230926513671875
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Ftz_b1"
+      ],
+      "global_magnitude": 0.027759552001953125,
+      "local_magnitude": 0.109375,
+      "global_coefficient": 0.027759552001953125
+    },
+    {
+      "pair": [
+        "Ftz_b1",
+        "Slp"
+      ],
+      "global_magnitude": 0.027759552001953125,
+      "local_magnitude": 0.140625,
+      "global_coefficient": 0.027759552001953125
+    },
+    {
+      "pair": [
+        "Odd",
+        "Slp"
+      ],
+      "global_magnitude": 0.017337799072265625,
+      "local_magnitude": 0.3671875,
+      "global_coefficient": 0.017337799072265625
+    },
+    {
+      "pair": [
+        "Ftz_b1",
+        "Prd_b1"
+      ],
+      "global_magnitude": 0.016330718994140625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.016330718994140625
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Prd_b1"
+      ],
+      "global_magnitude": 0.012332916259765625,
+      "local_magnitude": 0.0859375,
+      "global_coefficient": 0.012332916259765625
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Eve_b2"
+      ],
+      "global_magnitude": 0.011829376220703125,
+      "local_magnitude": 0.7421875,
+      "global_coefficient": 0.011829376220703125
+    },
+    {
+      "pair": [
+        "Prd_b1",
+        "Slp"
+      ],
+      "global_magnitude": 0.009441375732421875,
+      "local_magnitude": 0.1015625,
+      "global_coefficient": -0.009441375732421875
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Slp"
+      ],
+      "global_magnitude": 0.008563995361328125,
+      "local_magnitude": 0.1953125,
+      "global_coefficient": 0.008563995361328125
+    },
+    {
+      "pair": [
+        "Ftz_b1",
+        "Odd"
+      ],
+      "global_magnitude": 0.007976531982421875,
+      "local_magnitude": 0.328125,
+      "global_coefficient": -0.007976531982421875
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Run"
+      ],
+      "global_magnitude": 0.00655364990234375,
+      "local_magnitude": 0.0703125,
+      "global_coefficient": -0.00655364990234375
+    },
+    {
+      "pair": [
+        "Odd",
+        "Run"
+      ],
+      "global_magnitude": 0.00580596923828125,
+      "local_magnitude": 0.0703125,
+      "global_coefficient": -0.00580596923828125
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Ftz_b1"
+      ],
+      "global_magnitude": 0.005519866943359375,
+      "local_magnitude": 0.109375,
+      "global_coefficient": -0.005519866943359375
+    },
+    {
+      "pair": [
+        "Run",
+        "Slp"
+      ],
+      "global_magnitude": 0.00446319580078125,
+      "local_magnitude": 0.0703125,
+      "global_coefficient": 0.00446319580078125
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Prd_b2"
+      ],
+      "global_magnitude": 0.002979278564453125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.002979278564453125
+    },
+    {
+      "pair": [
+        "Odd",
+        "Prd_b2"
+      ],
+      "global_magnitude": 0.002979278564453125,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.002979278564453125
+    },
+    {
+      "pair": [
+        "Prd_b1",
+        "Prd_b2"
+      ],
+      "global_magnitude": 0.002979278564453125,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.002979278564453125
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Ftz_b2"
+      ],
+      "global_magnitude": 0.00287628173828125,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.00287628173828125
+    },
+    {
+      "pair": [
+        "Ftz_b1",
+        "Ftz_b2"
+      ],
+      "global_magnitude": 0.00287628173828125,
+      "local_magnitude": 0.203125,
+      "global_coefficient": 0.00287628173828125
+    },
+    {
+      "pair": [
+        "Ftz_b2",
+        "Slp"
+      ],
+      "global_magnitude": 0.00287628173828125,
+      "local_magnitude": 0.046875,
+      "global_coefficient": 0.00287628173828125
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Run"
+      ],
+      "global_magnitude": 0.0012359619140625,
+      "local_magnitude": 0.0546875,
+      "global_coefficient": 0.0012359619140625
+    },
+    {
+      "pair": [
+        "Prd_b2",
+        "Slp"
+      ],
+      "global_magnitude": 0.000896453857421875,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000896453857421875
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Prd_b1"
+      ],
+      "global_magnitude": 0.00087738037109375,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 0.00087738037109375
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Odd"
+      ],
+      "global_magnitude": 0.00063323974609375,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 0.00063323974609375
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Ftz_b2"
+      ],
+      "global_magnitude": 0.0006256103515625,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.0006256103515625
+    },
+    {
+      "pair": [
+        "Ftz_b1",
+        "Prd_b2"
+      ],
+      "global_magnitude": 0.000522613525390625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.000522613525390625
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Ftz_b1"
+      ],
+      "global_magnitude": 0.00049591064453125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00049591064453125
+    },
+    {
+      "pair": [
+        "Prd_b1",
+        "Run"
+      ],
+      "global_magnitude": 0.00049591064453125,
+      "local_magnitude": 0.0390625,
+      "global_coefficient": -0.00049591064453125
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Odd"
+      ],
+      "global_magnitude": 0.000476837158203125,
+      "local_magnitude": 0.2578125,
+      "global_coefficient": 0.000476837158203125
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Eve_b3"
+      ],
+      "global_magnitude": 0.00038909912109375,
+      "local_magnitude": 0.1171875,
+      "global_coefficient": 0.00038909912109375
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Eve_b3"
+      ],
+      "global_magnitude": 0.00038909912109375,
+      "local_magnitude": 0.1171875,
+      "global_coefficient": 0.00038909912109375
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Slp"
+      ],
+      "global_magnitude": 0.00038909912109375,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 0.00038909912109375
+    },
+    {
+      "pair": [
+        "Ftz_b2",
+        "Prd_b1"
+      ],
+      "global_magnitude": 0.00035858154296875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00035858154296875
+    },
+    {
+      "pair": [
+        "Prd_b2",
+        "Run"
+      ],
+      "global_magnitude": 0.000347137451171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.000347137451171875
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Ftz_b2"
+      ],
+      "global_magnitude": 0.000274658203125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000274658203125
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Prd_b2"
+      ],
+      "global_magnitude": 0.000240325927734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.000240325927734375
+    },
+    {
+      "pair": [
+        "Ftz_b1",
+        "Run"
+      ],
+      "global_magnitude": 0.00019073486328125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00019073486328125
+    },
+    {
+      "pair": [
+        "Ftz_b2",
+        "Run"
+      ],
+      "global_magnitude": 0.000141143798828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000141143798828125
+    },
+    {
+      "pair": [
+        "Ftz_b2",
+        "Odd"
+      ],
+      "global_magnitude": 6.866455078125e-05,
+      "local_magnitude": 0.046875,
+      "global_coefficient": -6.866455078125e-05
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Prd_b2"
+      ],
+      "global_magnitude": 4.1961669921875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.1961669921875e-05
+    },
+    {
+      "pair": [
+        "Ftz_b2",
+        "Prd_b2"
+      ],
+      "global_magnitude": 3.814697265625e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 3.814697265625e-05
+    },
+    {
+      "pair": [
+        "Eve_b1",
+        "Ppa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Eve_b2",
+        "Ppa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Ppa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Eve_b3",
+        "Run"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ftz_b1",
+        "Ppa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ftz_b2",
+        "Ppa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Odd",
+        "Ppa"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ppa",
+        "Prd_b1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ppa",
+        "Prd_b2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ppa",
+        "Run"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ppa",
+        "Slp"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

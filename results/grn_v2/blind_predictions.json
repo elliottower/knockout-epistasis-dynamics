@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "analysis_type": "structurally-blinded prediction",
+    "method": "Structural analysis of Boolean rules only. No dynamics, no coalition sweep, no prior results consulted.",
+    "timestamp": "2026-07-28T00:00:00Z",
+    "models_analyzed": ["faure_cellcycle", "tournier_apoptosis", "davidich_yeast", "drosophila_cellcycle", "fanconi_anemia", "arabidopsis_cellcycle"]
+  },
+
+  "structural_summary": {
+    "faure_cellcycle": {
+      "n_nodes": 10,
+      "n_coalitions": 1024,
+      "output_node": "CycB",
+      "output_rule": "!cdh1 & !Cdc20",
+      "output_regulators": 2,
+      "input_nodes": ["CycD"],
+      "max_and_arity": 4,
+      "pathway_depth": 8,
+      "n_positive_loops": 13,
+      "n_negative_loops": 12,
+      "n_mixed_loops": 0,
+      "fb_ratio": 0.52,
+      "redundant_nodes": [],
+      "local_order3plus_pct": 3.8,
+      "key_features": [
+        "CycB-Cdc20 negative feedback (length 2): CycB activates Cdc20, Cdc20 inhibits CycB",
+        "CycB-cdh1 positive feedback (length 2): double negative creates bistability",
+        "Multiple length-4 negative loops through E2F, CycA, UbcH10",
+        "CycA rule has arity-4 AND gates creating strong local interactions",
+        "Deep competing pathways from CycD input through p27 and Rb branches"
+      ]
+    },
+    "tournier_apoptosis": {
+      "n_nodes": 12,
+      "n_coalitions": 4096,
+      "output_node": "C3a",
+      "output_rule": "!IAP & C8a",
+      "output_regulators": 2,
+      "input_nodes": ["TNF"],
+      "max_and_arity": 3,
+      "pathway_depth": 9,
+      "n_positive_loops": 3,
+      "n_negative_loops": 3,
+      "n_mixed_loops": 0,
+      "fb_ratio": 0.50,
+      "redundant_nodes": [],
+      "functionally_near_redundant": "NFkB and NFkBnuc are functionally identical (both = !IkB)",
+      "local_order3plus_pct": 4.2,
+      "key_features": [
+        "ALL 3 positive loops involve output: C3a-C8a, C3a-IAP, C3a-CARP-C8a",
+        "ALL 3 negative loops are in NF-kB subsystem (IkB-NFkBnuc), separate from output",
+        "Bistable apoptosis switch: once C3a activates, positive feedback locks it on",
+        "Competing pro-apoptotic (TNF->T2->C8a) vs anti-apoptotic (TNF->NFkB->IAP/CARP) pathways",
+        "Very deep pathway (9) through NF-kB survival signaling",
+        "NFkB = NFkBnuc = !IkB (functional redundancy)"
+      ]
+    },
+    "davidich_yeast": {
+      "n_nodes": 10,
+      "n_coalitions": 1024,
+      "output_node": "Cdc2_Cdc13",
+      "output_rule": "!Ste9 & !Rum1 & (!Slp1 | Cdc2_Cdc13_A)",
+      "output_regulators": 4,
+      "input_nodes": ["Start"],
+      "max_and_arity": 3,
+      "pathway_depth": 5,
+      "n_positive_loops": 13,
+      "n_negative_loops": 3,
+      "n_mixed_loops": 0,
+      "fb_ratio": 0.81,
+      "redundant_nodes": [["Start", "SK"], ["Ste9", "Rum1"]],
+      "local_order3plus_pct": 2.5,
+      "key_features": [
+        "OVERWHELMING positive feedback (13+ vs 3-): creates strong bistability",
+        "Ste9 and Rum1 have IDENTICAL update rules (exact functional redundancy)",
+        "Start and SK have identical rules (SK = Start)",
+        "Ste9/Rum1 both gate the output through AND: their redundancy creates strong pairwise interaction",
+        "Delayed negative feedback via Slp1 pathway (length 3): creates oscillatory potential",
+        "3 positive feedback paths through Cdc25, Wee1_Mik1, and direct Cdc2_Cdc13_A",
+        "Shallowest network (depth 5)"
+      ]
+    },
+    "drosophila_cellcycle": {
+      "n_nodes": 14,
+      "n_coalitions": 16384,
+      "output_node": "CycB",
+      "output_rule": "!Fzy & !Fzr & (!Wee1 | Stg)",
+      "output_regulators": 4,
+      "input_nodes": ["Ago", "CycD", "Notch"],
+      "max_and_arity": 5,
+      "pathway_depth": 9,
+      "n_positive_loops": 22,
+      "n_negative_loops": 14,
+      "n_mixed_loops": 0,
+      "fb_ratio": 0.61,
+      "redundant_nodes": [],
+      "local_order3plus_pct": 4.2,
+      "key_features": [
+        "3 input nodes create independent pathway origins",
+        "Multiple positive feedback around CycB: CycB-Wee1, CycB-Stg (both length 2)",
+        "Negative feedback: CycB-Fzy (length 2), CycB-E2F-CycA-Fzr (length 4)",
+        "CycA has arity-5 AND gate creating strong local interactions",
+        "Largest number of feedback loops (36 total)",
+        "Competing pathways from 3 inputs through different intermediaries to CycB"
+      ]
+    },
+    "fanconi_anemia": {
+      "n_nodes": 15,
+      "n_coalitions": 32768,
+      "output_node": "CHKREC",
+      "output_rule": "(!DSB & (TLS|HRR2|FAHRR|NHEJ)) | !(ICL|NHEJ|FAHRR|ADD|CHKREC|DSB|HRR2|TLS)",
+      "output_regulators": 8,
+      "input_nodes": [],
+      "max_and_arity": 5,
+      "pathway_depth": 14,
+      "n_positive_loops": 36,
+      "n_negative_loops": 45,
+      "n_mixed_loops": 17,
+      "fb_ratio": 0.44,
+      "redundant_nodes": [],
+      "local_order3plus_pct": 6.5,
+      "key_features": [
+        "NEGATIVE FEEDBACK DOMINANT (45- vs 36+ plus 17 mixed)",
+        "Output rule has 8 regulators with complex AND/OR structure",
+        "Null-state clause: CHKREC=1 when ALL of 8 genes are off (no damage response)",
+        "4 competing repair pathways: TLS, FAHRR, NHEJ, HRR2 (mutually exclusive)",
+        "CHKREC acts as global reset: inhibits ATM, ATR, FAcore, FANCD2I, NHEJ, TLS, p53, FAHRR",
+        "Deepest pathway (14 steps) through DNA damage cascade",
+        "ICL conditional self-loop: ICL = ICL & !DSB (persists until DSB forms)",
+        "ATM-ATR mutual positive feedback (length 2)",
+        "DSB creates competition among repair mechanisms"
+      ]
+    },
+    "arabidopsis_cellcycle": {
+      "n_nodes": 14,
+      "n_coalitions": 16384,
+      "output_node": "CYCB1_1",
+      "output_rule": "!APC_C & (MYB77 | MYB3R1_4 | E2Fb&(!RBR|CYCD3_1&!KRP1)&!E2Fc)",
+      "output_regulators": 8,
+      "input_nodes": [],
+      "max_and_arity": 6,
+      "pathway_depth": 13,
+      "n_positive_loops": 39,
+      "n_negative_loops": 42,
+      "n_mixed_loops": 0,
+      "fb_ratio": 0.48,
+      "redundant_nodes": [],
+      "local_order3plus_pct": 4.0,
+      "key_features": [
+        "Near-balanced feedback with slight negative dominance (39+/42-)",
+        "Output rule has 8 regulators with complex nested AND/OR",
+        "CYCB1_1-MYB3R1_4 positive feedback (length 2): only positive loop involving output",
+        "Two negative loops from output: via APC_C (length 3) and via KRP1 (length 3)",
+        "E2Fe has enormously complex rule (6 regulators, deeply nested boolean logic)",
+        "Very dense network: 63 edges for 14 nodes (4.5 edges/node)",
+        "SCF and CYCB1_1 have very similar rule structures",
+        "Deep pathways (13) through E2F family cascade"
+      ]
+    }
+  },
+
+  "per_model_predictions": {
+    "faure_cellcycle": {
+      "energy_spectrum": {
+        "order_0": "40-55%",
+        "order_1": "25-40%",
+        "order_2": "10-20%",
+        "order_3plus": "3-10%"
+      },
+      "spearman_rho_direction": "positive",
+      "spearman_rho_range": [0.2, 0.5],
+      "creation_vs_destruction": "CREATION",
+      "creation_confidence": "moderate",
+      "reasoning": "Balanced feedback (13+/12-) with moderate pathway depth (8). CycB-cdh1 double-negative feedback creates bistability. CycA arity-4 AND gates create local higher-order interactions that compound through pathways. Deep competing pathways from CycD through p27/Rb branches amplify. Negative feedback via CycB-Cdc20 partially offsets. Net: modest creation of higher-order interactions beyond the local 3.8%."
+    },
+    "tournier_apoptosis": {
+      "energy_spectrum": {
+        "order_0": "35-50%",
+        "order_1": "30-45%",
+        "order_2": "10-20%",
+        "order_3plus": "5-15%"
+      },
+      "spearman_rho_direction": "positive",
+      "spearman_rho_range": [0.2, 0.5],
+      "creation_vs_destruction": "CREATION",
+      "creation_confidence": "high",
+      "reasoning": "Though overall fb_ratio is 0.50, ALL 3 positive loops directly involve the output C3a while ALL 3 negative loops are in the NF-kB subsystem. The output-relevant feedback is 100% positive. This creates a strongly bistable apoptosis switch requiring multiple simultaneous conditions to flip. The competing pro-apoptotic vs anti-apoptotic pathways (depth 9) compound interactions. The switch behavior is inherently high-order: C3a activation requires TNF signaling AND insufficient survival signaling AND initial C8a activation. Expect substantial creation beyond the local 4.2%."
+    },
+    "davidich_yeast": {
+      "energy_spectrum": {
+        "order_0": "40-55%",
+        "order_1": "30-45%",
+        "order_2": "8-18%",
+        "order_3plus": "3-10%"
+      },
+      "spearman_rho_direction": "positive",
+      "spearman_rho_range": [0.3, 0.6],
+      "creation_vs_destruction": "CREATION",
+      "creation_confidence": "high",
+      "reasoning": "Overwhelmingly positive feedback (13+/3-, ratio 0.81) creates strong bistability. Ste9/Rum1 identical redundancy means both must be simultaneously inactive for output activation, creating a strong pairwise interaction visible at both local and global levels. This boosts Spearman rho. The positive feedback through Cdc2_Cdc13_A, Cdc25, and Wee1_Mik1 sharpens the bistable threshold. Expect creation of higher-order interactions beyond local 2.5%, with the highest rho among all models due to redundancy-driven pairwise structure."
+    },
+    "drosophila_cellcycle": {
+      "energy_spectrum": {
+        "order_0": "35-50%",
+        "order_1": "25-40%",
+        "order_2": "10-20%",
+        "order_3plus": "5-15%"
+      },
+      "spearman_rho_direction": "positive",
+      "spearman_rho_range": [0.1, 0.4],
+      "creation_vs_destruction": "CREATION",
+      "creation_confidence": "moderate",
+      "reasoning": "Positive feedback dominant (22+/14-). Three independent input nodes (Ago, CycD, Notch) create multiple pathway origins with competing routes to CycB. CycA arity-5 AND gate creates strong local interactions. Deep pathways (9) compound interactions. But the large network (14 nodes, 91 pairs) dilutes individual pair strengths, weakening rho. Multiple positive feedback loops (CycB-Wee1, CycB-Stg) create threshold behavior. Expect moderate creation beyond local 4.2%."
+    },
+    "fanconi_anemia": {
+      "energy_spectrum": {
+        "order_0": "25-40%",
+        "order_1": "35-50%",
+        "order_2": "12-22%",
+        "order_3plus": "3-10%"
+      },
+      "spearman_rho_direction": "positive",
+      "spearman_rho_range": [0.0, 0.3],
+      "creation_vs_destruction": "DESTRUCTION",
+      "creation_confidence": "moderate",
+      "reasoning": "Negative feedback dominant (45-/36+/17mixed, ratio 0.44). CHKREC acts as a global reset switch that inhibits nearly all signaling components. This creates a binary-like outcome (recovered vs not) that compresses higher-order structure toward low orders. The null-state clause (CHKREC=1 when all damage response genes are off) means many small coalitions give CHKREC=1 trivially, flattening the value function. Despite high local order-3+ (6.5%) from the complex 8-regulator output rule, negative feedback linearization and the null-state degeneracy should destroy some of this structure. The 4 competing repair pathways create some pairwise structure (mutual exclusivity) but the global reset dominates. Deepest pathway (14) means many intermediate interactions get washed out."
+    },
+    "arabidopsis_cellcycle": {
+      "energy_spectrum": {
+        "order_0": "45-60%",
+        "order_1": "25-40%",
+        "order_2": "8-18%",
+        "order_3plus": "3-10%"
+      },
+      "spearman_rho_direction": "positive",
+      "spearman_rho_range": [0.0, 0.3],
+      "creation_vs_destruction": "CREATION",
+      "creation_confidence": "low",
+      "reasoning": "Borderline case. Near-balanced feedback (39+/42-, ratio 0.48) with slight negative dominance. Dense interconnections (63 edges, 4.5 per node) and deep pathways (13) should compound some interactions. CYCB1_1-MYB3R1_4 positive feedback provides some bistability. But two negative feedback loops from output (via APC_C and KRP1) work against creation. The enormously complex E2Fe rule and 8-regulator output create high local complexity. Prediction: very slight creation, borderline case that could go either way."
+    }
+  },
+
+  "cross_network_hypothesis": {
+    "statement": "The positive feedback loop ratio (n_positive / (n_positive + n_negative), ignoring mixed-sign loops) predicts the direction of the composition gap. Networks with fb_ratio > 0.5 show creation of higher-order interactions (global order-3+ > local order-3+); networks with fb_ratio < 0.5 show destruction.",
+    "predictor_variable": "fb_ratio = n_positive_loops_le4 / (n_positive_loops_le4 + n_negative_loops_le4)",
+    "outcome_variable": "composition_gap = global_order3plus_fraction - local_order3plus_fraction",
+    "expected_direction": "Positive correlation: higher fb_ratio -> larger composition gap (more creation)",
+    "threshold": 0.5,
+    "structural_reasoning": "Positive feedback loops create bistability and threshold behavior through dynamical composition. Each positive loop sharpens transitions in the attractor value function, requiring higher-order Walsh coefficients. Negative feedback loops linearize the input-output mapping by buffering perturbations, compressing the energy spectrum toward low orders and destroying higher-order structure from local rules. When positive feedback dominates, dynamics CREATE new higher-order interactions not present in any single local rule. When negative feedback dominates, dynamics DESTROY higher-order structure.",
+    "model_predictions_from_hypothesis": {
+      "davidich_yeast": {"fb_ratio": 0.81, "predicted_gap": "positive (strong creation)"},
+      "drosophila_cellcycle": {"fb_ratio": 0.61, "predicted_gap": "positive (moderate creation)"},
+      "faure_cellcycle": {"fb_ratio": 0.52, "predicted_gap": "positive (mild creation)"},
+      "tournier_apoptosis": {"fb_ratio": 0.50, "predicted_gap": "borderline positive (output-relevant FB is 100% positive)"},
+      "arabidopsis_cellcycle": {"fb_ratio": 0.48, "predicted_gap": "borderline negative or neutral"},
+      "fanconi_anemia": {"fb_ratio": 0.44, "predicted_gap": "negative (destruction)"}
+    },
+    "caveats": [
+      "The hypothesis treats all feedback loops of length <= 4 equally, but loops directly involving the output node may matter more than those in subsystems",
+      "For tournier_apoptosis, the overall ratio is 0.50 but all positive loops involve the output (C3a) while all negative loops are in the NF-kB subsystem, making the output-relevant feedback 100% positive",
+      "Mixed-sign loops (fanconi has 17) are excluded from the ratio but may contribute nonlinearly",
+      "Network size confounds: larger networks have more room for both feedback loops and higher-order interactions"
+    ]
+  }
+}

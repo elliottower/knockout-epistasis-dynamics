@@ -1,0 +1,500 @@
+{
+  "model": "remy_p53_mdm2",
+  "n_players": 10,
+  "n_init": 512,
+  "node_names": [
+    "DNAdam",
+    "ATM",
+    "p53",
+    "Mdm2cyt",
+    "Mdm2nuc",
+    "p21",
+    "CycE",
+    "Rb",
+    "E2F1",
+    "Caspase3"
+  ],
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:34:58.760660+00:00",
+  "pairwise": {
+    "n_pairs": 45,
+    "n_local_nonzero": 12,
+    "n_global_nonzero": 10,
+    "local_positive_rate": 0.26666666666666666,
+    "spearman_rho": 0.5038257517276586,
+    "spearman_pvalue": 0.0004181937713786048,
+    "spearman_ci_95": [
+      0.18968021994245718,
+      0.7787031932411358
+    ],
+    "creation_rate": 0.4166666666666667,
+    "destruction_rate": 0.4166666666666667,
+    "created_count": 5,
+    "destroyed_count": 5,
+    "top_k": 12
+  },
+  "triples": {
+    "n_triples": 120,
+    "n_local_nonzero": 5,
+    "n_global_nonzero": 10,
+    "spearman_rho": 0.542422226566006,
+    "spearman_pvalue": 1.5626908187633629e-10,
+    "spearman_ci_95": [
+      0.1774959000700069,
+      0.8033526606214021
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.0051548433303833015,
+    "frac_energy_3plus": 0.027777042004310012
+  },
+  "energy_spectrum": {
+    "global": [
+      0.718482113910351,
+      0.2073160939399011,
+      0.0663820580028711,
+      0.007070695800378253,
+      0.0006414178944153711,
+      0.00010762045208311598,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "local_rules": [
+      0.35331632653061223,
+      0.4897959183673469,
+      0.14540816326530612,
+      0.01020408163265306,
+      0.0012755102040816326,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "p53",
+        "Mdm2cyt"
+      ],
+      "global_magnitude": 0.1882080078125,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.1882080078125
+    },
+    {
+      "pair": [
+        "ATM",
+        "p53"
+      ],
+      "global_magnitude": 0.061791992187500006,
+      "local_magnitude": 0.3125,
+      "global_coefficient": -0.061791992187500006
+    },
+    {
+      "pair": [
+        "ATM",
+        "Mdm2cyt"
+      ],
+      "global_magnitude": 0.061791992187500006,
+      "local_magnitude": 0.3125,
+      "global_coefficient": -0.061791992187500006
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "ATM"
+      ],
+      "global_magnitude": 0.011791992187499994,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.011791992187499994
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "p53"
+      ],
+      "global_magnitude": 0.011791992187499994,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.011791992187499994
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "Mdm2cyt"
+      ],
+      "global_magnitude": 0.011791992187499994,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.011791992187499994
+    },
+    {
+      "pair": [
+        "ATM",
+        "p21"
+      ],
+      "global_magnitude": 0.0084228515625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0084228515625
+    },
+    {
+      "pair": [
+        "p53",
+        "p21"
+      ],
+      "global_magnitude": 0.0084228515625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0084228515625
+    },
+    {
+      "pair": [
+        "Mdm2cyt",
+        "p21"
+      ],
+      "global_magnitude": 0.0084228515625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0084228515625
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "p21"
+      ],
+      "global_magnitude": 0.008422851562499998,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.008422851562499998
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "Mdm2nuc"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "CycE"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "Rb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "DNAdam",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ATM",
+        "Mdm2nuc"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ATM",
+        "CycE"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ATM",
+        "Rb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ATM",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ATM",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p53",
+        "Mdm2nuc"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.375,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p53",
+        "CycE"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p53",
+        "Rb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p53",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p53",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2cyt",
+        "Mdm2nuc"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2cyt",
+        "CycE"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2cyt",
+        "Rb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2cyt",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2cyt",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2nuc",
+        "p21"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2nuc",
+        "CycE"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2nuc",
+        "Rb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2nuc",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Mdm2nuc",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p21",
+        "CycE"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p21",
+        "Rb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p21",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "p21",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CycE",
+        "Rb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CycE",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CycE",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Rb",
+        "E2F1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Rb",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "E2F1",
+        "Caspase3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

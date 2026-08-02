@@ -1,0 +1,212 @@
+{
+  "model": "asymmetric_cell_division",
+  "n_nodes": 9,
+  "node_names": [
+    "CckA",
+    "ChpT",
+    "ClpXP_RcdA",
+    "CpdR",
+    "CtrAb",
+    "DivJ",
+    "DivK",
+    "DivL",
+    "PleC"
+  ],
+  "output_nodes": [
+    "CtrAb"
+  ],
+  "interaction_graph": {
+    "CckA": [
+      {
+        "regulator": "DivL",
+        "sign": 1
+      }
+    ],
+    "ChpT": [
+      {
+        "regulator": "CckA",
+        "sign": 1
+      }
+    ],
+    "ClpXP_RcdA": [
+      {
+        "regulator": "CpdR",
+        "sign": -1
+      }
+    ],
+    "CpdR": [
+      {
+        "regulator": "ChpT",
+        "sign": 1
+      }
+    ],
+    "CtrAb": [
+      {
+        "regulator": "ChpT",
+        "sign": 1
+      },
+      {
+        "regulator": "ClpXP_RcdA",
+        "sign": -1
+      }
+    ],
+    "DivJ": [
+      {
+        "regulator": "DivK",
+        "sign": 1
+      },
+      {
+        "regulator": "PleC",
+        "sign": -1
+      }
+    ],
+    "DivK": [
+      {
+        "regulator": "DivJ",
+        "sign": 1
+      },
+      {
+        "regulator": "PleC",
+        "sign": -1
+      }
+    ],
+    "DivL": [
+      {
+        "regulator": "DivK",
+        "sign": -1
+      }
+    ],
+    "PleC": [
+      {
+        "regulator": "DivK",
+        "sign": -1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "DivJ",
+        "PleC"
+      ],
+      [
+        "ChpT",
+        "ClpXP_RcdA"
+      ],
+      [
+        "DivK",
+        "PleC"
+      ]
+    ],
+    "triples": [],
+    "per_gene": {
+      "CckA": {
+        "regulators": [
+          "DivL"
+        ],
+        "interactions": []
+      },
+      "ChpT": {
+        "regulators": [
+          "CckA"
+        ],
+        "interactions": []
+      },
+      "ClpXP_RcdA": {
+        "regulators": [
+          "CpdR"
+        ],
+        "interactions": []
+      },
+      "CpdR": {
+        "regulators": [
+          "ChpT"
+        ],
+        "interactions": []
+      },
+      "CtrAb": {
+        "regulators": [
+          "ChpT",
+          "ClpXP_RcdA"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ChpT",
+              "ClpXP_RcdA"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "DivJ": {
+        "regulators": [
+          "DivK",
+          "PleC"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DivK",
+              "PleC"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "DivK": {
+        "regulators": [
+          "DivJ",
+          "PleC"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DivJ",
+              "PleC"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "DivL": {
+        "regulators": [
+          "DivK"
+        ],
+        "interactions": []
+      },
+      "PleC": {
+        "regulators": [
+          "DivK"
+        ],
+        "interactions": []
+      }
+    },
+    "n_pairwise": 3,
+    "n_triples": 0,
+    "pairwise_strengths": {
+      "['ChpT', 'ClpXP_RcdA']": 0.25,
+      "['DivK', 'PleC']": 0.25,
+      "['DivJ', 'PleC']": 0.25
+    },
+    "local_energy_spectrum": [
+      0.45,
+      0.5,
+      0.05
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 262144,
+    "total_fixed_point": 245504,
+    "total_cycling": 16640,
+    "cycling_fraction": 0.0634765625
+  },
+  "n_unique_values": 4,
+  "total_variance": 0.03917789360275492,
+  "timestamp": "2026-07-28T16:55:49.428703+00:00"
+}

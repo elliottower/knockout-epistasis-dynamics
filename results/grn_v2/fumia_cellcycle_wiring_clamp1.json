@@ -1,0 +1,1661 @@
+{
+  "model": "fumia_cellcycle",
+  "n_nodes": 14,
+  "node_names": [
+    "GF",
+    "CycD",
+    "CycE",
+    "CycA",
+    "CycB",
+    "Rb",
+    "E2F",
+    "p21",
+    "p27",
+    "p53",
+    "AKT",
+    "Mdm2",
+    "Cdc20",
+    "cdh1"
+  ],
+  "output_nodes": [
+    "CycB"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "E2F",
+        "p27"
+      ],
+      [
+        "CycA",
+        "p21"
+      ],
+      [
+        "CycB",
+        "CycE"
+      ],
+      [
+        "CycE",
+        "p27"
+      ],
+      [
+        "CycB",
+        "p21"
+      ],
+      [
+        "E2F",
+        "p21"
+      ],
+      [
+        "CycA",
+        "p27"
+      ],
+      [
+        "GF",
+        "p21"
+      ],
+      [
+        "CycA",
+        "cdh1"
+      ],
+      [
+        "CycA",
+        "CycE"
+      ],
+      [
+        "Cdc20",
+        "cdh1"
+      ],
+      [
+        "CycB",
+        "p27"
+      ],
+      [
+        "CycD",
+        "p27"
+      ],
+      [
+        "E2F",
+        "Rb"
+      ],
+      [
+        "AKT",
+        "Mdm2"
+      ],
+      [
+        "p21",
+        "p53"
+      ],
+      [
+        "CycA",
+        "Rb"
+      ],
+      [
+        "AKT",
+        "p21"
+      ],
+      [
+        "AKT",
+        "p53"
+      ],
+      [
+        "E2F",
+        "cdh1"
+      ],
+      [
+        "CycB",
+        "Rb"
+      ],
+      [
+        "CycA",
+        "CycB"
+      ],
+      [
+        "p21",
+        "p27"
+      ],
+      [
+        "Cdc20",
+        "p21"
+      ],
+      [
+        "Rb",
+        "cdh1"
+      ],
+      [
+        "cdh1",
+        "p21"
+      ],
+      [
+        "CycA",
+        "p53"
+      ],
+      [
+        "Rb",
+        "p21"
+      ],
+      [
+        "CycA",
+        "CycD"
+      ],
+      [
+        "CycE",
+        "p53"
+      ],
+      [
+        "CycD",
+        "CycE"
+      ],
+      [
+        "Cdc20",
+        "E2F"
+      ],
+      [
+        "CycB",
+        "CycD"
+      ],
+      [
+        "Cdc20",
+        "CycB"
+      ],
+      [
+        "Rb",
+        "p27"
+      ],
+      [
+        "CycB",
+        "p53"
+      ],
+      [
+        "Cdc20",
+        "CycA"
+      ],
+      [
+        "Cdc20",
+        "Rb"
+      ],
+      [
+        "GF",
+        "p27"
+      ]
+    ],
+    "triples": [
+      [
+        "Cdc20",
+        "cdh1",
+        "p21"
+      ],
+      [
+        "GF",
+        "p21",
+        "p27"
+      ],
+      [
+        "E2F",
+        "p21",
+        "p27"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "CycD"
+      ],
+      [
+        "CycB",
+        "CycD",
+        "CycE"
+      ],
+      [
+        "Cdc20",
+        "CycB",
+        "p21"
+      ],
+      [
+        "CycB",
+        "Rb",
+        "p27"
+      ],
+      [
+        "CycA",
+        "cdh1",
+        "p21"
+      ],
+      [
+        "Cdc20",
+        "Rb",
+        "cdh1"
+      ],
+      [
+        "CycA",
+        "CycE",
+        "p53"
+      ],
+      [
+        "Cdc20",
+        "CycA",
+        "CycB"
+      ],
+      [
+        "E2F",
+        "Rb",
+        "p21"
+      ],
+      [
+        "CycA",
+        "Rb",
+        "p27"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "p53"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "p21"
+      ],
+      [
+        "CycD",
+        "CycE",
+        "p27"
+      ],
+      [
+        "CycB",
+        "CycE",
+        "p53"
+      ],
+      [
+        "E2F",
+        "Rb",
+        "p27"
+      ],
+      [
+        "AKT",
+        "p21",
+        "p53"
+      ],
+      [
+        "Cdc20",
+        "CycA",
+        "cdh1"
+      ],
+      [
+        "CycA",
+        "CycD",
+        "CycE"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "CycE"
+      ],
+      [
+        "CycA",
+        "CycE",
+        "p27"
+      ],
+      [
+        "E2F",
+        "cdh1",
+        "p21"
+      ],
+      [
+        "Cdc20",
+        "E2F",
+        "cdh1"
+      ],
+      [
+        "Cdc20",
+        "E2F",
+        "Rb"
+      ],
+      [
+        "CycB",
+        "CycE",
+        "p27"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "p27"
+      ],
+      [
+        "Rb",
+        "cdh1",
+        "p21"
+      ],
+      [
+        "Cdc20",
+        "E2F",
+        "p21"
+      ],
+      [
+        "Cdc20",
+        "CycA",
+        "p21"
+      ],
+      [
+        "CycB",
+        "CycD",
+        "p27"
+      ],
+      [
+        "Cdc20",
+        "Rb",
+        "p21"
+      ],
+      [
+        "CycA",
+        "CycD",
+        "p27"
+      ],
+      [
+        "Rb",
+        "p21",
+        "p27"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "Rb"
+      ],
+      [
+        "E2F",
+        "Rb",
+        "cdh1"
+      ]
+    ],
+    "per_gene": {
+      "GF": {
+        "regulators": [
+          "GF"
+        ],
+        "interactions": []
+      },
+      "CycD": {
+        "regulators": [
+          "GF",
+          "p21",
+          "p27"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GF",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GF",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "p21",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "GF",
+              "p21",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "CycE": {
+        "regulators": [
+          "Rb",
+          "E2F",
+          "p21",
+          "p27"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "E2F",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Rb",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Rb",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "p21",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Rb",
+              "p21",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "p21",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb",
+              "p21",
+              "p27"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "CycA": {
+        "regulators": [
+          "Rb",
+          "E2F",
+          "p21",
+          "Cdc20",
+          "cdh1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "E2F",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Rb",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Rb",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F",
+              "Rb",
+              "p21"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Rb",
+              "cdh1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "cdh1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb",
+              "cdh1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "cdh1",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Rb",
+              "cdh1",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "cdh1",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb",
+              "cdh1",
+              "p21"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "cdh1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Rb",
+              "cdh1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F",
+              "cdh1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F",
+              "Rb",
+              "cdh1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "cdh1",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Rb",
+              "cdh1",
+              "p21"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F",
+              "cdh1",
+              "p21"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "E2F",
+              "Rb",
+              "cdh1",
+              "p21"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "CycB": {
+        "regulators": [
+          "CycA",
+          "p21",
+          "Cdc20",
+          "cdh1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "cdh1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "cdh1",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "cdh1",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "cdh1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA",
+              "cdh1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "cdh1",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA",
+              "cdh1",
+              "p21"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "Rb": {
+        "regulators": [
+          "CycD",
+          "CycE",
+          "CycA",
+          "CycB",
+          "p27"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycD",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.15625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "CycE"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycD",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycE",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycD",
+              "CycE",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "CycE",
+              "p27"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "CycE",
+              "p27"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "p27"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE",
+              "p27"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "CycE",
+              "p27"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "E2F": {
+        "regulators": [
+          "CycA",
+          "CycB",
+          "Rb",
+          "p27"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Rb",
+              "p27"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Rb",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rb",
+              "p27"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rb",
+              "p27"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "p21": {
+        "regulators": [
+          "CycE",
+          "CycA",
+          "CycB",
+          "p53"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycE",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "p27": {
+        "regulators": [
+          "CycD",
+          "CycE",
+          "CycA",
+          "CycB"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycD",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "CycE"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "p53": {
+        "regulators": [
+          "AKT",
+          "Mdm2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "AKT",
+              "Mdm2"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "AKT": {
+        "regulators": [
+          "GF"
+        ],
+        "interactions": []
+      },
+      "Mdm2": {
+        "regulators": [
+          "p21",
+          "p53",
+          "AKT"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "p21",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "AKT",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "AKT",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "AKT",
+              "p21",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Cdc20": {
+        "regulators": [
+          "CycB"
+        ],
+        "interactions": []
+      },
+      "cdh1": {
+        "regulators": [
+          "CycA",
+          "CycB",
+          "p21",
+          "Cdc20"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA",
+              "CycB"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "p21"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycB",
+              "p21"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "CycA",
+              "CycB",
+              "p21"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      }
+    },
+    "n_pairwise": 39,
+    "n_triples": 37,
+    "pairwise_strengths": {
+      "['GF', 'p21']": 0.125,
+      "['GF', 'p27']": 0.125,
+      "['p21', 'p27']": 0.1875,
+      "['E2F', 'Rb']": 0.09375,
+      "['Rb', 'p21']": 0.09375,
+      "['E2F', 'p21']": 0.09375,
+      "['Rb', 'p27']": 0.125,
+      "['E2F', 'p27']": 0.0625,
+      "['Cdc20', 'Rb']": 0.03125,
+      "['Cdc20', 'E2F']": 0.03125,
+      "['Cdc20', 'p21']": 0.28125,
+      "['Rb', 'cdh1']": 0.03125,
+      "['E2F', 'cdh1']": 0.03125,
+      "['cdh1', 'p21']": 0.09375,
+      "['Cdc20', 'cdh1']": 0.09375,
+      "['CycA', 'p21']": 0.125,
+      "['Cdc20', 'CycA']": 0.125,
+      "['CycA', 'cdh1']": 0.0625,
+      "['CycD', 'CycE']": 0.09375,
+      "['CycA', 'CycD']": 0.09375,
+      "['CycA', 'CycE']": 0.15625,
+      "['CycB', 'CycD']": 0.21875,
+      "['CycB', 'CycE']": 0.15625,
+      "['CycA', 'CycB']": 0.28125,
+      "['CycD', 'p27']": 0.09375,
+      "['CycE', 'p27']": 0.03125,
+      "['CycA', 'p27']": 0.09375,
+      "['CycB', 'p27']": 0.15625,
+      "['CycA', 'Rb']": 0.0625,
+      "['CycB', 'Rb']": 0.1875,
+      "['CycE', 'p53']": 0.0625,
+      "['CycA', 'p53']": 0.0625,
+      "['CycB', 'p53']": 0.0625,
+      "['AKT', 'Mdm2']": 0.25,
+      "['p21', 'p53']": 0.125,
+      "['AKT', 'p21']": 0.125,
+      "['AKT', 'p53']": 0.125,
+      "['CycB', 'p21']": 0.0625,
+      "['Cdc20', 'CycB']": 0.0625
+    },
+    "local_energy_spectrum": [
+      0.5265858208955224,
+      0.32882462686567165,
+      0.09981343283582089,
+      0.036380597014925374,
+      0.00792910447761194,
+      0.0004664179104477612
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 8388608,
+    "total_fixed_point": 6316161,
+    "total_cycling": 2072447,
+    "cycling_fraction": 0.24705493450164795
+  },
+  "n_unique_values": 3,
+  "total_variance": 0.24234375000000002,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T19:18:43.233826+00:00"
+}

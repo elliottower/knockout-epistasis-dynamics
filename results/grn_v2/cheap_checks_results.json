@@ -1,0 +1,94 @@
+{
+  "check1_g4_delta": {
+    "delta_o3plus_pp": -0.37552472225337585,
+    "abs_delta": 0.0037552472225337585,
+    "clears_energy_gate": true,
+    "verdict": "borderline_null"
+  },
+  "check2_confounds": {
+    "spearman_cycling_n": {
+      "rho": 0.08827348295047495,
+      "p": 0.8679336982351336
+    },
+    "spearman_cycling_mean_regs": {
+      "rho": 0.5428571428571429,
+      "p": 0.26570262390670557
+    },
+    "spearman_cycling_density": {
+      "rho": 0.5428571428571429,
+      "p": 0.26570262390670557
+    },
+    "spearman_delta_n": {
+      "rho": 0.0,
+      "p": 1.0
+    },
+    "spearman_delta_mean_regs": {
+      "rho": -0.08571428571428573,
+      "p": 0.8717434402332361
+    },
+    "spearman_delta_density": {
+      "rho": -0.08571428571428573,
+      "p": 0.8717434402332361
+    },
+    "spearman_delta_cycling": {
+      "rho": -0.8285714285714287,
+      "p": 0.04156268221574334
+    }
+  },
+  "per_model": [
+    {
+      "model": "faure_cellcycle",
+      "n": 10,
+      "cycling": 0.19612693786621094,
+      "delta_o3plus": -0.030230677349838753,
+      "mean_regs": 3.1,
+      "n_edges": 31,
+      "density": 3.1
+    },
+    {
+      "model": "tournier_apoptosis",
+      "n": 12,
+      "cycling": 0.07353448867797852,
+      "delta_o3plus": 0.0846101594824866,
+      "mean_regs": 2.1666666666666665,
+      "n_edges": 26,
+      "density": 2.1666666666666665
+    },
+    {
+      "model": "davidich_yeast",
+      "n": 10,
+      "cycling": 0.17698287963867188,
+      "delta_o3plus": -0.0037552472225337585,
+      "mean_regs": 2.2,
+      "n_edges": 22,
+      "density": 2.2
+    },
+    {
+      "model": "drosophila_cellcycle",
+      "n": 14,
+      "cycling": 0.14039695262908936,
+      "delta_o3plus": 0.06157693517902086,
+      "mean_regs": 2.9285714285714284,
+      "n_edges": 41,
+      "density": 2.9285714285714284
+    },
+    {
+      "model": "fanconi_anemia",
+      "n": 15,
+      "cycling": 0.4752929210662842,
+      "delta_o3plus": -0.05482384994035306,
+      "mean_regs": 4.266666666666667,
+      "n_edges": 64,
+      "density": 4.266666666666667
+    },
+    {
+      "model": "arabidopsis_cellcycle",
+      "n": 14,
+      "cycling": 0.16389036178588867,
+      "delta_o3plus": 0.34302965094268234,
+      "mean_regs": 4.5,
+      "n_edges": 63,
+      "density": 4.5
+    }
+  ]
+}

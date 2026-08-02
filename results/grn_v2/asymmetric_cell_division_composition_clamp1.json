@@ -1,0 +1,412 @@
+{
+  "model": "asymmetric_cell_division",
+  "n_players": 9,
+  "n_init": 512,
+  "node_names": [
+    "CckA",
+    "ChpT",
+    "ClpXP_RcdA",
+    "CpdR",
+    "CtrAb",
+    "DivJ",
+    "DivK",
+    "DivL",
+    "PleC"
+  ],
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:33:38.771685+00:00",
+  "pairwise": {
+    "n_pairs": 36,
+    "n_local_nonzero": 3,
+    "n_global_nonzero": 28,
+    "local_positive_rate": 0.08333333333333333,
+    "spearman_rho": 0.05926196905916735,
+    "spearman_pvalue": 0.7313539498539705,
+    "spearman_ci_95": [
+      -0.18168101778897602,
+      0.3353727269297164
+    ],
+    "creation_rate": 1.0,
+    "destruction_rate": 0.0,
+    "created_count": 3,
+    "destroyed_count": 0,
+    "top_k": 3
+  },
+  "triples": {
+    "n_triples": 84,
+    "n_local_nonzero": 0,
+    "n_global_nonzero": 56,
+    "spearman_rho": null,
+    "spearman_pvalue": null,
+    "spearman_ci_95": null
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.010358793835621327,
+    "frac_energy_3plus": 0.053170809832311754
+  },
+  "energy_spectrum": {
+    "global": [
+      0.7333015791518919,
+      0.17360913235658026,
+      0.07890871747403523,
+      0.007043797159095696,
+      0.004885652295979912,
+      0.001865969489023701,
+      0.00035199629245671307,
+      3.0063370507360408e-05,
+      3.092410429221576e-06,
+      0.0
+    ],
+    "local_rules": [
+      0.45,
+      0.5,
+      0.05,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "ClpXP_RcdA",
+        "CtrAb"
+      ],
+      "global_magnitude": 0.23189544677734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.23189544677734375
+    },
+    {
+      "pair": [
+        "CckA",
+        "ChpT"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "CckA",
+        "ClpXP_RcdA"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "CckA",
+        "CtrAb"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "CckA",
+        "DivL"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "ChpT",
+        "ClpXP_RcdA"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "ChpT",
+        "CtrAb"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "ChpT",
+        "DivL"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "ClpXP_RcdA",
+        "DivL"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "CtrAb",
+        "DivL"
+      ],
+      "global_magnitude": 0.01810455322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.01810455322265625
+    },
+    {
+      "pair": [
+        "CckA",
+        "DivK"
+      ],
+      "global_magnitude": 0.01314544677734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.01314544677734375
+    },
+    {
+      "pair": [
+        "ChpT",
+        "DivK"
+      ],
+      "global_magnitude": 0.01314544677734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.01314544677734375
+    },
+    {
+      "pair": [
+        "ClpXP_RcdA",
+        "DivK"
+      ],
+      "global_magnitude": 0.01314544677734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.01314544677734375
+    },
+    {
+      "pair": [
+        "CtrAb",
+        "DivK"
+      ],
+      "global_magnitude": 0.01314544677734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.01314544677734375
+    },
+    {
+      "pair": [
+        "DivK",
+        "DivL"
+      ],
+      "global_magnitude": 0.01314544677734375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.01314544677734375
+    },
+    {
+      "pair": [
+        "CckA",
+        "PleC"
+      ],
+      "global_magnitude": 0.00247955322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00247955322265625
+    },
+    {
+      "pair": [
+        "ChpT",
+        "PleC"
+      ],
+      "global_magnitude": 0.00247955322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00247955322265625
+    },
+    {
+      "pair": [
+        "ClpXP_RcdA",
+        "PleC"
+      ],
+      "global_magnitude": 0.00247955322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00247955322265625
+    },
+    {
+      "pair": [
+        "CtrAb",
+        "PleC"
+      ],
+      "global_magnitude": 0.00247955322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00247955322265625
+    },
+    {
+      "pair": [
+        "DivK",
+        "PleC"
+      ],
+      "global_magnitude": 0.00247955322265625,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.00247955322265625
+    },
+    {
+      "pair": [
+        "DivL",
+        "PleC"
+      ],
+      "global_magnitude": 0.00247955322265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00247955322265625
+    },
+    {
+      "pair": [
+        "CckA",
+        "DivJ"
+      ],
+      "global_magnitude": 0.00150299072265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00150299072265625
+    },
+    {
+      "pair": [
+        "ChpT",
+        "DivJ"
+      ],
+      "global_magnitude": 0.00150299072265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00150299072265625
+    },
+    {
+      "pair": [
+        "ClpXP_RcdA",
+        "DivJ"
+      ],
+      "global_magnitude": 0.00150299072265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00150299072265625
+    },
+    {
+      "pair": [
+        "CtrAb",
+        "DivJ"
+      ],
+      "global_magnitude": 0.00150299072265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00150299072265625
+    },
+    {
+      "pair": [
+        "DivJ",
+        "DivK"
+      ],
+      "global_magnitude": 0.00150299072265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00150299072265625
+    },
+    {
+      "pair": [
+        "DivJ",
+        "DivL"
+      ],
+      "global_magnitude": 0.00150299072265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00150299072265625
+    },
+    {
+      "pair": [
+        "DivJ",
+        "PleC"
+      ],
+      "global_magnitude": 0.00150299072265625,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.00150299072265625
+    },
+    {
+      "pair": [
+        "CckA",
+        "CpdR"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ChpT",
+        "CpdR"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ClpXP_RcdA",
+        "CpdR"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CpdR",
+        "CtrAb"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CpdR",
+        "DivJ"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CpdR",
+        "DivK"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CpdR",
+        "DivL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CpdR",
+        "PleC"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

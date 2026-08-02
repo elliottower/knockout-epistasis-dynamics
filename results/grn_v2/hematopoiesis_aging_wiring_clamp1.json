@@ -1,0 +1,1098 @@
+{
+  "model": "hematopoiesis_aging",
+  "n_nodes": 15,
+  "node_names": [
+    "Bclaf1",
+    "CDK46CycD",
+    "CIPKIP",
+    "Cebpa",
+    "Egr1",
+    "Fli1",
+    "Gata1",
+    "Gata2",
+    "Ikzf1",
+    "Junb",
+    "Klf1",
+    "Myc",
+    "Spi1",
+    "Tal1",
+    "Zfpm1"
+  ],
+  "output_nodes": [
+    "Gata1"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Cebpa",
+        "Spi1"
+      ],
+      [
+        "Fli1",
+        "Gata2"
+      ],
+      [
+        "Gata1",
+        "Zfpm1"
+      ],
+      [
+        "Egr1",
+        "Spi1"
+      ],
+      [
+        "Bclaf1",
+        "Cebpa"
+      ],
+      [
+        "Junb",
+        "Klf1"
+      ],
+      [
+        "Gata1",
+        "Ikzf1"
+      ],
+      [
+        "Gata2",
+        "Spi1"
+      ],
+      [
+        "Gata1",
+        "Junb"
+      ],
+      [
+        "Fli1",
+        "Ikzf1"
+      ],
+      [
+        "Fli1",
+        "Gata1"
+      ],
+      [
+        "Gata2",
+        "Zfpm1"
+      ],
+      [
+        "Bclaf1",
+        "Myc"
+      ],
+      [
+        "Egr1",
+        "Myc"
+      ],
+      [
+        "Spi1",
+        "Zfpm1"
+      ],
+      [
+        "Egr1",
+        "Gata2"
+      ],
+      [
+        "Egr1",
+        "Gata1"
+      ],
+      [
+        "Gata1",
+        "Klf1"
+      ],
+      [
+        "Ikzf1",
+        "Spi1"
+      ],
+      [
+        "Gata1",
+        "Gata2"
+      ],
+      [
+        "Egr1",
+        "Zfpm1"
+      ],
+      [
+        "Gata2",
+        "Junb"
+      ],
+      [
+        "Cebpa",
+        "Gata1"
+      ],
+      [
+        "Cebpa",
+        "Gata2"
+      ],
+      [
+        "Gata2",
+        "Ikzf1"
+      ],
+      [
+        "Fli1",
+        "Spi1"
+      ],
+      [
+        "Gata1",
+        "Spi1"
+      ]
+    ],
+    "triples": [
+      [
+        "Gata1",
+        "Gata2",
+        "Ikzf1"
+      ],
+      [
+        "Gata1",
+        "Gata2",
+        "Spi1"
+      ],
+      [
+        "Fli1",
+        "Ikzf1",
+        "Spi1"
+      ],
+      [
+        "Egr1",
+        "Gata2",
+        "Spi1"
+      ],
+      [
+        "Egr1",
+        "Gata1",
+        "Spi1"
+      ],
+      [
+        "Gata2",
+        "Spi1",
+        "Zfpm1"
+      ],
+      [
+        "Cebpa",
+        "Gata1",
+        "Gata2"
+      ],
+      [
+        "Fli1",
+        "Gata2",
+        "Spi1"
+      ],
+      [
+        "Gata2",
+        "Ikzf1",
+        "Spi1"
+      ],
+      [
+        "Egr1",
+        "Gata1",
+        "Zfpm1"
+      ],
+      [
+        "Egr1",
+        "Gata1",
+        "Gata2"
+      ],
+      [
+        "Cebpa",
+        "Gata1",
+        "Spi1"
+      ],
+      [
+        "Fli1",
+        "Gata1",
+        "Spi1"
+      ],
+      [
+        "Cebpa",
+        "Gata2",
+        "Spi1"
+      ],
+      [
+        "Gata1",
+        "Junb",
+        "Klf1"
+      ],
+      [
+        "Fli1",
+        "Gata1",
+        "Gata2"
+      ],
+      [
+        "Fli1",
+        "Gata1",
+        "Ikzf1"
+      ],
+      [
+        "Fli1",
+        "Gata2",
+        "Ikzf1"
+      ],
+      [
+        "Gata1",
+        "Gata2",
+        "Zfpm1"
+      ],
+      [
+        "Egr1",
+        "Spi1",
+        "Zfpm1"
+      ],
+      [
+        "Gata1",
+        "Ikzf1",
+        "Spi1"
+      ],
+      [
+        "Gata1",
+        "Spi1",
+        "Zfpm1"
+      ],
+      [
+        "Egr1",
+        "Gata2",
+        "Zfpm1"
+      ]
+    ],
+    "per_gene": {
+      "Bclaf1": {
+        "regulators": [
+          "Myc"
+        ],
+        "interactions": []
+      },
+      "CDK46CycD": {
+        "regulators": [
+          "Bclaf1",
+          "Myc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Bclaf1",
+              "Myc"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "CIPKIP": {
+        "regulators": [
+          "Junb"
+        ],
+        "interactions": []
+      },
+      "Cebpa": {
+        "regulators": [
+          "Gata2",
+          "Ikzf1",
+          "Spi1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Gata2",
+              "Ikzf1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Egr1": {
+        "regulators": [
+          "Gata2",
+          "Junb"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Gata2",
+              "Junb"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Fli1": {
+        "regulators": [
+          "Gata1",
+          "Junb",
+          "Klf1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Gata1",
+              "Junb"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Klf1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Junb",
+              "Klf1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Junb",
+              "Klf1"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Gata1": {
+        "regulators": [
+          "Fli1",
+          "Gata1",
+          "Gata2",
+          "Ikzf1",
+          "Spi1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata2"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1",
+              "Gata2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Ikzf1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Ikzf1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1",
+              "Ikzf1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Ikzf1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata2",
+              "Ikzf1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2",
+              "Ikzf1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1",
+              "Gata2",
+              "Ikzf1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": 0.15625
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata2",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1",
+              "Gata2",
+              "Ikzf1",
+              "Spi1"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "Gata2": {
+        "regulators": [
+          "Egr1",
+          "Gata1",
+          "Gata2",
+          "Spi1",
+          "Zfpm1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1",
+              "Gata2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Zfpm1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Zfpm1"
+            ],
+            "order": 2,
+            "coefficient": 0.15625
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1",
+              "Zfpm1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Zfpm1"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata2",
+              "Zfpm1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2",
+              "Zfpm1"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1",
+              "Gata2",
+              "Zfpm1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1",
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata2",
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2",
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Egr1",
+              "Gata1",
+              "Gata2",
+              "Spi1",
+              "Zfpm1"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "Ikzf1": {
+        "regulators": [
+          "Gata2"
+        ],
+        "interactions": []
+      },
+      "Junb": {
+        "regulators": [
+          "Egr1",
+          "Myc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Egr1",
+              "Myc"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Klf1": {
+        "regulators": [
+          "Fli1",
+          "Gata1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Fli1",
+              "Gata1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Myc": {
+        "regulators": [
+          "Bclaf1",
+          "Cebpa"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Bclaf1",
+              "Cebpa"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Spi1": {
+        "regulators": [
+          "Cebpa",
+          "Gata1",
+          "Gata2",
+          "Spi1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cebpa",
+              "Gata1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cebpa",
+              "Gata2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cebpa",
+              "Gata1",
+              "Gata2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cebpa",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "Cebpa",
+              "Gata1",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cebpa",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Gata1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cebpa",
+              "Gata1",
+              "Gata2",
+              "Spi1"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "Tal1": {
+        "regulators": [
+          "Gata1",
+          "Spi1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Gata1",
+              "Spi1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Zfpm1": {
+        "regulators": [
+          "Gata1"
+        ],
+        "interactions": []
+      }
+    },
+    "n_pairwise": 27,
+    "n_triples": 23,
+    "pairwise_strengths": {
+      "['Bclaf1', 'Myc']": 0.25,
+      "['Gata2', 'Ikzf1']": 0.15625,
+      "['Gata2', 'Spi1']": 0.3125,
+      "['Ikzf1', 'Spi1']": 0.15625,
+      "['Gata2', 'Junb']": 0.25,
+      "['Gata1', 'Junb']": 0.125,
+      "['Gata1', 'Klf1']": 0.125,
+      "['Junb', 'Klf1']": 0.125,
+      "['Fli1', 'Gata1']": 0.28125,
+      "['Fli1', 'Gata2']": 0.09375,
+      "['Gata1', 'Gata2']": 0.1875,
+      "['Fli1', 'Ikzf1']": 0.03125,
+      "['Gata1', 'Ikzf1']": 0.03125,
+      "['Fli1', 'Spi1']": 0.15625,
+      "['Gata1', 'Spi1']": 0.5,
+      "['Egr1', 'Gata1']": 0.03125,
+      "['Egr1', 'Gata2']": 0.03125,
+      "['Egr1', 'Spi1']": 0.03125,
+      "['Egr1', 'Zfpm1']": 0.03125,
+      "['Gata1', 'Zfpm1']": 0.15625,
+      "['Gata2', 'Zfpm1']": 0.09375,
+      "['Spi1', 'Zfpm1']": 0.03125,
+      "['Egr1', 'Myc']": 0.25,
+      "['Bclaf1', 'Cebpa']": 0.25,
+      "['Cebpa', 'Gata1']": 0.0625,
+      "['Cebpa', 'Gata2']": 0.0625,
+      "['Cebpa', 'Spi1']": 0.0625
+    },
+    "local_energy_spectrum": [
+      0.5221108490566038,
+      0.36939858490566035,
+      0.09375,
+      0.012382075471698114,
+      0.002063679245283019,
+      0.00029481132075471697
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 16777216,
+    "total_fixed_point": 15421752,
+    "total_cycling": 1355464,
+    "cycling_fraction": 0.08079195022583008
+  },
+  "n_unique_values": 35,
+  "total_variance": 0.0030844686543787248,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T21:14:39.076866+00:00"
+}

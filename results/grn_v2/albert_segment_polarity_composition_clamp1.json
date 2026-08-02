@@ -1,0 +1,594 @@
+{
+  "model": "albert_segment_polarity",
+  "n_players": 11,
+  "n_init": 512,
+  "node_names": [
+    "SLP",
+    "WG",
+    "wg",
+    "WG_ext",
+    "en",
+    "EN",
+    "hh",
+    "HH_ext",
+    "PTC",
+    "CIA",
+    "CIR"
+  ],
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:35:23.838021+00:00",
+  "pairwise": {
+    "n_pairs": 55,
+    "n_local_nonzero": 10,
+    "n_global_nonzero": 55,
+    "local_positive_rate": 0.18181818181818182,
+    "spearman_rho": 0.322061740160562,
+    "spearman_pvalue": 0.016489994982438118,
+    "spearman_ci_95": [
+      0.09824693830262383,
+      0.5117679773686239
+    ],
+    "creation_rate": 0.6,
+    "destruction_rate": 0.0,
+    "created_count": 6,
+    "destroyed_count": 0,
+    "top_k": 10
+  },
+  "triples": {
+    "n_triples": 165,
+    "n_local_nonzero": 4,
+    "n_global_nonzero": 165,
+    "spearman_rho": 0.1528261476302897,
+    "spearman_pvalue": 0.05003194392517546,
+    "spearman_ci_95": [
+      0.054281409631042304,
+      0.2534901427181983
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.009858407222458884,
+    "frac_energy_3plus": 0.0523017089644189
+  },
+  "energy_spectrum": {
+    "global": [
+      0.7070641644712643,
+      0.21748097553119763,
+      0.06013381518246517,
+      0.0099246746136802,
+      0.0036915448955538274,
+      0.0013446347394324586,
+      0.00031647878418300735,
+      4.1540065444676654e-05,
+      2.148564395538795e-06,
+      1.9867515074000445e-08,
+      3.081330596280661e-09,
+      2.0353743388275925e-10
+    ],
+    "local_rules": [
+      0.4727112676056338,
+      0.44014084507042256,
+      0.08274647887323944,
+      0.0035211267605633804,
+      0.0008802816901408451,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "wg",
+        "CIR"
+      ],
+      "global_magnitude": 0.17451032002766928,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.17451032002766928
+    },
+    {
+      "pair": [
+        "SLP",
+        "wg"
+      ],
+      "global_magnitude": 0.04749488830566406,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.04749488830566406
+    },
+    {
+      "pair": [
+        "SLP",
+        "CIR"
+      ],
+      "global_magnitude": 0.04749488830566406,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.04749488830566406
+    },
+    {
+      "pair": [
+        "wg",
+        "HH_ext"
+      ],
+      "global_magnitude": 0.023487726847330727,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.023487726847330727
+    },
+    {
+      "pair": [
+        "HH_ext",
+        "CIR"
+      ],
+      "global_magnitude": 0.02348772684733072,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.02348772684733072
+    },
+    {
+      "pair": [
+        "wg",
+        "hh"
+      ],
+      "global_magnitude": 0.021443049112955727,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.021443049112955727
+    },
+    {
+      "pair": [
+        "hh",
+        "HH_ext"
+      ],
+      "global_magnitude": 0.021443049112955727,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.021443049112955727
+    },
+    {
+      "pair": [
+        "hh",
+        "CIR"
+      ],
+      "global_magnitude": 0.021443049112955727,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.021443049112955727
+    },
+    {
+      "pair": [
+        "wg",
+        "PTC"
+      ],
+      "global_magnitude": 0.010491053263346352,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.010491053263346352
+    },
+    {
+      "pair": [
+        "HH_ext",
+        "PTC"
+      ],
+      "global_magnitude": 0.010491053263346345,
+      "local_magnitude": 0.5,
+      "global_coefficient": 0.010491053263346345
+    },
+    {
+      "pair": [
+        "PTC",
+        "CIR"
+      ],
+      "global_magnitude": 0.010491053263346345,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.010491053263346345
+    },
+    {
+      "pair": [
+        "hh",
+        "PTC"
+      ],
+      "global_magnitude": 0.009606043497721352,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.009606043497721352
+    },
+    {
+      "pair": [
+        "wg",
+        "EN"
+      ],
+      "global_magnitude": 0.009464899698893229,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.009464899698893229
+    },
+    {
+      "pair": [
+        "EN",
+        "hh"
+      ],
+      "global_magnitude": 0.009464899698893227,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.009464899698893227
+    },
+    {
+      "pair": [
+        "EN",
+        "HH_ext"
+      ],
+      "global_magnitude": 0.009464899698893227,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.009464899698893227
+    },
+    {
+      "pair": [
+        "EN",
+        "CIR"
+      ],
+      "global_magnitude": 0.009464899698893227,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.009464899698893227
+    },
+    {
+      "pair": [
+        "wg",
+        "en"
+      ],
+      "global_magnitude": 0.008307774861653646,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.008307774861653646
+    },
+    {
+      "pair": [
+        "en",
+        "EN"
+      ],
+      "global_magnitude": 0.008307774861653646,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.008307774861653646
+    },
+    {
+      "pair": [
+        "en",
+        "hh"
+      ],
+      "global_magnitude": 0.008307774861653646,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.008307774861653646
+    },
+    {
+      "pair": [
+        "en",
+        "HH_ext"
+      ],
+      "global_magnitude": 0.008307774861653646,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.008307774861653646
+    },
+    {
+      "pair": [
+        "en",
+        "CIR"
+      ],
+      "global_magnitude": 0.008307774861653646,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.008307774861653646
+    },
+    {
+      "pair": [
+        "SLP",
+        "hh"
+      ],
+      "global_magnitude": 0.0065517425537109375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0065517425537109375
+    },
+    {
+      "pair": [
+        "SLP",
+        "HH_ext"
+      ],
+      "global_magnitude": 0.0045070648193359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0045070648193359375
+    },
+    {
+      "pair": [
+        "en",
+        "PTC"
+      ],
+      "global_magnitude": 0.0034224192301432286,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0034224192301432286
+    },
+    {
+      "pair": [
+        "SLP",
+        "EN"
+      ],
+      "global_magnitude": 0.002945582071940104,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.002945582071940104
+    },
+    {
+      "pair": [
+        "SLP",
+        "en"
+      ],
+      "global_magnitude": 0.002739588419596354,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.002739588419596354
+    },
+    {
+      "pair": [
+        "SLP",
+        "CIA"
+      ],
+      "global_magnitude": 0.0024471282958984375,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0024471282958984375
+    },
+    {
+      "pair": [
+        "wg",
+        "CIA"
+      ],
+      "global_magnitude": 0.0024471282958984375,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0024471282958984375
+    },
+    {
+      "pair": [
+        "CIA",
+        "CIR"
+      ],
+      "global_magnitude": 0.0024471282958984375,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.0024471282958984375
+    },
+    {
+      "pair": [
+        "EN",
+        "PTC"
+      ],
+      "global_magnitude": 0.002372105916341148,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.002372105916341148
+    },
+    {
+      "pair": [
+        "SLP",
+        "PTC"
+      ],
+      "global_magnitude": 0.0018787384033203125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0018787384033203125
+    },
+    {
+      "pair": [
+        "HH_ext",
+        "CIA"
+      ],
+      "global_magnitude": 0.0009708404541015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0009708404541015625
+    },
+    {
+      "pair": [
+        "PTC",
+        "CIA"
+      ],
+      "global_magnitude": 0.0003757476806640625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0003757476806640625
+    },
+    {
+      "pair": [
+        "hh",
+        "CIA"
+      ],
+      "global_magnitude": 0.0001468658447265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0001468658447265625
+    },
+    {
+      "pair": [
+        "SLP",
+        "WG_ext"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.25,
+      "global_coefficient": -4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "wg",
+        "WG_ext"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "WG_ext",
+        "en"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "WG_ext",
+        "EN"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "WG_ext",
+        "hh"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "WG_ext",
+        "HH_ext"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "WG_ext",
+        "CIR"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "EN",
+        "CIA"
+      ],
+      "global_magnitude": 4.00543212890625e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 4.00543212890625e-05
+    },
+    {
+      "pair": [
+        "SLP",
+        "WG"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "wg"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "WG_ext"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "en"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "EN"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "hh"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "HH_ext"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "CIR"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.0517578125e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "PTC"
+      ],
+      "global_magnitude": 2.6702880859375e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -2.6702880859375e-05
+    },
+    {
+      "pair": [
+        "WG_ext",
+        "PTC"
+      ],
+      "global_magnitude": 2.09808349609375e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -2.09808349609375e-05
+    },
+    {
+      "pair": [
+        "en",
+        "CIA"
+      ],
+      "global_magnitude": 1.71661376953125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 1.71661376953125e-05
+    },
+    {
+      "pair": [
+        "WG_ext",
+        "CIA"
+      ],
+      "global_magnitude": 1.33514404296875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 1.33514404296875e-05
+    },
+    {
+      "pair": [
+        "WG",
+        "CIA"
+      ],
+      "global_magnitude": 1.1444091796875e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 1.1444091796875e-05
+    }
+  ]
+}

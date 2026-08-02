@@ -1,0 +1,647 @@
+{
+  "model": "calzone_cell_fate",
+  "n_nodes": 17,
+  "node_names": [
+    "TNF",
+    "FADD",
+    "DISC_TNF",
+    "DISC_FAS",
+    "Caspase8",
+    "cIAP",
+    "BAR",
+    "RIP1",
+    "NFkB",
+    "IKK",
+    "FLIP",
+    "Caspase3",
+    "SMAC",
+    "MOMP",
+    "BAX",
+    "BCL2",
+    "Apoptosis"
+  ],
+  "output_nodes": [
+    "Apoptosis"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "BAR",
+        "cIAP"
+      ],
+      [
+        "SMAC",
+        "cIAP"
+      ],
+      [
+        "Caspase8",
+        "cIAP"
+      ],
+      [
+        "BCL2",
+        "Caspase8"
+      ],
+      [
+        "DISC_FAS",
+        "DISC_TNF"
+      ],
+      [
+        "FLIP",
+        "TNF"
+      ],
+      [
+        "FADD",
+        "TNF"
+      ],
+      [
+        "BAX",
+        "NFkB"
+      ],
+      [
+        "FADD",
+        "FLIP"
+      ],
+      [
+        "DISC_TNF",
+        "cIAP"
+      ],
+      [
+        "BAX",
+        "Caspase8"
+      ],
+      [
+        "NFkB",
+        "SMAC"
+      ],
+      [
+        "DISC_FAS",
+        "cIAP"
+      ],
+      [
+        "Caspase8",
+        "SMAC"
+      ],
+      [
+        "Caspase3",
+        "NFkB"
+      ],
+      [
+        "IKK",
+        "RIP1"
+      ],
+      [
+        "DISC_TNF",
+        "NFkB"
+      ],
+      [
+        "BAR",
+        "DISC_FAS"
+      ],
+      [
+        "BAX",
+        "Caspase3"
+      ],
+      [
+        "BAR",
+        "DISC_TNF"
+      ],
+      [
+        "Caspase3",
+        "RIP1"
+      ],
+      [
+        "BAX",
+        "BCL2"
+      ]
+    ],
+    "triples": [
+      [
+        "BAR",
+        "DISC_FAS",
+        "cIAP"
+      ],
+      [
+        "DISC_FAS",
+        "DISC_TNF",
+        "cIAP"
+      ],
+      [
+        "BAX",
+        "Caspase3",
+        "NFkB"
+      ],
+      [
+        "BAR",
+        "DISC_FAS",
+        "DISC_TNF"
+      ],
+      [
+        "FADD",
+        "FLIP",
+        "TNF"
+      ],
+      [
+        "BAR",
+        "DISC_TNF",
+        "cIAP"
+      ],
+      [
+        "Caspase8",
+        "SMAC",
+        "cIAP"
+      ],
+      [
+        "BAX",
+        "BCL2",
+        "Caspase8"
+      ]
+    ],
+    "per_gene": {
+      "TNF": {
+        "regulators": [
+          "TNF"
+        ],
+        "interactions": []
+      },
+      "FADD": {
+        "regulators": [
+          "FADD"
+        ],
+        "interactions": []
+      },
+      "DISC_TNF": {
+        "regulators": [
+          "TNF",
+          "FADD",
+          "FLIP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FADD",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "FLIP",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "FADD",
+              "FLIP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "FADD",
+              "FLIP",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "DISC_FAS": {
+        "regulators": [
+          "TNF",
+          "FADD",
+          "FLIP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FADD",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "FLIP",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "FADD",
+              "FLIP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "FADD",
+              "FLIP",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "Caspase8": {
+        "regulators": [
+          "DISC_TNF",
+          "DISC_FAS",
+          "cIAP",
+          "BAR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DISC_FAS",
+              "DISC_TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "DISC_TNF",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "DISC_FAS",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "DISC_FAS",
+              "DISC_TNF",
+              "cIAP"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BAR",
+              "DISC_TNF"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "BAR",
+              "DISC_FAS"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BAR",
+              "DISC_FAS",
+              "DISC_TNF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BAR",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BAR",
+              "DISC_TNF",
+              "cIAP"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "BAR",
+              "DISC_FAS",
+              "cIAP"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "BAR",
+              "DISC_FAS",
+              "DISC_TNF",
+              "cIAP"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "cIAP": {
+        "regulators": [
+          "NFkB",
+          "SMAC"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "NFkB",
+              "SMAC"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "BAR": {
+        "regulators": [
+          "BAR"
+        ],
+        "interactions": []
+      },
+      "RIP1": {
+        "regulators": [
+          "DISC_TNF",
+          "cIAP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DISC_TNF",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "NFkB": {
+        "regulators": [
+          "RIP1",
+          "IKK"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "IKK",
+              "RIP1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "IKK": {
+        "regulators": [
+          "RIP1",
+          "Caspase3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Caspase3",
+              "RIP1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "FLIP": {
+        "regulators": [
+          "DISC_TNF",
+          "NFkB"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DISC_TNF",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Caspase3": {
+        "regulators": [
+          "Caspase8",
+          "cIAP",
+          "SMAC"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Caspase8",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Caspase8",
+              "SMAC"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "SMAC",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Caspase8",
+              "SMAC",
+              "cIAP"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "SMAC": {
+        "regulators": [
+          "MOMP"
+        ],
+        "interactions": []
+      },
+      "MOMP": {
+        "regulators": [
+          "Caspase8",
+          "BAX",
+          "BCL2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BAX",
+              "Caspase8"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BCL2",
+              "Caspase8"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BAX",
+              "BCL2"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BAX",
+              "BCL2",
+              "Caspase8"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "BAX": {
+        "regulators": [
+          "Caspase8",
+          "BCL2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "BCL2",
+              "Caspase8"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "BCL2": {
+        "regulators": [
+          "NFkB",
+          "Caspase3",
+          "BAX"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Caspase3",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BAX",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "BAX",
+              "Caspase3"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "BAX",
+              "Caspase3",
+              "NFkB"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Apoptosis": {
+        "regulators": [
+          "Caspase3"
+        ],
+        "interactions": []
+      }
+    },
+    "n_pairwise": 22,
+    "n_triples": 8,
+    "pairwise_strengths": {
+      "['FADD', 'TNF']": 0.25,
+      "['FLIP', 'TNF']": 0.25,
+      "['FADD', 'FLIP']": 0.25,
+      "['DISC_FAS', 'DISC_TNF']": 0.1875,
+      "['DISC_TNF', 'cIAP']": 0.3125,
+      "['DISC_FAS', 'cIAP']": 0.0625,
+      "['BAR', 'DISC_TNF']": 0.0625,
+      "['BAR', 'DISC_FAS']": 0.0625,
+      "['BAR', 'cIAP']": 0.0625,
+      "['NFkB', 'SMAC']": 0.25,
+      "['IKK', 'RIP1']": 0.25,
+      "['Caspase3', 'RIP1']": 0.25,
+      "['DISC_TNF', 'NFkB']": 0.25,
+      "['Caspase8', 'cIAP']": 0.125,
+      "['Caspase8', 'SMAC']": 0.125,
+      "['SMAC', 'cIAP']": 0.125,
+      "['BAX', 'Caspase8']": 0.125,
+      "['BCL2', 'Caspase8']": 0.375,
+      "['BAX', 'BCL2']": 0.125,
+      "['Caspase3', 'NFkB']": 0.125,
+      "['BAX', 'NFkB']": 0.125,
+      "['BAX', 'Caspase3']": 0.125
+    },
+    "local_energy_spectrum": [
+      0.463490099009901,
+      0.4158415841584158,
+      0.1051980198019802,
+      0.01485148514851485,
+      0.0006188118811881188
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 67108864,
+    "total_fixed_point": 62211722,
+    "total_cycling": 4897142,
+    "cycling_fraction": 0.0729731023311615
+  },
+  "n_unique_values": 115,
+  "total_variance": 0.05209215522732452,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T21:54:25.597033+00:00"
+}

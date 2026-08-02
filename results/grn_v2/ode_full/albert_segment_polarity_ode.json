@@ -1,0 +1,40 @@
+{
+  "model": "albert_segment_polarity",
+  "method": "ode_hill",
+  "description": "Drosophila segment polarity single-cell (11 nodes, 2 inputs)",
+  "n_players": 11,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.0044014084507042256,
+  "ode_global_o3plus": 0.23176764276454037,
+  "ode_delta_o3plus": 0.22736623431383615,
+  "boolean_delta_o3plus": 0.1983857506498279,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.09101320756899259,
+    0.3050310194930657,
+    0.3721881301734013,
+    0.19400414550026934,
+    0.03659370311699286,
+    0.0008952077389696178,
+    0.00019024915450537928,
+    6.780603132158574e-05,
+    1.4569891001927132e-05,
+    1.821236373766658e-06,
+    1.4009510590555704e-07,
+    1.3026046077985725e-24
+  ],
+  "n_unique_values": 7,
+  "v_mean_range": [
+    0.0,
+    0.6556073104267945
+  ],
+  "v_mean_std": 0.1553155780932289,
+  "timestamp": "2026-07-29T02:32:38.501817+00:00"
+}

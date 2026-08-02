@@ -1,0 +1,271 @@
+{
+  "model": "lambda_phage",
+  "n_players": 7,
+  "n_init": 512,
+  "node_names": [
+    "CII",
+    "CI_b1",
+    "CI_b2",
+    "Cro_b1",
+    "Cro_b2",
+    "Cro_b3",
+    "N"
+  ],
+  "timestamp": "2026-07-28T16:55:14.464067+00:00",
+  "pairwise": {
+    "n_pairs": 21,
+    "n_local_nonzero": 18,
+    "n_global_nonzero": 21,
+    "local_positive_rate": 0.8571428571428571,
+    "spearman_rho": 0.6057291709074122,
+    "spearman_pvalue": 0.003612839594695832,
+    "spearman_ci_95": [
+      0.1398203061484674,
+      0.8509340720897
+    ],
+    "creation_rate": 0.1111111111111111,
+    "destruction_rate": 0.0,
+    "created_count": 2,
+    "destroyed_count": 0,
+    "top_k": 18
+  },
+  "triples": {
+    "n_triples": 35,
+    "n_local_nonzero": 23,
+    "n_global_nonzero": 35,
+    "spearman_rho": 0.0792355954292771,
+    "spearman_pvalue": 0.6509431120738408,
+    "spearman_ci_95": [
+      -0.27617424577812233,
+      0.43076168372354223
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.00611045234836638,
+    "frac_energy_3plus": 0.033075617888428964
+  },
+  "energy_spectrum": {
+    "global": [
+      0.34942805714642844,
+      0.4820475957491602,
+      0.14700627811365383,
+      0.017271249719063523,
+      0.0035229191691637193,
+      0.0006807207955019099,
+      4.274557075403902e-05,
+      4.3373627438689993e-07
+    ],
+    "local_rules": [
+      0.5878810975609756,
+      0.2657012195121951,
+      0.09992378048780488,
+      0.038109756097560975,
+      0.007240853658536586,
+      0.0010670731707317074,
+      7.621951219512195e-05,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "CI_b1",
+        "Cro_b1"
+      ],
+      "global_magnitude": 0.18499755859375,
+      "local_magnitude": 0.515625,
+      "global_coefficient": -0.18499755859375
+    },
+    {
+      "pair": [
+        "CI_b1",
+        "CI_b2"
+      ],
+      "global_magnitude": 0.04937744140625,
+      "local_magnitude": 0.484375,
+      "global_coefficient": 0.04937744140625
+    },
+    {
+      "pair": [
+        "CI_b2",
+        "Cro_b1"
+      ],
+      "global_magnitude": 0.04937744140625,
+      "local_magnitude": 0.265625,
+      "global_coefficient": 0.04937744140625
+    },
+    {
+      "pair": [
+        "CII",
+        "CI_b1"
+      ],
+      "global_magnitude": 0.01995849609375,
+      "local_magnitude": 0.1875,
+      "global_coefficient": 0.01995849609375
+    },
+    {
+      "pair": [
+        "CII",
+        "Cro_b1"
+      ],
+      "global_magnitude": 0.01995849609375,
+      "local_magnitude": 0.3125,
+      "global_coefficient": 0.01995849609375
+    },
+    {
+      "pair": [
+        "CI_b1",
+        "Cro_b2"
+      ],
+      "global_magnitude": 0.017547607421875,
+      "local_magnitude": 0.265625,
+      "global_coefficient": -0.017547607421875
+    },
+    {
+      "pair": [
+        "Cro_b1",
+        "Cro_b2"
+      ],
+      "global_magnitude": 0.017547607421875,
+      "local_magnitude": 0.359375,
+      "global_coefficient": -0.017547607421875
+    },
+    {
+      "pair": [
+        "CII",
+        "N"
+      ],
+      "global_magnitude": 0.017059326171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.017059326171875
+    },
+    {
+      "pair": [
+        "CI_b1",
+        "N"
+      ],
+      "global_magnitude": 0.017059326171875,
+      "local_magnitude": 0.109375,
+      "global_coefficient": 0.017059326171875
+    },
+    {
+      "pair": [
+        "Cro_b1",
+        "N"
+      ],
+      "global_magnitude": 0.017059326171875,
+      "local_magnitude": 0.046875,
+      "global_coefficient": 0.017059326171875
+    },
+    {
+      "pair": [
+        "CII",
+        "Cro_b2"
+      ],
+      "global_magnitude": 0.013519287109375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.013519287109375
+    },
+    {
+      "pair": [
+        "Cro_b2",
+        "N"
+      ],
+      "global_magnitude": 0.01226806640625,
+      "local_magnitude": 0.046875,
+      "global_coefficient": -0.01226806640625
+    },
+    {
+      "pair": [
+        "CII",
+        "CI_b2"
+      ],
+      "global_magnitude": 0.00433349609375,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.00433349609375
+    },
+    {
+      "pair": [
+        "CI_b2",
+        "Cro_b2"
+      ],
+      "global_magnitude": 0.001922607421875,
+      "local_magnitude": 0.140625,
+      "global_coefficient": -0.001922607421875
+    },
+    {
+      "pair": [
+        "CI_b2",
+        "N"
+      ],
+      "global_magnitude": 0.001434326171875,
+      "local_magnitude": 0.109375,
+      "global_coefficient": 0.001434326171875
+    },
+    {
+      "pair": [
+        "CII",
+        "Cro_b3"
+      ],
+      "global_magnitude": 0.0005035400390625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0005035400390625
+    },
+    {
+      "pair": [
+        "CI_b1",
+        "Cro_b3"
+      ],
+      "global_magnitude": 0.0005035400390625,
+      "local_magnitude": 0.078125,
+      "global_coefficient": -0.0005035400390625
+    },
+    {
+      "pair": [
+        "CI_b2",
+        "Cro_b3"
+      ],
+      "global_magnitude": 0.0005035400390625,
+      "local_magnitude": 0.078125,
+      "global_coefficient": -0.0005035400390625
+    },
+    {
+      "pair": [
+        "Cro_b1",
+        "Cro_b3"
+      ],
+      "global_magnitude": 0.0005035400390625,
+      "local_magnitude": 0.171875,
+      "global_coefficient": -0.0005035400390625
+    },
+    {
+      "pair": [
+        "Cro_b2",
+        "Cro_b3"
+      ],
+      "global_magnitude": 0.0005035400390625,
+      "local_magnitude": 0.171875,
+      "global_coefficient": -0.0005035400390625
+    },
+    {
+      "pair": [
+        "Cro_b3",
+        "N"
+      ],
+      "global_magnitude": 0.0003509521484375,
+      "local_magnitude": 0.046875,
+      "global_coefficient": -0.0003509521484375
+    }
+  ]
+}

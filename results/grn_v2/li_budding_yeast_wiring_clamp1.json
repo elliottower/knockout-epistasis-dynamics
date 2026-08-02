@@ -1,0 +1,1523 @@
+{
+  "model": "li_budding_yeast",
+  "n_nodes": 11,
+  "node_names": [
+    "Cln3",
+    "MBF",
+    "SBF",
+    "Cln1_2",
+    "Cdh1",
+    "Swi5",
+    "Cdc20",
+    "Clb5_6",
+    "Sic1",
+    "Clb1_2",
+    "Mcm1"
+  ],
+  "output_nodes": [
+    "Clb1_2"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Clb5_6",
+        "Sic1"
+      ],
+      [
+        "Clb1_2",
+        "Cln3"
+      ],
+      [
+        "Cln3",
+        "MBF"
+      ],
+      [
+        "Clb1_2",
+        "Sic1"
+      ],
+      [
+        "Clb5_6",
+        "Swi5"
+      ],
+      [
+        "Cdc20",
+        "Clb5_6"
+      ],
+      [
+        "Clb5_6",
+        "Mcm1"
+      ],
+      [
+        "MBF",
+        "SBF"
+      ],
+      [
+        "Clb1_2",
+        "Swi5"
+      ],
+      [
+        "Cdh1",
+        "Mcm1"
+      ],
+      [
+        "Cdh1",
+        "Clb5_6"
+      ],
+      [
+        "Clb1_2",
+        "Mcm1"
+      ],
+      [
+        "Clb1_2",
+        "Cln1_2"
+      ],
+      [
+        "Cdc20",
+        "Mcm1"
+      ],
+      [
+        "Cdh1",
+        "Clb1_2"
+      ],
+      [
+        "Cdc20",
+        "Cln1_2"
+      ],
+      [
+        "Cdc20",
+        "Swi5"
+      ],
+      [
+        "Cdc20",
+        "Clb1_2"
+      ],
+      [
+        "Clb1_2",
+        "Clb5_6"
+      ],
+      [
+        "Clb1_2",
+        "MBF"
+      ],
+      [
+        "Cdh1",
+        "MBF"
+      ],
+      [
+        "Clb5_6",
+        "Cln1_2"
+      ],
+      [
+        "Cdc20",
+        "MBF"
+      ],
+      [
+        "Cdc20",
+        "Cdh1"
+      ],
+      [
+        "Cln3",
+        "SBF"
+      ],
+      [
+        "Mcm1",
+        "Sic1"
+      ],
+      [
+        "Cdh1",
+        "Sic1"
+      ],
+      [
+        "Clb1_2",
+        "SBF"
+      ],
+      [
+        "Cdc20",
+        "Sic1"
+      ],
+      [
+        "Cln1_2",
+        "Swi5"
+      ]
+    ],
+    "triples": [
+      [
+        "Cdh1",
+        "Clb1_2",
+        "Sic1"
+      ],
+      [
+        "Cdc20",
+        "Mcm1",
+        "Sic1"
+      ],
+      [
+        "Clb1_2",
+        "Mcm1",
+        "Sic1"
+      ],
+      [
+        "Cdh1",
+        "Clb5_6",
+        "Sic1"
+      ],
+      [
+        "Cdh1",
+        "Mcm1",
+        "Sic1"
+      ],
+      [
+        "Clb1_2",
+        "Cln3",
+        "SBF"
+      ],
+      [
+        "Clb5_6",
+        "Mcm1",
+        "Sic1"
+      ],
+      [
+        "Cdc20",
+        "Cdh1",
+        "Clb1_2"
+      ],
+      [
+        "Cdc20",
+        "Clb5_6",
+        "Sic1"
+      ],
+      [
+        "Cdc20",
+        "Cdh1",
+        "MBF"
+      ],
+      [
+        "Clb1_2",
+        "Clb5_6",
+        "Cln1_2"
+      ],
+      [
+        "Cdc20",
+        "Clb5_6",
+        "Cln1_2"
+      ],
+      [
+        "Cln3",
+        "MBF",
+        "SBF"
+      ],
+      [
+        "Cdc20",
+        "Clb1_2",
+        "Swi5"
+      ],
+      [
+        "Cdc20",
+        "Cdh1",
+        "Clb5_6"
+      ],
+      [
+        "Cdc20",
+        "Clb1_2",
+        "Cln1_2"
+      ],
+      [
+        "Cdc20",
+        "Cdh1",
+        "Mcm1"
+      ],
+      [
+        "Cdc20",
+        "Clb1_2",
+        "Mcm1"
+      ],
+      [
+        "Cdc20",
+        "Cln1_2",
+        "Swi5"
+      ],
+      [
+        "Cdh1",
+        "Clb1_2",
+        "Clb5_6"
+      ],
+      [
+        "Clb5_6",
+        "Cln1_2",
+        "Swi5"
+      ],
+      [
+        "Cdh1",
+        "Clb1_2",
+        "Mcm1"
+      ],
+      [
+        "Clb1_2",
+        "MBF",
+        "SBF"
+      ],
+      [
+        "Clb1_2",
+        "Clb5_6",
+        "Mcm1"
+      ],
+      [
+        "Cdc20",
+        "Cdh1",
+        "Sic1"
+      ],
+      [
+        "Cdc20",
+        "Clb1_2",
+        "Clb5_6"
+      ],
+      [
+        "Clb1_2",
+        "Clb5_6",
+        "Swi5"
+      ],
+      [
+        "Cdh1",
+        "Clb5_6",
+        "Mcm1"
+      ],
+      [
+        "Cdc20",
+        "Clb5_6",
+        "Swi5"
+      ],
+      [
+        "Clb1_2",
+        "Cln3",
+        "MBF"
+      ],
+      [
+        "Cdc20",
+        "Clb5_6",
+        "Mcm1"
+      ],
+      [
+        "Clb1_2",
+        "Clb5_6",
+        "Sic1"
+      ],
+      [
+        "Clb1_2",
+        "Cln1_2",
+        "Swi5"
+      ],
+      [
+        "Cdc20",
+        "Clb1_2",
+        "Sic1"
+      ]
+    ],
+    "per_gene": {
+      "Cln3": {
+        "regulators": [
+          "Cln3"
+        ],
+        "interactions": []
+      },
+      "MBF": {
+        "regulators": [
+          "Cln3",
+          "MBF",
+          "Clb1_2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cln3",
+              "MBF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln3"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "MBF"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln3",
+              "MBF"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "SBF": {
+        "regulators": [
+          "Cln3",
+          "MBF",
+          "SBF",
+          "Clb1_2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cln3",
+              "MBF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cln3",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "MBF",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Cln3",
+              "MBF",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln3"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "MBF"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln3",
+              "MBF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln3",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "MBF",
+              "SBF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln3",
+              "MBF",
+              "SBF"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "Cln1_2": {
+        "regulators": [
+          "SBF"
+        ],
+        "interactions": []
+      },
+      "Cdh1": {
+        "regulators": [
+          "Cln1_2",
+          "Cdc20",
+          "Clb5_6",
+          "Clb1_2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc20",
+              "Cln1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Cln1_2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "Swi5": {
+        "regulators": [
+          "Cdc20",
+          "Clb1_2",
+          "Mcm1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Mcm1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Mcm1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Mcm1"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Cdc20": {
+        "regulators": [
+          "Clb1_2",
+          "Mcm1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Clb1_2",
+              "Mcm1"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Clb5_6": {
+        "regulators": [
+          "MBF",
+          "Cdh1",
+          "Cdc20"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdh1",
+              "MBF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "MBF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "MBF"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Sic1": {
+        "regulators": [
+          "Cln1_2",
+          "Swi5",
+          "Cdc20",
+          "Clb5_6",
+          "Clb1_2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cln1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Swi5"
+            ],
+            "order": 2,
+            "coefficient": -0.21875
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb5_6",
+              "Swi5"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb5_6",
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6",
+              "Swi5"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6",
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Swi5"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Cln1_2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Swi5"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6",
+              "Swi5"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6",
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6",
+              "Cln1_2"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6",
+              "Swi5"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6",
+              "Cln1_2",
+              "Swi5"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "Clb1_2": {
+        "regulators": [
+          "Cdh1",
+          "Cdc20",
+          "Clb5_6",
+          "Sic1",
+          "Clb1_2",
+          "Mcm1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1"
+            ],
+            "order": 2,
+            "coefficient": 0.109375
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb5_6"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb5_6"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Sic1"
+            ],
+            "order": 2,
+            "coefficient": 0.109375
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Sic1"
+            ],
+            "order": 2,
+            "coefficient": 0.109375
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": 0.109375
+          },
+          {
+            "regulators": [
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Sic1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6",
+              "Sic1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Mcm1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Mcm1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Mcm1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Mcm1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2",
+              "Mcm1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Mcm1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2",
+              "Mcm1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Cdc20",
+              "Cdh1",
+              "Clb1_2",
+              "Clb5_6",
+              "Mcm1",
+              "Sic1"
+            ],
+            "order": 6,
+            "coefficient": -0.015625
+          }
+        ]
+      },
+      "Mcm1": {
+        "regulators": [
+          "Clb1_2"
+        ],
+        "interactions": []
+      }
+    },
+    "n_pairwise": 30,
+    "n_triples": 34,
+    "pairwise_strengths": {
+      "['Cln3', 'MBF']": 0.1875,
+      "['Clb1_2', 'Cln3']": 0.1875,
+      "['Clb1_2', 'MBF']": 0.3125,
+      "['Cln3', 'SBF']": 0.0625,
+      "['MBF', 'SBF']": 0.0625,
+      "['Clb1_2', 'SBF']": 0.0625,
+      "['Cdc20', 'Cln1_2']": 0.09375,
+      "['Clb5_6', 'Cln1_2']": 0.09375,
+      "['Cdc20', 'Clb5_6']": 0.109375,
+      "['Clb1_2', 'Cln1_2']": 0.09375,
+      "['Cdc20', 'Clb1_2']": 0.234375,
+      "['Clb1_2', 'Clb5_6']": 0.109375,
+      "['Cdc20', 'Mcm1']": 0.140625,
+      "['Clb1_2', 'Mcm1']": 0.390625,
+      "['Cdh1', 'MBF']": 0.125,
+      "['Cdc20', 'MBF']": 0.125,
+      "['Cdc20', 'Cdh1']": 0.234375,
+      "['Cln1_2', 'Swi5']": 0.03125,
+      "['Cdc20', 'Swi5']": 0.21875,
+      "['Clb5_6', 'Swi5']": 0.03125,
+      "['Clb1_2', 'Swi5']": 0.03125,
+      "['Cdh1', 'Clb5_6']": 0.015625,
+      "['Cdh1', 'Sic1']": 0.109375,
+      "['Cdc20', 'Sic1']": 0.109375,
+      "['Clb5_6', 'Sic1']": 0.015625,
+      "['Cdh1', 'Clb1_2']": 0.015625,
+      "['Clb1_2', 'Sic1']": 0.015625,
+      "['Cdh1', 'Mcm1']": 0.015625,
+      "['Clb5_6', 'Mcm1']": 0.015625,
+      "['Mcm1', 'Sic1']": 0.015625
+    },
+    "local_energy_spectrum": [
+      0.4876580739299611,
+      0.38776750972762647,
+      0.09381079766536965,
+      0.026021400778210118,
+      0.004073443579766537,
+      0.0006079766536964981,
+      6.0797665369649806e-05
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 1048576,
+    "total_fixed_point": 843474,
+    "total_cycling": 205102,
+    "cycling_fraction": 0.1956005096435547
+  },
+  "n_unique_values": 5,
+  "total_variance": 0.24677813082192676,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:40:21.304539+00:00"
+}

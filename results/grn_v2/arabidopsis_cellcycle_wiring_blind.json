@@ -1,0 +1,7541 @@
+{
+  "model": "arabidopsis_cellcycle",
+  "citation": "Ortiz-Gutierrez et al., PLoS Comput Biol 11.9 (2015): e1004486",
+  "description": "Arabidopsis thaliana cell cycle (14 nodes, no inputs)",
+  "n_nodes": 14,
+  "node_names": [
+    "APC_C",
+    "CDKB1_1",
+    "CYCA2_3",
+    "CYCB1_1",
+    "CYCD3_1",
+    "E2Fa",
+    "E2Fb",
+    "E2Fc",
+    "E2Fe",
+    "KRP1",
+    "MYB3R1_4",
+    "MYB77",
+    "RBR",
+    "SCF"
+  ],
+  "player_names": [
+    "APC_C",
+    "CDKB1_1",
+    "CYCA2_3",
+    "CYCB1_1",
+    "CYCD3_1",
+    "E2Fa",
+    "E2Fb",
+    "E2Fc",
+    "E2Fe",
+    "KRP1",
+    "MYB3R1_4",
+    "MYB77",
+    "RBR",
+    "SCF"
+  ],
+  "output_nodes": [
+    "CYCB1_1"
+  ],
+  "interaction_graph": {
+    "APC_C": [
+      {
+        "regulator": "E2Fa",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fe",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      },
+      {
+        "regulator": "MYB77",
+        "sign": 1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      }
+    ],
+    "CDKB1_1": [
+      {
+        "regulator": "CYCD3_1",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fb",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fc",
+        "sign": -1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      },
+      {
+        "regulator": "MYB77",
+        "sign": 1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      }
+    ],
+    "CYCA2_3": [
+      {
+        "regulator": "APC_C",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      },
+      {
+        "regulator": "MYB77",
+        "sign": 1
+      }
+    ],
+    "CYCB1_1": [
+      {
+        "regulator": "APC_C",
+        "sign": -1
+      },
+      {
+        "regulator": "CYCD3_1",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fb",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fc",
+        "sign": -1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      },
+      {
+        "regulator": "MYB77",
+        "sign": 1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      }
+    ],
+    "CYCD3_1": [
+      {
+        "regulator": "SCF",
+        "sign": -1
+      }
+    ],
+    "E2Fa": [
+      {
+        "regulator": "CDKB1_1",
+        "sign": -1
+      },
+      {
+        "regulator": "CYCA2_3",
+        "sign": -1
+      },
+      {
+        "regulator": "E2Fc",
+        "sign": -1
+      }
+    ],
+    "E2Fb": [
+      {
+        "regulator": "E2Fa",
+        "sign": 1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      }
+    ],
+    "E2Fc": [
+      {
+        "regulator": "CYCD3_1",
+        "sign": -1
+      },
+      {
+        "regulator": "E2Fa",
+        "sign": 1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": 1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      },
+      {
+        "regulator": "SCF",
+        "sign": -1
+      }
+    ],
+    "E2Fe": [
+      {
+        "regulator": "CYCD3_1",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fb",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fc",
+        "sign": -1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB77",
+        "sign": 1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      }
+    ],
+    "KRP1": [
+      {
+        "regulator": "CDKB1_1",
+        "sign": -1
+      },
+      {
+        "regulator": "CYCA2_3",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      },
+      {
+        "regulator": "MYB77",
+        "sign": 1
+      },
+      {
+        "regulator": "SCF",
+        "sign": -1
+      }
+    ],
+    "MYB3R1_4": [
+      {
+        "regulator": "CYCB1_1",
+        "sign": 1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB77",
+        "sign": 1
+      }
+    ],
+    "MYB77": [
+      {
+        "regulator": "CYCD3_1",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fb",
+        "sign": 1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": -1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      }
+    ],
+    "RBR": [
+      {
+        "regulator": "CYCD3_1",
+        "sign": -1
+      },
+      {
+        "regulator": "E2Fa",
+        "sign": 1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": 1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      }
+    ],
+    "SCF": [
+      {
+        "regulator": "APC_C",
+        "sign": -1
+      },
+      {
+        "regulator": "CYCD3_1",
+        "sign": 1
+      },
+      {
+        "regulator": "E2Fb",
+        "sign": 1
+      },
+      {
+        "regulator": "KRP1",
+        "sign": -1
+      },
+      {
+        "regulator": "MYB3R1_4",
+        "sign": 1
+      },
+      {
+        "regulator": "RBR",
+        "sign": -1
+      }
+    ]
+  },
+  "n_edges": 63,
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "CYCA2_3",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fe",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fa",
+        "MYB77"
+      ],
+      [
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "CYCD3_1",
+        "SCF"
+      ],
+      [
+        "MYB3R1_4",
+        "SCF"
+      ],
+      [
+        "CDKB1_1",
+        "E2Fc"
+      ],
+      [
+        "MYB77",
+        "SCF"
+      ],
+      [
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "KRP1",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "RBR"
+      ],
+      [
+        "APC_C",
+        "RBR"
+      ],
+      [
+        "E2Fa",
+        "MYB3R1_4"
+      ],
+      [
+        "CDKB1_1",
+        "MYB77"
+      ],
+      [
+        "APC_C",
+        "MYB3R1_4"
+      ],
+      [
+        "CDKB1_1",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fa",
+        "RBR"
+      ],
+      [
+        "E2Fc",
+        "RBR"
+      ],
+      [
+        "E2Fb",
+        "MYB3R1_4"
+      ],
+      [
+        "CDKB1_1",
+        "E2Fa"
+      ],
+      [
+        "E2Fb",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fb"
+      ],
+      [
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "E2Fc",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fc",
+        "MYB77"
+      ],
+      [
+        "E2Fa",
+        "KRP1"
+      ],
+      [
+        "E2Fa",
+        "E2Fe"
+      ],
+      [
+        "CYCA2_3",
+        "SCF"
+      ],
+      [
+        "APC_C",
+        "E2Fc"
+      ],
+      [
+        "APC_C",
+        "MYB77"
+      ],
+      [
+        "E2Fa",
+        "SCF"
+      ],
+      [
+        "KRP1",
+        "SCF"
+      ],
+      [
+        "CYCD3_1",
+        "MYB77"
+      ],
+      [
+        "KRP1",
+        "RBR"
+      ],
+      [
+        "CYCB1_1",
+        "KRP1"
+      ],
+      [
+        "APC_C",
+        "CYCD3_1"
+      ],
+      [
+        "RBR",
+        "SCF"
+      ],
+      [
+        "APC_C",
+        "E2Fb"
+      ],
+      [
+        "CYCA2_3",
+        "E2Fa"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fa"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fc"
+      ],
+      [
+        "CYCB1_1",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fb",
+        "E2Fc"
+      ],
+      [
+        "CYCD3_1",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fb",
+        "RBR"
+      ],
+      [
+        "CDKB1_1",
+        "SCF"
+      ],
+      [
+        "E2Fe",
+        "MYB77"
+      ],
+      [
+        "CYCA2_3",
+        "E2Fc"
+      ],
+      [
+        "E2Fc",
+        "KRP1"
+      ],
+      [
+        "E2Fa",
+        "E2Fc"
+      ],
+      [
+        "CDKB1_1",
+        "CYCA2_3"
+      ],
+      [
+        "APC_C",
+        "KRP1"
+      ],
+      [
+        "CYCD3_1",
+        "KRP1"
+      ],
+      [
+        "E2Fe",
+        "RBR"
+      ],
+      [
+        "CYCB1_1",
+        "MYB77"
+      ],
+      [
+        "E2Fb",
+        "KRP1"
+      ],
+      [
+        "CYCA2_3",
+        "MYB77"
+      ],
+      [
+        "KRP1",
+        "MYB3R1_4"
+      ]
+    ],
+    "triples": [
+      [
+        "CYCA2_3",
+        "MYB77",
+        "SCF"
+      ],
+      [
+        "CYCB1_1",
+        "KRP1",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fc",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fc",
+        "KRP1",
+        "RBR"
+      ],
+      [
+        "E2Fb",
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "E2Fc",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fb",
+        "KRP1"
+      ],
+      [
+        "APC_C",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "CDKB1_1",
+        "CYCA2_3",
+        "E2Fa"
+      ],
+      [
+        "CDKB1_1",
+        "MYB77",
+        "SCF"
+      ],
+      [
+        "MYB3R1_4",
+        "RBR",
+        "SCF"
+      ],
+      [
+        "APC_C",
+        "CYCD3_1",
+        "E2Fc"
+      ],
+      [
+        "CYCD3_1",
+        "KRP1",
+        "SCF"
+      ],
+      [
+        "CDKB1_1",
+        "CYCA2_3",
+        "E2Fc"
+      ],
+      [
+        "E2Fc",
+        "KRP1",
+        "MYB77"
+      ],
+      [
+        "E2Fe",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "KRP1",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fb",
+        "RBR"
+      ],
+      [
+        "E2Fb",
+        "KRP1",
+        "MYB3R1_4"
+      ],
+      [
+        "CYCD3_1",
+        "KRP1",
+        "RBR"
+      ],
+      [
+        "CYCD3_1",
+        "MYB3R1_4",
+        "SCF"
+      ],
+      [
+        "APC_C",
+        "E2Fc",
+        "RBR"
+      ],
+      [
+        "APC_C",
+        "CYCD3_1",
+        "KRP1"
+      ],
+      [
+        "KRP1",
+        "RBR",
+        "SCF"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fa",
+        "SCF"
+      ],
+      [
+        "APC_C",
+        "E2Fb",
+        "E2Fc"
+      ],
+      [
+        "APC_C",
+        "E2Fb",
+        "MYB3R1_4"
+      ],
+      [
+        "CDKB1_1",
+        "CYCA2_3",
+        "MYB77"
+      ],
+      [
+        "E2Fa",
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "E2Fb",
+        "E2Fc",
+        "MYB3R1_4"
+      ],
+      [
+        "APC_C",
+        "KRP1",
+        "RBR"
+      ],
+      [
+        "CDKB1_1",
+        "CYCA2_3",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fa",
+        "RBR",
+        "SCF"
+      ],
+      [
+        "CYCD3_1",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "APC_C",
+        "E2Fb",
+        "KRP1"
+      ],
+      [
+        "APC_C",
+        "KRP1",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fa",
+        "MYB3R1_4"
+      ],
+      [
+        "MYB3R1_4",
+        "MYB77",
+        "SCF"
+      ],
+      [
+        "KRP1",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "APC_C",
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "APC_C",
+        "KRP1",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fb",
+        "KRP1",
+        "MYB77"
+      ],
+      [
+        "APC_C",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fa",
+        "KRP1"
+      ],
+      [
+        "APC_C",
+        "E2Fc",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "KRP1",
+        "MYB77"
+      ],
+      [
+        "E2Fa",
+        "E2Fe",
+        "MYB77"
+      ],
+      [
+        "APC_C",
+        "CYCD3_1",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fb",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "CDKB1_1",
+        "MYB3R1_4",
+        "SCF"
+      ],
+      [
+        "E2Fa",
+        "E2Fe",
+        "MYB3R1_4"
+      ],
+      [
+        "APC_C",
+        "CYCD3_1",
+        "MYB77"
+      ],
+      [
+        "E2Fa",
+        "KRP1",
+        "RBR"
+      ],
+      [
+        "E2Fa",
+        "E2Fe",
+        "RBR"
+      ],
+      [
+        "CYCD3_1",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "E2Fb",
+        "E2Fc",
+        "KRP1"
+      ],
+      [
+        "CYCB1_1",
+        "KRP1",
+        "MYB3R1_4"
+      ],
+      [
+        "CYCA2_3",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "E2Fa",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "APC_C",
+        "CYCD3_1",
+        "RBR"
+      ],
+      [
+        "APC_C",
+        "E2Fc",
+        "KRP1"
+      ],
+      [
+        "E2Fb",
+        "E2Fc",
+        "RBR"
+      ],
+      [
+        "MYB3R1_4",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "E2Fc",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "CDKB1_1",
+        "CYCA2_3",
+        "SCF"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fb",
+        "MYB77"
+      ],
+      [
+        "E2Fa",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "CYCD3_1",
+        "RBR",
+        "SCF"
+      ],
+      [
+        "APC_C",
+        "E2Fc",
+        "MYB3R1_4"
+      ],
+      [
+        "KRP1",
+        "MYB3R1_4",
+        "SCF"
+      ],
+      [
+        "E2Fb",
+        "E2Fc",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fb",
+        "E2Fc"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fa",
+        "RBR"
+      ],
+      [
+        "E2Fe",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fc",
+        "MYB77"
+      ],
+      [
+        "E2Fb",
+        "MYB77",
+        "RBR"
+      ],
+      [
+        "KRP1",
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "E2Fe",
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "APC_C",
+        "E2Fb",
+        "RBR"
+      ],
+      [
+        "E2Fa",
+        "KRP1",
+        "SCF"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fc",
+        "RBR"
+      ],
+      [
+        "E2Fc",
+        "KRP1",
+        "MYB3R1_4"
+      ],
+      [
+        "CYCD3_1",
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "CDKB1_1",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "CDKB1_1",
+        "E2Fa",
+        "E2Fc"
+      ],
+      [
+        "CYCD3_1",
+        "KRP1",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fc",
+        "MYB3R1_4",
+        "RBR"
+      ],
+      [
+        "CYCB1_1",
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fc",
+        "KRP1"
+      ],
+      [
+        "CYCD3_1",
+        "E2Fb",
+        "MYB3R1_4"
+      ],
+      [
+        "E2Fb",
+        "KRP1",
+        "RBR"
+      ],
+      [
+        "E2Fa",
+        "KRP1",
+        "MYB3R1_4"
+      ],
+      [
+        "CYCA2_3",
+        "MYB3R1_4",
+        "SCF"
+      ],
+      [
+        "APC_C",
+        "CYCD3_1",
+        "E2Fb"
+      ],
+      [
+        "E2Fa",
+        "MYB3R1_4",
+        "SCF"
+      ],
+      [
+        "CYCA2_3",
+        "E2Fa",
+        "E2Fc"
+      ],
+      [
+        "APC_C",
+        "E2Fb",
+        "MYB77"
+      ]
+    ],
+    "per_gene": {
+      "APC_C": {
+        "regulators": [
+          "E2Fa",
+          "E2Fe",
+          "MYB3R1_4",
+          "MYB77",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fe",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fe",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fe",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fe",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fe",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MYB77",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fe",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "E2Fe",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fe",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "CDKB1_1": {
+        "regulators": [
+          "CYCD3_1",
+          "E2Fb",
+          "E2Fc",
+          "KRP1",
+          "MYB3R1_4",
+          "MYB77",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.2109375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "MYB77",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": -0.0078125
+          }
+        ]
+      },
+      "CYCA2_3": {
+        "regulators": [
+          "APC_C",
+          "MYB3R1_4",
+          "MYB77"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "CYCB1_1": {
+        "regulators": [
+          "APC_C",
+          "CYCD3_1",
+          "E2Fb",
+          "E2Fc",
+          "KRP1",
+          "MYB3R1_4",
+          "MYB77",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1"
+            ],
+            "order": 2,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb"
+            ],
+            "order": 2,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": 0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.10546875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.10546875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": 0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.10546875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.10546875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.01953125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "MYB77",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.01171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 7,
+            "coefficient": -0.00390625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 8,
+            "coefficient": -0.00390625
+          }
+        ]
+      },
+      "CYCD3_1": {
+        "regulators": [
+          "SCF"
+        ],
+        "interactions": []
+      },
+      "E2Fa": {
+        "regulators": [
+          "CDKB1_1",
+          "CYCA2_3",
+          "E2Fa",
+          "E2Fc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "E2Fa"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "E2Fa"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "E2Fa"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "E2Fa",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "E2Fa",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "E2Fa",
+              "E2Fc"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "E2Fb": {
+        "regulators": [
+          "E2Fa",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "E2Fa",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "E2Fc": {
+        "regulators": [
+          "CYCD3_1",
+          "E2Fa",
+          "KRP1",
+          "MYB3R1_4",
+          "RBR",
+          "SCF"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.078125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.109375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.109375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": -0.078125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": 0.078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": -0.078125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "RBR",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "RBR",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "RBR",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "RBR",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "RBR",
+              "SCF"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR",
+              "SCF"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          }
+        ]
+      },
+      "E2Fe": {
+        "regulators": [
+          "CYCD3_1",
+          "E2Fb",
+          "E2Fc",
+          "KRP1",
+          "MYB77",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 2,
+            "coefficient": 0.078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": 0.171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "MYB77",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "E2Fc",
+              "KRP1",
+              "MYB77",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          }
+        ]
+      },
+      "KRP1": {
+        "regulators": [
+          "CDKB1_1",
+          "CYCA2_3",
+          "MYB3R1_4",
+          "MYB77",
+          "SCF"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.21875
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "MYB3R1_4",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MYB77",
+              "SCF"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "MYB77",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "MYB77",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "MYB77",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77",
+              "SCF"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "MYB3R1_4",
+              "MYB77",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CYCA2_3",
+              "MYB3R1_4",
+              "MYB77",
+              "SCF"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CDKB1_1",
+              "CYCA2_3",
+              "MYB3R1_4",
+              "MYB77",
+              "SCF"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "MYB3R1_4": {
+        "regulators": [
+          "CYCB1_1",
+          "KRP1",
+          "MYB3R1_4",
+          "MYB77"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CYCB1_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CYCB1_1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CYCB1_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CYCB1_1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CYCB1_1",
+              "KRP1",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CYCB1_1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CYCB1_1",
+              "KRP1",
+              "MYB3R1_4",
+              "MYB77"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "MYB77": {
+        "regulators": [
+          "CYCD3_1",
+          "E2Fb",
+          "KRP1",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "RBR": {
+        "regulators": [
+          "CYCD3_1",
+          "E2Fa",
+          "KRP1",
+          "MYB3R1_4",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.15625
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fa",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "SCF": {
+        "regulators": [
+          "APC_C",
+          "CYCD3_1",
+          "E2Fb",
+          "KRP1",
+          "MYB3R1_4",
+          "RBR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb"
+            ],
+            "order": 2,
+            "coefficient": -0.078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.171875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": -0.078125
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.078125
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "APC_C",
+              "CYCD3_1",
+              "E2Fb",
+              "KRP1",
+              "MYB3R1_4",
+              "RBR"
+            ],
+            "order": 6,
+            "coefficient": -0.015625
+          }
+        ]
+      }
+    },
+    "n_pairwise": 58,
+    "n_triples": 97,
+    "pairwise_strengths": {
+      "['E2Fa', 'E2Fe']": 0.03125,
+      "['E2Fa', 'MYB3R1_4']": 0.234375,
+      "['E2Fe', 'MYB3R1_4']": 0.09375,
+      "['E2Fa', 'MYB77']": 0.03125,
+      "['E2Fe', 'MYB77']": 0.09375,
+      "['MYB3R1_4', 'MYB77']": 0.81640625,
+      "['E2Fa', 'RBR']": 0.484375,
+      "['E2Fe', 'RBR']": 0.03125,
+      "['MYB3R1_4', 'RBR']": 0.31640625,
+      "['MYB77', 'RBR']": 0.11328125,
+      "['CYCD3_1', 'E2Fb']": 0.10546875,
+      "['CYCD3_1', 'E2Fc']": 0.02734375,
+      "['E2Fb', 'E2Fc']": 0.13671875,
+      "['CYCD3_1', 'KRP1']": 0.33984375,
+      "['E2Fb', 'KRP1']": 0.10546875,
+      "['E2Fc', 'KRP1']": 0.02734375,
+      "['CYCD3_1', 'MYB3R1_4']": 0.16796875,
+      "['E2Fb', 'MYB3R1_4']": 0.13671875,
+      "['E2Fc', 'MYB3R1_4']": 0.05859375,
+      "['KRP1', 'MYB3R1_4']": 0.23046875,
+      "['CYCD3_1', 'MYB77']": 0.02734375,
+      "['E2Fb', 'MYB77']": 0.13671875,
+      "['E2Fc', 'MYB77']": 0.23046875,
+      "['KRP1', 'MYB77']": 0.08984375,
+      "['CYCD3_1', 'RBR']": 0.15234375,
+      "['E2Fb', 'RBR']": 0.31640625,
+      "['E2Fc', 'RBR']": 0.08203125,
+      "['KRP1', 'RBR']": 0.15234375,
+      "['APC_C', 'MYB3R1_4']": 0.40234375,
+      "['APC_C', 'MYB77']": 0.23046875,
+      "['APC_C', 'CYCD3_1']": 0.01953125,
+      "['APC_C', 'E2Fb']": 0.09765625,
+      "['APC_C', 'E2Fc']": 0.01953125,
+      "['APC_C', 'KRP1']": 0.01953125,
+      "['APC_C', 'RBR']": 0.05859375,
+      "['CDKB1_1', 'CYCA2_3']": 0.28125,
+      "['CDKB1_1', 'E2Fa']": 0.0625,
+      "['CYCA2_3', 'E2Fa']": 0.0625,
+      "['CDKB1_1', 'E2Fc']": 0.0625,
+      "['CYCA2_3', 'E2Fc']": 0.0625,
+      "['E2Fa', 'E2Fc']": 0.1875,
+      "['CYCD3_1', 'E2Fa']": 0.046875,
+      "['E2Fa', 'KRP1']": 0.046875,
+      "['CYCD3_1', 'SCF']": 0.078125,
+      "['E2Fa', 'SCF']": 0.015625,
+      "['KRP1', 'SCF']": 0.078125,
+      "['MYB3R1_4', 'SCF']": 0.078125,
+      "['RBR', 'SCF']": 0.015625,
+      "['CDKB1_1', 'MYB3R1_4']": 0.03125,
+      "['CYCA2_3', 'MYB3R1_4']": 0.03125,
+      "['CDKB1_1', 'MYB77']": 0.03125,
+      "['CYCA2_3', 'MYB77']": 0.03125,
+      "['CDKB1_1', 'SCF']": 0.09375,
+      "['CYCA2_3', 'SCF']": 0.09375,
+      "['MYB77', 'SCF']": 0.03125,
+      "['CYCB1_1', 'KRP1']": 0.0625,
+      "['CYCB1_1', 'MYB3R1_4']": 0.0625,
+      "['CYCB1_1', 'MYB77']": 0.0625
+    },
+    "local_energy_spectrum": [
+      0.554379284415221,
+      0.30352021544487967,
+      0.1023188304420817,
+      0.03036688584219362,
+      0.007576419977616117,
+      0.001565123111359821,
+      0.00024482372691662,
+      2.623111359820929e-05,
+      2.1859261331841076e-06
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 8388608,
+    "total_fixed_point": 7013796,
+    "total_cycling": 1374812,
+    "cycling_fraction": 0.16389036178588867
+  },
+  "n_unique_values": 78,
+  "total_variance": 0.05231323387052993,
+  "timestamp": "2026-07-28T16:05:42.348409+00:00"
+}

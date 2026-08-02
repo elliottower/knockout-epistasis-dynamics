@@ -1,0 +1,3812 @@
+{
+  "model": "pair_rule_module",
+  "n_nodes": 11,
+  "node_names": [
+    "Eve_b1",
+    "Eve_b2",
+    "Eve_b3",
+    "Ftz_b1",
+    "Ftz_b2",
+    "Odd",
+    "Ppa",
+    "Prd_b1",
+    "Prd_b2",
+    "Run",
+    "Slp"
+  ],
+  "output_nodes": [
+    "Eve_b1"
+  ],
+  "interaction_graph": {
+    "Eve_b1": [
+      {
+        "regulator": "Eve_b2",
+        "sign": 1
+      },
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Prd_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Run",
+        "sign": -1
+      },
+      {
+        "regulator": "Slp",
+        "sign": -1
+      }
+    ],
+    "Eve_b2": [
+      {
+        "regulator": "Eve_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Eve_b3",
+        "sign": 1
+      },
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Prd_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Run",
+        "sign": -1
+      },
+      {
+        "regulator": "Slp",
+        "sign": -1
+      }
+    ],
+    "Eve_b3": [
+      {
+        "regulator": "Eve_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Eve_b2",
+        "sign": 1
+      },
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Prd_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Run",
+        "sign": -1
+      },
+      {
+        "regulator": "Slp",
+        "sign": -1
+      }
+    ],
+    "Ftz_b1": [
+      {
+        "regulator": "Eve_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Eve_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Ftz_b2",
+        "sign": 1
+      },
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Slp",
+        "sign": -1
+      }
+    ],
+    "Ftz_b2": [
+      {
+        "regulator": "Eve_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Eve_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Ftz_b1",
+        "sign": 1
+      },
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Slp",
+        "sign": -1
+      }
+    ],
+    "Odd": [
+      {
+        "regulator": "Eve_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Prd_b1",
+        "sign": -1
+      }
+    ],
+    "Ppa": [
+      {
+        "regulator": "Eve_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Eve_b2",
+        "sign": -1
+      }
+    ],
+    "Prd_b1": [
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Prd_b2",
+        "sign": 1
+      }
+    ],
+    "Prd_b2": [
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Ppa",
+        "sign": -1
+      },
+      {
+        "regulator": "Prd_b1",
+        "sign": 1
+      }
+    ],
+    "Run": [
+      {
+        "regulator": "Eve_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Eve_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Odd",
+        "sign": -1
+      },
+      {
+        "regulator": "Prd_b1",
+        "sign": 1
+      }
+    ],
+    "Slp": [
+      {
+        "regulator": "Eve_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Eve_b2",
+        "sign": -1
+      },
+      {
+        "regulator": "Ftz_b1",
+        "sign": -1
+      },
+      {
+        "regulator": "Odd",
+        "sign": -1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Eve_b1",
+        "Odd"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b3"
+      ],
+      [
+        "Eve_b1",
+        "Slp"
+      ],
+      [
+        "Ftz_b2",
+        "Odd"
+      ],
+      [
+        "Ftz_b1",
+        "Ftz_b2"
+      ],
+      [
+        "Eve_b2",
+        "Slp"
+      ],
+      [
+        "Eve_b3",
+        "Run"
+      ],
+      [
+        "Eve_b2",
+        "Run"
+      ],
+      [
+        "Eve_b3",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Prd_b1"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2"
+      ],
+      [
+        "Prd_b1",
+        "Run"
+      ],
+      [
+        "Ppa",
+        "Prd_b1"
+      ],
+      [
+        "Prd_b1",
+        "Slp"
+      ],
+      [
+        "Eve_b3",
+        "Prd_b1"
+      ],
+      [
+        "Odd",
+        "Prd_b1"
+      ],
+      [
+        "Ftz_b1",
+        "Slp"
+      ],
+      [
+        "Odd",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Run"
+      ],
+      [
+        "Eve_b1",
+        "Ftz_b2"
+      ],
+      [
+        "Ftz_b1",
+        "Odd"
+      ],
+      [
+        "Prd_b1",
+        "Prd_b2"
+      ],
+      [
+        "Eve_b3",
+        "Odd"
+      ],
+      [
+        "Odd",
+        "Prd_b2"
+      ],
+      [
+        "Eve_b2",
+        "Prd_b1"
+      ],
+      [
+        "Eve_b1",
+        "Ftz_b1"
+      ],
+      [
+        "Eve_b2",
+        "Ftz_b2"
+      ],
+      [
+        "Odd",
+        "Run"
+      ],
+      [
+        "Eve_b2",
+        "Odd"
+      ],
+      [
+        "Eve_b2",
+        "Ftz_b1"
+      ],
+      [
+        "Odd",
+        "Ppa"
+      ],
+      [
+        "Ftz_b2",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Eve_b3"
+      ],
+      [
+        "Run",
+        "Slp"
+      ]
+    ],
+    "triples": [
+      [
+        "Odd",
+        "Prd_b1",
+        "Run"
+      ],
+      [
+        "Eve_b2",
+        "Ftz_b1",
+        "Slp"
+      ],
+      [
+        "Odd",
+        "Ppa",
+        "Prd_b1"
+      ],
+      [
+        "Eve_b2",
+        "Eve_b3",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Ftz_b1",
+        "Odd"
+      ],
+      [
+        "Eve_b2",
+        "Eve_b3",
+        "Prd_b1"
+      ],
+      [
+        "Prd_b1",
+        "Run",
+        "Slp"
+      ],
+      [
+        "Ftz_b2",
+        "Odd",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Eve_b3",
+        "Run"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2",
+        "Run"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b3",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Ftz_b1",
+        "Odd"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2",
+        "Prd_b1"
+      ],
+      [
+        "Eve_b1",
+        "Ftz_b2",
+        "Odd"
+      ],
+      [
+        "Eve_b1",
+        "Ftz_b1",
+        "Ftz_b2"
+      ],
+      [
+        "Eve_b3",
+        "Prd_b1",
+        "Run"
+      ],
+      [
+        "Eve_b2",
+        "Prd_b1",
+        "Slp"
+      ],
+      [
+        "Eve_b3",
+        "Run",
+        "Slp"
+      ],
+      [
+        "Ftz_b1",
+        "Ftz_b2",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Prd_b1",
+        "Run"
+      ],
+      [
+        "Eve_b3",
+        "Prd_b1",
+        "Slp"
+      ],
+      [
+        "Ftz_b1",
+        "Odd",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Odd",
+        "Run"
+      ],
+      [
+        "Eve_b3",
+        "Odd",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b3",
+        "Prd_b1"
+      ],
+      [
+        "Eve_b2",
+        "Ftz_b2",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Prd_b1",
+        "Run"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2",
+        "Odd"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2",
+        "Ftz_b1"
+      ],
+      [
+        "Eve_b2",
+        "Run",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Ftz_b1",
+        "Ftz_b2"
+      ],
+      [
+        "Odd",
+        "Prd_b1",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Odd",
+        "Prd_b1"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b3",
+        "Run"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b3",
+        "Odd"
+      ],
+      [
+        "Eve_b2",
+        "Ftz_b2",
+        "Odd"
+      ],
+      [
+        "Odd",
+        "Prd_b1",
+        "Prd_b2"
+      ],
+      [
+        "Eve_b3",
+        "Odd",
+        "Prd_b1"
+      ],
+      [
+        "Odd",
+        "Run",
+        "Slp"
+      ],
+      [
+        "Eve_b2",
+        "Eve_b3",
+        "Odd"
+      ],
+      [
+        "Ftz_b1",
+        "Ftz_b2",
+        "Odd"
+      ],
+      [
+        "Eve_b2",
+        "Odd",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Odd",
+        "Run"
+      ],
+      [
+        "Eve_b3",
+        "Odd",
+        "Run"
+      ],
+      [
+        "Eve_b1",
+        "Ftz_b2",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Odd",
+        "Prd_b1"
+      ],
+      [
+        "Eve_b1",
+        "Ftz_b1",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Odd",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2",
+        "Ftz_b2"
+      ],
+      [
+        "Eve_b1",
+        "Prd_b1",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Run",
+        "Slp"
+      ],
+      [
+        "Eve_b1",
+        "Eve_b2",
+        "Eve_b3"
+      ]
+    ],
+    "per_gene": {
+      "Eve_b1": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Odd",
+          "Prd_b1",
+          "Run",
+          "Slp"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.15625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Run",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "Eve_b2": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Eve_b3",
+          "Odd",
+          "Prd_b1",
+          "Run",
+          "Slp"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.1171875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.1171875
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3"
+            ],
+            "order": 2,
+            "coefficient": 0.1171875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3"
+            ],
+            "order": 3,
+            "coefficient": -0.1171875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Run"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Run",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Eve_b3",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 7,
+            "coefficient": -0.0078125
+          }
+        ]
+      },
+      "Eve_b3": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Odd",
+          "Prd_b1",
+          "Run",
+          "Slp"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Run",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1",
+              "Run",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": -0.015625
+          }
+        ]
+      },
+      "Ftz_b1": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Ftz_b1",
+          "Ftz_b2",
+          "Odd",
+          "Slp"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Ftz_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.203125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Ftz_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.140625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Ftz_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          }
+        ]
+      },
+      "Ftz_b2": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Ftz_b1",
+          "Odd",
+          "Slp"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Slp"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd",
+              "Slp"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "Odd": {
+        "regulators": [
+          "Eve_b1",
+          "Prd_b1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Ppa": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Prd_b1": {
+        "regulators": [
+          "Odd",
+          "Prd_b1",
+          "Prd_b2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Prd_b1",
+              "Prd_b2"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1",
+              "Prd_b2"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Prd_b2": {
+        "regulators": [
+          "Odd",
+          "Ppa",
+          "Prd_b1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Odd",
+              "Ppa"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Ppa",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Ppa",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "Run": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Odd",
+          "Prd_b1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd",
+              "Prd_b1"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "Slp": {
+        "regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Ftz_b1",
+          "Odd"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Eve_b1",
+              "Eve_b2",
+              "Ftz_b1",
+              "Odd"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      }
+    },
+    "n_pairwise": 34,
+    "n_triples": 53,
+    "pairwise_strengths": {
+      "['Eve_b1', 'Eve_b2']": 0.7421875,
+      "['Eve_b1', 'Odd']": 0.2734375,
+      "['Eve_b2', 'Odd']": 0.2578125,
+      "['Eve_b1', 'Prd_b1']": 0.4140625,
+      "['Odd', 'Prd_b1']": 0.5390625,
+      "['Eve_b1', 'Run']": 0.0703125,
+      "['Eve_b2', 'Run']": 0.0546875,
+      "['Odd', 'Run']": 0.0703125,
+      "['Eve_b1', 'Slp']": 0.1484375,
+      "['Eve_b2', 'Slp']": 0.1953125,
+      "['Odd', 'Slp']": 0.3671875,
+      "['Prd_b1', 'Slp']": 0.1015625,
+      "['Run', 'Slp']": 0.0703125,
+      "['Eve_b1', 'Eve_b3']": 0.1171875,
+      "['Eve_b2', 'Eve_b3']": 0.1171875,
+      "['Eve_b3', 'Odd']": 0.0078125,
+      "['Eve_b2', 'Prd_b1']": 0.0859375,
+      "['Eve_b3', 'Prd_b1']": 0.0078125,
+      "['Eve_b3', 'Run']": 0.0078125,
+      "['Prd_b1', 'Run']": 0.0390625,
+      "['Eve_b3', 'Slp']": 0.0078125,
+      "['Eve_b1', 'Ftz_b1']": 0.109375,
+      "['Eve_b2', 'Ftz_b1']": 0.109375,
+      "['Eve_b1', 'Ftz_b2']": 0.015625,
+      "['Eve_b2', 'Ftz_b2']": 0.015625,
+      "['Ftz_b1', 'Ftz_b2']": 0.203125,
+      "['Ftz_b1', 'Odd']": 0.328125,
+      "['Ftz_b2', 'Odd']": 0.046875,
+      "['Ftz_b1', 'Slp']": 0.140625,
+      "['Ftz_b2', 'Slp']": 0.046875,
+      "['Odd', 'Prd_b2']": 0.125,
+      "['Prd_b1', 'Prd_b2']": 0.125,
+      "['Odd', 'Ppa']": 0.125,
+      "['Ppa', 'Prd_b1']": 0.125
+    },
+    "local_energy_spectrum": [
+      0.4561002764127764,
+      0.30649186117936117,
+      0.17438958845208846,
+      0.048890509828009826,
+      0.011728347665847665,
+      0.0020922911547911547,
+      0.0002879299754299754,
+      1.9195331695331695e-05
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 1048576,
+    "total_fixed_point": 861520,
+    "total_cycling": 187056,
+    "cycling_fraction": 0.1783905029296875
+  },
+  "n_unique_values": 62,
+  "total_variance": 0.08951397611235734,
+  "timestamp": "2026-07-28T16:57:52.837708+00:00"
+}

@@ -1,0 +1,6579 @@
+{
+  "model": "fanconi_anemia",
+  "n_nodes": 15,
+  "node_names": [
+    "ADD",
+    "ATM",
+    "ATR",
+    "CHKREC",
+    "DSB",
+    "FAHRR",
+    "FANCD2I",
+    "FAcore",
+    "HRR2",
+    "ICL",
+    "NHEJ",
+    "NUC1",
+    "NUC2",
+    "TLS",
+    "p53"
+  ],
+  "output_nodes": [
+    "CHKREC"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "DSB",
+        "FAcore"
+      ],
+      [
+        "FAHRR",
+        "TLS"
+      ],
+      [
+        "ADD",
+        "HRR2"
+      ],
+      [
+        "DSB",
+        "ICL"
+      ],
+      [
+        "FAcore",
+        "NUC1"
+      ],
+      [
+        "FAHRR",
+        "NUC2"
+      ],
+      [
+        "DSB",
+        "FANCD2I"
+      ],
+      [
+        "NHEJ",
+        "TLS"
+      ],
+      [
+        "ICL",
+        "NUC1"
+      ],
+      [
+        "ATM",
+        "p53"
+      ],
+      [
+        "ATM",
+        "CHKREC"
+      ],
+      [
+        "ADD",
+        "FAHRR"
+      ],
+      [
+        "FAHRR",
+        "ICL"
+      ],
+      [
+        "ATM",
+        "ICL"
+      ],
+      [
+        "DSB",
+        "TLS"
+      ],
+      [
+        "ATR",
+        "FANCD2I"
+      ],
+      [
+        "CHKREC",
+        "TLS"
+      ],
+      [
+        "CHKREC",
+        "ICL"
+      ],
+      [
+        "ATM",
+        "NUC1"
+      ],
+      [
+        "ICL",
+        "p53"
+      ],
+      [
+        "CHKREC",
+        "DSB"
+      ],
+      [
+        "ATR",
+        "FAcore"
+      ],
+      [
+        "FAcore",
+        "p53"
+      ],
+      [
+        "ADD",
+        "DSB"
+      ],
+      [
+        "FAHRR",
+        "HRR2"
+      ],
+      [
+        "CHKREC",
+        "NHEJ"
+      ],
+      [
+        "FANCD2I",
+        "p53"
+      ],
+      [
+        "DSB",
+        "NHEJ"
+      ],
+      [
+        "ICL",
+        "NHEJ"
+      ],
+      [
+        "NUC2",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "NHEJ"
+      ],
+      [
+        "FAHRR",
+        "NUC1"
+      ],
+      [
+        "CHKREC",
+        "HRR2"
+      ],
+      [
+        "FAHRR",
+        "NHEJ"
+      ],
+      [
+        "ATM",
+        "ATR"
+      ],
+      [
+        "DSB",
+        "NUC2"
+      ],
+      [
+        "ADD",
+        "NHEJ"
+      ],
+      [
+        "ICL",
+        "TLS"
+      ],
+      [
+        "NHEJ",
+        "NUC1"
+      ],
+      [
+        "CHKREC",
+        "FANCD2I"
+      ],
+      [
+        "ATR",
+        "NUC1"
+      ],
+      [
+        "FAcore",
+        "ICL"
+      ],
+      [
+        "DSB",
+        "FAHRR"
+      ],
+      [
+        "NUC1",
+        "NUC2"
+      ],
+      [
+        "NHEJ",
+        "NUC2"
+      ],
+      [
+        "CHKREC",
+        "FAHRR"
+      ],
+      [
+        "HRR2",
+        "NHEJ"
+      ],
+      [
+        "ICL",
+        "NUC2"
+      ],
+      [
+        "ATM",
+        "FANCD2I"
+      ],
+      [
+        "ADD",
+        "CHKREC"
+      ],
+      [
+        "FANCD2I",
+        "FAcore"
+      ],
+      [
+        "FANCD2I",
+        "NUC1"
+      ],
+      [
+        "CHKREC",
+        "FAcore"
+      ],
+      [
+        "FANCD2I",
+        "ICL"
+      ],
+      [
+        "ATM",
+        "FAcore"
+      ],
+      [
+        "ADD",
+        "TLS"
+      ],
+      [
+        "ADD",
+        "ICL"
+      ],
+      [
+        "DSB",
+        "HRR2"
+      ],
+      [
+        "ATR",
+        "p53"
+      ],
+      [
+        "CHKREC",
+        "NUC2"
+      ],
+      [
+        "ATR",
+        "NHEJ"
+      ],
+      [
+        "NUC1",
+        "p53"
+      ],
+      [
+        "HRR2",
+        "ICL"
+      ],
+      [
+        "HRR2",
+        "TLS"
+      ],
+      [
+        "HRR2",
+        "NUC1"
+      ],
+      [
+        "ATR",
+        "ICL"
+      ],
+      [
+        "NUC1",
+        "TLS"
+      ],
+      [
+        "HRR2",
+        "NUC2"
+      ],
+      [
+        "ATR",
+        "DSB"
+      ],
+      [
+        "ATR",
+        "CHKREC"
+      ],
+      [
+        "FANCD2I",
+        "NHEJ"
+      ]
+    ],
+    "triples": [
+      [
+        "ATR",
+        "FANCD2I",
+        "NUC1"
+      ],
+      [
+        "DSB",
+        "ICL",
+        "NHEJ"
+      ],
+      [
+        "ADD",
+        "FAHRR",
+        "HRR2"
+      ],
+      [
+        "ADD",
+        "CHKREC",
+        "NHEJ"
+      ],
+      [
+        "FANCD2I",
+        "FAcore",
+        "NUC1"
+      ],
+      [
+        "ADD",
+        "DSB",
+        "HRR2"
+      ],
+      [
+        "ADD",
+        "CHKREC",
+        "HRR2"
+      ],
+      [
+        "ADD",
+        "FAHRR",
+        "NHEJ"
+      ],
+      [
+        "CHKREC",
+        "FAHRR",
+        "HRR2"
+      ],
+      [
+        "FAHRR",
+        "NUC2",
+        "TLS"
+      ],
+      [
+        "FAHRR",
+        "HRR2",
+        "ICL"
+      ],
+      [
+        "CHKREC",
+        "ICL",
+        "NHEJ"
+      ],
+      [
+        "FANCD2I",
+        "FAcore",
+        "p53"
+      ],
+      [
+        "DSB",
+        "HRR2",
+        "ICL"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "FANCD2I"
+      ],
+      [
+        "ATR",
+        "FAcore",
+        "ICL"
+      ],
+      [
+        "ATM",
+        "FANCD2I",
+        "FAcore"
+      ],
+      [
+        "FAHRR",
+        "NHEJ",
+        "NUC1"
+      ],
+      [
+        "ATM",
+        "ATR",
+        "NUC1"
+      ],
+      [
+        "FANCD2I",
+        "ICL",
+        "NUC1"
+      ],
+      [
+        "ATR",
+        "CHKREC",
+        "NHEJ"
+      ],
+      [
+        "NHEJ",
+        "NUC1",
+        "NUC2"
+      ],
+      [
+        "ATM",
+        "FAcore",
+        "p53"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "NUC2"
+      ],
+      [
+        "ADD",
+        "ICL",
+        "NHEJ"
+      ],
+      [
+        "CHKREC",
+        "HRR2",
+        "ICL"
+      ],
+      [
+        "FAHRR",
+        "ICL",
+        "NHEJ"
+      ],
+      [
+        "ATM",
+        "ICL",
+        "NUC1"
+      ],
+      [
+        "CHKREC",
+        "ICL",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "ATR",
+        "CHKREC"
+      ],
+      [
+        "ADD",
+        "DSB",
+        "TLS"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "NHEJ"
+      ],
+      [
+        "DSB",
+        "FAHRR",
+        "HRR2"
+      ],
+      [
+        "ATR",
+        "FAcore",
+        "NUC1"
+      ],
+      [
+        "DSB",
+        "NUC2",
+        "TLS"
+      ],
+      [
+        "ATR",
+        "NUC1",
+        "p53"
+      ],
+      [
+        "ICL",
+        "NHEJ",
+        "NUC2"
+      ],
+      [
+        "DSB",
+        "ICL",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "CHKREC",
+        "NHEJ"
+      ],
+      [
+        "DSB",
+        "NHEJ",
+        "TLS"
+      ],
+      [
+        "ATR",
+        "FANCD2I",
+        "ICL"
+      ],
+      [
+        "ADD",
+        "FAHRR",
+        "ICL"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "ICL"
+      ],
+      [
+        "ADD",
+        "CHKREC",
+        "ICL"
+      ],
+      [
+        "CHKREC",
+        "FAHRR",
+        "ICL"
+      ],
+      [
+        "HRR2",
+        "ICL",
+        "NHEJ"
+      ],
+      [
+        "ICL",
+        "NUC1",
+        "p53"
+      ],
+      [
+        "ADD",
+        "HRR2",
+        "TLS"
+      ],
+      [
+        "ATR",
+        "ICL",
+        "p53"
+      ],
+      [
+        "ATM",
+        "ATR",
+        "NHEJ"
+      ],
+      [
+        "CHKREC",
+        "HRR2",
+        "NHEJ"
+      ],
+      [
+        "ATM",
+        "FANCD2I",
+        "p53"
+      ],
+      [
+        "ATM",
+        "ATR",
+        "ICL"
+      ],
+      [
+        "CHKREC",
+        "FAHRR",
+        "NHEJ"
+      ],
+      [
+        "CHKREC",
+        "NUC2",
+        "TLS"
+      ],
+      [
+        "FAHRR",
+        "HRR2",
+        "NUC2"
+      ],
+      [
+        "ADD",
+        "DSB",
+        "NHEJ"
+      ],
+      [
+        "FANCD2I",
+        "NUC1",
+        "p53"
+      ],
+      [
+        "HRR2",
+        "NHEJ",
+        "NUC1"
+      ],
+      [
+        "FAcore",
+        "NUC1",
+        "p53"
+      ],
+      [
+        "ADD",
+        "CHKREC",
+        "DSB"
+      ],
+      [
+        "ATM",
+        "CHKREC",
+        "ICL"
+      ],
+      [
+        "ADD",
+        "CHKREC",
+        "FAHRR"
+      ],
+      [
+        "ADD",
+        "HRR2",
+        "NHEJ"
+      ],
+      [
+        "FANCD2I",
+        "FAcore",
+        "ICL"
+      ],
+      [
+        "FAHRR",
+        "HRR2",
+        "NHEJ"
+      ],
+      [
+        "ATM",
+        "ATR",
+        "FAcore"
+      ],
+      [
+        "NUC1",
+        "NUC2",
+        "TLS"
+      ],
+      [
+        "ATR",
+        "CHKREC",
+        "FAcore"
+      ],
+      [
+        "HRR2",
+        "NUC1",
+        "NUC2"
+      ],
+      [
+        "ATM",
+        "ATR",
+        "FANCD2I"
+      ],
+      [
+        "DSB",
+        "ICL",
+        "NUC2"
+      ],
+      [
+        "ICL",
+        "NHEJ",
+        "TLS"
+      ],
+      [
+        "CHKREC",
+        "FANCD2I",
+        "NHEJ"
+      ],
+      [
+        "FAHRR",
+        "HRR2",
+        "TLS"
+      ],
+      [
+        "CHKREC",
+        "NHEJ",
+        "TLS"
+      ],
+      [
+        "ADD",
+        "DSB",
+        "FAHRR"
+      ],
+      [
+        "HRR2",
+        "NHEJ",
+        "NUC2"
+      ],
+      [
+        "CHKREC",
+        "FAHRR",
+        "NUC2"
+      ],
+      [
+        "DSB",
+        "HRR2",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "CHKREC",
+        "FAcore"
+      ],
+      [
+        "ATM",
+        "FANCD2I",
+        "ICL"
+      ],
+      [
+        "FAHRR",
+        "NHEJ",
+        "NUC2"
+      ],
+      [
+        "CHKREC",
+        "HRR2",
+        "NUC2"
+      ],
+      [
+        "DSB",
+        "FAHRR",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "FAcore",
+        "ICL"
+      ],
+      [
+        "ATR",
+        "CHKREC",
+        "ICL"
+      ],
+      [
+        "ATM",
+        "ICL",
+        "p53"
+      ],
+      [
+        "ADD",
+        "CHKREC",
+        "TLS"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "HRR2"
+      ],
+      [
+        "DSB",
+        "FAHRR",
+        "NHEJ"
+      ],
+      [
+        "ADD",
+        "HRR2",
+        "ICL"
+      ],
+      [
+        "ATR",
+        "CHKREC",
+        "DSB"
+      ],
+      [
+        "ADD",
+        "ICL",
+        "TLS"
+      ],
+      [
+        "ADD",
+        "NHEJ",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "FAcore",
+        "NUC1"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "FAHRR"
+      ],
+      [
+        "DSB",
+        "HRR2",
+        "NHEJ"
+      ],
+      [
+        "HRR2",
+        "ICL",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "FANCD2I",
+        "NUC1"
+      ],
+      [
+        "ADD",
+        "DSB",
+        "ICL"
+      ],
+      [
+        "ATR",
+        "ICL",
+        "NUC1"
+      ],
+      [
+        "FAHRR",
+        "ICL",
+        "NUC2"
+      ],
+      [
+        "ATR",
+        "FANCD2I",
+        "FAcore"
+      ],
+      [
+        "ADD",
+        "FAHRR",
+        "TLS"
+      ],
+      [
+        "ATR",
+        "FANCD2I",
+        "p53"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "TLS"
+      ],
+      [
+        "DSB",
+        "HRR2",
+        "NUC2"
+      ],
+      [
+        "CHKREC",
+        "DSB",
+        "FAcore"
+      ],
+      [
+        "CHKREC",
+        "FAHRR",
+        "TLS"
+      ],
+      [
+        "HRR2",
+        "NHEJ",
+        "TLS"
+      ],
+      [
+        "FAHRR",
+        "NUC1",
+        "NUC2"
+      ],
+      [
+        "ATR",
+        "FAcore",
+        "p53"
+      ],
+      [
+        "FAHRR",
+        "ICL",
+        "TLS"
+      ],
+      [
+        "DSB",
+        "FAHRR",
+        "NUC2"
+      ],
+      [
+        "CHKREC",
+        "HRR2",
+        "TLS"
+      ],
+      [
+        "FAHRR",
+        "NHEJ",
+        "TLS"
+      ],
+      [
+        "FAcore",
+        "ICL",
+        "NUC1"
+      ],
+      [
+        "DSB",
+        "FAHRR",
+        "ICL"
+      ],
+      [
+        "DSB",
+        "FANCD2I",
+        "NHEJ"
+      ],
+      [
+        "CHKREC",
+        "ICL",
+        "NUC2"
+      ],
+      [
+        "FAcore",
+        "ICL",
+        "p53"
+      ],
+      [
+        "ATR",
+        "DSB",
+        "FAcore"
+      ],
+      [
+        "FAHRR",
+        "HRR2",
+        "NUC1"
+      ],
+      [
+        "FANCD2I",
+        "ICL",
+        "p53"
+      ],
+      [
+        "NHEJ",
+        "NUC2",
+        "TLS"
+      ],
+      [
+        "ATM",
+        "ATR",
+        "p53"
+      ],
+      [
+        "ATM",
+        "NUC1",
+        "p53"
+      ]
+    ],
+    "per_gene": {
+      "ADD": {
+        "regulators": [
+          "NUC1",
+          "NUC2",
+          "TLS"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "NUC1",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "NUC2",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "NUC1",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "ATM": {
+        "regulators": [
+          "ATR",
+          "CHKREC",
+          "DSB",
+          "FAcore"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "DSB"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC",
+              "DSB"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "DSB",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC",
+              "DSB",
+              "FAcore"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "ATR": {
+        "regulators": [
+          "ATM",
+          "CHKREC",
+          "ICL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "CHKREC": {
+        "regulators": [
+          "ADD",
+          "CHKREC",
+          "DSB",
+          "FAHRR",
+          "HRR2",
+          "ICL",
+          "NHEJ",
+          "TLS"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ICL",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "ICL",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "TLS"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": -0.02734375
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 7,
+            "coefficient": 0.00390625
+          },
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "ICL",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 8,
+            "coefficient": 0.00390625
+          }
+        ]
+      },
+      "DSB": {
+        "regulators": [
+          "FAHRR",
+          "HRR2",
+          "NHEJ",
+          "NUC1",
+          "NUC2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "NHEJ",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NHEJ",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "NHEJ",
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ",
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NHEJ",
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NHEJ",
+              "NUC1",
+              "NUC2"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "FAHRR": {
+        "regulators": [
+          "CHKREC",
+          "DSB",
+          "FANCD2I",
+          "NHEJ"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FANCD2I"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FANCD2I"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FANCD2I"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FANCD2I",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FANCD2I",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FANCD2I",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "FANCD2I": {
+        "regulators": [
+          "ATM",
+          "ATR",
+          "CHKREC",
+          "DSB",
+          "FAcore"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "ATR"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "CHKREC"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "CHKREC",
+              "FAcore"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "FAcore": {
+        "regulators": [
+          "ATM",
+          "ATR",
+          "CHKREC",
+          "ICL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "ATR"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "CHKREC"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "HRR2": {
+        "regulators": [
+          "CHKREC",
+          "DSB",
+          "FAHRR",
+          "ICL",
+          "NHEJ",
+          "NUC2",
+          "TLS"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ICL",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NUC2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "ICL",
+              "NHEJ",
+              "NUC2"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "NUC2",
+              "TLS"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NHEJ",
+              "NUC2",
+              "TLS"
+            ],
+            "order": 6,
+            "coefficient": -0.015625
+          }
+        ]
+      },
+      "ICL": {
+        "regulators": [
+          "DSB",
+          "ICL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "DSB",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "NHEJ": {
+        "regulators": [
+          "CHKREC",
+          "DSB",
+          "FAHRR",
+          "HRR2",
+          "NUC2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "FAHRR",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "FAHRR",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "DSB",
+              "FAHRR",
+              "HRR2",
+              "NUC2"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "NUC1": {
+        "regulators": [
+          "FANCD2I",
+          "ICL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FANCD2I",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "NUC2": {
+        "regulators": [
+          "ATM",
+          "ATR",
+          "FANCD2I",
+          "FAcore",
+          "ICL",
+          "NUC1",
+          "p53"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "ATR"
+            ],
+            "order": 2,
+            "coefficient": -0.0703125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore"
+            ],
+            "order": 2,
+            "coefficient": -0.1015625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.0703125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": 0.0703125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0703125
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.1015625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FAcore",
+              "ICL"
+            ],
+            "order": 2,
+            "coefficient": -0.1015625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore",
+              "ICL"
+            ],
+            "order": 3,
+            "coefficient": 0.1015625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL"
+            ],
+            "order": 5,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "NUC1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ICL",
+              "NUC1"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FAcore",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ICL",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ICL",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "ICL",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "ICL",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "ICL",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "ICL",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "ICL",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "ICL",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "p53"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "NUC1",
+              "p53"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "NUC1",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "NUC1",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "NUC1",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "NUC1",
+              "p53"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATR",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "FANCD2I",
+              "FAcore",
+              "ICL",
+              "NUC1",
+              "p53"
+            ],
+            "order": 7,
+            "coefficient": 0.0078125
+          }
+        ]
+      },
+      "TLS": {
+        "regulators": [
+          "ADD",
+          "CHKREC",
+          "FAcore"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ADD",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "p53": {
+        "regulators": [
+          "ATM",
+          "ATR",
+          "CHKREC",
+          "NHEJ"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATM",
+              "ATR"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "CHKREC"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CHKREC",
+              "NHEJ"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "CHKREC",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATR",
+              "CHKREC",
+              "NHEJ"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ATM",
+              "ATR",
+              "CHKREC",
+              "NHEJ"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      }
+    },
+    "n_pairwise": 71,
+    "n_triples": 128,
+    "pairwise_strengths": {
+      "['NUC1', 'NUC2']": 0.15625,
+      "['NUC1', 'TLS']": 0.125,
+      "['NUC2', 'TLS']": 0.140625,
+      "['ATR', 'CHKREC']": 0.25,
+      "['ATR', 'DSB']": 0.0625,
+      "['CHKREC', 'DSB']": 0.19140625,
+      "['ATR', 'FAcore']": 0.1484375,
+      "['CHKREC', 'FAcore']": 0.375,
+      "['DSB', 'FAcore']": 0.0625,
+      "['ATM', 'CHKREC']": 0.3125,
+      "['ATM', 'ICL']": 0.2578125,
+      "['CHKREC', 'ICL']": 0.33203125,
+      "['ADD', 'CHKREC']": 0.25390625,
+      "['ADD', 'DSB']": 0.00390625,
+      "['ADD', 'FAHRR']": 0.00390625,
+      "['CHKREC', 'FAHRR']": 0.06640625,
+      "['DSB', 'FAHRR']": 0.08984375,
+      "['ADD', 'HRR2']": 0.00390625,
+      "['CHKREC', 'HRR2']": 0.03515625,
+      "['DSB', 'HRR2']": 0.05859375,
+      "['FAHRR', 'HRR2']": 0.15234375,
+      "['ADD', 'ICL']": 0.00390625,
+      "['DSB', 'ICL']": 0.26953125,
+      "['FAHRR', 'ICL']": 0.01953125,
+      "['HRR2', 'ICL']": 0.00390625,
+      "['ADD', 'NHEJ']": 0.00390625,
+      "['CHKREC', 'NHEJ']": 0.12890625,
+      "['DSB', 'NHEJ']": 0.08984375,
+      "['FAHRR', 'NHEJ']": 0.12109375,
+      "['HRR2', 'NHEJ']": 0.12109375,
+      "['ICL', 'NHEJ']": 0.01953125,
+      "['ADD', 'TLS']": 0.00390625,
+      "['CHKREC', 'TLS']": 0.01953125,
+      "['DSB', 'TLS']": 0.04296875,
+      "['FAHRR', 'TLS']": 0.04296875,
+      "['HRR2', 'TLS']": 0.02734375,
+      "['ICL', 'TLS']": 0.00390625,
+      "['NHEJ', 'TLS']": 0.04296875,
+      "['FAHRR', 'NUC1']": 0.03125,
+      "['HRR2', 'NUC1']": 0.03125,
+      "['NHEJ', 'NUC1']": 0.03125,
+      "['FAHRR', 'NUC2']": 0.09375,
+      "['HRR2', 'NUC2']": 0.0625,
+      "['NHEJ', 'NUC2']": 0.03125,
+      "['CHKREC', 'FANCD2I']": 0.0625,
+      "['DSB', 'FANCD2I']": 0.1875,
+      "['FANCD2I', 'NHEJ']": 0.0625,
+      "['ATM', 'ATR']": 0.2578125,
+      "['ATM', 'FAcore']": 0.0859375,
+      "['ATR', 'ICL']": 0.1328125,
+      "['CHKREC', 'NUC2']": 0.0625,
+      "['DSB', 'NUC2']": 0.0625,
+      "['ICL', 'NUC2']": 0.015625,
+      "['FANCD2I', 'ICL']": 0.3515625,
+      "['ATM', 'FANCD2I']": 0.0234375,
+      "['ATR', 'FANCD2I']": 0.0234375,
+      "['FANCD2I', 'FAcore']": 0.1015625,
+      "['FAcore', 'ICL']": 0.1015625,
+      "['ATM', 'NUC1']": 0.0234375,
+      "['ATR', 'NUC1']": 0.0234375,
+      "['FANCD2I', 'NUC1']": 0.0078125,
+      "['FAcore', 'NUC1']": 0.0078125,
+      "['ICL', 'NUC1']": 0.0234375,
+      "['ATM', 'p53']": 0.0234375,
+      "['ATR', 'p53']": 0.0234375,
+      "['FANCD2I', 'p53']": 0.0078125,
+      "['FAcore', 'p53']": 0.0078125,
+      "['ICL', 'p53']": 0.0234375,
+      "['NUC1', 'p53']": 0.0234375,
+      "['ATM', 'NHEJ']": 0.0625,
+      "['ATR', 'NHEJ']": 0.0625
+    },
+    "local_energy_spectrum": [
+      0.3114423206580367,
+      0.44816949838187703,
+      0.1752292340884574,
+      0.049504449838187706,
+      0.012953411542610573,
+      0.0022754854368932037,
+      0.0003708198489751888,
+      5.05663430420712e-05,
+      4.213861920172599e-06
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 16777216,
+    "total_fixed_point": 15127752,
+    "total_cycling": 1649464,
+    "cycling_fraction": 0.09831571578979492
+  },
+  "n_unique_values": 30,
+  "total_variance": 0.18956616123063869,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T19:30:37.483746+00:00"
+}

@@ -1,0 +1,467 @@
+{
+  "model": "lac_operon",
+  "n_nodes": 13,
+  "node_names": [
+    "Ge",
+    "Le",
+    "Lem",
+    "A",
+    "Am",
+    "B",
+    "C",
+    "L",
+    "Lm",
+    "M",
+    "P",
+    "R",
+    "Rm"
+  ],
+  "output_nodes": [
+    "P"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Ge",
+        "P"
+      ],
+      [
+        "A",
+        "R"
+      ],
+      [
+        "B",
+        "L"
+      ],
+      [
+        "Lem",
+        "P"
+      ],
+      [
+        "Le",
+        "P"
+      ],
+      [
+        "L",
+        "Lm"
+      ],
+      [
+        "Ge",
+        "Lem"
+      ],
+      [
+        "Ge",
+        "Le"
+      ],
+      [
+        "A",
+        "Am"
+      ],
+      [
+        "Le",
+        "Lem"
+      ],
+      [
+        "R",
+        "Rm"
+      ],
+      [
+        "C",
+        "R"
+      ],
+      [
+        "C",
+        "Rm"
+      ],
+      [
+        "Am",
+        "R"
+      ]
+    ],
+    "triples": [
+      [
+        "A",
+        "Am",
+        "R"
+      ],
+      [
+        "Ge",
+        "Lem",
+        "P"
+      ],
+      [
+        "C",
+        "R",
+        "Rm"
+      ],
+      [
+        "Ge",
+        "Le",
+        "Lem"
+      ],
+      [
+        "Ge",
+        "Le",
+        "P"
+      ],
+      [
+        "Le",
+        "Lem",
+        "P"
+      ]
+    ],
+    "per_gene": {
+      "Ge": {
+        "regulators": [
+          "Ge"
+        ],
+        "interactions": []
+      },
+      "Le": {
+        "regulators": [
+          "Le"
+        ],
+        "interactions": []
+      },
+      "Lem": {
+        "regulators": [
+          "Lem"
+        ],
+        "interactions": []
+      },
+      "A": {
+        "regulators": [
+          "B",
+          "L"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "B",
+              "L"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Am": {
+        "regulators": [
+          "L",
+          "Lm"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "L",
+              "Lm"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "B": {
+        "regulators": [
+          "M"
+        ],
+        "interactions": []
+      },
+      "C": {
+        "regulators": [
+          "Ge"
+        ],
+        "interactions": []
+      },
+      "L": {
+        "regulators": [
+          "Ge",
+          "Le",
+          "P"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Ge",
+              "Le"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Ge",
+              "P"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "Le",
+              "P"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Ge",
+              "Le",
+              "P"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "Lm": {
+        "regulators": [
+          "Ge",
+          "Le",
+          "Lem",
+          "P"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Ge",
+              "Le"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "Ge",
+              "Lem"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Le",
+              "Lem"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Ge",
+              "Le",
+              "Lem"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Ge",
+              "P"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Le",
+              "P"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Ge",
+              "Le",
+              "P"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Lem",
+              "P"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Ge",
+              "Lem",
+              "P"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Le",
+              "Lem",
+              "P"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Ge",
+              "Le",
+              "Lem",
+              "P"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "M": {
+        "regulators": [
+          "C",
+          "R",
+          "Rm"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "C",
+              "R"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C",
+              "Rm"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "R",
+              "Rm"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "C",
+              "R",
+              "Rm"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "P": {
+        "regulators": [
+          "M"
+        ],
+        "interactions": []
+      },
+      "R": {
+        "regulators": [
+          "A",
+          "Am"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "A",
+              "Am"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "Rm": {
+        "regulators": [
+          "A",
+          "Am",
+          "R"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "A",
+              "Am"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "A",
+              "R"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "Am",
+              "R"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "A",
+              "Am",
+              "R"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 14,
+    "n_triples": 6,
+    "pairwise_strengths": {
+      "['B', 'L']": 0.25,
+      "['L', 'Lm']": 0.25,
+      "['Ge', 'Le']": 0.3125,
+      "['Ge', 'P']": 0.1875,
+      "['Le', 'P']": 0.1875,
+      "['Ge', 'Lem']": 0.0625,
+      "['Le', 'Lem']": 0.0625,
+      "['Lem', 'P']": 0.0625,
+      "['C', 'R']": 0.125,
+      "['C', 'Rm']": 0.125,
+      "['R', 'Rm']": 0.125,
+      "['A', 'Am']": 0.375,
+      "['A', 'R']": 0.125,
+      "['Am', 'R']": 0.125
+    },
+    "local_energy_spectrum": [
+      0.4978448275862069,
+      0.41954022988505746,
+      0.07040229885057471,
+      0.011494252873563218,
+      0.0007183908045977011
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 4194304,
+    "total_fixed_point": 4194304,
+    "total_cycling": 0,
+    "cycling_fraction": 0.0
+  },
+  "n_unique_values": 6,
+  "total_variance": 0.163472504762467,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:44:31.710897+00:00"
+}

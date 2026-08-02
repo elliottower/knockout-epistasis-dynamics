@@ -1,0 +1,601 @@
+{
+  "model": "calzone_cellfate_reduced",
+  "n_nodes": 11,
+  "node_names": [
+    "TNF",
+    "FAS",
+    "RIP1",
+    "NFkB",
+    "C8",
+    "cIAP",
+    "ATP",
+    "C3",
+    "ROS",
+    "MOMP",
+    "MPT"
+  ],
+  "output_nodes": [
+    "C3"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "C3",
+        "NFkB"
+      ],
+      [
+        "C3",
+        "RIP1"
+      ],
+      [
+        "NFkB",
+        "ROS"
+      ],
+      [
+        "MPT",
+        "RIP1"
+      ],
+      [
+        "C3",
+        "TNF"
+      ],
+      [
+        "C8",
+        "MPT"
+      ],
+      [
+        "ATP",
+        "NFkB"
+      ],
+      [
+        "NFkB",
+        "RIP1"
+      ],
+      [
+        "NFkB",
+        "TNF"
+      ],
+      [
+        "C3",
+        "FAS"
+      ],
+      [
+        "ATP",
+        "MOMP"
+      ],
+      [
+        "FAS",
+        "NFkB"
+      ],
+      [
+        "C8",
+        "FAS"
+      ],
+      [
+        "C8",
+        "TNF"
+      ],
+      [
+        "MOMP",
+        "cIAP"
+      ],
+      [
+        "FAS",
+        "TNF"
+      ],
+      [
+        "MPT",
+        "NFkB"
+      ],
+      [
+        "NFkB",
+        "cIAP"
+      ],
+      [
+        "MOMP",
+        "NFkB"
+      ],
+      [
+        "RIP1",
+        "cIAP"
+      ],
+      [
+        "C3",
+        "cIAP"
+      ],
+      [
+        "C8",
+        "NFkB"
+      ]
+    ],
+    "triples": [
+      [
+        "C8",
+        "MPT",
+        "NFkB"
+      ],
+      [
+        "ATP",
+        "MOMP",
+        "NFkB"
+      ],
+      [
+        "FAS",
+        "NFkB",
+        "TNF"
+      ],
+      [
+        "MPT",
+        "NFkB",
+        "RIP1"
+      ],
+      [
+        "C3",
+        "NFkB",
+        "TNF"
+      ],
+      [
+        "C3",
+        "FAS",
+        "NFkB"
+      ],
+      [
+        "MOMP",
+        "NFkB",
+        "cIAP"
+      ],
+      [
+        "C3",
+        "RIP1",
+        "cIAP"
+      ],
+      [
+        "C3",
+        "FAS",
+        "TNF"
+      ],
+      [
+        "C8",
+        "FAS",
+        "TNF"
+      ]
+    ],
+    "per_gene": {
+      "TNF": {
+        "regulators": [
+          "TNF"
+        ],
+        "interactions": []
+      },
+      "FAS": {
+        "regulators": [
+          "FAS"
+        ],
+        "interactions": []
+      },
+      "RIP1": {
+        "regulators": [
+          "TNF",
+          "FAS",
+          "C8"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FAS",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C8",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C8",
+              "FAS"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C8",
+              "FAS",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "NFkB": {
+        "regulators": [
+          "RIP1",
+          "cIAP",
+          "C3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "RIP1",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "C3",
+              "RIP1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C3",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C3",
+              "RIP1",
+              "cIAP"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "C8": {
+        "regulators": [
+          "TNF",
+          "FAS",
+          "NFkB",
+          "C3"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FAS",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "NFkB",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FAS",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FAS",
+              "NFkB",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "C3",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "C3",
+              "FAS"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "C3",
+              "FAS",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "C3",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "C3",
+              "NFkB",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "C3",
+              "FAS",
+              "NFkB"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "C3",
+              "FAS",
+              "NFkB",
+              "TNF"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "cIAP": {
+        "regulators": [
+          "NFkB",
+          "cIAP",
+          "MOMP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "NFkB",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MOMP",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MOMP",
+              "cIAP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MOMP",
+              "NFkB",
+              "cIAP"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "ATP": {
+        "regulators": [
+          "MPT"
+        ],
+        "interactions": []
+      },
+      "C3": {
+        "regulators": [
+          "NFkB",
+          "ATP",
+          "MOMP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ATP",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MOMP",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "ATP",
+              "MOMP"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "ATP",
+              "MOMP",
+              "NFkB"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "ROS": {
+        "regulators": [
+          "RIP1",
+          "NFkB",
+          "MPT"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "NFkB",
+              "RIP1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MPT",
+              "RIP1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MPT",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MPT",
+              "NFkB",
+              "RIP1"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "MOMP": {
+        "regulators": [
+          "NFkB",
+          "C8",
+          "MPT"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "C8",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "MPT",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "C8",
+              "MPT"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C8",
+              "MPT",
+              "NFkB"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "MPT": {
+        "regulators": [
+          "NFkB",
+          "ROS"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "NFkB",
+              "ROS"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      }
+    },
+    "n_pairwise": 22,
+    "n_triples": 10,
+    "pairwise_strengths": {
+      "['FAS', 'TNF']": 0.1875,
+      "['C8', 'TNF']": 0.125,
+      "['C8', 'FAS']": 0.125,
+      "['RIP1', 'cIAP']": 0.125,
+      "['C3', 'RIP1']": 0.125,
+      "['C3', 'cIAP']": 0.125,
+      "['NFkB', 'TNF']": 0.0625,
+      "['FAS', 'NFkB']": 0.0625,
+      "['C3', 'TNF']": 0.0625,
+      "['C3', 'FAS']": 0.0625,
+      "['C3', 'NFkB']": 0.0625,
+      "['NFkB', 'cIAP']": 0.125,
+      "['MOMP', 'NFkB']": 0.25,
+      "['MOMP', 'cIAP']": 0.125,
+      "['ATP', 'NFkB']": 0.125,
+      "['ATP', 'MOMP']": 0.125,
+      "['NFkB', 'RIP1']": 0.125,
+      "['MPT', 'RIP1']": 0.125,
+      "['MPT', 'NFkB']": 0.25,
+      "['C8', 'NFkB']": 0.125,
+      "['C8', 'MPT']": 0.125,
+      "['NFkB', 'ROS']": 0.25
+    },
+    "local_energy_spectrum": [
+      0.4412313432835821,
+      0.44402985074626866,
+      0.08768656716417911,
+      0.026119402985074626,
+      0.0009328358208955224
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 1048576,
+    "total_fixed_point": 997383,
+    "total_cycling": 51193,
+    "cycling_fraction": 0.048821449279785156
+  },
+  "n_unique_values": 35,
+  "total_variance": 0.2245560319408671,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:39:24.068944+00:00"
+}

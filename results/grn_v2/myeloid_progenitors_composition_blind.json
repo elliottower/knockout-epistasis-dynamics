@@ -1,0 +1,593 @@
+{
+  "model": "myeloid_progenitors",
+  "n_players": 11,
+  "n_init": 512,
+  "node_names": [
+    "CEBPA",
+    "EGR_NAB",
+    "EKLF",
+    "FLI1",
+    "FOG1",
+    "GATA1",
+    "GATA2",
+    "GFI1",
+    "JUN",
+    "PU1",
+    "SCL"
+  ],
+  "timestamp": "2026-07-28T16:41:54.044065+00:00",
+  "pairwise": {
+    "n_pairs": 55,
+    "n_local_nonzero": 21,
+    "n_global_nonzero": 6,
+    "local_positive_rate": 0.38181818181818183,
+    "spearman_rho": 0.5144389094382303,
+    "spearman_pvalue": 5.872175951113131e-05,
+    "spearman_ci_95": [
+      0.27805882286489575,
+      0.7043520301414521
+    ],
+    "creation_rate": 0.42857142857142855,
+    "destruction_rate": 0.7142857142857143,
+    "created_count": 9,
+    "destroyed_count": 15,
+    "top_k": 21
+  },
+  "triples": {
+    "n_triples": 165,
+    "n_local_nonzero": 15,
+    "n_global_nonzero": 4,
+    "spearman_rho": 0.5046205000962619,
+    "spearman_pvalue": 4.814708127149751e-12,
+    "spearman_ci_95": [
+      0.2633816222924063,
+      0.7019647924409804
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.0003613978624343872,
+    "frac_energy_3plus": 0.002730424070782751
+  },
+  "energy_spectrum": {
+    "global": [
+      0.4834009646978468,
+      0.49868723113013974,
+      0.016501269731081285,
+      0.001312768869860241,
+      9.776557107190614e-05,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "local_rules": [
+      0.4596774193548387,
+      0.38306451612903225,
+      0.13306451612903225,
+      0.020161290322580645,
+      0.004032258064516129,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "GATA1",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0494384765625,
+      "local_magnitude": 0.3125,
+      "global_coefficient": 0.0494384765625
+    },
+    {
+      "pair": [
+        "FLI1",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0364990234375,
+      "local_magnitude": 0.3125,
+      "global_coefficient": 0.0364990234375
+    },
+    {
+      "pair": [
+        "FLI1",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0120849609375,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0120849609375
+    },
+    {
+      "pair": [
+        "FLI1",
+        "PU1"
+      ],
+      "global_magnitude": 0.0118408203125,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0118408203125
+    },
+    {
+      "pair": [
+        "GATA1",
+        "PU1"
+      ],
+      "global_magnitude": 0.0118408203125,
+      "local_magnitude": 0.4375,
+      "global_coefficient": -0.0118408203125
+    },
+    {
+      "pair": [
+        "GATA2",
+        "PU1"
+      ],
+      "global_magnitude": 0.0050048828125,
+      "local_magnitude": 0.3125,
+      "global_coefficient": 0.0050048828125
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "EGR_NAB"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "EKLF"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "FLI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "FOG1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "GFI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CEBPA",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "EKLF"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "FLI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "FOG1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "GFI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EGR_NAB",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "FLI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "FOG1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "GFI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "EKLF",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FLI1",
+        "FOG1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FLI1",
+        "GFI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FLI1",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FLI1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FOG1",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FOG1",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FOG1",
+        "GFI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FOG1",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FOG1",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FOG1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA1",
+        "GFI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA1",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA2",
+        "GFI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA2",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA2",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GFI1",
+        "JUN"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GFI1",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.375,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GFI1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "JUN",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "JUN",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "PU1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

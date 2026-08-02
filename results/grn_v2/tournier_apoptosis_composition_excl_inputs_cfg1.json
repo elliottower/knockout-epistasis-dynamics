@@ -1,0 +1,597 @@
+{
+  "model": "tournier_apoptosis",
+  "n_players": 11,
+  "n_original": 12,
+  "excluded_inputs": [
+    "TNF"
+  ],
+  "input_config": 1,
+  "player_names": [
+    "A20a",
+    "C3a",
+    "C8a",
+    "CARP",
+    "FLIP",
+    "IAP",
+    "IKKa",
+    "IkB",
+    "NFkB",
+    "NFkBnuc",
+    "T2"
+  ],
+  "timestamp": "2026-07-28T19:10:44.902775+00:00",
+  "pairwise": {
+    "n_pairs": 55,
+    "n_local_nonzero": 8,
+    "n_global_nonzero": 55,
+    "local_positive_rate": 0.14545454545454545,
+    "spearman_rho": 0.35600668467653884,
+    "spearman_pvalue": 0.007639747419300595,
+    "spearman_ci_95": [
+      0.10070584100890421,
+      0.5485975441168656
+    ],
+    "creation_rate": 0.5,
+    "destruction_rate": 0.0,
+    "created_count": 4,
+    "destroyed_count": 0,
+    "top_k": 8
+  },
+  "triples": {
+    "n_triples": 165,
+    "n_local_nonzero": 1,
+    "n_global_nonzero": 165,
+    "spearman_rho": 0.10922855410264272,
+    "spearman_pvalue": 0.1625393179589553,
+    "spearman_ci_95": [
+      0.09867952300201503,
+      0.20890033434184596
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.009617368115195077,
+    "frac_energy_3plus": 0.09311461610201176
+  },
+  "energy_spectrum": {
+    "global": [
+      0.1946289359668355,
+      0.4366195996473083,
+      0.2937596469387394,
+      0.058624230063311474,
+      0.010146324352258766,
+      0.00435634755721605,
+      0.0013577119239837018,
+      0.00037844088135542757,
+      0.00010428454871976614,
+      2.110611845204218e-05,
+      3.0962694629028e-06,
+      2.7573235670982035e-07
+    ],
+    "local_rules": [
+      0.4236111111111111,
+      0.4444444444444444,
+      0.09027777777777778,
+      0.041666666666666664,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "C3a",
+        "C8a"
+      ],
+      "global_magnitude": 0.157988284883045,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.157988284883045
+    },
+    {
+      "pair": [
+        "C3a",
+        "T2"
+      ],
+      "global_magnitude": 0.07295105343773252,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.07295105343773252
+    },
+    {
+      "pair": [
+        "C8a",
+        "T2"
+      ],
+      "global_magnitude": 0.07295105343773252,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.07295105343773252
+    },
+    {
+      "pair": [
+        "C3a",
+        "CARP"
+      ],
+      "global_magnitude": 0.016549373808361235,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.016549373808361235
+    },
+    {
+      "pair": [
+        "C8a",
+        "CARP"
+      ],
+      "global_magnitude": 0.016549373808361235,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.016549373808361235
+    },
+    {
+      "pair": [
+        "C3a",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.013459469023204981,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.013459469023204981
+    },
+    {
+      "pair": [
+        "C8a",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.013459469023204981,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.013459469023204981
+    },
+    {
+      "pair": [
+        "C3a",
+        "NFkB"
+      ],
+      "global_magnitude": 0.012055660429454985,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.012055660429454985
+    },
+    {
+      "pair": [
+        "C8a",
+        "NFkB"
+      ],
+      "global_magnitude": 0.012055660429454985,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.012055660429454985
+    },
+    {
+      "pair": [
+        "NFkB",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.012055660429454985,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.012055660429454985
+    },
+    {
+      "pair": [
+        "C3a",
+        "IAP"
+      ],
+      "global_magnitude": 0.010612923758370535,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.010612923758370535
+    },
+    {
+      "pair": [
+        "C8a",
+        "IAP"
+      ],
+      "global_magnitude": 0.010612923758370535,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.010612923758370535
+    },
+    {
+      "pair": [
+        "CARP",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.009103084745861235,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.009103084745861235
+    },
+    {
+      "pair": [
+        "CARP",
+        "NFkB"
+      ],
+      "global_magnitude": 0.007699276152111236,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.007699276152111236
+    },
+    {
+      "pair": [
+        "NFkB",
+        "T2"
+      ],
+      "global_magnitude": 0.007005001249767485,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.007005001249767485
+    },
+    {
+      "pair": [
+        "CARP",
+        "T2"
+      ],
+      "global_magnitude": 0.006201480683826264,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.006201480683826264
+    },
+    {
+      "pair": [
+        "NFkBnuc",
+        "T2"
+      ],
+      "global_magnitude": 0.005601192656017481,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005601192656017481
+    },
+    {
+      "pair": [
+        "C3a",
+        "IkB"
+      ],
+      "global_magnitude": 0.005333001273018976,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.005333001273018976
+    },
+    {
+      "pair": [
+        "C8a",
+        "IkB"
+      ],
+      "global_magnitude": 0.005333001273018976,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.005333001273018976
+    },
+    {
+      "pair": [
+        "IkB",
+        "NFkB"
+      ],
+      "global_magnitude": 0.005333001273018976,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.005333001273018976
+    },
+    {
+      "pair": [
+        "IkB",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.005333001273018976,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.005333001273018976
+    },
+    {
+      "pair": [
+        "IkB",
+        "T2"
+      ],
+      "global_magnitude": 0.005333001273018976,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.005333001273018976
+    },
+    {
+      "pair": [
+        "IAP",
+        "T2"
+      ],
+      "global_magnitude": 0.003837149483816965,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.003837149483816965
+    },
+    {
+      "pair": [
+        "C3a",
+        "FLIP"
+      ],
+      "global_magnitude": 0.0031763167608351932,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0031763167608351932
+    },
+    {
+      "pair": [
+        "C8a",
+        "FLIP"
+      ],
+      "global_magnitude": 0.0031763167608351932,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0031763167608351932
+    },
+    {
+      "pair": [
+        "FLIP",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0031763167608351932,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0031763167608351932
+    },
+    {
+      "pair": [
+        "FLIP",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.0031763167608351932,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0031763167608351932
+    },
+    {
+      "pair": [
+        "FLIP",
+        "T2"
+      ],
+      "global_magnitude": 0.0031763167608351932,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0031763167608351932
+    },
+    {
+      "pair": [
+        "IAP",
+        "NFkB"
+      ],
+      "global_magnitude": 0.003044564383370535,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.003044564383370535
+    },
+    {
+      "pair": [
+        "IAP",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.002495247977120535,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.002495247977120535
+    },
+    {
+      "pair": [
+        "CARP",
+        "IkB"
+      ],
+      "global_magnitude": 0.0020828792027064733,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0020828792027064733
+    },
+    {
+      "pair": [
+        "CARP",
+        "FLIP"
+      ],
+      "global_magnitude": 0.0018907637823195685,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0018907637823195685
+    },
+    {
+      "pair": [
+        "IAP",
+        "IkB"
+      ],
+      "global_magnitude": 0.001295289539155506,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.001295289539155506
+    },
+    {
+      "pair": [
+        "CARP",
+        "IAP"
+      ],
+      "global_magnitude": 0.0008502415248325898,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0008502415248325898
+    },
+    {
+      "pair": [
+        "C3a",
+        "IKKa"
+      ],
+      "global_magnitude": 0.00063229515438988,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00063229515438988
+    },
+    {
+      "pair": [
+        "C8a",
+        "IKKa"
+      ],
+      "global_magnitude": 0.00063229515438988,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00063229515438988
+    },
+    {
+      "pair": [
+        "IKKa",
+        "IkB"
+      ],
+      "global_magnitude": 0.00063229515438988,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00063229515438988
+    },
+    {
+      "pair": [
+        "IKKa",
+        "NFkB"
+      ],
+      "global_magnitude": 0.00063229515438988,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00063229515438988
+    },
+    {
+      "pair": [
+        "IKKa",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.00063229515438988,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00063229515438988
+    },
+    {
+      "pair": [
+        "IKKa",
+        "T2"
+      ],
+      "global_magnitude": 0.00063229515438988,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00063229515438988
+    },
+    {
+      "pair": [
+        "A20a",
+        "C3a"
+      ],
+      "global_magnitude": 0.0003654298328218006,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0003654298328218006
+    },
+    {
+      "pair": [
+        "A20a",
+        "C8a"
+      ],
+      "global_magnitude": 0.0003654298328218006,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003654298328218006
+    },
+    {
+      "pair": [
+        "A20a",
+        "IKKa"
+      ],
+      "global_magnitude": 0.0003654298328218006,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003654298328218006
+    },
+    {
+      "pair": [
+        "A20a",
+        "IkB"
+      ],
+      "global_magnitude": 0.0003654298328218006,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003654298328218006
+    },
+    {
+      "pair": [
+        "A20a",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0003654298328218006,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003654298328218006
+    },
+    {
+      "pair": [
+        "A20a",
+        "NFkBnuc"
+      ],
+      "global_magnitude": 0.0003654298328218006,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003654298328218006
+    },
+    {
+      "pair": [
+        "A20a",
+        "T2"
+      ],
+      "global_magnitude": 0.0003654298328218006,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003654298328218006
+    },
+    {
+      "pair": [
+        "IAP",
+        "IKKa"
+      ],
+      "global_magnitude": 0.0003642309279668905,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0003642309279668905
+    },
+    {
+      "pair": [
+        "FLIP",
+        "IkB"
+      ],
+      "global_magnitude": 0.00035471235002790215,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00035471235002790215
+    },
+    {
+      "pair": [
+        "FLIP",
+        "IKKa"
+      ],
+      "global_magnitude": 0.0002991449265252978,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002991449265252978
+    },
+    {
+      "pair": [
+        "A20a",
+        "IAP"
+      ],
+      "global_magnitude": 0.0002671741303943452,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0002671741303943452
+    },
+    {
+      "pair": [
+        "A20a",
+        "CARP"
+      ],
+      "global_magnitude": 8.31422351655506e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 8.31422351655506e-05
+    },
+    {
+      "pair": [
+        "CARP",
+        "IKKa"
+      ],
+      "global_magnitude": 7.916405087425582e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.916405087425582e-05
+    },
+    {
+      "pair": [
+        "FLIP",
+        "IAP"
+      ],
+      "global_magnitude": 4.1525704520089125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 4.1525704520089125e-05
+    },
+    {
+      "pair": [
+        "A20a",
+        "FLIP"
+      ],
+      "global_magnitude": 3.2279604957217344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 3.2279604957217344e-05
+    }
+  ]
+}

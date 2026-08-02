@@ -1,0 +1,1060 @@
+{
+  "model": "fanconi_anemia",
+  "n_players": 15,
+  "n_init": 512,
+  "node_names": [
+    "ADD",
+    "ATM",
+    "ATR",
+    "CHKREC",
+    "DSB",
+    "FAHRR",
+    "FANCD2I",
+    "FAcore",
+    "HRR2",
+    "ICL",
+    "NHEJ",
+    "NUC1",
+    "NUC2",
+    "TLS",
+    "p53"
+  ],
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T19:30:40.634537+00:00",
+  "pairwise": {
+    "n_pairs": 105,
+    "n_local_nonzero": 71,
+    "n_global_nonzero": 105,
+    "local_positive_rate": 0.6761904761904762,
+    "spearman_rho": 0.45677772959246504,
+    "spearman_pvalue": 9.690959100623505e-07,
+    "spearman_ci_95": [
+      0.29181877676996515,
+      0.595303640668942
+    ],
+    "creation_rate": 0.18309859154929578,
+    "destruction_rate": 0.0,
+    "created_count": 13,
+    "destroyed_count": 0,
+    "top_k": 71
+  },
+  "triples": {
+    "n_triples": 455,
+    "n_local_nonzero": 128,
+    "n_global_nonzero": 455,
+    "spearman_rho": 0.4117227128768954,
+    "spearman_pvalue": 4.820257361828327e-20,
+    "spearman_ci_95": [
+      0.33132399324258166,
+      0.4937730729695542
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.006117769246020926,
+    "frac_energy_3plus": 0.032272475247191644
+  },
+  "energy_spectrum": {
+    "global": [
+      0.7387620215164302,
+      0.1744688727857617,
+      0.07833830950357071,
+      0.004662902163268252,
+      0.002599921353280867,
+      0.0008131992760690906,
+      0.00022833157273401236,
+      9.396040759008412e-05,
+      2.5976038006794835e-05,
+      5.15851560190723e-06,
+      1.0650833924903502e-06,
+      2.387144169560909e-07,
+      3.8605246818031326e-08,
+      4.137051007242217e-09,
+      3.2535588450466065e-10,
+      2.223223870768553e-12
+    ],
+    "local_rules": [
+      0.3114423206580367,
+      0.44816949838187703,
+      0.1752292340884574,
+      0.049504449838187706,
+      0.012953411542610573,
+      0.0022754854368932037,
+      0.0003708198489751888,
+      5.05663430420712e-05,
+      4.213861920172599e-06,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12",
+      "order-13",
+      "order-14",
+      "order-15"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "CHKREC",
+        "DSB"
+      ],
+      "global_magnitude": 0.23217438498100676,
+      "local_magnitude": 0.19140625,
+      "global_coefficient": 0.23217438498100676
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.017825615018993234,
+      "local_magnitude": 0.12890625,
+      "global_coefficient": -0.017825615018993234
+    },
+    {
+      "pair": [
+        "DSB",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.017825615018993234,
+      "local_magnitude": 0.08984375,
+      "global_coefficient": -0.017825615018993234
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "HRR2"
+      ],
+      "global_magnitude": 0.01782561501899323,
+      "local_magnitude": 0.03515625,
+      "global_coefficient": -0.01782561501899323
+    },
+    {
+      "pair": [
+        "DSB",
+        "HRR2"
+      ],
+      "global_magnitude": 0.01782561501899323,
+      "local_magnitude": 0.05859375,
+      "global_coefficient": -0.01782561501899323
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "HRR2"
+      ],
+      "global_magnitude": 0.01782561501899323,
+      "local_magnitude": 0.15234375,
+      "global_coefficient": -0.01782561501899323
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.01782561501899323,
+      "local_magnitude": 0.12109375,
+      "global_coefficient": -0.01782561501899323
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "FAHRR"
+      ],
+      "global_magnitude": 0.017825615018993227,
+      "local_magnitude": 0.06640625,
+      "global_coefficient": -0.017825615018993227
+    },
+    {
+      "pair": [
+        "DSB",
+        "FAHRR"
+      ],
+      "global_magnitude": 0.017825615018993227,
+      "local_magnitude": 0.08984375,
+      "global_coefficient": -0.017825615018993227
+    },
+    {
+      "pair": [
+        "HRR2",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.017825615018993227,
+      "local_magnitude": 0.12109375,
+      "global_coefficient": -0.017825615018993227
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "FANCD2I"
+      ],
+      "global_magnitude": 0.002104770750194401,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.002104770750194401
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "FANCD2I"
+      ],
+      "global_magnitude": 0.002104770750194401,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.002104770750194401
+    },
+    {
+      "pair": [
+        "DSB",
+        "FANCD2I"
+      ],
+      "global_magnitude": 0.0021047707501944003,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.0021047707501944003
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "HRR2"
+      ],
+      "global_magnitude": 0.0021047707501943994,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0021047707501943994
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.0021047707501943994,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0021047707501943994
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0018574667441380519,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018574667441380519
+    },
+    {
+      "pair": [
+        "NUC1",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0018574667441380519,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.0018574667441380519
+    },
+    {
+      "pair": [
+        "DSB",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0018574667441380501,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018574667441380501
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0018574667441380492,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0018574667441380492
+    },
+    {
+      "pair": [
+        "HRR2",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0018574667441380484,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0018574667441380484
+    },
+    {
+      "pair": [
+        "NHEJ",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0018574667441380484,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0018574667441380484
+    },
+    {
+      "pair": [
+        "NHEJ",
+        "TLS"
+      ],
+      "global_magnitude": 0.0018025434120393057,
+      "local_magnitude": 0.04296875,
+      "global_coefficient": -0.0018025434120393057
+    },
+    {
+      "pair": [
+        "HRR2",
+        "TLS"
+      ],
+      "global_magnitude": 0.0018025434120392918,
+      "local_magnitude": 0.02734375,
+      "global_coefficient": -0.0018025434120392918
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "TLS"
+      ],
+      "global_magnitude": 0.0018025434120392892,
+      "local_magnitude": 0.04296875,
+      "global_coefficient": -0.0018025434120392892
+    },
+    {
+      "pair": [
+        "DSB",
+        "TLS"
+      ],
+      "global_magnitude": 0.0018025434120392883,
+      "local_magnitude": 0.04296875,
+      "global_coefficient": -0.0018025434120392883
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "TLS"
+      ],
+      "global_magnitude": 0.0018025434120392814,
+      "local_magnitude": 0.01953125,
+      "global_coefficient": -0.0018025434120392814
+    },
+    {
+      "pair": [
+        "ICL",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0017533349526392943,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 0.0017533349526392943
+    },
+    {
+      "pair": [
+        "ICL",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0010571595136221346,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.0010571595136221346
+    },
+    {
+      "pair": [
+        "NUC2",
+        "TLS"
+      ],
+      "global_magnitude": 0.0010326103472606402,
+      "local_magnitude": 0.140625,
+      "global_coefficient": -0.0010326103472606402
+    },
+    {
+      "pair": [
+        "ADD",
+        "CHKREC"
+      ],
+      "global_magnitude": 0.0010141170128083333,
+      "local_magnitude": 0.25390625,
+      "global_coefficient": -0.0010141170128083333
+    },
+    {
+      "pair": [
+        "ADD",
+        "DSB"
+      ],
+      "global_magnitude": 0.0010141170128083333,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": -0.0010141170128083333
+    },
+    {
+      "pair": [
+        "ADD",
+        "FAHRR"
+      ],
+      "global_magnitude": 0.0010141170128083333,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": -0.0010141170128083333
+    },
+    {
+      "pair": [
+        "ADD",
+        "HRR2"
+      ],
+      "global_magnitude": 0.0010141170128083333,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": -0.0010141170128083333
+    },
+    {
+      "pair": [
+        "ADD",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.0010141170128083333,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": -0.0010141170128083333
+    },
+    {
+      "pair": [
+        "ADD",
+        "TLS"
+      ],
+      "global_magnitude": 0.0010141170128083333,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": -0.0010141170128083333
+    },
+    {
+      "pair": [
+        "DSB",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0009999159868661553,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0009999159868661553
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0009999159868661455,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.0009999159868661455
+    },
+    {
+      "pair": [
+        "NHEJ",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0009999159868661449,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0009999159868661449
+    },
+    {
+      "pair": [
+        "HRR2",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0009999159868661431,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0009999159868661431
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0009999159868661414,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0009999159868661414
+    },
+    {
+      "pair": [
+        "NUC1",
+        "TLS"
+      ],
+      "global_magnitude": 0.0009115822645492863,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.0009115822645492863
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0007497740256321897,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 0.0007497740256321897
+    },
+    {
+      "pair": [
+        "ICL",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.0007344361249502652,
+      "local_magnitude": 0.01953125,
+      "global_coefficient": 0.0007344361249502652
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "ICL"
+      ],
+      "global_magnitude": 0.0007344361249502626,
+      "local_magnitude": 0.33203125,
+      "global_coefficient": 0.0007344361249502626
+    },
+    {
+      "pair": [
+        "DSB",
+        "ICL"
+      ],
+      "global_magnitude": 0.0007344361249502613,
+      "local_magnitude": 0.26953125,
+      "global_coefficient": 0.0007344361249502613
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "ICL"
+      ],
+      "global_magnitude": 0.0007344361249502607,
+      "local_magnitude": 0.01953125,
+      "global_coefficient": 0.0007344361249502607
+    },
+    {
+      "pair": [
+        "HRR2",
+        "ICL"
+      ],
+      "global_magnitude": 0.0007344361249502582,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": 0.0007344361249502582
+    },
+    {
+      "pair": [
+        "ICL",
+        "TLS"
+      ],
+      "global_magnitude": 0.0005352938071989822,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": -0.0005352938071989822
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "ICL"
+      ],
+      "global_magnitude": 0.00045050421318450543,
+      "local_magnitude": 0.3515625,
+      "global_coefficient": -0.00045050421318450543
+    },
+    {
+      "pair": [
+        "FAcore",
+        "ICL"
+      ],
+      "global_magnitude": 0.00033835428101675925,
+      "local_magnitude": 0.1015625,
+      "global_coefficient": -0.00033835428101675925
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "FAcore"
+      ],
+      "global_magnitude": 0.00028763754027230485,
+      "local_magnitude": 0.375,
+      "global_coefficient": -0.00028763754027230485
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "FAcore"
+      ],
+      "global_magnitude": 0.00028763754027230485,
+      "local_magnitude": 0.1015625,
+      "global_coefficient": -0.00028763754027230485
+    },
+    {
+      "pair": [
+        "FAcore",
+        "HRR2"
+      ],
+      "global_magnitude": 0.00028763754027230463,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00028763754027230463
+    },
+    {
+      "pair": [
+        "FAcore",
+        "NHEJ"
+      ],
+      "global_magnitude": 0.00028763754027230463,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00028763754027230463
+    },
+    {
+      "pair": [
+        "DSB",
+        "FAcore"
+      ],
+      "global_magnitude": 0.0002876375402723039,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0002876375402723039
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "FAcore"
+      ],
+      "global_magnitude": 0.0002876375402723039,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002876375402723039
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "TLS"
+      ],
+      "global_magnitude": 0.0002464258567595396,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0002464258567595396
+    },
+    {
+      "pair": [
+        "ADD",
+        "ICL"
+      ],
+      "global_magnitude": 0.0002454555137848958,
+      "local_magnitude": 0.00390625,
+      "global_coefficient": 0.0002454555137848958
+    },
+    {
+      "pair": [
+        "FAcore",
+        "NUC1"
+      ],
+      "global_magnitude": 0.00022563678877694174,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 0.00022563678877694174
+    },
+    {
+      "pair": [
+        "ADD",
+        "NUC2"
+      ],
+      "global_magnitude": 0.00015731293917734405,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00015731293917734405
+    },
+    {
+      "pair": [
+        "ATM",
+        "ICL"
+      ],
+      "global_magnitude": 0.0001459483202401693,
+      "local_magnitude": 0.2578125,
+      "global_coefficient": -0.0001459483202401693
+    },
+    {
+      "pair": [
+        "ATR",
+        "ICL"
+      ],
+      "global_magnitude": 0.0001459483202401693,
+      "local_magnitude": 0.1328125,
+      "global_coefficient": -0.0001459483202401693
+    },
+    {
+      "pair": [
+        "ATR",
+        "NUC1"
+      ],
+      "global_magnitude": 0.0001311413911513952,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 0.0001311413911513952
+    },
+    {
+      "pair": [
+        "ATM",
+        "NUC1"
+      ],
+      "global_magnitude": 0.00013114139115139517,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 0.00013114139115139517
+    },
+    {
+      "pair": [
+        "FAcore",
+        "NUC2"
+      ],
+      "global_magnitude": 0.0001237962927137081,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001237962927137081
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "NUC2"
+      ],
+      "global_magnitude": 0.00010777673163971384,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00010777673163971384
+    },
+    {
+      "pair": [
+        "ATM",
+        "FAcore"
+      ],
+      "global_magnitude": 0.00010594385010855541,
+      "local_magnitude": 0.0859375,
+      "global_coefficient": 0.00010594385010855541
+    },
+    {
+      "pair": [
+        "ATR",
+        "FAcore"
+      ],
+      "global_magnitude": 0.00010594385010855541,
+      "local_magnitude": 0.1484375,
+      "global_coefficient": 0.00010594385010855541
+    },
+    {
+      "pair": [
+        "FAcore",
+        "TLS"
+      ],
+      "global_magnitude": 0.00010503672418139907,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00010503672418139907
+    },
+    {
+      "pair": [
+        "ADD",
+        "NUC1"
+      ],
+      "global_magnitude": 8.655030490000008e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 8.655030490000008e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "CHKREC"
+      ],
+      "global_magnitude": 6.271562018951822e-05,
+      "local_magnitude": 0.25,
+      "global_coefficient": -6.271562018951822e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "DSB"
+      ],
+      "global_magnitude": 6.271562018951822e-05,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -6.271562018951822e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "FAHRR"
+      ],
+      "global_magnitude": 6.271562018951822e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -6.271562018951822e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "FANCD2I"
+      ],
+      "global_magnitude": 6.271562018951822e-05,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": -6.271562018951822e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "HRR2"
+      ],
+      "global_magnitude": 6.271562018951822e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -6.271562018951822e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "NHEJ"
+      ],
+      "global_magnitude": 6.271562018951822e-05,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -6.271562018951822e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "ATR"
+      ],
+      "global_magnitude": 6.271562018951817e-05,
+      "local_magnitude": 0.2578125,
+      "global_coefficient": -6.271562018951817e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "CHKREC"
+      ],
+      "global_magnitude": 6.271562018951817e-05,
+      "local_magnitude": 0.3125,
+      "global_coefficient": -6.271562018951817e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "DSB"
+      ],
+      "global_magnitude": 6.271562018951817e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -6.271562018951817e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "FAHRR"
+      ],
+      "global_magnitude": 6.271562018951817e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -6.271562018951817e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "FANCD2I"
+      ],
+      "global_magnitude": 6.271562018951817e-05,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": -6.271562018951817e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "HRR2"
+      ],
+      "global_magnitude": 6.271562018951817e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -6.271562018951817e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "NHEJ"
+      ],
+      "global_magnitude": 6.271562018951817e-05,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -6.271562018951817e-05
+    },
+    {
+      "pair": [
+        "ADD",
+        "FANCD2I"
+      ],
+      "global_magnitude": 5.8289755990494744e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 5.8289755990494744e-05
+    },
+    {
+      "pair": [
+        "NUC1",
+        "p53"
+      ],
+      "global_magnitude": 4.9383686734495724e-05,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 4.9383686734495724e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "TLS"
+      ],
+      "global_magnitude": 3.119745811858739e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 3.119745811858739e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "TLS"
+      ],
+      "global_magnitude": 3.1197458118587356e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 3.1197458118587356e-05
+    },
+    {
+      "pair": [
+        "ADD",
+        "ATM"
+      ],
+      "global_magnitude": 2.559462150970063e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.559462150970063e-05
+    },
+    {
+      "pair": [
+        "ADD",
+        "ATR"
+      ],
+      "global_magnitude": 2.5594621509700627e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.5594621509700627e-05
+    },
+    {
+      "pair": [
+        "ADD",
+        "FAcore"
+      ],
+      "global_magnitude": 2.1869511831374372e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.1869511831374372e-05
+    },
+    {
+      "pair": [
+        "CHKREC",
+        "p53"
+      ],
+      "global_magnitude": 2.1863370746777466e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.1863370746777466e-05
+    },
+    {
+      "pair": [
+        "NUC2",
+        "p53"
+      ],
+      "global_magnitude": 2.186337074676359e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.186337074676359e-05
+    },
+    {
+      "pair": [
+        "HRR2",
+        "p53"
+      ],
+      "global_magnitude": 2.1863370746761854e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.1863370746761854e-05
+    },
+    {
+      "pair": [
+        "ICL",
+        "p53"
+      ],
+      "global_magnitude": 2.1863370746761854e-05,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": -2.1863370746761854e-05
+    },
+    {
+      "pair": [
+        "FANCD2I",
+        "p53"
+      ],
+      "global_magnitude": 2.1863370746761203e-05,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 2.1863370746761203e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "p53"
+      ],
+      "global_magnitude": 2.1863370746761166e-05,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 2.1863370746761166e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "p53"
+      ],
+      "global_magnitude": 2.1863370746761152e-05,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 2.1863370746761152e-05
+    },
+    {
+      "pair": [
+        "FAHRR",
+        "p53"
+      ],
+      "global_magnitude": 2.186337074676012e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.186337074676012e-05
+    },
+    {
+      "pair": [
+        "NHEJ",
+        "p53"
+      ],
+      "global_magnitude": 2.186337074676012e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.186337074676012e-05
+    },
+    {
+      "pair": [
+        "DSB",
+        "p53"
+      ],
+      "global_magnitude": 2.186337074674971e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.186337074674971e-05
+    },
+    {
+      "pair": [
+        "ATM",
+        "NUC2"
+      ],
+      "global_magnitude": 1.1153628815820259e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -1.1153628815820259e-05
+    },
+    {
+      "pair": [
+        "ATR",
+        "NUC2"
+      ],
+      "global_magnitude": 1.1153628815820242e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -1.1153628815820242e-05
+    },
+    {
+      "pair": [
+        "ADD",
+        "p53"
+      ],
+      "global_magnitude": 1.075192963406117e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 1.075192963406117e-05
+    },
+    {
+      "pair": [
+        "TLS",
+        "p53"
+      ],
+      "global_magnitude": 9.88681078992193e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": 9.88681078992193e-06
+    },
+    {
+      "pair": [
+        "FAcore",
+        "p53"
+      ],
+      "global_magnitude": 7.531472614833411e-06,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": -7.531472614833411e-06
+    }
+  ]
+}

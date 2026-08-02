@@ -1,0 +1,1967 @@
+{
+  "model": "drosophila_cellcycle",
+  "n_nodes": 14,
+  "node_names": [
+    "Ago",
+    "CycD",
+    "Notch",
+    "CycA",
+    "CycB",
+    "CycE",
+    "Dap",
+    "E2F",
+    "Fzr",
+    "Fzy",
+    "Rb",
+    "Rux",
+    "Stg",
+    "Wee1"
+  ],
+  "output_nodes": [
+    "CycB"
+  ],
+  "interaction_graph": {
+    "Ago": [],
+    "CycD": [],
+    "Notch": [],
+    "CycA": [
+      {
+        "regulator": "E2F",
+        "sign": 1
+      },
+      {
+        "regulator": "Fzr",
+        "sign": -1
+      },
+      {
+        "regulator": "Fzy",
+        "sign": -1
+      },
+      {
+        "regulator": "Rb",
+        "sign": -1
+      }
+    ],
+    "CycB": [
+      {
+        "regulator": "Fzr",
+        "sign": -1
+      },
+      {
+        "regulator": "Fzy",
+        "sign": -1
+      },
+      {
+        "regulator": "Stg",
+        "sign": 1
+      },
+      {
+        "regulator": "Wee1",
+        "sign": -1
+      }
+    ],
+    "CycE": [
+      {
+        "regulator": "Ago",
+        "sign": -1
+      },
+      {
+        "regulator": "Dap",
+        "sign": -1
+      },
+      {
+        "regulator": "E2F",
+        "sign": 1
+      },
+      {
+        "regulator": "Rb",
+        "sign": -1
+      }
+    ],
+    "Dap": [
+      {
+        "regulator": "Notch",
+        "sign": -1
+      },
+      {
+        "regulator": "CycE",
+        "sign": 1
+      }
+    ],
+    "E2F": [
+      {
+        "regulator": "CycA",
+        "sign": -1
+      },
+      {
+        "regulator": "CycB",
+        "sign": -1
+      },
+      {
+        "regulator": "Rb",
+        "sign": -1
+      },
+      {
+        "regulator": "Rux",
+        "sign": 1
+      }
+    ],
+    "Fzr": [
+      {
+        "regulator": "Notch",
+        "sign": 1
+      },
+      {
+        "regulator": "CycA",
+        "sign": -1
+      },
+      {
+        "regulator": "CycB",
+        "sign": -1
+      },
+      {
+        "regulator": "CycE",
+        "sign": -1
+      },
+      {
+        "regulator": "Rux",
+        "sign": 1
+      }
+    ],
+    "Fzy": [
+      {
+        "regulator": "CycB",
+        "sign": 1
+      },
+      {
+        "regulator": "Rux",
+        "sign": -1
+      }
+    ],
+    "Rb": [
+      {
+        "regulator": "CycD",
+        "sign": -1
+      },
+      {
+        "regulator": "CycA",
+        "sign": -1
+      },
+      {
+        "regulator": "CycB",
+        "sign": -1
+      },
+      {
+        "regulator": "CycE",
+        "sign": -1
+      },
+      {
+        "regulator": "Rux",
+        "sign": 1
+      }
+    ],
+    "Rux": [
+      {
+        "regulator": "CycD",
+        "sign": -1
+      },
+      {
+        "regulator": "CycA",
+        "sign": -1
+      },
+      {
+        "regulator": "CycB",
+        "sign": -1
+      },
+      {
+        "regulator": "CycE",
+        "sign": -1
+      }
+    ],
+    "Stg": [
+      {
+        "regulator": "Notch",
+        "sign": -1
+      },
+      {
+        "regulator": "CycB",
+        "sign": 1
+      },
+      {
+        "regulator": "E2F",
+        "sign": 1
+      },
+      {
+        "regulator": "Rb",
+        "sign": -1
+      },
+      {
+        "regulator": "Rux",
+        "sign": -1
+      }
+    ],
+    "Wee1": [
+      {
+        "regulator": "CycB",
+        "sign": -1
+      },
+      {
+        "regulator": "Rux",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "Dap",
+        "E2F"
+      ],
+      [
+        "Ago",
+        "Dap"
+      ],
+      [
+        "CycA",
+        "CycD"
+      ],
+      [
+        "Fzr",
+        "Rb"
+      ],
+      [
+        "CycB",
+        "Notch"
+      ],
+      [
+        "Stg",
+        "Wee1"
+      ],
+      [
+        "Notch",
+        "Rb"
+      ],
+      [
+        "Fzr",
+        "Fzy"
+      ],
+      [
+        "CycD",
+        "Rux"
+      ],
+      [
+        "E2F",
+        "Rux"
+      ],
+      [
+        "E2F",
+        "Rb"
+      ],
+      [
+        "CycE",
+        "Notch"
+      ],
+      [
+        "Ago",
+        "Rb"
+      ],
+      [
+        "CycB",
+        "Rb"
+      ],
+      [
+        "CycB",
+        "Rux"
+      ],
+      [
+        "Fzr",
+        "Stg"
+      ],
+      [
+        "CycA",
+        "Rux"
+      ],
+      [
+        "CycA",
+        "CycB"
+      ],
+      [
+        "Fzy",
+        "Stg"
+      ],
+      [
+        "CycB",
+        "CycD"
+      ],
+      [
+        "CycB",
+        "E2F"
+      ],
+      [
+        "Fzr",
+        "Wee1"
+      ],
+      [
+        "Rb",
+        "Rux"
+      ],
+      [
+        "Ago",
+        "E2F"
+      ],
+      [
+        "Notch",
+        "Rux"
+      ],
+      [
+        "Fzy",
+        "Wee1"
+      ],
+      [
+        "E2F",
+        "Notch"
+      ],
+      [
+        "CycD",
+        "CycE"
+      ],
+      [
+        "Dap",
+        "Rb"
+      ],
+      [
+        "CycB",
+        "CycE"
+      ],
+      [
+        "E2F",
+        "Fzy"
+      ],
+      [
+        "CycA",
+        "CycE"
+      ],
+      [
+        "E2F",
+        "Fzr"
+      ],
+      [
+        "CycA",
+        "Rb"
+      ],
+      [
+        "CycE",
+        "Rux"
+      ],
+      [
+        "CycA",
+        "Notch"
+      ],
+      [
+        "Fzy",
+        "Rb"
+      ]
+    ],
+    "triples": [
+      [
+        "E2F",
+        "Notch",
+        "Rux"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "CycE"
+      ],
+      [
+        "Ago",
+        "E2F",
+        "Rb"
+      ],
+      [
+        "Fzr",
+        "Fzy",
+        "Stg"
+      ],
+      [
+        "E2F",
+        "Fzr",
+        "Rb"
+      ],
+      [
+        "CycB",
+        "Notch",
+        "Rux"
+      ],
+      [
+        "CycB",
+        "E2F",
+        "Notch"
+      ],
+      [
+        "E2F",
+        "Notch",
+        "Rb"
+      ],
+      [
+        "Fzr",
+        "Fzy",
+        "Wee1"
+      ],
+      [
+        "CycB",
+        "E2F",
+        "Rb"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "Notch"
+      ],
+      [
+        "Dap",
+        "E2F",
+        "Rb"
+      ],
+      [
+        "CycB",
+        "CycD",
+        "CycE"
+      ],
+      [
+        "Fzy",
+        "Stg",
+        "Wee1"
+      ],
+      [
+        "CycA",
+        "CycD",
+        "CycE"
+      ],
+      [
+        "E2F",
+        "Fzr",
+        "Fzy"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "CycD"
+      ],
+      [
+        "E2F",
+        "Fzy",
+        "Rb"
+      ],
+      [
+        "CycA",
+        "CycE",
+        "Notch"
+      ],
+      [
+        "CycB",
+        "CycE",
+        "Rux"
+      ],
+      [
+        "CycE",
+        "Notch",
+        "Rux"
+      ],
+      [
+        "Ago",
+        "Dap",
+        "E2F"
+      ],
+      [
+        "CycA",
+        "Rb",
+        "Rux"
+      ],
+      [
+        "CycB",
+        "Rb",
+        "Rux"
+      ],
+      [
+        "CycB",
+        "CycD",
+        "Rux"
+      ],
+      [
+        "CycB",
+        "E2F",
+        "Rux"
+      ],
+      [
+        "Fzr",
+        "Stg",
+        "Wee1"
+      ],
+      [
+        "CycA",
+        "CycD",
+        "Rux"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "Rb"
+      ],
+      [
+        "Ago",
+        "Dap",
+        "Rb"
+      ],
+      [
+        "CycA",
+        "CycB",
+        "Rux"
+      ],
+      [
+        "CycB",
+        "CycE",
+        "Notch"
+      ],
+      [
+        "CycA",
+        "Notch",
+        "Rux"
+      ],
+      [
+        "E2F",
+        "Rb",
+        "Rux"
+      ],
+      [
+        "CycA",
+        "CycE",
+        "Rux"
+      ],
+      [
+        "Fzr",
+        "Fzy",
+        "Rb"
+      ],
+      [
+        "Notch",
+        "Rb",
+        "Rux"
+      ],
+      [
+        "CycD",
+        "CycE",
+        "Rux"
+      ],
+      [
+        "CycB",
+        "Notch",
+        "Rb"
+      ]
+    ],
+    "per_gene": {
+      "Ago": {
+        "regulators": [
+          "Ago"
+        ],
+        "interactions": []
+      },
+      "CycD": {
+        "regulators": [
+          "CycD"
+        ],
+        "interactions": []
+      },
+      "Notch": {
+        "regulators": [
+          "Notch"
+        ],
+        "interactions": []
+      },
+      "CycA": {
+        "regulators": [
+          "E2F",
+          "Fzr",
+          "Fzy",
+          "Rb"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "E2F",
+              "Fzr"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Fzy"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Fzy"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Fzr",
+              "Fzy"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Fzr",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Fzy",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Fzy",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Fzy",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Fzr",
+              "Fzy",
+              "Rb"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "CycB": {
+        "regulators": [
+          "Fzr",
+          "Fzy",
+          "Stg",
+          "Wee1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Fzr",
+              "Fzy"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Stg"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Fzy",
+              "Stg"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Fzy",
+              "Stg"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Wee1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Fzy",
+              "Wee1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Fzy",
+              "Wee1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Stg",
+              "Wee1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Stg",
+              "Wee1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Fzy",
+              "Stg",
+              "Wee1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Fzr",
+              "Fzy",
+              "Stg",
+              "Wee1"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "CycE": {
+        "regulators": [
+          "Ago",
+          "Dap",
+          "E2F",
+          "Rb"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "Ago",
+              "Dap"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Ago",
+              "E2F"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Dap",
+              "E2F"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Ago",
+              "Dap",
+              "E2F"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Ago",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Dap",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Ago",
+              "Dap",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "Ago",
+              "E2F",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Dap",
+              "E2F",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "Ago",
+              "Dap",
+              "E2F",
+              "Rb"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "Dap": {
+        "regulators": [
+          "Notch",
+          "CycE"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycE",
+              "Notch"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "E2F": {
+        "regulators": [
+          "CycA",
+          "CycB",
+          "Rb",
+          "Rux"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "Rb",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Rb",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rb",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rb",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "Fzr": {
+        "regulators": [
+          "Notch",
+          "CycA",
+          "CycB",
+          "CycE",
+          "Rux"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "Notch"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Notch"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Notch"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycE",
+              "Notch"
+            ],
+            "order": 2,
+            "coefficient": 0.15625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE",
+              "Notch"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE",
+              "Notch"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE",
+              "Notch"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Notch",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Notch",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Notch",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Notch",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycE",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycE",
+              "Notch",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE",
+              "Notch",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE",
+              "Notch",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE",
+              "Notch",
+              "Rux"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "Fzy": {
+        "regulators": [
+          "CycB",
+          "Rux"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycB",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Rb": {
+        "regulators": [
+          "CycD",
+          "CycA",
+          "CycB",
+          "CycE",
+          "Rux"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycD",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.15625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "CycE"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycD",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycA",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycE",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycD",
+              "CycE",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "CycE",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "CycE",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "CycE",
+              "Rux"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "Rux": {
+        "regulators": [
+          "CycD",
+          "CycA",
+          "CycB",
+          "CycE",
+          "Rux"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycA",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycD",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycE"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycB",
+              "CycD",
+              "CycE"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycD",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycE",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CycD",
+              "CycE",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycE",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CycA",
+              "CycB",
+              "CycD",
+              "CycE",
+              "Rux"
+            ],
+            "order": 5,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "Stg": {
+        "regulators": [
+          "Notch",
+          "CycB",
+          "E2F",
+          "Rb",
+          "Rux"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycB",
+              "Notch"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Notch"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F",
+              "Notch"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Notch",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Notch",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Notch",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F",
+              "Rb"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F",
+              "Notch",
+              "Rb"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Notch",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Notch",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Notch",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F",
+              "Notch",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Rb",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Notch",
+              "Rb",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Rb",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "Notch",
+              "Rb",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Rb",
+              "Rux"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "E2F",
+              "Notch",
+              "Rb",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F",
+              "Rb",
+              "Rux"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "CycB",
+              "E2F",
+              "Notch",
+              "Rb",
+              "Rux"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "Wee1": {
+        "regulators": [
+          "CycB",
+          "Rux"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CycB",
+              "Rux"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      }
+    },
+    "n_pairwise": 37,
+    "n_triples": 39,
+    "pairwise_strengths": {
+      "['E2F', 'Fzr']": 0.0625,
+      "['E2F', 'Fzy']": 0.0625,
+      "['Fzr', 'Fzy']": 0.25,
+      "['E2F', 'Rb']": 0.34375,
+      "['Fzr', 'Rb']": 0.0625,
+      "['Fzy', 'Rb']": 0.0625,
+      "['Fzr', 'Stg']": 0.0625,
+      "['Fzy', 'Stg']": 0.0625,
+      "['Fzr', 'Wee1']": 0.0625,
+      "['Fzy', 'Wee1']": 0.0625,
+      "['Stg', 'Wee1']": 0.0625,
+      "['Ago', 'Dap']": 0.0625,
+      "['Ago', 'E2F']": 0.0625,
+      "['Dap', 'E2F']": 0.0625,
+      "['Ago', 'Rb']": 0.0625,
+      "['Dap', 'Rb']": 0.0625,
+      "['CycE', 'Notch']": 0.40625,
+      "['CycA', 'CycB']": 0.1875,
+      "['CycA', 'Rb']": 0.0625,
+      "['CycB', 'Rb']": 0.09375,
+      "['CycA', 'Rux']": 0.1875,
+      "['CycB', 'Rux']": 0.78125,
+      "['Rb', 'Rux']": 0.21875,
+      "['CycA', 'Notch']": 0.03125,
+      "['CycB', 'Notch']": 0.125,
+      "['CycA', 'CycE']": 0.125,
+      "['CycB', 'CycE']": 0.125,
+      "['Notch', 'Rux']": 0.1875,
+      "['CycE', 'Rux']": 0.25,
+      "['CycA', 'CycD']": 0.09375,
+      "['CycB', 'CycD']": 0.09375,
+      "['CycD', 'CycE']": 0.28125,
+      "['CycD', 'Rux']": 0.15625,
+      "['E2F', 'Notch']": 0.09375,
+      "['CycB', 'E2F']": 0.03125,
+      "['Notch', 'Rb']": 0.09375,
+      "['E2F', 'Rux']": 0.03125
+    },
+    "local_energy_spectrum": [
+      0.48708832335329344,
+      0.3568488023952096,
+      0.11339820359281437,
+      0.03405688622754491,
+      0.007297904191616767,
+      0.001309880239520958
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 8388608,
+    "total_fixed_point": 7210873,
+    "total_cycling": 1177735,
+    "cycling_fraction": 0.14039695262908936
+  },
+  "n_unique_values": 222,
+  "total_variance": 0.1069632400787223,
+  "timestamp": "2026-07-28T13:52:03.018061+00:00"
+}

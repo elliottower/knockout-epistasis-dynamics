@@ -1,0 +1,421 @@
+{
+  "model": "albert_segment_polarity",
+  "n_nodes": 11,
+  "node_names": [
+    "SLP",
+    "WG",
+    "wg",
+    "WG_ext",
+    "en",
+    "EN",
+    "hh",
+    "HH_ext",
+    "PTC",
+    "CIA",
+    "CIR"
+  ],
+  "output_nodes": [
+    "wg"
+  ],
+  "interaction_graph": {
+    "SLP": [],
+    "WG": [],
+    "wg": [
+      {
+        "regulator": "SLP",
+        "sign": 1
+      },
+      {
+        "regulator": "CIA",
+        "sign": 1
+      },
+      {
+        "regulator": "CIR",
+        "sign": -1
+      }
+    ],
+    "WG_ext": [
+      {
+        "regulator": "WG",
+        "sign": 1
+      }
+    ],
+    "en": [
+      {
+        "regulator": "SLP",
+        "sign": -1
+      },
+      {
+        "regulator": "WG_ext",
+        "sign": 1
+      }
+    ],
+    "EN": [
+      {
+        "regulator": "en",
+        "sign": 1
+      }
+    ],
+    "hh": [
+      {
+        "regulator": "EN",
+        "sign": 1
+      },
+      {
+        "regulator": "CIR",
+        "sign": -1
+      }
+    ],
+    "HH_ext": [
+      {
+        "regulator": "hh",
+        "sign": 1
+      }
+    ],
+    "PTC": [
+      {
+        "regulator": "EN",
+        "sign": -1
+      },
+      {
+        "regulator": "HH_ext",
+        "sign": -1
+      }
+    ],
+    "CIA": [
+      {
+        "regulator": "HH_ext",
+        "sign": 1
+      },
+      {
+        "regulator": "PTC",
+        "sign": -1
+      }
+    ],
+    "CIR": [
+      {
+        "regulator": "HH_ext",
+        "sign": -1
+      },
+      {
+        "regulator": "PTC",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "CIR",
+        "SLP"
+      ],
+      [
+        "CIR",
+        "EN"
+      ],
+      [
+        "CIR",
+        "wg"
+      ],
+      [
+        "SLP",
+        "WG_ext"
+      ],
+      [
+        "HH_ext",
+        "PTC"
+      ],
+      [
+        "SLP",
+        "wg"
+      ],
+      [
+        "CIA",
+        "SLP"
+      ],
+      [
+        "CIA",
+        "wg"
+      ],
+      [
+        "CIA",
+        "CIR"
+      ],
+      [
+        "EN",
+        "HH_ext"
+      ]
+    ],
+    "triples": [
+      [
+        "CIA",
+        "CIR",
+        "SLP"
+      ],
+      [
+        "CIA",
+        "SLP",
+        "wg"
+      ],
+      [
+        "CIR",
+        "SLP",
+        "wg"
+      ],
+      [
+        "CIA",
+        "CIR",
+        "wg"
+      ]
+    ],
+    "per_gene": {
+      "SLP": {
+        "regulators": [
+          "SLP"
+        ],
+        "interactions": []
+      },
+      "WG": {
+        "regulators": [
+          "WG"
+        ],
+        "interactions": []
+      },
+      "wg": {
+        "regulators": [
+          "SLP",
+          "wg",
+          "CIA",
+          "CIR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SLP",
+              "wg"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CIA",
+              "SLP"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CIA",
+              "wg"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CIA",
+              "SLP",
+              "wg"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CIR",
+              "SLP"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CIR",
+              "wg"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CIR",
+              "SLP",
+              "wg"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CIA",
+              "CIR"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "CIA",
+              "CIR",
+              "SLP"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CIA",
+              "CIR",
+              "wg"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CIA",
+              "CIR",
+              "SLP",
+              "wg"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "WG_ext": {
+        "regulators": [
+          "WG"
+        ],
+        "interactions": []
+      },
+      "en": {
+        "regulators": [
+          "SLP",
+          "WG_ext"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SLP",
+              "WG_ext"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "EN": {
+        "regulators": [
+          "en"
+        ],
+        "interactions": []
+      },
+      "hh": {
+        "regulators": [
+          "EN",
+          "CIR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CIR",
+              "EN"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "HH_ext": {
+        "regulators": [
+          "hh"
+        ],
+        "interactions": []
+      },
+      "PTC": {
+        "regulators": [
+          "EN",
+          "HH_ext",
+          "PTC"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "EN",
+              "HH_ext"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "CIA": {
+        "regulators": [
+          "HH_ext",
+          "PTC"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "HH_ext",
+              "PTC"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "CIR": {
+        "regulators": [
+          "HH_ext",
+          "PTC"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "HH_ext",
+              "PTC"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      }
+    },
+    "n_pairwise": 10,
+    "n_triples": 4,
+    "pairwise_strengths": {
+      "['SLP', 'wg']": 0.0625,
+      "['CIA', 'SLP']": 0.0625,
+      "['CIA', 'wg']": 0.0625,
+      "['CIR', 'SLP']": 0.0625,
+      "['CIR', 'wg']": 0.0625,
+      "['CIA', 'CIR']": 0.1875,
+      "['SLP', 'WG_ext']": 0.25,
+      "['CIR', 'EN']": 0.25,
+      "['EN', 'HH_ext']": 0.25,
+      "['HH_ext', 'PTC']": 0.5
+    },
+    "local_energy_spectrum": [
+      0.4727112676056338,
+      0.44014084507042256,
+      0.08274647887323944,
+      0.0035211267605633804,
+      0.0008802816901408451
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 1048576,
+    "total_fixed_point": 1048576,
+    "total_cycling": 0,
+    "cycling_fraction": 0.0
+  },
+  "n_unique_values": 15,
+  "total_variance": 0.022298410996882012,
+  "timestamp": "2026-07-28T16:44:49.555399+00:00"
+}

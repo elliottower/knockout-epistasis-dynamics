@@ -1,0 +1,696 @@
+{
+  "model": "zanudo_tlgl",
+  "n_players": 12,
+  "n_init": 512,
+  "node_names": [
+    "Stimuli",
+    "PDGFR",
+    "S1P",
+    "Ceramide",
+    "Fas",
+    "sFas",
+    "DISC",
+    "FLIP",
+    "Caspase",
+    "IAP",
+    "NFkB",
+    "Apoptosis"
+  ],
+  "timestamp": "2026-07-28T16:46:20.462778+00:00",
+  "pairwise": {
+    "n_pairs": 66,
+    "n_local_nonzero": 8,
+    "n_global_nonzero": 66,
+    "local_positive_rate": 0.12121212121212122,
+    "spearman_rho": -0.19343086463763193,
+    "spearman_pvalue": 0.11967202847844619,
+    "spearman_ci_95": [
+      -0.38212770384535394,
+      0.019449959034366957
+    ],
+    "creation_rate": 1.0,
+    "destruction_rate": 0.0,
+    "created_count": 8,
+    "destroyed_count": 0,
+    "top_k": 8
+  },
+  "triples": {
+    "n_triples": 220,
+    "n_local_nonzero": 1,
+    "n_global_nonzero": 220,
+    "spearman_rho": -0.03520913013063225,
+    "spearman_pvalue": 0.6034665947456352,
+    "spearman_ci_95": [
+      -0.0743006682348133,
+      -0.023399887261123575
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.017683197656936045,
+    "frac_energy_3plus": 0.35649896609723863
+  },
+  "energy_spectrum": {
+    "global": [
+      0.059599584795323804,
+      0.2400346462176195,
+      0.3651139932491757,
+      0.252286534316233,
+      0.07279688131886117,
+      0.006986325638081541,
+      0.002296001033691243,
+      0.0006537595279856413,
+      0.0001872995989727566,
+      3.791671476333876e-05,
+      6.178445723471524e-06,
+      8.175853169936489e-07,
+      6.155825186250641e-08
+    ],
+    "local_rules": [
+      0.502906976744186,
+      0.4273255813953488,
+      0.06686046511627906,
+      0.0029069767441860465,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "Fas",
+        "DISC"
+      ],
+      "global_magnitude": 0.05606818199157715,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.05606818199157715
+    },
+    {
+      "pair": [
+        "Fas",
+        "Caspase"
+      ],
+      "global_magnitude": 0.05606818199157715,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.05606818199157715
+    },
+    {
+      "pair": [
+        "Fas",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.05606818199157715,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.05606818199157715
+    },
+    {
+      "pair": [
+        "DISC",
+        "Caspase"
+      ],
+      "global_magnitude": 0.05606818199157715,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.05606818199157715
+    },
+    {
+      "pair": [
+        "DISC",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.05606818199157715,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.05606818199157715
+    },
+    {
+      "pair": [
+        "Caspase",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.05606818199157715,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.05606818199157715
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "Fas"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "DISC"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "Caspase"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "Fas",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "DISC",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "Caspase",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "NFkB",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.0064318180084228516,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0064318180084228516
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "FLIP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "IAP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "Fas",
+        "FLIP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "Fas",
+        "IAP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "DISC",
+        "FLIP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "DISC",
+        "IAP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "FLIP",
+        "Caspase"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "FLIP",
+        "IAP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0012280941009521484
+    },
+    {
+      "pair": [
+        "FLIP",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "FLIP",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "Caspase",
+        "IAP"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "IAP",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "IAP",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.0012280941009521484,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012280941009521484
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "sFas"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006868839263916016
+    },
+    {
+      "pair": [
+        "Fas",
+        "sFas"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006868839263916016
+    },
+    {
+      "pair": [
+        "sFas",
+        "DISC"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006868839263916016
+    },
+    {
+      "pair": [
+        "sFas",
+        "FLIP"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0006868839263916016
+    },
+    {
+      "pair": [
+        "sFas",
+        "Caspase"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006868839263916016
+    },
+    {
+      "pair": [
+        "sFas",
+        "IAP"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0006868839263916016
+    },
+    {
+      "pair": [
+        "sFas",
+        "NFkB"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006868839263916016
+    },
+    {
+      "pair": [
+        "sFas",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.0006868839263916016,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006868839263916016
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "Ceramide"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "Fas"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "sFas"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "DISC"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "FLIP"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "Caspase"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "IAP"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "NFkB"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Ceramide",
+        "Apoptosis"
+      ],
+      "global_magnitude": 0.00027060508728027344,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00027060508728027344
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "S1P"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.25,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "Ceramide"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.125,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "Fas"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.25,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "sFas"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.125,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "DISC"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "FLIP"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "Caspase"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "IAP"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "NFkB"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "S1P",
+        "Apoptosis"
+      ],
+      "global_magnitude": 8.606910705566406e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -8.606910705566406e-05
+    },
+    {
+      "pair": [
+        "Stimuli",
+        "PDGFR"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "S1P"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "Ceramide"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.25,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "Fas"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "sFas"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "DISC"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "FLIP"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "Caspase"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "IAP"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "NFkB"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    },
+    {
+      "pair": [
+        "PDGFR",
+        "Apoptosis"
+      ],
+      "global_magnitude": 5.698204040527344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -5.698204040527344e-05
+    }
+  ]
+}

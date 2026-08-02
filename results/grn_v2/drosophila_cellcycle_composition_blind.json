@@ -1,0 +1,929 @@
+{
+  "model": "drosophila_cellcycle",
+  "n_players": 14,
+  "n_init": 512,
+  "node_names": [
+    "Ago",
+    "CycD",
+    "Notch",
+    "CycA",
+    "CycB",
+    "CycE",
+    "Dap",
+    "E2F",
+    "Fzr",
+    "Fzy",
+    "Rb",
+    "Rux",
+    "Stg",
+    "Wee1"
+  ],
+  "timestamp": "2026-07-28T13:52:06.385885+00:00",
+  "pairwise": {
+    "n_pairs": 91,
+    "n_local_nonzero": 37,
+    "n_global_nonzero": 91,
+    "local_positive_rate": 0.4065934065934066,
+    "spearman_rho": 0.12001774561384927,
+    "spearman_pvalue": 0.25714246318548095,
+    "spearman_ci_95": [
+      -0.08942617159611212,
+      0.3165157923517065
+    ],
+    "creation_rate": 0.5675675675675675,
+    "destruction_rate": 0.0,
+    "created_count": 21,
+    "destroyed_count": 0,
+    "top_k": 37
+  },
+  "triples": {
+    "n_triples": 364,
+    "n_local_nonzero": 39,
+    "n_global_nonzero": 364,
+    "spearman_rho": 0.14118669385421687,
+    "spearman_pvalue": 0.006977156406617904,
+    "spearman_ci_95": [
+      0.05288860015200035,
+      0.23441594430946014
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.014978642232554577,
+    "frac_energy_3plus": 0.14003541984639462
+  },
+  "energy_spectrum": {
+    "global": [
+      0.255605432168186,
+      0.41798376030901924,
+      0.2221692016850913,
+      0.07485168583834706,
+      0.019870255055856424,
+      0.006530206955846313,
+      0.002213861187465214,
+      0.0006071599901699188,
+      0.00013690419090319416,
+      2.6654752382790692e-05,
+      4.297608372805331e-06,
+      5.289731550377323e-07,
+      4.800820583827215e-08,
+      3.181079652351723e-09,
+      9.591924506596413e-11
+    ],
+    "local_rules": [
+      0.48708832335329344,
+      0.3568488023952096,
+      0.11339820359281437,
+      0.03405688622754491,
+      0.007297904191616767,
+      0.001309880239520958,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12",
+      "order-13",
+      "order-14"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "CycB",
+        "Wee1"
+      ],
+      "global_magnitude": 0.08664579050881521,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.08664579050881521
+    },
+    {
+      "pair": [
+        "CycB",
+        "Fzr"
+      ],
+      "global_magnitude": 0.08663943835667201,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.08663943835667201
+    },
+    {
+      "pair": [
+        "CycB",
+        "Fzy"
+      ],
+      "global_magnitude": 0.08505002089909144,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.08505002089909144
+    },
+    {
+      "pair": [
+        "Fzr",
+        "Wee1"
+      ],
+      "global_magnitude": 0.06321471078055246,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.06321471078055246
+    },
+    {
+      "pair": [
+        "Fzy",
+        "Rux"
+      ],
+      "global_magnitude": 0.04738921097346715,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.04738921097346715
+    },
+    {
+      "pair": [
+        "Fzr",
+        "Rux"
+      ],
+      "global_magnitude": 0.024166713442121235,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.024166713442121235
+    },
+    {
+      "pair": [
+        "Rux",
+        "Wee1"
+      ],
+      "global_magnitude": 0.02052920318785168,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.02052920318785168
+    },
+    {
+      "pair": [
+        "CycB",
+        "E2F"
+      ],
+      "global_magnitude": 0.016712035451616557,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.016712035451616557
+    },
+    {
+      "pair": [
+        "CycB",
+        "Stg"
+      ],
+      "global_magnitude": 0.016447373798915317,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.016447373798915317
+    },
+    {
+      "pair": [
+        "Stg",
+        "Wee1"
+      ],
+      "global_magnitude": 0.016447373798915317,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.016447373798915317
+    },
+    {
+      "pair": [
+        "CycB",
+        "Rux"
+      ],
+      "global_magnitude": 0.01600605079105922,
+      "local_magnitude": 0.78125,
+      "global_coefficient": -0.01600605079105922
+    },
+    {
+      "pair": [
+        "CycE",
+        "Fzr"
+      ],
+      "global_magnitude": 0.012990059171404156,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.012990059171404156
+    },
+    {
+      "pair": [
+        "CycB",
+        "CycE"
+      ],
+      "global_magnitude": 0.012160052571977888,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.012160052571977888
+    },
+    {
+      "pair": [
+        "E2F",
+        "Stg"
+      ],
+      "global_magnitude": 0.011762925556727817,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.011762925556727817
+    },
+    {
+      "pair": [
+        "CycE",
+        "E2F"
+      ],
+      "global_magnitude": 0.010351886068071638,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.010351886068071638
+    },
+    {
+      "pair": [
+        "CycB",
+        "Rb"
+      ],
+      "global_magnitude": 0.009131564412798204,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.009131564412798204
+    },
+    {
+      "pair": [
+        "E2F",
+        "Rb"
+      ],
+      "global_magnitude": 0.009131564412798202,
+      "local_magnitude": 0.34375,
+      "global_coefficient": -0.009131564412798202
+    },
+    {
+      "pair": [
+        "E2F",
+        "Wee1"
+      ],
+      "global_magnitude": 0.007203391620091031,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.007203391620091031
+    },
+    {
+      "pair": [
+        "Rb",
+        "Stg"
+      ],
+      "global_magnitude": 0.00634931382678804,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00634931382678804
+    },
+    {
+      "pair": [
+        "Fzr",
+        "Stg"
+      ],
+      "global_magnitude": 0.006126454898289273,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.006126454898289273
+    },
+    {
+      "pair": [
+        "Notch",
+        "CycB"
+      ],
+      "global_magnitude": 0.006123253277369908,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.006123253277369908
+    },
+    {
+      "pair": [
+        "CycA",
+        "Fzy"
+      ],
+      "global_magnitude": 0.005705819811139788,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005705819811139788
+    },
+    {
+      "pair": [
+        "CycE",
+        "Rb"
+      ],
+      "global_magnitude": 0.005676116262163435,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005676116262163435
+    },
+    {
+      "pair": [
+        "Notch",
+        "E2F"
+      ],
+      "global_magnitude": 0.005581566265651158,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.005581566265651158
+    },
+    {
+      "pair": [
+        "E2F",
+        "Fzr"
+      ],
+      "global_magnitude": 0.005119289670671737,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.005119289670671737
+    },
+    {
+      "pair": [
+        "Fzy",
+        "Stg"
+      ],
+      "global_magnitude": 0.005056551524571011,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.005056551524571011
+    },
+    {
+      "pair": [
+        "E2F",
+        "Rux"
+      ],
+      "global_magnitude": 0.004913749013628276,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.004913749013628276
+    },
+    {
+      "pair": [
+        "CycE",
+        "Wee1"
+      ],
+      "global_magnitude": 0.004904743603297642,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.004904743603297642
+    },
+    {
+      "pair": [
+        "CycA",
+        "Rux"
+      ],
+      "global_magnitude": 0.004202829088483538,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.004202829088483538
+    },
+    {
+      "pair": [
+        "CycE",
+        "Fzy"
+      ],
+      "global_magnitude": 0.004077444757734026,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.004077444757734026
+    },
+    {
+      "pair": [
+        "Rux",
+        "Stg"
+      ],
+      "global_magnitude": 0.003968004953293573,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.003968004953293573
+    },
+    {
+      "pair": [
+        "E2F",
+        "Fzy"
+      ],
+      "global_magnitude": 0.0038656336920601998,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0038656336920601998
+    },
+    {
+      "pair": [
+        "CycA",
+        "Fzr"
+      ],
+      "global_magnitude": 0.0037711041314261303,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0037711041314261303
+    },
+    {
+      "pair": [
+        "Notch",
+        "CycE"
+      ],
+      "global_magnitude": 0.0036790813718523296,
+      "local_magnitude": 0.40625,
+      "global_coefficient": -0.0036790813718523296
+    },
+    {
+      "pair": [
+        "Rb",
+        "Wee1"
+      ],
+      "global_magnitude": 0.0036648148582095162,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0036648148582095162
+    },
+    {
+      "pair": [
+        "CycA",
+        "E2F"
+      ],
+      "global_magnitude": 0.0036401612418038506,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0036401612418038506
+    },
+    {
+      "pair": [
+        "Notch",
+        "Stg"
+      ],
+      "global_magnitude": 0.0034616856347946894,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0034616856347946894
+    },
+    {
+      "pair": [
+        "CycE",
+        "Stg"
+      ],
+      "global_magnitude": 0.0034328665052141463,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0034328665052141463
+    },
+    {
+      "pair": [
+        "CycD",
+        "Rb"
+      ],
+      "global_magnitude": 0.0032900299344743996,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0032900299344743996
+    },
+    {
+      "pair": [
+        "Rb",
+        "Rux"
+      ],
+      "global_magnitude": 0.0032264130456106967,
+      "local_magnitude": 0.21875,
+      "global_coefficient": -0.0032264130456106967
+    },
+    {
+      "pair": [
+        "CycE",
+        "Rux"
+      ],
+      "global_magnitude": 0.003226031575884139,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.003226031575884139
+    },
+    {
+      "pair": [
+        "Notch",
+        "Rb"
+      ],
+      "global_magnitude": 0.003066917828151158,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.003066917828151158
+    },
+    {
+      "pair": [
+        "Fzy",
+        "Wee1"
+      ],
+      "global_magnitude": 0.002831033297947476,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.002831033297947476
+    },
+    {
+      "pair": [
+        "Fzr",
+        "Rb"
+      ],
+      "global_magnitude": 0.002660669599260603,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.002660669599260603
+    },
+    {
+      "pair": [
+        "CycA",
+        "Rb"
+      ],
+      "global_magnitude": 0.002506480898175921,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.002506480898175921
+    },
+    {
+      "pair": [
+        "CycD",
+        "CycB"
+      ],
+      "global_magnitude": 0.0023840461458478654,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.0023840461458478654
+    },
+    {
+      "pair": [
+        "CycD",
+        "Fzy"
+      ],
+      "global_magnitude": 0.0021137203489031116,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0021137203489031116
+    },
+    {
+      "pair": [
+        "Notch",
+        "Rux"
+      ],
+      "global_magnitude": 0.001924415997096471,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.001924415997096471
+    },
+    {
+      "pair": [
+        "CycD",
+        "E2F"
+      ],
+      "global_magnitude": 0.0018538032259259904,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018538032259259904
+    },
+    {
+      "pair": [
+        "CycD",
+        "Stg"
+      ],
+      "global_magnitude": 0.0017173698970249724,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0017173698970249724
+    },
+    {
+      "pair": [
+        "Fzr",
+        "Fzy"
+      ],
+      "global_magnitude": 0.001559768404279435,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.001559768404279435
+    },
+    {
+      "pair": [
+        "CycD",
+        "Wee1"
+      ],
+      "global_magnitude": 0.0014402696064540325,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0014402696064540325
+    },
+    {
+      "pair": [
+        "Ago",
+        "Fzr"
+      ],
+      "global_magnitude": 0.0013911724090576174,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0013911724090576174
+    },
+    {
+      "pair": [
+        "Dap",
+        "Fzr"
+      ],
+      "global_magnitude": 0.0013911724090576172,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0013911724090576172
+    },
+    {
+      "pair": [
+        "Notch",
+        "Fzr"
+      ],
+      "global_magnitude": 0.0013771738324846535,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0013771738324846535
+    },
+    {
+      "pair": [
+        "CycB",
+        "Dap"
+      ],
+      "global_magnitude": 0.0012844800949096686,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012844800949096686
+    },
+    {
+      "pair": [
+        "CycE",
+        "Dap"
+      ],
+      "global_magnitude": 0.0012844800949096686,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0012844800949096686
+    },
+    {
+      "pair": [
+        "Dap",
+        "E2F"
+      ],
+      "global_magnitude": 0.0012844800949096686,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0012844800949096686
+    },
+    {
+      "pair": [
+        "Ago",
+        "CycB"
+      ],
+      "global_magnitude": 0.001284480094909668,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001284480094909668
+    },
+    {
+      "pair": [
+        "Ago",
+        "CycE"
+      ],
+      "global_magnitude": 0.001284480094909668,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001284480094909668
+    },
+    {
+      "pair": [
+        "Ago",
+        "Dap"
+      ],
+      "global_magnitude": 0.001284480094909668,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.001284480094909668
+    },
+    {
+      "pair": [
+        "Ago",
+        "E2F"
+      ],
+      "global_magnitude": 0.001284480094909668,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.001284480094909668
+    },
+    {
+      "pair": [
+        "CycD",
+        "Fzr"
+      ],
+      "global_magnitude": 0.0011771951402936667,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0011771951402936667
+    },
+    {
+      "pair": [
+        "CycD",
+        "CycE"
+      ],
+      "global_magnitude": 0.0011739288057599747,
+      "local_magnitude": 0.28125,
+      "global_coefficient": 0.0011739288057599747
+    },
+    {
+      "pair": [
+        "CycA",
+        "Wee1"
+      ],
+      "global_magnitude": 0.001140233448573521,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001140233448573521
+    },
+    {
+      "pair": [
+        "CycA",
+        "CycB"
+      ],
+      "global_magnitude": 0.0011300904410226004,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.0011300904410226004
+    },
+    {
+      "pair": [
+        "CycA",
+        "CycE"
+      ],
+      "global_magnitude": 0.0011223656790597095,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.0011223656790597095
+    },
+    {
+      "pair": [
+        "CycA",
+        "Stg"
+      ],
+      "global_magnitude": 0.0009761367525373185,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0009761367525373185
+    },
+    {
+      "pair": [
+        "Notch",
+        "Fzy"
+      ],
+      "global_magnitude": 0.0008049522127423968,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0008049522127423968
+    },
+    {
+      "pair": [
+        "Notch",
+        "Wee1"
+      ],
+      "global_magnitude": 0.0007643552053542366,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0007643552053542366
+    },
+    {
+      "pair": [
+        "CycD",
+        "Notch"
+      ],
+      "global_magnitude": 0.0007598093577793666,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0007598093577793666
+    },
+    {
+      "pair": [
+        "Dap",
+        "Rb"
+      ],
+      "global_magnitude": 0.0007294416427612313,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0007294416427612313
+    },
+    {
+      "pair": [
+        "Ago",
+        "Rb"
+      ],
+      "global_magnitude": 0.0007294416427612305,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0007294416427612305
+    },
+    {
+      "pair": [
+        "Notch",
+        "CycA"
+      ],
+      "global_magnitude": 0.0006811891283307757,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0006811891283307757
+    },
+    {
+      "pair": [
+        "Fzy",
+        "Rb"
+      ],
+      "global_magnitude": 0.0006295306341988641,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0006295306341988641
+    },
+    {
+      "pair": [
+        "Dap",
+        "Rux"
+      ],
+      "global_magnitude": 0.0004938840866088872,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004938840866088872
+    },
+    {
+      "pair": [
+        "Ago",
+        "Rux"
+      ],
+      "global_magnitude": 0.0004938840866088867,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004938840866088867
+    },
+    {
+      "pair": [
+        "Dap",
+        "Stg"
+      ],
+      "global_magnitude": 0.00041537284851074236,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00041537284851074236
+    },
+    {
+      "pair": [
+        "Ago",
+        "Stg"
+      ],
+      "global_magnitude": 0.0004153728485107422,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004153728485107422
+    },
+    {
+      "pair": [
+        "Dap",
+        "Wee1"
+      ],
+      "global_magnitude": 0.0003912687301635745,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003912687301635745
+    },
+    {
+      "pair": [
+        "Ago",
+        "Wee1"
+      ],
+      "global_magnitude": 0.00039126873016357414,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00039126873016357414
+    },
+    {
+      "pair": [
+        "Ago",
+        "Notch"
+      ],
+      "global_magnitude": 0.00036513805389404297,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00036513805389404297
+    },
+    {
+      "pair": [
+        "Notch",
+        "Dap"
+      ],
+      "global_magnitude": 0.0003651380538940429,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0003651380538940429
+    },
+    {
+      "pair": [
+        "CycD",
+        "Rux"
+      ],
+      "global_magnitude": 0.00030722958700997476,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.00030722958700997476
+    },
+    {
+      "pair": [
+        "Ago",
+        "Fzy"
+      ],
+      "global_magnitude": 0.00016963481903076183,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00016963481903076183
+    },
+    {
+      "pair": [
+        "Dap",
+        "Fzy"
+      ],
+      "global_magnitude": 0.00016963481903076115,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00016963481903076115
+    },
+    {
+      "pair": [
+        "CycA",
+        "Dap"
+      ],
+      "global_magnitude": 0.00013895034790039061,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00013895034790039061
+    },
+    {
+      "pair": [
+        "Ago",
+        "CycA"
+      ],
+      "global_magnitude": 0.00013895034790039056,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00013895034790039056
+    },
+    {
+      "pair": [
+        "CycD",
+        "CycA"
+      ],
+      "global_magnitude": 0.00010121209280831461,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.00010121209280831461
+    },
+    {
+      "pair": [
+        "CycD",
+        "Dap"
+      ],
+      "global_magnitude": 7.637909480503623e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.637909480503623e-05
+    },
+    {
+      "pair": [
+        "Ago",
+        "CycD"
+      ],
+      "global_magnitude": 7.637909480503621e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.637909480503621e-05
+    }
+  ]
+}

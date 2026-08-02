@@ -1,0 +1,809 @@
+{
+  "model": "lac_operon",
+  "n_players": 13,
+  "n_init": 512,
+  "node_names": [
+    "Ge",
+    "Le",
+    "Lem",
+    "A",
+    "Am",
+    "B",
+    "C",
+    "L",
+    "Lm",
+    "M",
+    "P",
+    "R",
+    "Rm"
+  ],
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:44:34.402952+00:00",
+  "pairwise": {
+    "n_pairs": 78,
+    "n_local_nonzero": 14,
+    "n_global_nonzero": 65,
+    "local_positive_rate": 0.1794871794871795,
+    "spearman_rho": 0.11051318205490075,
+    "spearman_pvalue": 0.3354358762029479,
+    "spearman_ci_95": [
+      -0.11065210254699892,
+      0.3199566959785854
+    ],
+    "creation_rate": 0.7142857142857143,
+    "destruction_rate": 0.07142857142857142,
+    "created_count": 10,
+    "destroyed_count": 1,
+    "top_k": 14
+  },
+  "triples": {
+    "n_triples": 286,
+    "n_local_nonzero": 6,
+    "n_global_nonzero": 210,
+    "spearman_rho": 0.043110305747958884,
+    "spearman_pvalue": 0.46771235158965896,
+    "spearman_ci_95": [
+      -0.053864070457430184,
+      0.1497804178330057
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.014980604160882649,
+    "frac_energy_3plus": 0.09163990105033351
+  },
+  "energy_spectrum": {
+    "global": [
+      0.7912361069526372,
+      0.11997689850082957,
+      0.06965589204479049,
+      0.011802619743259662,
+      0.005395562632559198,
+      0.0013976307420913926,
+      0.0003593299158247968,
+      0.00013243136617599357,
+      3.734089200277065e-05,
+      5.825383999915899e-06,
+      3.6182350605021175e-07,
+      2.322955226311067e-12,
+      0.0,
+      0.0
+    ],
+    "local_rules": [
+      0.49784482758620696,
+      0.4195402298850575,
+      0.07040229885057472,
+      0.01149425287356322,
+      0.0007183908045977012,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12",
+      "order-13"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "M",
+        "P"
+      ],
+      "global_magnitude": 0.21286773681640625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.21286773681640625
+    },
+    {
+      "pair": [
+        "M",
+        "R"
+      ],
+      "global_magnitude": 0.03713226318359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.03713226318359375
+    },
+    {
+      "pair": [
+        "M",
+        "Rm"
+      ],
+      "global_magnitude": 0.03713226318359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.03713226318359375
+    },
+    {
+      "pair": [
+        "P",
+        "R"
+      ],
+      "global_magnitude": 0.03713226318359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.03713226318359375
+    },
+    {
+      "pair": [
+        "P",
+        "Rm"
+      ],
+      "global_magnitude": 0.03713226318359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.03713226318359375
+    },
+    {
+      "pair": [
+        "R",
+        "Rm"
+      ],
+      "global_magnitude": 0.03713226318359375,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.03713226318359375
+    },
+    {
+      "pair": [
+        "C",
+        "M"
+      ],
+      "global_magnitude": 0.02217388153076172,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.02217388153076172
+    },
+    {
+      "pair": [
+        "C",
+        "P"
+      ],
+      "global_magnitude": 0.02217388153076172,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.02217388153076172
+    },
+    {
+      "pair": [
+        "C",
+        "R"
+      ],
+      "global_magnitude": 0.02217388153076172,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.02217388153076172
+    },
+    {
+      "pair": [
+        "C",
+        "Rm"
+      ],
+      "global_magnitude": 0.02217388153076172,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.02217388153076172
+    },
+    {
+      "pair": [
+        "Ge",
+        "M"
+      ],
+      "global_magnitude": 0.00783538818359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00783538818359375
+    },
+    {
+      "pair": [
+        "Ge",
+        "P"
+      ],
+      "global_magnitude": 0.00783538818359375,
+      "local_magnitude": 0.1875,
+      "global_coefficient": 0.00783538818359375
+    },
+    {
+      "pair": [
+        "Ge",
+        "R"
+      ],
+      "global_magnitude": 0.00783538818359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00783538818359375
+    },
+    {
+      "pair": [
+        "Ge",
+        "Rm"
+      ],
+      "global_magnitude": 0.00783538818359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00783538818359375
+    },
+    {
+      "pair": [
+        "Ge",
+        "C"
+      ],
+      "global_magnitude": 0.007122993469238281,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.007122993469238281
+    },
+    {
+      "pair": [
+        "A",
+        "Am"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.375,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "A",
+        "L"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "A",
+        "Lm"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "A",
+        "M"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "A",
+        "P"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "A",
+        "R"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "A",
+        "Rm"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Am",
+        "L"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Am",
+        "Lm"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Am",
+        "M"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Am",
+        "P"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Am",
+        "R"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Am",
+        "Rm"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "L",
+        "Lm"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "L",
+        "M"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "L",
+        "P"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "L",
+        "R"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "L",
+        "Rm"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Lm",
+        "M"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Lm",
+        "P"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Lm",
+        "R"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "Lm",
+        "Rm"
+      ],
+      "global_magnitude": 0.00171661376953125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00171661376953125
+    },
+    {
+      "pair": [
+        "A",
+        "C"
+      ],
+      "global_magnitude": 0.0014772415161132812,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0014772415161132812
+    },
+    {
+      "pair": [
+        "Am",
+        "C"
+      ],
+      "global_magnitude": 0.0014772415161132812,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0014772415161132812
+    },
+    {
+      "pair": [
+        "C",
+        "L"
+      ],
+      "global_magnitude": 0.0014772415161132812,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0014772415161132812
+    },
+    {
+      "pair": [
+        "C",
+        "Lm"
+      ],
+      "global_magnitude": 0.0014772415161132812,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0014772415161132812
+    },
+    {
+      "pair": [
+        "Ge",
+        "Le"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.3125,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "A"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "Am"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "L"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "Lm"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "M"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "P"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "R"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Le",
+        "Rm"
+      ],
+      "global_magnitude": 0.0002384185791015625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002384185791015625
+    },
+    {
+      "pair": [
+        "Ge",
+        "A"
+      ],
+      "global_magnitude": 0.00023651123046875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00023651123046875
+    },
+    {
+      "pair": [
+        "Ge",
+        "Am"
+      ],
+      "global_magnitude": 0.00023651123046875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00023651123046875
+    },
+    {
+      "pair": [
+        "Ge",
+        "L"
+      ],
+      "global_magnitude": 0.00023651123046875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00023651123046875
+    },
+    {
+      "pair": [
+        "Ge",
+        "Lm"
+      ],
+      "global_magnitude": 0.00023651123046875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00023651123046875
+    },
+    {
+      "pair": [
+        "Ge",
+        "Lem"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Le",
+        "Lem"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Le",
+        "C"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "A"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "Am"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "L"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "Lm"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "M"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "P"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "R"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Lem",
+        "Rm"
+      ],
+      "global_magnitude": 9.5367431640625e-07,
+      "local_magnitude": 0.0,
+      "global_coefficient": -9.5367431640625e-07
+    },
+    {
+      "pair": [
+        "Ge",
+        "B"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Le",
+        "B"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Lem",
+        "B"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Lem",
+        "C"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "A",
+        "B"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Am",
+        "B"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "B",
+        "C"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "B",
+        "L"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "B",
+        "Lm"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "B",
+        "M"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "B",
+        "P"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "B",
+        "R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "B",
+        "Rm"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

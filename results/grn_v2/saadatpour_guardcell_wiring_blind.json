@@ -1,0 +1,292 @@
+{
+  "model": "saadatpour_guardcell",
+  "n_nodes": 13,
+  "node_names": [
+    "ADPRc",
+    "CIS",
+    "Ca2",
+    "Ca2ATP",
+    "GC",
+    "InsP3",
+    "NO",
+    "NOS",
+    "PLC",
+    "cADPR",
+    "cGMP",
+    "KAP",
+    "KEV"
+  ],
+  "output_nodes": [
+    "KEV"
+  ],
+  "interaction_graph": {
+    "ADPRc": [
+      {
+        "regulator": "NO",
+        "sign": 1
+      }
+    ],
+    "CIS": [
+      {
+        "regulator": "InsP3",
+        "sign": 1
+      },
+      {
+        "regulator": "cADPR",
+        "sign": 1
+      },
+      {
+        "regulator": "cGMP",
+        "sign": 1
+      }
+    ],
+    "Ca2": [
+      {
+        "regulator": "CIS",
+        "sign": 1
+      },
+      {
+        "regulator": "Ca2ATP",
+        "sign": -1
+      }
+    ],
+    "Ca2ATP": [
+      {
+        "regulator": "Ca2",
+        "sign": 1
+      }
+    ],
+    "GC": [
+      {
+        "regulator": "NO",
+        "sign": 1
+      }
+    ],
+    "InsP3": [
+      {
+        "regulator": "PLC",
+        "sign": 1
+      }
+    ],
+    "NO": [
+      {
+        "regulator": "NOS",
+        "sign": 1
+      }
+    ],
+    "NOS": [
+      {
+        "regulator": "Ca2",
+        "sign": 1
+      }
+    ],
+    "PLC": [
+      {
+        "regulator": "Ca2",
+        "sign": 1
+      }
+    ],
+    "cADPR": [
+      {
+        "regulator": "ADPRc",
+        "sign": 1
+      }
+    ],
+    "cGMP": [
+      {
+        "regulator": "GC",
+        "sign": 1
+      }
+    ],
+    "KAP": [
+      {
+        "regulator": "Ca2",
+        "sign": -1
+      }
+    ],
+    "KEV": [
+      {
+        "regulator": "Ca2",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "CIS",
+        "Ca2ATP"
+      ],
+      [
+        "InsP3",
+        "cADPR"
+      ],
+      [
+        "InsP3",
+        "cGMP"
+      ],
+      [
+        "cADPR",
+        "cGMP"
+      ]
+    ],
+    "triples": [
+      [
+        "InsP3",
+        "cADPR",
+        "cGMP"
+      ]
+    ],
+    "per_gene": {
+      "ADPRc": {
+        "regulators": [
+          "NO"
+        ],
+        "interactions": []
+      },
+      "CIS": {
+        "regulators": [
+          "InsP3",
+          "cADPR",
+          "cGMP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "InsP3",
+              "cADPR"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "InsP3",
+              "cGMP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "cADPR",
+              "cGMP"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "InsP3",
+              "cADPR",
+              "cGMP"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "Ca2": {
+        "regulators": [
+          "CIS",
+          "Ca2ATP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CIS",
+              "Ca2ATP"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Ca2ATP": {
+        "regulators": [
+          "Ca2"
+        ],
+        "interactions": []
+      },
+      "GC": {
+        "regulators": [
+          "NO"
+        ],
+        "interactions": []
+      },
+      "InsP3": {
+        "regulators": [
+          "PLC"
+        ],
+        "interactions": []
+      },
+      "NO": {
+        "regulators": [
+          "NOS"
+        ],
+        "interactions": []
+      },
+      "NOS": {
+        "regulators": [
+          "Ca2"
+        ],
+        "interactions": []
+      },
+      "PLC": {
+        "regulators": [
+          "Ca2"
+        ],
+        "interactions": []
+      },
+      "cADPR": {
+        "regulators": [
+          "ADPRc"
+        ],
+        "interactions": []
+      },
+      "cGMP": {
+        "regulators": [
+          "GC"
+        ],
+        "interactions": []
+      },
+      "KAP": {
+        "regulators": [
+          "Ca2"
+        ],
+        "interactions": []
+      },
+      "KEV": {
+        "regulators": [
+          "Ca2"
+        ],
+        "interactions": []
+      }
+    },
+    "n_pairwise": 4,
+    "n_triples": 1,
+    "pairwise_strengths": {
+      "['InsP3', 'cADPR']": 0.125,
+      "['InsP3', 'cGMP']": 0.125,
+      "['cADPR', 'cGMP']": 0.125,
+      "['CIS', 'Ca2ATP']": 0.25
+    },
+    "local_energy_spectrum": [
+      0.5024509803921569,
+      0.47794117647058826,
+      0.01715686274509804,
+      0.0024509803921568627
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 4194304,
+    "total_fixed_point": 3956216,
+    "total_cycling": 238088,
+    "cycling_fraction": 0.05676460266113281
+  },
+  "n_unique_values": 15,
+  "total_variance": 0.0059306794045205094,
+  "timestamp": "2026-07-28T17:00:07.007944+00:00"
+}

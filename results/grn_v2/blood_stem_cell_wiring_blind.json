@@ -1,0 +1,3683 @@
+{
+  "model": "blood_stem_cell",
+  "n_nodes": 11,
+  "node_names": [
+    "ERG",
+    "ETO2",
+    "FLI1",
+    "GATA1",
+    "GATA2",
+    "HHEX",
+    "PU1",
+    "RUNX1",
+    "SCL",
+    "SMAD6",
+    "ZFPM1"
+  ],
+  "output_nodes": [
+    "GATA1"
+  ],
+  "interaction_graph": {
+    "ERG": [
+      {
+        "regulator": "ETO2",
+        "sign": -1
+      },
+      {
+        "regulator": "FLI1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      },
+      {
+        "regulator": "RUNX1",
+        "sign": 1
+      },
+      {
+        "regulator": "SCL",
+        "sign": -1
+      }
+    ],
+    "ETO2": [
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 1
+      }
+    ],
+    "FLI1": [
+      {
+        "regulator": "ERG",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA1",
+        "sign": -1
+      },
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 0
+      }
+    ],
+    "GATA1": [
+      {
+        "regulator": "PU1",
+        "sign": -1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 1
+      }
+    ],
+    "GATA2": [
+      {
+        "regulator": "ERG",
+        "sign": 1
+      },
+      {
+        "regulator": "FLI1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA1",
+        "sign": -1
+      },
+      {
+        "regulator": "HHEX",
+        "sign": -1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 1
+      },
+      {
+        "regulator": "ZFPM1",
+        "sign": -1
+      }
+    ],
+    "HHEX": [
+      {
+        "regulator": "ERG",
+        "sign": 1
+      },
+      {
+        "regulator": "FLI1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 1
+      }
+    ],
+    "PU1": [
+      {
+        "regulator": "FLI1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA1",
+        "sign": -1
+      },
+      {
+        "regulator": "RUNX1",
+        "sign": 1
+      }
+    ],
+    "RUNX1": [
+      {
+        "regulator": "ERG",
+        "sign": 1
+      },
+      {
+        "regulator": "FLI1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      },
+      {
+        "regulator": "PU1",
+        "sign": 1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 1
+      },
+      {
+        "regulator": "SMAD6",
+        "sign": -1
+      }
+    ],
+    "SCL": [
+      {
+        "regulator": "ERG",
+        "sign": 1
+      },
+      {
+        "regulator": "FLI1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      }
+    ],
+    "SMAD6": [
+      {
+        "regulator": "ERG",
+        "sign": 1
+      },
+      {
+        "regulator": "FLI1",
+        "sign": 1
+      },
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 1
+      }
+    ],
+    "ZFPM1": [
+      {
+        "regulator": "GATA2",
+        "sign": 1
+      },
+      {
+        "regulator": "SCL",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "ETO2",
+        "FLI1"
+      ],
+      [
+        "FLI1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "GATA1"
+      ],
+      [
+        "ERG",
+        "ZFPM1"
+      ],
+      [
+        "ERG",
+        "PU1"
+      ],
+      [
+        "PU1",
+        "RUNX1"
+      ],
+      [
+        "FLI1",
+        "GATA2"
+      ],
+      [
+        "FLI1",
+        "HHEX"
+      ],
+      [
+        "GATA2",
+        "PU1"
+      ],
+      [
+        "GATA1",
+        "HHEX"
+      ],
+      [
+        "GATA2",
+        "RUNX1"
+      ],
+      [
+        "ERG",
+        "GATA2"
+      ],
+      [
+        "ERG",
+        "HHEX"
+      ],
+      [
+        "GATA2",
+        "ZFPM1"
+      ],
+      [
+        "ERG",
+        "RUNX1"
+      ],
+      [
+        "HHEX",
+        "ZFPM1"
+      ],
+      [
+        "ERG",
+        "ETO2"
+      ],
+      [
+        "FLI1",
+        "PU1"
+      ],
+      [
+        "RUNX1",
+        "SMAD6"
+      ],
+      [
+        "GATA2",
+        "SCL"
+      ],
+      [
+        "ETO2",
+        "GATA2"
+      ],
+      [
+        "HHEX",
+        "SCL"
+      ],
+      [
+        "GATA2",
+        "HHEX"
+      ],
+      [
+        "ETO2",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "FLI1"
+      ],
+      [
+        "GATA1",
+        "PU1"
+      ],
+      [
+        "GATA1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "SCL"
+      ],
+      [
+        "FLI1",
+        "GATA1"
+      ],
+      [
+        "FLI1",
+        "ZFPM1"
+      ],
+      [
+        "GATA1",
+        "ZFPM1"
+      ],
+      [
+        "SCL",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "RUNX1"
+      ],
+      [
+        "PU1",
+        "SCL"
+      ],
+      [
+        "RUNX1",
+        "SCL"
+      ],
+      [
+        "ETO2",
+        "RUNX1"
+      ],
+      [
+        "GATA1",
+        "GATA2"
+      ]
+    ],
+    "triples": [
+      [
+        "FLI1",
+        "GATA2",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "GATA1",
+        "GATA2"
+      ],
+      [
+        "ERG",
+        "GATA1",
+        "HHEX"
+      ],
+      [
+        "FLI1",
+        "HHEX",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "GATA2",
+        "ZFPM1"
+      ],
+      [
+        "ERG",
+        "HHEX",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "RUNX1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "ETO2",
+        "RUNX1"
+      ],
+      [
+        "ERG",
+        "RUNX1",
+        "SCL"
+      ],
+      [
+        "FLI1",
+        "PU1",
+        "RUNX1"
+      ],
+      [
+        "ETO2",
+        "FLI1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "PU1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "FLI1",
+        "RUNX1"
+      ],
+      [
+        "PU1",
+        "RUNX1",
+        "SCL"
+      ],
+      [
+        "FLI1",
+        "GATA2",
+        "RUNX1"
+      ],
+      [
+        "ERG",
+        "FLI1",
+        "GATA1"
+      ],
+      [
+        "GATA2",
+        "HHEX",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "FLI1",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "GATA2",
+        "HHEX"
+      ],
+      [
+        "ERG",
+        "ETO2",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "GATA2",
+        "HHEX"
+      ],
+      [
+        "ERG",
+        "GATA1",
+        "SCL"
+      ],
+      [
+        "FLI1",
+        "GATA1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "GATA1",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "GATA1",
+        "ZFPM1"
+      ],
+      [
+        "GATA2",
+        "RUNX1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "SCL",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "SCL",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "PU1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "ETO2",
+        "GATA2"
+      ],
+      [
+        "ERG",
+        "GATA2",
+        "SCL"
+      ],
+      [
+        "FLI1",
+        "GATA1",
+        "GATA2"
+      ],
+      [
+        "FLI1",
+        "GATA1",
+        "HHEX"
+      ],
+      [
+        "ERG",
+        "HHEX",
+        "SCL"
+      ],
+      [
+        "FLI1",
+        "GATA2",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "HHEX",
+        "ZFPM1"
+      ],
+      [
+        "FLI1",
+        "GATA2",
+        "PU1"
+      ],
+      [
+        "GATA1",
+        "PU1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "FLI1",
+        "PU1"
+      ],
+      [
+        "ETO2",
+        "GATA2",
+        "RUNX1"
+      ],
+      [
+        "GATA2",
+        "PU1",
+        "RUNX1"
+      ],
+      [
+        "GATA1",
+        "GATA2",
+        "ZFPM1"
+      ],
+      [
+        "GATA1",
+        "HHEX",
+        "ZFPM1"
+      ],
+      [
+        "ERG",
+        "GATA2",
+        "RUNX1"
+      ],
+      [
+        "ETO2",
+        "RUNX1",
+        "SCL"
+      ],
+      [
+        "ETO2",
+        "FLI1",
+        "GATA2"
+      ],
+      [
+        "ERG",
+        "GATA2",
+        "PU1"
+      ],
+      [
+        "ETO2",
+        "GATA2",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "FLI1",
+        "GATA2"
+      ],
+      [
+        "ERG",
+        "FLI1",
+        "HHEX"
+      ],
+      [
+        "GATA1",
+        "GATA2",
+        "SCL"
+      ],
+      [
+        "GATA1",
+        "HHEX",
+        "SCL"
+      ],
+      [
+        "GATA1",
+        "SCL",
+        "ZFPM1"
+      ],
+      [
+        "GATA2",
+        "SCL",
+        "ZFPM1"
+      ],
+      [
+        "ETO2",
+        "FLI1",
+        "RUNX1"
+      ],
+      [
+        "HHEX",
+        "SCL",
+        "ZFPM1"
+      ],
+      [
+        "ERG",
+        "PU1",
+        "RUNX1"
+      ],
+      [
+        "GATA2",
+        "PU1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "FLI1",
+        "SCL"
+      ],
+      [
+        "ERG",
+        "ETO2",
+        "FLI1"
+      ],
+      [
+        "GATA1",
+        "GATA2",
+        "HHEX"
+      ],
+      [
+        "GATA2",
+        "HHEX",
+        "ZFPM1"
+      ]
+    ],
+    "per_gene": {
+      "ERG": {
+        "regulators": [
+          "ERG",
+          "ETO2",
+          "FLI1",
+          "GATA2",
+          "RUNX1",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ERG",
+              "ETO2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ETO2",
+              "FLI1",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ETO2",
+              "FLI1",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          }
+        ]
+      },
+      "ETO2": {
+        "regulators": [
+          "GATA2",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "FLI1": {
+        "regulators": [
+          "ERG",
+          "FLI1",
+          "GATA1",
+          "GATA2",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ERG",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "GATA1": {
+        "regulators": [
+          "GATA1",
+          "PU1",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GATA1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "PU1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "PU1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "GATA2": {
+        "regulators": [
+          "ERG",
+          "FLI1",
+          "GATA1",
+          "GATA2",
+          "HHEX",
+          "SCL",
+          "ZFPM1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ERG",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.1171875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 3,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0703125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0703125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0703125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "HHEX"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "HHEX"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "HHEX"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "HHEX"
+            ],
+            "order": 2,
+            "coefficient": 0.0546875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "HHEX"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "HHEX"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "HHEX"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 2,
+            "coefficient": -0.1640625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 3,
+            "coefficient": -0.0546875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "HHEX",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "ZFPM1"
+            ],
+            "order": 2,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "ZFPM1"
+            ],
+            "order": 2,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "ZFPM1"
+            ],
+            "order": 2,
+            "coefficient": -0.1484375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 2,
+            "coefficient": 0.0390625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": -0.0234375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0390625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0234375
+          },
+          {
+            "regulators": [
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 2,
+            "coefficient": 0.0546875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0546875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0546875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0546875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "ZFPM1"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 2,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 3,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 4,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 6,
+            "coefficient": 0.0078125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 5,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 6,
+            "coefficient": -0.0078125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "HHEX",
+              "SCL",
+              "ZFPM1"
+            ],
+            "order": 7,
+            "coefficient": -0.0078125
+          }
+        ]
+      },
+      "HHEX": {
+        "regulators": [
+          "ERG",
+          "FLI1",
+          "GATA2",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ERG",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "PU1": {
+        "regulators": [
+          "FLI1",
+          "GATA1",
+          "PU1",
+          "RUNX1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FLI1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "RUNX1": {
+        "regulators": [
+          "ERG",
+          "FLI1",
+          "GATA2",
+          "PU1",
+          "RUNX1",
+          "SCL",
+          "SMAD6"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ERG",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 2,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.046875
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "PU1",
+              "RUNX1"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "PU1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "PU1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "PU1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "PU1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "PU1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "PU1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "PU1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "PU1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": -0.015625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "PU1",
+              "RUNX1",
+              "SCL"
+            ],
+            "order": 6,
+            "coefficient": 0.015625
+          },
+          {
+            "regulators": [
+              "RUNX1",
+              "SMAD6"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "SCL": {
+        "regulators": [
+          "ERG",
+          "FLI1",
+          "GATA1",
+          "GATA2",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ERG",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.15625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "SMAD6": {
+        "regulators": [
+          "ERG",
+          "FLI1",
+          "GATA2",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ERG",
+              "FLI1"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ERG",
+              "FLI1",
+              "GATA2",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "ZFPM1": {
+        "regulators": [
+          "GATA2",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GATA2",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      }
+    },
+    "n_pairwise": 37,
+    "n_triples": 62,
+    "pairwise_strengths": {
+      "['ERG', 'ETO2']": 0.015625,
+      "['ERG', 'FLI1']": 0.8046875,
+      "['ETO2', 'FLI1']": 0.015625,
+      "['ERG', 'GATA2']": 0.3515625,
+      "['ETO2', 'GATA2']": 0.015625,
+      "['FLI1', 'GATA2']": 0.3515625,
+      "['ERG', 'RUNX1']": 0.09375,
+      "['ETO2', 'RUNX1']": 0.015625,
+      "['FLI1', 'RUNX1']": 0.21875,
+      "['GATA2', 'RUNX1']": 0.0625,
+      "['ERG', 'SCL']": 0.2734375,
+      "['ETO2', 'SCL']": 0.234375,
+      "['FLI1', 'SCL']": 0.2734375,
+      "['GATA2', 'SCL']": 0.7109375,
+      "['RUNX1', 'SCL']": 0.03125,
+      "['ERG', 'GATA1']": 0.1328125,
+      "['FLI1', 'GATA1']": 0.1328125,
+      "['GATA1', 'GATA2']": 0.1328125,
+      "['GATA1', 'PU1']": 0.375,
+      "['GATA1', 'SCL']": 0.1640625,
+      "['PU1', 'SCL']": 0.140625,
+      "['ERG', 'HHEX']": 0.0234375,
+      "['FLI1', 'HHEX']": 0.0234375,
+      "['GATA1', 'HHEX']": 0.0546875,
+      "['GATA2', 'HHEX']": 0.1640625,
+      "['HHEX', 'SCL']": 0.0234375,
+      "['ERG', 'ZFPM1']": 0.0390625,
+      "['FLI1', 'ZFPM1']": 0.0390625,
+      "['GATA1', 'ZFPM1']": 0.1484375,
+      "['GATA2', 'ZFPM1']": 0.0390625,
+      "['HHEX', 'ZFPM1']": 0.0546875,
+      "['SCL', 'ZFPM1']": 0.0078125,
+      "['FLI1', 'PU1']": 0.171875,
+      "['PU1', 'RUNX1']": 0.171875,
+      "['ERG', 'PU1']": 0.046875,
+      "['GATA2', 'PU1']": 0.015625,
+      "['RUNX1', 'SMAD6']": 0.25
+    },
+    "local_energy_spectrum": [
+      0.6561382477243173,
+      0.194316888816645,
+      0.11684208387516255,
+      0.02506298764629389,
+      0.006451154096228868,
+      0.0010260890767230168,
+      0.00015238946684005203,
+      1.0159297789336801e-05
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 1048576,
+    "total_fixed_point": 791286,
+    "total_cycling": 257290,
+    "cycling_fraction": 0.24537086486816406
+  },
+  "n_unique_values": 11,
+  "total_variance": 0.006949171191081405,
+  "timestamp": "2026-07-28T16:43:42.401638+00:00"
+}

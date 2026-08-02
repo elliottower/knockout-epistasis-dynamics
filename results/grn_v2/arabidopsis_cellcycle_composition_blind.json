@@ -1,0 +1,929 @@
+{
+  "model": "arabidopsis_cellcycle",
+  "n_players": 14,
+  "n_init": 512,
+  "node_names": [
+    "APC_C",
+    "CDKB1_1",
+    "CYCA2_3",
+    "CYCB1_1",
+    "CYCD3_1",
+    "E2Fa",
+    "E2Fb",
+    "E2Fc",
+    "E2Fe",
+    "KRP1",
+    "MYB3R1_4",
+    "MYB77",
+    "RBR",
+    "SCF"
+  ],
+  "timestamp": "2026-07-28T16:05:45.288936+00:00",
+  "pairwise": {
+    "n_pairs": 91,
+    "n_local_nonzero": 58,
+    "n_global_nonzero": 91,
+    "local_positive_rate": 0.6373626373626373,
+    "spearman_rho": 0.20450626958426807,
+    "spearman_pvalue": 0.051835090108637724,
+    "spearman_ci_95": [
+      -0.014613009887858477,
+      0.40886156080163943
+    ],
+    "creation_rate": 0.29310344827586204,
+    "destruction_rate": 0.0,
+    "created_count": 17,
+    "destroyed_count": 0,
+    "top_k": 58
+  },
+  "triples": {
+    "n_triples": 364,
+    "n_local_nonzero": 97,
+    "n_global_nonzero": 364,
+    "spearman_rho": 0.16262524465648542,
+    "spearman_pvalue": 0.0018534238915549853,
+    "spearman_ci_95": [
+      0.06639695801928398,
+      0.2569225879647925
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.022150776205545546,
+    "frac_energy_3plus": 0.4234258631451943
+  },
+  "energy_spectrum": {
+    "global": [
+      0.0959188987725285,
+      0.2436628775357868,
+      0.2776069030511849,
+      0.20437978925736827,
+      0.10825882375849014,
+      0.046408748161327236,
+      0.016821031228646154,
+      0.005237154002675814,
+      0.0013274273619726445,
+      0.0002981975124057491,
+      6.43662351642664e-05,
+      1.2903404911146433e-05,
+      2.5376066271263338e-06,
+      3.3012552502977826e-07,
+      1.198538632673141e-08
+    ],
+    "local_rules": [
+      0.554379284415221,
+      0.30352021544487967,
+      0.1023188304420817,
+      0.03036688584219362,
+      0.007576419977616117,
+      0.001565123111359821,
+      0.00024482372691662,
+      2.623111359820929e-05,
+      2.1859261331841076e-06,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12",
+      "order-13",
+      "order-14"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "CYCB1_1",
+        "E2Fb"
+      ],
+      "global_magnitude": 0.04439786496669474,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.04439786496669474
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "E2Fa"
+      ],
+      "global_magnitude": 0.04107550206691447,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.04107550206691447
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "E2Fb"
+      ],
+      "global_magnitude": 0.04107550206691447,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.04107550206691447
+    },
+    {
+      "pair": [
+        "APC_C",
+        "CYCB1_1"
+      ],
+      "global_magnitude": 0.03931766848662596,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.03931766848662596
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.02850988818228556,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.02850988818228556
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "KRP1"
+      ],
+      "global_magnitude": 0.02783685134311722,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.02783685134311722
+    },
+    {
+      "pair": [
+        "KRP1",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.027094539682057182,
+      "local_magnitude": 0.23046875,
+      "global_coefficient": -0.027094539682057182
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "MYB77"
+      ],
+      "global_magnitude": 0.025167629776076138,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.025167629776076138
+    },
+    {
+      "pair": [
+        "APC_C",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.024322878002445578,
+      "local_magnitude": 0.40234375,
+      "global_coefficient": -0.024322878002445578
+    },
+    {
+      "pair": [
+        "APC_C",
+        "KRP1"
+      ],
+      "global_magnitude": 0.02340224937046126,
+      "local_magnitude": 0.01953125,
+      "global_coefficient": 0.02340224937046126
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "RBR"
+      ],
+      "global_magnitude": 0.018405178292819964,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.018405178292819964
+    },
+    {
+      "pair": [
+        "E2Fb",
+        "RBR"
+      ],
+      "global_magnitude": 0.018405178292819957,
+      "local_magnitude": 0.31640625,
+      "global_coefficient": -0.018405178292819957
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "E2Fc"
+      ],
+      "global_magnitude": 0.018322254986460777,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.018322254986460777
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "RBR"
+      ],
+      "global_magnitude": 0.017573335870334605,
+      "local_magnitude": 0.484375,
+      "global_coefficient": -0.017573335870334605
+    },
+    {
+      "pair": [
+        "APC_C",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.017295665154910694,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.017295665154910694
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.017295665154910694,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.017295665154910694
+    },
+    {
+      "pair": [
+        "E2Fb",
+        "E2Fc"
+      ],
+      "global_magnitude": 0.016403462261851402,
+      "local_magnitude": 0.13671875,
+      "global_coefficient": -0.016403462261851402
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "E2Fc"
+      ],
+      "global_magnitude": 0.01569988903492269,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.01569988903492269
+    },
+    {
+      "pair": [
+        "E2Fb",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.015376872430301319,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.015376872430301319
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.014673299203372608,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.014673299203372608
+    },
+    {
+      "pair": [
+        "APC_C",
+        "MYB77"
+      ],
+      "global_magnitude": 0.013781159699379979,
+      "local_magnitude": 0.23046875,
+      "global_coefficient": -0.013781159699379979
+    },
+    {
+      "pair": [
+        "APC_C",
+        "E2Fb"
+      ],
+      "global_magnitude": 0.013053477812797833,
+      "local_magnitude": 0.09765625,
+      "global_coefficient": -0.013053477812797833
+    },
+    {
+      "pair": [
+        "E2Fb",
+        "MYB77"
+      ],
+      "global_magnitude": 0.012861416397169884,
+      "local_magnitude": 0.13671875,
+      "global_coefficient": 0.012861416397169884
+    },
+    {
+      "pair": [
+        "E2Fc",
+        "MYB77"
+      ],
+      "global_magnitude": 0.012374029216841515,
+      "local_magnitude": 0.23046875,
+      "global_coefficient": 0.012374029216841515
+    },
+    {
+      "pair": [
+        "MYB3R1_4",
+        "MYB77"
+      ],
+      "global_magnitude": 0.012334498892429603,
+      "local_magnitude": 0.81640625,
+      "global_coefficient": 0.012334498892429603
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "RBR"
+      ],
+      "global_magnitude": 0.012052026949760875,
+      "local_magnitude": 0.15234375,
+      "global_coefficient": 0.012052026949760875
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "CYCD3_1"
+      ],
+      "global_magnitude": 0.01205143090331312,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.01205143090331312
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "E2Fb"
+      ],
+      "global_magnitude": 0.01205143090331312,
+      "local_magnitude": 0.10546875,
+      "global_coefficient": 0.01205143090331312
+    },
+    {
+      "pair": [
+        "KRP1",
+        "MYB77"
+      ],
+      "global_magnitude": 0.01177979714135534,
+      "local_magnitude": 0.08984375,
+      "global_coefficient": -0.01177979714135534
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "E2Fa"
+      ],
+      "global_magnitude": 0.011769858561394175,
+      "local_magnitude": 0.046875,
+      "global_coefficient": 0.011769858561394175
+    },
+    {
+      "pair": [
+        "APC_C",
+        "E2Fa"
+      ],
+      "global_magnitude": 0.011138261366874982,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.011138261366874982
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "MYB77"
+      ],
+      "global_magnitude": 0.009539053497389609,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.009539053497389609
+    },
+    {
+      "pair": [
+        "E2Fc",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.007959677169664094,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.007959677169664094
+    },
+    {
+      "pair": [
+        "E2Fc",
+        "RBR"
+      ],
+      "global_magnitude": 0.007154743766557074,
+      "local_magnitude": 0.08203125,
+      "global_coefficient": 0.007154743766557074
+    },
+    {
+      "pair": [
+        "E2Fe",
+        "RBR"
+      ],
+      "global_magnitude": 0.006640116429934955,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.006640116429934955
+    },
+    {
+      "pair": [
+        "E2Fe",
+        "MYB77"
+      ],
+      "global_magnitude": 0.005397913891700943,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.005397913891700943
+    },
+    {
+      "pair": [
+        "APC_C",
+        "RBR"
+      ],
+      "global_magnitude": 0.005365589252123227,
+      "local_magnitude": 0.05859375,
+      "global_coefficient": 0.005365589252123227
+    },
+    {
+      "pair": [
+        "MYB77",
+        "RBR"
+      ],
+      "global_magnitude": 0.005341616944131928,
+      "local_magnitude": 0.11328125,
+      "global_coefficient": -0.005341616944131928
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.00491425084054159,
+      "local_magnitude": 0.234375,
+      "global_coefficient": -0.00491425084054159
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "E2Fc"
+      ],
+      "global_magnitude": 0.004429630873165963,
+      "local_magnitude": 0.02734375,
+      "global_coefficient": -0.004429630873165963
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "KRP1"
+      ],
+      "global_magnitude": 0.004405208364524379,
+      "local_magnitude": 0.046875,
+      "global_coefficient": 0.004405208364524379
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.004174881455027338,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.004174881455027338
+    },
+    {
+      "pair": [
+        "APC_C",
+        "CYCD3_1"
+      ],
+      "global_magnitude": 0.0032896806885709456,
+      "local_magnitude": 0.01953125,
+      "global_coefficient": -0.0032896806885709456
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "MYB77"
+      ],
+      "global_magnitude": 0.002814272037157407,
+      "local_magnitude": 0.02734375,
+      "global_coefficient": 0.002814272037157407
+    },
+    {
+      "pair": [
+        "APC_C",
+        "E2Fc"
+      ],
+      "global_magnitude": 0.002668022107093524,
+      "local_magnitude": 0.01953125,
+      "global_coefficient": 0.002668022107093524
+    },
+    {
+      "pair": [
+        "KRP1",
+        "RBR"
+      ],
+      "global_magnitude": 0.002493287521536547,
+      "local_magnitude": 0.15234375,
+      "global_coefficient": -0.002493287521536547
+    },
+    {
+      "pair": [
+        "E2Fe",
+        "KRP1"
+      ],
+      "global_magnitude": 0.0024086716324868353,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0024086716324868353
+    },
+    {
+      "pair": [
+        "E2Fe",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.0023527455582630884,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.0023527455582630884
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "E2Fa"
+      ],
+      "global_magnitude": 0.002059251811028268,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.002059251811028268
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "E2Fa"
+      ],
+      "global_magnitude": 0.0020592518110282678,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0020592518110282678
+    },
+    {
+      "pair": [
+        "E2Fb",
+        "KRP1"
+      ],
+      "global_magnitude": 0.001906343236960903,
+      "local_magnitude": 0.10546875,
+      "global_coefficient": 0.001906343236960903
+    },
+    {
+      "pair": [
+        "E2Fc",
+        "SCF"
+      ],
+      "global_magnitude": 0.0016782491363792566,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0016782491363792566
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "E2Fb"
+      ],
+      "global_magnitude": 0.0016475029249198698,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0016475029249198698
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "E2Fb"
+      ],
+      "global_magnitude": 0.0016475029249198693,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0016475029249198693
+    },
+    {
+      "pair": [
+        "E2Fb",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.0015918879407613158,
+      "local_magnitude": 0.13671875,
+      "global_coefficient": -0.0015918879407613158
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "MYB77"
+      ],
+      "global_magnitude": 0.0015142666756319467,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.0015142666756319467
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "MYB77"
+      ],
+      "global_magnitude": 0.0015142666756319462,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.0015142666756319462
+    },
+    {
+      "pair": [
+        "RBR",
+        "SCF"
+      ],
+      "global_magnitude": 0.0014699442608399668,
+      "local_magnitude": 0.015625,
+      "global_coefficient": -0.0014699442608399668
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "CYCB1_1"
+      ],
+      "global_magnitude": 0.0014682121534354948,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0014682121534354948
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "CYCA2_3"
+      ],
+      "global_magnitude": 0.0014682121534354943,
+      "local_magnitude": 0.28125,
+      "global_coefficient": -0.0014682121534354943
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "CYCB1_1"
+      ],
+      "global_magnitude": 0.0014682121534354943,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0014682121534354943
+    },
+    {
+      "pair": [
+        "MYB3R1_4",
+        "RBR"
+      ],
+      "global_magnitude": 0.001404384570191099,
+      "local_magnitude": 0.31640625,
+      "global_coefficient": 0.001404384570191099
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.001403248595243978,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.001403248595243978
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.0014032485952439778,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0014032485952439778
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "SCF"
+      ],
+      "global_magnitude": 0.0012996206770251291,
+      "local_magnitude": 0.078125,
+      "global_coefficient": -0.0012996206770251291
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "RBR"
+      ],
+      "global_magnitude": 0.0012929001656630844,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0012929001656630844
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "RBR"
+      ],
+      "global_magnitude": 0.0012929001656630842,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0012929001656630842
+    },
+    {
+      "pair": [
+        "E2Fa",
+        "SCF"
+      ],
+      "global_magnitude": 0.0012762821472264083,
+      "local_magnitude": 0.015625,
+      "global_coefficient": -0.0012762821472264083
+    },
+    {
+      "pair": [
+        "KRP1",
+        "SCF"
+      ],
+      "global_magnitude": 0.0011916220492482511,
+      "local_magnitude": 0.078125,
+      "global_coefficient": 0.0011916220492482511
+    },
+    {
+      "pair": [
+        "MYB77",
+        "SCF"
+      ],
+      "global_magnitude": 0.0011530953177946324,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0011530953177946324
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.0010373528167243167,
+      "local_magnitude": 0.16796875,
+      "global_coefficient": -0.0010373528167243167
+    },
+    {
+      "pair": [
+        "E2Fc",
+        "KRP1"
+      ],
+      "global_magnitude": 0.001033654602905902,
+      "local_magnitude": 0.02734375,
+      "global_coefficient": 0.001033654602905902
+    },
+    {
+      "pair": [
+        "MYB3R1_4",
+        "SCF"
+      ],
+      "global_magnitude": 0.001030717375461343,
+      "local_magnitude": 0.078125,
+      "global_coefficient": 0.001030717375461343
+    },
+    {
+      "pair": [
+        "E2Fc",
+        "MYB3R1_4"
+      ],
+      "global_magnitude": 0.0009979390088402213,
+      "local_magnitude": 0.05859375,
+      "global_coefficient": -0.0009979390088402213
+    },
+    {
+      "pair": [
+        "E2Fb",
+        "SCF"
+      ],
+      "global_magnitude": 0.0008645332611180098,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0008645332611180098
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.0008551376993852791,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0008551376993852791
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "E2Fe"
+      ],
+      "global_magnitude": 0.0008551376993852789,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0008551376993852789
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "SCF"
+      ],
+      "global_magnitude": 0.0007940234804751541,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.0007940234804751541
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "SCF"
+      ],
+      "global_magnitude": 0.000794023480475154,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.000794023480475154
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "E2Fc"
+      ],
+      "global_magnitude": 0.0007202391427819533,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0007202391427819533
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "E2Fc"
+      ],
+      "global_magnitude": 0.0007202391427819533,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0007202391427819533
+    },
+    {
+      "pair": [
+        "CYCB1_1",
+        "SCF"
+      ],
+      "global_magnitude": 0.0006852424896336348,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0006852424896336348
+    },
+    {
+      "pair": [
+        "E2Fe",
+        "SCF"
+      ],
+      "global_magnitude": 0.0004614677310373662,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004614677310373662
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "KRP1"
+      ],
+      "global_magnitude": 0.00040150971255988933,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00040150971255988933
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "KRP1"
+      ],
+      "global_magnitude": 0.0004015097125598891,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0004015097125598891
+    },
+    {
+      "pair": [
+        "CYCD3_1",
+        "KRP1"
+      ],
+      "global_magnitude": 0.0003870340871128126,
+      "local_magnitude": 0.33984375,
+      "global_coefficient": 0.0003870340871128126
+    },
+    {
+      "pair": [
+        "CYCA2_3",
+        "CYCD3_1"
+      ],
+      "global_magnitude": 0.0003101601328327384,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0003101601328327384
+    },
+    {
+      "pair": [
+        "CDKB1_1",
+        "CYCD3_1"
+      ],
+      "global_magnitude": 0.0003101601328327383,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0003101601328327383
+    },
+    {
+      "pair": [
+        "APC_C",
+        "SCF"
+      ],
+      "global_magnitude": 0.0002453223669723441,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002453223669723441
+    },
+    {
+      "pair": [
+        "APC_C",
+        "CDKB1_1"
+      ],
+      "global_magnitude": 2.3058214625873994e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.3058214625873994e-05
+    },
+    {
+      "pair": [
+        "APC_C",
+        "CYCA2_3"
+      ],
+      "global_magnitude": 2.3058214625873994e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 2.3058214625873994e-05
+    }
+  ]
+}

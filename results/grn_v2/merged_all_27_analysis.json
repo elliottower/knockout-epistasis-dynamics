@@ -1,0 +1,299 @@
+{
+  "n_models": 27,
+  "batch1_models": 6,
+  "batch2_models": 21,
+  "cycling_hypothesis": {
+    "spearman_rho": -0.5092352371953877,
+    "spearman_p": 0.006669577507696603,
+    "spearman_rho_no_nulls": -0.509676028573954,
+    "spearman_p_no_nulls": 0.010955167732503502,
+    "mann_whitney_U": 30.0,
+    "mann_whitney_p": 0.11711297187101291,
+    "verdict": "significant"
+  },
+  "rho_statistics": {
+    "median": 0.26621749659107447,
+    "mean": 0.27985389306611613,
+    "n_negative": 5,
+    "n_significant": 16
+  },
+  "delta_statistics": {
+    "median_pp": 8.46101594824866,
+    "mean_pp": 20.023941959564727,
+    "n_creation": 18,
+    "n_destruction": 6,
+    "n_null": 3
+  },
+  "all_models": [
+    {
+      "model": "faure_cellcycle",
+      "n": 10,
+      "delta_o3plus": -0.030230677349838753,
+      "cycling_fraction": 0.19612693786621094,
+      "spearman_rho": 0.408596220576299,
+      "spearman_p": 0.005326566258609206,
+      "label": "destruction",
+      "batch": "batch1"
+    },
+    {
+      "model": "tournier_apoptosis",
+      "n": 12,
+      "delta_o3plus": 0.0846101594824866,
+      "cycling_fraction": 0.07353448867797852,
+      "spearman_rho": 0.24673373560158016,
+      "spearman_p": 0.04580682325970198,
+      "label": "creation",
+      "batch": "batch1"
+    },
+    {
+      "model": "davidich_yeast",
+      "n": 10,
+      "delta_o3plus": -0.0037552472225337585,
+      "cycling_fraction": 0.17698287963867188,
+      "spearman_rho": 0.15411673622291389,
+      "spearman_p": 0.31210781562677214,
+      "label": "null",
+      "batch": "batch1"
+    },
+    {
+      "model": "drosophila_cellcycle",
+      "n": 14,
+      "delta_o3plus": 0.06157693517902086,
+      "cycling_fraction": 0.14039695262908936,
+      "spearman_rho": 0.12001774561384927,
+      "spearman_p": 0.25714246318548095,
+      "label": "creation",
+      "batch": "batch1"
+    },
+    {
+      "model": "fanconi_anemia",
+      "n": 15,
+      "delta_o3plus": -0.05482384994035306,
+      "cycling_fraction": 0.4752929210662842,
+      "spearman_rho": 0.30515850148036544,
+      "spearman_p": 0.0015488413858142486,
+      "label": "destruction",
+      "batch": "batch1"
+    },
+    {
+      "model": "arabidopsis_cellcycle",
+      "n": 14,
+      "delta_o3plus": 0.34302965094268234,
+      "cycling_fraction": 0.16389036178588867,
+      "spearman_rho": 0.20450626958426807,
+      "spearman_p": 0.051835090108637724,
+      "label": "creation",
+      "batch": "batch1"
+    },
+    {
+      "model": "lambda_phage",
+      "n": 7,
+      "delta_o3plus": -0.024975833448266812,
+      "cycling_fraction": 0.160064697265625,
+      "spearman_rho": 0.6057291709074122,
+      "spearman_p": 0.003612839594695832,
+      "label": "destruction",
+      "batch": "batch2"
+    },
+    {
+      "model": "arellano_rootstem",
+      "n": 9,
+      "delta_o3plus": 0.5059116851281775,
+      "cycling_fraction": 0.0,
+      "spearman_rho": 0.603325513942056,
+      "spearman_p": 9.820339395317935e-05,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "asymmetric_cell_division",
+      "n": 9,
+      "delta_o3plus": 0.44085049375894575,
+      "cycling_fraction": 0.0634765625,
+      "spearman_rho": -0.10375020484289514,
+      "spearman_p": 0.5470671482144096,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "cell_cycle_transcription",
+      "n": 9,
+      "delta_o3plus": 0.8325216693666143,
+      "cycling_fraction": 0.0040130615234375,
+      "spearman_rho": -0.38252136043685014,
+      "spearman_p": 0.021308346046458728,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "remy_p53_mdm2",
+      "n": 10,
+      "delta_o3plus": 0.0008165157871410159,
+      "cycling_fraction": 0.13390350341796875,
+      "spearman_rho": 0.5045376330538909,
+      "spearman_p": 0.0004091295204792105,
+      "label": "null",
+      "batch": "batch2"
+    },
+    {
+      "model": "albert_segment_polarity",
+      "n": 11,
+      "delta_o3plus": 0.1983857506498279,
+      "cycling_fraction": 0.0,
+      "spearman_rho": 0.20873195993520632,
+      "spearman_p": 0.12617955533288322,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "blood_stem_cell",
+      "n": 11,
+      "delta_o3plus": 0.04777276082326893,
+      "cycling_fraction": 0.24537086486816406,
+      "spearman_rho": 0.594950989801604,
+      "spearman_p": 1.6657787119172318e-06,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "calzone_cellfate_reduced",
+      "n": 11,
+      "delta_o3plus": 0.37036819086497713,
+      "cycling_fraction": 0.11061954498291016,
+      "spearman_rho": -0.07497196869696607,
+      "spearman_p": 0.586439586520175,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "li_budding_yeast",
+      "n": 11,
+      "delta_o3plus": 0.06349816415509736,
+      "cycling_fraction": 0.124725341796875,
+      "spearman_rho": 0.527928668814889,
+      "spearman_p": 3.4402870289421346e-05,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "myeloid_progenitors",
+      "n": 11,
+      "delta_o3plus": -0.022783013946164627,
+      "cycling_fraction": 0.06585693359375,
+      "spearman_rho": 0.5144389094382303,
+      "spearman_p": 5.872175951113131e-05,
+      "label": "destruction",
+      "batch": "batch2"
+    },
+    {
+      "model": "pair_rule_module",
+      "n": 11,
+      "delta_o3plus": -0.027395081500417945,
+      "cycling_fraction": 0.1783905029296875,
+      "spearman_rho": 0.6600535262550735,
+      "spearman_p": 4.20807929501448e-08,
+      "label": "destruction",
+      "batch": "batch2"
+    },
+    {
+      "model": "emt_switch",
+      "n": 12,
+      "delta_o3plus": -0.03820047534102582,
+      "cycling_fraction": 0.00067901611328125,
+      "spearman_rho": 0.3771255104859412,
+      "spearman_p": 0.0018001310103809706,
+      "label": "destruction",
+      "batch": "batch2"
+    },
+    {
+      "model": "morphogenetic_checkpoint",
+      "n": 12,
+      "delta_o3plus": 0.11906050035967042,
+      "cycling_fraction": 0.004044532775878906,
+      "spearman_rho": 0.4004680634295299,
+      "spearman_p": 0.0008626321899927871,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "zanudo_tlgl",
+      "n": 12,
+      "delta_o3plus": 0.33234479899369496,
+      "cycling_fraction": 0.1030426025390625,
+      "spearman_rho": -0.19343086463763193,
+      "spearman_p": 0.11967202847844619,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "lac_operon",
+      "n": 13,
+      "delta_o3plus": 0.47434471069505935,
+      "cycling_fraction": 0.0033435821533203125,
+      "spearman_rho": 0.07886720388334488,
+      "spearman_p": 0.4924855721412703,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "mendoza_thelper",
+      "n": 13,
+      "delta_o3plus": -0.0034453377248473555,
+      "cycling_fraction": 0.016775131225585938,
+      "spearman_rho": 0.21478985983208618,
+      "spearman_p": 0.058965429384236365,
+      "label": "null",
+      "batch": "batch2"
+    },
+    {
+      "model": "saadatpour_guardcell",
+      "n": 13,
+      "delta_o3plus": 0.5139675417791154,
+      "cycling_fraction": 0.05676460266113281,
+      "spearman_rho": 0.06504752211013896,
+      "spearman_p": 0.5715237536058049,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "fumia_cellcycle",
+      "n": 14,
+      "delta_o3plus": 0.522398207170679,
+      "cycling_fraction": 0.12541139125823975,
+      "spearman_rho": 0.26621749659107447,
+      "spearman_p": 0.010752126999175327,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "hematopoiesis_aging",
+      "n": 15,
+      "delta_o3plus": 0.009329278146421923,
+      "cycling_fraction": 0.10476112365722656,
+      "spearman_rho": 0.6307390872030556,
+      "spearman_p": 5.546660500897168e-13,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "irons_cardiac",
+      "n": 15,
+      "delta_o3plus": 0.10919979168083366,
+      "cycling_fraction": 0.0933990478515625,
+      "spearman_rho": 0.6344630822880182,
+      "spearman_p": 3.680432077955656e-13,
+      "label": "creation",
+      "batch": "batch2"
+    },
+    {
+      "model": "calzone_cell_fate",
+      "n": 17,
+      "delta_o3plus": 0.5820870405922097,
+      "cycling_fraction": 0.004598736763000488,
+      "spearman_rho": -0.015813895651348504,
+      "spearman_p": 0.8550104228118509,
+      "label": "creation",
+      "batch": "batch2"
+    }
+  ]
+}

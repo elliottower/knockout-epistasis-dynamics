@@ -1,0 +1,775 @@
+{
+  "model": "myeloid_progenitors",
+  "n_nodes": 11,
+  "node_names": [
+    "CEBPA",
+    "EGR_NAB",
+    "EKLF",
+    "FLI1",
+    "FOG1",
+    "GATA1",
+    "GATA2",
+    "GFI1",
+    "JUN",
+    "PU1",
+    "SCL"
+  ],
+  "output_nodes": [
+    "GATA1"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "CEBPA",
+        "GATA2"
+      ],
+      [
+        "GATA1",
+        "GATA2"
+      ],
+      [
+        "CEBPA",
+        "FOG1"
+      ],
+      [
+        "CEBPA",
+        "GATA1"
+      ],
+      [
+        "FOG1",
+        "SCL"
+      ],
+      [
+        "GATA1",
+        "PU1"
+      ],
+      [
+        "EKLF",
+        "GATA1"
+      ],
+      [
+        "FLI1",
+        "PU1"
+      ],
+      [
+        "JUN",
+        "PU1"
+      ],
+      [
+        "FOG1",
+        "GATA1"
+      ],
+      [
+        "GATA1",
+        "SCL"
+      ],
+      [
+        "CEBPA",
+        "PU1"
+      ],
+      [
+        "GFI1",
+        "PU1"
+      ],
+      [
+        "FLI1",
+        "GATA1"
+      ],
+      [
+        "CEBPA",
+        "SCL"
+      ],
+      [
+        "FOG1",
+        "GATA2"
+      ],
+      [
+        "FOG1",
+        "PU1"
+      ],
+      [
+        "GFI1",
+        "JUN"
+      ],
+      [
+        "CEBPA",
+        "EGR_NAB"
+      ],
+      [
+        "GATA2",
+        "PU1"
+      ],
+      [
+        "FLI1",
+        "GATA2"
+      ]
+    ],
+    "triples": [
+      [
+        "CEBPA",
+        "GATA1",
+        "GATA2"
+      ],
+      [
+        "FOG1",
+        "GATA1",
+        "GATA2"
+      ],
+      [
+        "FOG1",
+        "GATA1",
+        "PU1"
+      ],
+      [
+        "CEBPA",
+        "GATA1",
+        "PU1"
+      ],
+      [
+        "CEBPA",
+        "GATA1",
+        "SCL"
+      ],
+      [
+        "GATA1",
+        "GATA2",
+        "PU1"
+      ],
+      [
+        "GFI1",
+        "JUN",
+        "PU1"
+      ],
+      [
+        "FLI1",
+        "GATA1",
+        "GATA2"
+      ],
+      [
+        "FOG1",
+        "GATA1",
+        "SCL"
+      ],
+      [
+        "CEBPA",
+        "GATA2",
+        "PU1"
+      ],
+      [
+        "CEBPA",
+        "FOG1",
+        "SCL"
+      ],
+      [
+        "FOG1",
+        "GATA2",
+        "PU1"
+      ],
+      [
+        "CEBPA",
+        "FOG1",
+        "GATA1"
+      ],
+      [
+        "FLI1",
+        "GATA1",
+        "PU1"
+      ],
+      [
+        "FLI1",
+        "GATA2",
+        "PU1"
+      ]
+    ],
+    "per_gene": {
+      "CEBPA": {
+        "regulators": [
+          "CEBPA",
+          "FOG1",
+          "GATA1",
+          "SCL"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CEBPA",
+              "FOG1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "FOG1",
+              "GATA1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "FOG1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "SCL"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "FOG1",
+              "GATA1",
+              "SCL"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "EGR_NAB": {
+        "regulators": [
+          "GFI1",
+          "JUN",
+          "PU1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GFI1",
+              "JUN"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "GFI1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "JUN",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "GFI1",
+              "JUN",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "EKLF": {
+        "regulators": [
+          "FLI1",
+          "GATA1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "FLI1": {
+        "regulators": [
+          "EKLF",
+          "GATA1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "EKLF",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "FOG1": {
+        "regulators": [
+          "GATA1"
+        ],
+        "interactions": []
+      },
+      "GATA1": {
+        "regulators": [
+          "FLI1",
+          "GATA1",
+          "GATA2",
+          "PU1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FLI1",
+              "GATA1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "GATA2": {
+        "regulators": [
+          "FOG1",
+          "GATA1",
+          "GATA2",
+          "PU1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FOG1",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "GATA1",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.1875
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "FOG1",
+              "GATA1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "GFI1": {
+        "regulators": [
+          "CEBPA",
+          "EGR_NAB"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CEBPA",
+              "EGR_NAB"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "JUN": {
+        "regulators": [
+          "GFI1",
+          "PU1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GFI1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "PU1": {
+        "regulators": [
+          "CEBPA",
+          "GATA1",
+          "GATA2",
+          "PU1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA1",
+              "GATA2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA1",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA2",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "GATA1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CEBPA",
+              "GATA1",
+              "GATA2",
+              "PU1"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "SCL": {
+        "regulators": [
+          "GATA1",
+          "PU1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "GATA1",
+              "PU1"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      }
+    },
+    "n_pairwise": 21,
+    "n_triples": 15,
+    "pairwise_strengths": {
+      "['CEBPA', 'FOG1']": 0.0625,
+      "['CEBPA', 'GATA1']": 0.125,
+      "['FOG1', 'GATA1']": 0.125,
+      "['CEBPA', 'SCL']": 0.0625,
+      "['FOG1', 'SCL']": 0.0625,
+      "['GATA1', 'SCL']": 0.0625,
+      "['GFI1', 'JUN']": 0.125,
+      "['GFI1', 'PU1']": 0.375,
+      "['JUN', 'PU1']": 0.125,
+      "['FLI1', 'GATA1']": 0.3125,
+      "['EKLF', 'GATA1']": 0.25,
+      "['FLI1', 'GATA2']": 0.0625,
+      "['GATA1', 'GATA2']": 0.3125,
+      "['FLI1', 'PU1']": 0.0625,
+      "['GATA1', 'PU1']": 0.4375,
+      "['GATA2', 'PU1']": 0.3125,
+      "['FOG1', 'GATA2']": 0.0625,
+      "['FOG1', 'PU1']": 0.0625,
+      "['CEBPA', 'EGR_NAB']": 0.25,
+      "['CEBPA', 'GATA2']": 0.0625,
+      "['CEBPA', 'PU1']": 0.0625
+    },
+    "local_energy_spectrum": [
+      0.4596774193548387,
+      0.38306451612903225,
+      0.13306451612903225,
+      0.020161290322580645,
+      0.004032258064516129
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 1048576,
+    "total_fixed_point": 863722,
+    "total_cycling": 184854,
+    "cycling_fraction": 0.17629051208496094
+  },
+  "n_unique_values": 4,
+  "total_variance": 0.0080404132604599,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:41:01.717571+00:00"
+}

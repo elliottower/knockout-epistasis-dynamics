@@ -1,0 +1,40 @@
+{
+  "model": "davidich_yeast",
+  "method": "ode_hill",
+  "description": "Fission yeast cell cycle (10 nodes)",
+  "n_players": 10,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.025614754098360656,
+  "ode_global_o3plus": 0.025981685412825646,
+  "ode_delta_o3plus": 0.00036693131446498967,
+  "boolean_delta_o3plus": -0.0037552472225337585,
+  "boolean_global_o3plus": null,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.3977557027723778,
+    0.4810589174659693,
+    0.09520369434882717,
+    0.01764219295830237,
+    0.006826318892168122,
+    0.0012712421771903484,
+    0.0002093685798766522,
+    2.7632637838507623e-05,
+    4.915406750209758e-06,
+    1.4760699438410673e-08,
+    1.0890285173367655e-25
+  ],
+  "n_unique_values": 47,
+  "v_mean_range": [
+    0.0,
+    0.9990243901349208
+  ],
+  "v_mean_std": 0.38947967315606014,
+  "timestamp": "2026-07-29T00:54:16.953022+00:00"
+}

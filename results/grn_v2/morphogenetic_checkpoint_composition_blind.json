@@ -1,0 +1,696 @@
+{
+  "model": "morphogenetic_checkpoint",
+  "n_players": 12,
+  "n_init": 512,
+  "node_names": [
+    "MASS_b1",
+    "BUD",
+    "Clb2_b1",
+    "Clb2_b2",
+    "Hsl1",
+    "MASS_b2",
+    "Mih1_b1",
+    "Mih1_b2",
+    "Mpk1",
+    "SBF",
+    "Swe1_b1",
+    "Swe1_b2"
+  ],
+  "timestamp": "2026-07-28T16:59:02.260076+00:00",
+  "pairwise": {
+    "n_pairs": 66,
+    "n_local_nonzero": 35,
+    "n_global_nonzero": 66,
+    "local_positive_rate": 0.5303030303030303,
+    "spearman_rho": 0.4004680634295299,
+    "spearman_pvalue": 0.0008626321899927871,
+    "spearman_ci_95": [
+      0.1615179843102878,
+      0.6022988954052158
+    ],
+    "creation_rate": 0.34285714285714286,
+    "destruction_rate": 0.0,
+    "created_count": 12,
+    "destroyed_count": 0,
+    "top_k": 35
+  },
+  "triples": {
+    "n_triples": 220,
+    "n_local_nonzero": 50,
+    "n_global_nonzero": 220,
+    "spearman_rho": 0.22516607185749643,
+    "spearman_pvalue": 0.0007681304389242725,
+    "spearman_ci_95": [
+      0.08522051867881061,
+      0.34977037156691193
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.003888922302520667,
+    "frac_energy_3plus": 0.16820228322645953
+  },
+  "energy_spectrum": {
+    "global": [
+      0.12017532641767316,
+      0.3627963291892251,
+      0.3690398254575799,
+      0.13266156935926482,
+      0.00928224894997554,
+      0.004077984818486247,
+      0.0013874024338158186,
+      0.00044539839100158154,
+      0.0001139037394893971,
+      1.871475412475619e-05,
+      1.2930005048182972e-06,
+      3.4878974580841395e-09,
+      9.6138298183108e-13
+    ],
+    "local_rules": [
+      0.5246226780185759,
+      0.3670665634674923,
+      0.0793827399380805,
+      0.023606811145510834,
+      0.00420859133126935,
+      0.0009674922600619195,
+      0.00014512383900928792,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "MASS_b1",
+        "Clb2_b1"
+      ],
+      "global_magnitude": 0.056196371714274086,
+      "local_magnitude": 0.4375,
+      "global_coefficient": 0.056196371714274086
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "Clb2_b2"
+      ],
+      "global_magnitude": 0.056196371714274086,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.056196371714274086
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "Clb2_b2"
+      ],
+      "global_magnitude": 0.056196371714274086,
+      "local_magnitude": 0.328125,
+      "global_coefficient": 0.056196371714274086
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "SBF"
+      ],
+      "global_magnitude": 0.005082925160725912,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.005082925160725912
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.005082925160725912,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.005082925160725912
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "SBF"
+      ],
+      "global_magnitude": 0.005082925160725912,
+      "local_magnitude": 0.078125,
+      "global_coefficient": -0.005082925160725912
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.005082925160725912,
+      "local_magnitude": 0.109375,
+      "global_coefficient": -0.005082925160725912
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "SBF"
+      ],
+      "global_magnitude": 0.005082925160725912,
+      "local_magnitude": 0.078125,
+      "global_coefficient": -0.005082925160725912
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.005082925160725912,
+      "local_magnitude": 0.046875,
+      "global_coefficient": -0.005082925160725912
+    },
+    {
+      "pair": [
+        "SBF",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.005082925160725912,
+      "local_magnitude": 0.203125,
+      "global_coefficient": -0.005082925160725912
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "MASS_b2"
+      ],
+      "global_magnitude": 0.0018019676208496096,
+      "local_magnitude": 0.28125,
+      "global_coefficient": 0.0018019676208496096
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "MASS_b2"
+      ],
+      "global_magnitude": 0.0018019676208496096,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0018019676208496096
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "MASS_b2"
+      ],
+      "global_magnitude": 0.0018019676208496096,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018019676208496096
+    },
+    {
+      "pair": [
+        "MASS_b2",
+        "SBF"
+      ],
+      "global_magnitude": 0.0018019676208496096,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0018019676208496096
+    },
+    {
+      "pair": [
+        "MASS_b2",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.0018019676208496096,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0018019676208496096
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "Mih1_b1"
+      ],
+      "global_magnitude": 0.001216411590576172,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.001216411590576172
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "Mih1_b1"
+      ],
+      "global_magnitude": 0.001216411590576172,
+      "local_magnitude": 0.21875,
+      "global_coefficient": 0.001216411590576172
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "Mih1_b1"
+      ],
+      "global_magnitude": 0.001216411590576172,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.001216411590576172
+    },
+    {
+      "pair": [
+        "Mih1_b1",
+        "SBF"
+      ],
+      "global_magnitude": 0.001216411590576172,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.001216411590576172
+    },
+    {
+      "pair": [
+        "Mih1_b1",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.001216411590576172,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.001216411590576172
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "Mih1_b2"
+      ],
+      "global_magnitude": 0.001121044158935547,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.001121044158935547
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "Mih1_b2"
+      ],
+      "global_magnitude": 0.001121044158935547,
+      "local_magnitude": 0.078125,
+      "global_coefficient": 0.001121044158935547
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "Mih1_b2"
+      ],
+      "global_magnitude": 0.001121044158935547,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.001121044158935547
+    },
+    {
+      "pair": [
+        "Mih1_b1",
+        "Mih1_b2"
+      ],
+      "global_magnitude": 0.001121044158935547,
+      "local_magnitude": 0.078125,
+      "global_coefficient": 0.001121044158935547
+    },
+    {
+      "pair": [
+        "Mih1_b2",
+        "SBF"
+      ],
+      "global_magnitude": 0.001121044158935547,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.001121044158935547
+    },
+    {
+      "pair": [
+        "Mih1_b2",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.001121044158935547,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.001121044158935547
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "BUD"
+      ],
+      "global_magnitude": 0.0010755856831868489,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0010755856831868489
+    },
+    {
+      "pair": [
+        "BUD",
+        "Clb2_b1"
+      ],
+      "global_magnitude": 0.0010755856831868489,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0010755856831868489
+    },
+    {
+      "pair": [
+        "BUD",
+        "Clb2_b2"
+      ],
+      "global_magnitude": 0.0010755856831868489,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0010755856831868489
+    },
+    {
+      "pair": [
+        "BUD",
+        "SBF"
+      ],
+      "global_magnitude": 0.0010755856831868489,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0010755856831868489
+    },
+    {
+      "pair": [
+        "BUD",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.0010755856831868489,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0010755856831868489
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "Hsl1"
+      ],
+      "global_magnitude": 0.0007789929707845051,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0007789929707845051
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "Hsl1"
+      ],
+      "global_magnitude": 0.0007789929707845051,
+      "local_magnitude": 0.078125,
+      "global_coefficient": 0.0007789929707845051
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "Hsl1"
+      ],
+      "global_magnitude": 0.0007789929707845051,
+      "local_magnitude": 0.078125,
+      "global_coefficient": 0.0007789929707845051
+    },
+    {
+      "pair": [
+        "Hsl1",
+        "SBF"
+      ],
+      "global_magnitude": 0.0007789929707845051,
+      "local_magnitude": 0.140625,
+      "global_coefficient": 0.0007789929707845051
+    },
+    {
+      "pair": [
+        "Hsl1",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.0007789929707845051,
+      "local_magnitude": 0.109375,
+      "global_coefficient": 0.0007789929707845051
+    },
+    {
+      "pair": [
+        "BUD",
+        "Hsl1"
+      ],
+      "global_magnitude": 0.0006648699442545574,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0006648699442545574
+    },
+    {
+      "pair": [
+        "MASS_b2",
+        "Mih1_b2"
+      ],
+      "global_magnitude": 0.00042200088500976557,
+      "local_magnitude": 0.015625,
+      "global_coefficient": -0.00042200088500976557
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "Mpk1"
+      ],
+      "global_magnitude": 0.0004061063130696616,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004061063130696616
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "Mpk1"
+      ],
+      "global_magnitude": 0.0004061063130696616,
+      "local_magnitude": 0.3125,
+      "global_coefficient": -0.0004061063130696616
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "Mpk1"
+      ],
+      "global_magnitude": 0.0004061063130696616,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004061063130696616
+    },
+    {
+      "pair": [
+        "Mpk1",
+        "SBF"
+      ],
+      "global_magnitude": 0.0004061063130696616,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004061063130696616
+    },
+    {
+      "pair": [
+        "Mpk1",
+        "Swe1_b1"
+      ],
+      "global_magnitude": 0.0004061063130696616,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0004061063130696616
+    },
+    {
+      "pair": [
+        "BUD",
+        "Mpk1"
+      ],
+      "global_magnitude": 0.0004061063130696614,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0004061063130696614
+    },
+    {
+      "pair": [
+        "Mih1_b1",
+        "Mpk1"
+      ],
+      "global_magnitude": 0.0004061063130696614,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.0004061063130696614
+    },
+    {
+      "pair": [
+        "Mih1_b2",
+        "Mpk1"
+      ],
+      "global_magnitude": 0.0004061063130696614,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0004061063130696614
+    },
+    {
+      "pair": [
+        "BUD",
+        "MASS_b2"
+      ],
+      "global_magnitude": 0.000388622283935547,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000388622283935547
+    },
+    {
+      "pair": [
+        "MASS_b2",
+        "Mih1_b1"
+      ],
+      "global_magnitude": 0.00032663345336914057,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00032663345336914057
+    },
+    {
+      "pair": [
+        "Hsl1",
+        "Mih1_b1"
+      ],
+      "global_magnitude": 0.0002916653951009115,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002916653951009115
+    },
+    {
+      "pair": [
+        "SBF",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 0.0002776781717936192,
+      "local_magnitude": 0.109375,
+      "global_coefficient": -0.0002776781717936192
+    },
+    {
+      "pair": [
+        "Swe1_b1",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 0.0002776781717936192,
+      "local_magnitude": 0.15625,
+      "global_coefficient": -0.0002776781717936192
+    },
+    {
+      "pair": [
+        "MASS_b1",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 0.0002776781717936175,
+      "local_magnitude": 0.015625,
+      "global_coefficient": -0.0002776781717936175
+    },
+    {
+      "pair": [
+        "Clb2_b1",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 0.0002776781717936175,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.0002776781717936175
+    },
+    {
+      "pair": [
+        "Clb2_b2",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 0.0002776781717936175,
+      "local_magnitude": 0.015625,
+      "global_coefficient": -0.0002776781717936175
+    },
+    {
+      "pair": [
+        "Hsl1",
+        "Mih1_b2"
+      ],
+      "global_magnitude": 0.00023444493611653652,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00023444493611653652
+    },
+    {
+      "pair": [
+        "Hsl1",
+        "MASS_b2"
+      ],
+      "global_magnitude": 0.0002230008443196614,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0002230008443196614
+    },
+    {
+      "pair": [
+        "BUD",
+        "Mih1_b2"
+      ],
+      "global_magnitude": 0.00018930435180664062,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00018930435180664062
+    },
+    {
+      "pair": [
+        "BUD",
+        "Mih1_b1"
+      ],
+      "global_magnitude": 0.00017023086547851562,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00017023086547851562
+    },
+    {
+      "pair": [
+        "MASS_b2",
+        "Mpk1"
+      ],
+      "global_magnitude": 0.00015783309936523448,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00015783309936523448
+    },
+    {
+      "pair": [
+        "Mih1_b1",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 0.00014448165893554666,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.00014448165893554666
+    },
+    {
+      "pair": [
+        "Mih1_b2",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 4.911422729492166e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 4.911422729492166e-05
+    },
+    {
+      "pair": [
+        "BUD",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 1.0331471761067636e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -1.0331471761067636e-05
+    },
+    {
+      "pair": [
+        "Hsl1",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 9.059906005859104e-06,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 9.059906005859104e-06
+    },
+    {
+      "pair": [
+        "Mpk1",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 8.742014567057147e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": -8.742014567057147e-06
+    },
+    {
+      "pair": [
+        "Hsl1",
+        "Mpk1"
+      ],
+      "global_magnitude": 4.60942586263019e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": 4.60942586263019e-06
+    },
+    {
+      "pair": [
+        "MASS_b2",
+        "Swe1_b2"
+      ],
+      "global_magnitude": 4.768371582033418e-07,
+      "local_magnitude": 0.015625,
+      "global_coefficient": -4.768371582033418e-07
+    }
+  ]
+}

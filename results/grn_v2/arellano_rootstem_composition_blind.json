@@ -1,0 +1,414 @@
+{
+  "model": "arellano_rootstem",
+  "n_players": 9,
+  "n_init": 512,
+  "node_names": [
+    "AUXINS",
+    "SHR",
+    "ARF",
+    "IAA",
+    "JKD",
+    "MGP",
+    "SCR",
+    "WOX",
+    "PLT"
+  ],
+  "timestamp": "2026-07-28T16:56:09.746978+00:00",
+  "pairwise": {
+    "n_pairs": 36,
+    "n_local_nonzero": 13,
+    "n_global_nonzero": 28,
+    "local_positive_rate": 0.3611111111111111,
+    "spearman_rho": 0.603325513942056,
+    "spearman_pvalue": 9.820339395317935e-05,
+    "spearman_ci_95": [
+      0.3198187314423781,
+      0.7829369311750548
+    ],
+    "creation_rate": 0.3076923076923077,
+    "destruction_rate": 0.0,
+    "created_count": 4,
+    "destroyed_count": 0,
+    "top_k": 13
+  },
+  "triples": {
+    "n_triples": 84,
+    "n_local_nonzero": 13,
+    "n_global_nonzero": 56,
+    "spearman_rho": 0.48773959570799463,
+    "spearman_pvalue": 2.529286154964524e-06,
+    "spearman_ci_95": [
+      0.33085964884297114,
+      0.620019947263702
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.0008707262459211051,
+    "frac_energy_3plus": 0.5416513698085264
+  },
+  "energy_spectrum": {
+    "global": [
+      0.03170919377675855,
+      0.15102535161964942,
+      0.29278941303977096,
+      0.29589174961629255,
+      0.16637666553723532,
+      0.052204971592184034,
+      0.009106180382899662,
+      0.0008779271718740183,
+      1.85472633355174e-05,
+      0.0
+    ],
+    "local_rules": [
+      0.4347153465346535,
+      0.484220297029703,
+      0.0625,
+      0.01547029702970297,
+      0.0027846534653465345,
+      0.0003094059405940594,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "SHR",
+        "ARF"
+      ],
+      "global_magnitude": 0.00725555419921875,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.00725555419921875
+    },
+    {
+      "pair": [
+        "SHR",
+        "SCR"
+      ],
+      "global_magnitude": 0.00725555419921875,
+      "local_magnitude": 0.65625,
+      "global_coefficient": 0.00725555419921875
+    },
+    {
+      "pair": [
+        "SHR",
+        "WOX"
+      ],
+      "global_magnitude": 0.00725555419921875,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.00725555419921875
+    },
+    {
+      "pair": [
+        "ARF",
+        "SCR"
+      ],
+      "global_magnitude": 0.00725555419921875,
+      "local_magnitude": 0.09375,
+      "global_coefficient": 0.00725555419921875
+    },
+    {
+      "pair": [
+        "ARF",
+        "WOX"
+      ],
+      "global_magnitude": 0.00725555419921875,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.00725555419921875
+    },
+    {
+      "pair": [
+        "SCR",
+        "WOX"
+      ],
+      "global_magnitude": 0.00725555419921875,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.00725555419921875
+    },
+    {
+      "pair": [
+        "SHR",
+        "IAA"
+      ],
+      "global_magnitude": 0.00446319580078125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00446319580078125
+    },
+    {
+      "pair": [
+        "ARF",
+        "IAA"
+      ],
+      "global_magnitude": 0.00446319580078125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00446319580078125
+    },
+    {
+      "pair": [
+        "IAA",
+        "SCR"
+      ],
+      "global_magnitude": 0.00446319580078125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00446319580078125
+    },
+    {
+      "pair": [
+        "IAA",
+        "WOX"
+      ],
+      "global_magnitude": 0.00446319580078125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00446319580078125
+    },
+    {
+      "pair": [
+        "SHR",
+        "MGP"
+      ],
+      "global_magnitude": 0.00415802001953125,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.00415802001953125
+    },
+    {
+      "pair": [
+        "ARF",
+        "MGP"
+      ],
+      "global_magnitude": 0.00415802001953125,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.00415802001953125
+    },
+    {
+      "pair": [
+        "MGP",
+        "SCR"
+      ],
+      "global_magnitude": 0.00415802001953125,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.00415802001953125
+    },
+    {
+      "pair": [
+        "MGP",
+        "WOX"
+      ],
+      "global_magnitude": 0.00415802001953125,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.00415802001953125
+    },
+    {
+      "pair": [
+        "IAA",
+        "MGP"
+      ],
+      "global_magnitude": 0.00231170654296875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00231170654296875
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "SHR"
+      ],
+      "global_magnitude": 0.00139617919921875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00139617919921875
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "ARF"
+      ],
+      "global_magnitude": 0.00139617919921875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00139617919921875
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "IAA"
+      ],
+      "global_magnitude": 0.00139617919921875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00139617919921875
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "SCR"
+      ],
+      "global_magnitude": 0.00139617919921875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00139617919921875
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "WOX"
+      ],
+      "global_magnitude": 0.00139617919921875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00139617919921875
+    },
+    {
+      "pair": [
+        "SHR",
+        "JKD"
+      ],
+      "global_magnitude": 0.00099945068359375,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.00099945068359375
+    },
+    {
+      "pair": [
+        "ARF",
+        "JKD"
+      ],
+      "global_magnitude": 0.00099945068359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00099945068359375
+    },
+    {
+      "pair": [
+        "JKD",
+        "MGP"
+      ],
+      "global_magnitude": 0.00099945068359375,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.00099945068359375
+    },
+    {
+      "pair": [
+        "JKD",
+        "SCR"
+      ],
+      "global_magnitude": 0.00099945068359375,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.00099945068359375
+    },
+    {
+      "pair": [
+        "JKD",
+        "WOX"
+      ],
+      "global_magnitude": 0.00099945068359375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00099945068359375
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "MGP"
+      ],
+      "global_magnitude": 0.00092315673828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00092315673828125
+    },
+    {
+      "pair": [
+        "IAA",
+        "JKD"
+      ],
+      "global_magnitude": 0.00064849853515625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00064849853515625
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "JKD"
+      ],
+      "global_magnitude": 0.00017547607421875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00017547607421875
+    },
+    {
+      "pair": [
+        "AUXINS",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "SHR",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ARF",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IAA",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "JKD",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "MGP",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "SCR",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "WOX",
+        "PLT"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "model": "saadatpour_guardcell",
+  "n_players": 13,
+  "n_init": 512,
+  "node_names": [
+    "ADPRc",
+    "CIS",
+    "Ca2",
+    "Ca2ATP",
+    "GC",
+    "InsP3",
+    "NO",
+    "NOS",
+    "PLC",
+    "cADPR",
+    "cGMP",
+    "KAP",
+    "KEV"
+  ],
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:49:39.868413+00:00",
+  "pairwise": {
+    "n_pairs": 78,
+    "n_local_nonzero": 4,
+    "n_global_nonzero": 66,
+    "local_positive_rate": 0.05128205128205128,
+    "spearman_rho": 0.010985089678859321,
+    "spearman_pvalue": 0.9239540814087882,
+    "spearman_ci_95": [
+      -0.18583657374754267,
+      0.18049789691313606
+    ],
+    "creation_rate": 1.0,
+    "destruction_rate": 0.0,
+    "created_count": 4,
+    "destroyed_count": 0,
+    "top_k": 4
+  },
+  "triples": {
+    "n_triples": 286,
+    "n_local_nonzero": 1,
+    "n_global_nonzero": 220,
+    "spearman_rho": -0.05305306447639958,
+    "spearman_pvalue": 0.37137049647566545,
+    "spearman_ci_95": [
+      -0.10240533497045526,
+      -0.0448163003315433
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.0038999859904294,
+    "frac_energy_3plus": 0.032192936264444784
+  },
+  "energy_spectrum": {
+    "global": [
+      0.8449212269238894,
+      0.09506898154279797,
+      0.05501735047570508,
+      0.004989032233299618,
+      9.51193043937854e-07,
+      1.0287166411225e-06,
+      7.870654745690005e-07,
+      4.273890253383323e-07,
+      1.6289338073035932e-07,
+      4.273832040370482e-08,
+      7.705401827825104e-09,
+      1.0260771175877592e-09,
+      9.694285794669117e-11,
+      0.0
+    ],
+    "local_rules": [
+      0.5024509803921569,
+      0.47794117647058826,
+      0.01715686274509804,
+      0.0024509803921568627,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12",
+      "order-13"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "Ca2",
+        "KEV"
+      ],
+      "global_magnitude": 0.18757522106170654,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.18757522106170654
+    },
+    {
+      "pair": [
+        "Ca2",
+        "Ca2ATP"
+      ],
+      "global_magnitude": 0.06242477893829346,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.06242477893829346
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "KEV"
+      ],
+      "global_magnitude": 0.06242477893829346,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.06242477893829346
+    },
+    {
+      "pair": [
+        "CIS",
+        "Ca2"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "Ca2ATP"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.25,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "InsP3"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "NO"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "NOS"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "PLC"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "KEV"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2",
+        "InsP3"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2",
+        "NO"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2",
+        "NOS"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2",
+        "PLC"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "InsP3"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "NO"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "NOS"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "PLC"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "InsP3",
+        "NO"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "InsP3",
+        "NOS"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "InsP3",
+        "PLC"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "InsP3",
+        "KEV"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "NO",
+        "NOS"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "NO",
+        "PLC"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "NO",
+        "KEV"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "NOS",
+        "PLC"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "NOS",
+        "KEV"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "PLC",
+        "KEV"
+      ],
+      "global_magnitude": 7.522106170654297e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -7.522106170654297e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "cADPR"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "Ca2",
+        "cADPR"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "cADPR"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "InsP3",
+        "cADPR"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.125,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "NO",
+        "cADPR"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "NOS",
+        "cADPR"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "PLC",
+        "cADPR"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "cADPR",
+        "KEV"
+      ],
+      "global_magnitude": 3.8504600524902344e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.8504600524902344e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "cGMP"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "Ca2",
+        "cGMP"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "cGMP"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "InsP3",
+        "cGMP"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.125,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "NO",
+        "cGMP"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "NOS",
+        "cGMP"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "PLC",
+        "cGMP"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "cGMP",
+        "KEV"
+      ],
+      "global_magnitude": 3.612041473388672e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.612041473388672e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "CIS"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "Ca2"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "Ca2ATP"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "InsP3"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "NO"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "NOS"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "PLC"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "cADPR"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "KEV"
+      ],
+      "global_magnitude": 3.3736228942871094e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.3736228942871094e-05
+    },
+    {
+      "pair": [
+        "CIS",
+        "GC"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "Ca2",
+        "GC"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "GC"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "GC",
+        "InsP3"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "GC",
+        "NO"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "GC",
+        "NOS"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "GC",
+        "PLC"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "GC",
+        "cGMP"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "GC",
+        "KEV"
+      ],
+      "global_magnitude": 3.2782554626464844e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -3.2782554626464844e-05
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "GC"
+      ],
+      "global_magnitude": 8.702278137207031e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": 8.702278137207031e-06
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "cGMP"
+      ],
+      "global_magnitude": 5.364418029785156e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": 5.364418029785156e-06
+    },
+    {
+      "pair": [
+        "GC",
+        "cADPR"
+      ],
+      "global_magnitude": 3.933906555175781e-06,
+      "local_magnitude": 0.0,
+      "global_coefficient": 3.933906555175781e-06
+    },
+    {
+      "pair": [
+        "cADPR",
+        "cGMP"
+      ],
+      "global_magnitude": 5.960464477539062e-07,
+      "local_magnitude": 0.125,
+      "global_coefficient": 5.960464477539062e-07
+    },
+    {
+      "pair": [
+        "ADPRc",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "CIS",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ca2",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "Ca2ATP",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GC",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "InsP3",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "NO",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "NOS",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "PLC",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "cADPR",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "cGMP",
+        "KAP"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "KAP",
+        "KEV"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

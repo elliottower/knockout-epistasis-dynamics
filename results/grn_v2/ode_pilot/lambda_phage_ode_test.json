@@ -1,0 +1,33 @@
+{
+  "model": "lambda_phage",
+  "method": "ode_hill",
+  "description": "Lambda phage lysis/lysogeny decision (7 nodes, Booleanized multi-valued)",
+  "n_players": 7,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "ode_global_spectrum": [
+    0.3024149903729433,
+    0.4921619105193161,
+    0.19463793356830836,
+    0.0071796960351240575,
+    0.0029420286754267746,
+    0.0006583934455580761,
+    5.047383321691725e-06,
+    1.6756634509676764e-15
+  ],
+  "ode_global_o3plus": 0.010785165539432276,
+  "boolean_delta_o3plus": -0.024975833448266812,
+  "n_unique_values": 8,
+  "v_mean_range": [
+    0.0,
+    0.9990147446544524
+  ],
+  "v_mean_std": 0.4249386795802492,
+  "timestamp": "2026-07-29T00:29:25.484335+00:00"
+}

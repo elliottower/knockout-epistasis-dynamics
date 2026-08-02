@@ -1,0 +1,593 @@
+{
+  "model": "blood_stem_cell",
+  "n_players": 11,
+  "n_init": 512,
+  "node_names": [
+    "ERG",
+    "ETO2",
+    "FLI1",
+    "GATA1",
+    "GATA2",
+    "HHEX",
+    "PU1",
+    "RUNX1",
+    "SCL",
+    "SMAD6",
+    "ZFPM1"
+  ],
+  "timestamp": "2026-07-28T16:43:51.201170+00:00",
+  "pairwise": {
+    "n_pairs": 55,
+    "n_local_nonzero": 37,
+    "n_global_nonzero": 21,
+    "local_positive_rate": 0.6727272727272727,
+    "spearman_rho": 0.594950989801604,
+    "spearman_pvalue": 1.6657787119172318e-06,
+    "spearman_ci_95": [
+      0.3807329097966915,
+      0.7496961125723192
+    ],
+    "creation_rate": 0.2972972972972973,
+    "destruction_rate": 0.4594594594594595,
+    "created_count": 11,
+    "destroyed_count": 17,
+    "top_k": 37
+  },
+  "triples": {
+    "n_triples": 165,
+    "n_local_nonzero": 62,
+    "n_global_nonzero": 35,
+    "spearman_rho": 0.4778770991626991,
+    "spearman_pvalue": 8.538503666075578e-11,
+    "spearman_ci_95": [
+      0.32682270308707606,
+      0.6136484969818536
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.0006790782790631056,
+    "frac_energy_3plus": 0.09772075840276283
+  },
+  "energy_spectrum": {
+    "global": [
+      0.17647445923967747,
+      0.42320132296224877,
+      0.31984867739092965,
+      0.07637690473541638,
+      0.0036581283574024432,
+      0.0004210825007151863,
+      1.8735011990407673e-05,
+      6.898016196762766e-07,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "local_rules": [
+      0.6561382477243173,
+      0.194316888816645,
+      0.11684208387516255,
+      0.02506298764629389,
+      0.006451154096228868,
+      0.0010260890767230168,
+      0.00015238946684005203,
+      1.0159297789336801e-05,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "GATA1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0385894775390625,
+      "local_magnitude": 0.1640625,
+      "global_coefficient": 0.0385894775390625
+    },
+    {
+      "pair": [
+        "GATA1",
+        "PU1"
+      ],
+      "global_magnitude": 0.0239105224609375,
+      "local_magnitude": 0.375,
+      "global_coefficient": -0.0239105224609375
+    },
+    {
+      "pair": [
+        "PU1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0239105224609375,
+      "local_magnitude": 0.140625,
+      "global_coefficient": -0.0239105224609375
+    },
+    {
+      "pair": [
+        "GATA1",
+        "RUNX1"
+      ],
+      "global_magnitude": 0.0038909912109375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0038909912109375
+    },
+    {
+      "pair": [
+        "PU1",
+        "RUNX1"
+      ],
+      "global_magnitude": 0.0038909912109375,
+      "local_magnitude": 0.171875,
+      "global_coefficient": -0.0038909912109375
+    },
+    {
+      "pair": [
+        "RUNX1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0038909912109375,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.0038909912109375
+    },
+    {
+      "pair": [
+        "FLI1",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0023345947265625,
+      "local_magnitude": 0.1328125,
+      "global_coefficient": -0.0023345947265625
+    },
+    {
+      "pair": [
+        "FLI1",
+        "PU1"
+      ],
+      "global_magnitude": 0.0023345947265625,
+      "local_magnitude": 0.171875,
+      "global_coefficient": -0.0023345947265625
+    },
+    {
+      "pair": [
+        "FLI1",
+        "SCL"
+      ],
+      "global_magnitude": 0.0023345947265625,
+      "local_magnitude": 0.2734375,
+      "global_coefficient": -0.0023345947265625
+    },
+    {
+      "pair": [
+        "FLI1",
+        "RUNX1"
+      ],
+      "global_magnitude": 0.0015716552734375,
+      "local_magnitude": 0.21875,
+      "global_coefficient": 0.0015716552734375
+    },
+    {
+      "pair": [
+        "GATA1",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0005340576171875,
+      "local_magnitude": 0.1328125,
+      "global_coefficient": -0.0005340576171875
+    },
+    {
+      "pair": [
+        "GATA2",
+        "PU1"
+      ],
+      "global_magnitude": 0.0005340576171875,
+      "local_magnitude": 0.015625,
+      "global_coefficient": -0.0005340576171875
+    },
+    {
+      "pair": [
+        "GATA2",
+        "RUNX1"
+      ],
+      "global_magnitude": 0.0005340576171875,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.0005340576171875
+    },
+    {
+      "pair": [
+        "GATA2",
+        "SCL"
+      ],
+      "global_magnitude": 0.0005340576171875,
+      "local_magnitude": 0.7109375,
+      "global_coefficient": -0.0005340576171875
+    },
+    {
+      "pair": [
+        "ERG",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0004730224609375,
+      "local_magnitude": 0.1328125,
+      "global_coefficient": -0.0004730224609375
+    },
+    {
+      "pair": [
+        "ERG",
+        "PU1"
+      ],
+      "global_magnitude": 0.0004730224609375,
+      "local_magnitude": 0.046875,
+      "global_coefficient": -0.0004730224609375
+    },
+    {
+      "pair": [
+        "ERG",
+        "RUNX1"
+      ],
+      "global_magnitude": 0.0004730224609375,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.0004730224609375
+    },
+    {
+      "pair": [
+        "ERG",
+        "SCL"
+      ],
+      "global_magnitude": 0.0004730224609375,
+      "local_magnitude": 0.2734375,
+      "global_coefficient": -0.0004730224609375
+    },
+    {
+      "pair": [
+        "FLI1",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0002899169921875,
+      "local_magnitude": 0.3515625,
+      "global_coefficient": 0.0002899169921875
+    },
+    {
+      "pair": [
+        "ERG",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0001983642578125,
+      "local_magnitude": 0.3515625,
+      "global_coefficient": 0.0001983642578125
+    },
+    {
+      "pair": [
+        "ERG",
+        "FLI1"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.8046875,
+      "global_coefficient": 0.0001068115234375
+    },
+    {
+      "pair": [
+        "ERG",
+        "ETO2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ERG",
+        "HHEX"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ERG",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ERG",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0390625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "FLI1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "GATA1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "GATA2"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "HHEX"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "RUNX1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.015625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.234375,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "ETO2",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FLI1",
+        "HHEX"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FLI1",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "FLI1",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0390625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA1",
+        "HHEX"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0546875,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA1",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA1",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.1484375,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA2",
+        "HHEX"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.1640625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA2",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "GATA2",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0390625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "HHEX",
+        "PU1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "HHEX",
+        "RUNX1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "HHEX",
+        "SCL"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0234375,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "HHEX",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "HHEX",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0546875,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "PU1",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "PU1",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "RUNX1",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "RUNX1",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "SCL",
+        "SMAD6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "SCL",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0078125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "SMAD6",
+        "ZFPM1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

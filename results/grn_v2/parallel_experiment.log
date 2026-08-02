@@ -1,0 +1,120 @@
+[2026-07-28T15:10:02.391736+00:00] Parallel blind experiment. Existing: ['davidich_yeast', 'drosophila_cellcycle', 'faure_cellcycle', 'tournier_apoptosis']
+Remaining: ['fanconi_anemia', 'arabidopsis_cellcycle']
+Workers: 6, Chunk: 2000
+
+============================================================
+[2026-07-28T15:10:02.391793+00:00] fanconi_anemia -- Fanconi anemia and checkpoint recovery (15 nodes, no inputs)
+  n=15, coalitions=32768, output=['CHKREC'], n_init=512
+  Workers=6, chunk_size=2000
+============================================================
+  Local Fourier: 71 pairwise, 128 triples
+  Local order-3+ energy: 0.0652
+
+  [Running parallel coalition sweep...]
+  [2026-07-28T15:15:30.200484+00:00] 2000/32768 (6.1%) coalitions complete
+  [2026-07-28T15:20:10.037583+00:00] 4000/32768 (12.2%) coalitions complete
+  [2026-07-28T15:22:45.362021+00:00] 6000/32768 (18.3%) coalitions complete
+  [2026-07-28T15:25:09.529120+00:00] 8000/32768 (24.4%) coalitions complete
+  [2026-07-28T15:27:33.969681+00:00] 10000/32768 (30.5%) coalitions complete
+  [2026-07-28T15:29:53.952792+00:00] 12000/32768 (36.6%) coalitions complete
+  [2026-07-28T15:32:25.288534+00:00] 14000/32768 (42.7%) coalitions complete
+  [2026-07-28T15:34:53.453889+00:00] 16000/32768 (48.8%) coalitions complete
+  [2026-07-28T15:37:15.714093+00:00] 18000/32768 (54.9%) coalitions complete
+  [2026-07-28T15:39:33.292152+00:00] 20000/32768 (61.0%) coalitions complete
+  [2026-07-28T15:41:25.673061+00:00] 22000/32768 (67.1%) coalitions complete
+  [2026-07-28T15:43:07.568272+00:00] 24000/32768 (73.2%) coalitions complete
+  [2026-07-28T15:44:52.912111+00:00] 26000/32768 (79.3%) coalitions complete
+  [2026-07-28T15:47:07.714428+00:00] 28000/32768 (85.4%) coalitions complete
+  [2026-07-28T15:49:42.359206+00:00] 30000/32768 (91.6%) coalitions complete
+  [2026-07-28T15:52:14.782410+00:00] 32000/32768 (97.7%) coalitions complete
+  [2026-07-28T15:53:17.239326+00:00] 32768/32768 (100.0%) coalitions complete
+
+  Value function: unique=91, var=5.0406e-02
+  v(empty)=0.0000, v(full)=0.5000
+  Fixed: 8803124, Cycling: 7974092 (47.5%)
+  Saved coalition table: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/fanconi_anemia_coalition_blind.npz
+  Saved wiring: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/fanconi_anemia_wiring_blind.json
+
+  [Scoring composition...]
+
+  RESULTS:
+    Spearman rho = 0.3052
+    95% CI: [0.1183, 0.4759]
+    p-value: 1.55e-03
+    Created: 19/71  Destroyed: 1/71
+
+    Energy spectrum:
+      order-0: global 0.4692  local 0.3114  (+0.1577)
+      order-1: global 0.4914  local 0.4482  (+0.0432)
+      order-2: global 0.0291  local 0.1752  (-0.1462)
+      order-3: global 0.0078  local 0.0495  (-0.0417)
+      order-4: global 0.0015  local 0.0130  (-0.0115)
+      order-3+: global 0.0103  local 0.0652  (delta=-0.0548)
+      Direction: DESTRUCTION
+
+    Triple Spearman rho = 0.1117
+  Saved composition scores: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/fanconi_anemia_composition_blind.json
+  Removed checkpoint: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/fanconi_anemia_checkpoint.npz
+  [Summary saved: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/blind_experiment_summary.json]
+
+============================================================
+[2026-07-28T15:53:22.725896+00:00] arabidopsis_cellcycle -- Arabidopsis thaliana cell cycle (14 nodes, no inputs)
+  n=14, coalitions=16384, output=['CYCB1_1'], n_init=512
+  Workers=6, chunk_size=2000
+============================================================
+  Local Fourier: 58 pairwise, 97 triples
+  Local order-3+ energy: 0.0398
+
+  [Running parallel coalition sweep...]
+  [2026-07-28T15:53:26.601413+00:00] 2000/16384 (12.2%) coalitions complete
+  [2026-07-28T15:54:11.581662+00:00] 4000/16384 (24.4%) coalitions complete
+  [2026-07-28T15:55:19.556978+00:00] 6000/16384 (36.6%) coalitions complete
+  [2026-07-28T15:57:53.609021+00:00] 8000/16384 (48.8%) coalitions complete
+  [2026-07-28T15:59:06.749858+00:00] 10000/16384 (61.0%) coalitions complete
+  [2026-07-28T15:59:39.351431+00:00] 12000/16384 (73.2%) coalitions complete
+  [2026-07-28T16:02:06.800013+00:00] 14000/16384 (85.4%) coalitions complete
+  [2026-07-28T16:05:03.684967+00:00] 16000/16384 (97.7%) coalitions complete
+  [2026-07-28T16:05:41.444974+00:00] 16384/16384 (100.0%) coalitions complete
+
+  Value function: unique=78, var=5.2313e-02
+  v(empty)=0.0000, v(full)=0.4545
+  Fixed: 7013796, Cycling: 1374812 (16.4%)
+  Saved coalition table: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/arabidopsis_cellcycle_coalition_blind.npz
+  Saved wiring: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/arabidopsis_cellcycle_wiring_blind.json
+
+  [Scoring composition...]
+
+  RESULTS:
+    Spearman rho = 0.2045
+    95% CI: [-0.0146, 0.4089]
+    p-value: 5.18e-02
+    Created: 17/58  Destroyed: 0/58
+
+    Energy spectrum:
+      order-0: global 0.0959  local 0.5544  (-0.4585)
+      order-1: global 0.2437  local 0.3035  (-0.0599)
+      order-2: global 0.2776  local 0.1023  (+0.1753)
+      order-3: global 0.2044  local 0.0304  (+0.1740)
+      order-4: global 0.1083  local 0.0076  (+0.1007)
+      order-3+: global 0.3828  local 0.0398  (delta=+0.3430)
+      Direction: CREATION
+
+    Triple Spearman rho = 0.1626
+  Saved composition scores: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/arabidopsis_cellcycle_composition_blind.json
+  Removed checkpoint: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/arabidopsis_cellcycle_checkpoint.npz
+  [Summary saved: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/blind_experiment_summary.json]
+
+
+================================================================================
+FINAL SUMMARY (6 models)
+================================================================================
+Model                        rho             95% CI          p    g_o3+    l_o3+      gap        Dir
+----------------------------------------------------------------------------------------------------
+faure_cellcycle            0.409     [0.129, 0.637]   5.33e-03   0.0082   0.0385  -0.0302 destruction
+tournier_apoptosis         0.247     [0.026, 0.450]   4.58e-02   0.1263   0.0417  +0.0846   creation
+davidich_yeast             0.154    [-0.148, 0.423]   3.12e-01   0.0219   0.0256  -0.0038 destruction
+drosophila_cellcycle       0.120    [-0.089, 0.317]   2.57e-01   0.1042   0.0427  +0.0616   creation
+fanconi_anemia             0.305     [0.118, 0.476]   1.55e-03   0.0103   0.0652  -0.0548 destruction
+arabidopsis_cellcycle      0.205    [-0.015, 0.409]   5.18e-02   0.3828   0.0398  +0.3430   creation
+
+[2026-07-28T16:05:45.301849+00:00] All done. Summary: /Users/elliottower/Documents/GitHub/epistasis-bench/results/grn_v2/blind_experiment_summary.json

@@ -1,0 +1,286 @@
+{
+  "description": "Max-aggregation vs sum-aggregation robustness check",
+  "summary": {
+    "n_models": 27,
+    "median_rho_sum": 0.26621749659107447,
+    "median_rho_max": 0.27694589522788826,
+    "mean_rho_sum": 0.27985389306611613,
+    "mean_rho_max": 0.26913004134750623,
+    "n_sign_flips": 0,
+    "n_significant_sum": 16,
+    "n_significant_max": 16,
+    "median_diff": -0.0034979336247919213
+  },
+  "per_model": [
+    {
+      "model": "faure_cellcycle",
+      "n": 10,
+      "rho_sum": 0.408596220576299,
+      "p_sum": 0.005326566258609206,
+      "rho_max": 0.34698452369338695,
+      "p_max": 0.019532301322468647,
+      "rho_diff": -0.06161169688291207,
+      "sign_flip": false
+    },
+    {
+      "model": "tournier_apoptosis",
+      "n": 12,
+      "rho_sum": 0.24673373560158016,
+      "p_sum": 0.04580682325970198,
+      "rho_max": 0.24739992853919976,
+      "p_max": 0.04520569644714109,
+      "rho_diff": 0.000666192937619603,
+      "sign_flip": false
+    },
+    {
+      "model": "davidich_yeast",
+      "n": 10,
+      "rho_sum": 0.15411673622291389,
+      "p_sum": 0.31210781562677214,
+      "rho_max": 0.14474061243921343,
+      "p_max": 0.342806323440043,
+      "rho_diff": -0.009376123783700452,
+      "sign_flip": false
+    },
+    {
+      "model": "drosophila_cellcycle",
+      "n": 14,
+      "rho_sum": 0.12001774561384927,
+      "p_sum": 0.25714246318548095,
+      "rho_max": 0.12538168000767067,
+      "p_max": 0.23632972164178656,
+      "rho_diff": 0.005363934393821393,
+      "sign_flip": false
+    },
+    {
+      "model": "fanconi_anemia",
+      "n": 15,
+      "rho_sum": 0.30515850148036544,
+      "p_sum": 0.0015488413858142486,
+      "rho_max": 0.2852006555516086,
+      "p_max": 0.003188469795154841,
+      "rho_diff": -0.019957845928756823,
+      "sign_flip": false
+    },
+    {
+      "model": "arabidopsis_cellcycle",
+      "n": 14,
+      "rho_sum": 0.20450626958426807,
+      "p_sum": 0.051835090108637724,
+      "rho_max": 0.1855750288181226,
+      "p_max": 0.0782159485265936,
+      "rho_diff": -0.01893124076614547,
+      "sign_flip": false
+    },
+    {
+      "model": "lambda_phage",
+      "n": 7,
+      "rho_sum": 0.6057291709074122,
+      "p_sum": 0.003612839594695832,
+      "rho_max": 0.6280145701141323,
+      "p_max": 0.0023012016008342965,
+      "rho_diff": 0.022285399206720125,
+      "sign_flip": false
+    },
+    {
+      "model": "arellano_rootstem",
+      "n": 9,
+      "rho_sum": 0.603325513942056,
+      "p_sum": 9.820339395317935e-05,
+      "rho_max": 0.5995970943273202,
+      "p_max": 0.00011126523357790612,
+      "rho_diff": -0.0037284196147358006,
+      "sign_flip": false
+    },
+    {
+      "model": "asymmetric_cell_division",
+      "n": 9,
+      "rho_sum": -0.10375020484289514,
+      "p_sum": 0.5470671482144096,
+      "rho_max": -0.10375020484289514,
+      "p_max": 0.5470671482144096,
+      "rho_diff": 0.0,
+      "sign_flip": false
+    },
+    {
+      "model": "cell_cycle_transcription",
+      "n": 9,
+      "rho_sum": -0.38252136043685014,
+      "p_sum": 0.021308346046458728,
+      "rho_max": -0.37824259801585636,
+      "p_max": 0.02292951565801824,
+      "rho_diff": 0.004278762420993787,
+      "sign_flip": false
+    },
+    {
+      "model": "remy_p53_mdm2",
+      "n": 10,
+      "rho_sum": 0.5045376330538909,
+      "p_sum": 0.0004091295204792105,
+      "rho_max": 0.5029736740510624,
+      "p_max": 0.00042928058803906583,
+      "rho_diff": -0.0015639590028284633,
+      "sign_flip": false
+    },
+    {
+      "model": "albert_segment_polarity",
+      "n": 11,
+      "rho_sum": 0.20873195993520632,
+      "p_sum": 0.12617955533288322,
+      "rho_max": 0.20705449884325033,
+      "p_max": 0.12932294523857468,
+      "rho_diff": -0.0016774610919559896,
+      "sign_flip": false
+    },
+    {
+      "model": "blood_stem_cell",
+      "n": 11,
+      "rho_sum": 0.594950989801604,
+      "p_sum": 1.6657787119172318e-06,
+      "rho_max": 0.5412169075804454,
+      "p_max": 1.98606612924886e-05,
+      "rho_diff": -0.05373408222115861,
+      "sign_flip": false
+    },
+    {
+      "model": "calzone_cellfate_reduced",
+      "n": 11,
+      "rho_sum": -0.07497196869696607,
+      "p_sum": 0.586439586520175,
+      "rho_max": -0.07843074627265206,
+      "p_max": 0.5692367731397836,
+      "rho_diff": -0.003458777575685995,
+      "sign_flip": false
+    },
+    {
+      "model": "li_budding_yeast",
+      "n": 11,
+      "rho_sum": 0.527928668814889,
+      "p_sum": 3.4402870289421346e-05,
+      "rho_max": 0.5046751159379315,
+      "p_max": 8.528242736307977e-05,
+      "rho_diff": -0.023253552876957517,
+      "sign_flip": false
+    },
+    {
+      "model": "myeloid_progenitors",
+      "n": 11,
+      "rho_sum": 0.5144389094382303,
+      "p_sum": 5.872175951113131e-05,
+      "rho_max": 0.49957314235363703,
+      "p_max": 0.00010318238761916042,
+      "rho_diff": -0.014865767084593307,
+      "sign_flip": false
+    },
+    {
+      "model": "pair_rule_module",
+      "n": 11,
+      "rho_sum": 0.6600535262550735,
+      "p_sum": 4.20807929501448e-08,
+      "rho_max": 0.5925610187997001,
+      "p_max": 1.8778370593366989e-06,
+      "rho_diff": -0.06749250745537339,
+      "sign_flip": false
+    },
+    {
+      "model": "emt_switch",
+      "n": 12,
+      "rho_sum": 0.3771255104859412,
+      "p_sum": 0.0018001310103809706,
+      "rho_max": 0.3568205800509805,
+      "p_max": 0.003272515649971883,
+      "rho_diff": -0.020304930434960677,
+      "sign_flip": false
+    },
+    {
+      "model": "morphogenetic_checkpoint",
+      "n": 12,
+      "rho_sum": 0.4004680634295299,
+      "p_sum": 0.0008626321899927871,
+      "rho_max": 0.3811771813333152,
+      "p_max": 0.001590386421813586,
+      "rho_diff": -0.019290882096214712,
+      "sign_flip": false
+    },
+    {
+      "model": "zanudo_tlgl",
+      "n": 12,
+      "rho_sum": -0.19343086463763193,
+      "p_sum": 0.11967202847844619,
+      "rho_max": -0.19343086463763193,
+      "p_max": 0.11967202847844619,
+      "rho_diff": 0.0,
+      "sign_flip": false
+    },
+    {
+      "model": "lac_operon",
+      "n": 13,
+      "rho_sum": 0.07886720388334488,
+      "p_sum": 0.4924855721412703,
+      "rho_max": 0.07536927025855296,
+      "p_max": 0.5119333451126891,
+      "rho_diff": -0.0034979336247919213,
+      "sign_flip": false
+    },
+    {
+      "model": "mendoza_thelper",
+      "n": 13,
+      "rho_sum": 0.21478985983208618,
+      "p_sum": 0.058965429384236365,
+      "rho_max": 0.21053038716763342,
+      "p_max": 0.06429491391151561,
+      "rho_diff": -0.004259472664452757,
+      "sign_flip": false
+    },
+    {
+      "model": "saadatpour_guardcell",
+      "n": 13,
+      "rho_sum": 0.06504752211013896,
+      "p_sum": 0.5715237536058049,
+      "rho_max": 0.06504752211013896,
+      "p_max": 0.5715237536058049,
+      "rho_diff": 0.0,
+      "sign_flip": false
+    },
+    {
+      "model": "fumia_cellcycle",
+      "n": 14,
+      "rho_sum": 0.26621749659107447,
+      "p_sum": 0.010752126999175327,
+      "rho_max": 0.27694589522788826,
+      "p_max": 0.00787061854428978,
+      "rho_diff": 0.010728398636813796,
+      "sign_flip": false
+    },
+    {
+      "model": "hematopoiesis_aging",
+      "n": 15,
+      "rho_sum": 0.6307390872030556,
+      "p_sum": 5.546660500897168e-13,
+      "rho_max": 0.6264178012755858,
+      "p_max": 8.866597220047696e-13,
+      "rho_diff": -0.004321285927469831,
+      "sign_flip": false
+    },
+    {
+      "model": "irons_cardiac",
+      "n": 15,
+      "rho_sum": 0.6344630822880182,
+      "p_sum": 3.680432077955656e-13,
+      "rho_max": 0.6340724676964192,
+      "p_max": 3.843230110389737e-13,
+      "rho_diff": -0.00039061459159894785,
+      "sign_flip": false
+    },
+    {
+      "model": "calzone_cell_fate",
+      "n": 17,
+      "rho_sum": -0.015813895651348504,
+      "p_sum": 0.8550104228118509,
+      "rho_max": -0.016964026025490818,
+      "p_max": 0.8445938161926444,
+      "rho_diff": -0.0011501303741423136,
+      "sign_flip": false
+    }
+  ]
+}

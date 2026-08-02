@@ -1,0 +1,696 @@
+{
+  "model": "emt_switch",
+  "n_players": 12,
+  "n_init": 512,
+  "node_names": [
+    "Ecadherin_mRNA",
+    "LEF1",
+    "N_bcatenin_H",
+    "SNAI1",
+    "SNAI2",
+    "TGFb_secr",
+    "Twist",
+    "ZEB1",
+    "ZEB1_H",
+    "b_catenin_TCF4",
+    "miR_200",
+    "miR_34"
+  ],
+  "timestamp": "2026-07-28T16:45:15.765073+00:00",
+  "pairwise": {
+    "n_pairs": 66,
+    "n_local_nonzero": 29,
+    "n_global_nonzero": 55,
+    "local_positive_rate": 0.4393939393939394,
+    "spearman_rho": 0.3771255104859412,
+    "spearman_pvalue": 0.0018001310103809706,
+    "spearman_ci_95": [
+      0.1514256117969757,
+      0.5746063771234793
+    ],
+    "creation_rate": 0.3793103448275862,
+    "destruction_rate": 0.0,
+    "created_count": 11,
+    "destroyed_count": 0,
+    "top_k": 29
+  },
+  "triples": {
+    "n_triples": 220,
+    "n_local_nonzero": 32,
+    "n_global_nonzero": 165,
+    "spearman_rho": 0.33760935736944064,
+    "spearman_pvalue": 2.890341085965636e-07,
+    "spearman_ci_95": [
+      0.2343798626900905,
+      0.43196485249691774
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.0004986393178114668,
+    "frac_energy_3plus": 0.001999210095676754
+  },
+  "energy_spectrum": {
+    "global": [
+      0.4994482605450798,
+      0.4994676497384853,
+      8.338162550812005e-05,
+      0.00018543033386436795,
+      0.0002674372873768221,
+      0.00026150167965021244,
+      0.00017594758964825668,
+      8.087439655837538e-05,
+      2.457342825380748e-05,
+      4.5435886065600975e-06,
+      3.995241332166448e-07,
+      2.628352179342716e-10,
+      0.0
+    ],
+    "local_rules": [
+      0.5870931952662722,
+      0.26904585798816566,
+      0.10465976331360946,
+      0.035133136094674555,
+      0.0035133136094674558,
+      0.0005547337278106509,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "LEF1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "N_bcatenin_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "SNAI1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "SNAI2"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "Twist"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "ZEB1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "LEF1",
+        "N_bcatenin_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.15625,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "LEF1",
+        "SNAI1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "LEF1",
+        "SNAI2"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "LEF1",
+        "Twist"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "LEF1",
+        "ZEB1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "LEF1",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "SNAI1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "SNAI2"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.21875,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "Twist"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "ZEB1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.09375,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "SNAI2"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.15625,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "Twist"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "ZEB1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "SNAI2",
+        "Twist"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.21875,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "SNAI2",
+        "ZEB1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "SNAI2",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.03125,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Twist",
+        "ZEB1"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.0625,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Twist",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "ZEB1",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.001132965087890625,
+      "local_magnitude": 0.3125,
+      "global_coefficient": -0.001132965087890625
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "LEF1",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.25,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "SNAI2",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "Twist",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "ZEB1",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "ZEB1_H",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0005970001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005970001220703125
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "LEF1",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "SNAI2",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "Twist",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.03125,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "ZEB1",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.375,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "ZEB1_H",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0005512237548828125,
+      "local_magnitude": 0.15625,
+      "global_coefficient": 0.0005512237548828125
+    },
+    {
+      "pair": [
+        "miR_200",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0004425048828125,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.0004425048828125
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "LEF1",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "SNAI2",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "Twist",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "ZEB1",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "ZEB1_H",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.000125885009765625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.000125885009765625
+    },
+    {
+      "pair": [
+        "b_catenin_TCF4",
+        "miR_200"
+      ],
+      "global_magnitude": 4.38690185546875e-05,
+      "local_magnitude": 0.375,
+      "global_coefficient": 4.38690185546875e-05
+    },
+    {
+      "pair": [
+        "b_catenin_TCF4",
+        "miR_34"
+      ],
+      "global_magnitude": 1.71661376953125e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 1.71661376953125e-05
+    },
+    {
+      "pair": [
+        "Ecadherin_mRNA",
+        "TGFb_secr"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "LEF1",
+        "TGFb_secr"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "N_bcatenin_H",
+        "TGFb_secr"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "SNAI1",
+        "TGFb_secr"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "SNAI2",
+        "TGFb_secr"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "TGFb_secr",
+        "Twist"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "TGFb_secr",
+        "ZEB1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "TGFb_secr",
+        "ZEB1_H"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "TGFb_secr",
+        "b_catenin_TCF4"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "TGFb_secr",
+        "miR_200"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "TGFb_secr",
+        "miR_34"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

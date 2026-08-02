@@ -1,0 +1,404 @@
+{
+  "model": "tournier_apoptosis",
+  "n_nodes": 12,
+  "node_names": [
+    "TNF",
+    "A20a",
+    "C3a",
+    "C8a",
+    "CARP",
+    "FLIP",
+    "IAP",
+    "IKKa",
+    "IkB",
+    "NFkB",
+    "NFkBnuc",
+    "T2"
+  ],
+  "output_nodes": [
+    "C3a"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "IkB",
+        "NFkB"
+      ],
+      [
+        "C3a",
+        "TNF"
+      ],
+      [
+        "NFkB",
+        "TNF"
+      ],
+      [
+        "C3a",
+        "CARP"
+      ],
+      [
+        "C3a",
+        "NFkBnuc"
+      ],
+      [
+        "FLIP",
+        "TNF"
+      ],
+      [
+        "C3a",
+        "T2"
+      ],
+      [
+        "CARP",
+        "T2"
+      ],
+      [
+        "NFkBnuc",
+        "TNF"
+      ],
+      [
+        "A20a",
+        "TNF"
+      ],
+      [
+        "C3a",
+        "NFkB"
+      ],
+      [
+        "C8a",
+        "IAP"
+      ],
+      [
+        "A20a",
+        "C3a"
+      ]
+    ],
+    "triples": [
+      [
+        "C3a",
+        "NFkB",
+        "TNF"
+      ],
+      [
+        "A20a",
+        "C3a",
+        "TNF"
+      ],
+      [
+        "IKKa",
+        "NFkBnuc",
+        "TNF"
+      ],
+      [
+        "C3a",
+        "NFkBnuc",
+        "TNF"
+      ],
+      [
+        "C3a",
+        "CARP",
+        "T2"
+      ]
+    ],
+    "per_gene": {
+      "TNF": {
+        "regulators": [
+          "TNF"
+        ],
+        "interactions": []
+      },
+      "A20a": {
+        "regulators": [
+          "TNF",
+          "NFkBnuc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "NFkBnuc",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "C3a": {
+        "regulators": [
+          "C8a",
+          "IAP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "C8a",
+              "IAP"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "C8a": {
+        "regulators": [
+          "C3a",
+          "CARP",
+          "T2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "C3a",
+              "CARP"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C3a",
+              "T2"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "CARP",
+              "T2"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C3a",
+              "CARP",
+              "T2"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "CARP": {
+        "regulators": [
+          "TNF",
+          "C3a",
+          "NFkB",
+          "NFkBnuc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "NFkB",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C3a",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "C3a",
+              "NFkB",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "NFkBnuc",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "C3a",
+              "NFkBnuc"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C3a",
+              "NFkBnuc",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "FLIP": {
+        "regulators": [
+          "NFkBnuc"
+        ],
+        "interactions": []
+      },
+      "IAP": {
+        "regulators": [
+          "TNF",
+          "C3a",
+          "NFkBnuc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "C3a",
+              "NFkBnuc",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "IKKa": {
+        "regulators": [
+          "TNF",
+          "A20a",
+          "C3a"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "A20a",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "C3a",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "A20a",
+              "C3a"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "A20a",
+              "C3a",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "IkB": {
+        "regulators": [
+          "TNF",
+          "IKKa",
+          "NFkBnuc"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "IKKa",
+              "NFkBnuc",
+              "TNF"
+            ],
+            "order": 3,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "NFkB": {
+        "regulators": [
+          "IkB"
+        ],
+        "interactions": []
+      },
+      "NFkBnuc": {
+        "regulators": [
+          "IkB",
+          "NFkB"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "IkB",
+              "NFkB"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "T2": {
+        "regulators": [
+          "TNF",
+          "FLIP"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "FLIP",
+              "TNF"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      }
+    },
+    "n_pairwise": 13,
+    "n_triples": 5,
+    "pairwise_strengths": {
+      "['NFkBnuc', 'TNF']": 0.375,
+      "['C8a', 'IAP']": 0.25,
+      "['C3a', 'CARP']": 0.125,
+      "['C3a', 'T2']": 0.125,
+      "['CARP', 'T2']": 0.125,
+      "['NFkB', 'TNF']": 0.125,
+      "['C3a', 'NFkB']": 0.125,
+      "['C3a', 'NFkBnuc']": 0.125,
+      "['A20a', 'TNF']": 0.125,
+      "['C3a', 'TNF']": 0.125,
+      "['A20a', 'C3a']": 0.125,
+      "['IkB', 'NFkB']": 0.25,
+      "['FLIP', 'TNF']": 0.25
+    },
+    "local_energy_spectrum": [
+      0.4236111111111111,
+      0.4444444444444444,
+      0.09027777777777778,
+      0.041666666666666664,
+      0.0
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 2097152,
+    "total_fixed_point": 1770720,
+    "total_cycling": 326432,
+    "cycling_fraction": 0.1556549072265625
+  },
+  "n_unique_values": 33,
+  "total_variance": 0.21416119316388413,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:43:15.580341+00:00"
+}

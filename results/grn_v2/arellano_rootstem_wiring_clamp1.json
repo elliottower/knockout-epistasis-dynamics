@@ -1,0 +1,614 @@
+{
+  "model": "arellano_rootstem",
+  "n_nodes": 9,
+  "node_names": [
+    "AUXINS",
+    "SHR",
+    "ARF",
+    "IAA",
+    "JKD",
+    "MGP",
+    "SCR",
+    "WOX",
+    "PLT"
+  ],
+  "output_nodes": [
+    "WOX"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "SCR",
+        "SHR"
+      ],
+      [
+        "SCR",
+        "WOX"
+      ],
+      [
+        "JKD",
+        "SHR"
+      ],
+      [
+        "MGP",
+        "SCR"
+      ],
+      [
+        "SHR",
+        "WOX"
+      ],
+      [
+        "JKD",
+        "SCR"
+      ],
+      [
+        "JKD",
+        "MGP"
+      ],
+      [
+        "MGP",
+        "WOX"
+      ],
+      [
+        "ARF",
+        "WOX"
+      ],
+      [
+        "MGP",
+        "SHR"
+      ],
+      [
+        "ARF",
+        "SHR"
+      ],
+      [
+        "ARF",
+        "SCR"
+      ],
+      [
+        "ARF",
+        "MGP"
+      ]
+    ],
+    "triples": [
+      [
+        "ARF",
+        "SHR",
+        "WOX"
+      ],
+      [
+        "JKD",
+        "MGP",
+        "SCR"
+      ],
+      [
+        "ARF",
+        "MGP",
+        "SHR"
+      ],
+      [
+        "MGP",
+        "SHR",
+        "WOX"
+      ],
+      [
+        "ARF",
+        "SCR",
+        "WOX"
+      ],
+      [
+        "ARF",
+        "MGP",
+        "WOX"
+      ],
+      [
+        "ARF",
+        "SCR",
+        "SHR"
+      ],
+      [
+        "SCR",
+        "SHR",
+        "WOX"
+      ],
+      [
+        "ARF",
+        "MGP",
+        "SCR"
+      ],
+      [
+        "JKD",
+        "MGP",
+        "SHR"
+      ],
+      [
+        "MGP",
+        "SCR",
+        "WOX"
+      ],
+      [
+        "JKD",
+        "SCR",
+        "SHR"
+      ],
+      [
+        "MGP",
+        "SCR",
+        "SHR"
+      ]
+    ],
+    "per_gene": {
+      "AUXINS": {
+        "regulators": [
+          "AUXINS"
+        ],
+        "interactions": []
+      },
+      "SHR": {
+        "regulators": [
+          "SHR"
+        ],
+        "interactions": []
+      },
+      "ARF": {
+        "regulators": [
+          "IAA"
+        ],
+        "interactions": []
+      },
+      "IAA": {
+        "regulators": [
+          "AUXINS"
+        ],
+        "interactions": []
+      },
+      "JKD": {
+        "regulators": [
+          "SHR",
+          "SCR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SCR",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "MGP": {
+        "regulators": [
+          "SHR",
+          "SCR",
+          "WOX"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SCR",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "SHR",
+              "WOX"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "SCR",
+              "WOX"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "SCR",
+              "SHR",
+              "WOX"
+            ],
+            "order": 3,
+            "coefficient": 0.125
+          }
+        ]
+      },
+      "SCR": {
+        "regulators": [
+          "SHR",
+          "JKD",
+          "MGP",
+          "SCR"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "JKD",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "JKD",
+              "MGP"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "JKD",
+              "MGP",
+              "SHR"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "SCR",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "JKD",
+              "SCR"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "JKD",
+              "SCR",
+              "SHR"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SCR"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SCR",
+              "SHR"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "JKD",
+              "MGP",
+              "SCR"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "JKD",
+              "MGP",
+              "SCR",
+              "SHR"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "WOX": {
+        "regulators": [
+          "SHR",
+          "ARF",
+          "MGP",
+          "SCR",
+          "WOX"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ARF",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP",
+              "SHR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SCR",
+              "SHR"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "ARF",
+              "SCR"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "ARF",
+              "SCR",
+              "SHR"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SCR"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SCR",
+              "SHR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP",
+              "SCR"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP",
+              "SCR",
+              "SHR"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SHR",
+              "WOX"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "WOX"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "SHR",
+              "WOX"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MGP",
+              "WOX"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SHR",
+              "WOX"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP",
+              "WOX"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP",
+              "SHR",
+              "WOX"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SCR",
+              "WOX"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SCR",
+              "SHR",
+              "WOX"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "SCR",
+              "WOX"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "SCR",
+              "SHR",
+              "WOX"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SCR",
+              "WOX"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "MGP",
+              "SCR",
+              "SHR",
+              "WOX"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP",
+              "SCR",
+              "WOX"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ARF",
+              "MGP",
+              "SCR",
+              "SHR",
+              "WOX"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "PLT": {
+        "regulators": [
+          "ARF"
+        ],
+        "interactions": []
+      }
+    },
+    "n_pairwise": 13,
+    "n_triples": 13,
+    "pairwise_strengths": {
+      "['SCR', 'SHR']": 0.65625,
+      "['SHR', 'WOX']": 0.15625,
+      "['SCR', 'WOX']": 0.15625,
+      "['JKD', 'SHR']": 0.0625,
+      "['MGP', 'SHR']": 0.09375,
+      "['JKD', 'MGP']": 0.0625,
+      "['JKD', 'SCR']": 0.0625,
+      "['MGP', 'SCR']": 0.09375,
+      "['ARF', 'SHR']": 0.09375,
+      "['ARF', 'MGP']": 0.03125,
+      "['ARF', 'SCR']": 0.09375,
+      "['ARF', 'WOX']": 0.03125,
+      "['MGP', 'WOX']": 0.03125
+    },
+    "local_energy_spectrum": [
+      0.4347153465346535,
+      0.484220297029703,
+      0.0625,
+      0.01547029702970297,
+      0.0027846534653465345,
+      0.0003094059405940594
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 262144,
+    "total_fixed_point": 262144,
+    "total_cycling": 0,
+    "cycling_fraction": 0.0
+  },
+  "n_unique_values": 29,
+  "total_variance": 0.18278757273219526,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:33:26.556790+00:00"
+}

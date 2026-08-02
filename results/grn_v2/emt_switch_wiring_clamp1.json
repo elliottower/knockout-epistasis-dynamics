@@ -1,0 +1,1422 @@
+{
+  "model": "emt_switch",
+  "n_nodes": 12,
+  "node_names": [
+    "Ecadherin_mRNA",
+    "LEF1",
+    "N_bcatenin_H",
+    "SNAI1",
+    "SNAI2",
+    "TGFb_secr",
+    "Twist",
+    "ZEB1",
+    "ZEB1_H",
+    "b_catenin_TCF4",
+    "miR_200",
+    "miR_34"
+  ],
+  "output_nodes": [
+    "Ecadherin_mRNA"
+  ],
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "N_bcatenin_H",
+        "miR_200"
+      ],
+      [
+        "SNAI2",
+        "Twist"
+      ],
+      [
+        "LEF1",
+        "ZEB1"
+      ],
+      [
+        "Twist",
+        "ZEB1_H"
+      ],
+      [
+        "N_bcatenin_H",
+        "ZEB1"
+      ],
+      [
+        "SNAI2",
+        "ZEB1_H"
+      ],
+      [
+        "LEF1",
+        "N_bcatenin_H"
+      ],
+      [
+        "ZEB1",
+        "miR_200"
+      ],
+      [
+        "N_bcatenin_H",
+        "SNAI1"
+      ],
+      [
+        "ZEB1_H",
+        "miR_200"
+      ],
+      [
+        "SNAI1",
+        "ZEB1"
+      ],
+      [
+        "SNAI1",
+        "Twist"
+      ],
+      [
+        "Twist",
+        "ZEB1"
+      ],
+      [
+        "SNAI1",
+        "miR_200"
+      ],
+      [
+        "LEF1",
+        "miR_200"
+      ],
+      [
+        "ZEB1",
+        "ZEB1_H"
+      ],
+      [
+        "N_bcatenin_H",
+        "Twist"
+      ],
+      [
+        "SNAI2",
+        "ZEB1"
+      ],
+      [
+        "miR_200",
+        "miR_34"
+      ],
+      [
+        "LEF1",
+        "SNAI2"
+      ],
+      [
+        "Twist",
+        "miR_200"
+      ],
+      [
+        "SNAI2",
+        "miR_200"
+      ],
+      [
+        "SNAI1",
+        "miR_34"
+      ],
+      [
+        "LEF1",
+        "Twist"
+      ],
+      [
+        "b_catenin_TCF4",
+        "miR_200"
+      ],
+      [
+        "SNAI1",
+        "ZEB1_H"
+      ],
+      [
+        "N_bcatenin_H",
+        "SNAI2"
+      ],
+      [
+        "SNAI2",
+        "b_catenin_TCF4"
+      ],
+      [
+        "SNAI1",
+        "SNAI2"
+      ]
+    ],
+    "triples": [
+      [
+        "LEF1",
+        "N_bcatenin_H",
+        "miR_200"
+      ],
+      [
+        "N_bcatenin_H",
+        "SNAI2",
+        "miR_200"
+      ],
+      [
+        "LEF1",
+        "SNAI2",
+        "ZEB1"
+      ],
+      [
+        "SNAI2",
+        "Twist",
+        "ZEB1_H"
+      ],
+      [
+        "LEF1",
+        "N_bcatenin_H",
+        "Twist"
+      ],
+      [
+        "N_bcatenin_H",
+        "SNAI2",
+        "ZEB1"
+      ],
+      [
+        "SNAI1",
+        "Twist",
+        "ZEB1"
+      ],
+      [
+        "LEF1",
+        "N_bcatenin_H",
+        "SNAI2"
+      ],
+      [
+        "SNAI2",
+        "ZEB1",
+        "miR_200"
+      ],
+      [
+        "N_bcatenin_H",
+        "SNAI1",
+        "SNAI2"
+      ],
+      [
+        "ZEB1",
+        "ZEB1_H",
+        "miR_200"
+      ],
+      [
+        "SNAI1",
+        "SNAI2",
+        "ZEB1"
+      ],
+      [
+        "SNAI1",
+        "SNAI2",
+        "Twist"
+      ],
+      [
+        "SNAI1",
+        "Twist",
+        "miR_200"
+      ],
+      [
+        "SNAI2",
+        "Twist",
+        "ZEB1"
+      ],
+      [
+        "ZEB1",
+        "ZEB1_H",
+        "miR_34"
+      ],
+      [
+        "SNAI1",
+        "ZEB1",
+        "miR_200"
+      ],
+      [
+        "LEF1",
+        "SNAI2",
+        "miR_200"
+      ],
+      [
+        "Twist",
+        "ZEB1",
+        "miR_200"
+      ],
+      [
+        "LEF1",
+        "ZEB1",
+        "miR_200"
+      ],
+      [
+        "SNAI1",
+        "ZEB1_H",
+        "miR_200"
+      ],
+      [
+        "SNAI2",
+        "ZEB1",
+        "ZEB1_H"
+      ],
+      [
+        "N_bcatenin_H",
+        "SNAI2",
+        "Twist"
+      ],
+      [
+        "N_bcatenin_H",
+        "ZEB1",
+        "miR_200"
+      ],
+      [
+        "Twist",
+        "ZEB1_H",
+        "miR_200"
+      ],
+      [
+        "LEF1",
+        "N_bcatenin_H",
+        "ZEB1"
+      ],
+      [
+        "SNAI1",
+        "Twist",
+        "ZEB1_H"
+      ],
+      [
+        "LEF1",
+        "SNAI2",
+        "Twist"
+      ],
+      [
+        "SNAI2",
+        "b_catenin_TCF4",
+        "miR_200"
+      ],
+      [
+        "SNAI1",
+        "SNAI2",
+        "ZEB1_H"
+      ],
+      [
+        "SNAI1",
+        "ZEB1",
+        "ZEB1_H"
+      ],
+      [
+        "Twist",
+        "ZEB1",
+        "ZEB1_H"
+      ]
+    ],
+    "per_gene": {
+      "Ecadherin_mRNA": {
+        "regulators": [
+          "SNAI1",
+          "SNAI2",
+          "Twist",
+          "ZEB1",
+          "ZEB1_H"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "Twist"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2",
+              "Twist"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2",
+              "ZEB1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "Twist",
+              "ZEB1"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2",
+              "Twist",
+              "ZEB1"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "Twist",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2",
+              "Twist",
+              "ZEB1_H"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "Twist",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2",
+              "Twist",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "LEF1": {
+        "regulators": [
+          "ZEB1",
+          "ZEB1_H",
+          "miR_200"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "N_bcatenin_H": {
+        "regulators": [
+          "miR_200",
+          "miR_34"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "miR_200",
+              "miR_34"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "SNAI1": {
+        "regulators": [
+          "ZEB1",
+          "ZEB1_H",
+          "miR_34"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ZEB1",
+              "ZEB1_H",
+              "miR_34"
+            ],
+            "order": 3,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "SNAI2": {
+        "regulators": [
+          "LEF1",
+          "N_bcatenin_H",
+          "SNAI2",
+          "Twist"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "SNAI2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI2"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "SNAI2"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "Twist"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "Twist"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "Twist"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "Twist"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "SNAI2",
+              "Twist"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI2",
+              "Twist"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "SNAI2",
+              "Twist"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "TGFb_secr": {
+        "regulators": [
+          "b_catenin_TCF4",
+          "miR_200"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "b_catenin_TCF4",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "Twist": {
+        "regulators": [
+          "SNAI1",
+          "miR_34"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SNAI1",
+              "miR_34"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "ZEB1": {
+        "regulators": [
+          "SNAI2",
+          "b_catenin_TCF4",
+          "miR_200"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SNAI2",
+              "b_catenin_TCF4"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "b_catenin_TCF4",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "b_catenin_TCF4",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "ZEB1_H": {
+        "regulators": [
+          "LEF1",
+          "N_bcatenin_H",
+          "SNAI2",
+          "ZEB1",
+          "miR_200"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "SNAI2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI2"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "SNAI2"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "ZEB1"
+            ],
+            "order": 3,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "SNAI2",
+              "ZEB1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI2",
+              "ZEB1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "SNAI2",
+              "ZEB1"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "SNAI2",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI2",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "SNAI2",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI2",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "SNAI2",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI2",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "LEF1",
+              "N_bcatenin_H",
+              "SNAI2",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 5,
+            "coefficient": -0.03125
+          }
+        ]
+      },
+      "b_catenin_TCF4": {
+        "regulators": [
+          "N_bcatenin_H",
+          "SNAI1",
+          "SNAI2"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI1"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI2"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "SNAI2"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "N_bcatenin_H",
+              "SNAI1",
+              "SNAI2"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      },
+      "miR_200": {
+        "regulators": [
+          "SNAI1",
+          "Twist",
+          "ZEB1",
+          "ZEB1_H",
+          "miR_200"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.09375
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": 0.09375
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 4,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": 0.21875
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 2,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 3,
+            "coefficient": 0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "Twist",
+              "ZEB1",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 4,
+            "coefficient": -0.03125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "Twist",
+              "ZEB1",
+              "ZEB1_H",
+              "miR_200"
+            ],
+            "order": 5,
+            "coefficient": 0.03125
+          }
+        ]
+      },
+      "miR_34": {
+        "regulators": [
+          "SNAI1",
+          "ZEB1",
+          "ZEB1_H"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": -0.125
+          },
+          {
+            "regulators": [
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 2,
+            "coefficient": 0.125
+          },
+          {
+            "regulators": [
+              "SNAI1",
+              "ZEB1",
+              "ZEB1_H"
+            ],
+            "order": 3,
+            "coefficient": -0.125
+          }
+        ]
+      }
+    },
+    "n_pairwise": 29,
+    "n_triples": 32,
+    "pairwise_strengths": {
+      "['SNAI1', 'SNAI2']": 0.15625,
+      "['SNAI1', 'Twist']": 0.125,
+      "['SNAI2', 'Twist']": 0.21875,
+      "['SNAI1', 'ZEB1']": 0.1875,
+      "['SNAI2', 'ZEB1']": 0.0625,
+      "['Twist', 'ZEB1']": 0.0625,
+      "['SNAI1', 'ZEB1_H']": 0.25,
+      "['SNAI2', 'ZEB1_H']": 0.03125,
+      "['Twist', 'ZEB1_H']": 0.125,
+      "['ZEB1', 'ZEB1_H']": 0.3125,
+      "['ZEB1', 'miR_200']": 0.375,
+      "['ZEB1_H', 'miR_200']": 0.15625,
+      "['miR_200', 'miR_34']": 0.25,
+      "['LEF1', 'N_bcatenin_H']": 0.15625,
+      "['LEF1', 'SNAI2']": 0.09375,
+      "['N_bcatenin_H', 'SNAI2']": 0.21875,
+      "['LEF1', 'Twist']": 0.0625,
+      "['N_bcatenin_H', 'Twist']": 0.0625,
+      "['b_catenin_TCF4', 'miR_200']": 0.375,
+      "['SNAI1', 'miR_34']": 0.25,
+      "['SNAI2', 'b_catenin_TCF4']": 0.125,
+      "['SNAI2', 'miR_200']": 0.15625,
+      "['LEF1', 'ZEB1']": 0.09375,
+      "['N_bcatenin_H', 'ZEB1']": 0.09375,
+      "['LEF1', 'miR_200']": 0.03125,
+      "['N_bcatenin_H', 'miR_200']": 0.03125,
+      "['N_bcatenin_H', 'SNAI1']": 0.125,
+      "['SNAI1', 'miR_200']": 0.03125,
+      "['Twist', 'miR_200']": 0.03125
+    },
+    "local_energy_spectrum": [
+      0.5870931952662722,
+      0.26904585798816566,
+      0.10465976331360946,
+      0.035133136094674555,
+      0.0035133136094674558,
+      0.0005547337278106509
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 1,
+    "total_simulations": 2097152,
+    "total_fixed_point": 1972380,
+    "total_cycling": 124772,
+    "cycling_fraction": 0.05949592590332031
+  },
+  "n_unique_values": 93,
+  "total_variance": 0.1638048203813014,
+  "clamp_value": 1,
+  "timestamp": "2026-07-28T18:43:52.663996+00:00"
+}

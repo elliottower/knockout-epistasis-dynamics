@@ -1,0 +1,808 @@
+{
+  "model": "mendoza_thelper",
+  "n_players": 13,
+  "n_init": 512,
+  "node_names": [
+    "APC",
+    "IFNg_e",
+    "IL12_e",
+    "IFNg",
+    "IFNgR",
+    "IL12R",
+    "IL4",
+    "IL4R",
+    "STAT1",
+    "STAT6",
+    "SOCS1",
+    "T_bet",
+    "GATA3"
+  ],
+  "timestamp": "2026-07-28T16:47:10.469719+00:00",
+  "pairwise": {
+    "n_pairs": 78,
+    "n_local_nonzero": 12,
+    "n_global_nonzero": 36,
+    "local_positive_rate": 0.15384615384615385,
+    "spearman_rho": 0.21478985983208618,
+    "spearman_pvalue": 0.058965429384236365,
+    "spearman_ci_95": [
+      -0.05637672856967037,
+      0.4490943609064813
+    ],
+    "creation_rate": 0.5833333333333334,
+    "destruction_rate": 0.4166666666666667,
+    "created_count": 7,
+    "destroyed_count": 5,
+    "top_k": 12
+  },
+  "triples": {
+    "n_triples": 286,
+    "n_local_nonzero": 6,
+    "n_global_nonzero": 84,
+    "spearman_rho": 0.043145719268567084,
+    "spearman_pvalue": 0.4673464364809108,
+    "spearman_ci_95": [
+      -0.09126578696919767,
+      0.20238427902274111
+    ]
+  },
+  "spectrum_gate": {
+    "passes": true,
+    "abs_energy_3plus": 0.0012318147346377373,
+    "frac_energy_3plus": 0.014558029445819775
+  },
+  "energy_spectrum": {
+    "global": [
+      0.41661991041086155,
+      0.49239618229831145,
+      0.08249104276848335,
+      0.007459564646327248,
+      0.0008663386267450732,
+      0.00014199443604622611,
+      2.2481850396556403e-05,
+      2.2521982225182888e-06,
+      2.2634351345337043e-07,
+      6.421092580237459e-09,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "local_rules": [
+      0.46980337078651685,
+      0.4438202247191011,
+      0.07443820224719101,
+      0.011235955056179775,
+      0.0007022471910112359,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_labels": [
+      "order-0",
+      "order-1",
+      "order-2",
+      "order-3",
+      "order-4",
+      "order-5",
+      "order-6",
+      "order-7",
+      "order-8",
+      "order-9",
+      "order-10",
+      "order-11",
+      "order-12",
+      "order-13"
+    ]
+  },
+  "pair_details": [
+    {
+      "pair": [
+        "T_bet",
+        "GATA3"
+      ],
+      "global_magnitude": 0.079010009765625,
+      "local_magnitude": 0.6875,
+      "global_coefficient": -0.079010009765625
+    },
+    {
+      "pair": [
+        "STAT6",
+        "GATA3"
+      ],
+      "global_magnitude": 0.065155029296875,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.065155029296875
+    },
+    {
+      "pair": [
+        "IL4R",
+        "STAT6"
+      ],
+      "global_magnitude": 0.020599365234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.020599365234375
+    },
+    {
+      "pair": [
+        "IL4R",
+        "GATA3"
+      ],
+      "global_magnitude": 0.020599365234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.020599365234375
+    },
+    {
+      "pair": [
+        "STAT6",
+        "T_bet"
+      ],
+      "global_magnitude": 0.019439697265625,
+      "local_magnitude": 0.125,
+      "global_coefficient": -0.019439697265625
+    },
+    {
+      "pair": [
+        "STAT1",
+        "STAT6"
+      ],
+      "global_magnitude": 0.007720947265625,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.007720947265625
+    },
+    {
+      "pair": [
+        "STAT1",
+        "T_bet"
+      ],
+      "global_magnitude": 0.007720947265625,
+      "local_magnitude": 0.4375,
+      "global_coefficient": -0.007720947265625
+    },
+    {
+      "pair": [
+        "STAT1",
+        "GATA3"
+      ],
+      "global_magnitude": 0.007720947265625,
+      "local_magnitude": 0.1875,
+      "global_coefficient": -0.007720947265625
+    },
+    {
+      "pair": [
+        "IL4",
+        "IL4R"
+      ],
+      "global_magnitude": 0.00390625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00390625
+    },
+    {
+      "pair": [
+        "IL4",
+        "STAT6"
+      ],
+      "global_magnitude": 0.00390625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00390625
+    },
+    {
+      "pair": [
+        "IL4",
+        "GATA3"
+      ],
+      "global_magnitude": 0.00390625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.00390625
+    },
+    {
+      "pair": [
+        "IL4R",
+        "STAT1"
+      ],
+      "global_magnitude": 0.002471923828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.002471923828125
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "IL4R"
+      ],
+      "global_magnitude": 0.001434326171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001434326171875
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "STAT1"
+      ],
+      "global_magnitude": 0.001434326171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001434326171875
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "STAT6"
+      ],
+      "global_magnitude": 0.001434326171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001434326171875
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "T_bet"
+      ],
+      "global_magnitude": 0.001434326171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001434326171875
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "GATA3"
+      ],
+      "global_magnitude": 0.001434326171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.001434326171875
+    },
+    {
+      "pair": [
+        "IL4R",
+        "T_bet"
+      ],
+      "global_magnitude": 0.001434326171875,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.001434326171875
+    },
+    {
+      "pair": [
+        "IL4",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.00128173828125,
+      "local_magnitude": 0.25,
+      "global_coefficient": -0.00128173828125
+    },
+    {
+      "pair": [
+        "IL4R",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.00128173828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00128173828125
+    },
+    {
+      "pair": [
+        "STAT6",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.00128173828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00128173828125
+    },
+    {
+      "pair": [
+        "SOCS1",
+        "GATA3"
+      ],
+      "global_magnitude": 0.00128173828125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.00128173828125
+    },
+    {
+      "pair": [
+        "IL4",
+        "T_bet"
+      ],
+      "global_magnitude": 0.0006103515625,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0006103515625
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "IL4"
+      ],
+      "global_magnitude": 0.0003662109375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0003662109375
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.0001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0001220703125
+    },
+    {
+      "pair": [
+        "IL4",
+        "STAT1"
+      ],
+      "global_magnitude": 0.0001220703125,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001220703125
+    },
+    {
+      "pair": [
+        "IFNg",
+        "IFNgR"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001068115234375
+    },
+    {
+      "pair": [
+        "IFNg",
+        "IL4"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001068115234375
+    },
+    {
+      "pair": [
+        "IFNg",
+        "IL4R"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001068115234375
+    },
+    {
+      "pair": [
+        "IFNg",
+        "STAT1"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001068115234375
+    },
+    {
+      "pair": [
+        "IFNg",
+        "STAT6"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001068115234375
+    },
+    {
+      "pair": [
+        "IFNg",
+        "T_bet"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001068115234375
+    },
+    {
+      "pair": [
+        "IFNg",
+        "GATA3"
+      ],
+      "global_magnitude": 0.0001068115234375,
+      "local_magnitude": 0.0,
+      "global_coefficient": -0.0001068115234375
+    },
+    {
+      "pair": [
+        "STAT1",
+        "SOCS1"
+      ],
+      "global_magnitude": 6.103515625e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": 6.103515625e-05
+    },
+    {
+      "pair": [
+        "SOCS1",
+        "T_bet"
+      ],
+      "global_magnitude": 6.103515625e-05,
+      "local_magnitude": 0.0,
+      "global_coefficient": -6.103515625e-05
+    },
+    {
+      "pair": [
+        "IFNg",
+        "SOCS1"
+      ],
+      "global_magnitude": 3.0517578125e-05,
+      "local_magnitude": 0.25,
+      "global_coefficient": 3.0517578125e-05
+    },
+    {
+      "pair": [
+        "APC",
+        "IFNg_e"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "IL12_e"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "IFNg"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "IFNgR"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "IL12R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "IL4"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "IL4R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "STAT1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "STAT6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "T_bet"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "APC",
+        "GATA3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "IL12_e"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "IFNg"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "IFNgR"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "IL12R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "IL4"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "IL4R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "STAT1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "STAT6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "T_bet"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg_e",
+        "GATA3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0625,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "IFNg"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "IFNgR"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "IL12R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "IL4"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "IL4R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "STAT1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "STAT6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "T_bet"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12_e",
+        "GATA3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.125,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNg",
+        "IL12R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IFNgR",
+        "IL12R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12R",
+        "IL4"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12R",
+        "IL4R"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12R",
+        "STAT1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12R",
+        "STAT6"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12R",
+        "SOCS1"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12R",
+        "T_bet"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    },
+    {
+      "pair": [
+        "IL12R",
+        "GATA3"
+      ],
+      "global_magnitude": 0.0,
+      "local_magnitude": 0.0,
+      "global_coefficient": 0.0
+    }
+  ]
+}

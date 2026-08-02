@@ -1,0 +1,539 @@
+{
+  "model": "cell_cycle_transcription",
+  "n_nodes": 9,
+  "node_names": [
+    "ACE2",
+    "CLN3",
+    "HCM1",
+    "MBF",
+    "SBF",
+    "SFF",
+    "SWI5",
+    "YHP1",
+    "YOX1"
+  ],
+  "output_nodes": [
+    "SFF"
+  ],
+  "interaction_graph": {
+    "ACE2": [
+      {
+        "regulator": "SFF",
+        "sign": 1
+      }
+    ],
+    "CLN3": [
+      {
+        "regulator": "ACE2",
+        "sign": 1
+      },
+      {
+        "regulator": "SWI5",
+        "sign": 1
+      },
+      {
+        "regulator": "YHP1",
+        "sign": -1
+      },
+      {
+        "regulator": "YOX1",
+        "sign": -1
+      }
+    ],
+    "HCM1": [
+      {
+        "regulator": "MBF",
+        "sign": 1
+      },
+      {
+        "regulator": "SBF",
+        "sign": 1
+      }
+    ],
+    "MBF": [
+      {
+        "regulator": "CLN3",
+        "sign": 1
+      }
+    ],
+    "SBF": [
+      {
+        "regulator": "CLN3",
+        "sign": 1
+      },
+      {
+        "regulator": "MBF",
+        "sign": 1
+      },
+      {
+        "regulator": "YHP1",
+        "sign": -1
+      },
+      {
+        "regulator": "YOX1",
+        "sign": -1
+      }
+    ],
+    "SFF": [
+      {
+        "regulator": "HCM1",
+        "sign": 1
+      },
+      {
+        "regulator": "SBF",
+        "sign": 1
+      }
+    ],
+    "SWI5": [
+      {
+        "regulator": "SFF",
+        "sign": 1
+      }
+    ],
+    "YHP1": [
+      {
+        "regulator": "MBF",
+        "sign": 1
+      },
+      {
+        "regulator": "SBF",
+        "sign": 1
+      }
+    ],
+    "YOX1": [
+      {
+        "regulator": "MBF",
+        "sign": 1
+      },
+      {
+        "regulator": "SBF",
+        "sign": 1
+      }
+    ]
+  },
+  "rule_fourier": {
+    "pairwise": [
+      [
+        "YHP1",
+        "YOX1"
+      ],
+      [
+        "CLN3",
+        "YOX1"
+      ],
+      [
+        "MBF",
+        "YOX1"
+      ],
+      [
+        "ACE2",
+        "SWI5"
+      ],
+      [
+        "SWI5",
+        "YHP1"
+      ],
+      [
+        "CLN3",
+        "YHP1"
+      ],
+      [
+        "MBF",
+        "SBF"
+      ],
+      [
+        "CLN3",
+        "MBF"
+      ],
+      [
+        "MBF",
+        "YHP1"
+      ],
+      [
+        "ACE2",
+        "YHP1"
+      ],
+      [
+        "HCM1",
+        "SBF"
+      ],
+      [
+        "SWI5",
+        "YOX1"
+      ],
+      [
+        "ACE2",
+        "YOX1"
+      ]
+    ],
+    "triples": [
+      [
+        "ACE2",
+        "YHP1",
+        "YOX1"
+      ],
+      [
+        "ACE2",
+        "SWI5",
+        "YHP1"
+      ],
+      [
+        "CLN3",
+        "MBF",
+        "YHP1"
+      ],
+      [
+        "MBF",
+        "YHP1",
+        "YOX1"
+      ],
+      [
+        "ACE2",
+        "SWI5",
+        "YOX1"
+      ],
+      [
+        "CLN3",
+        "MBF",
+        "YOX1"
+      ],
+      [
+        "SWI5",
+        "YHP1",
+        "YOX1"
+      ],
+      [
+        "CLN3",
+        "YHP1",
+        "YOX1"
+      ]
+    ],
+    "per_gene": {
+      "ACE2": {
+        "regulators": [
+          "SFF"
+        ],
+        "interactions": []
+      },
+      "CLN3": {
+        "regulators": [
+          "ACE2",
+          "SWI5",
+          "YHP1",
+          "YOX1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "ACE2",
+              "SWI5"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ACE2",
+              "YHP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "SWI5",
+              "YHP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ACE2",
+              "SWI5",
+              "YHP1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ACE2",
+              "YOX1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "SWI5",
+              "YOX1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ACE2",
+              "SWI5",
+              "YOX1"
+            ],
+            "order": 3,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 2,
+            "coefficient": 0.0625
+          },
+          {
+            "regulators": [
+              "ACE2",
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "SWI5",
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "ACE2",
+              "SWI5",
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 4,
+            "coefficient": 0.0625
+          }
+        ]
+      },
+      "HCM1": {
+        "regulators": [
+          "MBF",
+          "SBF"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "MBF",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "MBF": {
+        "regulators": [
+          "CLN3"
+        ],
+        "interactions": []
+      },
+      "SBF": {
+        "regulators": [
+          "CLN3",
+          "MBF",
+          "YHP1",
+          "YOX1"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "CLN3",
+              "MBF"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CLN3",
+              "YHP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "MBF",
+              "YHP1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CLN3",
+              "MBF",
+              "YHP1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CLN3",
+              "YOX1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "MBF",
+              "YOX1"
+            ],
+            "order": 2,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CLN3",
+              "MBF",
+              "YOX1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 2,
+            "coefficient": 0.1875
+          },
+          {
+            "regulators": [
+              "CLN3",
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "MBF",
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 3,
+            "coefficient": -0.0625
+          },
+          {
+            "regulators": [
+              "CLN3",
+              "MBF",
+              "YHP1",
+              "YOX1"
+            ],
+            "order": 4,
+            "coefficient": -0.0625
+          }
+        ]
+      },
+      "SFF": {
+        "regulators": [
+          "HCM1",
+          "SBF"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "HCM1",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      },
+      "SWI5": {
+        "regulators": [
+          "SFF"
+        ],
+        "interactions": []
+      },
+      "YHP1": {
+        "regulators": [
+          "MBF",
+          "SBF"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "MBF",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": -0.25
+          }
+        ]
+      },
+      "YOX1": {
+        "regulators": [
+          "MBF",
+          "SBF"
+        ],
+        "interactions": [
+          {
+            "regulators": [
+              "MBF",
+              "SBF"
+            ],
+            "order": 2,
+            "coefficient": 0.25
+          }
+        ]
+      }
+    },
+    "n_pairwise": 13,
+    "n_triples": 8,
+    "pairwise_strengths": {
+      "['ACE2', 'SWI5']": 0.0625,
+      "['ACE2', 'YHP1']": 0.0625,
+      "['SWI5', 'YHP1']": 0.0625,
+      "['ACE2', 'YOX1']": 0.0625,
+      "['SWI5', 'YOX1']": 0.0625,
+      "['YHP1', 'YOX1']": 0.25,
+      "['MBF', 'SBF']": 0.75,
+      "['CLN3', 'MBF']": 0.0625,
+      "['CLN3', 'YHP1']": 0.0625,
+      "['MBF', 'YHP1']": 0.0625,
+      "['CLN3', 'YOX1']": 0.0625,
+      "['MBF', 'YOX1']": 0.0625,
+      "['HCM1', 'SBF']": 0.25
+    },
+    "local_energy_spectrum": [
+      0.4735576923076923,
+      0.41346153846153844,
+      0.10096153846153846,
+      0.009615384615384616,
+      0.002403846153846154
+    ]
+  },
+  "convergence": {
+    "update_scheme": "sync",
+    "clamp_value": 0,
+    "total_simulations": 262144,
+    "total_fixed_point": 261092,
+    "total_cycling": 1052,
+    "cycling_fraction": 0.0040130615234375
+  },
+  "n_unique_values": 5,
+  "total_variance": 0.0002881455322494731,
+  "timestamp": "2026-07-28T16:55:21.544730+00:00"
+}
