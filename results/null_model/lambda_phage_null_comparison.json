@@ -1,0 +1,52 @@
+{
+  "model": "lambda_phage",
+  "n": 7,
+  "real_delta_o3plus": -2.497583344826681,
+  "null_types": {
+    "rule_preserving": {
+      "n_total": 10,
+      "n_gated": 10,
+      "n_degenerate": 0,
+      "n_zero_energy": 0,
+      "degenerate_rate": 0.0,
+      "all_mean": -3.2902690556539795,
+      "all_std": 1.543742766284265,
+      "all_creation_frac": 0.0,
+      "all_real_percentile": 70.0,
+      "gated_mean": -3.2902690556539795,
+      "gated_std": 1.543742766284265,
+      "gated_creation_frac": 0.0,
+      "gated_real_percentile": 70.0
+    },
+    "degree_preserving": {
+      "n_total": 10,
+      "n_gated": 10,
+      "n_degenerate": 0,
+      "n_zero_energy": 0,
+      "degenerate_rate": 0.0,
+      "all_mean": -6.559643394856108,
+      "all_std": 9.24083119329493,
+      "all_creation_frac": 0.2,
+      "all_real_percentile": 80.0,
+      "gated_mean": -6.559643394856108,
+      "gated_std": 9.24083119329493,
+      "gated_creation_frac": 0.2,
+      "gated_real_percentile": 80.0
+    },
+    "kauffman_nk": {
+      "n_total": 10,
+      "n_gated": 10,
+      "n_degenerate": 0,
+      "n_zero_energy": 0,
+      "degenerate_rate": 0.0,
+      "all_mean": -4.954221592342087,
+      "all_std": 8.986821400113353,
+      "all_creation_frac": 0.2,
+      "all_real_percentile": 70.0,
+      "gated_mean": -4.954221592342087,
+      "gated_std": 8.986821400113353,
+      "gated_creation_frac": 0.2,
+      "gated_real_percentile": 70.0
+    }
+  }
+}

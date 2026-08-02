@@ -1,0 +1,514 @@
+{
+  "faure_cellcycle": {
+    "rules": {
+      "CycD": "CycD",
+      "Cdc20": "CycB",
+      "CycA": "!cdh1&!Rb&E2F&!Cdc20 | !UbcH10&!Rb&E2F&!Cdc20 | !cdh1&!Rb&CycA&!Cdc20 | !UbcH10&!Rb&CycA&!Cdc20",
+      "CycB": "!cdh1&!Cdc20",
+      "CycE": "!Rb&E2F",
+      "E2F": "p27&!Rb&!CycB | !Rb&!CycB&!CycA",
+      "Rb": "!CycE&!CycD&!CycB&!CycA | p27&!CycD&!CycB",
+      "UbcH10": "UbcH10&CycB | UbcH10&CycA | UbcH10&Cdc20 | !cdh1",
+      "cdh1": "p27&!CycB | !CycB&!CycA | Cdc20",
+      "p27": "p27&!CycE&!CycD&!CycB | p27&!CycD&!CycB&!CycA | !CycE&!CycD&!CycB&!CycA"
+    },
+    "output_nodes": [
+      "CycB"
+    ],
+    "n": 10
+  },
+  "tournier_apoptosis": {
+    "rules": {
+      "TNF": "TNF",
+      "A20a": "TNF&NFkBnuc",
+      "C3a": "!IAP&C8a",
+      "C8a": "T2&!CARP | !CARP&C3a",
+      "CARP": "!TNF&NFkB | !TNF&!C3a | NFkBnuc&!C3a",
+      "FLIP": "NFkBnuc",
+      "IAP": "!TNF&NFkBnuc | !TNF&!C3a | NFkBnuc&!C3a",
+      "IKKa": "TNF&!C3a&!A20a",
+      "IkB": "!TNF&NFkBnuc | !TNF&!IKKa | NFkBnuc&!IKKa",
+      "NFkB": "!IkB",
+      "NFkBnuc": "NFkB&!IkB",
+      "T2": "TNF&!FLIP"
+    },
+    "output_nodes": [
+      "C3a"
+    ],
+    "n": 12
+  },
+  "davidich_yeast": {
+    "rules": {
+      "Start": "Start",
+      "SK": "Start",
+      "Cdc2_Cdc13": "!Ste9&!Rum1&!Slp1 | !Ste9&!Rum1&Cdc2_Cdc13_A",
+      "Ste9": "!SK&!Cdc2_Cdc13&!Cdc2_Cdc13_A | !SK&!Cdc2_Cdc13&PP | !Cdc2_Cdc13&!Cdc2_Cdc13_A&PP",
+      "Rum1": "!SK&!Cdc2_Cdc13&!Cdc2_Cdc13_A | !SK&!Cdc2_Cdc13&PP | !Cdc2_Cdc13&!Cdc2_Cdc13_A&PP",
+      "PP": "Slp1",
+      "Cdc25": "Cdc2_Cdc13 | Cdc2_Cdc13_A",
+      "Slp1": "Cdc2_Cdc13_A",
+      "Wee1_Mik1": "!Cdc2_Cdc13 & !Cdc2_Cdc13_A",
+      "Cdc2_Cdc13_A": "Cdc2_Cdc13&Cdc25&!Wee1_Mik1"
+    },
+    "output_nodes": [
+      "Cdc2_Cdc13"
+    ],
+    "n": 10
+  },
+  "drosophila_cellcycle": {
+    "rules": {
+      "Ago": "Ago",
+      "CycD": "CycD",
+      "Notch": "Notch",
+      "CycA": "!Rb&E2F&!Fzy&!Fzr",
+      "CycB": "!Fzy&!Fzr&!Wee1 | !Fzy&!Fzr&Wee1&Stg",
+      "CycE": "!Rb&E2F&!Dap | !Rb&E2F&Dap&!Ago",
+      "Dap": "!CycE&!Notch | CycE",
+      "E2F": "!Rb&!CycA&!Rux&!CycB | !Rb&!CycA&Rux | !Rb&CycA&Rux",
+      "Fzr": "!CycE&!CycA&!Rux&!CycB | !CycE&!CycA&Rux | !CycE&CycA&Rux | CycE&!CycA&!Rux&!CycB&Notch | CycE&!CycA&Rux&Notch | CycE&CycA&Rux&Notch",
+      "Fzy": "!Rux&CycB",
+      "Rb": "!CycD&!CycE&!CycA&!Rux&!CycB | !CycD&!CycE&!CycA&Rux | !CycD&!CycE&CycA&Rux",
+      "Rux": "!CycD&!CycA&!Rux&!CycB | !CycD&!CycA&Rux | !CycD&CycA&Rux&!CycB | CycD&!CycE&!CycA&!Rux&!CycB | CycD&!CycE&!CycA&Rux | CycD&!CycE&CycA&Rux&!CycB",
+      "Stg": "!Rb&!E2F&!Rux&CycB&!Notch | !Rb&E2F&!Notch | Rb&!Rux&CycB&!Notch",
+      "Wee1": "!Rux&!CycB | Rux"
+    },
+    "output_nodes": [
+      "CycB"
+    ],
+    "n": 14
+  },
+  "myeloid_progenitors": {
+    "rules": {
+      "CEBPA": "CEBPA & !(GATA1 & FOG1 & SCL)",
+      "EGR_NAB": "PU1 & JUN & !GFI1",
+      "EKLF": "GATA1 & !FLI1",
+      "FLI1": "GATA1 & !EKLF",
+      "FOG1": "GATA1",
+      "GATA1": "GATA1 | GATA2 | FLI1 & !PU1",
+      "GATA2": "GATA2 & !(GATA1 & FOG1) & !PU1",
+      "GFI1": "CEBPA & !EGR_NAB",
+      "JUN": "PU1 & !GFI1",
+      "PU1": "CEBPA | PU1 & !(GATA1 | GATA2)",
+      "SCL": "GATA1 & !PU1"
+    },
+    "output_nodes": [
+      "GATA1"
+    ],
+    "n": 11
+  },
+  "blood_stem_cell": {
+    "rules": {
+      "ERG": "(FLI1 | ERG | GATA2 | RUNX1) & !(SCL & ETO2)",
+      "ETO2": "SCL & GATA2",
+      "FLI1": "(FLI1 | GATA2 | ERG | GATA2&SCL) & !GATA1",
+      "GATA1": "SCL & GATA1 & !(PU1 & GATA1)",
+      "GATA2": "(FLI1 | ERG | SCL&GATA2) & !(GATA1&ZFPM1) & !(GATA2&HHEX)",
+      "HHEX": "FLI1 | ERG | SCL&GATA2",
+      "PU1": "(FLI1 | RUNX1 | PU1) & !(PU1 & GATA1)",
+      "RUNX1": "(PU1 | RUNX1 | FLI1 | ERG | GATA2&SCL) & !(RUNX1 & SMAD6)",
+      "SCL": "FLI1 | ERG | FLI1&GATA2 | SCL&GATA1 | GATA2&SCL",
+      "SMAD6": "ERG | FLI1 | SCL&GATA2",
+      "ZFPM1": "GATA2 & SCL"
+    },
+    "output_nodes": [
+      "GATA1"
+    ],
+    "n": 11
+  },
+  "emt_switch": {
+    "rules": {
+      "Ecadherin_mRNA": "!(ZEB1_H & ZEB1 & SNAI1 & SNAI2 & Twist)",
+      "LEF1": "ZEB1 & !miR_200 | ZEB1_H",
+      "N_bcatenin_H": "!miR_34 & !miR_200",
+      "SNAI1": "(ZEB1_H | ZEB1) & !miR_34 | ZEB1_H & ZEB1",
+      "SNAI2": "Twist & (SNAI2 | N_bcatenin_H & LEF1)",
+      "TGFb_secr": "b_catenin_TCF4 & !miR_200",
+      "Twist": "SNAI1 & !miR_34",
+      "ZEB1": "SNAI2 | b_catenin_TCF4 & !miR_200",
+      "ZEB1_H": "ZEB1 & N_bcatenin_H & LEF1 & (SNAI2 | !miR_200)",
+      "b_catenin_TCF4": "N_bcatenin_H & SNAI1 & SNAI2",
+      "miR_200": "!(Twist & ZEB1_H & SNAI1) & !(ZEB1 & !miR_200)",
+      "miR_34": "!SNAI1 | !(ZEB1 | ZEB1_H)"
+    },
+    "output_nodes": [
+      "Ecadherin_mRNA"
+    ],
+    "n": 12
+  },
+  "fanconi_anemia": {
+    "rules": {
+      "ADD": "(NUC1 | NUC2 | NUC1&NUC2) & !TLS",
+      "ATM": "(ATR | DSB) & !(FAcore | CHKREC)",
+      "ATR": "(ICL | ATM) & !CHKREC",
+      "CHKREC": "(TLS&!DSB | HRR2&!DSB | FAHRR&!DSB | NHEJ&!DSB) | !(ICL|NHEJ|FAHRR|ADD|CHKREC|DSB|HRR2|TLS)",
+      "DSB": "(NUC1 | NUC2) & !(FAHRR | HRR2 | NHEJ)",
+      "FAHRR": "FANCD2I & DSB & !(NHEJ & CHKREC)",
+      "FANCD2I": "FAcore & (DSB&(ATM|ATR) | ATM | ATR) & !CHKREC",
+      "FAcore": "ICL & (ATM | ATR) & !CHKREC",
+      "HRR2": "TLS&NUC2&DSB & !(NHEJ|CHKREC|FAHRR) | NUC2&ICL&NHEJ&DSB & !(CHKREC|FAHRR)",
+      "ICL": "ICL & !DSB",
+      "NHEJ": "NUC2 & DSB & !(HRR2 | FAHRR | CHKREC)",
+      "NUC1": "FANCD2I & ICL",
+      "NUC2": "ICL&(ATM|ATR) & !(FAcore&FANCD2I) | NUC1&ICL&p53 & !(FAcore&FANCD2I)",
+      "TLS": "(FAcore&ADD | ADD) & !CHKREC",
+      "p53": "(NHEJ | ATM | ATR) & !CHKREC"
+    },
+    "output_nodes": [
+      "CHKREC"
+    ],
+    "n": 15
+  },
+  "arabidopsis_cellcycle": {
+    "rules": {
+      "APC_C": "(E2Fa & !(E2Fe | RBR)) | (MYB3R1_4 & !E2Fe) | (MYB77 & !E2Fe)",
+      "CDKB1_1": "MYB77 | (E2Fb & (!RBR | CYCD3_1 & !KRP1) & !E2Fc) | MYB3R1_4",
+      "CYCA2_3": "(MYB77 | MYB3R1_4) & !APC_C",
+      "CYCB1_1": "(MYB77 & !APC_C) | (E2Fb & (!RBR | CYCD3_1 & !KRP1) & !(E2Fc | APC_C)) | (MYB3R1_4 & !APC_C)",
+      "CYCD3_1": "!SCF",
+      "E2Fa": "(CYCA2_3 & !E2Fc & !CDKB1_1 & !E2Fa) | (E2Fa & !(CDKB1_1 & CYCA2_3)) | (CDKB1_1 & !E2Fc & !CYCA2_3 & !E2Fa) | !(E2Fc | CYCA2_3 | CDKB1_1 | E2Fa)",
+      "E2Fb": "E2Fa & !RBR",
+      "E2Fc": "(MYB3R1_4 & !(SCF & CYCD3_1 & !KRP1)) | (E2Fa & !(SCF & CYCD3_1 & !KRP1 | RBR))",
+      "E2Fe": "((((((((((((((((((CYCD3_1 & ((((!E2Fc & !MYB77) & !E2Fb) & !RBR) & !KRP1)) | ((CYCD3_1 & (E2Fb & RBR)) & ((!E2Fc & !MYB77) & !KRP1))) | ((CYCD3_1 & ((E2Fb & RBR) & KRP1)) & (!E2Fc & !MYB77))) | ((E2Fb & (E2Fc & KRP1)) & ((!MYB77 & !CYCD3_1) & !RBR))) | ((E2Fb & KRP1) & (((!E2Fc & !MYB77) & !CYCD3_1) & !RBR))) | ((E2Fb & RBR) & (((!E2Fc & !MYB77) & !CYCD3_1) & !KRP1))) | (RBR & ((((!E2Fc & !MYB77) & !E2Fb) & !CYCD3_1) & !KRP1))) | (E2Fb & ((((!E2Fc & !MYB77) & !CYCD3_1) & !RBR) & !KRP1))) | MYB77) | ((CYCD3_1 & (RBR & KRP1)) & ((!E2Fc & !MYB77) & !E2Fb))) | (E2Fb & (!RBR | (!KRP1 & CYCD3_1)))) | ((E2Fb & (RBR & KRP1)) & ((!E2Fc & !MYB77) & !CYCD3_1))) | ((CYCD3_1 & KRP1) & (((!E2Fc & !MYB77) & !E2Fb) & !RBR))) | ((CYCD3_1 & (E2Fb & KRP1)) & ((!E2Fc & !MYB77) & !RBR))) | ((RBR & KRP1) & (((!E2Fc & !MYB77) & !E2Fb) & !CYCD3_1))) | ((CYCD3_1 & RBR) & (((!E2Fc & !MYB77) & !E2Fb) & !KRP1))) | (KRP1 & ((((!E2Fc & !MYB77) & !E2Fb) & !CYCD3_1) & !RBR))) | !(((((E2Fc | MYB77) | E2Fb) | CYCD3_1) | RBR) | KRP1))",
+      "KRP1": "(MYB77 | MYB3R1_4) & !(CDKB1_1 & CYCA2_3 & SCF)",
+      "MYB3R1_4": "MYB77 | (MYB3R1_4 & CYCB1_1 & !KRP1)",
+      "MYB77": "E2Fb & (CYCD3_1 & !KRP1 | !RBR)",
+      "RBR": "(MYB3R1_4 & (KRP1 | !CYCD3_1)) | (E2Fa & (KRP1 | !CYCD3_1) & !(RBR & (!CYCD3_1 | KRP1)))",
+      "SCF": "(MYB3R1_4 & !APC_C) | (E2Fb & (!RBR | CYCD3_1 & !KRP1) & !APC_C)"
+    },
+    "output_nodes": [
+      "CYCB1_1"
+    ],
+    "n": 14
+  },
+  "li_budding_yeast": {
+    "rules": {
+      "Cln3": "Cln3",
+      "MBF": "!Clb1_2 & (Cln3 | MBF & !Clb1_2 & !Cln3) & !MBF",
+      "SBF": "!Clb1_2 & (Cln3 | SBF & !Clb1_2 & !Cln3) & !MBF",
+      "Cln1_2": "SBF",
+      "Cdh1": "!Cln1_2 & !Clb1_2 & !Clb5_6 | Cdc20",
+      "Swi5": "!Clb1_2 & (Cdc20 | Mcm1)",
+      "Cdc20": "Clb1_2 & Mcm1",
+      "Clb5_6": "MBF & !(Cdc20 | Cdh1)",
+      "Sic1": "!Cln1_2 & !Clb1_2 & !Clb5_6 | Cdc20 | Swi5",
+      "Clb1_2": "!(Sic1 | Cdc20 | Cdh1) & (Clb5_6 | Clb1_2 | Mcm1)",
+      "Mcm1": "Clb1_2"
+    },
+    "output_nodes": [
+      "Clb1_2"
+    ],
+    "n": 11
+  },
+  "mendoza_thelper": {
+    "rules": {
+      "APC": "APC",
+      "IFNg_e": "IFNg_e",
+      "IL12_e": "IL12_e",
+      "IFNg": "T_bet & !GATA3 | IFNg_e & !GATA3 | STAT1 & !GATA3",
+      "IFNgR": "IFNg & !SOCS1",
+      "IL12R": "IL12_e & !GATA3 | T_bet & !GATA3",
+      "IL4": "GATA3 & !T_bet",
+      "IL4R": "IL4 & !SOCS1",
+      "STAT1": "IFNgR",
+      "STAT6": "IL4R",
+      "SOCS1": "STAT1 | T_bet",
+      "T_bet": "STAT1 & !GATA3 | T_bet & !GATA3",
+      "GATA3": "STAT6 & !T_bet | GATA3 & !T_bet"
+    },
+    "output_nodes": [
+      "GATA3"
+    ],
+    "n": 13
+  },
+  "albert_segment_polarity": {
+    "rules": {
+      "SLP": "SLP",
+      "WG": "WG",
+      "wg": "CIA & !CIR & SLP | wg & CIA & !CIR",
+      "WG_ext": "WG",
+      "en": "WG_ext & !SLP",
+      "EN": "en",
+      "hh": "EN & !CIR",
+      "HH_ext": "hh",
+      "PTC": "!EN & !HH_ext | PTC & !EN & !HH_ext",
+      "CIA": "!PTC | HH_ext",
+      "CIR": "PTC & !HH_ext"
+    },
+    "output_nodes": [
+      "wg"
+    ],
+    "n": 11
+  },
+  "irons_cardiac": {
+    "rules": {
+      "BMP2": "!Noggin & Smad",
+      "Dkk1": "BMP2 & !Wnt",
+      "FGF8": "!BMP2 & Nkx2_5 | Wnt & Nkx2_5",
+      "Gata4": "BMP2 & Nkx2_5 | Gata4 & Nkx2_5",
+      "HAS2": "BMP2 & !FGF8",
+      "Hex": "BMP2 | Wnt",
+      "Mesp1": "Wnt & !Hex | BMP2 & !Hex",
+      "Nkx2_5": "Gata4 | BMP2 & Smad | Mesp1",
+      "Noggin": "BMP2 & Smad",
+      "Smad": "BMP2 & !Noggin",
+      "Snail": "BMP2 & !FGF8 | Wnt & !FGF8",
+      "Tbx5": "Nkx2_5 & Gata4",
+      "Wnt": "!Dkk1 & Mesp1 | !Dkk1 & Wnt",
+      "bCatenin": "Wnt",
+      "eHand": "Nkx2_5 & !Hex & Gata4"
+    },
+    "output_nodes": [
+      "Nkx2_5"
+    ],
+    "n": 15
+  },
+  "zanudo_tlgl": {
+    "rules": {
+      "Stimuli": "Stimuli",
+      "PDGFR": "Stimuli | S1P",
+      "S1P": "PDGFR & !Ceramide",
+      "Ceramide": "Fas & !S1P",
+      "Fas": "!S1P & Ceramide | !sFas",
+      "sFas": "NFkB",
+      "DISC": "Fas & !FLIP",
+      "FLIP": "NFkB",
+      "Caspase": "DISC & !IAP",
+      "IAP": "NFkB",
+      "NFkB": "Stimuli",
+      "Apoptosis": "Caspase"
+    },
+    "output_nodes": [
+      "Apoptosis"
+    ],
+    "n": 12
+  },
+  "remy_p53_mdm2": {
+    "rules": {
+      "DNAdam": "DNAdam",
+      "ATM": "DNAdam & !p53",
+      "p53": "!Mdm2cyt & (ATM | p53 | p21)",
+      "Mdm2cyt": "p53 & !ATM",
+      "Mdm2nuc": "Mdm2cyt & !ATM",
+      "p21": "p53 & !Mdm2nuc",
+      "CycE": "!p21 & !Rb",
+      "Rb": "!CycE & !CycE",
+      "E2F1": "!Rb & !CycE",
+      "Caspase3": "p53 & !Mdm2nuc & CycE"
+    },
+    "output_nodes": [
+      "p53"
+    ],
+    "n": 10
+  },
+  "fumia_cellcycle": {
+    "rules": {
+      "GF": "GF",
+      "CycD": "GF & !p21 & !p27",
+      "CycE": "E2F & !p21 & !p27 & !Rb",
+      "CycA": "E2F & !Cdc20 & !Rb & !cdh1 & !p21",
+      "CycB": "!Cdc20 & !cdh1 & !p21 & CycA",
+      "Rb": "!CycD & !CycE & !CycA & !CycB | p27 & !CycD & !CycB",
+      "E2F": "!Rb & !CycB & !CycA | p27 & !Rb & !CycB",
+      "p21": "!CycE & !CycA & !CycB & p53",
+      "p27": "!CycE & !CycA & !CycB & !CycD",
+      "p53": "!Mdm2 | !AKT",
+      "AKT": "GF",
+      "Mdm2": "p53 & AKT | p53 & !p21",
+      "Cdc20": "CycB",
+      "cdh1": "!CycA & !CycB | Cdc20 | p21"
+    },
+    "output_nodes": [
+      "CycB"
+    ],
+    "n": 14
+  },
+  "lambda_phage": {
+    "rules": {
+      "CII": "!CI_b1 & !Cro_b1 & N | !CI_b1 & Cro_b1 & !Cro_b2 & N | !CI_b1 & Cro_b1 & Cro_b2 & !Cro_b3 & N | CI_b1 & !CI_b2 & !Cro_b1 & N | CI_b1 & !CI_b2 & Cro_b1 & !Cro_b2 & N | CI_b1 & !CI_b2 & Cro_b1 & Cro_b2 & !Cro_b3 & N",
+      "CI_b1": "!CI_b1 & !Cro_b1 | !CI_b1 & Cro_b1 & CII | CI_b1 & !CI_b2 & !Cro_b1 | CI_b1 & !CI_b2 & Cro_b1 & CII | CI_b1 & CI_b2",
+      "CI_b2": "CI_b1 & !Cro_b1 | CI_b1 & Cro_b1 & CII",
+      "Cro_b1": "!CI_b1 | CI_b1 & !CI_b2 | CI_b1 & CI_b2 & Cro_b1 & Cro_b2",
+      "Cro_b2": "!CI_b1 & Cro_b1 | CI_b1 & !CI_b2 & Cro_b1 | CI_b1 & CI_b2 & Cro_b1 & Cro_b2 & Cro_b3",
+      "Cro_b3": "!CI_b1 & Cro_b1 & Cro_b2 & !Cro_b3 | CI_b1 & !CI_b2 & Cro_b1 & Cro_b2 & !Cro_b3",
+      "N": "!CI_b1 & !Cro_b1 | !CI_b1 & Cro_b1 & !Cro_b2"
+    },
+    "output_nodes": [
+      "CI_b1"
+    ],
+    "n": 7
+  },
+  "cell_cycle_transcription": {
+    "rules": {
+      "ACE2": "SFF",
+      "CLN3": "SWI5 & ACE2 & !YOX1 & !YHP1",
+      "HCM1": "MBF & SBF",
+      "MBF": "CLN3",
+      "SBF": "MBF & !YHP1 & !YOX1 | CLN3 & !YHP1 & !YOX1",
+      "SFF": "SBF & HCM1",
+      "SWI5": "SFF",
+      "YHP1": "SBF | MBF",
+      "YOX1": "MBF & SBF"
+    },
+    "output_nodes": [
+      "SFF"
+    ],
+    "n": 9
+  },
+  "asymmetric_cell_division": {
+    "rules": {
+      "CckA": "DivL",
+      "ChpT": "CckA",
+      "ClpXP_RcdA": "!CpdR",
+      "CpdR": "ChpT",
+      "CtrAb": "ChpT & !ClpXP_RcdA",
+      "DivJ": "DivK & !PleC",
+      "DivK": "!PleC & DivJ",
+      "DivL": "!DivK",
+      "PleC": "!DivK"
+    },
+    "output_nodes": [
+      "CtrAb"
+    ],
+    "n": 9
+  },
+  "arellano_rootstem": {
+    "rules": {
+      "AUXINS": "AUXINS",
+      "SHR": "SHR",
+      "ARF": "!IAA",
+      "IAA": "!AUXINS",
+      "JKD": "SHR & SCR",
+      "MGP": "!WOX & SHR & SCR",
+      "SCR": "SHR & SCR & !MGP | SHR & SCR & JKD",
+      "WOX": "WOX & SHR & SCR & ARF | SHR & SCR & !MGP & ARF",
+      "PLT": "ARF"
+    },
+    "output_nodes": [
+      "WOX"
+    ],
+    "n": 9
+  },
+  "pair_rule_module": {
+    "rules": {
+      "Eve_b1": "!Eve_b1 & Prd_b1 & !Slp & !Odd | Eve_b1 & !Eve_b2 & !Run & !Slp | Eve_b1 & !Eve_b2 & Run & !Slp & !Odd | Eve_b1 & Eve_b2",
+      "Eve_b2": "Eve_b1 & !Eve_b2 & Prd_b1 & !Run & !Slp & !Odd | Eve_b1 & Eve_b2 & !Eve_b3 & Prd_b1 & !Run & !Slp & !Odd | Eve_b1 & Eve_b2 & Eve_b3",
+      "Eve_b3": "Eve_b1 & Eve_b2 & Prd_b1 & !Run & !Slp & !Odd",
+      "Ftz_b1": "!Eve_b1 & !Slp & !Ftz_b1 & !Odd | !Eve_b1 & !Slp & Ftz_b1 & !Ftz_b2 & !Odd | !Eve_b1 & !Slp & Ftz_b1 & Ftz_b2 | !Eve_b1 & Slp & Ftz_b1 & Ftz_b2 | Eve_b1 & !Eve_b2 & !Slp & !Ftz_b1 & !Odd | Eve_b1 & !Eve_b2 & !Slp & Ftz_b1 & !Ftz_b2 & !Odd | Eve_b1 & !Eve_b2 & !Slp & Ftz_b1 & Ftz_b2 | Eve_b1 & !Eve_b2 & Slp & Ftz_b1 & Ftz_b2 | Eve_b1 & Eve_b2 & Ftz_b1 & Ftz_b2",
+      "Ftz_b2": "!Eve_b1 & !Slp & Ftz_b1 & !Odd | Eve_b1 & !Eve_b2 & !Slp & Ftz_b1 & !Odd",
+      "Odd": "!Eve_b1 & !Prd_b1",
+      "Ppa": "!Eve_b1 | Eve_b1 & !Eve_b2",
+      "Prd_b1": "!Prd_b1 & !Odd | Prd_b1 & !Prd_b2 & !Odd | Prd_b1 & Prd_b2",
+      "Prd_b2": "Prd_b1 & !Ppa & !Odd",
+      "Run": "!Eve_b1 & Prd_b1 & !Odd | Eve_b1 & !Eve_b2 & Prd_b1 & !Odd",
+      "Slp": "!Eve_b1 & !Ftz_b1 & !Odd | Eve_b1 & !Eve_b2 & !Ftz_b1 & !Odd"
+    },
+    "output_nodes": [
+      "Eve_b1"
+    ],
+    "n": 11
+  },
+  "calzone_cellfate_reduced": {
+    "rules": {
+      "TNF": "TNF",
+      "FAS": "FAS",
+      "RIP1": "!C8 & TNF | !C8 & FAS",
+      "NFkB": "cIAP & RIP1 & !C3",
+      "C8": "TNF & !NFkB | FAS & !NFkB | C3 & !NFkB",
+      "cIAP": "NFkB & !MOMP | cIAP & !MOMP",
+      "ATP": "!MPT",
+      "C3": "ATP & MOMP & !NFkB",
+      "ROS": "!NFkB & RIP1 | !NFkB & MPT",
+      "MOMP": "MPT | C8 & !NFkB",
+      "MPT": "ROS & !NFkB"
+    },
+    "output_nodes": [
+      "C3"
+    ],
+    "n": 11
+  },
+  "saadatpour_guardcell": {
+    "rules": {
+      "ADPRc": "NO",
+      "CIS": "cGMP & cADPR | InsP3",
+      "Ca2": "!Ca2ATP & CIS",
+      "Ca2ATP": "Ca2",
+      "GC": "NO",
+      "InsP3": "PLC",
+      "NO": "NOS",
+      "NOS": "Ca2",
+      "PLC": "Ca2",
+      "cADPR": "ADPRc",
+      "cGMP": "GC",
+      "KAP": "!Ca2",
+      "KEV": "Ca2"
+    },
+    "output_nodes": [
+      "KEV"
+    ],
+    "n": 13
+  },
+  "morphogenetic_checkpoint": {
+    "rules": {
+      "MASS_b1": "MASS_b1",
+      "BUD": "MASS_b1",
+      "Clb2_b1": "!Clb2_b1 & MASS_b1 | Clb2_b1 & !Clb2_b2 & MASS_b1 | Clb2_b1 & Clb2_b2",
+      "Clb2_b2": "!Swe1_b1 & Clb2_b1 & MASS_b1 | Swe1_b1 & !Swe1_b2 & !Mih1_b1 & Clb2_b1 & MASS_b1 & MASS_b2 | Swe1_b1 & !Swe1_b2 & Mih1_b1 & !Mih1_b2 & Clb2_b1 & MASS_b1 & MASS_b2 | Swe1_b1 & !Swe1_b2 & Mih1_b1 & Mih1_b2 & Clb2_b1 & MASS_b1 | Swe1_b1 & Swe1_b2 & Mih1_b1 & !Mih1_b2 & Clb2_b1 & MASS_b1 & MASS_b2 | Swe1_b1 & Swe1_b2 & Mih1_b1 & Mih1_b2 & Clb2_b1 & MASS_b1",
+      "Hsl1": "BUD",
+      "MASS_b2": "MASS_b1 & MASS_b2",
+      "Mih1_b1": "!Mih1_b1 & !Clb2_b1 & !Mpk1 | !Mih1_b1 & Clb2_b1 | Mih1_b1 & !Mih1_b2 & !Clb2_b1 & !Mpk1 | Mih1_b1 & !Mih1_b2 & Clb2_b1 | Mih1_b1 & Mih1_b2",
+      "Mih1_b2": "Mih1_b1 & Clb2_b1 & !Mpk1",
+      "Mpk1": "!BUD",
+      "SBF": "!Clb2_b1 & MASS_b1 | Clb2_b1 & !Clb2_b2 & MASS_b1",
+      "Swe1_b1": "!SBF & Swe1_b1 & Swe1_b2 | SBF & !Swe1_b1 & !Clb2_b1 | SBF & !Swe1_b1 & Clb2_b1 & !Clb2_b2 | SBF & !Swe1_b1 & Clb2_b1 & Clb2_b2 & !Hsl1 | SBF & Swe1_b1 & !Swe1_b2 & !Clb2_b1 | SBF & Swe1_b1 & !Swe1_b2 & Clb2_b1 & !Clb2_b2 | SBF & Swe1_b1 & !Swe1_b2 & Clb2_b1 & Clb2_b2 & !Hsl1 | SBF & Swe1_b1 & Swe1_b2",
+      "Swe1_b2": "SBF & Swe1_b1 & !Clb2_b1 & !Hsl1 | SBF & Swe1_b1 & Clb2_b1 & !Clb2_b2 & !Hsl1"
+    },
+    "output_nodes": [
+      "Clb2_b2"
+    ],
+    "n": 12
+  },
+  "lac_operon": {
+    "rules": {
+      "Ge": "Ge",
+      "Le": "Le",
+      "Lem": "Lem",
+      "A": "L & B",
+      "Am": "Lm | L",
+      "B": "M",
+      "C": "!Ge",
+      "L": "Le & P & !Ge",
+      "Lm": "Lem & P & !Ge | Le & !Ge",
+      "M": "C & !R & !Rm",
+      "P": "M",
+      "R": "!Am & !A",
+      "Rm": "R | !R & !Am & !A"
+    },
+    "output_nodes": [
+      "P"
+    ],
+    "n": 13
+  },
+  "hematopoiesis_aging": {
+    "rules": {
+      "Bclaf1": "Myc",
+      "CDK46CycD": "Bclaf1 | Myc",
+      "CIPKIP": "Junb",
+      "Cebpa": "Gata2 & !Ikzf1 | Spi1 & !Ikzf1",
+      "Egr1": "Gata2 & Junb",
+      "Fli1": "Junb | Gata1 & !Klf1",
+      "Gata1": "Fli1 | Gata2 & !Spi1 | Gata1 & !Ikzf1 & !Spi1",
+      "Gata2": "Gata2 & !Gata1 & !Zfpm1 | Egr1 & !Gata1 & !Zfpm1 & !Spi1",
+      "Ikzf1": "Gata2",
+      "Junb": "Egr1 | Myc",
+      "Klf1": "Gata1 & !Fli1",
+      "Myc": "Cebpa & Bclaf1",
+      "Spi1": "Spi1 & !Gata1 | Cebpa & !Gata1 & !Gata2",
+      "Tal1": "Gata1 & !Spi1",
+      "Zfpm1": "Gata1"
+    },
+    "output_nodes": [
+      "Gata1"
+    ],
+    "n": 15
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "model": "hematopoiesis_aging",
+  "null_type": "degree_preserving",
+  "n_completed": 5,
+  "n_requested": 10,
+  "n_valid": 5,
+  "n_gated": 5,
+  "n_degenerate": 0,
+  "n_zero_energy": 0,
+  "degenerate_rate": 0.0,
+  "timestamp": "2026-07-29T18:45:58.101513+00:00",
+  "all_mean": 10.18628823219927,
+  "all_std": 6.939152699872296,
+  "all_median": 10.677417600837819,
+  "all_creation_frac": 0.8,
+  "all_destruction_frac": 0.2,
+  "all_deltas": [
+    20.709053970709128,
+    11.888821799077283,
+    -0.9696857100506184,
+    8.625833500422742,
+    10.677417600837819
+  ],
+  "gated_mean": 10.18628823219927,
+  "gated_std": 6.939152699872296,
+  "gated_median": 10.677417600837819,
+  "gated_creation_frac": 0.8,
+  "gated_destruction_frac": 0.2,
+  "gated_deltas": [
+    20.709053970709128,
+    11.888821799077283,
+    -0.9696857100506184,
+    8.625833500422742,
+    10.677417600837819
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-07-29T16:32:29.561139+00:00",
+  "max_n": 11,
+  "n_nulls": 3,
+  "n_init": 64,
+  "n_models": 1,
+  "models": {
+    "cell_cycle_transcription": {
+      "model": "cell_cycle_transcription",
+      "n": 9,
+      "real_delta_o3plus": 83.25216693666142,
+      "null_types": {
+        "rule_preserving": {
+          "n_total": 0,
+          "n_gated": 0,
+          "n_degenerate": 0,
+          "n_zero_energy": 3,
+          "degenerate_rate": 0.0
+        },
+        "degree_preserving": {
+          "n_total": 3,
+          "n_gated": 2,
+          "n_degenerate": 1,
+          "n_zero_energy": 0,
+          "degenerate_rate": 0.3333333333333333,
+          "all_mean": 15.153013209389613,
+          "all_std": 16.800142874288053,
+          "all_creation_frac": 1.0,
+          "all_real_percentile": 100.0,
+          "gated_mean": 22.186365052179656,
+          "gated_std": 16.582010929356645,
+          "gated_creation_frac": 1.0,
+          "gated_real_percentile": 100.0
+        },
+        "kauffman_nk": {
+          "n_total": 3,
+          "n_gated": 2,
+          "n_degenerate": 1,
+          "n_zero_energy": 0,
+          "degenerate_rate": 0.3333333333333333,
+          "all_mean": 1.9853284146362897,
+          "all_std": 2.7348804841838583,
+          "all_creation_frac": 0.3333333333333333,
+          "all_real_percentile": 100.0,
+          "gated_mean": 2.9779926219544346,
+          "gated_std": 2.874580005615241,
+          "gated_creation_frac": 0.5,
+          "gated_real_percentile": 100.0
+        }
+      }
+    }
+  }
+}
