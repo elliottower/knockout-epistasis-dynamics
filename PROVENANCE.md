@@ -25,7 +25,25 @@ The four groups differ, and conflating them would overstate three of them.
 | `paper/prereg_extensions_v2.md` | `55cba8a` | 2026-07-28 |
 
 These are ordinary pre-registrations. Git proves they existed before the work
-they govern.
+they govern, and one of them is additionally hash-frozen.
+
+**`prereg_shapiq_freeze_record.md` is a cryptographic freeze, and it verifies
+today.** It was committed in `9e070ab` (the first commit) and records the
+SHA-256 of `prereg_shapiq_budget_sweep_v2.md` together with version pins
+(shapiq 1.6.0, numpy 2.2.6, scipy 1.15.3, scikit-learn 1.6.1) and verification
+instructions:
+
+```
+recorded  2caaffff9590e906305eb4fc2c6ee1e8a797fcfec31d4bc86f6b7782b985a976
+actual    2caaffff9590e906305eb4fc2c6ee1e8a797fcfec31d4bc86f6b7782b985a976
+```
+
+Anyone can re-run `sha256sum prereg_shapiq_budget_sweep_v2.md` and check it
+against the hash in a commit that predates the analysis.
+
+The `prereg_grn_*` documents carry no self-hash; their freeze is the git commit
+itself, which is equivalent in force -- a commit hash covers its contents -- and
+their commits also predate the analyses they govern.
 
 **The blinding protocol is in this group.** `scripts/blind_prereg_brief.md` --
 the brief instructing the predicting agent that it "has NOT seen any

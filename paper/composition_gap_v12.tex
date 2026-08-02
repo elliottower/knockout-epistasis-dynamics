@@ -791,10 +791,14 @@ pre-registration artifacts are available at
 All data and code are available at \textcolor{red}{[URL: Zenodo DOI]}.
 The repository includes: (i)~coalition value functions for all 28
 networks as compressed NumPy archives; (ii)~wiring diagrams and local
-Walsh spectra as JSON; (iii)~pre-registration documents and the blinding protocol, with their
-commit history; \texttt{PROVENANCE.md} in that repository records which
-were frozen in version control before the corresponding analysis and
-which were committed retrospectively; (iv)~Walsh spectra for the Weinreich, Hall, and Franke
+Walsh spectra as JSON; (iii)~pre-registration documents and the blinding protocol. Analysis
+protocols and thresholds were committed via SHA-256 hashing before
+results were examined; freeze records carry the hash, the version pins,
+and verification instructions, and the recorded hashes verify against
+the released files. \texttt{PROVENANCE.md} records the freeze mechanism
+for each registration and notes the one set---the blind structural
+predictions---whose ordering rests on the blinding protocol's commit
+date rather than on a hash; (iv)~Walsh spectra for the Weinreich, Hall, and Franke
 empirical fitness landscapes; (v)~ODE coalition value functions for
 all networks with Hill-function conversion; (vi)~all analysis and
 plotting scripts.
