@@ -1,0 +1,129 @@
+{
+  "prereg": "prereg_direct_topology_fit_v1.md",
+  "prereg_commit": "05b33a9",
+  "n_networks": 27,
+  "features": [
+    "cycles_neg",
+    "cycles_pos",
+    "cycles_total",
+    "edge_density",
+    "frac_nonlinear",
+    "indeg_max",
+    "indeg_mean",
+    "indeg_var",
+    "n_nodes",
+    "n_pairwise_terms",
+    "n_triple_terms",
+    "rule_inter_max",
+    "rule_inter_mean",
+    "rule_reg_mean"
+  ],
+  "cv_r2_loo": -0.2726732122751163,
+  "spearman": {
+    "cycles_neg": {
+      "rho": -0.31801610162463523,
+      "p_raw": 0.10597469013119375,
+      "p_holm": 0.43603691491946456
+    },
+    "cycles_pos": {
+      "rho": -0.5713458876168583,
+      "p_raw": 0.0018525068211296088,
+      "p_holm": 0.024082588674684914
+    },
+    "cycles_total": {
+      "rho": -0.5210884089410959,
+      "p_raw": 0.0053188464608991785,
+      "p_holm": 0.053188464608991785
+    },
+    "edge_density": {
+      "rho": -0.452991452991453,
+      "p_raw": 0.01765371534046113,
+      "p_holm": 0.14122972272368903
+    },
+    "frac_nonlinear": {
+      "rho": -0.6553353112667991,
+      "p_raw": 0.00020717950370593814,
+      "p_holm": 0.002900513051883134
+    },
+    "indeg_max": {
+      "rho": -0.3354094100247216,
+      "p_raw": 0.08720738298389291,
+      "p_holm": 0.43603691491946456
+    },
+    "indeg_mean": {
+      "rho": -0.5541138822000172,
+      "p_raw": 0.0027090880241835602,
+      "p_holm": 0.032509056290202724
+    },
+    "indeg_var": {
+      "rho": -0.14285714285714285,
+      "p_raw": 0.477182590739165,
+      "p_holm": 0.95436518147833
+    },
+    "n_nodes": {
+      "rho": -0.017882815432144324,
+      "p_raw": 0.9294540660038302,
+      "p_holm": 0.95436518147833
+    },
+    "n_pairwise_terms": {
+      "rho": -0.3256387420805551,
+      "p_raw": 0.09741152174962874,
+      "p_holm": 0.43603691491946456
+    },
+    "n_triple_terms": {
+      "rho": -0.4199912272156235,
+      "p_raw": 0.0291783600490937,
+      "p_holm": 0.20424852034365593
+    },
+    "rule_inter_max": {
+      "rho": -0.4130813568269539,
+      "p_raw": 0.03222904937766335,
+      "p_holm": 0.20424852034365593
+    },
+    "rule_inter_mean": {
+      "rho": -0.4627594627594628,
+      "p_raw": 0.015074259403028353,
+      "p_holm": 0.1356683346272552
+    },
+    "rule_reg_mean": {
+      "rho": -0.5361832311023015,
+      "p_raw": 0.003940264278787012,
+      "p_holm": 0.04334290706665714
+    }
+  },
+  "gap_by_model": {
+    "albert_segment_polarity": 0.4896115089852109,
+    "arabidopsis_cellcycle": 0.5183177235517855,
+    "arellano_rootstem": 0.7362010981679484,
+    "asymmetric_cell_division": 0.7123317503990412,
+    "blood_stem_cell": 0.25077935433903603,
+    "calzone_cell_fate": 0.7358217090172874,
+    "calzone_cellfate_reduced": 0.6243136950574645,
+    "cell_cycle_transcription": 0.8475147974977886,
+    "davidich_yeast": -0.02054464989383789,
+    "drosophila_cellcycle": 0.17034793327129777,
+    "emt_switch": -0.14277685702912718,
+    "fanconi_anemia": -0.2009785454246505,
+    "faure_cellcycle": -0.0035712900616546306,
+    "fumia_cellcycle": 0.693722222607618,
+    "hematopoiesis_aging": 0.027862852672431493,
+    "irons_cardiac": 0.18929147323602868,
+    "lac_operon": 0.7068838167117547,
+    "lambda_phage": 0.02210666417758214,
+    "li_budding_yeast": 0.19288040616526136,
+    "mendoza_thelper": 0.004607502796444979,
+    "morphogenetic_checkpoint": 0.40871758587916984,
+    "myeloid_progenitors": -0.1393462603441156,
+    "pair_rule_module": -0.019063597071072136,
+    "remy_p53_mdm2": 0.07646073359596786,
+    "saadatpour_guardcell": 0.7969312670502355,
+    "tournier_apoptosis": 0.30976617791803895,
+    "zanudo_tlgl": 0.6305983271265916
+  },
+  "verdicts": {
+    "H1": true,
+    "H2": false,
+    "H3_falsifier_fires": false,
+    "H4": true
+  }
+}
