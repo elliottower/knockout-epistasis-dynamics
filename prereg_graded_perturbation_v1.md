@@ -152,3 +152,44 @@ reproduction endpoints.
 H1, H2, H3 and H5 stand as written. H4 is now well-posed rather than
 unphysical, and its prediction -- that the creation/destruction ratio flips at
 some $f^\ast$, with the location reported -- is unchanged.
+
+---
+
+# Amendment 2 — before anything ran
+
+Two corrections to Amendment 1, both from checking the committed data rather
+than from any result.
+
+## A2.1 The reproduction gate named the wrong files
+
+A1.3 required $f = 0$ to reproduce `*_composition_blind.json` and $f = 1$ to
+reproduce `*_composition_clamp1.json`. **Those are Boolean sweeps.** The graded
+arm runs on the ODE path (A1.1), so Boolean outputs are not the right
+comparison.
+
+Corrected gate:
+
+- **$f = 0$ must reproduce `results/ode_full/<model>_ode.json`**, field
+  `ode_global_o3plus`, for the networks where that file exists. Verified to
+  agree within Monte-Carlo tolerance over the 32 shared initial conditions
+  (`seed = 42`, identical ODE parameters).
+- **$f = 1$ has no published ODE counterpart.** The paper's ODE arm is
+  loss-of-function only; `clamp1` exists for the Boolean sweep alone. The
+  gain-of-function endpoint is therefore a **new measurement, not a check**, and
+  must not be described as a reproduction.
+
+## A2.2 Scope is set by compute, and the restriction is declared now
+
+A single ODE sweep of the smallest network (7 players, 128 coalitions, 32
+initial conditions = 4,096 RK45 integrations) exceeds ten minutes on one local
+core. Cost scales as $2^{n} \times n_{\text{init}}$, so the largest networks are
+out of reach at five perturbation levels.
+
+**The arm runs on the networks with an existing published ODE sweep** -- those
+in `results/ode_full/` -- because they are simultaneously the tractable ones and
+the only ones where the $f = 0$ gate can be evaluated. Networks outside that set
+are **not** silently dropped: the restriction is stated here, and any figure
+reports how many networks contribute at each $f$.
+
+This narrows what H1--H5 can claim. They are read over the ODE subset, not over
+all 28 networks, and the paper must say so wherever this arm is reported.
