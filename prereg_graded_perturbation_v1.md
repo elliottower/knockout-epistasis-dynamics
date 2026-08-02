@@ -71,3 +71,84 @@ and the Walsh basis. Only the perturbation level changes.
 ## Script
 
 To be written. Hash recorded in `docs/FROZEN_SHAS.md` before running.
+
+---
+
+# Amendment 1 — before anything ran
+
+**No graded sweep has executed.** Revision follows a code audit of the existing
+sweep machinery, not results.
+
+## A1.1 The Boolean path cannot express a graded perturbation, and would fail silently
+
+`simulate_sync_output` applies `current[:, clamp_mask] = clamp_value`, and the
+update indexes a per-gene truth table via
+`idx += states[:, ri].astype(np.int64) << j`.
+
+A fractional clamp value therefore **casts to an integer**: `clamp_value = 0.5`
+becomes `0`. The sweep would run without error and return results **identical to
+full knockout**, so a graded Boolean sweep would silently reproduce the
+published `blind` result at every level and read as "the gap is invariant to
+perturbation strength".
+
+**The Boolean path is excluded from this arm.** Graded perturbation is defined
+only on the Hill-function ODE conversion, where node states are continuous.
+
+## A1.2 $f$ is the clamp value, not a fraction of wild-type
+
+The original text swept $f \in \{1.25, 1.5, 2.0\}$ for gain of function. That is
+unphysical here: the Hill sigmoid
+$\sigma(z) = z^{n_H}/(z^{n_H} + K^{n_H})$ bounds node states to $[0,1]$, so a
+clamp above 1 lies outside the model's range.
+
+Redefined: **$f$ is the value perturbed genes are clamped to**, sweeping
+$f \in \{0, 0.25, 0.5, 0.75, 1\}$. The endpoints are the two regimes the paper
+already reports -- $f = 0$ is loss of function (`blind`), $f = 1$ is gain of
+function (`clamp1`) -- and the intermediate levels are the new measurement.
+
+This makes H4 well-posed rather than unphysical: the loss/gain reversal is a
+sweep between two published endpoints, and $f^\ast$ is where the
+creation/destruction ratio crosses.
+
+## A1.3 A reproduction gate, which the original omitted
+
+Because $f = 0$ and $f = 1$ correspond to sweeps already computed for 27
+networks, they are a free check on the implementation.
+
+**Gate, evaluated before any intermediate $f$ is interpreted:** the graded
+harness at $f = 0$ must reproduce each network's committed
+`*_composition_blind.json` order-3+ energies, and at $f = 1$ its
+`*_composition_clamp1.json`, to within Monte-Carlo tolerance over the 32 initial
+conditions. **If the endpoints do not reproduce, the harness is wrong and no
+intermediate result is read.**
+
+This is stated now because a graded sweep that disagrees with the published
+endpoints could otherwise be reported as a finding about perturbation strength.
+
+## A1.4 Variance floor on the headline quantity
+
+The headline is $\sigma_{3+}/\sigma_{2+}$. As the perturbation weakens the value
+function flattens, so both terms approach zero and the ratio becomes a quotient
+of small numbers.
+
+The existing `spectrum_gate(v_mean, n, min_abs_energy_3plus=1e-4)` in
+`composition_scorer.py` is applied unchanged at every $f$. Networks failing the
+gate at a given $f$ are **reported as gated, not as zero**, and are excluded
+from the pooled statistic at that $f$ with the exclusion stated on the figure.
+
+## A1.5 Compute
+
+ODE coalition tables were never saved locally -- `results/ode_full/` holds
+summaries for 13 of 28 networks and the NPZs written by
+`scripts/modal_ode_sweep_save_coalitions.py` live on the Modal volume. Each $f$
+therefore requires re-integration: $2^n$ coalitions $\times$ 32 initial
+conditions $\times$ RK45.
+
+Runs on Modal. Three intermediate levels ($f = 0.25, 0.5, 0.75$) plus the two
+reproduction endpoints.
+
+## Predictions unchanged
+
+H1, H2, H3 and H5 stand as written. H4 is now well-posed rather than
+unphysical, and its prediction -- that the creation/destruction ratio flips at
+some $f^\ast$, with the location reported -- is unchanged.
