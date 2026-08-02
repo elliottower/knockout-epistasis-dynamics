@@ -1,0 +1,38 @@
+{
+  "model": "arellano_rootstem",
+  "method": "ode_hill",
+  "description": "Arabidopsis root stem cell niche patterning (9 nodes, 2 inputs)",
+  "n_players": 9,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.018564356435643563,
+  "ode_global_o3plus": 0.5075195304276625,
+  "ode_delta_o3plus": 0.48895517399201893,
+  "boolean_delta_o3plus": 0.5059116851281775,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.035253907030530246,
+    0.16064453180675659,
+    0.29658203073505063,
+    0.28603515577469973,
+    0.15732421850070266,
+    0.05224609366986355,
+    0.010839843733716475,
+    0.0010742187486801503,
+    4.1136934267932844e-22,
+    4.273282265150132e-32
+  ],
+  "n_unique_values": 6,
+  "v_mean_range": [
+    0.0,
+    0.18731705227587908
+  ],
+  "v_mean_std": 0.024242231115366934,
+  "timestamp": "2026-07-30T03:45:59.111944+00:00"
+}

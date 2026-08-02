@@ -1,0 +1,38 @@
+{
+  "model": "cell_cycle_transcription",
+  "method": "ode_hill",
+  "description": "Yeast cell cycle transcription oscillator (9 nodes, no inputs)",
+  "n_players": 9,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.01201923076923077,
+  "ode_global_o3plus": 0.9101562468565891,
+  "ode_delta_o3plus": 0.8981370160873584,
+  "boolean_delta_o3plus": 0.8325216693666143,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.00195312656487873,
+    0.017578126610596795,
+    0.07031249996793532,
+    0.16406249960189181,
+    0.24609374919443427,
+    0.24609374908798454,
+    0.16406249934810396,
+    0.07031249970814824,
+    0.01757812492464768,
+    0.001953124991378605
+  ],
+  "n_unique_values": 2,
+  "v_mean_range": [
+    0.0,
+    0.06243781162380397
+  ],
+  "v_mean_std": 0.002756691466520764,
+  "timestamp": "2026-07-29T02:27:25.138097+00:00"
+}

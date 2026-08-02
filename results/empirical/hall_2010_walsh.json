@@ -1,0 +1,104 @@
+{
+  "dataset": "hall_2010",
+  "source": "Hall DW, Agan M, Pope SC. 2010. Fitness epistasis among 6 biosynthetic loci in the budding yeast Saccharomyces cerevisiae. J Heredity 101(suppl_1):S75-S84.",
+  "organism": "Saccharomyces cerevisiae (BY series)",
+  "n_loci": 6,
+  "locus_names": [
+    "locus_0",
+    "locus_1",
+    "locus_2",
+    "locus_3",
+    "locus_4",
+    "locus_5"
+  ],
+  "candidate_genes": [
+    "ADE2",
+    "HIS3",
+    "LEU2",
+    "LYS2",
+    "MET15",
+    "TRP1",
+    "URA3"
+  ],
+  "locus_mapping_note": "Positions 0-5 correspond to 6 of the 7 standard yeast auxotrophic biosynthetic markers (ADE2, HIS3, LEU2, LYS2, MET15, TRP1, URA3). The exact positional mapping requires the original paper (paywalled). The harmslab repository data uses only positional indices.",
+  "n_genotypes": 64,
+  "local_model": "additive (distinct biosynthetic pathways; locus-gene mapping unknown)",
+  "local_o3plus": 0.0,
+  "primary_component": "haploid_growth_rate",
+  "results_by_component": {
+    "haploid_growth_rate": {
+      "spectrum": [
+        0.9912772055749035,
+        0.0072167294727686964,
+        0.0003207561030372296,
+        0.00046798072051780314,
+        0.0005585527415463415,
+        0.000158623312012653,
+        1.5207521377479188e-07
+      ],
+      "global_o3plus": 0.0011853088492905725,
+      "value_range": [
+        0.712625109,
+        1.034003512
+      ],
+      "value_std": 0.08534042797383032
+    },
+    "diploid_growth_rate": {
+      "spectrum": [
+        0.9892560682491194,
+        0.008592299108064638,
+        0.0002715826646327746,
+        0.0005977440627872538,
+        0.0008718638269712629,
+        0.0003898905139757435,
+        2.0551574449137388e-05
+      ],
+      "global_o3plus": 0.0018800499781833975,
+      "value_range": [
+        0.705999564,
+        1.034522633
+      ],
+      "value_std": 0.09256541220024632
+    },
+    "mating_efficiency": {
+      "spectrum": [
+        0.8580727799679964,
+        0.06302646069169628,
+        0.032037335250703396,
+        0.01866652885657321,
+        0.013301679765112664,
+        0.009316429639309468,
+        0.005578785828608932
+      ],
+      "global_o3plus": 0.046863424089604276,
+      "value_range": [
+        0.077658742,
+        1.303497443
+      ],
+      "value_std": 0.27790553795122863
+    },
+    "sporulation_efficiency": {
+      "spectrum": [
+        0.9406081249350353,
+        0.04118350469416007,
+        0.006079119126492839,
+        0.0038443163234516396,
+        0.005669399232204616,
+        0.00260907306395874,
+        6.4626246968492416e-06
+      ],
+      "global_o3plus": 0.012129251244311846,
+      "value_range": [
+        1.0,
+        2.032417118
+      ],
+      "value_std": 0.34285120872127284
+    }
+  },
+  "composition_gap": {
+    "delta_o3plus": 0.0011853088492905725,
+    "sign": "null",
+    "interpretation": "Higher-order epistasis beyond pairwise arises from whole-cell integration of independent biosynthetic pathways through shared precursor pools, growth-rate coupling, and import competition."
+  },
+  "timestamp": "2026-07-29T00:42:29.074621+00:00"
+}

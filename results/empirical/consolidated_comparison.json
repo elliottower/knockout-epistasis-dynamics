@@ -1,0 +1,41 @@
+{
+  "empirical_landscapes": [
+    {
+      "dataset": "Weinreich TEM-1 (log MIC)",
+      "organism": "E. coli beta-lactamase",
+      "n_loci": 5,
+      "order_3plus_pct": 2.86,
+      "source": "Weinreich et al. 2006 Science"
+    },
+    {
+      "dataset": "Weinreich TEM-1 (raw MIC)",
+      "organism": "E. coli beta-lactamase",
+      "n_loci": 5,
+      "order_3plus_pct": 9.38,
+      "source": "Weinreich et al. 2006 Science"
+    },
+    {
+      "dataset": "Hall haploid growth",
+      "organism": "S. cerevisiae",
+      "n_loci": 6,
+      "order_3plus_pct": 0.12,
+      "source": "Hall et al. 2010 J Heredity"
+    },
+    {
+      "dataset": "Hall mating efficiency",
+      "organism": "S. cerevisiae",
+      "n_loci": 6,
+      "order_3plus_pct": 4.69,
+      "source": "Hall et al. 2010 J Heredity"
+    },
+    {
+      "dataset": "Franke A. niger growth",
+      "organism": "Aspergillus niger",
+      "n_loci": 8,
+      "order_3plus_pct": 11.36,
+      "source": "Franke et al. 2011 PLOS Comp Bio",
+      "note": "186/256 genotypes measured; 70 missing treated as non-viable (fitness 0)"
+    }
+  ],
+  "comparison_note": "Empirical landscapes show 0.1-11% order-3+ energy. GRN models with dynamics show composition gaps from -10 to +20 pp, with 18/24 creating additional order-3+."
+}

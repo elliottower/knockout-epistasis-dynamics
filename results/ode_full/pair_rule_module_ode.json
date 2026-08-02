@@ -1,0 +1,40 @@
+{
+  "model": "pair_rule_module",
+  "method": "ode_hill",
+  "description": "Drosophila pair-rule gene module for segmentation (11 nodes, no inputs)",
+  "n_players": 11,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.06301827395577396,
+  "ode_global_o3plus": 0.034892789112962716,
+  "ode_delta_o3plus": -0.028125484842811244,
+  "boolean_delta_o3plus": -0.027395081500417945,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.28299044093988185,
+    0.4712935302785575,
+    0.210823239668598,
+    0.02837562146179289,
+    0.006135101623704079,
+    0.0003176302290179056,
+    4.942123544835972e-05,
+    1.3005107583443903e-05,
+    1.778234293343589e-06,
+    2.1125958702418738e-07,
+    1.8298074369771356e-08,
+    1.6634612979894351e-09
+  ],
+  "n_unique_values": 30,
+  "v_mean_range": [
+    0.0,
+    0.9990147446158585
+  ],
+  "v_mean_std": 0.31647814849208666,
+  "timestamp": "2026-07-29T05:00:21.997919+00:00"
+}

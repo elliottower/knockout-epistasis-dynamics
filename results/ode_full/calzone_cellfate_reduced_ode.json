@@ -1,0 +1,40 @@
+{
+  "model": "calzone_cellfate_reduced",
+  "method": "ode_hill",
+  "description": "Reduced cell fate decision: apoptosis/necrosis/survival (11 nodes, 2 inputs)",
+  "n_players": 11,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.027052238805970148,
+  "ode_global_o3plus": 0.4281305089630982,
+  "ode_delta_o3plus": 0.40107827015712805,
+  "boolean_delta_o3plus": 0.37036819086497713,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.045966627009858894,
+    0.19646334039546198,
+    0.32943952363158097,
+    0.27306611819777526,
+    0.11837070133799468,
+    0.029534671017621625,
+    0.006121345509407451,
+    0.000926528058421122,
+    0.00010156172943895811,
+    9.342330720049462e-06,
+    2.407817189982644e-07,
+    1.2353860856353208e-30
+  ],
+  "n_unique_values": 22,
+  "v_mean_range": [
+    0.0,
+    0.8741294458310725
+  ],
+  "v_mean_std": 0.1356977952219854,
+  "timestamp": "2026-07-29T02:43:14.037693+00:00"
+}

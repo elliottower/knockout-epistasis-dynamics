@@ -1,0 +1,38 @@
+{
+  "dataset": "franke2011_aspergillus",
+  "n_loci": 8,
+  "n_measured": 186,
+  "n_missing": 70,
+  "mean_measured_fitness": 0.6532150537634409,
+  "missing_zero": {
+    "spectrum": [
+      0.6927918423196613,
+      0.14272848613577485,
+      0.050902570575796634,
+      0.033036783310371284,
+      0.03804980985996227,
+      0.027519855789824025,
+      0.011680394568219074,
+      0.0031577979528094845,
+      0.00013245948758110315
+    ],
+    "order_3plus": 0.11357710096876725,
+    "interpretation": "Missing genotypes are non-viable (fitness 0). Inviability is genuine epistasis."
+  },
+  "missing_mean": {
+    "spectrum": [
+      0.9657946128061,
+      0.0190224154337638,
+      0.004464243821299803,
+      0.003927944405411367,
+      0.0029844031280184423,
+      0.00193315030556407,
+      0.001451438187519341,
+      0.0002486057116410627,
+      0.00017318620068211348
+    ],
+    "order_3plus": 0.010718727938836397,
+    "interpretation": "Missing genotypes imputed at mean. Removes lethality signal."
+  },
+  "caveat": "High order-3+ under zero-imputation is driven by lethal combinations (non-viability). This is genuine epistasis but distinct from the dynamical epistasis the GRN models generate."
+}

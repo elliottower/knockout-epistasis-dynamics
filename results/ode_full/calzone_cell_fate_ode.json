@@ -1,0 +1,16 @@
+{
+  "model": "calzone_cell_fate",
+  "method": "ode_hill",
+  "n_players": 17,
+  "local_o3plus": 0.01547029702970297,
+  "ode_global_o3plus": 0.6116620853871954,
+  "ode_delta_o3plus": 0.5961917883574924,
+  "boolean_delta_o3plus": 0.5820870405922097,
+  "sign_preserved": true,
+  "n_unique_values": 65500,
+  "v_mean_range": [
+    0.0,
+    0.15609606930575493
+  ],
+  "v_mean_std": 0.023059487133402393
+}

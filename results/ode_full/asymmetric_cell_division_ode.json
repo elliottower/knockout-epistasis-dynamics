@@ -1,0 +1,38 @@
+{
+  "model": "asymmetric_cell_division",
+  "method": "ode_hill",
+  "description": "Caulobacter crescentus asymmetric cell division (9 nodes, no inputs)",
+  "n_players": 9,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.0,
+  "ode_global_o3plus": 0.4342542370073868,
+  "ode_delta_o3plus": 0.4342542370073868,
+  "boolean_delta_o3plus": 0.44085049375894575,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.04609731841694901,
+    0.19502038844895347,
+    0.3246280561267107,
+    0.2704457168518515,
+    0.12255605738582379,
+    0.03407316290316881,
+    0.006631459325654694,
+    0.0004519859381266723,
+    8.710874486181431e-05,
+    8.745857899530743e-06
+  ],
+  "n_unique_values": 4,
+  "v_mean_range": [
+    0.0,
+    0.9990147346458134
+  ],
+  "v_mean_std": 0.20137371360291403,
+  "timestamp": "2026-07-29T02:26:39.263624+00:00"
+}

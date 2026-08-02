@@ -1,0 +1,40 @@
+{
+  "model": "myeloid_progenitors",
+  "method": "ode_hill",
+  "description": "Myeloid progenitor cell fate (11 nodes, no inputs)",
+  "n_players": 11,
+  "n_init": 32,
+  "ode_params": {
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.024193548387096774,
+  "ode_global_o3plus": 0.004097388821656259,
+  "ode_delta_o3plus": -0.020096159565440516,
+  "boolean_delta_o3plus": -0.022783013946164627,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.4738003068775292,
+    0.49617179108203163,
+    0.025930513218782834,
+    0.003828208917873392,
+    0.00026917990367981087,
+    9.466456604624316e-14,
+    8.174114151947768e-15,
+    2.173875528763939e-16,
+    1.103996914237509e-28,
+    2.4201118244191539e-32,
+    2.7309619566122154e-33,
+    4.617088972953415e-36
+  ],
+  "n_unique_values": 18,
+  "v_mean_range": [
+    0.0,
+    0.8741463375710643
+  ],
+  "v_mean_std": 0.3660171597161795,
+  "timestamp": "2026-07-29T02:29:42.022893+00:00"
+}

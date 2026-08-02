@@ -1,0 +1,59 @@
+{
+  "n_models": 14,
+  "n_completed": 0,
+  "n_failed": 14,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "timestamp_start": "2026-07-29T02:44:22.631087+00:00",
+  "timestamp_end": "2026-07-29T02:47:28.237020+00:00",
+  "models": [
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    },
+    {
+      "error": ""
+    }
+  ]
+}
