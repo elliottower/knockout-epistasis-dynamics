@@ -257,24 +257,22 @@ def main(models: str = "", levels: str = "", skip_f0: str = ""):
     lv = [float(x) for x in levels.split(",")] if levels else GRADED_LEVELS
 
     print(f"{len(ode_models)} models")
-    print(f"  graded levels {lv}: {len(ode_models) * len(lv)} units to compute")
+
+    # SPAWN, do not map. A .map/.starmap driver is consumed by THIS process, so
+    # if the launcher is backgrounded and later reaped, the remaining units are
+    # orphaned and the app shuts down -- which killed two earlier runs even with
+    # --detach. Spawned calls are server-side and outlive the launcher.
+    handles = []
     if not skip_f0:
-        print(f"  f=0: adopted from existing ODE coalitions where available")
-        for r in adopt_f0.map(ode_models, order_outputs=False):
-            if r.get("status") == "adopted":
-                print(f"    adopted {r['model']} E3+={r['energy_3plus']:.5f}")
-            elif r.get("status") == "no_existing_f0":
-                print(f"    {r['model']}: no saved f=0, will need computing")
+        for m in ode_models:
+            handles.append(("adopt_f0", m, 0.0, adopt_f0.spawn(m)))
+        print(f"  spawned {len(ode_models)} f=0 adoptions")
 
     units = [(m, f) for m in ode_models for f in lv]
-    done = 0
-    for res in run_unit.starmap(units, order_outputs=False):
-        done += 1
-        s = res.get("status")
-        if s == "done":
-            print(f"  [{done}/{len(units)}] {res['model']} f={res['level']:.2f} "
-                  f"E3+={res['energy_3plus']:.5f}")
-        elif s != "cached":
-            print(f"  [{done}/{len(units)}] {res}")
+    for m, f in units:
+        handles.append(("run_unit", m, f, run_unit.spawn(m, f)))
+    print(f"  spawned {len(units)} graded units (levels {lv})")
 
-    print(f"\nResults: {OUT_DIR}/ on volume epistasis-bench-results")
+    print(f"\n{len(handles)} calls submitted. The launcher can now exit safely.")
+    print(f"Results: {OUT_DIR}/ on volume epistasis-bench-results")
+    print(f"Checkpoints: {CKPT_DIR}/ -- a killed unit resumes from there.")
