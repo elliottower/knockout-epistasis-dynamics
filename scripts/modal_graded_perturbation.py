@@ -82,7 +82,41 @@ EXISTING_F0 = "/results/ode_coalitions"
 CHECKPOINT_EVERY = 256
 
 
-@app.function(cpu=8, memory=16384, timeout=86400,
+N_WORKERS = 8
+
+
+def _coalition_batch(args):
+    """Integrate one batch of coalitions. Module level so it is picklable.
+
+    The ODE work is embarrassingly parallel across coalitions: each is an
+    independent integration. Previously this ran sequentially, so cpu=8 paid
+    for eight cores and used one.
+    """
+    import numpy as np
+    from scripts.ode_coalition_sweep import ALL_MODELS, simulate_ode_output
+
+    (model_name, level, idx_lo, idx_hi, n_total, player_indices,
+     output_indices, init_states) = args
+    rules = ALL_MODELS[model_name]["rules"]
+    node_names = list(rules.keys())
+
+    out = np.zeros((idx_hi - idx_lo, init_states.shape[0]))
+    for j, idx in enumerate(range(idx_lo, idx_hi)):
+        clamp_mask = np.zeros(n_total, dtype=bool)
+        for bit_pos, node_idx in enumerate(player_indices):
+            if not (idx >> bit_pos) & 1:
+                clamp_mask[node_idx] = True
+        out[j] = simulate_ode_output(
+            rules, node_names, clamp_mask, level,
+            output_indices, init_states,
+            t_max=ODE_PARAMS["t_max"], t_tail=ODE_PARAMS["t_tail"],
+            tau=ODE_PARAMS["tau"], hill_n=ODE_PARAMS["hill_n"],
+            hill_k=ODE_PARAMS["hill_k"],
+        )
+    return idx_lo, out
+
+
+@app.function(cpu=N_WORKERS, memory=8192, timeout=86400,
               volumes={"/results": results_vol})
 def run_unit(model_name: str, level: float):
     """One (model, clamp level) sweep, resumable at CHECKPOINT_EVERY coalitions."""
@@ -134,28 +168,32 @@ def run_unit(model_name: str, level: float):
     t0 = time.time()
     print(f"{tag}: {N} coalitions, starting at {start}", flush=True)
 
-    for idx in range(start, N):
-        clamp_mask = np.zeros(n_total, dtype=bool)
-        for bit_pos, node_idx in enumerate(player_indices):
-            if not (idx >> bit_pos) & 1:
-                clamp_mask[node_idx] = True
-        values[idx] = simulate_ode_output(
-            rules, node_names, clamp_mask, level,
-            output_indices, init_states,
-            t_max=ODE_PARAMS["t_max"], t_tail=ODE_PARAMS["t_tail"],
-            tau=ODE_PARAMS["tau"], hill_n=ODE_PARAMS["hill_n"],
-            hill_k=ODE_PARAMS["hill_k"],
-        )
+    # Parallel over coalitions. Checkpoint boundaries stay aligned to
+    # CHECKPOINT_EVERY so resume semantics are unchanged: everything below
+    # next_index is complete.
+    import multiprocessing as mp
 
-        if (idx + 1) % CHECKPOINT_EVERY == 0 or idx == N - 1:
+    chunk = max(1, CHECKPOINT_EVERY // N_WORKERS)
+    with mp.Pool(N_WORKERS) as pool:
+        block_start = start
+        while block_start < N:
+            block_end = min(block_start + CHECKPOINT_EVERY, N)
+            batches = [
+                (model_name, level, lo, min(lo + chunk, block_end),
+                 n_total, player_indices, output_indices, init_states)
+                for lo in range(block_start, block_end, chunk)
+            ]
+            for lo, out in pool.imap_unordered(_coalition_batch, batches):
+                values[lo:lo + out.shape[0]] = out
+
             np.savez_compressed(ckpt_path, values=values,
-                                next_index=idx + 1, n_players=n_players)
+                                next_index=block_end, n_players=n_players)
             results_vol.commit()
-            done = idx + 1
-            rate = (time.time() - t0) / max(1, done - start)
-            eta = rate * (N - done) / 3600
-            print(f"{tag}: {done}/{N} ({100*done/N:.1f}%) "
+            rate = (time.time() - t0) / max(1, block_end - start)
+            eta = rate * (N - block_end) / 3600
+            print(f"{tag}: {block_end}/{N} ({100*block_end/N:.1f}%) "
                   f"eta {eta:.1f}h", flush=True)
+            block_start = block_end
 
     scores = score_ode_result(values, n_players, node_names)
     spectrum = scores["global_spectrum"]
