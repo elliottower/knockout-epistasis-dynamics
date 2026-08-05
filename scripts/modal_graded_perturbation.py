@@ -77,12 +77,13 @@ OUT_DIR = "/results/graded_perturbation"
 CKPT_DIR = "/results/graded_perturbation/checkpoints"
 EXISTING_F0 = "/results/ode_coalitions"
 
-# Write partial progress this often. Sized so a killed container loses minutes,
-# not hours, while keeping commit overhead negligible.
-CHECKPOINT_EVERY = 256
+# Write partial progress this often. The pool syncs at each block boundary, so
+# with 32 workers a small block starves them; 1024 keeps every worker busy while
+# still bounding loss on a kill to roughly a minute at observed rates.
+CHECKPOINT_EVERY = 1024
 
 
-N_WORKERS = 8
+N_WORKERS = 32
 
 
 def _coalition_batch(args):
