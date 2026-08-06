@@ -145,3 +145,31 @@ remains unresolved. The GNK control establishes that the predictor is correct
 establish that this graph is the right object for the attractor phenotype. Any
 claim from this arm must be scoped to "structure created by dynamics is not
 localised on the regulatory graph", not to contact maps in general.
+
+## Correction to the note above: the ratio is confounded too
+
+The previous section asserted that the paired comparison escapes the balance
+confound. That was asserted, not tested. Tested now, and it is **half wrong**:
+
+| statistic | correlation with active fraction | |
+|---|---|---|
+| ratio, dynamic / GNK | $\rho = -0.472$, $p = 0.017$ | confounded |
+| difference, GNK $-$ dynamic | $\rho = +0.820$, $p < 0.001$ | badly confounded |
+| **sign, dynamic $<$ GNK** | scale-free by construction | **clean** |
+
+A ratio does not cancel a confound that enters numerator and denominator
+differently, which is what happens here.
+
+**The claim rests on the sign test alone: dynamic scores below GNK in 24 of 25
+networks, binomial $p = 3.0 \times 10^{-8}$.** Within a network the graph, the
+predictor and the active fraction are identical and only the phenotype varies,
+so the *ordering* cannot be a balance artifact even though the *magnitude* can.
+
+The median ratio of $0.58$ is withdrawn as a headline. If quoted at all it
+carries the confound explicitly.
+
+**The exception is consistent rather than anomalous.** `mendoza_thelper` is the
+one network where dynamic meets or exceeds GNK ($+0.282$ against $+0.265$). Its
+active fraction is $0.024$, fifth lowest of 25 -- the regime where both
+statistics are noisiest and an ordering flip is what noise produces. It is named
+in the results rather than dropped from the count.
