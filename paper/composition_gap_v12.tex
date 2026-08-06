@@ -61,9 +61,11 @@ fitness
 landscapes show higher-order epistasis beyond additive expectations
 in real organisms, confirming that higher-order structure exists
 though this tests an additive baseline rather than the local-rule
-comparison of the Boolean analysis. Creation dominance is specific to
-loss-of-function knockouts: gain-of-function clamping reverses the
-ratio. These results suggest that predicting higher-order knockout
+comparison of the Boolean analysis. Creation dominance is specific to complete
+knockout. Sweeping the perturbation level from full removal to full
+activation, the median gap falls from $+6.8$ to $-1.0$ percentage points
+and the creation/destruction ratio inverts by half-strength knockdown,
+with 10 of 27 networks changing sign. These results suggest that predicting higher-order knockout
 epistasis will require models of the composed dynamics rather than
 molecular interaction data alone.
 \end{abstract}
@@ -564,6 +566,86 @@ The sign persists across 2.6-fold variation in network size
 the composition gap as a property of regulatory architecture.
 
 
+\subsection{Creation dominance inverts under partial perturbation}
+\label{sec:graded}
+
+The knockout is a complete removal, the most extreme perturbation
+available. To test whether creation depends on that extremity, we swept
+the clamp level $f$ applied to perturbed genes across
+$\{0, 0.25, 0.5, 0.75, 1\}$ in the Hill-function ODE conversion, holding
+every other parameter fixed. Here $f = 0$ is the published
+loss-of-function condition and $f = 1$ is full activation.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{rrrr}
+\toprule
+Clamp level $f$ & Creating & Destroying & Median $\Delta_{3+}$ \\
+\midrule
+0.00 & 17 & 7  & $+0.068$ \\
+0.25 & 15 & 12 & $+0.022$ \\
+0.50 & 8  & 16 & $-0.012$ \\
+0.75 & 7  & 15 & $-0.009$ \\
+1.00 & 6  & 15 & $-0.010$ \\
+\bottomrule
+\end{tabular}
+\caption{Composition gap by perturbation level across 27 networks.
+Creating and destroying count networks with $\Delta_{3+}$ above
+$+0.5$~pp and below $-0.5$~pp respectively; the remainder fall inside
+that band. Creation dominates only at complete knockout.}
+\label{tab:graded}
+\end{table}
+
+The balance inverts between $f = 0.25$ and $f = 0.5$
+(Table~\ref{tab:graded}). Ten of 27 networks change the sign of
+$\Delta_{3+}$, eight of them by $f = 0.25$. Creation is therefore a
+property of complete removal rather than of composition in general.
+
+The gap persists throughout. No network falls below the $0.5$~pp
+threshold at $f = 0.25$, and only 6 of 27 do so at $f = 1$, so partial
+perturbation changes the sign of the gap while leaving its magnitude
+comparable.
+
+Perturbation strength does not drive the higher-order fraction. The
+normalised order-3+ energy $\sigma_{3+}/\sigma_{2+}$ is flat across the
+sweep, $0.384$ at $f = 0$ against $0.387$ at $f = 0.75$. Zero-ablation
+inflates pairwise epistasis by one to two orders of magnitude relative
+to mean ablation, and that effect does not extend to order 3+.
+
+
+\subsection{Higher-order structure does not sit on the regulatory graph}
+\label{sec:gnk}
+
+If dynamics create interactions that the wiring does not contain, then
+higher-order coefficients should be harder to predict from the
+regulatory graph than those of a model built to live on that graph. We
+tested this against the generalised NK model \citep{brookes2022sparsity},
+in which each gene $j$ is assigned a random function over its
+neighbourhood $V_j$ and the phenotype is $\sum_j f_j(x_{V_j})$. For such
+a model a coefficient is nonzero exactly when its subset lies inside
+some $V_j$, which makes it a positive control on the predictor: the
+predictor recovers $100.0\%$ of GNK order-3+ spectral energy in every
+network tested.
+
+Applying the same predictor to the attractor phenotype on the same
+graph, the attractor is less predictable than the GNK model in
+\textbf{24 of 25 networks} (two-sided binomial $p = 1.6 \times
+10^{-6}$). The comparison is made within each network, where the graph,
+the predictor and the fraction of coefficients it marks active are all
+held fixed and only the phenotype varies. We report the direction rather
+than the magnitude of the difference: the raw correlations scale with
+that active fraction ($\rho = 0.975$), so effect sizes are not
+comparable across networks, while the ordering within a network is
+unaffected.
+
+Two networks are outside this comparison. \emph{Calzone cell fate}
+($n = 17$) exceeds the compute budget for the ten GNK draws per network,
+and \emph{lambda phage} has every order-3+ subset contained in some
+neighbourhood, leaving the predictor constant and the correlation
+undefined. Both are conditions on the input evaluated before any
+correlation is formed.
+
+
 \subsection{Null models confirm the gap requires specific wiring}
 \label{sec:null-results}
 
@@ -643,6 +725,23 @@ combinatorially with $n$ but is sparsely occupied by local rules,
 so dynamics have more room to create new interactions than to
 suppress existing ones.
 
+Two results bound this account. The asymmetry is specific to complete
+removal: sweeping the perturbation level inverts the creation/destruction
+ratio by half-strength knockdown (Section~\ref{sec:graded}), so
+``creation dominates'' describes the knockout limit rather than
+composition in general. Because CRISPR interference produces partial
+knockdown rather than deletion, the sign of the gap expected in a screen
+depends on knockdown efficiency.
+
+The interactions dynamics create also do not sit where the regulatory
+graph would put them. Against a model constructed to live on that graph,
+the attractor phenotype is the less predictable of the two in 24 of 25
+networks (Section~\ref{sec:gnk}). This is evidence about the regulatory
+edge list specifically. A structural contact map carries information an
+edge list does not, so the result does not transfer to the protein
+setting, where higher-order epistasis has been reported to localise on
+pairwise contacts \citep{brookes2022sparsity}.
+
 \subsection{Implications for knockout screen design}
 
 Where the local--global correlation is positive
@@ -666,7 +765,8 @@ networks, no joint model of standard topological features predicts the
 gap: leave-one-out cross-validated $R^2$ is $-0.27$, worse than
 predicting the mean. Individual features do correlate, most strongly
 rule nonlinearity ($\rho = -0.655$), but the relationship does not
-support prediction.
+support prediction, and the higher-order coefficients themselves are
+poorly localised on the regulatory graph.
 
 The global epistasis literature \citep{otwinowski2018inferring, reddy2021global} establishes that nonlinear genotype-phenotype maps
 reshape interaction spectra. Our local-vs-global comparison
