@@ -173,3 +173,34 @@ one network where dynamic meets or exceeds GNK ($+0.282$ against $+0.265$). Its
 active fraction is $0.024$, fifth lowest of 25 -- the regime where both
 statistics are noisiest and an ordering flip is what noise produces. It is named
 in the results rather than dropped from the count.
+
+## p-value correction, and the network set
+
+**The p-value reported in commit 9a41f96 was wrong.** It read
+$3.0 \times 10^{-8}$, which is $0.5^{25}$ -- the probability of a perfect 25 of
+25 -- rather than the tail probability for 24 or more. Correct values:
+
+| | |
+|---|---|
+| one-sided $P(X \geq 24 \mid n = 25, p = 0.5)$ | $7.749 \times 10^{-7}$ |
+| two-sided | $1.550 \times 10^{-6}$ |
+
+Hand check: $(\binom{25}{24} + \binom{25}{25})/2^{25} = 7.749 \times 10^{-7}$.
+**Quote the two-sided value, $p = 1.6 \times 10^{-6}$.**
+
+**The set is 25 of the paper's 27 networks, and both exclusions are structural
+rather than outcome-dependent.**
+
+- `calzone_cell_fate`: $n = 17$, excluded by the `n > 15` compute guard. Its
+  $2^{17}$ coalition table makes the per-draw GNK construction prohibitive at
+  ten draws.
+- `lambda_phage`: predictor active fraction is **1.000**, so
+  `pred[hi].std() == 0` and Spearman is undefined. Every order-3+ subset fits
+  inside some neighborhood, because $n = 7$ is small relative to the
+  neighborhood sizes. There is no statistic to compute, rather than a result
+  being discarded.
+
+Both are conditions on the input, evaluated before any correlation is formed,
+so neither can select on the direction of the effect. No network was dropped
+between rounds of debugging: `static_vs_dynamic` scored 27 and this arm scores
+25 for the two reasons above.
