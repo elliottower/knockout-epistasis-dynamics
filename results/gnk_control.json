@@ -1,0 +1,243 @@
+{
+  "prereg": "prereg_gnk_control_v1.md",
+  "prereg_commit": "caa8a2f",
+  "n_networks": 25,
+  "n_draws": 10,
+  "seed": 20260806,
+  "per_model": [
+    {
+      "model": "albert_segment_polarity",
+      "n": 11,
+      "mean_neighborhood": 3.909090909090909,
+      "max_neighborhood": 5,
+      "gnk_r": 0.2992679107936639,
+      "dynamic_r": 0.15593663241459815,
+      "predictor_balance": 0.030792529025744572
+    },
+    {
+      "model": "arabidopsis_cellcycle",
+      "n": 14,
+      "mean_neighborhood": 9.0,
+      "max_neighborhood": 13,
+      "gnk_r": 0.846122358366286,
+      "dynamic_r": 0.29041692784961315,
+      "predictor_balance": 0.606585575623541
+    },
+    {
+      "model": "arellano_rootstem",
+      "n": 9,
+      "mean_neighborhood": 3.6666666666666665,
+      "max_neighborhood": 5,
+      "gnk_r": 0.4444625049741383,
+      "dynamic_r": 0.3453995361685592,
+      "predictor_balance": 0.07081545064377683
+    },
+    {
+      "model": "asymmetric_cell_division",
+      "n": 9,
+      "mean_neighborhood": 3.2222222222222223,
+      "max_neighborhood": 4,
+      "gnk_r": 0.30615943483347974,
+      "dynamic_r": 0.26398968537415357,
+      "predictor_balance": 0.032188841201716736
+    },
+    {
+      "model": "blood_stem_cell",
+      "n": 11,
+      "mean_neighborhood": 6.454545454545454,
+      "max_neighborhood": 10,
+      "gnk_r": 0.8435140867143702,
+      "dynamic_r": 0.18203178789192656,
+      "predictor_balance": 0.613326602725896
+    },
+    {
+      "model": "calzone_cellfate_reduced",
+      "n": 11,
+      "mean_neighborhood": 4.818181818181818,
+      "max_neighborhood": 8,
+      "gnk_r": 0.6577088358257464,
+      "dynamic_r": 0.38137809221006286,
+      "predictor_balance": 0.1746592629984856
+    },
+    {
+      "model": "cell_cycle_transcription",
+      "n": 9,
+      "mean_neighborhood": 4.777777777777778,
+      "max_neighborhood": 7,
+      "gnk_r": 0.8563230246657152,
+      "dynamic_r": 0.021547417691453272,
+      "predictor_balance": 0.4248927038626609
+    },
+    {
+      "model": "davidich_yeast",
+      "n": 10,
+      "mean_neighborhood": 4.4,
+      "max_neighborhood": 7,
+      "gnk_r": 0.6021553610474044,
+      "dynamic_r": 0.4190198722899855,
+      "predictor_balance": 0.14049586776859505
+    },
+    {
+      "model": "drosophila_cellcycle",
+      "n": 14,
+      "mean_neighborhood": 5.571428571428571,
+      "max_neighborhood": 11,
+      "gnk_r": 0.5830641484804606,
+      "dynamic_r": 0.4881197850829305,
+      "predictor_balance": 0.13029856247696278
+    },
+    {
+      "model": "emt_switch",
+      "n": 12,
+      "mean_neighborhood": 6.666666666666667,
+      "max_neighborhood": 9,
+      "gnk_r": 0.7920690337854639,
+      "dynamic_r": 0.5572109703317135,
+      "predictor_balance": 0.2977346278317152
+    },
+    {
+      "model": "fanconi_anemia",
+      "n": 15,
+      "mean_neighborhood": 7.933333333333334,
+      "max_neighborhood": 13,
+      "gnk_r": 0.8381206246548043,
+      "dynamic_r": 0.15346717880340022,
+      "predictor_balance": 0.37400067387508806
+    },
+    {
+      "model": "faure_cellcycle",
+      "n": 10,
+      "mean_neighborhood": 5.8,
+      "max_neighborhood": 8,
+      "gnk_r": 0.8371489404541866,
+      "dynamic_r": 0.6774289045221826,
+      "predictor_balance": 0.371900826446281
+    },
+    {
+      "model": "fumia_cellcycle",
+      "n": 14,
+      "mean_neighborhood": 5.571428571428571,
+      "max_neighborhood": 8,
+      "gnk_r": 0.3104942827043158,
+      "dynamic_r": 0.1923062292336886,
+      "predictor_balance": 0.03323504115984765
+    },
+    {
+      "model": "hematopoiesis_aging",
+      "n": 15,
+      "mean_neighborhood": 4.2,
+      "max_neighborhood": 8,
+      "gnk_r": 0.18013013854789323,
+      "dynamic_r": 0.1701637451917838,
+      "predictor_balance": 0.010935154838116825
+    },
+    {
+      "model": "irons_cardiac",
+      "n": 15,
+      "mean_neighborhood": 4.866666666666666,
+      "max_neighborhood": 11,
+      "gnk_r": 0.44251801010380476,
+      "dynamic_r": 0.20363083675264979,
+      "predictor_balance": 0.07011363984439611
+    },
+    {
+      "model": "lac_operon",
+      "n": 13,
+      "mean_neighborhood": 4.384615384615385,
+      "max_neighborhood": 6,
+      "gnk_r": 0.2532331363132989,
+      "dynamic_r": 0.19132239310480542,
+      "predictor_balance": 0.02185185185185185
+    },
+    {
+      "model": "li_budding_yeast",
+      "n": 11,
+      "mean_neighborhood": 5.363636363636363,
+      "max_neighborhood": 9,
+      "gnk_r": 0.7644804678425996,
+      "dynamic_r": 0.3897896197251613,
+      "predictor_balance": 0.26501766784452296
+    },
+    {
+      "model": "mendoza_thelper",
+      "n": 13,
+      "mean_neighborhood": 4.076923076923077,
+      "max_neighborhood": 7,
+      "gnk_r": 0.26482476270910327,
+      "dynamic_r": 0.2815860579688669,
+      "predictor_balance": 0.023950617283950617
+    },
+    {
+      "model": "morphogenetic_checkpoint",
+      "n": 12,
+      "mean_neighborhood": 5.5,
+      "max_neighborhood": 9,
+      "gnk_r": 0.5917758870812743,
+      "dynamic_r": 0.34401102486473645,
+      "predictor_balance": 0.13492656211102813
+    },
+    {
+      "model": "myeloid_progenitors",
+      "n": 11,
+      "mean_neighborhood": 4.636363636363637,
+      "max_neighborhood": 8,
+      "gnk_r": 0.6492786213031534,
+      "dynamic_r": 0.11150226485215294,
+      "predictor_balance": 0.1691065118626956
+    },
+    {
+      "model": "pair_rule_module",
+      "n": 11,
+      "mean_neighborhood": 7.0,
+      "max_neighborhood": 10,
+      "gnk_r": 0.7548672633686014,
+      "dynamic_r": 0.4112238545630715,
+      "predictor_balance": 0.7450782433114589
+    },
+    {
+      "model": "remy_p53_mdm2",
+      "n": 10,
+      "mean_neighborhood": 4.0,
+      "max_neighborhood": 5,
+      "gnk_r": 0.43725255511116523,
+      "dynamic_r": 0.25632395508972544,
+      "predictor_balance": 0.06818181818181818
+    },
+    {
+      "model": "saadatpour_guardcell",
+      "n": 13,
+      "mean_neighborhood": 3.3076923076923075,
+      "max_neighborhood": 7,
+      "gnk_r": 0.21517623325375979,
+      "dynamic_r": 0.050219702305369665,
+      "predictor_balance": 0.015679012345679012
+    },
+    {
+      "model": "tournier_apoptosis",
+      "n": 12,
+      "mean_neighborhood": 4.833333333333333,
+      "max_neighborhood": 7,
+      "gnk_r": 0.44759070976976956,
+      "dynamic_r": 0.12237607382513781,
+      "predictor_balance": 0.07194423699278069
+    },
+    {
+      "model": "zanudo_tlgl",
+      "n": 12,
+      "mean_neighborhood": 3.5,
+      "max_neighborhood": 5,
+      "gnk_r": 0.19397118054597412,
+      "dynamic_r": 0.12246901926694877,
+      "predictor_balance": 0.012696041822255415
+    }
+  ],
+  "gnk_median": 0.5830641484804606,
+  "dynamic_median": 0.25632395508972544,
+  "gap": 0.3267401933907352,
+  "verdicts": {
+    "H0_gate_passes": true,
+    "H1": true,
+    "H2": true,
+    "H3_falsifier_fires": false
+  }
+}
