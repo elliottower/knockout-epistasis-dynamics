@@ -82,3 +82,62 @@ The 28 wiring graphs, node sets, knockout coalitions, and Walsh basis.
 ## Script
 
 To be written. Hash recorded in `docs/FROZEN_SHAS.md` before running.
+
+---
+
+# Source verification and a caveat, recorded after the run
+
+## The Brookes construction is verified verbatim
+
+The star construction this test operationalises was checked against the source
+after an external reviewer questioned it. From Brookes, Aghazadeh and
+Listgarten, *On the sparsity of fitness functions and implications for
+learning*, **PNAS 119(1):e2109649118 (2022)**, PMC8740588:
+
+> "In a GNK model with Structural neighborhoods, higher-order epistatic
+> interactions arise from only pairwise structural contact information---that
+> is, an rth-order epistatic interaction has nonzero Fourier coefficients when
+> r-1 positions are in structural contact with a central position."
+
+> "structure-based GNK models correctly identify many of the important
+> higher-order epistatic interactions in the corresponding empirical fitness
+> functions, despite using only pairwise structural contact information."
+
+**Cite by DOI.** A second PNAS 2022 paper -- Zhou, Wong, Chen, Krainer, Kinney
+and McCandlish, *Higher-order epistasis and phenotypic prediction*
+(10.1073/pnas.2204233119) -- covers adjacent ground and is easily confused with
+this one. The reviewer who raised the objection had that paper in hand.
+
+## Two caveats that limit what this arm can conclude
+
+**Contact map against regulatory edge list.** Structural contact is physical
+three-dimensional proximity: symmetric, locally dense. A regulatory edge is
+who-regulates-whom: directed, sparse, functional. This test uses the second as
+an analogue of the first, and the analogy may simply fail. That is the
+alternative the decision table already names -- "Brookes' contact graph carries
+more information than a regulatory edge list" -- and the result is consistent
+with it.
+
+**Structural contact is an input to the GNK model.** Brookes et al. supply
+contacts as domain knowledge and then validate the resulting predictions against
+empirical fitness functions. They do not report an unassisted discovery that
+protein higher-order epistasis is star-structured. Any claim in this project
+that "in proteins the wiring predicts higher-order structure" must be phrased as
+"a structure-informed model predicts many important higher-order terms", which
+is weaker.
+
+**Unaddressed: the saturating nonlinearity manufactures higher-order structure.**
+Sailer and Harms (*Genetics* 205(3):1079, 2017) show that a nonlinear scale
+produces spurious high-order epistasis. The static phenotype here applies a
+saturating nonlinearity to a pairwise energy, so some of its order-3+ mass is
+scale artifact rather than interaction. Manufactured structure need not track
+the wiring, which would depress the static arm's predictability for reasons
+unrelated to the hypothesis. **The static arm should not be treated as settled
+until a scale correction is applied and the comparison re-run.**
+
+## Process note
+
+The construction was taken from a literature agent's quotes and built into this
+registration and its code without the source being read. The quotes proved
+accurate, but that was luck. Sources behind a registered prediction are to be
+read directly before the registration is frozen.
