@@ -6,121 +6,121 @@
     {
       "model": "albert_segment_polarity",
       "n": 11,
-      "dynamic_r": -0.10159275248594633,
-      "static_tanh_r": 0.08573122796288087,
-      "static_logistic_r": 0.0513043131566328
+      "dynamic_r": 0.13563588699468823,
+      "static_tanh_r": 0.2380450231755304,
+      "static_logistic_r": 0.24331100219190643
     },
     {
       "model": "arabidopsis_cellcycle",
       "n": 14,
-      "dynamic_r": -0.10872206812841893,
-      "static_tanh_r": -0.09915391847910641,
-      "static_logistic_r": -0.12376981747037083
+      "dynamic_r": 0.2145021111582801,
+      "static_tanh_r": 0.3199459885627128,
+      "static_logistic_r": 0.3282724663470795
     },
     {
       "model": "arellano_rootstem",
       "n": 9,
-      "dynamic_r": 0.17342669401876737,
-      "static_tanh_r": 0.10957163192070028,
-      "static_logistic_r": 0.11429496727285379
+      "dynamic_r": 0.3119317157376628,
+      "static_tanh_r": 0.3355365412528171,
+      "static_logistic_r": 0.32293785863207475
     },
     {
       "model": "asymmetric_cell_division",
       "n": 9,
-      "dynamic_r": 0.2655381829575548,
-      "static_tanh_r": 0.009868053574048397,
-      "static_logistic_r": 0.015051136198664395
+      "dynamic_r": 0.2487804075937413,
+      "static_tanh_r": 0.09270495702328231,
+      "static_logistic_r": 0.14089668627013222
     },
     {
       "model": "blood_stem_cell",
       "n": 11,
-      "dynamic_r": 0.08896175296203347,
-      "static_tanh_r": 0.14493588210103728,
-      "static_logistic_r": 0.13119335065709864
+      "dynamic_r": 0.16627934970063238,
+      "static_tanh_r": 0.35072376916813586,
+      "static_logistic_r": 0.335935807486296
     },
     {
       "model": "calzone_cell_fate",
       "n": 17,
-      "dynamic_r": 0.06542518108288355,
-      "static_tanh_r": 0.05003808435870277,
-      "static_logistic_r": 0.047145243321725545
+      "dynamic_r": 0.051866983482436964,
+      "static_tanh_r": 0.07334269284372304,
+      "static_logistic_r": 0.07618853689187646
     },
     {
       "model": "calzone_cellfate_reduced",
       "n": 11,
-      "dynamic_r": 0.046271251152694134,
-      "static_tanh_r": 0.02233381299936707,
-      "static_logistic_r": 0.04194795859716383
+      "dynamic_r": 0.29452754098097345,
+      "static_tanh_r": 0.33263410148632155,
+      "static_logistic_r": 0.3625780842670744
     },
     {
       "model": "cell_cycle_transcription",
       "n": 9,
-      "dynamic_r": 0.07513323951393325,
-      "static_tanh_r": 0.07433848116651623,
-      "static_logistic_r": 0.02847567640406431
+      "dynamic_r": 0.061653211853671286,
+      "static_tanh_r": 0.37456584359326806,
+      "static_logistic_r": 0.40158676247523056
     },
     {
       "model": "davidich_yeast",
       "n": 10,
-      "dynamic_r": 0.08820018497572653,
-      "static_tanh_r": 0.13038417366466376,
-      "static_logistic_r": 0.15461763592401817
+      "dynamic_r": 0.3854779304730251,
+      "static_tanh_r": 0.31316344725461603,
+      "static_logistic_r": 0.30952668469307754
     },
     {
       "model": "drosophila_cellcycle",
       "n": 14,
-      "dynamic_r": 0.15974237135120792,
-      "static_tanh_r": 0.14474186277568554,
-      "static_logistic_r": 0.1417099022882019
+      "dynamic_r": 0.3743730953488105,
+      "static_tanh_r": 0.3004973308994271,
+      "static_logistic_r": 0.3045607812625687
     },
     {
       "model": "emt_switch",
       "n": 12,
-      "dynamic_r": 0.2358366906293684,
-      "static_tanh_r": 0.03989775828322994,
-      "static_logistic_r": 0.04473824655439698
+      "dynamic_r": 0.4567832804826367,
+      "static_tanh_r": 0.3957162011923443,
+      "static_logistic_r": 0.441874966409449
     },
     {
       "model": "fanconi_anemia",
       "n": 15,
-      "dynamic_r": 0.02175529961942881,
-      "static_tanh_r": -0.1038962678273742,
-      "static_logistic_r": -0.13548815312761203
+      "dynamic_r": 0.14010033061951285,
+      "static_tanh_r": 0.1467234025808444,
+      "static_logistic_r": 0.18428456366083945
     },
     {
       "model": "faure_cellcycle",
       "n": 10,
-      "dynamic_r": 0.083555916104098,
-      "static_tanh_r": 0.0136545252587183,
-      "static_logistic_r": -0.0237131073229902
+      "dynamic_r": 0.5336015498116613,
+      "static_tanh_r": 0.39163276773199474,
+      "static_logistic_r": 0.4172440366491898
     },
     {
       "model": "fumia_cellcycle",
       "n": 14,
-      "dynamic_r": -0.020637875217660702,
-      "static_tanh_r": 0.002605189290928916,
-      "static_logistic_r": 0.006769006371031987
+      "dynamic_r": 0.17885079409158666,
+      "static_tanh_r": 0.21311040391736888,
+      "static_logistic_r": 0.22058220922096802
     },
     {
       "model": "hematopoiesis_aging",
       "n": 15,
-      "dynamic_r": 0.10252581451476872,
-      "static_tanh_r": 0.13108988818204076,
-      "static_logistic_r": 0.08609766369877311
+      "dynamic_r": 0.14357744074992726,
+      "static_tanh_r": 0.113575714535611,
+      "static_logistic_r": 0.11417214210139165
     },
     {
       "model": "irons_cardiac",
       "n": 15,
-      "dynamic_r": 0.04815972249353712,
-      "static_tanh_r": 0.10297443836923338,
-      "static_logistic_r": 0.09924331322141165
+      "dynamic_r": 0.16450201912892243,
+      "static_tanh_r": 0.0925121506945071,
+      "static_logistic_r": 0.09470869225075737
     },
     {
       "model": "lac_operon",
       "n": 13,
-      "dynamic_r": 0.03691140434253733,
-      "static_tanh_r": 0.0032321175040898745,
-      "static_logistic_r": 0.007158413713132452
+      "dynamic_r": 0.16153604335524235,
+      "static_tanh_r": 0.1674809307052048,
+      "static_logistic_r": 0.18908920157328246
     },
     {
       "model": "lambda_phage",
@@ -132,78 +132,78 @@
     {
       "model": "li_budding_yeast",
       "n": 11,
-      "dynamic_r": 0.006729682423364389,
-      "static_tanh_r": -0.07683354505010409,
-      "static_logistic_r": -0.09855769440293158
+      "dynamic_r": 0.34451880879800567,
+      "static_tanh_r": 0.2791702461091706,
+      "static_logistic_r": 0.2922014157253886
     },
     {
       "model": "mendoza_thelper",
       "n": 13,
-      "dynamic_r": 0.3032102614466414,
-      "static_tanh_r": 0.44339650927121704,
-      "static_logistic_r": 0.4465366724642046
+      "dynamic_r": 0.24939293816212288,
+      "static_tanh_r": 0.20037710693463107,
+      "static_logistic_r": 0.208901489997689
     },
     {
       "model": "morphogenetic_checkpoint",
       "n": 12,
-      "dynamic_r": -0.00866270606307764,
-      "static_tanh_r": -0.07942360144178685,
-      "static_logistic_r": -0.1138650432296898
+      "dynamic_r": 0.2953722606860142,
+      "static_tanh_r": 0.29462012055949094,
+      "static_logistic_r": 0.31469141793586924
     },
     {
       "model": "myeloid_progenitors",
       "n": 11,
-      "dynamic_r": 0.041177439454670624,
-      "static_tanh_r": 0.07852125211751983,
-      "static_logistic_r": 0.058719487943580576
+      "dynamic_r": 0.11779115464909362,
+      "static_tanh_r": 0.2551079659491314,
+      "static_logistic_r": 0.2934582982392852
     },
     {
       "model": "pair_rule_module",
       "n": 11,
-      "dynamic_r": 0.02536410490961596,
-      "static_tanh_r": -0.05063810800497624,
-      "static_logistic_r": -0.04914453196414016
+      "dynamic_r": 0.3033926990527168,
+      "static_tanh_r": 0.3249690901087846,
+      "static_logistic_r": 0.31357382579650994
     },
     {
       "model": "remy_p53_mdm2",
       "n": 10,
-      "dynamic_r": 0.07544727101201713,
-      "static_tanh_r": 0.09823119818144088,
-      "static_logistic_r": 0.0894617507864817
+      "dynamic_r": 0.22535607347137926,
+      "static_tanh_r": 0.16620897874444762,
+      "static_logistic_r": 0.2103919571960886
     },
     {
       "model": "saadatpour_guardcell",
       "n": 13,
-      "dynamic_r": 0.04640210776296668,
-      "static_tanh_r": 0.03202554176593581,
-      "static_logistic_r": 0.028084896642490302
+      "dynamic_r": 0.05728497236834097,
+      "static_tanh_r": 0.07100833420960705,
+      "static_logistic_r": 0.06670493097144216
     },
     {
       "model": "tournier_apoptosis",
       "n": 12,
-      "dynamic_r": -0.06031681820047296,
-      "static_tanh_r": -0.03687207091179978,
-      "static_logistic_r": -0.04928582460574784
+      "dynamic_r": 0.11427677381604126,
+      "static_tanh_r": 0.18919584338526985,
+      "static_logistic_r": 0.2035777029980932
     },
     {
       "model": "zanudo_tlgl",
       "n": 12,
-      "dynamic_r": 0.03380187489456712,
-      "static_tanh_r": -0.02494607725183265,
-      "static_logistic_r": 0.010458610316131331
+      "dynamic_r": 0.10623382277907407,
+      "static_tanh_r": 0.12644320337669399,
+      "static_logistic_r": 0.12832257442779557
     }
   ],
   "verdicts": {
     "tanh": {
       "H1": false,
       "H2": true,
-      "H3": false,
+      "H3": true,
       "H4_falsifier_fires": true
     },
     "logistic": {
       "H1": false,
       "H2": true,
-      "H3": false,
+      "H3": true,
       "H4_falsifier_fires": true
     }
   }

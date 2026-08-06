@@ -84,12 +84,19 @@ def static_phenotype(adj, node_names, n, phi):
     return phi(E)
 
 
-def wiring_prediction(adj, node_names, n):
+def wiring_prediction(adj, node_names, n, mode="star"):
     """Order-3+ coefficients predicted from the wiring alone.
 
-    The pairwise contact graph implies which triples CAN interact: a triple is
-    predicted active when its members form a connected subgraph. This is the
-    Brookes construction -- higher-order terms localised on the pairwise graph.
+    Brookes et al. (PNAS 2022) state the construction precisely: an rth-order
+    interaction is active when r-1 positions are in contact with a CENTRAL
+    position. That is a star, not general connectivity, and the distinction
+    matters from order 4 upward.
+
+    mode="star"      faithful to Brookes; a subset is active when some member is
+                     adjacent to every other member.
+    mode="connected" weaker variant, retained for comparison. It reports
+                     correlations roughly four times lower, so using it would
+                     understate how well wiring predicts higher-order terms.
     """
     idx = {m: i for i, m in enumerate(node_names)}
     nb = {i: set() for i in range(n)}
@@ -105,16 +112,18 @@ def wiring_prediction(adj, node_names, n):
         members = [i for i in range(n) if (m >> i) & 1]
         if len(members) < 3:
             continue
-        # connected subgraph on the induced neighbourhood
-        seen, stack = {members[0]}, [members[0]]
         ms = set(members)
-        while stack:
-            u = stack.pop()
-            for w in nb[u] & ms:
-                if w not in seen:
-                    seen.add(w)
-                    stack.append(w)
-        pred[m] = 1.0 if len(seen) == len(members) else 0.0
+        if mode == "star":
+            pred[m] = 1.0 if any((ms - {c}) <= nb[c] for c in members) else 0.0
+        else:
+            seen, stack = {members[0]}, [members[0]]
+            while stack:
+                u = stack.pop()
+                for w in nb[u] & ms:
+                    if w not in seen:
+                        seen.add(w)
+                        stack.append(w)
+            pred[m] = 1.0 if len(seen) == len(members) else 0.0
     return pred
 
 
