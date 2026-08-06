@@ -95,3 +95,53 @@ Walsh basis, and the star predictor as verified against the source.
 ## Script
 
 `scripts/gnk_control.py`. To be written; nothing has been run.
+
+---
+
+# Post-run analysis note
+
+Recorded after the run, prompted by an external review. No prediction is
+changed; this documents a metric artifact and identifies which statistic should
+carry the claim.
+
+## The absolute correlation is confounded by class balance
+
+GNK's Spearman $\rho$ correlates with the **fraction of coefficients the
+predictor marks active** at $\rho = 0.975$ ($p < 0.001$), and with mean
+neighborhood size at $0.755$. Networks scoring below the H0 threshold have a
+mean active fraction of $0.04$; those at or above have $0.34$.
+
+Correlating a magnitude against a binary indicator is limited by that
+indicator's balance. So the absolute medians -- GNK $+0.583$, dynamic $+0.256$ --
+partly measure how sparse each network's predictions are, not how well the
+predictor works.
+
+**H0's threshold was therefore the wrong gate.** It is balance-confounded.
+
+## The gate that does validate the predictor
+
+The direct theorem check is balance-independent: for GNK, **100.0% of order-3+
+spectral energy sits on predicted-active coefficients, on every network tested**,
+against 78.9% under the earlier incorrect predictor. That is what the theorem
+requires and it is the check the positive control should have been built on.
+
+## The statistic that should carry the claim
+
+The **paired** within-network comparison, which holds graph, predictor and
+active fraction fixed and varies only the phenotype:
+
+- dynamic scores below GNK in **24 of 25 networks**
+- dynamic reaches a median of **0.58** of its own network's GNK value
+  (IQR $0.34$--$0.76$)
+
+Report the paired result. The absolute medians may be quoted alongside with the
+balance confound stated, and never on their own.
+
+## Still open
+
+Whether a regulatory edge list is a fair analogue of a structural contact map
+remains unresolved. The GNK control establishes that the predictor is correct
+**when the phenotype is built from the graph it is given**; it does not
+establish that this graph is the right object for the attractor phenotype. Any
+claim from this arm must be scoped to "structure created by dynamics is not
+localised on the regulatory graph", not to contact maps in general.
