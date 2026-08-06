@@ -1,0 +1,40 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "blood_stem_cell",
+  "clamp_level": 0.0,
+  "n_players": 11,
+  "n_coalitions": 2048,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.15340909105147718,
+    0.40151515069564514,
+    0.344696969080024,
+    0.09848484930435432,
+    0.0018939398684985856,
+    5.450414352382951e-16,
+    2.2325113202615553e-16,
+    7.068983715540775e-17,
+    1.387389316970059e-17,
+    1.4820071240608442e-18,
+    8.352424141984017e-20,
+    2.8725398186153125e-23
+  ],
+  "energy_3plus": 0.10037878917285376,
+  "energy_2plus": 0.44507575825287776,
+  "normalised_higher_order": 0.22553191745802015,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/blood_stem_cell_ode_coalition.npz"
+}

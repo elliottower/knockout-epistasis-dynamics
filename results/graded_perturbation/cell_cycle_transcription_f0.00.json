@@ -1,0 +1,38 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "cell_cycle_transcription",
+  "clamp_level": 0.0,
+  "n_players": 9,
+  "n_coalitions": 512,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.00195312656487873,
+    0.017578126610596795,
+    0.07031249996793532,
+    0.16406249960189181,
+    0.24609374919443427,
+    0.24609374908798454,
+    0.16406249934810396,
+    0.07031249970814824,
+    0.01757812492464768,
+    0.001953124991378605
+  ],
+  "energy_3plus": 0.9101562468565891,
+  "energy_2plus": 0.9804687468245245,
+  "normalised_higher_order": 0.9282868523900852,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/cell_cycle_transcription_ode_coalition.npz"
+}

@@ -1,0 +1,44 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "irons_cardiac",
+  "clamp_level": 0.0,
+  "n_players": 15,
+  "n_coalitions": 32768,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.2445835525594704,
+    0.3912558565666234,
+    0.22115736388798485,
+    0.1029712882524875,
+    0.03307549838228998,
+    0.005534299574672451,
+    0.0011570968063203256,
+    0.00023851528836171994,
+    2.6488363934498593e-05,
+    4.031785500348794e-08,
+    8.093555801248531e-30,
+    1.2561239343341234e-30,
+    1.8007592817308614e-31,
+    2.6842182268445645e-32,
+    3.0144899655768148e-33,
+    3.6858042998975416e-34
+  ],
+  "energy_3plus": 0.14300322698592147,
+  "energy_2plus": 0.36416059087390634,
+  "normalised_higher_order": 0.3926927585512336,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/irons_cardiac_ode_coalition.npz"
+}

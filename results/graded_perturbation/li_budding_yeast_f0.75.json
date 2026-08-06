@@ -1,0 +1,41 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "li_budding_yeast",
+  "clamp_level": 0.75,
+  "n_players": 11,
+  "n_coalitions": 2048,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.5117132737908207,
+    0.4796982979394369,
+    0.0019430870700017206,
+    0.002664203053424037,
+    0.002217986473376018,
+    0.0011769384660380094,
+    0.0004263174314859248,
+    0.00012200278857389667,
+    3.104755136852737e-05,
+    6.160047273912167e-06,
+    6.84119364538667e-07,
+    1.2688361085583917e-09
+  ],
+  "energy_3plus": 0.006645341199740973,
+  "energy_2plus": 0.008588428269742694,
+  "normalised_higher_order": 0.7737552193516852,
+  "spectrum_gated": false,
+  "elapsed_s": 1318.9,
+  "source": "computed"
+}

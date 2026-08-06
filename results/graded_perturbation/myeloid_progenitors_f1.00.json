@@ -1,0 +1,41 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "myeloid_progenitors",
+  "clamp_level": 1.0,
+  "n_players": 11,
+  "n_coalitions": 2048,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.9926568655106462,
+    0.004576864826759837,
+    0.0025132893392851717,
+    0.00021565531251851292,
+    3.732501072426206e-05,
+    6.049270315059703e-14,
+    5.339640947772647e-15,
+    2.052331064582073e-16,
+    1.507132228961811e-18,
+    6.782624560382801e-35,
+    5.793831919530356e-36,
+    9.250924998587142e-37
+  ],
+  "energy_3plus": 0.00025298032330881405,
+  "energy_2plus": 0.0027662696625939858,
+  "normalised_higher_order": 0.09145179399162025,
+  "spectrum_gated": false,
+  "elapsed_s": 1197.8,
+  "source": "computed"
+}

@@ -1,0 +1,40 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "albert_segment_polarity",
+  "clamp_level": 0.0,
+  "n_players": 11,
+  "n_coalitions": 2048,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.09101320756899259,
+    0.3050310194930657,
+    0.3721881301734013,
+    0.19400414550026934,
+    0.03659370311699286,
+    0.0008952077389696178,
+    0.00019024915450537928,
+    6.780603132158574e-05,
+    1.4569891001927132e-05,
+    1.821236373766658e-06,
+    1.4009510590555704e-07,
+    1.3026046077985725e-24
+  ],
+  "energy_3plus": 0.23176764276454037,
+  "energy_2plus": 0.6039557729379417,
+  "normalised_higher_order": 0.3837493623698754,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/albert_segment_polarity_ode_coalition.npz"
+}

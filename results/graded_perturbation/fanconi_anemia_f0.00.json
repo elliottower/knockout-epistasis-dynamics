@@ -1,0 +1,44 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "fanconi_anemia",
+  "clamp_level": 0.0,
+  "n_players": 15,
+  "n_coalitions": 32768,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.4748610007528358,
+    0.4941703191218507,
+    0.02381614440107129,
+    0.005208967470902367,
+    0.0010687009196968962,
+    0.0005381513535018638,
+    0.00023398504691969892,
+    8.001209666509327e-05,
+    2.0117342869257272e-05,
+    2.5418186062310413e-06,
+    5.0345703516764234e-08,
+    8.003278946066385e-09,
+    1.1812158229841322e-09,
+    1.3519486453696312e-10,
+    9.687673639233242e-12,
+    7.934444561235508e-17
+  ],
+  "energy_3plus": 0.007152535724242311,
+  "energy_2plus": 0.0309686801253136,
+  "normalised_higher_order": 0.23096030232156628,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/fanconi_anemia_ode_coalition.npz"
+}

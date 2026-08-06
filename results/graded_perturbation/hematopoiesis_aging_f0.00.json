@@ -1,0 +1,44 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "hematopoiesis_aging",
+  "clamp_level": 0.0,
+  "n_players": 15,
+  "n_coalitions": 32768,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.37008621149686866,
+    0.48412623255620707,
+    0.12635299646586634,
+    0.015533079549802355,
+    0.0034879134509968115,
+    0.0003282505829533691,
+    7.113353286595143e-05,
+    1.213881456852576e-05,
+    1.7144383343685173e-06,
+    2.984964687047234e-07,
+    3.061506791654151e-08,
+    3.0961393603067074e-28,
+    3.9100824531890597e-29,
+    8.458547579828328e-30,
+    1.5948032989479393e-30,
+    1.6919228930027241e-31
+  ],
+  "energy_3plus": 0.019434559481058003,
+  "energy_2plus": 0.14578755594692433,
+  "normalised_higher_order": 0.13330739619596466,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/hematopoiesis_aging_ode_coalition.npz"
+}

@@ -1,0 +1,39 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "faure_cellcycle",
+  "clamp_level": 0.0,
+  "n_players": 10,
+  "n_coalitions": 1024,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.3541296837203355,
+    0.4887139364401165,
+    0.14236065478699214,
+    0.010446319765780292,
+    0.003274500443068059,
+    0.000791946327777019,
+    0.00022629268549761894,
+    4.668871713045767e-05,
+    8.865248974019997e-06,
+    1.1087491957052647e-06,
+    3.1151326862566015e-09
+  ],
+  "energy_3plus": 0.014795725052555858,
+  "energy_2plus": 0.157156379839548,
+  "normalised_higher_order": 0.09414651233161425,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/faure_cellcycle_ode_coalition.npz"
+}

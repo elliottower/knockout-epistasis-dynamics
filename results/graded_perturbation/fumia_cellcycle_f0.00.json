@@ -1,0 +1,43 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "fumia_cellcycle",
+  "clamp_level": 0.0,
+  "n_players": 14,
+  "n_coalitions": 16384,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.024713807731059613,
+    0.12418858861237705,
+    0.25810201092034174,
+    0.288087231401069,
+    0.1907217714113393,
+    0.08148703224423956,
+    0.025517576258381098,
+    0.006112674498929838,
+    0.0009222209204228217,
+    0.00012117962578513289,
+    2.231773003677653e-05,
+    3.27382243647978e-06,
+    2.9450233943819747e-07,
+    1.9795162898249034e-08,
+    5.26079259912742e-10
+  ],
+  "energy_3plus": 0.5929955927362216,
+  "energy_2plus": 0.8510976036565634,
+  "normalised_higher_order": 0.6967421717421594,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/fumia_cellcycle_ode_coalition.npz"
+}

@@ -1,0 +1,41 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "morphogenetic_checkpoint",
+  "clamp_level": 0.0,
+  "n_players": 12,
+  "n_coalitions": 4096,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.11430561997933837,
+    0.3485480137364604,
+    0.363447391594558,
+    0.14302983071852185,
+    0.01968382387301909,
+    0.007648918238918532,
+    0.002400734799628266,
+    0.0007531415840556245,
+    0.00016191776053759262,
+    2.0095722043637872e-05,
+    5.119929186812771e-07,
+    1.1991546731816542e-24,
+    1.537156284279166e-26
+  ],
+  "energy_3plus": 0.17369897468964327,
+  "energy_2plus": 0.5371463662842013,
+  "normalised_higher_order": 0.32337363815980846,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/morphogenetic_checkpoint_ode_coalition.npz"
+}

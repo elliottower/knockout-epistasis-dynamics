@@ -1,0 +1,39 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "arellano_rootstem",
+  "clamp_level": 1.0,
+  "n_players": 9,
+  "n_coalitions": 512,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.6375591319713659,
+    0.3326075963339726,
+    0.02129561463060635,
+    0.0069068545431172634,
+    0.0014048245085922539,
+    0.00020841688046248653,
+    1.687190764878631e-05,
+    6.616574655450241e-07,
+    2.7566768665320243e-08,
+    1.8081599479769126e-32
+  ],
+  "energy_3plus": 0.008537657064055,
+  "energy_2plus": 0.02983327169466135,
+  "normalised_higher_order": 0.2861790403491954,
+  "spectrum_gated": false,
+  "elapsed_s": 355.3,
+  "source": "computed"
+}

@@ -1,0 +1,42 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "lac_operon",
+  "clamp_level": 0.0,
+  "n_players": 13,
+  "n_coalitions": 8192,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.038895214540552475,
+    0.1659546803994477,
+    0.29428790678365546,
+    0.2819564636911462,
+    0.15720985037896498,
+    0.050437845727848894,
+    0.009314170434882483,
+    0.00161200377779756,
+    0.0002900449001391892,
+    3.8832462160861105e-05,
+    2.810243968089779e-06,
+    1.7394159874672713e-07,
+    2.717837311094981e-09,
+    2.8908668818071766e-25
+  ],
+  "energy_3plus": 0.5008621982763443,
+  "energy_2plus": 0.7951501050599997,
+  "normalised_higher_order": 0.6298964121227786,
+  "spectrum_gated": false,
+  "source": "adopted from /results/ode_coalitions/lac_operon_ode_coalition.npz"
+}

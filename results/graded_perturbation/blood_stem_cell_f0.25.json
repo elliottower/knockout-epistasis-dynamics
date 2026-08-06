@@ -1,0 +1,41 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "blood_stem_cell",
+  "clamp_level": 0.25,
+  "n_players": 11,
+  "n_coalitions": 2048,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.536563512702474,
+    0.46126814526557597,
+    0.0014623722866167258,
+    0.0005281539488743303,
+    0.00014817975014735398,
+    2.963604628777052e-05,
+    1.4991741418808018e-14,
+    6.529218260191525e-15,
+    2.0014719960475858e-15,
+    4.0265505705675e-16,
+    4.1053916363797746e-17,
+    2.077103843127344e-20
+  ],
+  "energy_3plus": 0.0007059697453334209,
+  "energy_2plus": 0.0021683420319501467,
+  "normalised_higher_order": 0.32558043654141194,
+  "spectrum_gated": false,
+  "elapsed_s": 2254.7,
+  "source": "computed"
+}

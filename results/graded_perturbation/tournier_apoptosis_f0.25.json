@@ -1,0 +1,42 @@
+{
+  "prereg": "prereg_graded_perturbation_v1.md",
+  "prereg_commit": "3095900",
+  "amendments": [
+    "98d9bea",
+    "2afd478"
+  ],
+  "model": "tournier_apoptosis",
+  "clamp_level": 0.25,
+  "n_players": 12,
+  "n_coalitions": 4096,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "seed": 42,
+  "global_spectrum": [
+    0.5813336278422219,
+    0.20186760490461242,
+    0.12075453152923293,
+    0.06710252754313073,
+    0.022323217502147188,
+    0.004646167465538476,
+    0.0014377905336592142,
+    0.0003759885625212374,
+    0.00011718349740438312,
+    3.2607325468063275e-05,
+    7.420498651938924e-06,
+    1.2153193742618975e-06,
+    1.1747603725551728e-07
+  ],
+  "energy_3plus": 0.09604423572393275,
+  "energy_2plus": 0.2167987672531657,
+  "normalised_higher_order": 0.443010986366807,
+  "spectrum_gated": false,
+  "elapsed_s": 1060.3,
+  "source": "computed"
+}
