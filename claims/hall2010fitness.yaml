@@ -1,0 +1,27 @@
+source:
+  citation: hall2010fitness
+  local: reference/hall_2010_abstract.txt
+  sha256: 8d5e3f70c21276bc23cf6e204932e537662646b62aacb3885392d1a2a4d2789a
+  extract_cmd: cp
+
+claims:
+
+  six-loci-four-components:
+    statement: >
+      Hall et al. generated all genotypes at six biosynthetic loci in yeast and
+      measured four fitness components.
+    verified: true
+    quotes:
+      - exact: 'all possible haploid and homozygous diploid genotypes at 6 biosynthetic loci in yeast'
+        section: 'Abstract'
+      - exact: 'We measured 4 components of fitness: haploid growth rate, haploid mating efficiency, diploid growth rate, and diploid sporulation efficiency'
+        section: 'Abstract'
+    notes: >
+      Source is the publisher abstract via Europe PMC; the full text is bronze
+      OA behind an OUP redirect that did not yield a PDF. Six loci and four
+      components are confirmed; "all 64 genotypes" follows as 2^6 and is not
+      separately quoted.
+
+      Note that Hall's components are haploid MATING efficiency and diploid
+      SPORULATION efficiency. composition_gap_v14.tex:1024 drops the
+      haploid/diploid qualifiers, which matters here since both appear.

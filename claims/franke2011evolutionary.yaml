@@ -1,0 +1,51 @@
+source:
+  citation: franke2011evolutionary
+  local: reference/franke_2011.txt
+  sha256: 6718659d1fdf179ee2a075c2365338c1da9437289105547c3083841acb576b55
+  extract_cmd: cp
+
+claims:
+
+  eight-loci-186-of-256:
+    statement: >
+      Franke et al. report fitness for 186 of the 256 genotypes formed by eight
+      mutations in Aspergillus niger.
+    verified: true
+    quotes:
+      - exact: 'The full data set contains fitness values for 186 out of the possible strains'
+        section: 'Results'
+      - exact: 'eight marker mutations in the fungus Aspergillus niger'
+        section: 'Introduction'
+
+  seventy-are-missing-not-measured-zero:
+    statement: >
+      The 70 genotypes absent from the data set were never isolated. Their zero
+      fitness is an inference from statistical analysis, not a measurement.
+    verified: true
+    quotes:
+      - exact: 'the 70 missing combinations can be treated as non-viable genotypes with zero fitness'
+        section: 'Results'
+      - exact: 'missing genotypes are assigned zero fitness'
+        section: 'Data analysis'
+    notes: >
+      CONTRADICTS the paper as written. composition_gap_v14.tex:1038 says
+      "Seventy genotypes showed no measurable sporulation (lethal or
+      near-lethal)", which implies they were measured. They were not isolated at
+      all -- 186 were recovered from among 2,500 strains tested. The 70 sit
+      OUTSIDE the 186, so v14:1039's "analyze the full 186-genotype dataset both
+      with and without these zero-fitness genotypes" does not parse.
+
+  measures-growth-rate-not-sporulation:
+    statement: >
+      Franke et al. measure mycelium growth rate. They do not measure
+      sporulation.
+    verified: true
+    quotes:
+      - exact: 'expressed relative to the mycelium growth rate of the olvA1 strain'
+        section: 'Data'
+    notes: >
+      CONTRADICTS the paper as written. The string "sporulation" appears ZERO
+      times in Franke et al. It appears nine times in composition_gap_v14.tex,
+      including the abstract (line 91), a results table (line 719), and the
+      dataset description (lines 1035-1039). Sporulation efficiency is one of
+      HALL's four fitness components; the label appears to have bled across.
