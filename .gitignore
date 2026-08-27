@@ -5,3 +5,49 @@ __pycache__/
 
 # Third-party PDFs for claim verification
 reference/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.toc
+
+# Slides (source not tracked)
+slides/
+
+# Vendor templates
+*.zip
+
+# Compiled paper PDFs (figures in paper/figures/ ARE tracked)
+paper/composition_gap.pdf
+paper/composition_gap_v[0-9]*.pdf
+paper/epistasis_bench*.pdf
+!paper/composition_gap_v15.pdf
+paper/fig_schematic.pdf
+paper/figures/*.png
+
+# Intermediate computation shards
+results/grn_v2/ode_full/calzone_shards/
+results/grn_v2/ode_full/grieco_shards/
+results/grn_v2/ode_chunks/
+results/grn_v2/ode_coalitions/
+results/grn_v2/budget_sweep/
+
+# Submission materials — never tracked (private journal correspondence)
+SUBMISSION_STATUS.md
+SUBMISSION.md
+SUBMISSION_TODO.md
+submission/
+submissions/
+cover_letter*
+cover-letter*
+COVER_LETTER*
+fee_waiver*
+fee-waiver*
+*_submission.zip
