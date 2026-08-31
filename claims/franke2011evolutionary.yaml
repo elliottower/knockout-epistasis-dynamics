@@ -2,7 +2,7 @@ source:
   citation: franke2011evolutionary
   local: reference/franke_2011.txt
   sha256: 6718659d1fdf179ee2a075c2365338c1da9437289105547c3083841acb576b55
-  extract_cmd: cp
+  extract_cmd: cat
 
 claims:
 

@@ -1,0 +1,244 @@
+{
+  "source": "committed result files under results/",
+  "null_band_pp": 0.5,
+  "composition": {
+    "n_networks_in_grn_v2": 27,
+    "creation": 18,
+    "destruction": 6,
+    "null": 3,
+    "median_delta_3plus_pp": 8.46,
+    "mean_delta_3plus_pp": 20.02,
+    "max_delta_3plus_pp": 83.25,
+    "median_spearman_rho": 0.266,
+    "n_negative_rho": 5,
+    "n_significant_positive": 15,
+    "note": "Grieco bladder is stored separately and is not in this glob; the manuscript's 28-network counts add it (creation)."
+  },
+  "ode": {
+    "n_usable": 28,
+    "n_nonnull": 25,
+    "sign_agreement_nonnull": "25/25",
+    "median_abs_diff_pp": 1.41
+  },
+  "topology_fit": {
+    "cv_r2_loo": -0.2726732122751163
+  },
+  "frozen_structural_predictions": {
+    "direction_hits": "10/21",
+    "source": "results/grn_v2/blind_batch2_scorecard.md"
+  },
+  "null_models": {
+    "kauffman_nk": {
+      "n": 26,
+      "mean_delta_3plus_pp": 353.4
+    },
+    "degree_preserving": {
+      "n": 25,
+      "mean_delta_3plus_pp": 379.91
+    },
+    "rule_preserving": {
+      "n": 26,
+      "mean_delta_3plus_pp": 1032.62
+    }
+  },
+  "real_networks_n_le_15": {
+    "n": 26,
+    "mean_delta_3plus_pp": 18.56
+  },
+  "gnk_control": {
+    "n_networks": 25,
+    "gnk_median": 0.5830641484804606,
+    "dynamic_median": 0.25632395508972544
+  },
+  "per_network": [
+    {
+      "model": "albert_segment_polarity",
+      "n_players": 11,
+      "delta_3plus_pp": 19.839,
+      "spearman_rho": 0.20873195993520632,
+      "spearman_p": 0.12617955533288322
+    },
+    {
+      "model": "arabidopsis_cellcycle",
+      "n_players": 14,
+      "delta_3plus_pp": 34.303,
+      "spearman_rho": 0.20450626958426807,
+      "spearman_p": 0.051835090108637724
+    },
+    {
+      "model": "arellano_rootstem",
+      "n_players": 9,
+      "delta_3plus_pp": 50.591,
+      "spearman_rho": 0.603325513942056,
+      "spearman_p": 9.820339395317935e-05
+    },
+    {
+      "model": "asymmetric_cell_division",
+      "n_players": 9,
+      "delta_3plus_pp": 44.085,
+      "spearman_rho": -0.10375020484289514,
+      "spearman_p": 0.5470671482144096
+    },
+    {
+      "model": "blood_stem_cell",
+      "n_players": 11,
+      "delta_3plus_pp": 4.777,
+      "spearman_rho": 0.594950989801604,
+      "spearman_p": 1.6657787119172318e-06
+    },
+    {
+      "model": "calzone_cell_fate",
+      "n_players": 17,
+      "delta_3plus_pp": 58.209,
+      "spearman_rho": -0.015813895651348504,
+      "spearman_p": 0.8550104228118509
+    },
+    {
+      "model": "calzone_cellfate_reduced",
+      "n_players": 11,
+      "delta_3plus_pp": 37.037,
+      "spearman_rho": -0.07497196869696607,
+      "spearman_p": 0.586439586520175
+    },
+    {
+      "model": "cell_cycle_transcription",
+      "n_players": 9,
+      "delta_3plus_pp": 83.252,
+      "spearman_rho": -0.38252136043685014,
+      "spearman_p": 0.021308346046458728
+    },
+    {
+      "model": "davidich_yeast",
+      "n_players": 10,
+      "delta_3plus_pp": -0.376,
+      "spearman_rho": 0.15411673622291389,
+      "spearman_p": 0.31210781562677214
+    },
+    {
+      "model": "drosophila_cellcycle",
+      "n_players": 14,
+      "delta_3plus_pp": 6.158,
+      "spearman_rho": 0.12001774561384927,
+      "spearman_p": 0.25714246318548095
+    },
+    {
+      "model": "emt_switch",
+      "n_players": 12,
+      "delta_3plus_pp": -3.82,
+      "spearman_rho": 0.3771255104859412,
+      "spearman_p": 0.0018001310103809706
+    },
+    {
+      "model": "fanconi_anemia",
+      "n_players": 15,
+      "delta_3plus_pp": -5.482,
+      "spearman_rho": 0.30515850148036544,
+      "spearman_p": 0.0015488413858142486
+    },
+    {
+      "model": "faure_cellcycle",
+      "n_players": 10,
+      "delta_3plus_pp": -3.023,
+      "spearman_rho": 0.408596220576299,
+      "spearman_p": 0.005326566258609206
+    },
+    {
+      "model": "fumia_cellcycle",
+      "n_players": 14,
+      "delta_3plus_pp": 52.24,
+      "spearman_rho": 0.26621749659107447,
+      "spearman_p": 0.010752126999175327
+    },
+    {
+      "model": "hematopoiesis_aging",
+      "n_players": 15,
+      "delta_3plus_pp": 0.933,
+      "spearman_rho": 0.6307390872030556,
+      "spearman_p": 5.546660500897168e-13
+    },
+    {
+      "model": "irons_cardiac",
+      "n_players": 15,
+      "delta_3plus_pp": 10.92,
+      "spearman_rho": 0.6344630822880182,
+      "spearman_p": 3.680432077955656e-13
+    },
+    {
+      "model": "lac_operon",
+      "n_players": 13,
+      "delta_3plus_pp": 47.434,
+      "spearman_rho": 0.07886720388334488,
+      "spearman_p": 0.4924855721412703
+    },
+    {
+      "model": "lambda_phage",
+      "n_players": 7,
+      "delta_3plus_pp": -2.498,
+      "spearman_rho": 0.6057291709074122,
+      "spearman_p": 0.003612839594695832
+    },
+    {
+      "model": "li_budding_yeast",
+      "n_players": 11,
+      "delta_3plus_pp": 6.35,
+      "spearman_rho": 0.527928668814889,
+      "spearman_p": 3.4402870289421346e-05
+    },
+    {
+      "model": "mendoza_thelper",
+      "n_players": 13,
+      "delta_3plus_pp": -0.345,
+      "spearman_rho": 0.21478985983208618,
+      "spearman_p": 0.058965429384236365
+    },
+    {
+      "model": "morphogenetic_checkpoint",
+      "n_players": 12,
+      "delta_3plus_pp": 11.906,
+      "spearman_rho": 0.4004680634295299,
+      "spearman_p": 0.0008626321899927871
+    },
+    {
+      "model": "myeloid_progenitors",
+      "n_players": 11,
+      "delta_3plus_pp": -2.278,
+      "spearman_rho": 0.5144389094382303,
+      "spearman_p": 5.872175951113131e-05
+    },
+    {
+      "model": "pair_rule_module",
+      "n_players": 11,
+      "delta_3plus_pp": -2.74,
+      "spearman_rho": 0.6600535262550735,
+      "spearman_p": 4.20807929501448e-08
+    },
+    {
+      "model": "remy_p53_mdm2",
+      "n_players": 10,
+      "delta_3plus_pp": 0.082,
+      "spearman_rho": 0.5045376330538909,
+      "spearman_p": 0.0004091295204792105
+    },
+    {
+      "model": "saadatpour_guardcell",
+      "n_players": 13,
+      "delta_3plus_pp": 51.397,
+      "spearman_rho": 0.06504752211013896,
+      "spearman_p": 0.5715237536058049
+    },
+    {
+      "model": "tournier_apoptosis",
+      "n_players": 12,
+      "delta_3plus_pp": 8.461,
+      "spearman_rho": 0.24673373560158016,
+      "spearman_p": 0.04580682325970198
+    },
+    {
+      "model": "zanudo_tlgl",
+      "n_players": 12,
+      "delta_3plus_pp": 33.234,
+      "spearman_rho": -0.19343086463763193,
+      "spearman_p": 0.11967202847844619
+    }
+  ]
+}

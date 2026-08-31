@@ -51,3 +51,6 @@ COVER_LETTER*
 fee_waiver*
 fee-waiver*
 *_submission.zip
+
+# citations audit cache
+paper/.audit-cache/

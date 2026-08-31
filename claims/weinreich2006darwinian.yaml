@@ -1,0 +1,68 @@
+source:
+  citation: weinreich2006darwinian
+  local: reference/weinreich_2006_abstract.txt
+  sha256: ffd9906eb1976cb611a8f3ce33681d519cc2241848b0930270f59428644bb36c
+  extract_cmd: cat
+  note: >
+    Artifact fetched from EuropePMC with
+    curl -s "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:%2210.1126/science.1123539%22&resultType=core&format=json"
+    and stored at the local path above; the sha256 pins that stored copy.
+
+claims:
+
+  five-mutations:
+    statement: >
+      The landscape is built from five point mutations in a single TEM-1
+      beta-lactamase allele, giving 2^5 = 32 genotypes.
+    verified: true
+    quotes:
+      - exact: 'Five point mutations in a particular beta-lactamase allele'
+        section: 'Abstract'
+    notes: >
+      The count of 32 genotypes follows as 2^5 and is not separately quoted.
+      The 32 tabulated genotypes are present in data/weinreich_2006/fitness_data.json.
+
+  hundred-thousand-fold:
+    statement: >
+      The abstract reports the five mutations jointly increasing resistance by a
+      factor of approximately 100,000. The tabulated median MICs give 4.7e4 for
+      the same comparison.
+    verified: true
+    quotes:
+      - exact: 'jointly increase bacterial resistance to a clinically important antibiotic by a factor of approximately 100,000'
+        section: 'Abstract'
+    notes: >
+      UNRESOLVED DISCREPANCY, disclosed in composition_gap_v16.tex.
+
+      The abstract states approximately 1e5. The median MICs in the reproduced
+      Table S1 (data/weinreich_2006/fitness_data.json, via OgPlexus/DEFPreflect
+      FINAL_DataBinary_MIC.csv) give wild type 00000 = 0.088 ug/mL and quintuple
+      mutant 11111 = 4100 ug/mL, a factor of 4.66e4 — about half the stated
+      value. A wild-type MIC of 0.041 would reproduce 1e5, and MIC is assayed on
+      a twofold dilution series, so one dilution step spans the whole gap.
+
+      The Science full text is closed access with no repository copy (OpenAlex
+      oa_status: closed, any_repository_has_fulltext: false, checked against
+      reference/weinreich_openalex.json), so the body text and Table S1 could
+      not be read to settle which value the 1e5 refers to.
+
+      The paper therefore quotes the range over the tabulated medians
+      (0.071-4100 ug/mL, factor 5.75e4) as the range it analyzes, states the
+      abstract's figure alongside it, and does not claim to reconcile them.
+      Nothing downstream depends on the resolution: the Walsh decomposition runs
+      on log-transformed tabulated values.
+
+  accessible-trajectories:
+    statement: >
+      Of the 120 mutational trajectories linking wild type to the quintuple
+      mutant, 102 are inaccessible to selection, leaving 18.
+    verified: true
+    quotes:
+      - exact: 'any of the 120 mutational trajectories linking these alleles'
+        section: 'Abstract'
+      - exact: '102 trajectories are inaccessible to Darwinian selection'
+        section: 'Abstract'
+    notes: >
+      The figure of 18 accessible trajectories recorded in
+      data/weinreich_2006/fitness_data.json is 120 - 102 and is arithmetic on
+      the two quoted numbers rather than a separate quoted claim.

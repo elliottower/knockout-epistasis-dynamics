@@ -2,7 +2,7 @@ source:
   citation: hall2010fitness
   local: reference/hall_2010_abstract.txt
   sha256: 8d5e3f70c21276bc23cf6e204932e537662646b62aacb3885392d1a2a4d2789a
-  extract_cmd: cp
+  extract_cmd: cat
 
 claims:
 
