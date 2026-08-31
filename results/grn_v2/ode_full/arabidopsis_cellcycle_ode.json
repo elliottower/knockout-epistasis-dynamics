@@ -1,0 +1,45 @@
+{
+  "model": "arabidopsis_cellcycle",
+  "method": "ode_hill",
+  "description": "Arabidopsis thaliana cell cycle (14 nodes, no inputs)",
+  "n_players": 14,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 10.0,
+    "t_tail": 5.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.03978166969781757,
+  "ode_global_o3plus": 0.5566462525529178,
+  "ode_delta_o3plus": 0.5168645828551002,
+  "boolean_delta_o3plus": 0.34302965094268234,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.03654119926482793,
+    0.1489893023699648,
+    0.2578232458122893,
+    0.2570855849656538,
+    0.17154891949072482,
+    0.08369142767552783,
+    0.0317433372391115,
+    0.009835237079786344,
+    0.0022941649537546794,
+    0.00039231148460588846,
+    4.841032754605478e-05,
+    6.069298687626043e-06,
+    7.216034691522692e-07,
+    6.712577369925701e-08,
+    1.3082764106801593e-09
+  ],
+  "n_unique_values": 1127,
+  "v_mean_range": [
+    0.0,
+    0.998306969921566
+  ],
+  "v_mean_std": 0.14597704598004937,
+  "npz_path": "results/grn_v2/ode_coalitions/arabidopsis_cellcycle_ode_coalition.npz",
+  "timestamp": "2026-08-06T23:33:49+00:00"
+}

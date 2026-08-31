@@ -1,0 +1,46 @@
+{
+  "model": "fanconi_anemia",
+  "method": "ode_hill",
+  "description": "Fanconi anemia and checkpoint recovery (15 nodes, no inputs)",
+  "n_players": 15,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.06515894687162892,
+  "ode_global_o3plus": 0.007152535724242311,
+  "ode_delta_o3plus": -0.058006411147386604,
+  "boolean_delta_o3plus": -0.05482384994035306,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.4748610007528358,
+    0.4941703191218507,
+    0.02381614440107129,
+    0.005208967470902367,
+    0.0010687009196968962,
+    0.0005381513535018638,
+    0.00023398504691969892,
+    8.001209666509327e-05,
+    2.0117342869257272e-05,
+    2.5418186062310413e-06,
+    5.0345703516764234e-08,
+    8.003278946066385e-09,
+    1.1812158229841322e-09,
+    1.3519486453696312e-10,
+    9.687673639233242e-12,
+    7.934444561235508e-17
+  ],
+  "n_unique_values": 68,
+  "v_mean_range": [
+    0.0,
+    0.500000000000048
+  ],
+  "v_mean_std": 0.22293458720236584,
+  "npz_path": "/results/ode_coalitions/fanconi_anemia_ode_coalition.npz",
+  "timestamp": "2026-08-05T01:52:15+00:00"
+}

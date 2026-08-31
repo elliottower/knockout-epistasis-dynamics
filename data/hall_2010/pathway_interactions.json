@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "source": "Standard yeast biochemistry (SGD, KEGG)",
+    "note": "The 6 loci studied are biosynthetic genes for amino acids, nucleotides, or vitamins. Each catalyzes a step in a distinct biosynthetic pathway, but the pathways share common precursors from central carbon metabolism. The specific pathway interactions below are based on the 7 candidate genes; the actual 6 used in the study are a subset of these."
+  },
+  "candidate_genes": {
+    "ADE2": {
+      "full_name": "phosphoribosylaminoimidazole carboxylase",
+      "pathway": "de novo purine biosynthesis",
+      "product": "adenine (AMP)",
+      "precursor_from_central_metabolism": "PRPP (from pentose phosphate pathway)",
+      "sgd_id": "S000005654"
+    },
+    "HIS3": {
+      "full_name": "imidazoleglycerol-phosphate dehydratase",
+      "pathway": "histidine biosynthesis",
+      "product": "histidine",
+      "precursor_from_central_metabolism": "PRPP and ATP",
+      "sgd_id": "S000005728"
+    },
+    "LEU2": {
+      "full_name": "beta-isopropylmalate dehydrogenase",
+      "pathway": "leucine biosynthesis (branched-chain amino acid)",
+      "product": "leucine",
+      "precursor_from_central_metabolism": "pyruvate (from glycolysis)",
+      "sgd_id": "S000000523"
+    },
+    "LYS2": {
+      "full_name": "alpha-aminoadipate reductase",
+      "pathway": "lysine biosynthesis (aminoadipate pathway)",
+      "product": "lysine",
+      "precursor_from_central_metabolism": "alpha-ketoglutarate (from TCA cycle) and acetyl-CoA",
+      "sgd_id": "S000000714"
+    },
+    "MET15": {
+      "full_name": "O-acetylhomoserine O-acetylserine sulfhydrylase",
+      "pathway": "methionine/cysteine biosynthesis (sulfur amino acid)",
+      "product": "methionine",
+      "precursor_from_central_metabolism": "oxaloacetate (from TCA cycle, via aspartate)",
+      "sgd_id": "S000004294"
+    },
+    "TRP1": {
+      "full_name": "phosphoribosylanthranilate isomerase",
+      "pathway": "tryptophan biosynthesis (aromatic amino acid)",
+      "product": "tryptophan",
+      "precursor_from_central_metabolism": "chorismate (from shikimate pathway, uses PEP + E4P)",
+      "sgd_id": "S000002414"
+    },
+    "URA3": {
+      "full_name": "orotidine-5'-phosphate decarboxylase",
+      "pathway": "de novo pyrimidine biosynthesis",
+      "product": "uracil (UMP)",
+      "precursor_from_central_metabolism": "aspartate (from TCA cycle) and carbamoyl phosphate",
+      "sgd_id": "S000000747"
+    }
+  },
+  "pathway_connections": {
+    "shared_precursor_PRPP": {
+      "genes": [
+        "ADE2",
+        "HIS3"
+      ],
+      "description": "Both purine (ADE2) and histidine (HIS3) biosynthesis use PRPP (5-phosphoribosyl-1-pyrophosphate) as a key precursor. PRPP is produced from ribose-5-phosphate by the pentose phosphate pathway.",
+      "interaction_type": "shared_precursor"
+    },
+    "shared_precursor_aspartate_oxaloacetate": {
+      "genes": [
+        "MET15",
+        "URA3"
+      ],
+      "description": "Methionine (MET15) and pyrimidine (URA3) biosynthesis both draw on aspartate/oxaloacetate from the TCA cycle.",
+      "interaction_type": "shared_precursor"
+    },
+    "shared_precursor_TCA_cycle": {
+      "genes": [
+        "LYS2",
+        "MET15",
+        "URA3"
+      ],
+      "description": "Lysine (LYS2, via alpha-ketoglutarate), methionine (MET15, via oxaloacetate/aspartate), and pyrimidine (URA3, via aspartate) biosynthesis all draw precursors from the TCA cycle.",
+      "interaction_type": "shared_precursor"
+    },
+    "purine_histidine_link": {
+      "genes": [
+        "ADE2",
+        "HIS3"
+      ],
+      "description": "Histidine biosynthesis produces AICAR (5-aminoimidazole-4-carboxamide ribotide), which feeds into the purine biosynthetic pathway. This creates a direct metabolic link between HIS3 and ADE2 pathways.",
+      "interaction_type": "metabolite_feed"
+    },
+    "all_pathways_share_central_metabolism": {
+      "genes": [
+        "ADE2",
+        "HIS3",
+        "LEU2",
+        "LYS2",
+        "MET15",
+        "TRP1",
+        "URA3"
+      ],
+      "description": "All biosynthetic pathways ultimately draw precursors from central carbon metabolism (glycolysis, pentose phosphate pathway, TCA cycle). Competition for these shared metabolic resources creates potential for indirect epistatic interactions among all loci, though the strength depends on metabolic flux.",
+      "interaction_type": "indirect_competition"
+    }
+  },
+  "pairwise_pathway_relationships": [
+    {
+      "gene1": "ADE2",
+      "gene2": "HIS3",
+      "same_pathway": false,
+      "shared_precursor": true,
+      "metabolite_link": true,
+      "notes": "Both use PRPP; HIS produces AICAR for purine pathway"
+    },
+    {
+      "gene1": "ADE2",
+      "gene2": "LEU2",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "ADE2",
+      "gene2": "LYS2",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "ADE2",
+      "gene2": "MET15",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "ADE2",
+      "gene2": "TRP1",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "ADE2",
+      "gene2": "URA3",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": true,
+      "notes": "Purine and pyrimidine biosynthesis share some regulatory connections"
+    },
+    {
+      "gene1": "HIS3",
+      "gene2": "LEU2",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "HIS3",
+      "gene2": "LYS2",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "HIS3",
+      "gene2": "MET15",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "HIS3",
+      "gene2": "TRP1",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "HIS3",
+      "gene2": "URA3",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "LEU2",
+      "gene2": "LYS2",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "LEU2",
+      "gene2": "MET15",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "LEU2",
+      "gene2": "TRP1",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "LEU2",
+      "gene2": "URA3",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "LYS2",
+      "gene2": "MET15",
+      "same_pathway": false,
+      "shared_precursor": true,
+      "metabolite_link": false,
+      "notes": "Both draw from TCA cycle intermediates"
+    },
+    {
+      "gene1": "LYS2",
+      "gene2": "TRP1",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "LYS2",
+      "gene2": "URA3",
+      "same_pathway": false,
+      "shared_precursor": true,
+      "metabolite_link": false,
+      "notes": "Both draw from TCA cycle intermediates"
+    },
+    {
+      "gene1": "MET15",
+      "gene2": "TRP1",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    },
+    {
+      "gene1": "MET15",
+      "gene2": "URA3",
+      "same_pathway": false,
+      "shared_precursor": true,
+      "metabolite_link": false,
+      "notes": "Both use aspartate/oxaloacetate from TCA cycle"
+    },
+    {
+      "gene1": "TRP1",
+      "gene2": "URA3",
+      "same_pathway": false,
+      "shared_precursor": false,
+      "metabolite_link": false,
+      "notes": "Different biosynthetic branches"
+    }
+  ]
+}

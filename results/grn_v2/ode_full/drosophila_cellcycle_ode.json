@@ -1,0 +1,45 @@
+{
+  "model": "drosophila_cellcycle",
+  "method": "ode_hill",
+  "description": "Drosophila cell cycle (11 dynamic + 3 inputs)",
+  "n_players": 14,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.04266467065868263,
+  "ode_global_o3plus": 0.10011475906150075,
+  "ode_delta_o3plus": 0.057450088402818116,
+  "boolean_delta_o3plus": 0.06157693517902086,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.25591047916541354,
+    0.43088189505888963,
+    0.21309286671419608,
+    0.061219241810993016,
+    0.028647935988508892,
+    0.007348994328962199,
+    0.002250377375392122,
+    0.0005323734446974203,
+    9.560002726829864e-05,
+    1.71846185856893e-05,
+    2.7032551831615302e-06,
+    3.084450906461876e-07,
+    3.742374390546322e-08,
+    2.2927813520878606e-09,
+    5.0294045668514825e-11
+  ],
+  "n_unique_values": 429,
+  "v_mean_range": [
+    0.0,
+    0.9990243901349789
+  ],
+  "v_mean_std": 0.33599967068959724,
+  "npz_path": "/results/ode_coalitions/drosophila_cellcycle_ode_coalition.npz",
+  "timestamp": "2026-08-05T00:26:02+00:00"
+}

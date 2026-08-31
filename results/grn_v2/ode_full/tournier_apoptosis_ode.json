@@ -1,0 +1,43 @@
+{
+  "model": "tournier_apoptosis",
+  "method": "ode_hill",
+  "description": "Apoptosis signaling network (12 nodes)",
+  "n_players": 12,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.041666666666666664,
+  "ode_global_o3plus": 0.21573203146583766,
+  "ode_delta_o3plus": 0.174065364799171,
+  "boolean_delta_o3plus": 0.0846101594824866,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.12157847197289767,
+    0.33170882782014244,
+    0.3309806687411221,
+    0.15841732361307664,
+    0.04450990365178856,
+    0.009083561490495957,
+    0.0027307353069982777,
+    0.0007434367172558057,
+    0.00018942737297773403,
+    4.436729135736353e-05,
+    1.0508010233474751e-05,
+    2.4830676717674992e-06,
+    2.8494398207793704e-07
+  ],
+  "n_unique_values": 22,
+  "v_mean_range": [
+    0.0,
+    0.9365763644086824
+  ],
+  "v_mean_std": 0.1873360717563521,
+  "npz_path": "/results/ode_coalitions/tournier_apoptosis_ode_coalition.npz",
+  "timestamp": "2026-08-01T17:39:46+00:00"
+}

@@ -1,0 +1,43 @@
+{
+  "model": "morphogenetic_checkpoint",
+  "method": "ode_hill",
+  "description": "Yeast morphogenesis checkpoint (12 nodes, 1 input)",
+  "n_players": 12,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.02892801857585139,
+  "ode_global_o3plus": 0.17369897468964327,
+  "ode_delta_o3plus": 0.14477095611379187,
+  "boolean_delta_o3plus": 0.11906050035967042,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.11430561997933837,
+    0.3485480137364604,
+    0.363447391594558,
+    0.14302983071852185,
+    0.01968382387301909,
+    0.007648918238918532,
+    0.002400734799628266,
+    0.0007531415840556245,
+    0.00016191776053759262,
+    2.0095722043637872e-05,
+    5.119929186812771e-07,
+    1.1991546731816542e-24,
+    1.537156284279166e-26
+  ],
+  "n_unique_values": 4,
+  "v_mean_range": [
+    0.0,
+    0.5307213455172701
+  ],
+  "v_mean_std": 0.160393821275573,
+  "npz_path": "/results/ode_coalitions/morphogenetic_checkpoint_ode_coalition.npz",
+  "timestamp": "2026-08-01T20:40:17+00:00"
+}

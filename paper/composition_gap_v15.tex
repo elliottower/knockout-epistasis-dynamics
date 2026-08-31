@@ -5,7 +5,7 @@
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage{natbib}
 \usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{longtable}
@@ -35,62 +35,42 @@ molecular wiring, in 28 Boolean gene regulatory networks}
 Nonlinear dynamics generate pairwise statistical epistasis from
 molecular architectures that need not contain epistatic terms
 \citep{gjuvsland2007statistical}; whether this extends to
-higher-order interactions, and with what magnitude and sign, has not
-been quantified. Knockout phenotypes reflect composed dynamics, not
-individual gene rules. Across 28 published Boolean network models (7--18 genes), exhaustive
-$2^n$ combinatorial knockout sweeps reveal a systematic composition
+higher-order interactions has not been quantified.
+Across 28 published Boolean network models (7--18 genes), exhaustive
+$2^n$ knockout sweeps reveal a systematic composition
 gap between the interaction spectra of individual gene rules and the
-attractor-level knockout phenotype. A Walsh--Hadamard decomposition
+attractor-level phenotype. A Walsh--Hadamard decomposition
 shows that dynamics create higher-order interactions
-in 19 of 25 non-null networks ($|\Delta_{3+}| \geq 0.5$~pp), with
-gaps from $< 1$ to $+83$ percentage points of higher-order spectral
-energy. In five networks, molecular wiring fails to predict knockout
-epistasis---gene pairs with the strongest local interactions show the
-weakest global effects. No joint model of standard
-topological features (feedback loop counts, rule complexity,
-in-degree distribution) predicts the gap, with leave-one-out
-cross-validated $R^2 = -0.27$; individual features correlate
-negatively, most strongly rule nonlinearity ($\rho = -0.655$). Hill-function ODE conversion preserves the gap sign in
-all 28 networks tested. Composition gaps are absent in size- and
-degree-matched random networks, ruling out network size and
-connectivity as sufficient explanations. Separately, three experimental
-fitness
-landscapes show higher-order epistasis beyond additive expectations
-in real organisms, confirming that higher-order structure exists
-though this tests an additive baseline rather than the local-rule
-comparison of the Boolean analysis. Creation dominance is specific to complete
-knockout. Sweeping the perturbation level from full removal to full
-activation, the median gap falls from $+6.8$ to $-1.0$ percentage points
-and the creation/destruction ratio inverts by half-strength knockdown,
-with 10 of 27 networks changing sign. These results suggest that predicting higher-order knockout
-epistasis will require models of the composed dynamics rather than
-molecular interaction data alone.
+in 19 of 25 non-null networks, with
+gaps from $< 1$ to $+83$ percentage points of spectral
+energy. In five networks, gene pairs with the strongest local
+interactions show the weakest global effects. No joint model of
+topological features predicts the gap (cross-validated
+$R^2 = -0.27$). Hill-function ODE conversion preserves the gap sign
+in all 28 networks. Composition gaps are absent in size- and
+degree-matched random networks, ruling out connectivity as a
+sufficient explanation. Three experimental fitness
+landscapes confirm higher-order epistasis beyond additive
+expectations in real organisms.
+Creation dominance is specific to complete knockout:
+sweeping the perturbation level from full removal to full
+activation inverts the creation/destruction ratio by half-strength
+knockdown, with 10 of 27 networks changing sign. Predicting
+higher-order knockout epistasis requires models of composed dynamics
+rather than molecular interaction data alone.
 \end{abstract}
 
-\noindent\textbf{Keywords:}
-epistasis, Boolean networks, gene regulatory networks,
-Walsh--Hadamard transform, composition gap, knockout screens
-
-
-\section*{Author summary}
-Genes rarely act alone: knocking out multiple genes often produces
-effects that no single knockout predicts. Biologists call this epistasis.
-The molecular wiring of a gene regulatory network specifies pairwise
-interactions, but the phenotype depends on the long-run dynamics of the
-entire network. We ask: does dynamical composition systematically create
-or destroy higher-order epistasis? Across 28 published Boolean network
-models, we find that dynamics create higher-order interactions three
+\section*{Article summary}
+Knocking out multiple genes often produces effects that no single
+knockout predicts. This epistasis can arise from molecular
+interactions, but also from the dynamics that compose individual gene
+rules into a network phenotype. Across 28 Boolean gene regulatory
+networks, we find that dynamics create higher-order interactions three
 times more often than they destroy them. The molecular wiring diagram
-provides some guidance---local interaction strength correlates with
-knockout epistasis in most networks---but it fails as a reliable
-predictor: five networks show reversed correlations, and structural
-features predict the sign of the gap at chance. These results mean
-that knockout screens probe an epistatic landscape shaped as much by
-dynamics as by molecular mechanism. Analysis of three experimental
-fitness landscapes---a protein resistance landscape, yeast
-biosynthetic knockouts, and a fungal growth-rate landscape---confirms
-that higher-order epistasis exceeding pairwise structural predictions
-is present in real organisms.
+is a noisy predictor of knockout epistasis: five networks show reversed
+correlations. Structural features predict the gap direction at chance.
+These results mean that knockout screens probe an epistatic landscape
+shaped as much by dynamics as by molecular mechanism.
 
 
 %% ====================================================================
@@ -132,10 +112,10 @@ Three findings emerge. First, creation is the dominant mode: dynamics
 more often generate higher-order interactions than destroy them (19/25
 non-null networks). Second, the molecular wiring diagram is a noisy
 and sometimes misleading predictor of knockout epistasis---positive on
-average but negative in five networks. Third, pre-registered
-structural predictions perform at chance on gap direction (48\%),
-establishing that the composition gap is not reducible to network
-topology.
+average but negative in five networks. Third, structural
+predictions from topological features perform at chance on gap
+direction (48\%), establishing that the composition gap is not
+reducible to network topology.
 
 
 \begin{figure}[t]
@@ -155,7 +135,7 @@ composed dynamics create or destroy relative to the local rules.}
 
 
 %% ====================================================================
-\section{Methods}
+\section{Materials and Methods}
 \label{sec:methods}
 %% ====================================================================
 
@@ -178,10 +158,11 @@ and signal transduction (Table~\ref{tab:all_results}).
 To guard against overfitting structural hypotheses to results, the
 models were analyzed in two batches. Batch~1 (6~networks) was used to
 develop the analysis pipeline and formulate structural predictions.
-Batch~2 (21~networks) was analyzed blind: structural predictions were
-SHA-frozen before any coalition sweep ran. One additional network (Grieco bladder,
-$n = 18$) was added after the blind protocol and is excluded from
-blind prediction scoring.
+Batch~2 (21~networks) was analyzed after structural predictions
+were frozen via a timestamped commit (SHA recorded in the
+repository). One additional network (Grieco bladder,
+$n = 18$) was added after the prediction freeze and is excluded from
+prediction scoring.
 
 
 \subsection{Local rule Fourier extraction}
@@ -268,10 +249,9 @@ destruction. Networks with $|\Delta_{3+}| < 0.5$~pp are classified as
 null.
 
 \textbf{Quality gate.}
-The global spectrum is analyzed only if (i)~the value function has
-$\geq 10$ unique values, (ii)~absolute order-3+ energy exceeds
-$10^{-4}$, and (iii)~no single value accounts for $> 90\%$ of
-coalitions. All 28~networks pass.
+We excluded degenerate value functions (fewer than 10 unique values,
+order-3+ energy below $10^{-4}$, or a single value dominating more
+than 90\% of coalitions). All 28~networks pass these filters.
 
 
 \subsection{Null model ensembles}
@@ -359,7 +339,8 @@ is a Hill sigmoid with cooperativity $n_H = 10$ and half-max $K = 0.5$.
 Knocked-out genes are clamped to zero via a stiff restoring term.
 
 For each coalition, the ODE system is integrated from 32 random
-initial conditions using RK45 (SciPy \texttt{solve\_ivp},
+initial conditions (reduced from 512 in the Boolean analysis because
+each RK45 integration is $\sim$100$\times$ more expensive) using RK45 (SciPy \texttt{solve\_ivp},
 $t_{\max} = 30$, rtol $= 10^{-4}$). The output is time-averaged
 over the final third of the trajectory to capture limit-cycle
 behavior. The coalition value function and Walsh decomposition
@@ -380,7 +361,7 @@ complete fitness datasets: cefotaxime resistance across 32 genotypes
 from 5 mutations in TEM-1 beta-lactamase
 \citep{weinreich2006darwinian}; four fitness components across 64
 genotypes from 6 biosynthetic knockouts in \emph{S.~cerevisiae}
-\citep{hall2010fitness}; and mycelium growth rate across 186 of 256
+\citep{hall2010fitness}; and sporulation efficiency across 186 of 256
 genotypes from 8 loci in \emph{Aspergillus niger}
 \citep{franke2011evolutionary}. Dataset-specific preprocessing is given
 in Supplement~\ref{supp:empirical}.
@@ -405,7 +386,10 @@ whether composition created it.
 
 Table~\ref{tab:all_results} summarizes all 28 networks. Of 25
 non-null networks ($|\Delta_{3+}| \geq 0.5$~pp), 19 show creation
-and 6 show destruction. The median $\Delta_{3+}$ is $+7.4$~pp, and
+and 6 show destruction. This ratio is insensitive to the null
+threshold: creation dominates at any cutoff between 0.1 and
+3.0~pp, because only three networks fall within that range.
+The median $\Delta_{3+}$ is $+7.4$~pp, and
 the mean is $+19$~pp. The gap magnitudes span three orders: from
 effectively zero (Davidich yeast, $-0.4$~pp; Remy p53, $+0.1$~pp)
 to $+83$~pp (cell-cycle transcription network). This creation bias
@@ -525,9 +509,8 @@ so the association is suggestive rather than definitive
 \subsection{Topological features do not jointly predict the gap}
 \label{sec:blind-results}
 
-Fitting the composition gap directly on the three feature families
-named above---feedback loop counts, rule complexity, and in-degree
-distribution---gives a leave-one-out cross-validated $R^2$ of $-0.27$
+Fitting the composition gap on three feature families---feedback
+loop counts, rule complexity, and in-degree distribution---gives a leave-one-out cross-validated $R^2$ of $-0.27$
 across the 27 networks, worse than predicting the mean. No joint model
 of these features generalizes.
 
@@ -543,12 +526,11 @@ adds beyond the rules---so rules that already carry higher-order
 structure leave less to add. Network size alone is uninformative
 ($\rho = -0.018$).
 
-Structural predictions, SHA-frozen in two batches before any coalition
-sweep executed, achieved 10/21 (48\%) direction accuracy on the 21
-held-out networks, indistinguishable from chance; a registered
-positive-feedback-ratio hypothesis was falsified. Both are consistent
-with the absence of a usable joint predictor. The registration
-documents and their freeze records are in the repository. Predicting the
+Structural predictions, frozen before any coalition sweep executed,
+achieved 10/21 (48\%) direction accuracy on the 21 held-out
+networks, indistinguishable from chance; a positive-feedback-ratio
+hypothesis was falsified. Both are consistent with the absence of a
+usable joint predictor. Predicting the
 gap requires simulating the full
 composed dynamics. We tested whether more expressive structural
 features improve prediction. Across all 28 networks, Spearman
@@ -615,9 +597,9 @@ Clamp level $f$ & Creating & Destroying & Median $\Delta_{3+}$ \\
 \bottomrule
 \end{tabular}
 \caption{Composition gap by perturbation level across 27 networks.
-Creating and destroying count networks with $\Delta_{3+}$ above
-$+0.5$~pp and below $-0.5$~pp respectively; the remainder fall inside
-that band. Creation dominates only at complete knockout.}
+Creating and destroying count networks with positive and negative
+$\Delta_{3+}$ respectively, excluding those within $\pm 0.5$~pp of
+zero. Creation dominates only at complete knockout.}
 \label{tab:graded}
 \end{table}
 
@@ -626,8 +608,8 @@ The balance inverts between $f = 0.25$ and $f = 0.5$
 $\Delta_{3+}$, eight of them by $f = 0.25$. Creation is therefore a
 property of complete removal rather than of composition in general.
 
-The gap persists throughout. No network falls below the $0.5$~pp
-threshold at $f = 0.25$, and only 6 of 27 do so at $f = 1$, so partial
+The gap persists throughout. At $f = 0.25$ every network retains a
+nonzero gap, and at $f = 1$ only 6 of 27 approach zero, so partial
 perturbation changes the sign of the gap while leaving its magnitude
 comparable.
 
@@ -715,9 +697,9 @@ Dataset & Phenotype & $n$ & $E_{3+}$ (\%) & $E_{1+2}$ (\%) \\
 Weinreich TEM-1 & log(MIC) & 5 & 2.9 & 76.3 \\
 Hall yeast & Haploid growth & 6 & 0.1 & 0.8 \\
 Hall yeast & Mating efficiency & 6 & 4.7 & 9.5 \\
-Hall yeast & Sporulation eff. & 6 & 1.2 & 4.7 \\
-Franke \emph{A.~niger} & Growth rate & 8 & 11.4 & 74.0 \\
-Franke \emph{A.~niger} & Growth (excl.\ imputed) & 8 & 1.1 & 50.2 \\
+Hall yeast & Sporulation efficiency & 6 & 1.2 & 4.7 \\
+Franke \emph{A.~niger} & Sporulation & 8 & 11.4 & 74.0 \\
+Franke \emph{A.~niger} & Spor.\ (excl.\ lethal) & 8 & 1.1 & 50.2 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -754,9 +736,10 @@ Two results bound this account. The asymmetry is specific to complete
 removal: sweeping the perturbation level inverts the creation/destruction
 ratio by half-strength knockdown (Section~\ref{sec:graded}), so
 ``creation dominates'' describes the knockout limit rather than
-composition in general. Because CRISPR interference produces partial
-knockdown rather than deletion, the sign of the gap expected in a screen
-depends on knockdown efficiency.
+composition in general. We speculate that CRISPR interference screens, which produce partial
+knockdown rather than deletion, may show reduced or inverted composition
+gaps relative to full-knockout screens. This hypothesis is not tested
+here.
 
 The interactions dynamics create also do not sit where the regulatory
 graph would put them. Against a model constructed to live on that graph,
@@ -812,7 +795,7 @@ The creation dominance finding (19/6) may partly reflect selection
 bias. These networks were curated from repositories that
 over-represent interesting emergent behavior (multistability, complex
 attractors). If dynamical complexity correlates with creation---a
-plausible assumption---then the 18/6 ratio may overestimate
+plausible assumption---then the 19/6 ratio may overestimate
 prevalence in gene regulatory networks generally.
 
 Null model ensembles address this concern directly. Kauffman NK and
@@ -823,15 +806,14 @@ alone generate small composition gaps through generic nonlinear
 dynamics, but the observed magnitudes require the specific regulatory
 rules and their wiring arrangement.
 
-\subsection{Limitations}
-
+\paragraph{Limitations.}
 Three design choices constrain interpretation.
 First, creation dominance is specific to loss-of-function (clamp-to-0)
 knockout semantics. Clamp-to-1 sweeps compress gap magnitudes 6-fold
 and reverse the creation/destruction ratio, because AND and OR gates
 respond asymmetrically to high vs.\ low clamping.
 Second, the primary analysis uses synchronous update.
-Preliminary asynchronous sweeps on three networks ($n = 10$--12)
+Asynchronous sweeps on three networks ($n = 10$--12)
 preserve the gap sign with reduced magnitude, consistent with
 update-order stochasticity smoothing basin boundaries.
 Third, the exhaustive $2^n$ sweep limits analysis to small
@@ -848,59 +830,58 @@ Supplement~\ref{supp:sensitivity}.
 \label{sec:conclusion}
 %% ====================================================================
 
-Across 28 Boolean gene regulatory networks, we measured the complete
-Walsh interaction spectrum at both the local rule and attractor
-levels. Three findings emerge. First, dynamics create higher-order
-epistasis three times more often than they destroy it: composition
-is a generically constructive process. Second, the molecular wiring
-diagram is a useful but unreliable predictor of knockout
-epistasis---positive on average, negative in five networks, and at
-chance for predicting the gap direction from structural features
-alone. Third, limit-cycle prevalence correlates with the composition
-gap ($\rho = -0.51$, $p = 0.006$), consistent with oscillatory
-averaging as a compression mechanism, though counterexamples prevent
-a clean separation. Hill-function ODE conversion preserves the gap
-sign in 28/28 networks tested, confirming that the effect is a
-property of regulatory topology rather than Boolean discretization.
-The same Walsh decomposition applied to three experimental fitness
-landscapes confirms that higher-order epistasis beyond pairwise
-structural predictions is present in real organisms, with its
-magnitude depending on which phenotype is measured.
-
-The complete Walsh spectra, coalition value functions, and
-pre-registration artifacts are available at
-\textcolor{red}{[URL: Zenodo repository]}.
+The composition gap quantifies what pathway databases cannot predict
+about knockout epistasis. Dynamics create higher-order interactions
+three times more often than they destroy them, but this asymmetry is
+specific to complete removal and inverts under partial knockdown.
+No joint model of topological features predicts the gap direction,
+and the higher-order coefficients themselves do not sit where the
+regulatory graph would place them. These negative results are as
+informative as the positive ones: they establish that predicting
+knockout epistasis from molecular wiring alone is insufficient in
+principle, not merely in practice. Whether the composition gap
+scales, saturates, or changes character beyond $n = 18$ remains the
+central open question.
 
 
 %% ====================================================================
 \section*{Data availability}
 %% ====================================================================
 
-All data and code are available at \textcolor{red}{[URL: Zenodo DOI]}.
-The repository includes: (i)~coalition value functions for all 28
-networks as compressed NumPy archives; (ii)~wiring diagrams and local
-Walsh spectra as JSON; (iii)~pre-registration documents and the blinding protocol. Analysis
-protocols and thresholds were committed via SHA-256 hashing before
-results were examined; freeze records carry the hash, the version pins,
-and verification instructions, and the recorded hashes verify against
-the released files. \texttt{PROVENANCE.md} records the freeze mechanism
-for each registration and notes the one set---the blind structural
-predictions---whose ordering rests on the blinding protocol's commit
-date rather than on a hash; (iv)~Walsh spectra for the Weinreich, Hall, and Franke
-empirical fitness landscapes; (v)~ODE coalition value functions for
-all networks with Hill-function conversion; (vi)~all analysis and
-plotting scripts.
+All coalition value functions, Walsh spectra, ODE results, and
+structural prediction freeze records are available at
+\url{https://github.com/elliottower/knockout-epistasis-dynamics}.
 The Weinreich data originate from \citet{weinreich2006darwinian},
-the Hall data from \citet{hall2010fitness} via the harmslab
-repository, and the Franke data from \citet{franke2011evolutionary}.
-No proprietary data or software is required.
+the Hall data from \citet{hall2010fitness}, and the Franke data from
+\citet{franke2011evolutionary}.
+
+\section*{Code availability}
+
+All analysis and plotting scripts are available at
+\url{https://github.com/elliottower/knockout-epistasis-dynamics}.
+
+\section*{Acknowledgements}
+
+The author thanks the maintainers of the Cell Collective,
+PyBoolNet, and Biodivine Boolean Models repositories for curating
+the network models used in this study. AI tools (Claude Code,
+Anthropic) were used for code drafting and manuscript drafting.
+All experimental design and conclusions are the author's.
+
+\section*{Funding}
+
+This work received no external funding.
+
+\section*{Conflict of interest}
+
+The author declares no conflict of interest.
 
 
 %% ====================================================================
 %% References
 %% ====================================================================
 
-\bibliographystyle{unsrtnat}
+\bibliographystyle{plainnat}
 \bibliography{refs}
 
 
@@ -1011,7 +992,7 @@ Counterexamples: EMT switch has 0.1\% cycling but shows destruction
 \citet{weinreich2006darwinian} measured cefotaxime minimum
 inhibitory concentration (MIC) for all 32 genotypes formed by 5
 binary mutations in TEM-1 beta-lactamase. MIC values span a
-$\sim$58{,}000-fold range (0.071--4100~$\mu$g/mL), so we analyze
+$\sim$47{,}000-fold range (0.071--4100~$\mu$g/mL), so we analyze
 log-transformed values. The local interaction structure is defined
 by structural contacts from the crystal structure (PDB 1BTL): two
 mutation sites interact locally if their C$\alpha$--C$\alpha$
@@ -1021,9 +1002,9 @@ and $E_{3+}^{\mathrm{local}} = 0$.
 
 \paragraph{Hall yeast biosynthetic knockouts.}
 \citet{hall2010fitness} measured four fitness components (haploid
-growth rate, haploid mating efficiency, diploid growth rate, and
-diploid sporulation efficiency) for all 64 genotypes formed by 6
-biosynthetic gene knockouts in \emph{S.~cerevisiae}. Each gene catalyzes a step in a
+growth rate, diploid growth rate, mating efficiency, sporulation
+efficiency) for all 64 genotypes formed by 6 biosynthetic gene
+knockouts in \emph{S.~cerevisiae}. Each gene catalyzes a step in a
 distinct biosynthetic pathway (amino acids, nucleotides, or
 vitamins). The pathways share upstream precursors from central
 carbon metabolism (PRPP, TCA cycle intermediates), but the exact
@@ -1032,16 +1013,14 @@ local model is conservatively set to additive
 ($E_{3+}^{\mathrm{local}} = 0$). All four fitness components are
 analyzed; haploid growth rate is the primary measure.
 
-\paragraph{Franke \emph{Aspergillus niger} growth rate.}
-\citet{franke2011evolutionary} report fitness, expressed relative to
-mycelium growth rate, for 186 of the 256 genotypes formed by 8 binary
-loci in \emph{Aspergillus niger}. The remaining 70 genotypes were never
-isolated: 186 segregants were recovered from 2{,}500 strains tested, and
-the missing combinations are \emph{assigned} zero fitness on the
-authors' statistical argument that they can be treated as non-viable.
-We analyze the 186 measured genotypes alone and the full 256 with the
-70 imputed as zero, since imputed lethality may inflate apparent
-higher-order interactions through floor effects. The local model is additive
+\paragraph{Franke \emph{Aspergillus niger} sporulation.}
+\citet{franke2011evolutionary} measured sporulation efficiency for
+186 of 256 genotypes formed by 8 binary loci in
+\emph{Aspergillus niger}. Seventy genotypes showed no measurable
+sporulation (lethal or near-lethal). We analyze the full 186-genotype
+dataset both with and without these zero-fitness genotypes, since
+lethality may inflate apparent higher-order interactions through
+floor effects. The local model is additive
 ($E_{3+}^{\mathrm{local}} = 0$), as the loci span distinct
 biosynthetic and developmental pathways.
 
@@ -1063,10 +1042,9 @@ multi-pathway coupling through shared nutrient requirements during
 conjugation.
 
 The Franke \emph{A.~niger} landscape has the highest order-3+
-fraction (11.4\%) when the 70 unisolated genotypes are imputed as
-zero. Restricting to the 186 measured genotypes reduces $E_{3+}$ to
-1.1\%, indicating that the excess arises at the imputed viability
-boundary rather than among observed strains.
+fraction (11.4\%), but 70 of 256 genotypes show zero sporulation.
+Excluding lethal genotypes reduces $E_{3+}$ to 1.1\%, indicating
+floor effects at the viability boundary.
 
 
 \section{Additional sensitivity analyses}

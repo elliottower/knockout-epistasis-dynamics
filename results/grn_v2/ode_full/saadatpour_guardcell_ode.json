@@ -1,0 +1,44 @@
+{
+  "model": "saadatpour_guardcell",
+  "method": "ode_hill",
+  "description": "Guard cell ABA signal transduction for stomatal closure (13 nodes, no inputs)",
+  "n_players": 13,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.0024509803921568627,
+  "ode_global_o3plus": 0.6567368327319589,
+  "ode_delta_o3plus": 0.6542858523398021,
+  "boolean_delta_o3plus": 0.5139675417791154,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.01587818038077785,
+    0.09416722784129818,
+    0.233217759045965,
+    0.30907119111941583,
+    0.23189327770347629,
+    0.09463523928897774,
+    0.018050109106180715,
+    0.001763277006266729,
+    0.0008564318609141919,
+    0.0003434265791668108,
+    0.00010242286660624166,
+    1.963816487462827e-05,
+    1.8190360797113658e-06,
+    4.338614216258668e-29
+  ],
+  "n_unique_values": 9,
+  "v_mean_range": [
+    0.0,
+    0.8429186833593296
+  ],
+  "v_mean_std": 0.07848628625395021,
+  "npz_path": "/results/ode_coalitions/saadatpour_guardcell_ode_coalition.npz",
+  "timestamp": "2026-08-01T18:56:55+00:00"
+}

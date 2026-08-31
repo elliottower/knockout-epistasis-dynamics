@@ -5,6 +5,7 @@
   "n_players": 9,
   "n_init": 32,
   "ode_params": {
+    "n_init": 32,
     "t_max": 30.0,
     "t_tail": 10.0,
     "tau": 1.0,
@@ -34,5 +35,6 @@
     0.9990147346458134
   ],
   "v_mean_std": 0.20137371360291403,
-  "timestamp": "2026-07-29T02:26:39.263624+00:00"
+  "npz_path": "/results/ode_coalitions/asymmetric_cell_division_ode_coalition.npz",
+  "timestamp": "2026-08-01T16:57:05+00:00"
 }

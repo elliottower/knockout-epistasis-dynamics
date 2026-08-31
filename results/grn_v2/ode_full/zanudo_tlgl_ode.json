@@ -1,0 +1,43 @@
+{
+  "model": "zanudo_tlgl",
+  "method": "ode_hill",
+  "description": "T-LGL leukemia survival reduced (12 nodes, 1 input)",
+  "n_players": 12,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.0029069767441860465,
+  "ode_global_o3plus": 0.3394358170808583,
+  "ode_delta_o3plus": 0.33652884033667224,
+  "boolean_delta_o3plus": 0.33234479899369496,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.059068770886792604,
+    0.2382065385557277,
+    0.3632888734766214,
+    0.2526881930949791,
+    0.07468705638680996,
+    0.008289614411443174,
+    0.002734179785117698,
+    0.0007754435108629416,
+    0.00021617784296534695,
+    3.9849415616625714e-05,
+    4.9315935993582734e-06,
+    3.6101137049348766e-07,
+    1.0028093610353182e-08
+  ],
+  "n_unique_values": 6,
+  "v_mean_range": [
+    0.0,
+    0.9990147346226913
+  ],
+  "v_mean_std": 0.22148941339712536,
+  "npz_path": "/results/ode_coalitions/zanudo_tlgl_ode_coalition.npz",
+  "timestamp": "2026-08-01T17:35:53+00:00"
+}

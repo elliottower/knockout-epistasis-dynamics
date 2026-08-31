@@ -1,0 +1,45 @@
+{
+  "model": "fumia_cellcycle",
+  "method": "ode_hill",
+  "description": "Mammalian cell cycle regulation simplified (14 nodes, 1 input)",
+  "n_players": 14,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.04477611940298508,
+  "ode_global_o3plus": 0.5929955927362216,
+  "ode_delta_o3plus": 0.5482194733332365,
+  "boolean_delta_o3plus": 0.522398207170679,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.024713807731059613,
+    0.12418858861237705,
+    0.25810201092034174,
+    0.288087231401069,
+    0.1907217714113393,
+    0.08148703224423956,
+    0.025517576258381098,
+    0.006112674498929838,
+    0.0009222209204228217,
+    0.00012117962578513289,
+    2.231773003677653e-05,
+    3.27382243647978e-06,
+    2.9450233943819747e-07,
+    1.9795162898249034e-08,
+    5.26079259912742e-10
+  ],
+  "n_unique_values": 216,
+  "v_mean_range": [
+    0.0,
+    0.3547644129259765
+  ],
+  "v_mean_std": 0.03622495956012876,
+  "npz_path": "/results/ode_coalitions/fumia_cellcycle_ode_coalition.npz",
+  "timestamp": "2026-08-01T22:16:16+00:00"
+}

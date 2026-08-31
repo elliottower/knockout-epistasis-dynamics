@@ -1,7 +1,7 @@
 {
-  "n_models": 23,
-  "n_completed": 3,
-  "n_failed": 20,
+  "n_models": 2,
+  "n_completed": 2,
+  "n_failed": 0,
   "ode_params": {
     "n_init": 32,
     "t_max": 30.0,
@@ -10,19 +10,49 @@
     "hill_n": 10.0,
     "hill_k": 0.5
   },
-  "timestamp_start": "2026-07-29T02:20:32.102132+00:00",
-  "timestamp_end": "2026-07-29T02:39:02.772478+00:00",
+  "timestamp_start": "2026-07-30T03:41:48.608245+00:00",
+  "timestamp_end": "2026-07-30T03:45:59.699651+00:00",
   "models": [
     {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "model": "asymmetric_cell_division",
+      "model": "lambda_phage",
       "method": "ode_hill",
-      "description": "Caulobacter crescentus asymmetric cell division (9 nodes, no inputs)",
+      "description": "Lambda phage lysis/lysogeny decision (7 nodes, Booleanized multi-valued)",
+      "n_players": 7,
+      "n_init": 32,
+      "ode_params": {
+        "t_max": 30.0,
+        "t_tail": 10.0,
+        "tau": 1.0,
+        "hill_n": 10.0,
+        "hill_k": 0.5
+      },
+      "local_o3plus": 0.04649390243902439,
+      "ode_global_o3plus": 0.010785165539422492,
+      "ode_delta_o3plus": -0.0357087368996019,
+      "boolean_delta_o3plus": -0.024975833448266812,
+      "sign_preserved": true,
+      "ode_global_spectrum": [
+        0.3024149903729367,
+        0.49216191051932345,
+        0.1946379335683173,
+        0.007179696035116972,
+        0.0029420286754242514,
+        0.0006583934455578408,
+        5.047383321753088e-06,
+        1.6756643314530527e-15
+      ],
+      "n_unique_values": 8,
+      "v_mean_range": [
+        0.0,
+        0.9990147446544524
+      ],
+      "v_mean_std": 0.42493867958024534,
+      "timestamp": "2026-07-30T03:43:51.904029+00:00"
+    },
+    {
+      "model": "arellano_rootstem",
+      "method": "ode_hill",
+      "description": "Arabidopsis root stem cell niche patterning (9 nodes, 2 inputs)",
       "n_players": 9,
       "n_init": 32,
       "ode_params": {
@@ -32,161 +62,30 @@
         "hill_n": 10.0,
         "hill_k": 0.5
       },
-      "local_o3plus": 0.0,
-      "ode_global_o3plus": 0.4342542370073868,
-      "ode_delta_o3plus": 0.4342542370073868,
-      "boolean_delta_o3plus": 0.44085049375894575,
+      "local_o3plus": 0.018564356435643563,
+      "ode_global_o3plus": 0.5075195304276625,
+      "ode_delta_o3plus": 0.48895517399201893,
+      "boolean_delta_o3plus": 0.5059116851281775,
       "sign_preserved": true,
       "ode_global_spectrum": [
-        0.04609731841694901,
-        0.19502038844895347,
-        0.3246280561267107,
-        0.2704457168518515,
-        0.12255605738582379,
-        0.03407316290316881,
-        0.006631459325654694,
-        0.0004519859381266723,
-        8.710874486181431e-05,
-        8.745857899530743e-06
+        0.035253907030530246,
+        0.16064453180675659,
+        0.29658203073505063,
+        0.28603515577469973,
+        0.15732421850070266,
+        0.05224609366986355,
+        0.010839843733716475,
+        0.0010742187486801503,
+        4.1136934267932844e-22,
+        4.273282265150132e-32
       ],
-      "n_unique_values": 4,
+      "n_unique_values": 6,
       "v_mean_range": [
         0.0,
-        0.9990147346458134
+        0.18731705227587908
       ],
-      "v_mean_std": 0.20137371360291403,
-      "timestamp": "2026-07-29T02:26:39.263624+00:00"
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "model": "cell_cycle_transcription",
-      "method": "ode_hill",
-      "description": "Yeast cell cycle transcription oscillator (9 nodes, no inputs)",
-      "n_players": 9,
-      "n_init": 32,
-      "ode_params": {
-        "t_max": 30.0,
-        "t_tail": 10.0,
-        "tau": 1.0,
-        "hill_n": 10.0,
-        "hill_k": 0.5
-      },
-      "local_o3plus": 0.01201923076923077,
-      "ode_global_o3plus": 0.9101562468565891,
-      "ode_delta_o3plus": 0.8981370160873584,
-      "boolean_delta_o3plus": 0.8325216693666143,
-      "sign_preserved": true,
-      "ode_global_spectrum": [
-        0.00195312656487873,
-        0.017578126610596795,
-        0.07031249996793532,
-        0.16406249960189181,
-        0.24609374919443427,
-        0.24609374908798454,
-        0.16406249934810396,
-        0.07031249970814824,
-        0.01757812492464768,
-        0.001953124991378605
-      ],
-      "n_unique_values": 2,
-      "v_mean_range": [
-        0.0,
-        0.06243781162380397
-      ],
-      "v_mean_std": 0.002756691466520764,
-      "timestamp": "2026-07-29T02:27:25.138097+00:00"
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "model": "remy_p53_mdm2",
-      "method": "ode_hill",
-      "description": "p53-Mdm2 DNA damage response network (10 nodes, 1 input)",
-      "n_players": 10,
-      "n_init": 32,
-      "ode_params": {
-        "t_max": 30.0,
-        "t_tail": 10.0,
-        "tau": 1.0,
-        "hill_n": 10.0,
-        "hill_k": 0.5
-      },
-      "local_o3plus": 0.011479591836734693,
-      "ode_global_o3plus": 0.014445650348208921,
-      "ode_delta_o3plus": 0.002966058511474228,
-      "boolean_delta_o3plus": 0.0008165157871410159,
-      "sign_preserved": true,
-      "ode_global_spectrum": [
-        0.2755246431542762,
-        0.48809339096441484,
-        0.2219363155331,
-        0.011905390326792145,
-        0.0025390082852159903,
-        1.218707550557034e-06,
-        3.30271749190911e-08,
-        1.2255634147590016e-12,
-        2.3231855371155626e-13,
-        1.6886383842187924e-14,
-        5.40316922252426e-16
-      ],
-      "n_unique_values": 42,
-      "v_mean_range": [
-        0.0,
-        0.9678048688721921
-      ],
-      "v_mean_std": 0.34276008282977655,
-      "timestamp": "2026-07-29T02:35:40.562167+00:00"
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
-    },
-    {
-      "error": ""
+      "v_mean_std": 0.024242231115366934,
+      "timestamp": "2026-07-30T03:45:59.111944+00:00"
     }
   ]
 }

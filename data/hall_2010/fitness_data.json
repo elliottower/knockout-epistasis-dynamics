@@ -1,0 +1,1911 @@
+{
+  "metadata": {
+    "source": "Hall DW, Agan M, Pope SC. 2010. Fitness epistasis among 6 biosynthetic loci in the budding yeast Saccharomyces cerevisiae. J Heredity 101(suppl_1):S75-S84.",
+    "doi": "10.1093/jhered/esq007",
+    "data_source": "https://github.com/harmslab/notebooks-nonlinear-high-order-epistasis/tree/master/datasets",
+    "organism": "Saccharomyces cerevisiae",
+    "strain_background": "BY series (Brachmann et al. 1998, derived from S288C)",
+    "n_loci": 6,
+    "n_genotypes": 64,
+    "locus_names": [
+      "locus_0",
+      "locus_1",
+      "locus_2",
+      "locus_3",
+      "locus_4",
+      "locus_5"
+    ],
+    "locus_name_note": "Positions 0-5 correspond to 6 of the 7 standard yeast auxotrophic biosynthetic markers (ADE2, HIS3, LEU2, LYS2, MET15, TRP1, URA3). The exact positional mapping requires the original paper (paywalled). The harmslab repository data uses only positional indices.",
+    "candidate_genes": [
+      "ADE2",
+      "HIS3",
+      "LEU2",
+      "LYS2",
+      "MET15",
+      "TRP1",
+      "URA3"
+    ],
+    "genotype_encoding": "Binary string: '1' = wildtype (functional gene), '0' = knockout (gene deleted)",
+    "wildtype_genotype": "111111",
+    "fitness_components": {
+      "haploid_growth_rate": {
+        "description": "Growth rate of haploid strains",
+        "n_replicates": 10,
+        "log_transformed": true
+      },
+      "diploid_growth_rate": {
+        "description": "Growth rate of homozygous diploid strains",
+        "n_replicates": 10,
+        "log_transformed": true
+      },
+      "mating_efficiency": {
+        "description": "Haploid mating efficiency",
+        "n_replicates": 3,
+        "log_transformed": true
+      },
+      "sporulation_efficiency": {
+        "description": "Diploid sporulation efficiency",
+        "n_replicates": 3,
+        "log_transformed": true,
+        "note": "log(1+fitness) was used since some raw values were zero"
+      }
+    }
+  },
+  "genotypes": [
+    {
+      "genotype": "111111",
+      "n_mutations": 0,
+      "loci_knocked_out": [],
+      "haploid_growth_rate": {
+        "mean": 1.017502524,
+        "std": 0.057827954,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.034522633,
+        "std": 0.051865178,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.0,
+        "std": 0.126347391,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 2.0,
+        "std": 0.017343001,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "111110",
+      "n_mutations": 1,
+      "loci_knocked_out": [
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.962880306,
+        "std": 0.024590893,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.026586726,
+        "std": 0.040237655,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.447655147,
+        "std": 0.018439154,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 2.007077667,
+        "std": 0.032948128,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "111101",
+      "n_mutations": 1,
+      "loci_knocked_out": [
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.970186617,
+        "std": 0.034205426,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.017473395,
+        "std": 0.055212208,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.638674801,
+        "std": 0.068037611,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.800506288,
+        "std": 0.003172019,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "111011",
+      "n_mutations": 1,
+      "loci_knocked_out": [
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 1.02001715,
+        "std": 0.06722842,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.952735149,
+        "std": 0.053673517,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.993473526,
+        "std": 0.093897532,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.773466253,
+        "std": 0.021948841,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110111",
+      "n_mutations": 1,
+      "loci_knocked_out": [
+        "locus_2"
+      ],
+      "haploid_growth_rate": {
+        "mean": 1.03374138,
+        "std": 0.030038917,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.017330988,
+        "std": 0.034272913,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.970738073,
+        "std": 0.092905423,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.880976223,
+        "std": 0.02434772,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101111",
+      "n_mutations": 1,
+      "loci_knocked_out": [
+        "locus_1"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.986513217,
+        "std": 0.060975988,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.034462098,
+        "std": 0.027847893,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.959106451,
+        "std": 0.053463816,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 2.032417118,
+        "std": 0.053828283,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011111",
+      "n_mutations": 1,
+      "loci_knocked_out": [
+        "locus_0"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.818847212,
+        "std": 0.051228136,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.79436756,
+        "std": 0.055225415,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.335432787,
+        "std": 0.167079081,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.23076888,
+        "std": 0.013071988,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "111100",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.965518781,
+        "std": 0.051466669,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.931867793,
+        "std": 0.045876191,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.393634459,
+        "std": 0.054819181,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.537633442,
+        "std": 0.0108572,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "111010",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.998638388,
+        "std": 0.073701591,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.994957239,
+        "std": 0.05003953,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.715797579,
+        "std": 0.089089714,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.448885249,
+        "std": 0.004156192,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "111001",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.982267866,
+        "std": 0.045159856,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.888565504,
+        "std": 0.04314636,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.737100887,
+        "std": 0.183339281,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.675422577,
+        "std": 0.006962362,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110110",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_2",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.98950708,
+        "std": 0.049438525,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.96551806,
+        "std": 0.033338594,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.723673467,
+        "std": 0.054579813,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.460695783,
+        "std": 0.013621163,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110101",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_2",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.973392049,
+        "std": 0.027109622,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.895727944,
+        "std": 0.028695337,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.063473448,
+        "std": 0.069366873,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.529213892,
+        "std": 0.005051591,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110011",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_2",
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.975981305,
+        "std": 0.046498315,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.029944551,
+        "std": 0.032208399,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.002409301,
+        "std": 0.240632726,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0174459,
+        "std": 0.002119305,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101110",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.957856199,
+        "std": 0.076502073,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.891500855,
+        "std": 0.034154449,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.44841475,
+        "std": 0.156530397,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.826269696,
+        "std": 0.016167953,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101101",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 1.001578445,
+        "std": 0.043169932,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.907931706,
+        "std": 0.036434929,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.96118338,
+        "std": 0.139102054,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.79134196,
+        "std": 0.033691198,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101011",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 1.034003512,
+        "std": 0.080646569,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.001330941,
+        "std": 0.044085773,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.136994845,
+        "std": 0.034955794,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.921067632,
+        "std": 0.015743313,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100111",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2"
+      ],
+      "haploid_growth_rate": {
+        "mean": 1.023197519,
+        "std": 0.039700019,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 1.007757387,
+        "std": 0.05078803,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.263448612,
+        "std": 0.045621374,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.39613124,
+        "std": 0.009917713,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011110",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.809682791,
+        "std": 0.026366135,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.843431775,
+        "std": 0.050958562,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.308878115,
+        "std": 0.057288321,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.216476066,
+        "std": 0.032694884,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011101",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.830424627,
+        "std": 0.056572857,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.83807128,
+        "std": 0.070048367,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.072838812,
+        "std": 0.096736034,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011011",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.900205964,
+        "std": 0.052456292,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.896882946,
+        "std": 0.046860584,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.70842841,
+        "std": 0.103445949,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.307046808,
+        "std": 0.014414236,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010111",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.92617937,
+        "std": 0.063515762,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.950558531,
+        "std": 0.056977126,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.47204194,
+        "std": 0.06291174,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.380026207,
+        "std": 0.024242913,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001111",
+      "n_mutations": 2,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.876069972,
+        "std": 0.036943085,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.873678837,
+        "std": 0.055280001,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.511019569,
+        "std": 0.102527703,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.892345013,
+        "std": 0.013673816,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "111000",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.935346601,
+        "std": 0.028873284,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.883903372,
+        "std": 0.032476252,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.2438568,
+        "std": 0.076093843,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.862577899,
+        "std": 0.018531621,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110100",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_2",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.949474916,
+        "std": 0.042015152,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.921787287,
+        "std": 0.033524394,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.477331157,
+        "std": 0.026765174,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110010",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_2",
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.991830634,
+        "std": 0.043756423,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.987984102,
+        "std": 0.070728949,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.833250151,
+        "std": 0.057040314,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.88480066,
+        "std": 0.007316327,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110001",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_2",
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.985172468,
+        "std": 0.049377825,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.941149756,
+        "std": 0.050102102,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.162134198,
+        "std": 0.07711336,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.523439415,
+        "std": 0.003241261,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101100",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 1.015666444,
+        "std": 0.053574826,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.983195375,
+        "std": 0.06308573,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.83634527,
+        "std": 0.070107251,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.68348189,
+        "std": 0.028018582,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101010",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.986199414,
+        "std": 0.050427576,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.959300932,
+        "std": 0.052738071,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.915738403,
+        "std": 0.216525833,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.685946935,
+        "std": 0.025184307,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101001",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.961311461,
+        "std": 0.03969027,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.991816054,
+        "std": 0.027351978,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.958130037,
+        "std": 0.201077356,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.462201026,
+        "std": 0.013772544,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100110",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.997582101,
+        "std": 0.02223958,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.9740514,
+        "std": 0.069666726,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.684394111,
+        "std": 0.107373544,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.655843137,
+        "std": 0.003468407,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100101",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.995037749,
+        "std": 0.03632188,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.932158878,
+        "std": 0.062623241,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.11873067,
+        "std": 0.057237732,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100011",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2",
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.996480637,
+        "std": 0.06349976,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.990386772,
+        "std": 0.042127645,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.096764315,
+        "std": 0.087586127,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.700791408,
+        "std": 0.015134972,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011100",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.841439517,
+        "std": 0.045702627,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.740364694,
+        "std": 0.070723738,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.358163915,
+        "std": 0.037356391,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011010",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.861259728,
+        "std": 0.036302426,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.838400703,
+        "std": 0.053795584,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.397224914,
+        "std": 0.160029542,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.063564278,
+        "std": 0.004681732,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011001",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.868121387,
+        "std": 0.055972192,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.84133791,
+        "std": 0.0502648,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.184133542,
+        "std": 0.034880196,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.005760611,
+        "std": 0.001257844,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010110",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.844085387,
+        "std": 0.062243356,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.784381959,
+        "std": 0.034009618,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.465707999,
+        "std": 0.036907995,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.147003462,
+        "std": 0.008487365,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010101",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.889491684,
+        "std": 0.040877577,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.825578903,
+        "std": 0.0410705,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.077658742,
+        "std": 0.036907995,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010011",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2",
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.785200634,
+        "std": 0.037813782,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.765667155,
+        "std": 0.046790577,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.424548645,
+        "std": 0.09155861,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001110",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.849394513,
+        "std": 0.070959912,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.80373152,
+        "std": 0.063985009,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.434484235,
+        "std": 0.079277335,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.110826526,
+        "std": 0.010451162,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001101",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.827782925,
+        "std": 0.036940479,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.778770294,
+        "std": 0.034756024,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.498208613,
+        "std": 0.070017578,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001011",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.811695376,
+        "std": 0.053528075,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.869890142,
+        "std": 0.034632929,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.997341717,
+        "std": 0.047268016,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.127290175,
+        "std": 0.005624836,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000111",
+      "n_mutations": 3,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.773902264,
+        "std": 0.071521361,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.75768255,
+        "std": 0.064412905,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.328936648,
+        "std": 0.125600788,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.193310018,
+        "std": 0.004927489,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "110000",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_2",
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.985981885,
+        "std": 0.055842617,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.93553286,
+        "std": 0.028353955,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.559761005,
+        "std": 0.058463759,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.60061746,
+        "std": 0.007120167,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "101000",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.995262062,
+        "std": 0.051686,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.952064995,
+        "std": 0.064876228,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.54091762,
+        "std": 0.021500282,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.59613085,
+        "std": 0.005298101,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100100",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.974855411,
+        "std": 0.037666693,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.923726275,
+        "std": 0.033236211,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.658664819,
+        "std": 0.09780438,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.678934122,
+        "std": 0.005264799,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100010",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2",
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.95757722,
+        "std": 0.026053979,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.967007263,
+        "std": 0.056241242,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.829613671,
+        "std": 0.17600263,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.478311472,
+        "std": 0.010144931,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100001",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2",
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.976160612,
+        "std": 0.044582577,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.978219665,
+        "std": 0.045316388,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 1.303497443,
+        "std": 0.055287589,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.467340839,
+        "std": 0.009393359,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "011000",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.818688552,
+        "std": 0.040262736,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.724512595,
+        "std": 0.055204933,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.698902457,
+        "std": 0.022282024,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010100",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.836375885,
+        "std": 0.026681951,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.738600747,
+        "std": 0.046864458,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.770729136,
+        "std": 0.234893777,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010010",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2",
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.712625109,
+        "std": 0.048175883,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.866740715,
+        "std": 0.048109144,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.788671075,
+        "std": 0.085154637,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.018203529,
+        "std": 0.002355092,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010001",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2",
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.794632577,
+        "std": 0.033742095,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.731135545,
+        "std": 0.061078735,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.793359178,
+        "std": 0.075191117,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001100",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.875824798,
+        "std": 0.031341599,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.819333757,
+        "std": 0.052287195,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.443309316,
+        "std": 0.091678208,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.006106513,
+        "std": 0.001333372,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001010",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.728634447,
+        "std": 0.050793352,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.81357441,
+        "std": 0.048032564,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.733926168,
+        "std": 0.030641631,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.006177851,
+        "std": 0.001348949,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001001",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.86667548,
+        "std": 0.029547307,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.833000877,
+        "std": 0.05375113,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.674489159,
+        "std": 0.089848191,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000110",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.751475727,
+        "std": 0.028995455,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.869529723,
+        "std": 0.051611572,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.647006345,
+        "std": 0.157566328,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.126892288,
+        "std": 0.00296416,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000101",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.868890078,
+        "std": 0.048111283,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.813272126,
+        "std": 0.047638141,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.549899998,
+        "std": 0.123034494,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.012712117,
+        "std": 0.002775722,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000011",
+      "n_mutations": 4,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2",
+        "locus_3"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.822795289,
+        "std": 0.041115279,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.850612978,
+        "std": 0.06791548,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.559565947,
+        "std": 0.086914067,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.384300886,
+        "std": 0.005184531,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "100000",
+      "n_mutations": 5,
+      "loci_knocked_out": [
+        "locus_1",
+        "locus_2",
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.968103209,
+        "std": 0.05715889,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.983919038,
+        "std": 0.053238777,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.407353539,
+        "std": 0.029697236,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.492251297,
+        "std": 0.018761875,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "010000",
+      "n_mutations": 5,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_2",
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.864458991,
+        "std": 0.065647552,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.838290476,
+        "std": 0.064681821,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.451299729,
+        "std": 0.066261258,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "001000",
+      "n_mutations": 5,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.802302365,
+        "std": 0.042202336,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.705999564,
+        "std": 0.076262697,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.728326516,
+        "std": 0.238772446,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.012343318,
+        "std": 0.00134793,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000100",
+      "n_mutations": 5,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.806531009,
+        "std": 0.036552504,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.713362526,
+        "std": 0.064151197,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.512251455,
+        "std": 0.037288204,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.005075087,
+        "std": 0.001108158,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000010",
+      "n_mutations": 5,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2",
+        "locus_3",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.845905946,
+        "std": 0.051182774,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.831060544,
+        "std": 0.038252029,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.465794866,
+        "std": 0.082077777,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.205119932,
+        "std": 0.022394275,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000001",
+      "n_mutations": 5,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2",
+        "locus_3",
+        "locus_4"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.877606558,
+        "std": 0.046797738,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.806422544,
+        "std": 0.055268567,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.700034652,
+        "std": 0.247781302,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    },
+    {
+      "genotype": "000000",
+      "n_mutations": 6,
+      "loci_knocked_out": [
+        "locus_0",
+        "locus_1",
+        "locus_2",
+        "locus_3",
+        "locus_4",
+        "locus_5"
+      ],
+      "haploid_growth_rate": {
+        "mean": 0.872302955,
+        "std": 0.02715036,
+        "n_replicates": 10
+      },
+      "diploid_growth_rate": {
+        "mean": 0.783539183,
+        "std": 0.03658074,
+        "n_replicates": 10
+      },
+      "mating_efficiency": {
+        "mean": 0.557833421,
+        "std": 0.054229687,
+        "n_replicates": 3
+      },
+      "sporulation_efficiency": {
+        "mean": 1.0,
+        "std": 0.0,
+        "n_replicates": 3
+      }
+    }
+  ]
+}

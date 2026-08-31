@@ -1,0 +1,301 @@
+{
+  "source": "Weinreich DM, Delaney NF, DePristo MA, Hartl DL (2006). Darwinian Evolution Can Follow Only Very Few Mutational Paths to Fitter Proteins. Science 312:111-114. doi:10.1126/science.1123539",
+  "data_source": "Ogbunugafor (2026) GitHub repository (OgPlexus/DEFPreflect), file FINAL_DataBinary_MIC.csv, which reproduces Table S1 from Weinreich et al. (2006) supporting online material.",
+  "phenotype": "MIC (minimum inhibitory concentration) of cefotaxime in micrograms/mL",
+  "organism": "Escherichia coli expressing TEM-1 beta-lactamase variants",
+  "mutations_in_order": [
+    "g4205a",
+    "A42G",
+    "E104K",
+    "M182T",
+    "G238S"
+  ],
+  "mutation_descriptions": {
+    "g4205a": "Noncoding (promoter region), 52 nucleotides upstream of start codon. Nucleotide numbering as in Watson (1988).",
+    "A42G": "Ala to Gly at Ambler position 42",
+    "E104K": "Glu to Lys at Ambler position 104",
+    "M182T": "Met to Thr at Ambler position 182",
+    "G238S": "Gly to Ser at Ambler position 238"
+  },
+  "notes": [
+    "Genotype binary strings encode mutation status in order: g4205a, A42G, E104K, M182T, G238S (0 = wild-type, 1 = mutant).",
+    "The fifth mutation (g4205a) is noncoding and lies upstream of the start codon, so only 16 distinct protein-coding alleles exist among the 32 genotypes.",
+    "MIC values are medians across biological replicates.",
+    "Wild-type TEM-1 (00000) has MIC = 0.088 ug/mL; quintuple mutant (11111) has MIC = 4100 ug/mL, a 4.7e4-fold increase. The Weinreich et al. abstract states approximately 1e5 for this same increase (verified against the Europe PMC record for PMID 16601193). One twofold dilution step spans the gap; the discrepancy is unresolved and all analysis here uses the tabulated medians.",
+    "Of 120 possible monotonically-increasing mutational trajectories from 00000 to 11111, only 18 are selectively accessible.",
+    "Across all 32 tabulated medians the MIC range is 0.0713-4100 ug/mL, a factor of 5.75e4."
+  ],
+  "genotypes": [
+    {
+      "genotype": "00000",
+      "mutations": [],
+      "mic": 0.088
+    },
+    {
+      "genotype": "00001",
+      "mutations": [
+        "G238S"
+      ],
+      "mic": 1.4
+    },
+    {
+      "genotype": "00010",
+      "mutations": [
+        "M182T"
+      ],
+      "mic": 0.0713
+    },
+    {
+      "genotype": "00011",
+      "mutations": [
+        "M182T",
+        "G238S"
+      ],
+      "mic": 32.0
+    },
+    {
+      "genotype": "00100",
+      "mutations": [
+        "E104K"
+      ],
+      "mic": 0.1327
+    },
+    {
+      "genotype": "00101",
+      "mutations": [
+        "E104K",
+        "G238S"
+      ],
+      "mic": 360.0
+    },
+    {
+      "genotype": "00110",
+      "mutations": [
+        "E104K",
+        "M182T"
+      ],
+      "mic": 0.1633
+    },
+    {
+      "genotype": "00111",
+      "mutations": [
+        "E104K",
+        "M182T",
+        "G238S"
+      ],
+      "mic": 360.0
+    },
+    {
+      "genotype": "01000",
+      "mutations": [
+        "A42G"
+      ],
+      "mic": 0.088
+    },
+    {
+      "genotype": "01001",
+      "mutations": [
+        "A42G",
+        "G238S"
+      ],
+      "mic": 23.0
+    },
+    {
+      "genotype": "01010",
+      "mutations": [
+        "A42G",
+        "M182T"
+      ],
+      "mic": 1.4
+    },
+    {
+      "genotype": "01011",
+      "mutations": [
+        "A42G",
+        "M182T",
+        "G238S"
+      ],
+      "mic": 360.0
+    },
+    {
+      "genotype": "01100",
+      "mutations": [
+        "A42G",
+        "E104K"
+      ],
+      "mic": 1.4
+    },
+    {
+      "genotype": "01101",
+      "mutations": [
+        "A42G",
+        "E104K",
+        "G238S"
+      ],
+      "mic": 2100.0
+    },
+    {
+      "genotype": "01110",
+      "mutations": [
+        "A42G",
+        "E104K",
+        "M182T"
+      ],
+      "mic": 0.8067
+    },
+    {
+      "genotype": "01111",
+      "mutations": [
+        "A42G",
+        "E104K",
+        "M182T",
+        "G238S"
+      ],
+      "mic": 2900.0
+    },
+    {
+      "genotype": "10000",
+      "mutations": [
+        "g4205a"
+      ],
+      "mic": 0.088
+    },
+    {
+      "genotype": "10001",
+      "mutations": [
+        "g4205a",
+        "G238S"
+      ],
+      "mic": 1.4
+    },
+    {
+      "genotype": "10010",
+      "mutations": [
+        "g4205a",
+        "M182T"
+      ],
+      "mic": 0.088
+    },
+    {
+      "genotype": "10011",
+      "mutations": [
+        "g4205a",
+        "M182T",
+        "G238S"
+      ],
+      "mic": 360.0
+    },
+    {
+      "genotype": "10100",
+      "mutations": [
+        "g4205a",
+        "E104K"
+      ],
+      "mic": 0.18
+    },
+    {
+      "genotype": "10101",
+      "mutations": [
+        "g4205a",
+        "E104K",
+        "G238S"
+      ],
+      "mic": 360.0
+    },
+    {
+      "genotype": "10110",
+      "mutations": [
+        "g4205a",
+        "E104K",
+        "M182T"
+      ],
+      "mic": 0.18
+    },
+    {
+      "genotype": "10111",
+      "mutations": [
+        "g4205a",
+        "E104K",
+        "M182T",
+        "G238S"
+      ],
+      "mic": 2100.0
+    },
+    {
+      "genotype": "11000",
+      "mutations": [
+        "g4205a",
+        "A42G"
+      ],
+      "mic": 0.088
+    },
+    {
+      "genotype": "11001",
+      "mutations": [
+        "g4205a",
+        "A42G",
+        "G238S"
+      ],
+      "mic": 360.0
+    },
+    {
+      "genotype": "11010",
+      "mutations": [
+        "g4205a",
+        "A42G",
+        "M182T"
+      ],
+      "mic": 0.088
+    },
+    {
+      "genotype": "11011",
+      "mutations": [
+        "g4205a",
+        "A42G",
+        "M182T",
+        "G238S"
+      ],
+      "mic": 360.0
+    },
+    {
+      "genotype": "11100",
+      "mutations": [
+        "g4205a",
+        "A42G",
+        "E104K"
+      ],
+      "mic": 2.0667
+    },
+    {
+      "genotype": "11101",
+      "mutations": [
+        "g4205a",
+        "A42G",
+        "E104K",
+        "G238S"
+      ],
+      "mic": 1700.0
+    },
+    {
+      "genotype": "11110",
+      "mutations": [
+        "g4205a",
+        "A42G",
+        "E104K",
+        "M182T"
+      ],
+      "mic": 1.4
+    },
+    {
+      "genotype": "11111",
+      "mutations": [
+        "g4205a",
+        "A42G",
+        "E104K",
+        "M182T",
+        "G238S"
+      ],
+      "mic": 4100.0
+    }
+  ]
+}

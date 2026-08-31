@@ -5,6 +5,7 @@
   "n_players": 9,
   "n_init": 32,
   "ode_params": {
+    "n_init": 32,
     "t_max": 30.0,
     "t_tail": 10.0,
     "tau": 1.0,
@@ -34,5 +35,6 @@
     0.06243781162380397
   ],
   "v_mean_std": 0.002756691466520764,
-  "timestamp": "2026-07-29T02:27:25.138097+00:00"
+  "npz_path": "/results/ode_coalitions/cell_cycle_transcription_ode_coalition.npz",
+  "timestamp": "2026-08-01T16:57:08+00:00"
 }

@@ -5,6 +5,7 @@
   "n_players": 11,
   "n_init": 32,
   "ode_params": {
+    "n_init": 32,
     "t_max": 30.0,
     "t_tail": 10.0,
     "tau": 1.0,
@@ -36,5 +37,6 @@
     0.8741463375710643
   ],
   "v_mean_std": 0.3660171597161795,
-  "timestamp": "2026-07-29T02:29:42.022893+00:00"
+  "npz_path": "/results/ode_coalitions/myeloid_progenitors_ode_coalition.npz",
+  "timestamp": "2026-08-01T17:12:49+00:00"
 }

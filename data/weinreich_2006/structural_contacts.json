@@ -1,0 +1,107 @@
+{
+  "source_structure": {
+    "pdb_id": "1BTL",
+    "title": "Crystal structure of Escherichia coli TEM1 beta-lactamase at 1.8 Angstroms resolution",
+    "resolution_angstroms": 1.8,
+    "url": "https://www.rcsb.org/structure/1BTL",
+    "notes": [
+      "Alternative TEM-1 structures: 1XPB, 1ZG4, 1ERM.",
+      "Structure contains chain A, residues 26-290.",
+      "g4205a is a noncoding (promoter) mutation and has no structural position in the protein."
+    ]
+  },
+  "mutation_sites": {
+    "A42": {
+      "ambler_position": 42,
+      "wild_type_residue": "ALA",
+      "mutant_residue": "GLY",
+      "mutation_name": "A42G",
+      "ca_coordinates_angstroms": [21.464, 6.568, 20.675]
+    },
+    "E104": {
+      "ambler_position": 104,
+      "wild_type_residue": "GLU",
+      "mutant_residue": "LYS",
+      "mutation_name": "E104K",
+      "ca_coordinates_angstroms": [14.298, 12.439, 46.079]
+    },
+    "M182": {
+      "ambler_position": 182,
+      "wild_type_residue": "MET",
+      "mutant_residue": "THR",
+      "mutation_name": "M182T",
+      "ca_coordinates_angstroms": [12.049, -5.537, 26.286]
+    },
+    "G238": {
+      "ambler_position": 238,
+      "wild_type_residue": "GLY",
+      "mutant_residue": "SER",
+      "mutation_name": "G238S",
+      "ca_coordinates_angstroms": [16.723, 8.168, 34.402]
+    }
+  },
+  "contact_threshold_angstroms": 8.0,
+  "pairwise_distances": [
+    {
+      "site1": "A42G",
+      "site2": "E104K",
+      "residue1": 42,
+      "residue2": 104,
+      "ca_ca_distance_angstroms": 27.04,
+      "in_contact_8A": false
+    },
+    {
+      "site1": "A42G",
+      "site2": "M182T",
+      "residue1": 42,
+      "residue2": 182,
+      "ca_ca_distance_angstroms": 16.33,
+      "in_contact_8A": false
+    },
+    {
+      "site1": "A42G",
+      "site2": "G238S",
+      "residue1": 42,
+      "residue2": 238,
+      "ca_ca_distance_angstroms": 14.61,
+      "in_contact_8A": false
+    },
+    {
+      "site1": "E104K",
+      "site2": "M182T",
+      "residue1": 104,
+      "residue2": 182,
+      "ca_ca_distance_angstroms": 26.83,
+      "in_contact_8A": false
+    },
+    {
+      "site1": "E104K",
+      "site2": "G238S",
+      "residue1": 104,
+      "residue2": 238,
+      "ca_ca_distance_angstroms": 12.67,
+      "in_contact_8A": false
+    },
+    {
+      "site1": "M182T",
+      "site2": "G238S",
+      "residue1": 182,
+      "residue2": 238,
+      "ca_ca_distance_angstroms": 16.6,
+      "in_contact_8A": false
+    }
+  ],
+  "summary": {
+    "total_pairs": 6,
+    "pairs_in_contact": 0,
+    "closest_pair": {
+      "sites": ["E104K", "G238S"],
+      "distance_angstroms": 12.67
+    },
+    "farthest_pair": {
+      "sites": ["A42G", "E104K"],
+      "distance_angstroms": 27.04
+    },
+    "interpretation": "None of the four coding mutation sites are within 8 Angstroms Ca-Ca distance of each other. The closest pair (E104K-G238S at 12.67 A) are both near the active site but not in direct structural contact. This is a defining feature of the Weinreich system: strong epistasis arises through long-range functional interactions (enzyme activity and stability tradeoffs), not through direct physical contacts between mutated residues."
+  }
+}

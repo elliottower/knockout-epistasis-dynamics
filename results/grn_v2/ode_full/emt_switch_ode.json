@@ -1,0 +1,43 @@
+{
+  "model": "emt_switch",
+  "method": "ode_hill",
+  "description": "Epithelial-mesenchymal transition switch (12 nodes, no inputs)",
+  "n_players": 12,
+  "n_init": 32,
+  "ode_params": {
+    "n_init": 32,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "tau": 1.0,
+    "hill_n": 10.0,
+    "hill_k": 0.5
+  },
+  "local_o3plus": 0.03920118343195266,
+  "ode_global_o3plus": 0.0005552373908624344,
+  "ode_delta_o3plus": -0.03864594604109023,
+  "boolean_delta_o3plus": -0.03820047534102582,
+  "sign_preserved": true,
+  "ode_global_spectrum": [
+    0.49969856058391543,
+    0.4997073070232168,
+    3.8895002005238457e-05,
+    9.046715977253404e-05,
+    0.00013773704774437865,
+    0.00014393022502579497,
+    0.00010524387165892965,
+    5.386682606179144e-05,
+    1.8957153304859352e-05,
+    4.390957107781985e-06,
+    6.063413711184511e-07,
+    3.780881524590132e-08,
+    4.214923597322513e-33
+  ],
+  "n_unique_values": 8,
+  "v_mean_range": [
+    0.0,
+    0.9990243901363268
+  ],
+  "v_mean_std": 0.4990660295549944,
+  "npz_path": "/results/ode_coalitions/emt_switch_ode_coalition.npz",
+  "timestamp": "2026-08-01T18:00:29+00:00"
+}

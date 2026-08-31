@@ -5,6 +5,7 @@
   "n_players": 11,
   "n_init": 32,
   "ode_params": {
+    "n_init": 32,
     "t_max": 30.0,
     "t_tail": 10.0,
     "tau": 1.0,
@@ -36,5 +37,6 @@
     0.9678048688814489
   ],
   "v_mean_std": 0.23858187152686566,
-  "timestamp": "2026-07-29T02:38:07.420384+00:00"
+  "npz_path": "/results/ode_coalitions/li_budding_yeast_ode_coalition.npz",
+  "timestamp": "2026-08-01T17:14:51+00:00"
 }

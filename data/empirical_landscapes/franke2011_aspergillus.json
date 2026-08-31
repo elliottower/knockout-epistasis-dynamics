@@ -1,0 +1,3605 @@
+{
+  "source": "Franke et al. (2011) PLOS Comp Bio 7(8):e1002134, Table S1",
+  "organism": "Aspergillus niger",
+  "phenotype": "mycelium growth rate relative to wildtype",
+  "n_loci": 8,
+  "n_genotypes": 256,
+  "n_measured": 186,
+  "n_missing": 70,
+  "markers": [
+    "fwn",
+    "arg",
+    "pyr",
+    "leu",
+    "phe",
+    "lys",
+    "oli",
+    "crn"
+  ],
+  "genotypes": [
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 1.0,
+      "mutation_number": 0
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.751,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.773,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.698,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.757,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.826,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.598,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.628,
+      "mutation_number": 1
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.83,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.765,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.83,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.973,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.747,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.717,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.896,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.748,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.73,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.853,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.598,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.762,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.666,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.726,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.722,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.512,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.719,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.731,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.726,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.604,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.672,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.649,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.616,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.829,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.945,
+      "mutation_number": 2
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.783,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.75,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.724,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.543,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.814,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.576,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.636,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.768,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.516,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.825,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.735,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.522,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.706,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.706,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.468,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.845,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.748,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.738,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.667,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.772,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.559,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.692,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.887,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.562,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.627,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.633,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.777,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": 0.457,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.824,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.567,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.736,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.738,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.381,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.657,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.524,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.805,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.866,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.414,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.555,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.655,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.795,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.451,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.928,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.605,
+      "mutation_number": 3
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.622,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.735,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.523,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.783,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.85,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.491,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.7,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.77,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.837,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.841,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.722,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.274,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.659,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.675,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.539,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.817,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.743,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.64,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.643,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.723,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.798,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.499,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.749,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.603,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.651,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.681,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.481,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.73,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.442,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.769,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.812,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.422,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.471,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.75,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.478,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.866,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.41,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.702,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.793,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.414,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.847,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.525,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.659,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.767,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.453,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.462,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 4
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fitness": 0.605,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.43,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.686,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.639,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.56,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.707,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.794,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.637,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.727,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.604,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.722,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.611,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.617,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.824,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.638,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.337,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.647,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.701,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.409,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.928,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.446,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.619,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.72,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.537,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.615,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.387,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.669,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.779,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.416,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.827,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.562,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.618,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.74,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.469,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.538,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.614,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.619,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.414,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.517,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.645,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.454,
+      "mutation_number": 5
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fitness": 0.7,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fitness": 0.344,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fitness": 0.691,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.662,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.443,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.73,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.612,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.629,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": 0.318,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.841,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.609,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.67,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.545,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.479,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.475,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": 0.79,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.47,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.514,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 6
+    },
+    {
+      "binary": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.456,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.643,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fitness": 0.446,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fitness": 0.448,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fitness": null,
+      "mutation_number": 7
+    },
+    {
+      "binary": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fitness": null,
+      "mutation_number": 8
+    }
+  ]
+}
