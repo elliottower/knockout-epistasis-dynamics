@@ -32,7 +32,8 @@ claims:
       - exact: 'jointly increase bacterial resistance to a clinically important antibiotic by a factor of approximately 100,000'
         section: 'Abstract'
     notes: >
-      UNRESOLVED DISCREPANCY, disclosed in composition_gap_v16.tex.
+      UNRESOLVED DISCREPANCY. Recorded here; the manuscript reports the
+      median MIC span factually and does not discuss the mismatch.
 
       The abstract states approximately 1e5. The median MICs in the reproduced
       Table S1 (data/weinreich_2006/fitness_data.json, via OgPlexus/DEFPreflect
