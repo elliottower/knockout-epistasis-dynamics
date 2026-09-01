@@ -1,0 +1,12 @@
+source:
+  citation: faure2024walsh
+  local: reference/faure_2024_abstract.txt
+  sha256: 7ca532ca4e15b7652b4979cf4ed356c23de36fb6693d451de66fef6161508e6b
+  extract_cmd: cat
+claims:
+  multiallelic-arbitrary-states:
+    quotes:
+    - exact: an extension of the Walsh-Hadamard transform that allows the calculation and modeling of
+        background-averaged epistasis (also known as ensemble epistasis) in genetic landscapes with an
+        arbitrary number of states per position
+      section: Abstract

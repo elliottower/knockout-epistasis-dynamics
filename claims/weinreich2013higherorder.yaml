@@ -1,0 +1,11 @@
+source:
+  citation: weinreich2013higherorder
+  local: reference/weinreich_2013_abstract.txt
+  sha256: 464befc8b1bf9735b692cc182f13c56305ae5379bfaefb4dc5863128ff6257d1
+  extract_cmd: cat
+claims:
+  higher-order-across-landscapes:
+    quotes:
+    - exact: Our approach reveals substantial higher-order epistasis in almost every published fitness
+        landscape
+      section: Abstract

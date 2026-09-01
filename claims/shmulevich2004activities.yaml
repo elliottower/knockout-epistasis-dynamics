@@ -1,0 +1,12 @@
+source:
+  citation: shmulevich2004activities
+  local: reference/shmulevich_2004_abstract.txt
+  sha256: 77c5938b9ecfea8b6fc8bcdc6ef1c36f8e9b0a63526d992b13e41c0f3501ba90
+  extract_cmd: cat
+claims:
+  activity-and-sensitivity:
+    quotes:
+    - exact: The activity of a variable captures its influence on the output of the function and is a
+        measure of that variable's importance. The average sensitivity of a Boolean function captures
+        the smoothness of the function
+      section: Abstract

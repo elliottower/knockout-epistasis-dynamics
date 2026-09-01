@@ -1,0 +1,25 @@
+source:
+  citation: sailer2017detecting
+  local: reference/sailer_harms_2017.txt
+  sha256: 06d65864d6ceddf8abea5b935e8f3bc5be85609b2f0cc2a7f3efd436192c490e
+  extract_cmd: cat
+claims:
+  survives-linearization:
+    quotes:
+    - exact: even after accounting for nonlinearity, we found statistically significant high-order epistasis
+        in all seven maps
+      section: Abstract
+  higher-order-range:
+    quotes:
+    - exact: The contributions of high-order epistasis to the total variation ranged from 2.2 to 31.0%,
+        with an average across maps of 12.7%
+      section: Abstract
+  weinreich-is-map-III:
+    quotes:
+    - exact: III Protein point mutants Bacterial fitness 5 Weinreich et al. (2006)
+      section: Table 1
+  hall-is-maps-VI-VII:
+    quotes:
+    - exact: VI Alleles in biosynthetic network Saccharomyces cerevisiae haploid growth rate 6 Hall et
+        al. (2010)
+      section: Table 1
