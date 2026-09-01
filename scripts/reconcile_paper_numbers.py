@@ -94,6 +94,34 @@ def secondary_results():
     return out
 
 
+
+def per_network_table():
+    """Every numeric column of manuscript Table 1, per network."""
+    rows = {}
+    for f in glob.glob(str(ROOT / "results/grn_v2/*_composition_blind.json")):
+        d = json.loads(Path(f).read_text())
+        es = d["energy_spectrum"]
+        rows[d["model"]] = {
+            "n": d["n_players"],
+            "rho": round(d["pairwise"]["spearman_rho"], 3),
+            "p": d["pairwise"]["spearman_pvalue"],
+            "delta_3plus_pp": round((sum(es["global"][3:]) - sum(es["local_rules"][3:])) * 100, 2),
+        }
+    g = json.loads((ROOT / "results/grn_v2/grieco_bladder_analysis.json").read_text())
+    rows["grieco_bladder"] = {
+        "n": g.get("n_players", 18),
+        "rho": round(g["spearman_rho"], 3),
+        "p": g.get("spearman_p"),
+        "delta_3plus_pp": round(g["delta_o3plus"] * 100, 2),
+    }
+    merged = json.loads((ROOT / "results/grn_v2/merged_all_27_analysis.json").read_text())
+    cyc = {e["model"]: e.get("cycling_fraction") for e in merged["all_models"]}
+    cyc["grieco_bladder"] = g.get("cycling_fraction")
+    for m, r in rows.items():
+        r["cycling_fraction"] = cyc.get(m)
+    return rows
+
+
 def main():
     bo = boolean_deltas()
     deltas = [v for v, _ in bo.values()]
@@ -150,6 +178,7 @@ def main():
         "n_with_ode": len(common),
         "secondary": secondary_results(),
         "per_network_delta_pp": {m: round(v, 3) for m, (v, _) in sorted(bo.items())},
+        "per_network_table": per_network_table(),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     json.dump(stats, OUT.open("w"), indent=2)

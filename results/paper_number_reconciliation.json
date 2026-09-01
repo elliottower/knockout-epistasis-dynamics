@@ -179,5 +179,203 @@
     "saadatpour_guardcell": 51.397,
     "tournier_apoptosis": 8.461,
     "zanudo_tlgl": 33.234
+  },
+  "per_network_table": {
+    "fanconi_anemia": {
+      "n": 15,
+      "rho": 0.305,
+      "p": 0.0015488413858142486,
+      "delta_3plus_pp": -5.48,
+      "cycling_fraction": 0.4752929210662842
+    },
+    "albert_segment_polarity": {
+      "n": 11,
+      "rho": 0.209,
+      "p": 0.12617955533288322,
+      "delta_3plus_pp": 19.84,
+      "cycling_fraction": 0.0
+    },
+    "arellano_rootstem": {
+      "n": 9,
+      "rho": 0.603,
+      "p": 9.820339395317935e-05,
+      "delta_3plus_pp": 50.59,
+      "cycling_fraction": 0.0
+    },
+    "lambda_phage": {
+      "n": 7,
+      "rho": 0.606,
+      "p": 0.003612839594695832,
+      "delta_3plus_pp": -2.5,
+      "cycling_fraction": 0.160064697265625
+    },
+    "pair_rule_module": {
+      "n": 11,
+      "rho": 0.66,
+      "p": 4.20807929501448e-08,
+      "delta_3plus_pp": -2.74,
+      "cycling_fraction": 0.1783905029296875
+    },
+    "davidich_yeast": {
+      "n": 10,
+      "rho": 0.154,
+      "p": 0.31210781562677214,
+      "delta_3plus_pp": -0.38,
+      "cycling_fraction": 0.17698287963867188
+    },
+    "saadatpour_guardcell": {
+      "n": 13,
+      "rho": 0.065,
+      "p": 0.5715237536058049,
+      "delta_3plus_pp": 51.4,
+      "cycling_fraction": 0.05676460266113281
+    },
+    "asymmetric_cell_division": {
+      "n": 9,
+      "rho": -0.104,
+      "p": 0.5470671482144096,
+      "delta_3plus_pp": 44.09,
+      "cycling_fraction": 0.0634765625
+    },
+    "myeloid_progenitors": {
+      "n": 11,
+      "rho": 0.514,
+      "p": 5.872175951113131e-05,
+      "delta_3plus_pp": -2.28,
+      "cycling_fraction": 0.06585693359375
+    },
+    "mendoza_thelper": {
+      "n": 13,
+      "rho": 0.215,
+      "p": 0.058965429384236365,
+      "delta_3plus_pp": -0.34,
+      "cycling_fraction": 0.016775131225585938
+    },
+    "remy_p53_mdm2": {
+      "n": 10,
+      "rho": 0.505,
+      "p": 0.0004091295204792105,
+      "delta_3plus_pp": 0.08,
+      "cycling_fraction": 0.13390350341796875
+    },
+    "calzone_cellfate_reduced": {
+      "n": 11,
+      "rho": -0.075,
+      "p": 0.586439586520175,
+      "delta_3plus_pp": 37.04,
+      "cycling_fraction": 0.11061954498291016
+    },
+    "drosophila_cellcycle": {
+      "n": 14,
+      "rho": 0.12,
+      "p": 0.25714246318548095,
+      "delta_3plus_pp": 6.16,
+      "cycling_fraction": 0.14039695262908936
+    },
+    "faure_cellcycle": {
+      "n": 10,
+      "rho": 0.409,
+      "p": 0.005326566258609206,
+      "delta_3plus_pp": -3.02,
+      "cycling_fraction": 0.19612693786621094
+    },
+    "morphogenetic_checkpoint": {
+      "n": 12,
+      "rho": 0.4,
+      "p": 0.0008626321899927871,
+      "delta_3plus_pp": 11.91,
+      "cycling_fraction": 0.004044532775878906
+    },
+    "blood_stem_cell": {
+      "n": 11,
+      "rho": 0.595,
+      "p": 1.6657787119172318e-06,
+      "delta_3plus_pp": 4.78,
+      "cycling_fraction": 0.24537086486816406
+    },
+    "irons_cardiac": {
+      "n": 15,
+      "rho": 0.634,
+      "p": 3.680432077955656e-13,
+      "delta_3plus_pp": 10.92,
+      "cycling_fraction": 0.0933990478515625
+    },
+    "hematopoiesis_aging": {
+      "n": 15,
+      "rho": 0.631,
+      "p": 5.546660500897168e-13,
+      "delta_3plus_pp": 0.93,
+      "cycling_fraction": 0.10476112365722656
+    },
+    "lac_operon": {
+      "n": 13,
+      "rho": 0.079,
+      "p": 0.4924855721412703,
+      "delta_3plus_pp": 47.43,
+      "cycling_fraction": 0.0033435821533203125
+    },
+    "arabidopsis_cellcycle": {
+      "n": 14,
+      "rho": 0.205,
+      "p": 0.051835090108637724,
+      "delta_3plus_pp": 34.3,
+      "cycling_fraction": 0.16389036178588867
+    },
+    "emt_switch": {
+      "n": 12,
+      "rho": 0.377,
+      "p": 0.0018001310103809706,
+      "delta_3plus_pp": -3.82,
+      "cycling_fraction": 0.00067901611328125
+    },
+    "zanudo_tlgl": {
+      "n": 12,
+      "rho": -0.193,
+      "p": 0.11967202847844619,
+      "delta_3plus_pp": 33.23,
+      "cycling_fraction": 0.1030426025390625
+    },
+    "fumia_cellcycle": {
+      "n": 14,
+      "rho": 0.266,
+      "p": 0.010752126999175327,
+      "delta_3plus_pp": 52.24,
+      "cycling_fraction": 0.12541139125823975
+    },
+    "calzone_cell_fate": {
+      "n": 17,
+      "rho": -0.016,
+      "p": 0.8550104228118509,
+      "delta_3plus_pp": 58.21,
+      "cycling_fraction": 0.004598736763000488
+    },
+    "cell_cycle_transcription": {
+      "n": 9,
+      "rho": -0.383,
+      "p": 0.021308346046458728,
+      "delta_3plus_pp": 83.25,
+      "cycling_fraction": 0.0040130615234375
+    },
+    "tournier_apoptosis": {
+      "n": 12,
+      "rho": 0.247,
+      "p": 0.04580682325970198,
+      "delta_3plus_pp": 8.46,
+      "cycling_fraction": 0.07353448867797852
+    },
+    "li_budding_yeast": {
+      "n": 11,
+      "rho": 0.528,
+      "p": 3.4402870289421346e-05,
+      "delta_3plus_pp": 6.35,
+      "cycling_fraction": 0.124725341796875
+    },
+    "grieco_bladder": {
+      "n": 18,
+      "rho": 0.105,
+      "p": 0.1968917402849964,
+      "delta_3plus_pp": 3.77,
+      "cycling_fraction": 0.4028143882751465
+    }
   }
 }
