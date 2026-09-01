@@ -1,0 +1,183 @@
+{
+  "manuscript": "paper/composition_gap_v18.tex",
+  "null_band_pp": 0.5,
+  "checks": [
+    {
+      "quantity": "creation / destruction, non-null",
+      "manuscript": "19 / 6",
+      "computed": "19 / 6",
+      "agrees": true
+    },
+    {
+      "quantity": "null-band networks",
+      "manuscript": "3",
+      "computed": "3",
+      "agrees": true
+    },
+    {
+      "quantity": "median Delta_3+ (pp)",
+      "manuscript": "+7.4",
+      "computed": "+7.41",
+      "agrees": true
+    },
+    {
+      "quantity": "mean Delta_3+ (pp)",
+      "manuscript": "+19",
+      "computed": "+19.44",
+      "agrees": true
+    },
+    {
+      "quantity": "real mean, n<=15 (pp)",
+      "manuscript": "+18.6",
+      "computed": "+18.56",
+      "agrees": true
+    },
+    {
+      "quantity": "Kauffman NK null (pp)",
+      "manuscript": "+3.5",
+      "computed": "+3.53",
+      "agrees": true
+    },
+    {
+      "quantity": "degree-preserving null (pp)",
+      "manuscript": "+3.8",
+      "computed": "+3.80",
+      "agrees": true
+    },
+    {
+      "quantity": "rule-preserving null (pp)",
+      "manuscript": "+10.3",
+      "computed": "+10.33",
+      "agrees": true
+    },
+    {
+      "quantity": "ODE sign preserved, non-null",
+      "manuscript": "25/25",
+      "computed": "25/25",
+      "agrees": true
+    },
+    {
+      "quantity": "ODE raw sign agreement, all 28",
+      "manuscript": "(null band excluded)",
+      "computed": "27/28",
+      "agrees": true
+    }
+  ],
+  "ode_sign_flips": [
+    [
+      "davidich_yeast",
+      -0.38,
+      0.04
+    ]
+  ],
+  "null_models": {
+    "kauffman_nk": {
+      "n": 26,
+      "mean_pp": 3.534
+    },
+    "degree_preserving": {
+      "n": 25,
+      "mean_pp": 3.799
+    },
+    "rule_preserving": {
+      "n": 26,
+      "mean_pp": 10.326
+    }
+  },
+  "n_boolean_networks": 28,
+  "n_with_ode": 28,
+  "secondary": {
+    "topology_cv_r2_loo": -0.2726732122751163,
+    "gnk": {
+      "n_networks": 25,
+      "gnk_median": 0.5830641484804606,
+      "dynamic_median": 0.25632395508972544,
+      "gap": 0.3267401933907352,
+      "verdicts": {
+        "H0_gate_passes": true,
+        "H1": true,
+        "H2": true,
+        "H3_falsifier_fires": false
+      }
+    },
+    "blind_direction_hits": "- **Direction hits**: 10/21 (48%)",
+    "local_global_rho": {
+      "n": 28,
+      "median": 0.256,
+      "mean": 0.274,
+      "n_significant_positive": 15,
+      "n_negative": 5
+    },
+    "empirical": {
+      "empirical_landscapes": [
+        {
+          "dataset": "Weinreich TEM-1 (log MIC)",
+          "organism": "E. coli beta-lactamase",
+          "n_loci": 5,
+          "order_3plus_pct": 2.86,
+          "source": "Weinreich et al. 2006 Science"
+        },
+        {
+          "dataset": "Weinreich TEM-1 (raw MIC)",
+          "organism": "E. coli beta-lactamase",
+          "n_loci": 5,
+          "order_3plus_pct": 9.38,
+          "source": "Weinreich et al. 2006 Science"
+        },
+        {
+          "dataset": "Hall haploid growth",
+          "organism": "S. cerevisiae",
+          "n_loci": 6,
+          "order_3plus_pct": 0.12,
+          "source": "Hall et al. 2010 J Heredity"
+        },
+        {
+          "dataset": "Hall mating efficiency",
+          "organism": "S. cerevisiae",
+          "n_loci": 6,
+          "order_3plus_pct": 4.69,
+          "source": "Hall et al. 2010 J Heredity"
+        },
+        {
+          "dataset": "Franke A. niger growth",
+          "organism": "Aspergillus niger",
+          "n_loci": 8,
+          "order_3plus_pct": 11.36,
+          "source": "Franke et al. 2011 PLOS Comp Bio",
+          "note": "186/256 genotypes measured; 70 missing treated as non-viable (fitness 0)"
+        }
+      ],
+      "comparison_note": "Empirical landscapes show 0.1-11% order-3+ energy. GRN models with dynamics show composition gaps from -10 to +20 pp, with 18/24 creating additional order-3+."
+    }
+  },
+  "per_network_delta_pp": {
+    "albert_segment_polarity": 19.839,
+    "arabidopsis_cellcycle": 34.303,
+    "arellano_rootstem": 50.591,
+    "asymmetric_cell_division": 44.085,
+    "blood_stem_cell": 4.777,
+    "calzone_cell_fate": 58.209,
+    "calzone_cellfate_reduced": 37.037,
+    "cell_cycle_transcription": 83.252,
+    "davidich_yeast": -0.376,
+    "drosophila_cellcycle": 6.158,
+    "emt_switch": -3.82,
+    "fanconi_anemia": -5.482,
+    "faure_cellcycle": -3.023,
+    "fumia_cellcycle": 52.24,
+    "grieco_bladder": 3.766,
+    "hematopoiesis_aging": 0.933,
+    "irons_cardiac": 10.92,
+    "lac_operon": 47.434,
+    "lambda_phage": -2.498,
+    "li_budding_yeast": 6.35,
+    "mendoza_thelper": -0.345,
+    "morphogenetic_checkpoint": 11.906,
+    "myeloid_progenitors": -2.278,
+    "pair_rule_module": -2.74,
+    "remy_p53_mdm2": 0.082,
+    "saadatpour_guardcell": 51.397,
+    "tournier_apoptosis": 8.461,
+    "zanudo_tlgl": 33.234
+  }
+}
