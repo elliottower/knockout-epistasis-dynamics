@@ -1,6 +1,9 @@
 # How does the composition gap change with perturbation strength under the corrected ODE engine?
 
-**Status:** DRAFT — not frozen.
+**Status:** FROZEN at `851b7a96154f`
+**Plan sha256:** `110d2ff2b092fd0d77a5110e856499cea07955a447bbc5c59b47f4f3b208a626`
+**Log:** 2 entries, head `09adf740`
+**Frozen:** 2026-09-22
 
 Sections use the [OSF Preregistration](https://osf.io/prereg/) question titles verbatim, so
 this maps onto a registration without being rewritten. A question that does not apply is
@@ -257,4 +260,5 @@ decide which word to use: `nothing run`, `no results seen`, `results not opened`
 
 ```
 2026-09-21  created                              nothing run
+2026-09-22  frozen at 851b7a96154f                nothing run  ·09adf740
 ```
