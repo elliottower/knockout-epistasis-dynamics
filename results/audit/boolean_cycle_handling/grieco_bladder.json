@@ -1,0 +1,22 @@
+{
+  "network": "grieco_bladder",
+  "n_nodes": 18,
+  "n_coalitions": 262144,
+  "counters": {
+    "n_trajectories": 134217728,
+    "n_cycling": 54064832,
+    "n_unclosed_implemented": 0,
+    "n_no_cycle_in_window_registered": 0,
+    "n_period_over_window": 0
+  },
+  "n_trajectories_procedures_differ": 0,
+  "n_coalitions_procedures_differ": 0,
+  "max_abs_trajectory_diff": 0.0,
+  "max_abs_coalition_value_diff": 0.0,
+  "delta_3plus_pp": {
+    "published": 3.77,
+    "implemented": 3.7655182267384317,
+    "registered": 3.7655182267384317
+  },
+  "positive_control_committed_table": "no committed table; compare delta_3plus_pp.implemented with published"
+}

@@ -1,0 +1,239 @@
+{
+  "generated_by": "uv run python -m scripts.record_registered_identities",
+  "code_sha256": "141e7f6431d294bee45378e20e243894d8ee2e4d3ec1b441888694899f3bcbb4",
+  "code_files": [
+    "scripts/ode_engine.py",
+    "grn_coalition_sweep.py",
+    "scripts/ode_coalition_sweep.py"
+  ],
+  "config_sha256": {
+    "experiments/ode_v2/solver_primary.json": "74ff164da031daf0de32b0dd5947fafe8dabab124e8edd577139cdbf9a7d66bc",
+    "experiments/ode_v2/classifier_primary.json": "619eea0c739e6cff22124498995344d613278b0870bdc0a6d57c52d07175e556"
+  },
+  "networks": {
+    "lambda_phage": {
+      "n_nodes": 7,
+      "output_nodes": [
+        "CI_b1"
+      ],
+      "model_sha256": "4a3b586c25b2601f54ce3c02d6226bf4a298f2327ed3b116fa01cf6702baa4e9",
+      "boolean_delta_3plus_pp_published": -2.5
+    },
+    "arellano_rootstem": {
+      "n_nodes": 9,
+      "output_nodes": [
+        "WOX"
+      ],
+      "model_sha256": "274d0e2a641af661dad9bc3df6245631f0f89b1bb93972ee70f7f143a9433ddf",
+      "boolean_delta_3plus_pp_published": 50.59
+    },
+    "asymmetric_cell_division": {
+      "n_nodes": 9,
+      "output_nodes": [
+        "CtrAb"
+      ],
+      "model_sha256": "30ada887a06f14feffd7affb00cc7c3ccabc82d363ace3d186c55e508fa858b8",
+      "boolean_delta_3plus_pp_published": 44.09
+    },
+    "cell_cycle_transcription": {
+      "n_nodes": 9,
+      "output_nodes": [
+        "SFF"
+      ],
+      "model_sha256": "5c362f0ab3a772cd9755750223ed2291530c297adfd468fb11db86c506984761",
+      "boolean_delta_3plus_pp_published": 83.25
+    },
+    "davidich_yeast": {
+      "n_nodes": 10,
+      "output_nodes": [
+        "Cdc2_Cdc13"
+      ],
+      "model_sha256": "231a595ed67e4c588b3afea681259246beb6b7b933d927614df36763ece66ec0",
+      "boolean_delta_3plus_pp_published": -0.38
+    },
+    "faure_cellcycle": {
+      "n_nodes": 10,
+      "output_nodes": [
+        "CycB"
+      ],
+      "model_sha256": "0515a9a86ea145e29b83ad132b30de46ad12062b7ab05d225c15b4e24d25a106",
+      "boolean_delta_3plus_pp_published": -3.02
+    },
+    "remy_p53_mdm2": {
+      "n_nodes": 10,
+      "output_nodes": [
+        "p53"
+      ],
+      "model_sha256": "42be9c4c660438634908f51a7309f2168861fc2ac8e93547650598f82063428e",
+      "boolean_delta_3plus_pp_published": 0.08
+    },
+    "albert_segment_polarity": {
+      "n_nodes": 11,
+      "output_nodes": [
+        "wg"
+      ],
+      "model_sha256": "83ca02e4c72ed157ac0b59eea0542e4a00ba93fa28f38352f95e7862d3135d4b",
+      "boolean_delta_3plus_pp_published": 19.84
+    },
+    "blood_stem_cell": {
+      "n_nodes": 11,
+      "output_nodes": [
+        "GATA1"
+      ],
+      "model_sha256": "c05a32eb65b703b8410b0b09c2457a7509c33258076069308b4511c31be71593",
+      "boolean_delta_3plus_pp_published": 4.78
+    },
+    "calzone_cellfate_reduced": {
+      "n_nodes": 11,
+      "output_nodes": [
+        "C3"
+      ],
+      "model_sha256": "6e2c5ea4efe96faad6a02e0b8bbc70cddc95db78ae0eab1803ad437ca118a008",
+      "boolean_delta_3plus_pp_published": 37.04
+    },
+    "li_budding_yeast": {
+      "n_nodes": 11,
+      "output_nodes": [
+        "Clb1_2"
+      ],
+      "model_sha256": "553ae56a0d5d74c853a851835e160bc97ebdc8c83b09ba17045d1bcc9aad043c",
+      "boolean_delta_3plus_pp_published": 6.35
+    },
+    "myeloid_progenitors": {
+      "n_nodes": 11,
+      "output_nodes": [
+        "GATA1"
+      ],
+      "model_sha256": "61b2aa6820a3ffd2f00614fb984aedc560274fe7223e120143cf5011ebcdc2e9",
+      "boolean_delta_3plus_pp_published": -2.28
+    },
+    "pair_rule_module": {
+      "n_nodes": 11,
+      "output_nodes": [
+        "Eve_b1"
+      ],
+      "model_sha256": "befe33c87b4a8bd921bcc0c4f4a44cda15142c854b3c7d0b03c8e1fe32f55ffe",
+      "boolean_delta_3plus_pp_published": -2.74
+    },
+    "emt_switch": {
+      "n_nodes": 12,
+      "output_nodes": [
+        "Ecadherin_mRNA"
+      ],
+      "model_sha256": "cfad831b24c28c1b54ab229b48265296c5bd3dc6e19d82080196f7cecca5c158",
+      "boolean_delta_3plus_pp_published": -3.82
+    },
+    "morphogenetic_checkpoint": {
+      "n_nodes": 12,
+      "output_nodes": [
+        "Clb2_b2"
+      ],
+      "model_sha256": "a69ab585ce9139e7f3c19236c61f1628a467ea7c7af9d42c295b3ebf31056634",
+      "boolean_delta_3plus_pp_published": 11.91
+    },
+    "tournier_apoptosis": {
+      "n_nodes": 12,
+      "output_nodes": [
+        "C3a"
+      ],
+      "model_sha256": "5f11dcc91c68f3a75cfd498bafd62fa38e092d21d17615dff1482e16bfa85681",
+      "boolean_delta_3plus_pp_published": 8.46
+    },
+    "zanudo_tlgl": {
+      "n_nodes": 12,
+      "output_nodes": [
+        "Apoptosis"
+      ],
+      "model_sha256": "d5f20c2f4570c1cd0ad3e59f95e3a81502a3d3729855b984f25617c327eae533",
+      "boolean_delta_3plus_pp_published": 33.23
+    },
+    "lac_operon": {
+      "n_nodes": 13,
+      "output_nodes": [
+        "P"
+      ],
+      "model_sha256": "c290c19449dae902a4d5454f4ab9f5729130a5bdb2a98d54603d13381b04b6b5",
+      "boolean_delta_3plus_pp_published": 47.43
+    },
+    "mendoza_thelper": {
+      "n_nodes": 13,
+      "output_nodes": [
+        "GATA3"
+      ],
+      "model_sha256": "ecef1e08277269285deec3fc51a8437b8d9e43f98fde4bb2d6b84a1ad5d3ec93",
+      "boolean_delta_3plus_pp_published": -0.34
+    },
+    "saadatpour_guardcell": {
+      "n_nodes": 13,
+      "output_nodes": [
+        "KEV"
+      ],
+      "model_sha256": "c16f3cd2383bc91ffa28a7028944b4b40ee100f6e066d36efcecc0488b0cf4a0",
+      "boolean_delta_3plus_pp_published": 51.4
+    },
+    "arabidopsis_cellcycle": {
+      "n_nodes": 14,
+      "output_nodes": [
+        "CYCB1_1"
+      ],
+      "model_sha256": "5739367a3dbb1e9cf78eb86e38b3abf192f3a046f6b6c7b42e77a2ceb6e2791e",
+      "boolean_delta_3plus_pp_published": 34.3
+    },
+    "drosophila_cellcycle": {
+      "n_nodes": 14,
+      "output_nodes": [
+        "CycB"
+      ],
+      "model_sha256": "b0ffa6977fac589d2a4c52105a34c4208519e6242df0fbf26a470d14683369e3",
+      "boolean_delta_3plus_pp_published": 6.16
+    },
+    "fumia_cellcycle": {
+      "n_nodes": 14,
+      "output_nodes": [
+        "CycB"
+      ],
+      "model_sha256": "26ed61dee81e6c52e13c3c60965368b4ff0fbeaea42087a7fe5d92584158e3fa",
+      "boolean_delta_3plus_pp_published": 52.24
+    },
+    "fanconi_anemia": {
+      "n_nodes": 15,
+      "output_nodes": [
+        "CHKREC"
+      ],
+      "model_sha256": "25305db5258f54c24cb8d081eb475f30fa7c8b5c9b594f8ca300d5914d7aaf2e",
+      "boolean_delta_3plus_pp_published": -5.48
+    },
+    "hematopoiesis_aging": {
+      "n_nodes": 15,
+      "output_nodes": [
+        "Gata1"
+      ],
+      "model_sha256": "9cce5132705cb47deda82c9e22e7d49aaad0c9b8d63115d51b47dea682ee2c13",
+      "boolean_delta_3plus_pp_published": 0.93
+    },
+    "irons_cardiac": {
+      "n_nodes": 15,
+      "output_nodes": [
+        "Nkx2_5"
+      ],
+      "model_sha256": "fde4d94023fc508e1057d7316726d9ce9240f716d5217514c4855ae19c99102a",
+      "boolean_delta_3plus_pp_published": 10.92
+    },
+    "calzone_cell_fate": {
+      "n_nodes": 17,
+      "output_nodes": [
+        "Apoptosis"
+      ],
+      "model_sha256": "8bab063830df9ce440fb64d1c5da7e31347ffb20cbab5d0463edabf87214cf22",
+      "boolean_delta_3plus_pp_published": 58.21
+    },
+    "grieco_bladder": {
+      "n_nodes": 18,
+      "output_nodes": [
+        "Apoptosis"
+      ],
+      "model_sha256": "0294798c134ce53ea5a5e6e677f22931fe0033fefad088ef3dd057b9408679c5",
+      "boolean_delta_3plus_pp_published": 3.77
+    }
+  }
+}

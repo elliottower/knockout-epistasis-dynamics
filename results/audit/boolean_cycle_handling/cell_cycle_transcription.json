@@ -1,0 +1,27 @@
+{
+  "network": "cell_cycle_transcription",
+  "n_nodes": 9,
+  "n_coalitions": 512,
+  "counters": {
+    "n_trajectories": 262144,
+    "n_cycling": 1052,
+    "n_unclosed_implemented": 0,
+    "n_no_cycle_in_window_registered": 0,
+    "n_period_over_window": 0
+  },
+  "n_trajectories_procedures_differ": 0,
+  "n_coalitions_procedures_differ": 0,
+  "max_abs_trajectory_diff": 0.0,
+  "max_abs_coalition_value_diff": 0.0,
+  "delta_3plus_pp": {
+    "published": 83.25,
+    "implemented": 83.25216693666142,
+    "registered": 83.25216693666142
+  },
+  "positive_control_committed_table": {
+    "against": "results/grn_v2/cell_cycle_transcription_coalition_blind.npz",
+    "exact_equal": true,
+    "n_values_differing": 0,
+    "max_abs_diff": 0.0
+  }
+}

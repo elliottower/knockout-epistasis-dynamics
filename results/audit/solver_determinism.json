@@ -1,0 +1,71 @@
+{
+  "question": "Does the legacy engine reproduce itself on identical inputs?",
+  "platform": {
+    "numpy": "2.2.6",
+    "blas": "accelerate",
+    "thread_env": {
+      "OPENBLAS_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "OMP_NUM_THREADS": null
+    }
+  },
+  "inputs": {
+    "networks": [
+      "arellano_rootstem",
+      "davidich_yeast",
+      "lambda_phage"
+    ],
+    "repeats": 6,
+    "n_init": 4,
+    "seed": 42,
+    "hill_n": 10.0,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "per_solve_timeout": "disabled"
+  },
+  "networks": {
+    "arellano_rootstem": [
+      {
+        "coalition": 511,
+        "distinct_results": 3,
+        "max_relative_spread": 1.1418388306798801e-12,
+        "max_absolute_spread": 4.769730207133896e-22
+      },
+      {
+        "coalition": 259,
+        "distinct_results": 1,
+        "max_relative_spread": 0.0,
+        "max_absolute_spread": 0.0
+      }
+    ],
+    "davidich_yeast": [
+      {
+        "coalition": 1023,
+        "distinct_results": 1,
+        "max_relative_spread": 0.0,
+        "max_absolute_spread": 0.0
+      },
+      {
+        "coalition": 515,
+        "distinct_results": 1,
+        "max_relative_spread": 0.0,
+        "max_absolute_spread": 0.0
+      }
+    ],
+    "lambda_phage": [
+      {
+        "coalition": 127,
+        "distinct_results": 1,
+        "max_relative_spread": 0.0,
+        "max_absolute_spread": 0.0
+      },
+      {
+        "coalition": 67,
+        "distinct_results": 1,
+        "max_relative_spread": 0.0,
+        "max_absolute_spread": 0.0
+      }
+    ]
+  },
+  "max_relative_spread": 1.1418388306798801e-12
+}

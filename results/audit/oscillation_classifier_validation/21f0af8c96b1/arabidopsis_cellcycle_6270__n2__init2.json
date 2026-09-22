@@ -1,0 +1,93 @@
+{
+  "case": "arabidopsis_cellcycle 6270",
+  "hill_n": 2.0,
+  "initial_state": 2,
+  "fate": "settles",
+  "window_range": 2.9802322387695312e-08,
+  "window_envelope_diff": 0.0,
+  "status": "ok",
+  "class": "fixed",
+  "horizon_index": 4,
+  "per_horizon": [
+    {
+      "horizon": 60.0,
+      "tail_range": 0.10080277919769287,
+      "final_derivative": 0.026774888960681087,
+      "halves_envelope_diff": 0.16489923162123005
+    },
+    {
+      "horizon": 120.0,
+      "tail_range": 0.029093891382217407,
+      "final_derivative": 0.004824770160777814,
+      "halves_envelope_diff": 0.2732122719927456
+    },
+    {
+      "horizon": 240.0,
+      "tail_range": 0.002891451120376587,
+      "final_derivative": 0.0001501783105776755,
+      "halves_envelope_diff": 0.3724764625977798
+    },
+    {
+      "horizon": 480.0,
+      "tail_range": 2.8699636459350586e-05,
+      "final_derivative": 1.7709656252584693e-07,
+      "halves_envelope_diff": 0.4714434060228453
+    },
+    {
+      "horizon": 960.0,
+      "tail_range": 2.9802322387695312e-08,
+      "final_derivative": 1.8852912342381956e-08,
+      "halves_envelope_diff": 0.0
+    }
+  ],
+  "solver": {
+    "_status": "DRAFT, proposed for the registration, not frozen, not run",
+    "_rationale": {
+      "rtol_atol": "rtol 1e-8, atol 1e-10. At rtol 1e-6 the classifier's fixed-point bound (final derivative 1e-6) sat on the solver's noise floor and split converged fixed points in two; at 1e-8 they fall 10x inside it (results/audit/classifier_calibration.json vs classifier_calibration_rtol1e-8.json). Adopted after review 3.",
+      "t_max_t_tail": "doubled from legacy with the tail kept at the final third, because lower Hill coefficients may settle more slowly; tail_range and final_derivative will show whether this suffices",
+      "attempts": "RK45 first; a larger RK45 budget only if the first hit its cap; an implicit stiff method only after a failure of any kind (2026-09-21 code review). Radau versus BDF to be chosen by benchmark before the freeze."
+    },
+    "attempts": [
+      {
+        "method": "RK45",
+        "max_rhs_evals": 200000,
+        "when": "first"
+      },
+      {
+        "method": "RK45",
+        "max_rhs_evals": 2000000,
+        "when": "after_cap"
+      },
+      {
+        "method": "Radau",
+        "max_rhs_evals": 2000000,
+        "when": "after_failure"
+      }
+    ],
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "max_step": 2.0,
+    "t_max": 60.0,
+    "t_tail": 20.0,
+    "n_tail_samples": 100
+  },
+  "classifier": {
+    "_status": "DRAFT, proposed for the registration, not frozen, not run",
+    "_rationale": {
+      "fixed": "tail range and final derivative thresholds from the 2026-09-21 code review; at rtol 1e-6 they sit at the solver's noise floor and reject converged fixed points, at rtol 1e-8 converged fixed points fall 10x inside them (results/audit/classifier_calibration*.json)",
+      "oscillatory": "tail range above 1e-4, inside [0, 1] up to the margin, and each half of the tail repeating the other's per-node maximum and minimum to within 2.5% of that node's range; nodes whose range is within the fixed-point bound count as static and are not compared. 2.5% sits about 2.5x above the largest disagreement of a sustained oscillation (0.0098) and about 2x below the smallest of a decaying one (0.053, the 3-node ring just below onset); every tolerance from 1% to 5% classified the validation panel identically (results/audit/oscillation_tolerance_replay.json). Chosen in review 4.",
+      "extension_horizons": "60 -> 120 -> 240 -> 480 -> 960, the tail kept at the final third of each horizon and sampled at constant density. 480 and 960 were added after calibration found damped oscillations near a Hopf point (arabidopsis_cellcycle, n_H = 2) that settle only by t ~ 400-800 (results/audit/classifier_calibration_rtol1e-8_arabidopsis_n2.json)"
+    },
+    "fixed_tail_range_max": 1e-05,
+    "fixed_derivative_max": 1e-06,
+    "oscillatory_tail_range_min": 0.0001,
+    "halves_envelope_tol": 0.025,
+    "bounded_margin": 0.001,
+    "extension_horizons": [
+      120.0,
+      240.0,
+      480.0,
+      960.0
+    ]
+  }
+}

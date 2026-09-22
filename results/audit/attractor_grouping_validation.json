@@ -1,0 +1,130 @@
+{
+  "question": "Is the attractor grouping stable across the registered tolerance grid, and does it find known attractors?",
+  "settings": {
+    "seed": 20260922,
+    "n_init": 32,
+    "init_seed": 42,
+    "coalitions_per_network": 32,
+    "dynamics": [
+      "hillcube_normalized",
+      10.0,
+      0.5
+    ],
+    "solver_file": "experiments/ode_v2/solver_primary.json",
+    "classifier_file": "experiments/ode_v2/classifier_primary.json",
+    "fixed_tol_grid": [
+      0.0001,
+      0.0003,
+      0.001
+    ],
+    "cycle_tol_grid": [
+      0.025,
+      0.05,
+      0.1
+    ],
+    "primary": [
+      0.001,
+      0.05
+    ],
+    "period_rtol": 0.05,
+    "code_sha256": "141e7f6431d294bee45378e20e243894d8ee2e4d3ec1b441888694899f3bcbb4"
+  },
+  "gate_criteria": {
+    "min_multistable": 20,
+    "stable_fraction": 0.99
+  },
+  "controls": {
+    "toggle": {
+      "expected": 2,
+      "found": {
+        "(0.0001, 0.025)": 2,
+        "(0.0001, 0.05)": 2,
+        "(0.0001, 0.1)": 2,
+        "(0.0003, 0.025)": 2,
+        "(0.0003, 0.05)": 2,
+        "(0.0003, 0.1)": 2,
+        "(0.001, 0.025)": 2,
+        "(0.001, 0.05)": 2,
+        "(0.001, 0.1)": 2
+      },
+      "passed": true
+    },
+    "ring4": {
+      "expected": 2,
+      "found": {
+        "(0.0001, 0.025)": 2,
+        "(0.0001, 0.05)": 2,
+        "(0.0001, 0.1)": 2,
+        "(0.0003, 0.025)": 2,
+        "(0.0003, 0.05)": 2,
+        "(0.0003, 0.1)": 2,
+        "(0.001, 0.025)": 2,
+        "(0.001, 0.05)": 2,
+        "(0.001, 0.1)": 2
+      },
+      "passed": true
+    },
+    "ring3": {
+      "expected": 1,
+      "found": {
+        "(0.0001, 0.025)": 1,
+        "(0.0001, 0.05)": 1,
+        "(0.0001, 0.1)": 1,
+        "(0.0003, 0.025)": 1,
+        "(0.0003, 0.05)": 1,
+        "(0.0003, 0.1)": 1,
+        "(0.001, 0.025)": 1,
+        "(0.001, 0.05)": 1,
+        "(0.001, 0.1)": 1
+      },
+      "passed": true
+    },
+    "switched_rings": {
+      "expected": 2,
+      "found": {
+        "(0.0001, 0.025)": 2,
+        "(0.0001, 0.05)": 2,
+        "(0.0001, 0.1)": 2,
+        "(0.0003, 0.025)": 2,
+        "(0.0003, 0.05)": 2,
+        "(0.0003, 0.1)": 2,
+        "(0.001, 0.025)": 2,
+        "(0.001, 0.05)": 2,
+        "(0.001, 0.1)": 2
+      },
+      "passed": true
+    }
+  },
+  "panel": {
+    "n_coalitions": 892,
+    "n_with_more_than_one_fixed_point_attractor": 547,
+    "n_with_two_or_more_oscillating_trajectories": 19,
+    "fraction_same_across_grid": 1.0,
+    "fraction_single_equals_complete": 1.0,
+    "oscillating_subset": {
+      "fraction_same_across_grid": 1.0,
+      "fraction_single_equals_complete": 1.0
+    },
+    "oscillating_trajectories_without_period": 0,
+    "fixed_largest_within_attractor_distance": 4.172325134277344e-07,
+    "fixed_smallest_between_attractor_distance": 0.4924140971561428,
+    "cycle_largest_within_attractor_distance_scaled": 0.20324170589447021,
+    "cycle_smallest_between_attractor_distance_scaled": 6.768447222015471,
+    "cycle_largest_relative_period_spread": 0.0029171044006943703,
+    "cycle_largest_within_attractor_spread_by_summary": {
+      "cycle_mean": 0.007760763168334961,
+      "tail_min": 0.01016208529472351,
+      "tail_max": 0.009068310260772705
+    },
+    "n_networks": 28,
+    "n_coalitions_with_a_failed_trajectory": 0
+  },
+  "gate": {
+    "controls_have_their_known_attractors": true,
+    "panel_can_fail": true,
+    "same_partition_across_grid": true,
+    "complete_equals_single_linkage": true
+  },
+  "passed": true,
+  "written_at": "2026-09-22T04:57:51+00:00"
+}

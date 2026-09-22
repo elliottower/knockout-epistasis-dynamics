@@ -1,0 +1,16 @@
+{
+  "_what": "The published ODE arm's solver as executed by scripts/modal_ode_sweep.py, minus its 0.1 s wall-clock timeout. Determined by the legacy code; contains no choices. Used only to audit the published arm.",
+  "attempts": [
+    {
+      "method": "RK45",
+      "max_rhs_evals": 10000000,
+      "when": "first"
+    }
+  ],
+  "rtol": 0.001,
+  "atol": 1e-05,
+  "max_step": 2.0,
+  "t_max": 30.0,
+  "t_tail": 10.0,
+  "n_tail_samples": 50
+}

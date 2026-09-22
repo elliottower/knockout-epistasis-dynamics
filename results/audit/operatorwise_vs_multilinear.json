@@ -1,0 +1,3616 @@
+{
+  "question": "Where does the operator-wise conversion depart from the multilinear extension?",
+  "inputs": {
+    "networks_from": "results/paper_number_reconciliation.json",
+    "interior_levels": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "sparse_levels": [
+      0.25,
+      0.75
+    ],
+    "max_dense_points": 20000,
+    "tolerance": 1e-09
+  },
+  "summary": {
+    "n_networks": 28,
+    "n_rules": 339,
+    "n_rules_with_repeated_regulator": 97,
+    "n_rules_differing": 97,
+    "n_rules_differing_without_repetition": 0,
+    "n_rules_repeated_but_agreeing": 0,
+    "max_diff_interior": 0.3711944294400002,
+    "vertex_control_max_diff": 0.0,
+    "n_networks_with_a_differing_rule": 24,
+    "per_network": {
+      "albert_segment_polarity": {
+        "n_rules": 11,
+        "n_differing": 2,
+        "max_diff": 0.19200000000000006
+      },
+      "arabidopsis_cellcycle": {
+        "n_rules": 14,
+        "n_differing": 7,
+        "max_diff": 0.2624000000000001
+      },
+      "arellano_rootstem": {
+        "n_rules": 9,
+        "n_differing": 2,
+        "max_diff": 0.15990784000000002
+      },
+      "asymmetric_cell_division": {
+        "n_rules": 9,
+        "n_differing": 0,
+        "max_diff": 0.0
+      },
+      "blood_stem_cell": {
+        "n_rules": 11,
+        "n_differing": 6,
+        "max_diff": 0.16
+      },
+      "calzone_cell_fate": {
+        "n_rules": 17,
+        "n_differing": 3,
+        "max_diff": 0.16000000000000003
+      },
+      "calzone_cellfate_reduced": {
+        "n_rules": 11,
+        "n_differing": 4,
+        "max_diff": 0.28800000000000003
+      },
+      "cell_cycle_transcription": {
+        "n_rules": 9,
+        "n_differing": 1,
+        "max_diff": 0.15360000000000001
+      },
+      "davidich_yeast": {
+        "n_rules": 10,
+        "n_differing": 3,
+        "max_diff": 0.237568
+      },
+      "drosophila_cellcycle": {
+        "n_rules": 14,
+        "n_differing": 9,
+        "max_diff": 0.22209761191657473
+      },
+      "emt_switch": {
+        "n_rules": 12,
+        "n_differing": 1,
+        "max_diff": 0.050000000000000044
+      },
+      "fanconi_anemia": {
+        "n_rules": 15,
+        "n_differing": 6,
+        "max_diff": 0.3711944294400002
+      },
+      "faure_cellcycle": {
+        "n_rules": 10,
+        "n_differing": 6,
+        "max_diff": 0.32495789670400016
+      },
+      "fumia_cellcycle": {
+        "n_rules": 14,
+        "n_differing": 3,
+        "max_diff": 0.15999999999999998
+      },
+      "grieco_bladder": {
+        "n_rules": 18,
+        "n_differing": 1,
+        "max_diff": 0.0625
+      },
+      "hematopoiesis_aging": {
+        "n_rules": 15,
+        "n_differing": 4,
+        "max_diff": 0.16000000000000003
+      },
+      "irons_cardiac": {
+        "n_rules": 15,
+        "n_differing": 5,
+        "max_diff": 0.16000000000000003
+      },
+      "lac_operon": {
+        "n_rules": 13,
+        "n_differing": 2,
+        "max_diff": 0.16000000000000014
+      },
+      "lambda_phage": {
+        "n_rules": 7,
+        "n_differing": 7,
+        "max_diff": 0.2879520000000002
+      },
+      "li_budding_yeast": {
+        "n_rules": 11,
+        "n_differing": 2,
+        "max_diff": 0.15360000000000007
+      },
+      "mendoza_thelper": {
+        "n_rules": 13,
+        "n_differing": 4,
+        "max_diff": 0.28800000000000003
+      },
+      "morphogenetic_checkpoint": {
+        "n_rules": 12,
+        "n_differing": 6,
+        "max_diff": 0.2879520000000002
+      },
+      "myeloid_progenitors": {
+        "n_rules": 11,
+        "n_differing": 0,
+        "max_diff": 3.3306690738754696e-16
+      },
+      "pair_rule_module": {
+        "n_rules": 11,
+        "n_differing": 8,
+        "max_diff": 0.24476891238789733
+      },
+      "remy_p53_mdm2": {
+        "n_rules": 10,
+        "n_differing": 1,
+        "max_diff": 0.25
+      },
+      "saadatpour_guardcell": {
+        "n_rules": 13,
+        "n_differing": 0,
+        "max_diff": 1.1102230246251565e-16
+      },
+      "tournier_apoptosis": {
+        "n_rules": 12,
+        "n_differing": 4,
+        "max_diff": 0.16000000000000003
+      },
+      "zanudo_tlgl": {
+        "n_rules": 12,
+        "n_differing": 0,
+        "max_diff": 2.220446049250313e-16
+      }
+    }
+  },
+  "rules": {
+    "albert_segment_polarity": [
+      {
+        "node": "SLP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "WG",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "wg",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CIA",
+          "CIR"
+        ],
+        "max_diff_interior": 0.15360000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "WG_ext",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "en",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "EN",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "hh",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "HH_ext",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "PTC",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "EN",
+          "HH_ext"
+        ],
+        "max_diff_interior": 0.19200000000000006,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "CIA",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "CIR",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "arabidopsis_cellcycle": [
+      {
+        "node": "APC_C",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "E2Fe"
+        ],
+        "max_diff_interior": 0.2624000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "CDKB1_1",
+        "k": 7,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 8.881784197001252e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^7"
+      },
+      {
+        "node": "CYCA2_3",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "CYCB1_1",
+        "k": 8,
+        "repeated": true,
+        "repeated_regulators": [
+          "APC_C"
+        ],
+        "max_diff_interior": 0.2550272000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^8"
+      },
+      {
+        "node": "CYCD3_1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "E2Fa",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CDKB1_1",
+          "CYCA2_3",
+          "E2Fa",
+          "E2Fc"
+        ],
+        "max_diff_interior": 0.20294402048000004,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "E2Fb",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "E2Fc",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "CYCD3_1",
+          "KRP1",
+          "SCF"
+        ],
+        "max_diff_interior": 0.1279262719999999,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "E2Fe",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "CYCD3_1",
+          "E2Fb",
+          "E2Fc",
+          "KRP1",
+          "MYB77",
+          "RBR"
+        ],
+        "max_diff_interior": 0.23321014150810127,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "KRP1",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 5.551115123125783e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "MYB3R1_4",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "MYB77",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "RBR",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CYCD3_1",
+          "KRP1"
+        ],
+        "max_diff_interior": 0.144211968,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "SCF",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "APC_C"
+        ],
+        "max_diff_interior": 0.14847999999999995,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      }
+    ],
+    "arellano_rootstem": [
+      {
+        "node": "AUXINS",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "SHR",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "ARF",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "IAA",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "JKD",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "MGP",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "SCR",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "SCR",
+          "SHR"
+        ],
+        "max_diff_interior": 0.15360000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "WOX",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "ARF",
+          "SCR",
+          "SHR"
+        ],
+        "max_diff_interior": 0.15990784000000002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "PLT",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      }
+    ],
+    "asymmetric_cell_division": [
+      {
+        "node": "CckA",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "ChpT",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "ClpXP_RcdA",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CpdR",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CtrAb",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "DivJ",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "DivK",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "DivL",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "PleC",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      }
+    ],
+    "blood_stem_cell": [
+      {
+        "node": "ERG",
+        "k": 6,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 6.661338147750939e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "ETO2",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "FLI1",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "GATA2"
+        ],
+        "max_diff_interior": 0.10239999999999994,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "GATA1",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "GATA1"
+        ],
+        "max_diff_interior": 0.16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "GATA2",
+        "k": 7,
+        "repeated": true,
+        "repeated_regulators": [
+          "GATA2"
+        ],
+        "max_diff_interior": 0.09830399999999995,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^7"
+      },
+      {
+        "node": "HHEX",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 3.3306690738754696e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "PU1",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "PU1"
+        ],
+        "max_diff_interior": 0.12799999999999995,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "RUNX1",
+        "k": 7,
+        "repeated": true,
+        "repeated_regulators": [
+          "RUNX1"
+        ],
+        "max_diff_interior": 0.09830399999999995,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^7"
+      },
+      {
+        "node": "SCL",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "FLI1",
+          "GATA2",
+          "SCL"
+        ],
+        "max_diff_interior": 0.153856,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "SMAD6",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 3.3306690738754696e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "ZFPM1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "calzone_cell_fate": [
+      {
+        "node": "TNF",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "FADD",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "DISC_TNF",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "DISC_FAS",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Caspase8",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "DISC_FAS"
+        ],
+        "max_diff_interior": 0.1279999999999999,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "cIAP",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "BAR",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "RIP1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "NFkB",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "IKK",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "FLIP",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Caspase3",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Caspase8"
+        ],
+        "max_diff_interior": 0.15999999999999998,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "SMAC",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "MOMP",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "BCL2"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "BAX",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "BCL2",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Apoptosis",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      }
+    ],
+    "calzone_cellfate_reduced": [
+      {
+        "node": "TNF",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "FAS",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "RIP1",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "C8"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "NFkB",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "C8",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "NFkB"
+        ],
+        "max_diff_interior": 0.28800000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "cIAP",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "MOMP"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "ATP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "C3",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "ROS",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "NFkB"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "MOMP",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "MPT",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "cell_cycle_transcription": [
+      {
+        "node": "ACE2",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CLN3",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.3877787807814457e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "HCM1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "MBF",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "SBF",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "YHP1",
+          "YOX1"
+        ],
+        "max_diff_interior": 0.15360000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "SFF",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "SWI5",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "YHP1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "YOX1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "davidich_yeast": [
+      {
+        "node": "Start",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "SK",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Cdc2_Cdc13",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Rum1",
+          "Ste9"
+        ],
+        "max_diff_interior": 0.15360000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Ste9",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Cdc2_Cdc13",
+          "Cdc2_Cdc13_A",
+          "PP",
+          "SK"
+        ],
+        "max_diff_interior": 0.237568,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Rum1",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Cdc2_Cdc13",
+          "Cdc2_Cdc13_A",
+          "PP",
+          "SK"
+        ],
+        "max_diff_interior": 0.237568,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "PP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Cdc25",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Slp1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Wee1_Mik1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Cdc2_Cdc13_A",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      }
+    ],
+    "drosophila_cellcycle": [
+      {
+        "node": "Ago",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CycD",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Notch",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CycA",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.3877787807814457e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "CycB",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Fzr",
+          "Fzy",
+          "Wee1"
+        ],
+        "max_diff_interior": 0.08192000000000005,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "CycE",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Dap",
+          "E2F",
+          "Rb"
+        ],
+        "max_diff_interior": 0.08192000000000005,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Dap",
+        "k": 2,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycE"
+        ],
+        "max_diff_interior": 0.20000000000000007,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "E2F",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycA",
+          "Rb",
+          "Rux"
+        ],
+        "max_diff_interior": 0.1368064,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Fzr",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycA",
+          "CycB",
+          "CycE",
+          "Notch",
+          "Rux"
+        ],
+        "max_diff_interior": 0.22209761191657473,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Fzy",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Rb",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycA",
+          "CycD",
+          "CycE",
+          "Rux"
+        ],
+        "max_diff_interior": 0.08839495680000004,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Rux",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycA",
+          "CycB",
+          "CycD",
+          "CycE",
+          "Rux"
+        ],
+        "max_diff_interior": 0.2054091893330937,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Stg",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycB",
+          "E2F",
+          "Notch",
+          "Rb",
+          "Rux"
+        ],
+        "max_diff_interior": 0.11256463360000002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Wee1",
+        "k": 2,
+        "repeated": true,
+        "repeated_regulators": [
+          "Rux"
+        ],
+        "max_diff_interior": 0.20000000000000007,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "emt_switch": [
+      {
+        "node": "Ecadherin_mRNA",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 5.551115123125783e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "LEF1",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "N_bcatenin_H",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "SNAI1",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "ZEB1",
+          "ZEB1_H"
+        ],
+        "max_diff_interior": 0.050000000000000044,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "SNAI2",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "TGFb_secr",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Twist",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "ZEB1",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "ZEB1_H",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "b_catenin_TCF4",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "miR_200",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 5.551115123125783e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "miR_34",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      }
+    ],
+    "fanconi_anemia": [
+      {
+        "node": "ADD",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "NUC1",
+          "NUC2"
+        ],
+        "max_diff_interior": 0.04999999999999993,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "ATM",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "ATR",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "CHKREC",
+        "k": 8,
+        "repeated": true,
+        "repeated_regulators": [
+          "DSB",
+          "FAHRR",
+          "HRR2",
+          "NHEJ",
+          "TLS"
+        ],
+        "max_diff_interior": 0.3711944294400002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^8"
+      },
+      {
+        "node": "DSB",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.6653345369377348e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "FAHRR",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "FANCD2I",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "ATM",
+          "ATR"
+        ],
+        "max_diff_interior": 0.12288000000000004,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "FAcore",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "HRR2",
+        "k": 7,
+        "repeated": true,
+        "repeated_regulators": [
+          "CHKREC",
+          "DSB",
+          "FAHRR",
+          "NHEJ",
+          "NUC2"
+        ],
+        "max_diff_interior": 0.02684354560000002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^7"
+      },
+      {
+        "node": "ICL",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "NHEJ",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 6.245004513516506e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "NUC1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "NUC2",
+        "k": 7,
+        "repeated": true,
+        "repeated_regulators": [
+          "FANCD2I",
+          "FAcore",
+          "ICL"
+        ],
+        "max_diff_interior": 0.15335424000000009,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^7"
+      },
+      {
+        "node": "TLS",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "ADD"
+        ],
+        "max_diff_interior": 0.15999999999999992,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "p53",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      }
+    ],
+    "faure_cellcycle": [
+      {
+        "node": "CycD",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Cdc20",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CycA",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "Cdc20",
+          "CycA",
+          "E2F",
+          "Rb",
+          "UbcH10",
+          "cdh1"
+        ],
+        "max_diff_interior": 0.32495789670400016,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "CycB",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "CycE",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "E2F",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycB",
+          "Rb"
+        ],
+        "max_diff_interior": 0.15360000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Rb",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycB",
+          "CycD"
+        ],
+        "max_diff_interior": 0.12287999999999993,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "UbcH10",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "UbcH10"
+        ],
+        "max_diff_interior": 0.23040000000000005,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "cdh1",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycB"
+        ],
+        "max_diff_interior": 0.128,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "p27",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycA",
+          "CycB",
+          "CycD",
+          "CycE",
+          "p27"
+        ],
+        "max_diff_interior": 0.22976921600000005,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      }
+    ],
+    "fumia_cellcycle": [
+      {
+        "node": "GF",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CycD",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "CycE",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.3877787807814457e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "CycA",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.3877787807814457e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "CycB",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.3877787807814457e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Rb",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycB",
+          "CycD"
+        ],
+        "max_diff_interior": 0.12287999999999993,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "E2F",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycB",
+          "Rb"
+        ],
+        "max_diff_interior": 0.15360000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "p21",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "p27",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.3877787807814457e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "p53",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "AKT",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Mdm2",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "p53"
+        ],
+        "max_diff_interior": 0.15999999999999998,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Cdc20",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "cdh1",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 3.3306690738754696e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      }
+    ],
+    "grieco_bladder": [
+      {
+        "node": "GF",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "EGFR_stimulus",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "FGFR3_stimulus",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "EGFR",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "FGFR3",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "GRB2",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "RAS",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "PI3K",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "AKT",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "PTEN",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "RB1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "p16",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CyclinD1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "p21",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "TP53",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "MDM2",
+        "k": 2,
+        "repeated": true,
+        "repeated_regulators": [
+          "AKT",
+          "TP53"
+        ],
+        "max_diff_interior": 0.0625,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Growth_arrest",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Apoptosis",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "hematopoiesis_aging": [
+      {
+        "node": "Bclaf1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CDK46CycD",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "CIPKIP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Cebpa",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Ikzf1"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Egr1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Fli1",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Gata1",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "Spi1"
+        ],
+        "max_diff_interior": 0.10239999999999982,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Gata2",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "Gata1",
+          "Zfpm1"
+        ],
+        "max_diff_interior": 0.12287999999999993,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Ikzf1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Junb",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Klf1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Myc",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Spi1",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Gata1"
+        ],
+        "max_diff_interior": 0.128,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Tal1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Zfpm1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      }
+    ],
+    "irons_cardiac": [
+      {
+        "node": "BMP2",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Dkk1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "FGF8",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Nkx2_5"
+        ],
+        "max_diff_interior": 0.15999999999999998,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Gata4",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Nkx2_5"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "HAS2",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Hex",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Mesp1",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Hex"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Nkx2_5",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 3.3306690738754696e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Noggin",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Smad",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Snail",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "FGF8"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Tbx5",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Wnt",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Dkk1"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "bCatenin",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "eHand",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      }
+    ],
+    "lac_operon": [
+      {
+        "node": "Ge",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Le",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Lem",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "A",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Am",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "B",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "C",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "L",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Lm",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Ge"
+        ],
+        "max_diff_interior": 0.12800000000000006,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "M",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "P",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "R",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Rm",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "R"
+        ],
+        "max_diff_interior": 0.16000000000000014,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      }
+    ],
+    "lambda_phage": [
+      {
+        "node": "CII",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1",
+          "Cro_b2",
+          "Cro_b3",
+          "N"
+        ],
+        "max_diff_interior": 0.1745666402076097,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "CI_b1",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CII",
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1"
+        ],
+        "max_diff_interior": 0.2879520000000002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "CI_b2",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "CI_b1",
+          "Cro_b1"
+        ],
+        "max_diff_interior": 0.128,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Cro_b1",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "CI_b1",
+          "CI_b2"
+        ],
+        "max_diff_interior": 0.24480000000000002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Cro_b2",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CI_b1",
+          "CI_b2",
+          "Cro_b1"
+        ],
+        "max_diff_interior": 0.15831039999999996,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Cro_b3",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "CI_b1",
+          "Cro_b1",
+          "Cro_b2",
+          "Cro_b3"
+        ],
+        "max_diff_interior": 0.05242880000000011,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "N",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "CI_b1",
+          "Cro_b1"
+        ],
+        "max_diff_interior": 0.1280000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      }
+    ],
+    "li_budding_yeast": [
+      {
+        "node": "Cln3",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "MBF",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb1_2",
+          "Cln3",
+          "MBF"
+        ],
+        "max_diff_interior": 0.10239999999999999,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "SBF",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb1_2",
+          "Cln3"
+        ],
+        "max_diff_interior": 0.15360000000000007,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Cln1_2",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Cdh1",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 3.3306690738754696e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Swi5",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Cdc20",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Clb5_6",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Sic1",
+        "k": 5,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 4.440892098500626e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Clb1_2",
+        "k": 6,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "Mcm1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      }
+    ],
+    "mendoza_thelper": [
+      {
+        "node": "APC",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "IFNg_e",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "IL12_e",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "IFNg",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "GATA3"
+        ],
+        "max_diff_interior": 0.28800000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "IFNgR",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "IL12R",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "GATA3"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "IL4",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "IL4R",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "STAT1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "STAT6",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "SOCS1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "T_bet",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "GATA3"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "GATA3",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "T_bet"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      }
+    ],
+    "morphogenetic_checkpoint": [
+      {
+        "node": "MASS_b1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "BUD",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Clb2_b1",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb2_b1",
+          "Clb2_b2",
+          "MASS_b1"
+        ],
+        "max_diff_interior": 0.22272000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Clb2_b2",
+        "k": 7,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb2_b1",
+          "MASS_b1",
+          "MASS_b2",
+          "Mih1_b1",
+          "Mih1_b2",
+          "Swe1_b1",
+          "Swe1_b2"
+        ],
+        "max_diff_interior": 0.11215806417392826,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^7"
+      },
+      {
+        "node": "Hsl1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "MASS_b2",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Mih1_b1",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb2_b1",
+          "Mih1_b1",
+          "Mih1_b2",
+          "Mpk1"
+        ],
+        "max_diff_interior": 0.2879520000000002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Mih1_b2",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Mpk1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "SBF",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb2_b1",
+          "MASS_b1"
+        ],
+        "max_diff_interior": 0.1280000000000001,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Swe1_b1",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb2_b1",
+          "Clb2_b2",
+          "Hsl1",
+          "SBF",
+          "Swe1_b1",
+          "Swe1_b2"
+        ],
+        "max_diff_interior": 0.24997588135284154,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "Swe1_b2",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "Clb2_b1",
+          "Hsl1",
+          "SBF",
+          "Swe1_b1"
+        ],
+        "max_diff_interior": 0.05242880000000011,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      }
+    ],
+    "myeloid_progenitors": [
+      {
+        "node": "CEBPA",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "EGR_NAB",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "EKLF",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "FLI1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "FOG1",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "GATA1",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 3.3306690738754696e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "GATA2",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "GFI1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "JUN",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "PU1",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 3.3306690738754696e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "SCL",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "pair_rule_module": [
+      {
+        "node": "Eve_b1",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Odd",
+          "Run",
+          "Slp"
+        ],
+        "max_diff_interior": 0.1897733816320002,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "Eve_b2",
+        "k": 7,
+        "repeated": true,
+        "repeated_regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Eve_b3",
+          "Odd",
+          "Prd_b1",
+          "Run",
+          "Slp"
+        ],
+        "max_diff_interior": 0.06875571552255999,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^7"
+      },
+      {
+        "node": "Eve_b3",
+        "k": 6,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 6.938893903907228e-18,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "Ftz_b1",
+        "k": 6,
+        "repeated": true,
+        "repeated_regulators": [
+          "Eve_b1",
+          "Eve_b2",
+          "Ftz_b1",
+          "Ftz_b2",
+          "Odd",
+          "Slp"
+        ],
+        "max_diff_interior": 0.24476891238789733,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^6"
+      },
+      {
+        "node": "Ftz_b2",
+        "k": 5,
+        "repeated": true,
+        "repeated_regulators": [
+          "Eve_b1",
+          "Ftz_b1",
+          "Odd",
+          "Slp"
+        ],
+        "max_diff_interior": 0.05242880000000011,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^5"
+      },
+      {
+        "node": "Odd",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Ppa",
+        "k": 2,
+        "repeated": true,
+        "repeated_regulators": [
+          "Eve_b1"
+        ],
+        "max_diff_interior": 0.20000000000000007,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Prd_b1",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "Odd",
+          "Prd_b1",
+          "Prd_b2"
+        ],
+        "max_diff_interior": 0.22272000000000014,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Prd_b2",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Run",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Eve_b1",
+          "Odd",
+          "Prd_b1"
+        ],
+        "max_diff_interior": 0.08192000000000016,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Slp",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "Eve_b1",
+          "Ftz_b1",
+          "Odd"
+        ],
+        "max_diff_interior": 0.08192000000000016,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      }
+    ],
+    "remy_p53_mdm2": [
+      {
+        "node": "DNAdam",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "ATM",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "p53",
+        "k": 4,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "Mdm2cyt",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Mdm2nuc",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "p21",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "CycE",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Rb",
+        "k": 1,
+        "repeated": true,
+        "repeated_regulators": [
+          "CycE"
+        ],
+        "max_diff_interior": 0.25,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "E2F1",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Caspase3",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      }
+    ],
+    "saadatpour_guardcell": [
+      {
+        "node": "ADPRc",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "CIS",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "Ca2",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Ca2ATP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "GC",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "InsP3",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "NO",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "NOS",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "PLC",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "cADPR",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "cGMP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "KAP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "KEV",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      }
+    ],
+    "tournier_apoptosis": [
+      {
+        "node": "TNF",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "A20a",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "C3a",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "C8a",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "CARP"
+        ],
+        "max_diff_interior": 0.16000000000000003,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "CARP",
+        "k": 4,
+        "repeated": true,
+        "repeated_regulators": [
+          "C3a",
+          "TNF"
+        ],
+        "max_diff_interior": 0.13760000000000006,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^4"
+      },
+      {
+        "node": "FLIP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "IAP",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "C3a",
+          "NFkBnuc",
+          "TNF"
+        ],
+        "max_diff_interior": 0.07999999999999996,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "IKKa",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.7755575615628914e-17,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "IkB",
+        "k": 3,
+        "repeated": true,
+        "repeated_regulators": [
+          "IKKa",
+          "NFkBnuc",
+          "TNF"
+        ],
+        "max_diff_interior": 0.07999999999999996,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "NFkB",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "NFkBnuc",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "T2",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      }
+    ],
+    "zanudo_tlgl": [
+      {
+        "node": "Stimuli",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "PDGFR",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 2.220446049250313e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "S1P",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Ceramide",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "Fas",
+        "k": 3,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 1.1102230246251565e-16,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^3"
+      },
+      {
+        "node": "sFas",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "DISC",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "FLIP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Caspase",
+        "k": 2,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^2"
+      },
+      {
+        "node": "IAP",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "NFkB",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      },
+      {
+        "node": "Apoptosis",
+        "k": 1,
+        "repeated": false,
+        "repeated_regulators": [],
+        "max_diff_interior": 0.0,
+        "max_diff_vertices": 0.0,
+        "grid": "(0.2, 0.5, 0.8)^1"
+      }
+    ]
+  }
+}

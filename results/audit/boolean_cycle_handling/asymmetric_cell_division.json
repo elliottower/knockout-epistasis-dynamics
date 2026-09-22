@@ -1,0 +1,27 @@
+{
+  "network": "asymmetric_cell_division",
+  "n_nodes": 9,
+  "n_coalitions": 512,
+  "counters": {
+    "n_trajectories": 262144,
+    "n_cycling": 16640,
+    "n_unclosed_implemented": 0,
+    "n_no_cycle_in_window_registered": 0,
+    "n_period_over_window": 0
+  },
+  "n_trajectories_procedures_differ": 0,
+  "n_coalitions_procedures_differ": 0,
+  "max_abs_trajectory_diff": 0.0,
+  "max_abs_coalition_value_diff": 0.0,
+  "delta_3plus_pp": {
+    "published": 44.09,
+    "implemented": 44.08504937589458,
+    "registered": 44.08504937589458
+  },
+  "positive_control_committed_table": {
+    "against": "results/grn_v2/asymmetric_cell_division_coalition_blind.npz",
+    "exact_equal": true,
+    "n_values_differing": 0,
+    "max_abs_diff": 0.0
+  }
+}

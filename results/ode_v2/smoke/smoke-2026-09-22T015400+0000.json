@@ -1,0 +1,130 @@
+{
+  "run_name": "smoke-2026-09-22T015400+0000",
+  "checks": {
+    "a_shard_was_preempted_and_resumed_in_a_second_container": true,
+    "replicates_ran_in_containers_distinct_from_shards": true,
+    "replicates_agree": true,
+    "record_scored": true,
+    "stale_shard_refused": true,
+    "stale_replicate_refused": true
+  },
+  "passed": true,
+  "record": {
+    "stem": "lambda_phage__hillcube_normalized__n10__c0",
+    "scored": true,
+    "summary": {
+      "n_coalitions": 128,
+      "n_coalitions_without_value": 0,
+      "trajectories": {
+        "ok": 256,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "classes_of_accepted": {
+        "none": 0,
+        "fixed": 252,
+        "oscillatory": 4,
+        "unclassified": 0
+      },
+      "accepted_by_attempt": {
+        "0": 256
+      },
+      "accepted_by_horizon_index": {
+        "0": 256
+      },
+      "trajectories_with_a_retry": 0,
+      "unclassified_with_provisional_output": 0,
+      "nfev": {
+        "median": 722.0,
+        "q90": 1160.0,
+        "q99": 7436.0,
+        "max": 7628.0
+      },
+      "tail_range_fixed": {
+        "median": 4.823569407971502e-17,
+        "q90": 1.882665863206512e-08,
+        "q99": 2.4605296591317938e-08,
+        "max": 2.577752589161264e-08
+      },
+      "final_derivative_fixed": {
+        "median": 8.87663120498195e-25,
+        "q90": 9.769515507684915e-09,
+        "q99": 4.199539457516726e-08,
+        "max": 6.737219848673703e-08
+      },
+      "tail_range_all_accepted": {
+        "median": 5.156352109335466e-17,
+        "q90": 1.9675248985606686e-08,
+        "q99": 0.5714169144630432,
+        "max": 0.5715160965919495
+      }
+    },
+    "replicate": {
+      "n_coalitions": 11,
+      "sentinels": {
+        "all_clamped": 0,
+        "none_clamped": 127,
+        "most_evaluations": 75
+      },
+      "status_mismatches": 0,
+      "class_mismatches": 0,
+      "value_mismatches": 0,
+      "max_abs_value_diff": 0.0,
+      "tolerance": {
+        "atol": 1e-12,
+        "rtol": 1e-09
+      },
+      "files": [
+        "lambda_phage__hillcube_normalized__n10__c0.replicate_000.npz"
+      ],
+      "sample_composition": {
+        "sentinels": 3,
+        "by_size": 10,
+        "flagged": 0,
+        "oscillating_sampled": 1,
+        "oscillating_total": 2,
+        "total_distinct": 11
+      }
+    },
+    "configuration_sha256": "4eaf110be8c37f3b6697b27beea1f528a4237a80cda70c7708e473536b7b17be",
+    "containers": {
+      "shards": {
+        "lambda_phage__hillcube_normalized__n10__c0.shard_0000000-0000032": [
+          "ta-01M33D424AEPKZBVTG6YVZS7DR",
+          "ta-01M33D42QY821BDKV8D0G8M2SR"
+        ],
+        "lambda_phage__hillcube_normalized__n10__c0.shard_0000032-0000064": [
+          "ta-01M33D424AEPKZBVTG6YVZS7DR"
+        ],
+        "lambda_phage__hillcube_normalized__n10__c0.shard_0000064-0000096": [
+          "ta-01M33D42D06KRMC8V9PM37VGSR"
+        ],
+        "lambda_phage__hillcube_normalized__n10__c0.shard_0000096-0000128": [
+          "ta-01M33D438A33Z4SET07SZ1VC2R"
+        ]
+      },
+      "replicates": {
+        "lambda_phage__hillcube_normalized__n10__c0.replicate_000": [
+          "ta-01M33D59TG753281X6QQXC28ZR"
+        ]
+      },
+      "replicates_ran_in_containers_distinct_from_shards": true,
+      "shards_resumed_in_a_second_container": [
+        "lambda_phage__hillcube_normalized__n10__c0.shard_0000000-0000032"
+      ]
+    }
+  },
+  "stale_files": {
+    "shard": {
+      "refused": true,
+      "message": "shard [0, 32) differs from the requested run in ['seed']"
+    },
+    "replicate": {
+      "refused": true,
+      "message": "lambda_phage__hillcube_normalized__n10__c0.replicate_000.npz differs from the requested run in ['seed']"
+    }
+  }
+}

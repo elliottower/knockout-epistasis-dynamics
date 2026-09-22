@@ -9,4 +9,5 @@ dependencies = [
     "scikit-learn==1.6.1",
     "tqdm==4.67.1",
     "shapiq==1.6.0",
+    "matplotlib==3.11.1",
 ]

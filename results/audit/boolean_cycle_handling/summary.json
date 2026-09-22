@@ -1,0 +1,16 @@
+{
+  "question": "Does the implemented Boolean cycle handling give the registered procedure's outputs?",
+  "settings": {
+    "n_init": 512,
+    "seed": 42,
+    "max_steps": 200,
+    "window": 50,
+    "clamp_value": 0,
+    "tolerance": 1e-12
+  },
+  "n_networks_audited": 28,
+  "networks_where_procedures_differ": [],
+  "networks_failing_positive_control": [],
+  "total_unclosed_implemented": 0,
+  "total_period_over_window": 0
+}

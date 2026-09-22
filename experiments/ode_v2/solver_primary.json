@@ -1,0 +1,31 @@
+{
+  "_status": "DRAFT, proposed for the registration, not frozen, not run",
+  "_rationale": {
+    "rtol_atol": "rtol 1e-8, atol 1e-10. At rtol 1e-6 the classifier's fixed-point bound (final derivative 1e-6) sat on the solver's noise floor and split converged fixed points in two; at 1e-8 they fall 10x inside it (results/audit/classifier_calibration.json vs classifier_calibration_rtol1e-8.json). Adopted after review 3.",
+    "t_max_t_tail": "doubled from legacy with the tail kept at the final third, because lower Hill coefficients may settle more slowly; tail_range and final_derivative will show whether this suffices",
+    "attempts": "RK45 first; a larger RK45 budget only if the first hit its cap; Radau only after a failure of any kind (2026-09-21 code review). Radau and BDF both succeeded on all 24 forced trajectories of the benchmark (results/audit/engine_timing.json); BDF was about twice as fast. Radau was chosen because it is an A- and L-stable implicit Runge-Kutta method of order 5, while BDF above order 2 is not A-stable; the benchmark did not decide between them."
+  },
+  "attempts": [
+    {
+      "method": "RK45",
+      "max_rhs_evals": 200000,
+      "when": "first"
+    },
+    {
+      "method": "RK45",
+      "max_rhs_evals": 2000000,
+      "when": "after_cap"
+    },
+    {
+      "method": "Radau",
+      "max_rhs_evals": 2000000,
+      "when": "after_failure"
+    }
+  ],
+  "rtol": 1e-08,
+  "atol": 1e-10,
+  "max_step": 2.0,
+  "t_max": 60.0,
+  "t_tail": 20.0,
+  "n_tail_samples": 100
+}

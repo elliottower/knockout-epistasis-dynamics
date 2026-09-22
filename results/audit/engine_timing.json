@@ -1,0 +1,861 @@
+{
+  "solver_file": "experiments/ode_v2/solver_candidate_rtol1e-8.json",
+  "solver": {
+    "_status": "DRAFT CANDIDATE, compared against solver_primary.json by scripts/calibrate_ode_classifier.py; not frozen, not run",
+    "_rationale": {
+      "rtol_atol": "100x tighter than solver_primary.json, so that a converged fixed point sits well below the classifier's fixed-point bounds instead of at them",
+      "t_max_t_tail": "doubled from legacy with the tail kept at the final third, because lower Hill coefficients may settle more slowly; tail_range and final_derivative will show whether this suffices",
+      "attempts": "RK45 first; a larger RK45 budget only if the first hit its cap; an implicit stiff method only after a failure of any kind (2026-09-21 code review). Radau versus BDF to be chosen by benchmark before the freeze."
+    },
+    "attempts": [
+      {
+        "method": "RK45",
+        "max_rhs_evals": 200000,
+        "when": "first"
+      },
+      {
+        "method": "RK45",
+        "max_rhs_evals": 2000000,
+        "when": "after_cap"
+      },
+      {
+        "method": "Radau",
+        "max_rhs_evals": 2000000,
+        "when": "after_failure"
+      }
+    ],
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "max_step": 2.0,
+    "t_max": 60.0,
+    "t_tail": 20.0,
+    "n_tail_samples": 100
+  },
+  "classifier_file": "experiments/ode_v2/classifier_primary.json",
+  "classifier": {
+    "_status": "DRAFT, proposed for the registration, not frozen, not run",
+    "_rationale": {
+      "fixed": "tail range and final derivative thresholds from the 2026-09-21 code review; at rtol 1e-6 they sit at the solver's noise floor and reject converged fixed points, at rtol 1e-8 converged fixed points fall 10x inside them (results/audit/classifier_calibration*.json)",
+      "oscillatory": "tail range above 1e-4, inside [0, 1] up to the margin, and each half of the tail repeating the other's per-node maximum and minimum to within 5% of that node's range; nodes whose range is within the fixed-point bound count as static and are not compared",
+      "extension_horizons": "60 -> 120 -> 240 -> 480 -> 960, the tail kept at the final third of each horizon and sampled at constant density. 480 and 960 were added after calibration found damped oscillations near a Hopf point (arabidopsis_cellcycle, n_H = 2) that settle only by t ~ 400-800 (results/audit/classifier_calibration_rtol1e-8_arabidopsis_n2.json)"
+    },
+    "fixed_tail_range_max": 1e-05,
+    "fixed_derivative_max": 1e-06,
+    "oscillatory_tail_range_min": 0.0001,
+    "halves_envelope_tol": 0.05,
+    "bounded_margin": 0.001,
+    "extension_horizons": [
+      120.0,
+      240.0,
+      480.0,
+      960.0
+    ]
+  },
+  "n_coalitions_timed": 12,
+  "n_init_timed": 4,
+  "rows": [
+    {
+      "network": "lambda_phage",
+      "n_nodes": 7,
+      "construction": "hillcube_normalized",
+      "hill_n": 10.0,
+      "coalitions": [
+        117,
+        60,
+        96,
+        59,
+        68,
+        114,
+        62,
+        69,
+        72,
+        92,
+        86,
+        57
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.07157884252076958,
+      "nfev_max": 1250,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "lambda_phage",
+      "n_nodes": 7,
+      "construction": "hillcube_normalized",
+      "hill_n": 2.0,
+      "coalitions": [
+        117,
+        60,
+        96,
+        59,
+        68,
+        114,
+        62,
+        69,
+        72,
+        92,
+        86,
+        57
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.04159964135427193,
+      "nfev_max": 866,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "lambda_phage",
+      "n_nodes": 7,
+      "construction": "operatorwise_normalized",
+      "hill_n": 2.0,
+      "coalitions": [
+        117,
+        60,
+        96,
+        59,
+        68,
+        114,
+        62,
+        69,
+        72,
+        92,
+        86,
+        57
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.04109573652082569,
+      "nfev_max": 908,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "davidich_yeast",
+      "n_nodes": 10,
+      "construction": "hillcube_normalized",
+      "hill_n": 10.0,
+      "coalitions": [
+        765,
+        955,
+        543,
+        724,
+        840,
+        1011,
+        709,
+        858,
+        879,
+        676,
+        579,
+        218
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.04196478389591599,
+      "nfev_max": 950,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "davidich_yeast",
+      "n_nodes": 10,
+      "construction": "hillcube_normalized",
+      "hill_n": 2.0,
+      "coalitions": [
+        765,
+        955,
+        543,
+        724,
+        840,
+        1011,
+        709,
+        858,
+        879,
+        676,
+        579,
+        218
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.040915130708223536,
+      "nfev_max": 980,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "davidich_yeast",
+      "n_nodes": 10,
+      "construction": "operatorwise_normalized",
+      "hill_n": 2.0,
+      "coalitions": [
+        765,
+        955,
+        543,
+        724,
+        840,
+        1011,
+        709,
+        858,
+        879,
+        676,
+        579,
+        218
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.041763154270787105,
+      "nfev_max": 962,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "arabidopsis_cellcycle",
+      "n_nodes": 14,
+      "construction": "hillcube_normalized",
+      "hill_n": 10.0,
+      "coalitions": [
+        16062,
+        15771,
+        168,
+        3805,
+        4014,
+        15216,
+        5572,
+        14345,
+        3139,
+        5093,
+        16142,
+        15166
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.13397254866655808,
+      "nfev_max": 7448,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "arabidopsis_cellcycle",
+      "n_nodes": 14,
+      "construction": "hillcube_normalized",
+      "hill_n": 2.0,
+      "coalitions": [
+        16062,
+        15771,
+        168,
+        3805,
+        4014,
+        15216,
+        5572,
+        14345,
+        3139,
+        5093,
+        16142,
+        15166
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.09323619114578226,
+      "nfev_max": 914,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    },
+    {
+      "network": "arabidopsis_cellcycle",
+      "n_nodes": 14,
+      "construction": "operatorwise_normalized",
+      "hill_n": 2.0,
+      "coalitions": [
+        16062,
+        15771,
+        168,
+        3805,
+        4014,
+        15216,
+        5572,
+        14345,
+        3139,
+        5093,
+        16142,
+        15166
+      ],
+      "statuses": {
+        "ok": 48,
+        "eval_cap_exceeded": 0,
+        "solver_failed": 0,
+        "did_not_reach_end": 0,
+        "nonfinite": 0,
+        "unclassified": 0
+      },
+      "seconds_per_trajectory": 0.06770906166669495,
+      "nfev_max": 920,
+      "trajectories_not_ok": 0,
+      "trajectories_on_fallback": 0,
+      "trajectories_extended": 0
+    }
+  ],
+  "stiff_fallback": {
+    "summary": {
+      "Radau": {
+        "n": 24,
+        "not_ok": 0,
+        "median_seconds": 0.2535179184997105,
+        "max_abs_error_vs_tight_rk45": 1.0952710381203175e-18
+      },
+      "BDF": {
+        "n": 24,
+        "not_ok": 0,
+        "median_seconds": 0.11324063099891646,
+        "max_abs_error_vs_tight_rk45": 1.27675647831893e-14
+      }
+    },
+    "trajectories": [
+      {
+        "network": "lambda_phage",
+        "coalition": 27,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2855,
+        "seconds": 0.28012940399639774,
+        "abs_error_vs_tight_rk45": 1.0952710381203175e-18
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 27,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 755,
+        "seconds": 0.126897441004985,
+        "abs_error_vs_tight_rk45": 6.6844555495751706e-15
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 5,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 1766,
+        "seconds": 0.15729890899092425,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 5,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 472,
+        "seconds": 0.10535714399884455,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 38,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2117,
+        "seconds": 0.18767968899919651,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 38,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 590,
+        "seconds": 0.08322888700058684,
+        "abs_error_vs_tight_rk45": 8.43769498715119e-15
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 16,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2004,
+        "seconds": 0.1603444659995148,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 16,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 516,
+        "seconds": 0.08761693599808495,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 95,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2907,
+        "seconds": 0.3124434339988511,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 95,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 623,
+        "seconds": 0.11373132400331087,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 31,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2563,
+        "seconds": 0.3018192839954281,
+        "abs_error_vs_tight_rk45": 1.087482061542327e-18
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 31,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 716,
+        "seconds": 0.15811515499080997,
+        "abs_error_vs_tight_rk45": 2.948397577845943e-15
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 53,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 1990,
+        "seconds": 0.2191209359880304,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 53,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 512,
+        "seconds": 0.0950746739981696,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 58,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2694,
+        "seconds": 0.35408509700209834,
+        "abs_error_vs_tight_rk45": 2.6050938275015754e-20
+      },
+      {
+        "network": "lambda_phage",
+        "coalition": 58,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 819,
+        "seconds": 0.15634652999870013,
+        "abs_error_vs_tight_rk45": 3.9138028639033154e-15
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 219,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2055,
+        "seconds": 0.18917160300770774,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 219,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 701,
+        "seconds": 0.0946515410032589,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 707,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 1653,
+        "seconds": 0.14049417999922298,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 707,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 483,
+        "seconds": 0.07268727300106548,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 660,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2532,
+        "seconds": 0.2470960840000771,
+        "abs_error_vs_tight_rk45": 9.218561835620909e-19
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 660,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 728,
+        "seconds": 0.12450557699776255,
+        "abs_error_vs_tight_rk45": 4.617162460578445e-15
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 896,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 1773,
+        "seconds": 0.14242687899968587,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 896,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 474,
+        "seconds": 0.06662810999841895,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 440,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2262,
+        "seconds": 0.2095961629966041,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 440,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 674,
+        "seconds": 0.10599612900114153,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 320,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 1885,
+        "seconds": 0.15286260799621232,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 320,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 516,
+        "seconds": 0.075398425993626,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 929,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 3143,
+        "seconds": 0.2599397529993439,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 929,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 964,
+        "seconds": 0.1260811110114446,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 471,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2499,
+        "seconds": 0.22689228499075398,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "davidich_yeast",
+        "coalition": 471,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 724,
+        "seconds": 0.10435265599517152,
+        "abs_error_vs_tight_rk45": 3.4416913763379853e-15
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 9374,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 1517,
+        "seconds": 0.24379996399511583,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 9374,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 472,
+        "seconds": 0.11274993799452204,
+        "abs_error_vs_tight_rk45": 3.9968028886505635e-15
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 9581,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2368,
+        "seconds": 0.3733853529993212,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 9581,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 586,
+        "seconds": 0.12704247600049712,
+        "abs_error_vs_tight_rk45": 8.770761894538737e-15
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 15861,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 42146,
+        "seconds": 5.74526937599876,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 15861,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 14469,
+        "seconds": 2.5688152180082398,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 13641,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 1787,
+        "seconds": 0.2762179089913843,
+        "abs_error_vs_tight_rk45": 6.020184584606132e-19
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 13641,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 480,
+        "seconds": 0.10409435600740835,
+        "abs_error_vs_tight_rk45": 4.292463039545358e-15
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 11645,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2635,
+        "seconds": 0.4314262099942425,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 11645,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 851,
+        "seconds": 0.18605559000570793,
+        "abs_error_vs_tight_rk45": 1.27675647831893e-14
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 13353,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2857,
+        "seconds": 0.43790732200432103,
+        "abs_error_vs_tight_rk45": 2.3080236392433853e-20
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 13353,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 1223,
+        "seconds": 0.23233078100020066,
+        "abs_error_vs_tight_rk45": 3.4914272569978215e-15
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 13753,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2878,
+        "seconds": 0.4773691489972407,
+        "abs_error_vs_tight_rk45": 1.6060944752542946e-19
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 13753,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 856,
+        "seconds": 0.1897835380077595,
+        "abs_error_vs_tight_rk45": 5.170923324947576e-16
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 5518,
+        "method": "Radau",
+        "status": "ok",
+        "nfev": 2481,
+        "seconds": 0.3999969059950672,
+        "abs_error_vs_tight_rk45": 0.0
+      },
+      {
+        "network": "arabidopsis_cellcycle",
+        "coalition": 5518,
+        "method": "BDF",
+        "status": "ok",
+        "nfev": 774,
+        "seconds": 0.17339450100553222,
+        "abs_error_vs_tight_rk45": 3.4416913763379853e-15
+      }
+    ]
+  },
+  "extrapolation_single_core": {
+    "hillcube_normalized__n10": {
+      "cpu_hours_all_28_networks_32_inits": 734.3986706572124,
+      "cpu_hours_networks_n_le_12": 24.22436476287942,
+      "largest": [
+        [
+          "grieco_bladder",
+          371.4385227839737
+        ],
+        [
+          "calzone_cell_fate",
+          167.97953551767148
+        ],
+        [
+          "fanconi_anemia",
+          34.355418338949896
+        ]
+      ]
+    },
+    "hillcube_normalized__n2": {
+      "cpu_hours_all_28_networks_32_inits": 611.6598827575477,
+      "cpu_hours_networks_n_le_12": 18.131698108675653,
+      "largest": [
+        [
+          "grieco_bladder",
+          317.02331647761355
+        ],
+        [
+          "calzone_cell_fate",
+          140.5604817471675
+        ],
+        [
+          "fanconi_anemia",
+          27.631680652772417
+        ]
+      ]
+    },
+    "operatorwise_normalized__n2": {
+      "cpu_hours_all_28_networks_32_inits": 410.43106718013325,
+      "cpu_hours_networks_n_le_12": 15.58667945284537,
+      "largest": [
+        [
+          "grieco_bladder",
+          200.54216829113778
+        ],
+        [
+          "calzone_cell_fate",
+          93.11846210353953
+        ],
+        [
+          "fanconi_anemia",
+          20.07686837633427
+        ]
+      ]
+    }
+  }
+}

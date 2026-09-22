@@ -1,0 +1,27 @@
+{
+  "network": "calzone_cellfate_reduced",
+  "n_nodes": 11,
+  "n_coalitions": 2048,
+  "counters": {
+    "n_trajectories": 1048576,
+    "n_cycling": 115993,
+    "n_unclosed_implemented": 0,
+    "n_no_cycle_in_window_registered": 0,
+    "n_period_over_window": 0
+  },
+  "n_trajectories_procedures_differ": 0,
+  "n_coalitions_procedures_differ": 0,
+  "max_abs_trajectory_diff": 0.0,
+  "max_abs_coalition_value_diff": 0.0,
+  "delta_3plus_pp": {
+    "published": 37.04,
+    "implemented": 37.036819086497715,
+    "registered": 37.036819086497715
+  },
+  "positive_control_committed_table": {
+    "against": "results/grn_v2/calzone_cellfate_reduced_coalition_blind.npz",
+    "exact_equal": true,
+    "n_values_differing": 0,
+    "max_abs_diff": 0.0
+  }
+}

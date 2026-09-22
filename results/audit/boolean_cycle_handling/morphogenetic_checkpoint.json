@@ -1,0 +1,27 @@
+{
+  "network": "morphogenetic_checkpoint",
+  "n_nodes": 12,
+  "n_coalitions": 4096,
+  "counters": {
+    "n_trajectories": 2097152,
+    "n_cycling": 8482,
+    "n_unclosed_implemented": 0,
+    "n_no_cycle_in_window_registered": 0,
+    "n_period_over_window": 0
+  },
+  "n_trajectories_procedures_differ": 0,
+  "n_coalitions_procedures_differ": 0,
+  "max_abs_trajectory_diff": 0.0,
+  "max_abs_coalition_value_diff": 0.0,
+  "delta_3plus_pp": {
+    "published": 11.91,
+    "implemented": 11.906050035967041,
+    "registered": 11.906050035967041
+  },
+  "positive_control_committed_table": {
+    "against": "results/grn_v2/morphogenetic_checkpoint_coalition_blind.npz",
+    "exact_equal": true,
+    "n_values_differing": 0,
+    "max_abs_diff": 0.0
+  }
+}

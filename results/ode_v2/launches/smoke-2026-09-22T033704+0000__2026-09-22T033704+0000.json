@@ -1,0 +1,39 @@
+{
+  "run_name": "smoke-2026-09-22T033704+0000",
+  "launched_at": "2026-09-22T03:37:04+00:00",
+  "specs": [
+    {
+      "network": "lambda_phage",
+      "construction": "hillcube_normalized",
+      "hill_n": 10.0,
+      "hill_k": 0.5,
+      "solver_path": "experiments/ode_v2/solver_primary.json",
+      "classifier_path": "experiments/ode_v2/classifier_primary.json",
+      "n_init": 2,
+      "seed": 42,
+      "clamp_value": 0.0,
+      "keep_states": true
+    }
+  ],
+  "file_sha256": {
+    "data_utils.py": "eb1f3addce4b2ac89e553f3a5253b98925ca65098426462d1bf069a9ac938f96",
+    "grn_coalition_sweep.py": "ee5fa6d28d678234db6bb18a7f1122202dbca9e41af17655f3439c43f884d5de",
+    "composition_scorer.py": "115b1027c87ddf1c1a9acb197d1340ab78d14a1b4368e51bf2b02db72d541c56",
+    "scripts/paths.py": "99c5327c423f3a485916ef5d00261e8917dea8f513f84dbd5bb9757c12b7a422",
+    "scripts/ode_coalition_sweep.py": "b73ea20ae70557fc09f7dd9b403d9fff7c70c7aecf6c34d51d50853caef5ee0c",
+    "scripts/run_batch2b_extra_models.py": "a00dcfe48f952865c5d79391c87fd0d82314a2a31e300017a0f3449321a3b59f",
+    "scripts/run_batch2_blind_sweep.py": "5dac265c5772e45221826189ab6b0453b0c1377e312ec48721f1dcf3b633dafa",
+    "scripts/structural_analysis.py": "3e93ae7ad2625cacdce3229713cb10945034942c4816ba684c3a82b60e2850c7",
+    "scripts/ode_engine.py": "a3641878edb98aed5b71645259921d2e4443b11cdd4f0e76c3750a9567d91068",
+    "scripts/run_ode_arm.py": "f75302f8862764a0fb2169fb8cc62ac2b1de9b8d5fe8c4904e03c3cc3b3c3e5c",
+    "scripts/walsh_estimators.py": "ecff3180905ce674b8c2047a320452d99c05817dba46789d1c4731722918f103",
+    "scripts/attractors.py": "94f9dfe37b3912f0a774e0c9010f1c8cd40bca20e23a7a8a12505d106658f0c3",
+    "scripts/modal_ode_arm.py": "c7a8f58d875b1f1604678cdf62b682e19630b50211e991aece3b8231b96c880a",
+    "scripts/modal_provenance.py": "224cb9ea6f423f3ea4e5f7a3e705ab40994e9980d1d6f15e20c0c6c5b8791d0c",
+    "results/paper_number_reconciliation.json": "22c09b7cf15750f054f50c1cdd0ce3912d08a9356f88ab7f10e4c3e79671d87e",
+    "experiments/ode_v2/solver_primary.json": "74ff164da031daf0de32b0dd5947fafe8dabab124e8edd577139cdbf9a7d66bc",
+    "experiments/ode_v2/solver_legacy.json": "e1f5fbee1a77a086e02795c1218a8b29f9f3ba28a08a2630067d09d4404cbde2",
+    "experiments/ode_v2/classifier_primary.json": "619eea0c739e6cff22124498995344d613278b0870bdc0a6d57c52d07175e556"
+  },
+  "purpose": "smoke test"
+}

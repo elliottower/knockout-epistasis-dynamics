@@ -1,0 +1,211 @@
+{
+  "plan_commits": {
+    "experiments/2026-09-21_ode-primary-rerun/PREREG.md": null,
+    "experiments/2026-09-21_graded-perturbation-rerun/PREREG.md": null,
+    "experiments/2026-09-21_ode-sensitivity/PREREG.md": null
+  },
+  "prereg_check_exit": {
+    "experiments/2026-09-21_ode-primary-rerun/PREREG.md": 2,
+    "experiments/2026-09-21_graded-perturbation-rerun/PREREG.md": 2,
+    "experiments/2026-09-21_ode-sensitivity/PREREG.md": 2
+  },
+  "head": "0a897064cea4e5394a959b38e3c2e78ca1af859d",
+  "tag_commit": null,
+  "tag_is_annotated": false,
+  "tag_signature_verifies": false,
+  "tag_object": null,
+  "origin_tag_object": null,
+  "plan_commit": null,
+  "plan_is_ancestor_of_head": false,
+  "changed_since_plan": [],
+  "frozen_files": {
+    "composition_scorer.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "data_utils.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "experiments/ode_v2/CONTEXT.md": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "experiments/ode_v2/classifier_primary.json": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "experiments/ode_v2/registered_identities.json": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "experiments/ode_v2/solver_legacy.json": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "experiments/ode_v2/solver_primary.json": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "grn_coalition_sweep.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "pyproject.toml": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "results/paper_number_reconciliation.json": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/analyze_ode_rerun.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/attractors.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/audit_boolean_cycle_handling.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/boolean_estimators.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/modal_ode_arm.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/modal_provenance.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/ode_coalition_sweep.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/ode_engine.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/paths.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/record_registered_identities.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/run_batch2_blind_sweep.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/run_batch2b_extra_models.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/run_ode_arm.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/structural_analysis.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/validate_attractor_grouping.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/verify_freeze.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "scripts/walsh_estimators.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "tests/fixtures/shadow/data_utils.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "tests/test_analyze_ode_rerun.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "tests/test_attractors.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "tests/test_modal_provenance.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "tests/test_ode_engine.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "tests/test_verify_freeze.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "tests/test_walsh_estimators.py": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    },
+    "uv.lock": {
+      "tracked_at_plan": false,
+      "unchanged_since": false
+    }
+  },
+  "dirty": [
+    " M grn_coalition_sweep.py",
+    "?? experiments/2026-09-21_graded-perturbation-rerun/PREREG.md",
+    "?? experiments/2026-09-21_ode-primary-rerun/PREREG.md",
+    "?? experiments/2026-09-21_ode-sensitivity/PREREG.md",
+    "?? experiments/ode_v2/CONTEXT.md",
+    "?? experiments/ode_v2/classifier_primary.json",
+    "?? experiments/ode_v2/registered_identities.json",
+    "?? experiments/ode_v2/solver_legacy.json",
+    "?? experiments/ode_v2/solver_primary.json",
+    "?? scripts/analyze_ode_rerun.py",
+    "?? scripts/attractors.py",
+    "?? scripts/audit_boolean_cycle_handling.py",
+    "?? scripts/audit_operatorwise_vs_multilinear.py",
+    "?? scripts/audit_solver_determinism.py",
+    "?? scripts/benchmark_ode_engine.py",
+    "?? scripts/boolean_estimators.py",
+    "?? scripts/calibrate_ode_classifier.py",
+    "?? scripts/modal_boolean_audit.py",
+    "?? scripts/modal_ode_arm.py",
+    "?? scripts/modal_provenance.py",
+    "?? scripts/ode_engine.py",
+    "?? scripts/paths.py",
+    "?? scripts/record_registered_identities.py",
+    "?? scripts/run_ode_arm.py",
+    "?? scripts/validate_attractor_grouping.py",
+    "?? scripts/validate_oscillation_classifier.py",
+    "?? scripts/verify_freeze.py",
+    "?? scripts/walsh_estimators.py",
+    "?? tests/fixtures/shadow/data_utils.py",
+    "?? tests/test_analyze_ode_rerun.py",
+    "?? tests/test_attractors.py",
+    "?? tests/test_boolean_cycle_counter.py",
+    "?? tests/test_modal_provenance.py",
+    "?? tests/test_ode_engine.py",
+    "?? tests/test_oscillation_validation_gate.py",
+    "?? tests/test_verify_freeze.py",
+    "?? tests/test_walsh_estimators.py"
+  ],
+  "identities_match": true,
+  "problems": [
+    "experiments/2026-09-21_ode-primary-rerun/PREREG.md is not frozen",
+    "experiments/2026-09-21_graded-perturbation-rerun/PREREG.md is not frozen",
+    "experiments/2026-09-21_ode-sensitivity/PREREG.md is not frozen",
+    "there is no tag ode-rerun-freeze",
+    "relevant paths hold modified or untracked files: [' M grn_coalition_sweep.py', '?? experiments/2026-09-21_graded-perturbation-rerun/PREREG.md', '?? experiments/2026-09-21_ode-primary-rerun/PREREG.md', '?? experiments/2026-09-21_ode-sensitivity/PREREG.md', '?? experiments/ode_v2/CONTEXT.md', '?? experiments/ode_v2/classifier_primary.json', '?? experiments/ode_v2/registered_identities.json', '?? experiments/ode_v2/solver_legacy.json', '?? experiments/ode_v2/solver_primary.json', '?? scripts/analyze_ode_rerun.py', '?? scripts/attractors.py', '?? scripts/audit_boolean_cycle_handling.py', '?? scripts/audit_operatorwise_vs_multilinear.py', '?? scripts/audit_solver_determinism.py', '?? scripts/benchmark_ode_engine.py', '?? scripts/boolean_estimators.py', '?? scripts/calibrate_ode_classifier.py', '?? scripts/modal_boolean_audit.py', '?? scripts/modal_ode_arm.py', '?? scripts/modal_provenance.py', '?? scripts/ode_engine.py', '?? scripts/paths.py', '?? scripts/record_registered_identities.py', '?? scripts/run_ode_arm.py', '?? scripts/validate_attractor_grouping.py', '?? scripts/validate_oscillation_classifier.py', '?? scripts/verify_freeze.py', '?? scripts/walsh_estimators.py', '?? tests/fixtures/shadow/data_utils.py', '?? tests/test_analyze_ode_rerun.py', '?? tests/test_attractors.py', '?? tests/test_boolean_cycle_counter.py', '?? tests/test_modal_provenance.py', '?? tests/test_ode_engine.py', '?? tests/test_oscillation_validation_gate.py', '?? tests/test_verify_freeze.py', '?? tests/test_walsh_estimators.py']"
+  ],
+  "passed": false
+}

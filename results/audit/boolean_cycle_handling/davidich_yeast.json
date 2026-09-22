@@ -1,0 +1,27 @@
+{
+  "network": "davidich_yeast",
+  "n_nodes": 10,
+  "n_coalitions": 1024,
+  "counters": {
+    "n_trajectories": 524288,
+    "n_cycling": 92790,
+    "n_unclosed_implemented": 0,
+    "n_no_cycle_in_window_registered": 0,
+    "n_period_over_window": 0
+  },
+  "n_trajectories_procedures_differ": 0,
+  "n_coalitions_procedures_differ": 0,
+  "max_abs_trajectory_diff": 0.0,
+  "max_abs_coalition_value_diff": 0.0,
+  "delta_3plus_pp": {
+    "published": -0.38,
+    "implemented": -0.37552472225337585,
+    "registered": -0.37552472225337585
+  },
+  "positive_control_committed_table": {
+    "against": "results/grn_v2/davidich_yeast_coalition_blind.npz",
+    "exact_equal": true,
+    "n_values_differing": 0,
+    "max_abs_diff": 0.0
+  }
+}

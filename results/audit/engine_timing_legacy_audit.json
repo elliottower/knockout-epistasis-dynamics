@@ -1,0 +1,106 @@
+{
+  "solver": {
+    "_what": "The published ODE arm's solver as executed by scripts/modal_ode_sweep.py, minus its 0.1 s wall-clock timeout. Determined by the legacy code; contains no choices. Used only to audit the published arm.",
+    "attempts": [
+      {
+        "method": "RK45",
+        "max_rhs_evals": 10000000,
+        "when": "first"
+      }
+    ],
+    "rtol": 0.001,
+    "atol": 1e-05,
+    "max_step": 2.0,
+    "t_max": 30.0,
+    "t_tail": 10.0,
+    "n_tail_samples": 50
+  },
+  "construction": "operatorwise_legacy",
+  "note": "planning only; 12 random coalitions x 4 initial states, local single core, no values kept",
+  "rows": [
+    {
+      "network": "lambda_phage",
+      "n_nodes": 7,
+      "coalitions": [
+        91,
+        126,
+        114,
+        111,
+        114,
+        43,
+        73,
+        83,
+        103,
+        80,
+        89,
+        110
+      ],
+      "seconds_per_trajectory": 0.013045500541617608,
+      "trajectories_not_ok": 0,
+      "cpu_hours_32_inits": 0.014842880616240478
+    },
+    {
+      "network": "fanconi_anemia",
+      "n_nodes": 15,
+      "coalitions": [
+        9710,
+        24081,
+        23737,
+        15432,
+        28547,
+        19023,
+        6631,
+        9088,
+        23088,
+        27082,
+        17077,
+        5955
+      ],
+      "seconds_per_trajectory": 0.015648352041656228,
+      "trajectories_not_ok": 0,
+      "cpu_hours_32_inits": 4.557912886231033
+    },
+    {
+      "network": "calzone_cell_fate",
+      "n_nodes": 17,
+      "coalitions": [
+        63883,
+        108745,
+        86005,
+        44342,
+        6139,
+        50520,
+        29224,
+        56772,
+        109148,
+        8383,
+        78370,
+        105629
+      ],
+      "seconds_per_trajectory": 0.0087002675209078,
+      "trajectories_not_ok": 0,
+      "cpu_hours_32_inits": 10.136546351114909
+    },
+    {
+      "network": "grieco_bladder",
+      "n_nodes": 18,
+      "coalitions": [
+        10834,
+        254996,
+        168569,
+        88834,
+        4824,
+        260572,
+        228914,
+        212455,
+        120658,
+        196672,
+        175509,
+        18523
+      ],
+      "seconds_per_trajectory": 0.011826590395988509,
+      "trajectories_not_ok": 0,
+      "cpu_hours_32_inits": 27.55795300236455
+    }
+  ]
+}

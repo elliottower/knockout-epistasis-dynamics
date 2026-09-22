@@ -1,0 +1,42 @@
+{
+  "source": "results/audit/oscillation_classifier_validation.json (per-horizon diagnostics, replayed)",
+  "note": "each horizon's statistics come from an independent integration from t = 0 to that horizon",
+  "by_tolerance": {
+    "0.01": {
+      "sustained -> oscillatory": 28,
+      "sustained accepted at horizon 0": 28,
+      "settles -> fixed": 44,
+      "undetermined -> unclassified": 4
+    },
+    "0.02": {
+      "sustained -> oscillatory": 28,
+      "sustained accepted at horizon 0": 28,
+      "settles -> fixed": 44,
+      "undetermined -> unclassified": 4
+    },
+    "0.025": {
+      "sustained -> oscillatory": 28,
+      "sustained accepted at horizon 0": 28,
+      "settles -> fixed": 44,
+      "undetermined -> unclassified": 4
+    },
+    "0.03": {
+      "sustained -> oscillatory": 28,
+      "sustained accepted at horizon 0": 28,
+      "settles -> fixed": 44,
+      "undetermined -> unclassified": 4
+    },
+    "0.04": {
+      "sustained -> oscillatory": 28,
+      "sustained accepted at horizon 0": 28,
+      "settles -> fixed": 44,
+      "undetermined -> unclassified": 4
+    },
+    "0.05": {
+      "sustained -> oscillatory": 28,
+      "sustained accepted at horizon 0": 28,
+      "settles -> fixed": 44,
+      "undetermined -> unclassified": 4
+    }
+  }
+}

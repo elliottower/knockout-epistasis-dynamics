@@ -507,6 +507,9 @@ def simulate_sync_output(states, compiled, clamp_mask, clamp_value,
     output /= len(output_indices)
 
     n_cycling = int((~converged).sum())
+    # A cycling trajectory whose step-max_steps state does not recur within max_steps more
+    # steps keeps its instantaneous output instead of a cycle average. Counted, not changed.
+    n_cycle_unclosed = 0
     if n_cycling > 0:
         cycling_idx = np.where(~converged)[0]
         for i in cycling_idx:
@@ -521,11 +524,14 @@ def simulate_sync_output(states, compiled, clamp_mask, clamp_value,
                 if np.array_equal(test_state, anchor):
                     output[i] = np.mean(cycle_output)
                     break
+            else:
+                n_cycle_unclosed += 1
 
     info = {
         "update_scheme": "sync",
         "n_fixed_point": int(converged.sum()),
         "n_cycling": n_cycling,
+        "n_cycle_unclosed": n_cycle_unclosed,
         "convergence_rate": float(converged.mean()),
     }
     return output, info

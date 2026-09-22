@@ -1,0 +1,27 @@
+{
+  "network": "saadatpour_guardcell",
+  "n_nodes": 13,
+  "n_coalitions": 8192,
+  "counters": {
+    "n_trajectories": 4194304,
+    "n_cycling": 238088,
+    "n_unclosed_implemented": 0,
+    "n_no_cycle_in_window_registered": 0,
+    "n_period_over_window": 0
+  },
+  "n_trajectories_procedures_differ": 0,
+  "n_coalitions_procedures_differ": 0,
+  "max_abs_trajectory_diff": 0.0,
+  "max_abs_coalition_value_diff": 0.0,
+  "delta_3plus_pp": {
+    "published": 51.4,
+    "implemented": 51.39675417791154,
+    "registered": 51.39675417791154
+  },
+  "positive_control_committed_table": {
+    "against": "results/grn_v2/saadatpour_guardcell_coalition_blind.npz",
+    "exact_equal": true,
+    "n_values_differing": 0,
+    "max_abs_diff": 0.0
+  }
+}
