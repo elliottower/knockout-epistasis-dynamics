@@ -1,9 +1,9 @@
 # Does the composition gap keep its class when each network is converted to normalized HillCube ODEs?
 
-**Status:** FROZEN at `851b7a96154f`
-**Plan sha256:** `8691f47ba2f607d833dc954a8965d3c3260d7380636367038b9e0c9b7539be45`
-**Log:** 2 entries, head `09adf740`
+**Status:** FROZEN at `78071efa918c`
+**Plan sha256:** `b99bd5d12a57cf4c5908b9575a535af458daf68a24c2418a8232c4440a6e1d0c`
 **Frozen:** 2026-09-22
+**Log:** 3 entries, head `ec381430`
 
 Sections use the [OSF Preregistration](https://osf.io/prereg/) question titles verbatim, so
 this maps onto a registration without being rewritten. A question that does not apply is
@@ -373,4 +373,5 @@ decide which word to use: `nothing run`, `no results seen`, `results not opened`
 ```
 2026-09-21  created                              nothing run
 2026-09-22  frozen at 851b7a96154f                nothing run  ·09adf740
+2026-09-22  frozen at 78071efa918c                nothing run  ·ec381430
 ```

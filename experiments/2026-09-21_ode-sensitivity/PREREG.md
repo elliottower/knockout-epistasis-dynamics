@@ -1,9 +1,9 @@
 # Does class preservation depend on the Hill coefficient, the threshold, or the syntax of the conversion?
 
-**Status:** FROZEN at `851b7a96154f`
-**Plan sha256:** `18129a657a7b0f6ed414b126866f4578ed101f41d83212dc2c620f4fecd4b1e8`
-**Log:** 2 entries, head `09adf740`
+**Status:** FROZEN at `78071efa918c`
+**Plan sha256:** `7a094857a455332c4fb6cc5884939f214c28cf0aa71fdd6d585e1cdf7becc907`
 **Frozen:** 2026-09-22
+**Log:** 3 entries, head `ec381430`
 
 Sections use the [OSF Preregistration](https://osf.io/prereg/) question titles verbatim, so
 this maps onto a registration without being rewritten. A question that does not apply is
@@ -231,4 +231,5 @@ decide which word to use: `nothing run`, `no results seen`, `results not opened`
 ```
 2026-09-21  created                              nothing run
 2026-09-22  frozen at 851b7a96154f                nothing run  ·09adf740
+2026-09-22  frozen at 78071efa918c                nothing run  ·ec381430
 ```
