@@ -41,6 +41,8 @@ results/grn_v2/budget_sweep/
 # Per-coalition checkpoints of the attractor validation; its report is tracked and the script
 # regenerates them
 results/audit/attractor_grouping_validation/
+# Rewritten by every run of scripts/verify_freeze.py; each launch record carries its outcome
+results/audit/freeze_verification.json
 
 # Submission materials — never tracked (private journal correspondence)
 SUBMISSION_STATUS.md

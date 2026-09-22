@@ -6,8 +6,9 @@
 
 Each arm reads the finalized records its registration names, copied from the Modal volume into
 `results/<run name>/` next to that registration, and the Boolean estimates written there by
-`scripts/boolean_estimators.py`. A record is read only if its launch manifest names the commit
-the freeze tag points to. Each arm writes `results/analysis.json` beside its registration; the
+`scripts/boolean_estimators.py`. Runs only where every frozen file is identical to the tagged
+freeze commit. A record is read only if its launch manifest names that commit and its run, and its
+settings are the ones registered for the run (scripts/registered_runs.py). Each arm writes `results/analysis.json` beside its registration; the
 primary arm also writes the O1 and A1 scatterplots to `results/figures/`.
 Frozen with the registrations: experiments/2026-09-21_ode-primary-rerun/PREREG.md,
 experiments/2026-09-21_graded-perturbation-rerun/PREREG.md and
@@ -16,6 +17,7 @@ experiments/2026-09-21_ode-sensitivity/PREREG.md.
 
 import argparse
 import json
+from dataclasses import asdict
 from pathlib import Path
 
 import numpy as np
@@ -23,9 +25,12 @@ from matplotlib.figure import Figure
 from scipy.stats import binomtest, pearsonr, rankdata, spearmanr
 
 from scripts.attractors import CYCLE_TOL_GRID, FIXED_TOL_GRID, grid_key
-from scripts.paths import PROJECT_ROOT, RESULTS
+from scripts.paths import PROJECT_ROOT
 from scripts.record_registered_identities import OUT as IDENTITIES
-from scripts.verify_freeze import FREEZE_TAG, tag_commit
+from scripts.registered_runs import GRADED_LEVELS, N_INIT, RUNS, SEED, SENSITIVITY_MAX_NODES
+from scripts.registered_runs import paper_networks as registered_paper_networks
+from scripts.run_ode_arm import load_classifier, load_solver
+from scripts.verify_freeze import FREEZE_TAG, changed_frozen_files, tag_commit
 from scripts.walsh_estimators import MIN_RATIO_FRACTION, MIN_TOTAL_ENERGY
 
 EXPERIMENTS = PROJECT_ROOT / "experiments"
@@ -37,7 +42,6 @@ NULL_BAND_PP = 0.5
 ESTIMATORS = ("all_pairs", "split_half", "plain")  # all_pairs is primary
 B1_ESTIMATORS = ("plain", "all_pairs")  # the estimators B1 compares; split-half is reported alongside
 TIE = 1e-12
-GRADED_LEVELS = (0.0, 0.25, 0.5, 0.75, 1.0)
 GATE_ABSOLUTE_O3PLUS = 1e-4       # the v1 amendment's wording, applied only as a sensitivity analysis
 MIN_G4_NETWORKS = 10
 MAX_NULL_FRACTION_PARTIAL = 0.25
@@ -51,6 +55,8 @@ BOOTSTRAP_SEED = 0
 TOTAL_ENERGY_GRID = (MIN_TOTAL_ENERGY / 10, MIN_TOTAL_ENERGY, MIN_TOTAL_ENERGY * 10)
 RATIO_FRACTION_GRID = (MIN_RATIO_FRACTION / 10, MIN_RATIO_FRACTION, MIN_RATIO_FRACTION * 10)
 SETTINGS = {"a": "sensitivity-a", "b": "sensitivity-b", "c": "sensitivity-c", "d": "sensitivity-d", "e": "sensitivity-e"}
+# The repository, bound here so that tests which move PROJECT_ROOT still read the frozen files.
+REPO = PROJECT_ROOT
 
 
 class AnalysisError(Exception):
@@ -66,22 +72,71 @@ def classify(delta_pp: float) -> str:
 
 
 def frozen_commit() -> str:
-    return tag_commit(PROJECT_ROOT, FREEZE_TAG)
+    """The tagged freeze commit, after checking that every frozen file here is identical to it."""
+    commit = tag_commit(PROJECT_ROOT, FREEZE_TAG)
+    changed = changed_frozen_files(PROJECT_ROOT, commit)
+    if changed:
+        raise AnalysisError(f"frozen files differ from {FREEZE_TAG} ({commit[:12]}): {changed}")
+    return commit
 
 
-def load_records(run_dir: Path, commit: str) -> dict[str, dict]:
-    """Every finalized record in a run directory. Refuses a record not launched from `commit`."""
+def expected_configuration(run: str) -> dict:
+    """The configuration fields a record of `run` must carry, with the solver and classifier as
+    the frozen files define them."""
+    s = RUNS[run]
+    return json.loads(json.dumps({
+        "dynamics": {"construction": s["construction"], "hill_n": s["hill_n"], "hill_k": s["hill_k"]},
+        "clamp_value": s["clamp_value"], "n_init": N_INIT, "seed": SEED, "keep_states": s["keep_states"],
+        "solver": asdict(load_solver(REPO / s["solver"])),
+        "classifier": asdict(load_classifier(REPO / s["classifier"])) if s["classifier"] else None,
+    }))
+
+
+def configuration_mismatches(record: dict, run: str) -> list[str]:
+    found = record.get("configuration") or {}
+    differing = []
+    for key, value in expected_configuration(run).items():
+        have = found.get(key)
+        if key == "dynamics":
+            have = {k: (have or {}).get(k) for k in value}
+        if have != value:
+            differing.append(key)
+    return differing
+
+
+def load_records(run_dir: Path, commit: str, networks: list[str]) -> dict[str, dict]:
+    """The finalized record of each of `networks` in a registered run's directory. Skips the
+    per-container sidecars. Refuses a directory that is missing, or that lacks a network's record
+    or holds another's, since a run copied too early or cut short would otherwise read as networks
+    that cannot be scored. Refuses a record not launched from `commit` for this run, or whose
+    settings are not the run's."""
+    run = run_dir.name
+    if run not in RUNS:
+        raise AnalysisError(f"{run} is not a registered run")
+    if not run_dir.is_dir():
+        raise AnalysisError(f"{run_dir} does not exist; copy the run with scripts.modal_ode_arm::fetch")
     records = {}
     for f in sorted(run_dir.glob("*.json")):
-        if f.name.endswith(".partial.json") or f.name.endswith(".containers.json"):
+        if f.name.endswith((".partial.json", ".containers.json")) or ".task_" in f.name:
             continue
         record = json.loads(f.read_text())
-        launched_from = ((record.get("launch_manifest") or {}).get("freeze") or {}).get("commit")
+        manifest = record.get("launch_manifest") or {}
+        launched_from = (manifest.get("freeze") or {}).get("commit")
         if launched_from != commit:
             raise AnalysisError(f"{f} was launched from {launched_from}, not from the frozen commit {commit}")
+        if manifest.get("run_name") != run:
+            raise AnalysisError(f"{f} was launched as run {manifest.get('run_name')}, not {run}")
+        differing = configuration_mismatches(record, run)
+        if differing:
+            raise AnalysisError(f"{f} differs from the configuration registered for {run} in {differing}")
         if record["network"] in records:
             raise AnalysisError(f"two records for {record['network']} in {run_dir}")
         records[record["network"]] = record
+    missing = sorted(set(networks) - set(records))
+    unexpected = sorted(set(records) - set(networks))
+    if missing or unexpected:
+        raise AnalysisError(f"{run_dir} lacks records for {missing} and holds unregistered networks {unexpected}; "
+                            "a run is analyzed only once every network has a record")
     return records
 
 
@@ -378,32 +433,58 @@ def scatterplots(mechanisms: dict, directory: Path) -> dict[str, dict[str, str |
     return out
 
 
-def published_ode_pp() -> dict[str, float]:
-    """The published ODE arm's Delta_3+, from the files the paper's numbers were reconciled against."""
+def published_ode() -> dict[str, dict]:
+    """The published ODE arm's Delta_3+ in pp and the settings its file records, from the files the
+    paper's numbers were reconciled against."""
     out = {}
     for pattern in ("results/ode_full/*_ode.json", "results/grn_v2/ode_full/*_ode.json"):
         for f in sorted(PROJECT_ROOT.glob(pattern)):
             d = json.loads(f.read_text())
             if d.get("ode_delta_o3plus") is not None:
-                out.setdefault(d["model"], d["ode_delta_o3plus"] * 100)
+                out.setdefault(d["model"], {"pp": d["ode_delta_o3plus"] * 100, "settings": d.get("ode_params"),
+                                            "file": f.relative_to(PROJECT_ROOT).as_posix()})
     return out
 
 
+LEGACY_SETTINGS = ("t_max", "t_tail", "hill_n", "hill_k", "tau")
+
+
+def legacy_like_for_like(settings: dict | None) -> tuple[bool, str]:
+    """Whether a published run used the settings the legacy audit reconstructs."""
+    if settings is None:
+        return False, "the published file records no settings"
+    run = RUNS["legacy-audit"]
+    solver = json.loads((REPO / run["solver"]).read_text())
+    expected = {"t_max": solver["t_max"], "t_tail": solver["t_tail"], "hill_n": run["hill_n"], "hill_k": run["hill_k"],
+                "tau": 1.0}
+    differing = sorted(k for k in LEGACY_SETTINGS if settings.get(k) != expected[k])
+    return (not differing, f"published with {', '.join(f'{k} {settings.get(k)}' for k in differing)}" if differing else "")
+
+
 def legacy_audit(legacy: dict[str, dict], networks: list[str]) -> dict:
-    published = published_ode_pp()
+    """Each network's published value against the legacy reconstruction without its timeout. Rows
+    whose published run used other settings are reported, and kept out of the counts."""
+    published = published_ode()
     rows, unscored = {}, {}
     for name in networks:
+        pub = published.get(name)
+        same, reason = legacy_like_for_like(pub["settings"]) if pub else (False, "no published value")
         ok, why = usable(legacy.get(name), "plain")
         if not ok:
-            unscored[name] = why
+            unscored[name] = {"reason": why, "like_for_like": same}
             continue
         new = ode_delta_pp(legacy[name], "plain")
-        rows[name] = {"published_pp": published.get(name), "without_timeout_pp": new,
-                      "change_pp": new - published[name] if name in published else None,
-                      "class_changed": name in published and classify(new) != classify(published[name])}
+        rows[name] = {"published_pp": pub["pp"] if pub else None, "published_file": pub["file"] if pub else None,
+                      "without_timeout_pp": new, "change_pp": new - pub["pp"] if pub else None,
+                      "class_changed": bool(pub) and classify(new) != classify(pub["pp"]),
+                      "like_for_like": same, "not_like_for_like_because": reason or None}
+    counted = {n: r for n, r in rows.items() if r["like_for_like"]}
     return {"rows": rows, "unscored": unscored,
-            "n_moved_over_0p5pp": sum(1 for r in rows.values() if r["change_pp"] is not None and abs(r["change_pp"]) > 0.5),
-            "class_changed": sorted(n for n, r in rows.items() if r["class_changed"])}
+            "n_unscored_like_for_like": sum(1 for u in unscored.values() if u["like_for_like"]),
+            "not_like_for_like": {n: r["not_like_for_like_because"] for n, r in rows.items() if not r["like_for_like"]},
+            "n_like_for_like": len(counted),
+            "n_moved_over_0p5pp": sum(1 for r in counted.values() if abs(r["change_pp"]) > 0.5),
+            "class_changed": sorted(n for n, r in counted.items() if r["class_changed"])}
 
 
 def oscillation(records: dict[str, dict]) -> dict:
@@ -535,8 +616,7 @@ def evaluate_sensitivity(by_setting: dict[str, dict[str, dict]], networks: list[
 
 
 def paper_networks() -> dict[str, int]:
-    table = json.loads((RESULTS / "paper_number_reconciliation.json").read_text())["per_network_table"]
-    return {name: table[name]["n"] for name in sorted(table, key=lambda m: (table[m]["n"], m))}
+    return registered_paper_networks()
 
 
 def write(path: Path, record: dict) -> None:
@@ -554,7 +634,7 @@ def main(argv: list[str] | None = None) -> None:
     sizes = paper_networks()
     networks = list(sizes)
     commit = frozen_commit()
-    primary = load_records(PRIMARY / "results" / "primary-hillcube-n10", commit)
+    primary = load_records(PRIMARY / "results" / "primary-hillcube-n10", commit, networks)
     if args.arm == "primary":
         mechanisms = mechanism_tests(primary, networks)
         write(PRIMARY / "results" / "analysis.json", {
@@ -565,14 +645,14 @@ def main(argv: list[str] | None = None) -> None:
             "mechanism_tests": mechanisms,
             "scatterplots": scatterplots(mechanisms, PRIMARY / "results" / "figures"),
             "basins_by_network_and_tolerance": basin_table(primary, networks),
-            "legacy_audit": legacy_audit(load_records(PRIMARY / "results" / "legacy-audit", commit), networks),
+            "legacy_audit": legacy_audit(load_records(PRIMARY / "results" / "legacy-audit", commit, networks), networks),
             "oscillation": oscillation(primary),
             "provisional_sensitivity": provisional(primary),
         })
     elif args.arm == "graded":
         by_level = {0.0: primary}
         for f in GRADED_LEVELS[1:]:
-            by_level[f] = load_records(GRADED / "results" / f"graded-f{f:g}", commit)
+            by_level[f] = load_records(GRADED / "results" / f"graded-f{f:g}", commit, networks)
         write(GRADED / "results" / "analysis.json", {
             "registration": "experiments/2026-09-21_graded-perturbation-rerun/PREREG.md",
             "frozen_commit": commit,
@@ -580,8 +660,8 @@ def main(argv: list[str] | None = None) -> None:
             "provisional_sensitivity": {str(f): provisional(r) for f, r in by_level.items()},
         })
     else:
-        small = [n for n in networks if sizes[n] <= 12]
-        by_setting = {k: load_records(SENSITIVITY / "results" / run, commit) for k, run in SETTINGS.items()}
+        small = [n for n in networks if sizes[n] <= SENSITIVITY_MAX_NODES]
+        by_setting = {k: load_records(SENSITIVITY / "results" / run, commit, small) for k, run in SETTINGS.items()}
         write(SENSITIVITY / "results" / "analysis.json", {
             "registration": "experiments/2026-09-21_ode-sensitivity/PREREG.md",
             "frozen_commit": commit,

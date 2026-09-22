@@ -7,8 +7,8 @@
     "scripts/ode_coalition_sweep.py"
   ],
   "config_sha256": {
-    "experiments/ode_v2/solver_primary.json": "74ff164da031daf0de32b0dd5947fafe8dabab124e8edd577139cdbf9a7d66bc",
-    "experiments/ode_v2/classifier_primary.json": "619eea0c739e6cff22124498995344d613278b0870bdc0a6d57c52d07175e556"
+    "experiments/ode_v2/solver_primary.json": "f74042835915a43d5745df0ae58a377759e3bbe3ff4d1a50388ff4aacf9b68a1",
+    "experiments/ode_v2/classifier_primary.json": "0178203610db22f94a62f45ba64df08244e3f5001f4f3820f97cc64e15e93f43"
   },
   "networks": {
     "lambda_phage": {

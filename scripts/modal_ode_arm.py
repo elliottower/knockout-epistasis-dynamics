@@ -1,13 +1,17 @@
 """Run ODE arms on Modal: shards, then replicates, then finalize, for each network.
 
-    modal run --detach -m scripts.modal_ode_arm::main --run-name primary \
+    modal run --detach -m scripts.modal_ode_arm::main --run-name primary-hillcube-n10 \
         --networks lambda_phage,davidich_yeast --construction hillcube_normalized --hill-n 10 \
         --solver experiments/ode_v2/solver_primary.json \
         --classifier experiments/ode_v2/classifier_primary.json --n-init 32 --seed 42 --keep-states
 
     modal run -m scripts.modal_ode_arm::smoke      # the pipeline end to end on lambda_phage
+    modal run -m scripts.modal_ode_arm::launch_check --run-name primary-hillcube-n10   # no scores
+    modal run -m scripts.modal_ode_arm::fetch --run-name primary-hillcube-n10 \
+        --out experiments/2026-09-21_ode-primary-rerun/results/primary-hillcube-n10
 
-A registered launch (`main`) first runs `scripts.verify_freeze.require` and refuses unless the
+A registered launch (`main`) refuses a run name or settings not listed in
+scripts/registered_runs.py, then runs `scripts.verify_freeze.require` and refuses unless the
 checkout is the tagged freeze commit with every registered file unchanged; the tag and commits it
 returns go into the launch record and every record's launch manifest. The smoke test runs
 before the freeze and is not gated.
@@ -26,7 +30,7 @@ Modal task id, so the record can show that replicates ran in containers other th
 
 State lives on the volume `knockout-ode-v2`, under /results/<run name>/. To check a run, look
 at the app state first (`modal app list`, `modal app logs <app id>`), then the files
-(`modal run -m scripts.modal_ode_arm::status --run-name primary`). A stopped app leaves
+(`modal run -m scripts.modal_ode_arm::status --run-name primary-hillcube-n10`). A stopped app leaves
 behind the files it had already written, which look like slow progress.
 """
 
@@ -46,6 +50,7 @@ import data_utils  # noqa: F401
 from scripts.modal_provenance import ODE_ARM_FILES as FILES
 from scripts.modal_provenance import ProvenanceError, file_hashes, verify
 from scripts.paths import PROJECT_ROOT, RESULTS
+from scripts.registered_runs import launch_mismatches
 from scripts.verify_freeze import require as require_freeze
 
 REMOTE_ROOT = Path("/root/repo")
@@ -89,10 +94,6 @@ with image.imports():
     )
 
 
-class SimulatedPreemption(Exception):
-    """Raised once, after a checkpoint, by a shard asked to test its own resumption."""
-
-
 def now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
@@ -127,8 +128,12 @@ def shard(fields: dict, hashes: dict[str, str], run_name: str, start: int, end: 
     volume.reload()  # a retried shard resumes from its last committed checkpoint
     path = shard_file(out, spec, start, end)
     marker = path.with_name(path.stem + ".preempted")
-    leave_sidecar(path, started_at=now())
-    log(f"{spec.stem} shard [{start}, {end}) starting")
+    resumed_from = 0
+    if path.exists():
+        with np.load(path) as z:
+            resumed_from = int(z["completed"])
+    leave_sidecar(path, started_at=now(), resumed_from=resumed_from)
+    log(f"{spec.stem} shard [{start}, {end}) starting at coalition {start + resumed_from}")
     checkpoints = [0]
 
     def on_checkpoint() -> None:
@@ -137,7 +142,10 @@ def shard(fields: dict, hashes: dict[str, str], run_name: str, start: int, end: 
         if preempt_after_checkpoints and checkpoints[0] == preempt_after_checkpoints and not marker.exists():
             marker.write_text(os.environ.get("MODAL_TASK_ID", "unknown"))
             volume.commit()
-            raise SimulatedPreemption(f"shard [{start}, {end}) stopped after checkpoint {checkpoints[0]}")
+            log(f"{spec.stem} shard [{start}, {end}) killing its container after checkpoint {checkpoints[0]}")
+            # The process ends without cleanup, as it would if the container were preempted, so
+            # the retry has to run in a new container and resume from the checkpoint.
+            os._exit(1)
 
     run_shard(spec, start, end, out, checkpoint_every=checkpoint_every, on_checkpoint=on_checkpoint)
     volume.commit()
@@ -172,18 +180,29 @@ def plan(fields: dict, hashes: dict[str, str], run_name: str, n_chunks: int) -> 
 
 
 def container_record(out: Path, stem: str) -> dict:
-    """Which containers worked on the shards and on the replicate chunks, from the sidecars."""
-    def tasks(kind: str) -> dict[str, list[str]]:
-        found: dict[str, list[str]] = {}
+    """Which containers worked on the shards and on the replicate chunks, and where each shard's
+    container started, from the sidecars."""
+    def sidecars(kind: str) -> dict[str, list[dict]]:
+        found: dict[str, list[dict]] = {}
         for f in sorted(out.glob(f"{stem}.{kind}_*.task_*.json")):
-            found.setdefault(f.name.split(".task_")[0], []).append(json.loads(f.read_text())["task_id"])
+            found.setdefault(f.name.split(".task_")[0], []).append(json.loads(f.read_text()))
         return found
-    shards, replicates = tasks("shard"), tasks("replicate")
+    shard_cars, replicate_cars = sidecars("shard"), sidecars("replicate")
+    shards = {k: [c["task_id"] for c in v] for k, v in shard_cars.items()}
+    replicates = {k: [c["task_id"] for c in v] for k, v in replicate_cars.items()}
     shard_tasks = {t for ts in shards.values() for t in ts}
     replicate_tasks = {t for ts in replicates.values() for t in ts}
     return {"shards": shards, "replicates": replicates,
             "replicates_ran_in_containers_distinct_from_shards": not (shard_tasks & replicate_tasks),
-            "shards_resumed_in_a_second_container": sorted(k for k, v in shards.items() if len(set(v)) > 1)}
+            "shards_resumed_in_a_second_container": sorted(k for k, v in shards.items() if len(set(v)) > 1),
+            "shards_resumed_from_a_checkpoint": sorted(k for k, v in shard_cars.items()
+                                                       if any(0 < c.get("resumed_from", 0) < shard_size(k) for c in v))}
+
+
+def shard_size(name: str) -> int:
+    """<stem>.shard_0000000-0000032 -> 32"""
+    start, end = name.rsplit(".shard_", 1)[1].split("-")
+    return int(end) - int(start)
 
 
 @app.function(cpu=1.0, memory=16384, timeout=DAY, volumes={str(VOLUME_ROOT): volume})
@@ -216,7 +235,7 @@ def orchestrate(specs: list[dict], hashes: dict[str, str], run_name: str,
                                               preempt_after_checkpoints if i == 0 else 0)
                                   for i, (s, e) in enumerate(ranges)]
         log(f"{spec.stem}: {len(ranges)} shards spawned")
-    records = []
+    finished = []
     for fields in specs:
         spec = remote_spec(fields, hashes)
         for call in shard_calls[spec.stem]:
@@ -225,9 +244,9 @@ def orchestrate(specs: list[dict], hashes: dict[str, str], run_name: str,
         n_chunks = max(1, round(REPLICATE_FRACTION * 2**n_nodes / REPLICATE_COALITIONS_PER_CHUNK))
         chunks = plan.remote(fields, hashes, run_name, n_chunks)
         list(replicate.starmap([(fields, hashes, run_name, i, c) for i, c in enumerate(chunks)]))
-        records.append(finish.remote(fields, hashes, run_name, freeze))
+        finished.append(finish.remote(fields, hashes, run_name, freeze))
         log(f"{spec.stem}: done")
-    return records
+    return finished
 
 
 @app.function(cpu=1.0, memory=4096, timeout=DAY, volumes={str(VOLUME_ROOT): volume})
@@ -276,6 +295,29 @@ def shadowed_module_is_refused(fields: dict, hashes: dict[str, str]) -> dict:
 
 
 @app.function(cpu=1.0, memory=2048, timeout=60 * 60, volumes={str(VOLUME_ROOT): volume})
+def records(run_name: str) -> dict[str, str]:
+    """Each network's record and container record in a run, by file name, and nothing else: no
+    shards, replicate chunks, partial files or per-container sidecars."""
+    volume.reload()
+    return {f.name: f.read_text() for f in sorted((VOLUME_ROOT / run_name).glob("*.json"))
+            if ".task_" not in f.name and not f.name.endswith(".partial.json")}
+
+
+@app.function(cpu=1.0, memory=2048, timeout=60 * 60, volumes={str(VOLUME_ROOT): volume})
+def freeze_blocks(run_name: str) -> dict[str, dict]:
+    """For each finished record of a run: its launch manifest's freeze block and run name, and the
+    names of its top-level fields. No value from the record's scores leaves the container."""
+    out = {}
+    for name, text in records.local(run_name).items():
+        if name.endswith(".containers.json"):
+            continue
+        record = json.loads(text)
+        manifest = record.get("launch_manifest") or {}
+        out[name] = {"freeze": manifest.get("freeze"), "run_name": manifest.get("run_name"), "fields": sorted(record)}
+    return out
+
+
+@app.function(cpu=1.0, memory=2048, timeout=60 * 60, volumes={str(VOLUME_ROOT): volume})
 def inspect_volume(run_name: str) -> dict:
     volume.reload()
     out = VOLUME_ROOT / run_name
@@ -305,27 +347,32 @@ def launch_record(run_name: str, specs: list[dict], hashes: dict[str, str], **ex
 def main(run_name: str, networks: str, construction: str, hill_n: float, solver: str,
          n_init: int, seed: int, classifier: str = "", clamp_value: float = 0.0, keep_states: bool = False,
          hill_k: float = 0.5):
+    specs = [{"network": n, "construction": construction, "hill_n": hill_n, "hill_k": hill_k, "solver_path": solver,
+              "classifier_path": classifier or None, "n_init": n_init, "seed": seed,
+              "clamp_value": clamp_value, "keep_states": keep_states} for n in networks.split(",")]
+    differing = launch_mismatches(run_name, specs[0], networks.split(","))
+    if differing:
+        raise SystemExit(f"{run_name}: {differing} differ from the registered run in scripts/registered_runs.py")
     freeze = require_freeze()
     hashes = file_hashes(PROJECT_ROOT, FILES)
     for path in (solver, classifier):
         if path and path not in FILES:
             raise SystemExit(f"{path} is not among the files copied into the image")
-    specs = [{"network": n, "construction": construction, "hill_n": hill_n, "hill_k": hill_k, "solver_path": solver,
-              "classifier_path": classifier or None, "n_init": n_init, "seed": seed,
-              "clamp_value": clamp_value, "keep_states": keep_states} for n in networks.split(",")]
     launch_record(run_name, specs, hashes, freeze=freeze)
     log(f"{run_name}: launching {len(specs)} networks from {freeze['tag']} at {freeze['commit'][:12]}")
     for record in orchestrate.remote(specs, hashes, run_name, freeze=freeze):
-        rep = record["replicate"]
+        rep = record["replicate"]  # empty for a run that cannot be scored, which is not replicated
         log(f"{record['stem']}: scored {record['scored']}, trajectories {record['summary']['trajectories']}, "
-            f"replicate mismatches {rep['status_mismatches']}/{rep['class_mismatches']}/{rep['value_mismatches']}")
+            f"replicate mismatches {rep.get('status_mismatches')}/{rep.get('class_mismatches')}/{rep.get('value_mismatches')}")
 
 
 @app.local_entrypoint()
 def smoke():
     """lambda_phage, 2 initial states, 4 shards of 32 coalitions checkpointed every 8, the first
-    shard preempted once after its first checkpoint; then the stale-file checks. Writes
-    results/ode_v2/smoke/<run name>.json locally."""
+    shard's container killed once after its first checkpoint; then the stale-file checks, and a fetch of the
+    run's records, which must carry the freeze block the orchestrator was given. The block is a
+    stand-in: the smoke test runs outside any freeze. Writes results/ode_v2/smoke/<run name>.json
+    locally, without the records' scores."""
     hashes = file_hashes(PROJECT_ROOT, FILES)
     run_name = f"smoke-{now().replace(':', '')}"
     fields = {"network": "lambda_phage", "construction": "hillcube_normalized", "hill_n": 10.0, "hill_k": 0.5,
@@ -333,12 +380,17 @@ def smoke():
               "classifier_path": "experiments/ode_v2/classifier_primary.json",
               "n_init": 2, "seed": 42, "clamp_value": 0.0, "keep_states": True}
     launch_record(run_name, [fields], hashes, purpose="smoke test")
-    record = orchestrate.remote([fields], hashes, run_name, 32, 8, 1)[0]
+    stand_in = {"tag": "smoke test, not a freeze", "tag_object": None, "commit": run_name, "plan_commit": None}
+    record = orchestrate.remote([fields], hashes, run_name, 32, 8, 1, stand_in)[0]
     stale = refuses_stale_files.remote(fields, hashes, run_name)
     shadow = shadowed_module_is_refused.remote(fields, hashes)
+    fetched = records.remote(run_name)
+    blocks = freeze_blocks.remote(run_name)
+    stem = record["stem"]
     containers = record["containers"]
     checks = {
-        "a_shard_was_preempted_and_resumed_in_a_second_container": bool(containers["shards_resumed_in_a_second_container"]),
+        "a_killed_shard_resumed_from_its_checkpoint_in_a_second_container": bool(
+            set(containers["shards_resumed_from_a_checkpoint"]) & set(containers["shards_resumed_in_a_second_container"])),
         "replicates_ran_in_containers_distinct_from_shards": containers["replicates_ran_in_containers_distinct_from_shards"],
         "replicates_agree": (record["replicate"]["status_mismatches"], record["replicate"]["class_mismatches"],
                              record["replicate"]["value_mismatches"]) == (0, 0, 0),
@@ -347,6 +399,8 @@ def smoke():
         "stale_replicate_refused": stale["replicate"]["refused"],
         "shadowed_module_refused": (shadow["refused"] and "data_utils" in shadow.get("message", "")
                                     and shadow["data_utils_loaded_from"] == SHADOW_REMOTE),
+        "records_returns_only_the_records": set(fetched) == {f"{stem}.json", f"{stem}.containers.json"},
+        "freeze_block_reaches_the_record": (blocks.get(f"{stem}.json") or {}).get("freeze") == stand_in,
     }
     report = {"run_name": run_name, "checks": checks, "passed": all(checks.values()),
               "record": record, "stale_files": stale, "shadowed_module": shadow}
@@ -356,6 +410,31 @@ def smoke():
     for name, ok in checks.items():
         log(f"{'PASS' if ok else 'FAIL'}  {name}")
     log(f"wrote {out / (run_name + '.json')}")
+
+
+@app.local_entrypoint()
+def fetch(run_name: str, out: str):
+    """Copy a run's records, and nothing else, from the volume into `out`, a directory inside the
+    repository."""
+    target = (PROJECT_ROOT / out).resolve()
+    if not target.is_relative_to(PROJECT_ROOT.resolve()):
+        raise SystemExit(f"{out} is outside the repository")
+    relative = target.relative_to(PROJECT_ROOT.resolve())
+    files = records.remote(run_name)
+    if not files:
+        raise SystemExit(f"{run_name} has no finished records on the volume")
+    target.mkdir(parents=True, exist_ok=True)
+    for name, text in files.items():
+        (target / name).write_text(text)
+    log(f"{run_name}: {len(files)} files written to {relative}")
+
+
+@app.local_entrypoint()
+def launch_check(run_name: str):
+    """Print each finished record's freeze block, run name, and whether it holds basin statistics,
+    and nothing from its scores."""
+    for name, block in freeze_blocks.remote(run_name).items():
+        print(f"{name}: freeze {block['freeze']}, run {block['run_name']}, basins {'basins' in block['fields']}")
 
 
 @app.local_entrypoint()

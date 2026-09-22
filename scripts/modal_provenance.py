@@ -32,6 +32,7 @@ ODE_ARM_FILES = (
     "scripts/attractors.py",
     "scripts/modal_ode_arm.py",
     "scripts/modal_provenance.py",
+    "scripts/registered_runs.py",
     "scripts/verify_freeze.py",
     "scripts/record_registered_identities.py",
     "results/paper_number_reconciliation.json",

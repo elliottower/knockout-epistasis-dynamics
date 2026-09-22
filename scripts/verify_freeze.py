@@ -13,7 +13,8 @@ The freeze (experiments/ode_v2/CONTEXT.md, Freeze and launch) is one sequence:
 A launch then runs from a checkout of the tagged commit. This check passes only if, in the
 checkout it runs in:
 
-  - the three registrations are frozen at one plan commit, and each passes `prereg check`;
+  - the three registrations are frozen at one plan commit, each passes `prereg check`, and each
+    one's text above its log, less the freeze header, is the text at the plan commit;
   - HEAD is the tagged commit, the tag is annotated, its signature verifies, and origin holds
     the same tag object;
   - the plan commit is an ancestor of HEAD, and nothing but the three registrations changed
@@ -24,8 +25,9 @@ checkout it runs in:
   - experiments/ode_v2/registered_identities.json equals the identities computed from the tree.
 
 `scripts/modal_ode_arm.py` runs the same check before every registered launch and writes the
-tag and commits into every record's launch manifest; `scripts/analyze_ode_rerun.py` refuses a
-record that names another commit. Writes results/audit/freeze_verification.json and raises
+tag and commits into every record's launch manifest. `scripts/analyze_ode_rerun.py` requires only
+that every frozen file equal the tagged commit (`changed_frozen_files`), so that anyone with a
+clone can rerun it, and refuses a record that names another commit. Writes results/audit/freeze_verification.json and raises
 FreezeError if any check fails.
 """
 
@@ -40,20 +42,26 @@ from scripts.paths import AUDIT, PROJECT_ROOT
 from scripts.record_registered_identities import OUT as IDENTITIES
 from scripts.record_registered_identities import build
 
-FREEZE_TAG = "ode-rerun-freeze"
+FREEZE_TAG = "ode-rerun-freeze-2"
 REGISTRATIONS = (
     "experiments/2026-09-21_ode-primary-rerun/PREREG.md",
     "experiments/2026-09-21_graded-perturbation-rerun/PREREG.md",
     "experiments/2026-09-21_ode-sensitivity/PREREG.md",
 )
 # Everything the registrations name, run or read, beyond the files shipped to Modal: the
-# environment the local steps run in, and the Boolean audit, whose per-trajectory shards are the
-# Boolean arm's input. A directory entry covers every file under it.
+# environment the local steps run in; the Boolean audit, whose per-trajectory shards are the
+# Boolean arm's input; and the published ODE files the legacy audit compares against. A directory
+# entry covers every file under it.
 BOOLEAN_AUDIT = "results/audit/boolean_cycle_handling"
+PUBLISHED_ODE = ("results/ode_full", "results/grn_v2/ode_full")
 FROZEN_FILES = tuple(sorted(set(ODE_ARM_FILES) | {
     "pyproject.toml",
     "uv.lock",
     BOOLEAN_AUDIT,
+    *PUBLISHED_ODE,
+    "results/audit/oscillation_classifier_validation.json",
+    "results/audit/oscillation_tolerance_replay.json",
+    "scripts/replay_oscillation_tolerance.py",
     "results/audit/attractor_grouping_validation.json",
     "results/audit/attractor_grouping_validation_cycle_grid_0.01-0.05.json",
     "experiments/ode_v2/CONTEXT.md",
@@ -70,14 +78,18 @@ FROZEN_FILES = tuple(sorted(set(ODE_ARM_FILES) | {
     "tests/test_analyze_ode_rerun.py",
     "tests/test_modal_provenance.py",
     "tests/test_verify_freeze.py",
+    "tests/test_registered_runs.py",
     "tests/fixtures/shadow/data_utils.py",
 }))
 # Paths that must hold no modified or untracked file, except the registrations' results.
 RELEVANT_PATHS = ("scripts", "tests", "experiments/ode_v2", "data_utils.py", "grn_coalition_sweep.py",
-                  "composition_scorer.py", "pyproject.toml", "uv.lock", BOOLEAN_AUDIT,
+                  "composition_scorer.py", "pyproject.toml", "uv.lock", BOOLEAN_AUDIT, *PUBLISHED_ODE,
                   *(str(Path(r).parent) for r in REGISTRATIONS))
 EXCLUDED_PATHS = tuple(f":(exclude){Path(r).parent}/results" for r in REGISTRATIONS)
 FROZEN_AT = re.compile(r"^\*\*Status:\*\* FROZEN at `([0-9a-f]{12})`", re.M)
+# The lines `prereg freeze` writes above the log, and the line the log starts at.
+FREEZE_HEADER = re.compile(r"^\*\*(Status|Plan sha256|Log|Frozen):\*\*.*\n", re.M)
+LOG_START = "\n---\n\n## Log\n"
 OUT = AUDIT / "freeze_verification.json"
 
 
@@ -98,6 +110,7 @@ class RepoFacts:
     plan_commit: str | None
     plan_is_ancestor_of_head: bool
     changed_since_plan: tuple[str, ...]
+    registration_text_matches_plan: dict[str, bool]
     frozen_files: dict[str, dict[str, bool]]
     dirty: tuple[str, ...]
     identities_match: bool
@@ -105,6 +118,18 @@ class RepoFacts:
 
 def git(root: Path, *args: str) -> subprocess.CompletedProcess:
     return subprocess.run(["git", *args], cwd=root, capture_output=True, text=True)
+
+
+def plan_text(registration: str) -> str:
+    """A registration's text above its log, without the header `prereg freeze` writes."""
+    return FREEZE_HEADER.sub("", registration.split(LOG_START, 1)[0])
+
+
+def changed_frozen_files(root: Path, commit: str) -> list[str]:
+    """Frozen files not tracked at `commit`, or differing from it in the working tree."""
+    return [path for path in FROZEN_FILES
+            if git(root, "cat-file", "-e", f"{commit}:{path}").returncode
+            or git(root, "diff", "--quiet", commit, "--", path).returncode]
 
 
 def tag_commit(root: Path, tag: str) -> str:
@@ -133,6 +158,12 @@ def gather(root: Path = PROJECT_ROOT, tag: str = FREEZE_TAG) -> RepoFacts:
         tracked = plan is not None and git(root, "cat-file", "-e", f"{plan}:{path}").returncode == 0
         frozen[path] = {"tracked_at_plan": tracked,
                         "unchanged_since": tracked and git(root, "diff", "--quiet", plan, "--", path).returncode == 0}
+    texts = {}
+    for reg in REGISTRATIONS:
+        at_plan = git(root, "show", f"{plan}:{reg}") if plan else None
+        at_head = git(root, "show", f"HEAD:{reg}")
+        texts[reg] = (at_plan is not None and at_plan.returncode == 0 and at_head.returncode == 0
+                      and plan_text(at_plan.stdout) == plan_text(at_head.stdout) == plan_text((root / reg).read_text()))
     status = git(root, "status", "--porcelain", "--untracked-files=all", "--", *RELEVANT_PATHS, *EXCLUDED_PATHS)
     return RepoFacts(
         plan_commits=plans, prereg_check_exit=checks, head=head, tag_commit=tagged,
@@ -141,6 +172,7 @@ def gather(root: Path = PROJECT_ROOT, tag: str = FREEZE_TAG) -> RepoFacts:
         tag_object=tag_object, origin_tag_object=remote[0] if remote else None, plan_commit=plan,
         plan_is_ancestor_of_head=plan is not None and git(root, "merge-base", "--is-ancestor", plan, head).returncode == 0,
         changed_since_plan=tuple(git(root, "diff", "--name-only", plan, head).stdout.split()) if plan else (),
+        registration_text_matches_plan=texts,
         frozen_files=frozen, dirty=tuple(line for line in status.stdout.splitlines() if line.strip()),
         identities_match=build() == json.loads((root / IDENTITIES.relative_to(PROJECT_ROOT)).read_text()),
     )
@@ -176,6 +208,9 @@ def problems(facts: RepoFacts, tag: str = FREEZE_TAG) -> list[str]:
         others = sorted(set(facts.changed_since_plan) - set(facts.plan_commits))
         if others:
             found.append(f"files other than the registrations changed since the plan commit: {others}")
+        for reg, same in facts.registration_text_matches_plan.items():
+            if not same:
+                found.append(f"{reg}'s text above its log differs from the plan commit")
         for path, state in facts.frozen_files.items():
             if not state["tracked_at_plan"]:
                 found.append(f"{path} is not tracked at the plan commit")

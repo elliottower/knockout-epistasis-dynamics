@@ -4,6 +4,7 @@ import pytest
 
 from scripts import analyze_ode_rerun as analysis
 from scripts.attractors import CYCLE_TOL_GRID, FIXED_TOL_GRID, grid_key
+from scripts.run_ode_arm import ArmSpec, configuration_of, expected_fingerprint
 
 COMMIT = "f" * 40
 LOCAL_O3PLUS = 0.3
@@ -16,13 +17,14 @@ def energy_for(delta_pp, total=0.1):
 
 
 def record(name, delta_pp, scored=True, mismatches=0, o3plus=0.1, ratio=0.4, oscillatory=2, entropy=None,
-           energy_3plus=0.01, admissible=True, ratio_admissible=True, total=0.1, commit=COMMIT):
+           energy_3plus=0.01, admissible=True, ratio_admissible=True, total=0.1, commit=COMMIT, run=None):
     estimate = {"admissible": admissible, "delta_o3plus": delta_pp / 100, "global_o3plus": o3plus,
                 "higher_order_ratio": ratio if ratio_admissible else None, "ratio_admissible": ratio_admissible,
                 "ratio_reason": None if ratio_admissible else "order-3+ fraction is below the admissible 0.0001",
                 "energy_3plus": energy_3plus, "energy_2plus": energy_3plus / ratio, "total_energy": total,
                 "energy_by_order": energy_for(delta_pp, total)}
-    r = {"network": name, "scored": scored, "launch_manifest": {"freeze": {"commit": commit}},
+    r = {"network": name, "scored": scored, "launch_manifest": {"freeze": {"commit": commit}, "run_name": run},
+         "configuration": analysis.expected_configuration(run) if run else None,
          "replicate": {"status_mismatches": mismatches, "class_mismatches": 0, "value_mismatches": 0},
          "summary": {"classes_of_accepted": {"none": 0, "fixed": 32 - oscillatory, "oscillatory": oscillatory, "unclassified": 0},
                      "coalitions_with_an_oscillating_trajectory": 1, "n_coalitions": 8}}
@@ -306,11 +308,109 @@ def test_g4_is_evaluated_once_ten_networks_are_admissible_at_both_levels():
 
 
 def test_a_record_launched_from_another_commit_is_refused(tmp_path):
-    (tmp_path / "net0.json").write_text(json.dumps(record("net0", 5.0)))
-    assert set(analysis.load_records(tmp_path, COMMIT)) == {"net0"}
-    (tmp_path / "net1.json").write_text(json.dumps(record("net1", 5.0, commit="e" * 40)))
+    run = tmp_path / "primary-hillcube-n10"
+    run.mkdir()
+    (run / "net0.json").write_text(json.dumps(record("net0", 5.0, run=run.name)))
+    # A container's sidecar sits beside the records and is not one.
+    (run / "net0.shard_0000000-0004096.task_ta-01.json").write_text(json.dumps({"task_id": "ta-01"}))
+    assert set(analysis.load_records(run, COMMIT, ["net0"])) == {"net0"}
+    (run / "net1.json").write_text(json.dumps(record("net1", 5.0, commit="e" * 40, run=run.name)))
     with pytest.raises(analysis.AnalysisError, match="not from the frozen commit"):
-        analysis.load_records(tmp_path, COMMIT)
+        analysis.load_records(run, COMMIT, ["net0", "net1"])
+
+
+def test_a_run_missing_a_networks_record_or_holding_an_extra_one_is_refused(tmp_path):
+    # A fetch made before every network finished would otherwise read as unscorable networks.
+    run = tmp_path / "primary-hillcube-n10"
+    run.mkdir()
+    (run / "net0.json").write_text(json.dumps(record("net0", 5.0, run=run.name)))
+    with pytest.raises(analysis.AnalysisError, match=r"lacks records for \['net1'\]"):
+        analysis.load_records(run, COMMIT, ["net0", "net1"])
+    with pytest.raises(analysis.AnalysisError, match=r"unregistered networks \['net0'\]"):
+        analysis.load_records(run, COMMIT, ["net1"])
+
+
+def test_a_record_whose_settings_are_not_its_runs_is_refused(tmp_path):
+    # A dropped --hill-k 0.3 would give setting c the reference's records.
+    run = tmp_path / "sensitivity-c"
+    run.mkdir()
+    (run / "net0.json").write_text(json.dumps(record("net0", 5.0, run="sensitivity-c")))
+    assert set(analysis.load_records(run, COMMIT, ["net0"])) == {"net0"}
+    dropped = record("net0", 5.0, run="sensitivity-c")
+    dropped["configuration"] = analysis.expected_configuration("sensitivity-a")
+    (run / "net0.json").write_text(json.dumps(dropped))
+    with pytest.raises(analysis.AnalysisError, match="dynamics"):
+        analysis.load_records(run, COMMIT, ["net0"])
+
+
+def test_a_run_directory_that_is_not_registered_missing_or_empty_is_refused(tmp_path):
+    (tmp_path / "graded-f1.0").mkdir()
+    with pytest.raises(analysis.AnalysisError, match="not a registered run"):
+        analysis.load_records(tmp_path / "graded-f1.0", COMMIT, ["net0"])
+    # A run fetched under the wrong name leaves the registered directory missing.
+    with pytest.raises(analysis.AnalysisError, match="does not exist"):
+        analysis.load_records(tmp_path / "graded-f1", COMMIT, ["net0"])
+    (tmp_path / "graded-f1").mkdir()
+    with pytest.raises(analysis.AnalysisError, match="lacks records"):
+        analysis.load_records(tmp_path / "graded-f1", COMMIT, ["net0"])
+
+
+def test_a_record_launched_under_another_run_name_is_refused(tmp_path):
+    run = tmp_path / "graded-f0.5"
+    run.mkdir()
+    r = record("net0", 5.0, run="graded-f0.5")
+    r["launch_manifest"]["run_name"] = "graded-f0.50"
+    (run / "net0.json").write_text(json.dumps(r))
+    with pytest.raises(analysis.AnalysisError, match="launched as run graded-f0.50"):
+        analysis.load_records(run, COMMIT, ["net0"])
+
+
+def spec_for(run):
+    s = analysis.RUNS[run]
+    return ArmSpec(network="lambda_phage", construction=s["construction"], hill_n=s["hill_n"],
+                   solver_path=analysis.REPO / s["solver"],
+                   classifier_path=analysis.REPO / s["classifier"] if s["classifier"] else None,
+                   n_init=32, seed=42, clamp_value=s["clamp_value"], keep_states=s["keep_states"], hill_k=s["hill_k"])
+
+
+def test_the_configuration_the_pipeline_writes_passes_its_own_run_and_no_other():
+    written = {run: {"configuration": json.loads(json.dumps(configuration_of(expected_fingerprint(spec_for(run)))))}
+               for run in analysis.RUNS}
+    for run, rec in written.items():
+        assert analysis.configuration_mismatches(rec, run) == []
+        for other in analysis.RUNS:
+            if other != run:
+                assert analysis.configuration_mismatches(rec, other), (run, other)
+
+
+def test_every_registered_run_expects_its_own_settings():
+    assert set(analysis.RUNS) == {"primary-hillcube-n10", "legacy-audit", "graded-f0.25", "graded-f0.5",
+                                  "graded-f0.75", "graded-f1", *analysis.SETTINGS.values()}
+    configs = {run: analysis.expected_configuration(run) for run in analysis.RUNS}
+    assert len({json.dumps(c, sort_keys=True) for c in configs.values()}) == len(configs)
+    assert configs["legacy-audit"]["classifier"] is None
+    assert configs["graded-f0.75"]["clamp_value"] == 0.75
+
+
+def test_an_unscored_network_that_is_not_like_for_like_stays_out_of_the_counts(monkeypatch):
+    standard = {"t_max": 30.0, "t_tail": 10.0, "hill_n": 10.0, "hill_k": 0.5, "tau": 1.0}
+    monkeypatch.setattr(analysis, "published_ode", lambda: {
+        "net0": {"pp": 5.0, "settings": standard, "file": "a"},
+        "net1": {"pp": 5.0, "settings": {**standard, "t_max": 10.0}, "file": "b"},
+        "net2": {"pp": 5.0, "settings": standard, "file": "c"}})
+    audit = analysis.legacy_audit({"net0": record("net0", 6.0), "net1": record("net1", 0.0, scored=False),
+                                   "net2": record("net2", 5.2)}, ["net0", "net1", "net2"])
+    assert audit["unscored"] == {"net1": {"reason": "cannot be scored", "like_for_like": False}}
+    assert (audit["n_unscored_like_for_like"], audit["n_like_for_like"], audit["n_moved_over_0p5pp"]) == (0, 2, 1)
+
+
+@pytest.mark.parametrize("settings,same", [
+    ({"t_max": 30.0, "t_tail": 10.0, "hill_n": 10.0, "hill_k": 0.5, "tau": 1.0}, True),
+    ({"t_max": 10.0, "t_tail": 5.0, "hill_n": 10.0, "hill_k": 0.5, "tau": 1.0, "n_init": 32}, False),
+    (None, False),
+])
+def test_a_legacy_row_counts_only_if_the_published_run_used_the_reconstructed_settings(settings, same):
+    assert analysis.legacy_like_for_like(settings)[0] is same
 
 
 def test_each_arm_reads_its_registered_runs_and_writes_every_estimator(tmp_path, monkeypatch, boolean):
@@ -327,8 +427,9 @@ def test_each_arm_reads_its_registered_runs_and_writes_every_estimator(tmp_path,
     for arm_dir, names in runs.items():
         for run in names:
             (arm_dir / "results" / run).mkdir(parents=True)
-            for n in sizes:
-                (arm_dir / "results" / run / f"{n}.json").write_text(json.dumps(record(n, 6.0)))
+            # The sensitivity arm runs only the networks with at most 12 nodes.
+            for n in (x for x in sizes if arm_dir != analysis.SENSITIVITY or sizes[x] <= 12):
+                (arm_dir / "results" / run / f"{n}.json").write_text(json.dumps(record(n, 6.0, run=run)))
     for arm in ("primary", "graded", "sensitivity"):
         analysis.main([arm])
     primary = json.loads((analysis.PRIMARY / "results" / "analysis.json").read_text())

@@ -1,0 +1,42 @@
+{
+  "run_name": "smoke-2026-09-22T072846+0000",
+  "launched_at": "2026-09-22T07:28:46+00:00",
+  "specs": [
+    {
+      "network": "lambda_phage",
+      "construction": "hillcube_normalized",
+      "hill_n": 10.0,
+      "hill_k": 0.5,
+      "solver_path": "experiments/ode_v2/solver_primary.json",
+      "classifier_path": "experiments/ode_v2/classifier_primary.json",
+      "n_init": 2,
+      "seed": 42,
+      "clamp_value": 0.0,
+      "keep_states": true
+    }
+  ],
+  "file_sha256": {
+    "data_utils.py": "eb1f3addce4b2ac89e553f3a5253b98925ca65098426462d1bf069a9ac938f96",
+    "grn_coalition_sweep.py": "ee5fa6d28d678234db6bb18a7f1122202dbca9e41af17655f3439c43f884d5de",
+    "composition_scorer.py": "115b1027c87ddf1c1a9acb197d1340ab78d14a1b4368e51bf2b02db72d541c56",
+    "scripts/paths.py": "99c5327c423f3a485916ef5d00261e8917dea8f513f84dbd5bb9757c12b7a422",
+    "scripts/ode_coalition_sweep.py": "b73ea20ae70557fc09f7dd9b403d9fff7c70c7aecf6c34d51d50853caef5ee0c",
+    "scripts/run_batch2b_extra_models.py": "a00dcfe48f952865c5d79391c87fd0d82314a2a31e300017a0f3449321a3b59f",
+    "scripts/run_batch2_blind_sweep.py": "5dac265c5772e45221826189ab6b0453b0c1377e312ec48721f1dcf3b633dafa",
+    "scripts/structural_analysis.py": "3e93ae7ad2625cacdce3229713cb10945034942c4816ba684c3a82b60e2850c7",
+    "scripts/ode_engine.py": "625961c7ce5126684fa93ebee46f088a0cba25e7870042fd63720697189cab69",
+    "scripts/run_ode_arm.py": "f75302f8862764a0fb2169fb8cc62ac2b1de9b8d5fe8c4904e03c3cc3b3c3e5c",
+    "scripts/walsh_estimators.py": "ecff3180905ce674b8c2047a320452d99c05817dba46789d1c4731722918f103",
+    "scripts/attractors.py": "cf33b54a2fab2db0792fba26952cd35467555078ff64cf92bd736e49c3921218",
+    "scripts/modal_ode_arm.py": "45a44cd67946034c5b6d5941f1412d9cd12415417f26489055a9f9bf6247e96b",
+    "scripts/modal_provenance.py": "064143d2cf0e90367189513ce675198cdff98ce26325a35b3491e2850c95eeb7",
+    "scripts/registered_runs.py": "06cee55877a7e2b2eafbc210cb706777bde5d8a2b10863f065b0d7ccd33aa1e7",
+    "scripts/verify_freeze.py": "77221bf5fbfde431003e09bfd271b5249a092bfd4162e5744e4a161af9ff4700",
+    "scripts/record_registered_identities.py": "aeaf9893d8d566b7fc276e27c64c31be3fc3baafb2ee824b41b957b203e74c62",
+    "results/paper_number_reconciliation.json": "22c09b7cf15750f054f50c1cdd0ce3912d08a9356f88ab7f10e4c3e79671d87e",
+    "experiments/ode_v2/solver_primary.json": "f74042835915a43d5745df0ae58a377759e3bbe3ff4d1a50388ff4aacf9b68a1",
+    "experiments/ode_v2/solver_legacy.json": "e1f5fbee1a77a086e02795c1218a8b29f9f3ba28a08a2630067d09d4404cbde2",
+    "experiments/ode_v2/classifier_primary.json": "0178203610db22f94a62f45ba64df08244e3f5001f4f3820f97cc64e15e93f43"
+  },
+  "purpose": "smoke test"
+}
