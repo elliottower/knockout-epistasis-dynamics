@@ -49,8 +49,7 @@ t = 960 (`results/audit/classifier_calibration_rtol1e-8.json`).
 ## Foreknowledge of data or evidence
 
 Common to all three registrations: `experiments/ode_v2/CONTEXT.md`. No Δ3+ exists at any of
-settings a–e. The paper reports no Hill-coefficient sweep; an earlier draft's sentence about
-one was deleted in v19a, before any sweep ran on the corrected engine. Calibration integrated
+settings a–e, and the paper reports no Hill-coefficient sweep. Calibration integrated
 trajectories at n_H = 1, 2 and 10 on five networks and computed no Walsh quantity. It showed
 that damped oscillations near a Hopf point settle slowly at n_H = 2.
 
@@ -99,8 +98,8 @@ primary arm.
 
 The freeze and every launch follow `experiments/ode_v2/CONTEXT.md` (Freeze and launch). A
 launch runs only from a checkout of the tagged commit, after
-`uv run python -m scripts.verify_freeze` passes there. Five Modal launches, one per setting,
-for example setting c:
+`uv run python -m scripts.verify_freeze` passes there. Five Modal launches, one per setting, with
+run names `sensitivity-a` to `sensitivity-e`, each with `--keep-states`; for example setting c:
 
 ```
 uv run --with modal==1.4.3 modal run --detach -m scripts.modal_ode_arm::main \
@@ -108,10 +107,16 @@ uv run --with modal==1.4.3 modal run --detach -m scripts.modal_ode_arm::main \
     --construction hillcube_normalized --hill-n 10 --hill-k 0.3 \
     --solver experiments/ode_v2/solver_primary.json \
     --classifier experiments/ode_v2/classifier_primary.json \
-    --n-init 32 --seed 42
+    --n-init 32 --seed 42 --keep-states
 ```
 
-Records are copied from the Modal volume into `results/` next to this file.
+Each run's records, and nothing else, are copied from the Modal volume into
+`results/<run name>/` next to this file, for example:
+
+```
+uv run --with modal==1.4.3 modal run -m scripts.modal_ode_arm::fetch --run-name sensitivity-c \
+    --out experiments/2026-09-21_ode-sensitivity/results/sensitivity-c
+```
 
 ## Data collection procedures - File upload
 
@@ -180,9 +185,8 @@ If S1 holds, the paper may say that class preservation holds at n_H ∈ {2, 4, 1
 K ∈ {0.3, 0.5, 0.7} on the 17 networks with at most 12 nodes. It does not extend the statement
 to the 11 larger networks or to settings that were not run. If S1 fails, it names the settings
 and networks where a class changes, and makes no robustness claim beyond the settings where
-every class held. The
-paper reports S2's outcome either way. If S2 fails and S1 holds, it says that class preservation
-depends on the conversion's syntax for the networks that change.
+every class held. The paper reports S2's outcome either way. If S2 fails and S1 holds, it says
+that class preservation depends on the conversion's syntax for the networks that change.
 
 ## Data inclusion and exclusion
 

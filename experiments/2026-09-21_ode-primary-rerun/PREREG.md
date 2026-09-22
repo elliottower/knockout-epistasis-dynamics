@@ -135,7 +135,7 @@ configuration digest.
 ## Data collection procedures
 
 The freeze and every launch follow `experiments/ode_v2/CONTEXT.md` (Freeze and launch): the
-signed tag `ode-rerun-freeze`, and a launch only from a checkout of the tagged commit where
+signed tag `ode-rerun-freeze-2`, and a launch only from a checkout of the tagged commit where
 `uv run python -m scripts.verify_freeze` passes. One Modal launch per arm:
 
 ```
@@ -147,11 +147,22 @@ uv run --with modal==1.4.3 modal run --detach -m scripts.modal_ode_arm::main \
     --n-init 32 --seed 42 --keep-states
 ```
 
-The legacy audit (Other planned analysis, item 2) uses `--run-name legacy-audit
---construction operatorwise_legacy --hill-n 10 --solver experiments/ode_v2/solver_legacy.json`
-with no classifier. Each launch writes a local launch record (`results/ode_v2/launches/`).
-Records are copied from the Modal volume into `results/` next to this file. The Boolean
-estimates come from `scripts/boolean_estimators.py`.
+The legacy audit (Other planned analysis, item 2) is the same launch with run name
+`legacy-audit`, construction `operatorwise_legacy` and solver
+`experiments/ode_v2/solver_legacy.json`, with no classifier and without `--keep-states`. Each
+launch writes a local launch record (`results/ode_v2/launches/`).
+
+Each run's records, and nothing else, are copied from the Modal volume into `results/<run name>/`
+next to this file, for example:
+
+```
+uv run --with modal==1.4.3 modal run -m scripts.modal_ode_arm::fetch \
+    --run-name primary-hillcube-n10 \
+    --out experiments/2026-09-21_ode-primary-rerun/results/primary-hillcube-n10
+```
+
+The Boolean estimates come from `scripts/boolean_estimators.py`, run after the copy and before the
+analysis.
 
 ## Data collection procedures - File upload
 
@@ -250,8 +261,8 @@ than 5 have any coalition with more than one attractor.**
 **A scored network whose record lacks the oscillation summary or the basin statistics counts,
 for O1 or A1, as a network that cannot be scored, and is named.**
 
-**A network with any replicate mismatch is withheld from H1–H4 until its cause is found and
-logged below the line.**
+**A network with any replicate mismatch is withheld from every registered test until its cause is
+found and logged below the line, and counts toward the void rules as one that cannot be scored.**
 
 What the paper says under each outcome:
 
@@ -298,7 +309,10 @@ output. It is labeled as such and never enters H1–H4.
    solver settings, run with the plain estimator and compared network by network with the
    published ODE table. It reports how many networks can no longer be scored because the legacy
    solver fails where the published arm recorded 0, and each scored network's change in Δ3+ and
-   class. Its claim is narrow: it reconstructs the legacy engine without its timeout, and is not
+   class. Two published values cannot be tied to the settings reconstructed here: the file for
+   `arabidopsis_cellcycle` records t_max 10 and t_tail 5, and the file for `calzone_cell_fate`
+   records none. Their rows, scored or not, are reported and kept out of the counts.
+   Its claim is narrow: it reconstructs the legacy engine without its timeout, and is not
    a validation of the corrected arm.
    Held fixed, and tested to reproduce the legacy engine to within 1e-12 + 1e-9 relative:
    - the operator-wise parser;

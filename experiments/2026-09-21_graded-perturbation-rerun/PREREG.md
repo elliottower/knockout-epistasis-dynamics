@@ -106,7 +106,8 @@ primary arm.
 
 The freeze and every launch follow `experiments/ode_v2/CONTEXT.md` (Freeze and launch). A
 launch runs only from a checkout of the tagged commit, after
-`uv run python -m scripts.verify_freeze` passes there. Four Modal launches, one per level:
+`uv run python -m scripts.verify_freeze` passes there. Four Modal launches, one per level, with run
+names `graded-f0.25`, `graded-f0.5`, `graded-f0.75` and `graded-f1`:
 
 ```
 uv run --with modal==1.4.3 modal run --detach -m scripts.modal_ode_arm::main \
@@ -117,7 +118,13 @@ uv run --with modal==1.4.3 modal run --detach -m scripts.modal_ode_arm::main \
     --n-init 32 --seed 42 --keep-states
 ```
 
-Records are copied from the Modal volume into `results/` next to this file.
+Each run's records, and nothing else, are copied from the Modal volume into
+`results/<run name>/` next to this file, for example:
+
+```
+uv run --with modal==1.4.3 modal run -m scripts.modal_ode_arm::fetch --run-name graded-f0.25 \
+    --out experiments/2026-09-21_graded-perturbation-rerun/results/graded-f0.25
+```
 
 ## Data collection procedures - File upload
 
