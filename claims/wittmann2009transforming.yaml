@@ -1,0 +1,16 @@
+source:
+  citation: wittmann2009transforming
+  local: reference/wittmann_2009.pdf
+  sha256: 41f115d2f107f8a8392f58133beaa5bc040db90ccd3d6882f84a76f03fcdaa34
+  extract_cmd: pdftotext {} -
+claims:
+  hill-function-per-interaction:
+    quotes:
+    - exact: We now define a Hill function fij with parameters nij and kij for every interaction and define
+        new functions
+      section: Results, HillCube
+  hill-never-reaches-one:
+    quotes:
+    - exact: Note that Hill functions never assume the value 1, but approach it asymptotically. Hence,
+        the HillCubes are not perfect homologues of the Boolean update functions
+      section: Results, normalized HillCube

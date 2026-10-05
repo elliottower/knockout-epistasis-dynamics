@@ -1,0 +1,15 @@
+source:
+  citation: krumsiek2010odefy
+  local: reference/krumsiek_2010_odefy.pdf
+  sha256: 782fa41d74469fb0c99b3d02a477d7ebdcd46e6f05373d2d892bc6d62a56394b
+  extract_cmd: pdftotext {} -
+claims:
+  interpolation-and-hill:
+    quotes:
+    - exact: The Boolean models are transformed to systems of ordinary differential equations by multivariate
+        polynomial interpolation and optional application of sigmoidal Hill functions.
+      section: Abstract
+  hillcubes-interpolation:
+    quotes:
+    - exact: HillCubes are based on multivariate polynomial interpolation and incorporate Hill kinetics
+      section: Background

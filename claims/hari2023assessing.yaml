@@ -1,0 +1,16 @@
+source:
+  citation: hari2023assessing
+  local: reference/npj_2023_network_dynamics.pdf
+  sha256: 3c546fd7d70d60f1892ab293c7798479bc1e69681bebe80e869478dd4564bbc9
+  extract_cmd: pdftotext {} -
+claims:
+  fit-holds-at-low-hill:
+    quotes:
+    - exact: Perhaps surprisingly, we also find that this fit does not deteriorate much when we sample
+        Hill coefficients from range 1–10.
+      section: Results
+  bistable-favors-high-hill:
+    quotes:
+    - exact: the bistable parameters show a lower frequency of low Hill coefficient, low production rate,
+        and high degradation rate
+      section: Results
